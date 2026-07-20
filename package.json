@@ -1,0 +1,12 @@
+{
+  "name": "ceibos-club",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync:club": "node automation/sync-club-data.mjs"
+  },
+  "dependencies": {
+    "cheerio": "1.1.2",
+    "playwright": "1.55.0"
+  }
+}

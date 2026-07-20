@@ -1,0 +1,29 @@
+{
+  "teamAliases": ["Ceibos", "Los Ceibos", "Ceibos Club"],
+  "sources": [
+    {
+      "deporte": "hockey",
+      "categoria": "Damas A",
+      "url": "https://admin.hockey.com.uy/posiciones?category_id=31",
+      "modo": "html"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Divisional B",
+      "url": "https://ligauniversitaria.org.uy/estadisticas-basquetbol-b/",
+      "modo": "browser"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-mayores-a/",
+      "modo": "browser"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "url": "https://uru.org.uy/",
+      "modo": "browser"
+    }
+  ]
+}
