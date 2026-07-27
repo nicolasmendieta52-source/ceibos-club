@@ -384,6 +384,8 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
   font-size:.74rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
   padding:7px 14px;border-radius:99px;border:1px solid rgba(229,187,82,.45);color:var(--dorado-soft);
 }
+.cat-tab{background:transparent;cursor:pointer;font-family:var(--body);transition:background .2s,color .2s,transform .2s}
+.cat-tab:hover,.cat-tab.activo{background:var(--dorado);color:var(--verde-night);transform:translateY(-2px)}
 .dep-fixture h4{
   font-size:.74rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;
   color:rgba(246,241,228,.55);margin-bottom:16px;
@@ -400,11 +402,13 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 .pill{font-size:.66rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:99px}
 .pill.local{background:rgba(229,187,82,.16);color:var(--dorado)}
 .pill.visita{background:rgba(37,67,105,.4);color:#9db8dd}
-.dep-categoria{margin-top:22px;padding-top:20px;border-top:1px solid rgba(246,241,228,.1)}
+.dep-categoria{display:none;margin-top:22px;padding-top:20px;border-top:1px solid rgba(246,241,228,.1)}
+.dep-categoria.activo{display:block}
 .dep-categoria h4{color:var(--dorado-soft);margin-bottom:12px}
 .dep-categoria h5{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(246,241,228,.55);margin:15px 0 8px}
 .resultado-mini{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 14px;border-radius:13px;background:rgba(37,67,105,.2);margin-bottom:7px}
 .resultado-mini strong{font-family:var(--display);font-size:1.15rem;color:var(--dorado)}
+.resultado-mini small{display:block;margin-top:3px;color:rgba(246,241,228,.5);font-size:.7rem}
 .dep-vermas{margin-top:10px}
 .dep-vermas summary{cursor:pointer;color:var(--dorado);font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;list-style:none}
 .dep-vermas summary::-webkit-details-marker{display:none}
@@ -858,8 +862,8 @@ const DEPORTES = [
   },
   {
     slug:"futbol", nombre:"Fútbol", ico:"⚽", instagram:"ceibosfutbol",
-    desc:"La pelota también rueda en Ceibos. Seguimos los planteles de Reserva Verde, Reserva A y Primera de la Liga Universitaria.",
-    categorias:["Reserva Verde","Reserva A","Primera"]
+    desc:"La temporada 2026 de la Liga Universitaria tiene registros oficiales desde abril. Ceibos compite con Primera, Reserva A y Reserva Verde: elegí una categoría para ver su fixture e historial del año.",
+    categorias:["Primera","Reserva A","Reserva Verde"]
   },
   {
     slug:"basketball", nombre:"Basketball", ico:"🏀", instagram:"ceibosbasketball",
@@ -918,13 +922,23 @@ const MESES = ["ENE","FEB","MAR","ABR","MAY","JUN","JUL","AGO","SET","OCT","NOV"
 const fmtFecha = iso => { const [y,m,d] = iso.split("-"); return { dia:+d, mes:MESES[+m-1], anio:y }; };
 const textoSeguro = valor => String(valor ?? "").replace(/[&<>'\"]/g, caracter => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;","\"":"&quot;"}[caracter]));
 const fechaValida = fecha => /^\d{4}-\d{2}-\d{2}$/.test(fecha) && !Number.isNaN(new Date(fecha + "T00:00:00").getTime());
+const fechaBreve = fecha => { if (!fechaValida(fecha)) return ""; const f = fmtFecha(fecha); return `${f.dia} ${f.mes}`; };
 const textoPlano = valor => String(valor ?? "").replace(/[<>&"']/g, "").trim().slice(0, 180);
 const slugDeporte = valor => String(valor ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
 const porFecha = (a,b) => String(a.fecha ?? "").localeCompare(String(b.fecha ?? ""));
 
 /* ticker */
 function renderTicker(){
-  const items = RESULTADOS.map(r => {
+  const ultimosPorCategoria = [...RESULTADOS].sort(porFecha).reduce((mapa, resultado) => {
+    mapa.set(`${slugDeporte(resultado.deporte)}|${resultado.categoria}`, resultado);
+    return mapa;
+  }, new Map());
+  const ordenFutbol = ["Primera", "Reserva A", "Reserva Verde"];
+  const items = [...ultimosPorCategoria.values()].sort((a,b) => {
+    const aFutbol = slugDeporte(a.deporte) === "futbol", bFutbol = slugDeporte(b.deporte) === "futbol";
+    if (aFutbol && bFutbol) return ordenFutbol.indexOf(a.categoria) - ordenFutbol.indexOf(b.categoria);
+    return aFutbol ? -1 : bFutbol ? 1 : 0;
+  }).map(r => {
     const res = r.gf>r.gc ? "🟡 VICTORIA" : r.gf===r.gc ? "⚪ EMPATE" : "🔵 DERROTA";
     return `<span class="ticker-item"><span class="dot"></span>${r.deporte} ${r.categoria} <span class="res">${r.gf}–${r.gc}</span> vs ${r.rival} · <span class="gano">${res}</span></span>`;
   }).join("");
@@ -961,7 +975,7 @@ function renderDeportes(){
         <h3>${d.nombre} ${d.ico}</h3>
         <a class="ig" href="https://instagram.com/${d.instagram}" target="_blank" rel="noopener">@${d.instagram} ↗</a>
         <p>${d.desc}</p>
-        <div class="dep-cats">${d.categorias.map(c=>`<span class="chip">${c}</span>`).join("")}</div>
+        <div class="dep-cats" role="tablist" aria-label="Categorías de ${textoSeguro(d.nombre)}">${categorias.map((c,indice)=>`<button class="chip cat-tab${indice===0?' activo':''}" type="button" data-categoria="${textoSeguro(c)}" aria-selected="${indice===0?'true':'false'}">${textoSeguro(c)}</button>`).join("")}</div>
       </div>
       <div class="dep-fixture">
         <h4>Partidos y resultados</h4>
@@ -972,18 +986,23 @@ function renderDeportes(){
           const futuros = partidosCategoria.slice(1);
           const ultimoResultado = resultadosCategoria[0];
           const historial = resultadosCategoria.slice(1);
-          return `<div class="dep-categoria">
+          return `<div class="dep-categoria${categorias.indexOf(c)===0?' activo':''}" data-categoria-panel="${textoSeguro(c)}">
             <h4>${textoSeguro(c)}</h4>
             <h5>Próximo partido</h5>
             ${proximo ? (()=>{ const f=fmtFecha(proximo.fecha); return `<div class="partido-mini"><div><div class="vs">vs ${textoSeguro(proximo.rival)}</div><div class="meta">${f.dia} ${f.mes} · ${textoSeguro(proximo.hora)} h</div></div><span class="pill ${proximo.local?'local':'visita'}">${proximo.local?'Local':'Visitante'}</span></div>`; })() : `<p class="sin-datos">Sin próximos partidos cargados.</p>`}
             ${futuros.length ? `<details class="dep-vermas"><summary>Ver ${futuros.length} partido${futuros.length===1?'':'s'} futuro${futuros.length===1?'':'s'}</summary>${futuros.map(p=>{ const f=fmtFecha(p.fecha); return `<div class="partido-mini"><div><div class="vs">vs ${textoSeguro(p.rival)}</div><div class="meta">${f.dia} ${f.mes} · ${textoSeguro(p.hora)} h</div></div><span class="pill ${p.local?'local':'visita'}">${p.local?'Local':'Visitante'}</span></div>`; }).join("")}</details>` : ""}
             <h5>Último resultado</h5>
-            ${ultimoResultado ? `<div class="resultado-mini"><span>vs ${textoSeguro(ultimoResultado.rival)}</span><strong>${ultimoResultado.gf} — ${ultimoResultado.gc}</strong></div>` : `<p class="sin-datos">Sin resultados cargados.</p>`}
-            ${historial.length ? `<details class="dep-vermas"><summary>Ver historial (${historial.length})</summary>${historial.map(r=>`<div class="resultado-mini"><span>vs ${textoSeguro(r.rival)}</span><strong>${r.gf} — ${r.gc}</strong></div>`).join("")}</details>` : ""}
+            ${ultimoResultado ? `<div class="resultado-mini"><div><span>vs ${textoSeguro(ultimoResultado.rival)}</span>${fechaBreve(ultimoResultado.fecha)?`<small>${fechaBreve(ultimoResultado.fecha)}</small>`:""}</div><strong>${ultimoResultado.gf} — ${ultimoResultado.gc}</strong></div>` : `<p class="sin-datos">Sin resultados cargados.</p>`}
+            ${historial.length ? `<details class="dep-vermas"><summary>Ver historial 2026 (${historial.length})</summary>${historial.map(r=>`<div class="resultado-mini"><div><span>vs ${textoSeguro(r.rival)}</span>${fechaBreve(r.fecha)?`<small>${fechaBreve(r.fecha)}</small>`:""}</div><strong>${r.gf} — ${r.gc}</strong></div>`).join("")}</details>` : ""}
           </div>`;
         }).join("")}
       </div>`;
     panels.appendChild(panel);
+    panel.querySelectorAll(".cat-tab").forEach(boton => boton.addEventListener("click", () => {
+      const categoria = boton.dataset.categoria;
+      panel.querySelectorAll(".cat-tab").forEach(tabCategoria => { const activa = tabCategoria === boton; tabCategoria.classList.toggle("activo", activa); tabCategoria.setAttribute("aria-selected", String(activa)); });
+      panel.querySelectorAll("[data-categoria-panel]").forEach(panelCategoria => panelCategoria.classList.toggle("activo", panelCategoria.dataset.categoriaPanel === categoria));
+    }));
   });
 }
 
