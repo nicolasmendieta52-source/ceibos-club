@@ -123,6 +123,126 @@
   ],
   "resultados": [
     {
+      "deporte": "basketball",
+      "categoria": "Divisional B",
+      "rival": "UNIVERSIDAD DE MONTEVIDEO",
+      "gf": 65,
+      "gc": 71,
+      "fecha": "2026-03-14"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Divisional B",
+      "rival": "CLUB NAUTICO",
+      "gf": 57,
+      "gc": 69,
+      "fecha": "2026-03-21"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Divisional B",
+      "rival": "UNIVERSIDAD ORT",
+      "gf": 67,
+      "gc": 76,
+      "fecha": "2026-03-28"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Divisional B",
+      "rival": "AURIBLANCO BASKETBALL CLUB",
+      "gf": 47,
+      "gc": 67,
+      "fecha": "2026-04-11"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Divisional B",
+      "rival": "CLUB CHAMPAGNAT RUGBY",
+      "gf": 30,
+      "gc": 47,
+      "fecha": "2026-04-18"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Divisional B",
+      "rival": "BELLA UNION UNIVERSITARIO",
+      "gf": 65,
+      "gc": 44,
+      "fecha": "2026-04-25"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Divisional B",
+      "rival": "REDUCTO UNIVERSITARIO",
+      "gf": 59,
+      "gc": 71,
+      "fecha": "2026-05-20"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Divisional B",
+      "rival": "J.M.L.M",
+      "gf": 48,
+      "gc": 75,
+      "fecha": "2026-05-16"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Divisional B",
+      "rival": "ELBIO FERNANDEZ",
+      "gf": 59,
+      "gc": 65,
+      "fecha": "2026-06-03"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Divisional B",
+      "rival": "ORT BLANCO",
+      "gf": 63,
+      "gc": 61,
+      "fecha": "2026-05-30"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Divisional B",
+      "rival": "MARISTAS DEPORTIVO",
+      "gf": 48,
+      "gc": 45,
+      "fecha": "2026-06-06"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Divisional B",
+      "rival": "OLD BOYS CLUB",
+      "gf": 61,
+      "gc": 50,
+      "fecha": "2026-06-13"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Divisional B",
+      "rival": "YOUNG UNIVERSITARIO",
+      "gf": 60,
+      "gc": 50,
+      "fecha": "2026-06-20"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Divisional B",
+      "rival": "CLUB BELLAKEO C.B.",
+      "gf": 84,
+      "gc": 39,
+      "fecha": "2026-06-27"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Divisional B",
+      "rival": "CLUB UNIVERSIDAD CATOLICA",
+      "gf": 51,
+      "gc": 59,
+      "fecha": "2026-07-25"
+    },
+    {
       "deporte": "futbol",
       "categoria": "Reserva Verde",
       "rival": "COLEGIO Y LICEO INGLES",
@@ -364,5 +484,5 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-07-27T20:11:39.021Z"
+  "actualizadoEn": "2026-07-27T20:14:27.241Z"
 }
