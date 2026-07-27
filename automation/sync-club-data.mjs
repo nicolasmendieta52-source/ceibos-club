@@ -105,6 +105,11 @@ async function renderPage(source) {
     // devuelve la clasificación. Leemos las celdas de cada fila para conservar
     // el orden: partido, fecha, horario, cancha, resultado y estado.
     if (source.formato === "hockey-admin") {
+      const fixtureTab = page.locator('a[href^="#tab_3_"]');
+      if (await fixtureTab.count()) {
+        await fixtureTab.click();
+        await page.waitForTimeout(400);
+      }
       return await page.locator("table tr").evaluateAll(rows => rows.map(row =>
         [...row.querySelectorAll("th, td")]
           .map(cell => cell.innerText.replace(/\s+/g, " ").trim())
