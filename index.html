@@ -428,9 +428,9 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 .score-card:hover{transform:translateY(-8px) rotate(-.5deg);border-color:rgba(229,187,82,.5);box-shadow:0 22px 50px rgba(0,0,0,.4)}
 .score-card .dep{
   font-size:.68rem;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--dorado);
-  display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;padding-right:56px;
+  margin-bottom:8px;padding-right:56px;
 }
-.score-card .dep .cat{color:rgba(246,241,228,.45);letter-spacing:.1em}
+.score-categoria{display:inline-flex;align-items:center;min-height:30px;padding:5px 12px;margin-bottom:15px;border:1px solid rgba(229,187,82,.55);border-radius:99px;background:rgba(229,187,82,.13);color:var(--dorado-soft);font-size:.82rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
 .score-num{
   font-family:var(--display);font-size:clamp(2.6rem,5vw,3.6rem);color:var(--blanco);
   display:flex;align-items:baseline;gap:14px;line-height:1;
@@ -1032,7 +1032,8 @@ function renderScore(){
     const lbl = r.gf>r.gc?"VICTORIA":r.gf===r.gc?"EMPATE":"DERROTA";
     return `<div class="score-card rev rev-d${(i%4)+1}">
       <span class="score-res ${cls}">${lbl}</span>
-      <div class="dep">${r.deporte}<span class="cat">${r.categoria}</span></div>
+      <div class="dep">${r.deporte}</div>
+      <div class="score-categoria">${r.categoria}</div>
       <div class="score-num"><span class="nos">${r.gf}</span><span class="sep">—</span><span>${r.gc}</span></div>
       <div class="score-rival">vs ${r.rival}</div>
     </div>`;
