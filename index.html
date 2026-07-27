@@ -1017,7 +1017,17 @@ function activarDeporte(slug){
 /* scoreboard */
 function renderScore(){
   const g = document.getElementById("scoreGrid");
-  g.innerHTML = RESULTADOS.map((r,i)=>{
+  const ultimosPorCategoria = [...RESULTADOS].sort(porFecha).reduce((mapa, resultado) => {
+    mapa.set(`${slugDeporte(resultado.deporte)}|${resultado.categoria}`, resultado);
+    return mapa;
+  }, new Map());
+  const ordenFutbol = ["Primera", "Reserva A", "Reserva Verde"];
+  const marcadores = [...ultimosPorCategoria.values()].sort((a,b) => {
+    const aFutbol = slugDeporte(a.deporte) === "futbol", bFutbol = slugDeporte(b.deporte) === "futbol";
+    if (aFutbol && bFutbol) return ordenFutbol.indexOf(a.categoria) - ordenFutbol.indexOf(b.categoria);
+    return aFutbol ? -1 : bFutbol ? 1 : 0;
+  });
+  g.innerHTML = marcadores.map((r,i)=>{
     const cls = r.gf>r.gc?"v":r.gf===r.gc?"e":"d";
     const lbl = r.gf>r.gc?"VICTORIA":r.gf===r.gc?"EMPATE":"DERROTA";
     return `<div class="score-card rev rev-d${(i%4)+1}">
