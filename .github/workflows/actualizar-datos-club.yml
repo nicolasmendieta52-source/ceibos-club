@@ -1,6 +1,11 @@
 name: Actualizar datos del club
 
 on:
+  push:
+    paths:
+      - "automation/**"
+      - "package.json"
+      - ".github/workflows/actualizar-datos-club.yml"
   schedule:
     - cron: "17 */3 * * *"
   workflow_dispatch:

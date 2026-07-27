@@ -1,5 +1,5 @@
 {
-  "teamAliases": ["Ceibos", "Los Ceibos", "Ceibos Club"],
+  "teamAliases": ["CEIBOS CLUB", "CEIBOS CLUB VERDE"],
   "sources": [
     {
       "deporte": "hockey",
@@ -15,9 +15,39 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Primera",
-      "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-mayores-a/",
-      "modo": "browser"
+      "categoria": "Reserva C",
+      "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS31.html",
+      "modo": "html"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva C",
+      "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS31.html",
+      "modo": "html"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS1.html",
+      "modo": "html"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS1.html",
+      "modo": "html"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Mayores B",
+      "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
+      "modo": "html"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Mayores B",
+      "url": "https://ligauniversitaria.org.uy/partidos/F21B.html",
+      "modo": "html"
     },
     {
       "deporte": "rugby",

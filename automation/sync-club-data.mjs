@@ -11,13 +11,36 @@ const clean = value => String(value ?? "").replace(/\s+/g, " ").trim();
 const unique = (items, key) => [...new Map(items.map(item => [key(item), item])).values()];
 
 function dateFromDayMonth(day, month) {
-  const year = now.getFullYear() + (month < now.getMonth() + 1 ? 1 : 0);
+  const year = now.getFullYear();
   return `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+}
+
+function isTeam(value, aliases) {
+  return aliases.some(alias => clean(value).toLocaleLowerCase("es") === alias.toLocaleLowerCase("es"));
 }
 
 function parseLine(line, source, aliases) {
   const text = clean(line);
   if (!aliases.some(alias => text.toLocaleLowerCase("es").includes(alias.toLocaleLowerCase("es")))) return null;
+  const cells = String(line).split("\t").map(clean).filter(Boolean);
+
+  // Tablas oficiales de la Liga Universitaria: fecha, cancha, local, goles, visitante, goles.
+  if (cells.length >= 6 && /^\d{1,2}-\d{1,2}\s+\d{1,2}:\d{2}$/.test(cells[0]) && /^\d+$/.test(cells[3]) && /^\d+$/.test(cells[5])) {
+    const [day, month] = cells[0].match(/^(\d{1,2})-(\d{1,2})/).slice(1).map(Number);
+    const [home, away] = [cells[2], cells[4]];
+    if (!isTeam(home, aliases) && !isTeam(away, aliases)) return null;
+    const local = isTeam(home, aliases);
+    return { kind: "resultado", deporte: source.deporte, categoria: source.categoria, rival: local ? away : home, gf: Number(local ? cells[3] : cells[5]), gc: Number(local ? cells[5] : cells[3]), fecha: dateFromDayMonth(day, month) };
+  }
+
+  // Tablas oficiales de próximos partidos: fecha ISO, cancha, local, visitante.
+  if (cells.length >= 4 && /^\d{4}-\d{2}-\d{2}\s+\d{1,2}:\d{2}:\d{2}$/.test(cells[0])) {
+    const [home, away] = [cells[2], cells[3]];
+    if (!isTeam(home, aliases) && !isTeam(away, aliases)) return null;
+    const local = isTeam(home, aliases);
+    return { kind: "partido", deporte: source.deporte, categoria: source.categoria, rival: local ? away : home, fecha: cells[0].slice(0, 10), hora: cells[0].slice(11, 16) === "00:00" ? "A confirmar" : cells[0].slice(11, 16), local };
+  }
+
   const date = text.match(/\b(\d{1,2})\/(\d{1,2})\b/);
   const time = text.match(/\b(\d{1,2}:\d{2})\b/)?.[1] ?? "";
   const score = text.match(/\b(\d+)\s*[-–]\s*(\d+)\b/);
@@ -46,7 +69,7 @@ async function fetchHtml(source) {
   if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
   const html = await response.text();
   const $ = load(html);
-  const rows = $("tr").map((_, row) => $(row).text()).get();
+  const rows = $("tr").map((_, row) => $(row).find("th, td").map((__, cell) => clean($(cell).text())).get().join("\t")).get();
   return rows.length ? rows.join("\n") : $.text();
 }
 

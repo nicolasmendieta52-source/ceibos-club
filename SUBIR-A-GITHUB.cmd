@@ -7,6 +7,8 @@ echo.
 echo Se abrira el inicio de sesion de GitHub si hace falta.
 echo Cuando termines de iniciar sesion, esta ventana subira la web automaticamente.
 echo.
+git add -A
+git diff --cached --quiet || git commit -m "Actualizar web y datos del club"
 git push -u origin main
 echo.
 if errorlevel 1 (
