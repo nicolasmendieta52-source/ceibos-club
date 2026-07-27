@@ -1,11 +1,12 @@
 {
-  "teamAliases": ["CEIBOS CLUB", "CEIBOS CLUB VERDE"],
+  "teamAliases": ["CEIBOS CLUB", "CEIBOS CLUB VERDE", "LOS CEIBOS"],
   "sources": [
     {
       "deporte": "hockey",
-      "categoria": "Damas A",
+      "categoria": "Intermedia B",
       "url": "https://admin.hockey.com.uy/posiciones?category_id=31",
-      "modo": "browser"
+      "modo": "browser",
+      "formato": "hockey-admin"
     },
     {
       "deporte": "basketball",

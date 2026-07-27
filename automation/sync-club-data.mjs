@@ -19,7 +19,28 @@ function isTeam(value, aliases) {
   return aliases.some(alias => clean(value).toLocaleLowerCase("es") === alias.toLocaleLowerCase("es"));
 }
 
+function parseHockeyLine(line, source, aliases) {
+  const cells = String(line).split("\t").map(clean).filter(Boolean);
+  if (cells.length < 6) return null;
+  const teams = cells[0].split(/\s+-\s+/).map(clean);
+  if (teams.length !== 2) return null;
+  const [home, away] = teams;
+  if (!isTeam(home, aliases) && !isTeam(away, aliases)) return null;
+  const date = cells[2].match(/^(\d{1,2})\/(\d{1,2})\s+(\d{1,2}:\d{2})/);
+  if (!date) return null;
+  const local = isTeam(home, aliases);
+  const fecha = dateFromDayMonth(Number(date[1]), Number(date[2]));
+  const score = cells[4].match(/^(\d+)\s*-\s*(\d+)$/);
+  const cerrado = cells[5].toLocaleLowerCase("es").includes("cerrado");
+  if (cerrado && score) {
+    const [homeScore, awayScore] = [Number(score[1]), Number(score[2])];
+    return { kind: "resultado", deporte: source.deporte, categoria: source.categoria, rival: local ? away : home, gf: local ? homeScore : awayScore, gc: local ? awayScore : homeScore, fecha };
+  }
+  return { kind: "partido", deporte: source.deporte, categoria: source.categoria, rival: local ? away : home, fecha, hora: date[3], local };
+}
+
 function parseLine(line, source, aliases) {
+  if (source.formato === "hockey-admin") return parseHockeyLine(line, source, aliases);
   const raw = String(line);
   const cells = raw.split("\t").map(clean).filter(Boolean);
   const text = clean(raw);
@@ -79,7 +100,7 @@ async function renderPage(source) {
   const browser = await chromium.launch({ headless: true });
   try {
     const page = await browser.newPage({ userAgent: "CeibosClubFixtureBot/1.0 (contacto: info@ceibosclub.com)" });
-    await page.goto(source.url, { waitUntil: "networkidle", timeout: 60000 });
+    await page.goto(source.url, { waitUntil: "domcontentloaded", timeout: 60000 });
     return await page.locator("body").innerText();
   } finally {
     await browser.close();
