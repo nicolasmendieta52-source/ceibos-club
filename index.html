@@ -405,6 +405,12 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 .dep-categoria h5{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(246,241,228,.55);margin:15px 0 8px}
 .resultado-mini{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 14px;border-radius:13px;background:rgba(37,67,105,.2);margin-bottom:7px}
 .resultado-mini strong{font-family:var(--display);font-size:1.15rem;color:var(--dorado)}
+.dep-vermas{margin-top:10px}
+.dep-vermas summary{cursor:pointer;color:var(--dorado);font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;list-style:none}
+.dep-vermas summary::-webkit-details-marker{display:none}
+.dep-vermas summary::before{content:"+";display:inline-grid;place-items:center;width:20px;height:20px;margin-right:8px;border:1px solid rgba(229,187,82,.55);border-radius:50%;font-size:1rem}
+.dep-vermas[open] summary::before{content:"−"}
+.dep-vermas .partido-mini,.dep-vermas .resultado-mini{margin-top:10px}
 .sin-datos{color:rgba(246,241,228,.52);font-size:.9rem;line-height:1.5}
 
 /* ---------- RESULTADOS scoreboard ---------- */
@@ -914,6 +920,7 @@ const textoSeguro = valor => String(valor ?? "").replace(/[&<>'\"]/g, caracter =
 const fechaValida = fecha => /^\d{4}-\d{2}-\d{2}$/.test(fecha) && !Number.isNaN(new Date(fecha + "T00:00:00").getTime());
 const textoPlano = valor => String(valor ?? "").replace(/[<>&"']/g, "").trim().slice(0, 180);
 const slugDeporte = valor => String(valor ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+const porFecha = (a,b) => String(a.fecha ?? "").localeCompare(String(b.fecha ?? ""));
 
 /* ticker */
 function renderTicker(){
@@ -959,14 +966,20 @@ function renderDeportes(){
       <div class="dep-fixture">
         <h4>Partidos y resultados</h4>
         ${categorias.map(c=>{
-          const partidosCategoria = fixture.filter(p=>p.categoria===c);
-          const resultadosCategoria = resultados.filter(r=>r.categoria===c);
+          const partidosCategoria = fixture.filter(p=>p.categoria===c).sort(porFecha);
+          const resultadosCategoria = resultados.filter(r=>r.categoria===c).sort(porFecha).reverse();
+          const proximo = partidosCategoria[0];
+          const futuros = partidosCategoria.slice(1);
+          const ultimoResultado = resultadosCategoria[0];
+          const historial = resultadosCategoria.slice(1);
           return `<div class="dep-categoria">
             <h4>${textoSeguro(c)}</h4>
-            <h5>Próximos partidos</h5>
-            ${partidosCategoria.length ? partidosCategoria.map(p=>{ const f=fmtFecha(p.fecha); return `<div class="partido-mini"><div><div class="vs">vs ${textoSeguro(p.rival)}</div><div class="meta">${f.dia} ${f.mes} · ${textoSeguro(p.hora)} h</div></div><span class="pill ${p.local?'local':'visita'}">${p.local?'Local':'Visitante'}</span></div>`; }).join("") : `<p class="sin-datos">Sin próximos partidos cargados.</p>`}
-            <h5>Últimos resultados</h5>
-            ${resultadosCategoria.length ? resultadosCategoria.map(r=>`<div class="resultado-mini"><span>vs ${textoSeguro(r.rival)}</span><strong>${r.gf} — ${r.gc}</strong></div>`).join("") : `<p class="sin-datos">Sin resultados cargados.</p>`}
+            <h5>Próximo partido</h5>
+            ${proximo ? (()=>{ const f=fmtFecha(proximo.fecha); return `<div class="partido-mini"><div><div class="vs">vs ${textoSeguro(proximo.rival)}</div><div class="meta">${f.dia} ${f.mes} · ${textoSeguro(proximo.hora)} h</div></div><span class="pill ${proximo.local?'local':'visita'}">${proximo.local?'Local':'Visitante'}</span></div>`; })() : `<p class="sin-datos">Sin próximos partidos cargados.</p>`}
+            ${futuros.length ? `<details class="dep-vermas"><summary>Ver ${futuros.length} partido${futuros.length===1?'':'s'} futuro${futuros.length===1?'':'s'}</summary>${futuros.map(p=>{ const f=fmtFecha(p.fecha); return `<div class="partido-mini"><div><div class="vs">vs ${textoSeguro(p.rival)}</div><div class="meta">${f.dia} ${f.mes} · ${textoSeguro(p.hora)} h</div></div><span class="pill ${p.local?'local':'visita'}">${p.local?'Local':'Visitante'}</span></div>`; }).join("")}</details>` : ""}
+            <h5>Último resultado</h5>
+            ${ultimoResultado ? `<div class="resultado-mini"><span>vs ${textoSeguro(ultimoResultado.rival)}</span><strong>${ultimoResultado.gf} — ${ultimoResultado.gc}</strong></div>` : `<p class="sin-datos">Sin resultados cargados.</p>`}
+            ${historial.length ? `<details class="dep-vermas"><summary>Ver historial (${historial.length})</summary>${historial.map(r=>`<div class="resultado-mini"><span>vs ${textoSeguro(r.rival)}</span><strong>${r.gf} — ${r.gc}</strong></div>`).join("")}</details>` : ""}
           </div>`;
         }).join("")}
       </div>`;
@@ -1183,7 +1196,7 @@ fetch("data/club-data.json", { cache: "no-store" })
       .filter(p => DEPORTES.some(dep => dep.slug === p.deporte) && fechaValida(p.fecha))
       .map(p => ({ deporte:p.deporte, categoria:textoPlano(p.categoria), rival:textoPlano(p.rival), fecha:p.fecha, hora:textoPlano(p.hora), local:Boolean(p.local) }));
     if (Array.isArray(d.resultados) && d.resultados.length) RESULTADOS = d.resultados
-      .map(r => ({ deporte:textoPlano(r.deporte), categoria:textoPlano(r.categoria), rival:textoPlano(r.rival), gf:Number(r.gf) || 0, gc:Number(r.gc) || 0 }));
+      .map(r => ({ deporte:textoPlano(r.deporte), categoria:textoPlano(r.categoria), rival:textoPlano(r.rival), fecha:fechaValida(r.fecha) ? r.fecha : "", gf:Number(r.gf) || 0, gc:Number(r.gc) || 0 }));
     if (Array.isArray(d.eventos) && d.eventos.length) EVENTOS = d.eventos
       .filter(e => fechaValida(e.fecha))
       .map(e => ({ fecha:e.fecha, titulo:textoPlano(e.titulo), tipo:e.tipo === "solidario" ? "solidario" : "social", desc:textoPlano(e.desc) }));
