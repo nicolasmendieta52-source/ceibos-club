@@ -449,6 +449,9 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 /* ---------- FIXTURE ---------- */
 #fixture{background:linear-gradient(180deg,var(--verde-deep),var(--verde-night))}
 .fix-lista{margin-top:46px;display:flex;flex-direction:column;gap:14px}
+.fix-division{padding:22px;border:1px solid rgba(229,187,82,.22);border-radius:22px;background:rgba(246,241,228,.025)}
+.fix-division + .fix-division{margin-top:16px}
+.fix-division h3{font-family:var(--display);font-size:clamp(1.35rem,3vw,1.9rem);letter-spacing:.05em;text-transform:uppercase;color:var(--dorado);margin:0 0 16px}
 .fix-row{
   display:grid;grid-template-columns:86px 1fr auto;gap:22px;align-items:center;
   background:rgba(246,241,228,.04);border:1px solid rgba(246,241,228,.09);
@@ -1044,21 +1047,34 @@ function renderScore(){
 function renderFixture(){
   const hoy = new Date(); hoy.setHours(0,0,0,0);
   const lista = document.getElementById("fixLista");
-  const proximos = PARTIDOS.filter(p => fechaValida(p.fecha) && new Date(p.fecha+"T00:00:00") >= hoy && DEPORTES.some(d => d.slug === p.deporte));
-  lista.innerHTML = proximos.length ? proximos.map((p,i)=>{
+  const proximos = PARTIDOS.filter(p => fechaValida(p.fecha) && new Date(p.fecha+"T00:00:00") >= hoy && DEPORTES.some(d => d.slug === slugDeporte(p.deporte))).sort(porFecha);
+  const divisiones = [...proximos.reduce((mapa, partido) => {
+    const clave = `${slugDeporte(partido.deporte)}|${partido.categoria}`;
+    if (!mapa.has(clave)) mapa.set(clave, { deporte:slugDeporte(partido.deporte), categoria:partido.categoria, partidos:[] });
+    mapa.get(clave).partidos.push(partido);
+    return mapa;
+  }, new Map()).values()].sort((a,b) => {
+    const orden = ["Primera", "Reserva A", "Reserva Verde"];
+    if (a.deporte === "futbol" && b.deporte === "futbol") return orden.indexOf(a.categoria) - orden.indexOf(b.categoria);
+    return a.deporte.localeCompare(b.deporte);
+  });
+  lista.innerHTML = divisiones.length ? divisiones.map((division,grupo)=>{
+    const dep = DEPORTES.find(d=>d.slug===division.deporte);
+    return `<div class="fix-division rev rev-d${(grupo%4)+1}"><h3>${dep?.ico ?? ""} ${dep?.nombre ?? division.deporte} · ${division.categoria}</h3>${division.partidos.map((p,i)=>{
     const f = fmtFecha(p.fecha);
-    const dep = DEPORTES.find(d=>d.slug===p.deporte);
+    const deporte = DEPORTES.find(d=>d.slug===slugDeporte(p.deporte));
     const dias = Math.round((new Date(p.fecha+"T00:00:00") - hoy)/86400000);
     const cuenta = dias<0?"Jugado":dias===0?"¡HOY!":dias===1?"Mañana":`Faltan ${dias} días`;
     return `<div class="fix-row rev rev-d${(i%4)+1}">
       <div class="fix-fecha"><div class="dia">${f.dia}</div><div class="mes">${f.mes}</div></div>
       <div class="fix-det">
-        <div class="dep-nombre">${dep.ico} ${dep.nombre} · ${p.categoria}</div>
+        <div class="dep-nombre">${deporte.ico} ${deporte.nombre} · ${p.categoria}</div>
         <div class="enfrenta">Ceibos vs ${p.rival}</div>
         <div class="cat-hora">${p.hora} h · ${p.local?"Cancha Los Ceibos":"Visitante"}</div>
       </div>
       <div class="fix-cd"><div class="cuenta">${cuenta}</div><div class="lbl">${p.local?"De local":"De visita"}</div></div>
     </div>`;
+  }).join("")}</div>`;
   }).join("") : `<p class="sub">Todavía no hay partidos próximos cargados. Volvé pronto para ver el fixture actualizado.</p>`;
 }
 function renderDinamico(){ renderTicker(); renderDeportes(); renderScore(); renderFixture(); renderEventos(); revObserve(); }
