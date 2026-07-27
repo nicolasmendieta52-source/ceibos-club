@@ -71,6 +71,18 @@
       "modo": "browser"
     },
     {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
+      "modo": "browser"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "url": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
+      "modo": "browser"
+    },
+    {
       "deporte": "rugby",
       "categoria": "Primera",
       "url": "https://uru.org.uy/",

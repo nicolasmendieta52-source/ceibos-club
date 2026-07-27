@@ -101,6 +101,16 @@ async function renderPage(source) {
   try {
     const page = await browser.newPage({ userAgent: "CeibosClubFixtureBot/1.0 (contacto: info@ceibosclub.com)" });
     await page.goto(source.url, { waitUntil: "domcontentloaded", timeout: 60000 });
+    // Hockey muestra el fixture en una pestaña oculta y body.innerText solo
+    // devuelve la clasificación. Leemos las celdas de cada fila para conservar
+    // el orden: partido, fecha, horario, cancha, resultado y estado.
+    if (source.formato === "hockey-admin") {
+      return await page.locator("table tr").evaluateAll(rows => rows.map(row =>
+        [...row.querySelectorAll("th, td")]
+          .map(cell => cell.innerText.replace(/\s+/g, " ").trim())
+          .join("\t")
+      ).join("\n"));
+    }
     return await page.locator("body").innerText();
   } finally {
     await browser.close();
