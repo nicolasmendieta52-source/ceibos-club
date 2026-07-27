@@ -1,7 +1,7 @@
 @echo off
 title Subir Ceibos Club a GitHub
 cd /d "%~dp0"
-git config --global --add safe.directory "%~dp0"
+git config --global --add safe.directory "C:/Users/Usuario/Documents/Codex/2026-07-20/e/outputs"
 git config --global credential.helper manager
 echo.
 echo Se abrira el inicio de sesion de GitHub si hace falta.
