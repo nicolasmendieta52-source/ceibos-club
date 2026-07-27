@@ -9,6 +9,7 @@ echo Cuando termines de iniciar sesion, esta ventana subira la web automaticamen
 echo.
 git add -A
 git diff --cached --quiet || git commit -m "Actualizar web y datos del club"
+git pull --rebase origin main
 git push -u origin main
 echo.
 if errorlevel 1 (
