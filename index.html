@@ -449,6 +449,9 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 
 /* ---------- FIXTURE ---------- */
 #fixture{background:linear-gradient(180deg,var(--verde-deep),var(--verde-night))}
+.fix-tabs{display:flex;gap:9px;flex-wrap:wrap;margin-top:32px}
+.fix-tab{border:1px solid rgba(229,187,82,.45);border-radius:99px;padding:9px 15px;background:transparent;color:var(--dorado-soft);font-family:var(--body);font-size:.76rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.fix-tab.activo,.fix-tab:hover{background:var(--dorado);color:var(--verde-night)}
 .fix-lista{margin-top:46px;display:flex;flex-direction:column;gap:14px}
 .fix-division{padding:22px;border:1px solid rgba(229,187,82,.22);border-radius:22px;background:rgba(246,241,228,.025)}
 .fix-division + .fix-division{margin-top:16px}
@@ -549,6 +552,7 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
   <div class="tag-sec rev">Agenda deportiva</div>
   <h2 class="titulo rev rev-d1">Próximos <em>partidos</em></h2>
   <p class="sub rev rev-d2">Anotá la fecha y vení a alentar. Cada partido cuenta los días que faltan.</p>
+  <div class="fix-tabs rev rev-d3" id="fixTabs" role="tablist" aria-label="Deportes con próximos partidos"></div>
   <div class="fix-lista" id="fixLista"></div>
 </section>
 
@@ -1064,35 +1068,37 @@ function renderScore(){
 function renderFixture(){
   const hoy = new Date(); hoy.setHours(0,0,0,0);
   const lista = document.getElementById("fixLista");
+  const tabs = document.getElementById("fixTabs");
   const proximos = PARTIDOS.filter(p => fechaValida(p.fecha) && new Date(p.fecha+"T00:00:00") >= hoy && DEPORTES.some(d => d.slug === slugDeporte(p.deporte))).sort(porFecha);
-  const divisiones = [...proximos.reduce((mapa, partido) => {
-    const clave = `${slugDeporte(partido.deporte)}|${partido.categoria}`;
-    if (!mapa.has(clave)) mapa.set(clave, { deporte:slugDeporte(partido.deporte), categoria:partido.categoria, partidos:[] });
-    mapa.get(clave).partidos.push(partido);
-    return mapa;
-  }, new Map()).values()].sort((a,b) => {
-    const orden = ["Primera", "Reserva A", "Reserva Verde"];
-    if (a.deporte === "futbol" && b.deporte === "futbol") return orden.indexOf(a.categoria) - orden.indexOf(b.categoria);
-    return a.deporte.localeCompare(b.deporte);
-  });
-  lista.innerHTML = divisiones.length ? divisiones.map((division,grupo)=>{
-    const dep = DEPORTES.find(d=>d.slug===division.deporte);
-    return `<div class="fix-division rev rev-d${(grupo%4)+1}"><h3>${dep?.ico ?? ""} ${dep?.nombre ?? division.deporte} · ${division.categoria}</h3>${division.partidos.map((p,i)=>{
+  const deportesConAgenda = DEPORTES.filter(d => d.slug === "futbol" || d.slug === "basketball" || proximos.some(p => slugDeporte(p.deporte) === d.slug));
+  tabs.innerHTML = deportesConAgenda.map((d,i) => `<button class="fix-tab${i===0?' activo':''}" type="button" data-fix-deporte="${d.slug}" role="tab" aria-selected="${i===0?'true':'false'}">${d.ico} ${d.nombre}</button>`).join("");
+
+  const tarjeta = p => {
     const f = fmtFecha(p.fecha);
-    const deporte = DEPORTES.find(d=>d.slug===slugDeporte(p.deporte));
     const dias = Math.round((new Date(p.fecha+"T00:00:00") - hoy)/86400000);
-    const cuenta = dias<0?"Jugado":dias===0?"¡HOY!":dias===1?"Mañana":`Faltan ${dias} días`;
-    return `<div class="fix-row rev rev-d${(i%4)+1}">
-      <div class="fix-fecha"><div class="dia">${f.dia}</div><div class="mes">${f.mes}</div></div>
-      <div class="fix-det">
-        <div class="dep-nombre">${deporte.ico} ${deporte.nombre} · ${p.categoria}</div>
-        <div class="enfrenta">Ceibos vs ${p.rival}</div>
-        <div class="cat-hora">${p.hora} h · ${p.local?"Cancha Los Ceibos":"Visitante"}</div>
-      </div>
-      <div class="fix-cd"><div class="cuenta">${cuenta}</div><div class="lbl">${p.local?"De local":"De visita"}</div></div>
-    </div>`;
-  }).join("")}</div>`;
-  }).join("") : `<p class="sub">Todavía no hay partidos próximos cargados. Volvé pronto para ver el fixture actualizado.</p>`;
+    const cuenta = dias===0?"¡HOY!":dias===1?"Mañana":`Faltan ${dias} días`;
+    return `<div class="fix-row"><div class="fix-fecha"><div class="dia">${f.dia}</div><div class="mes">${f.mes}</div></div><div class="fix-det"><div class="dep-nombre">${p.categoria}</div><div class="enfrenta">Ceibos vs ${textoSeguro(p.rival)}</div><div class="cat-hora">${textoSeguro(p.hora)} h · ${p.local?"Cancha Los Ceibos":"Visitante"}</div></div><div class="fix-cd"><div class="cuenta">${cuenta}</div><div class="lbl">${p.local?"De local":"De visita"}</div></div></div>`;
+  };
+
+  const mostrarDeporte = slug => {
+    const orden = ["Primera", "Reserva A", "Reserva Verde", "Basketball"];
+    const divisiones = [...proximos.filter(p => slugDeporte(p.deporte) === slug).reduce((mapa, partido) => {
+      if (!mapa.has(partido.categoria)) mapa.set(partido.categoria, []);
+      mapa.get(partido.categoria).push(partido);
+      return mapa;
+    }, new Map()).entries()].sort((a,b) => orden.indexOf(a[0]) - orden.indexOf(b[0]));
+    lista.innerHTML = divisiones.length ? divisiones.map(([categoria, partidos],grupo) => {
+      const primero = partidos[0], resto = partidos.slice(1);
+      return `<div class="fix-division rev rev-d${(grupo%4)+1}"><h3>${textoSeguro(categoria)}</h3>${tarjeta(primero)}${resto.length ? `<details class="dep-vermas"><summary>Ver ${resto.length} partido${resto.length===1?'':'s'} más</summary>${resto.map(tarjeta).join("")}</details>`:""}</div>`;
+    }).join("") : `<p class="sub">La Liga todavía no publicó próximos partidos de este deporte. Volvé pronto para ver el fixture actualizado.</p>`;
+    revObserve();
+  };
+
+  tabs.querySelectorAll("[data-fix-deporte]").forEach(boton => boton.addEventListener("click", () => {
+    tabs.querySelectorAll(".fix-tab").forEach(tab => { const activa = tab === boton; tab.classList.toggle("activo", activa); tab.setAttribute("aria-selected", String(activa)); });
+    mostrarDeporte(boton.dataset.fixDeporte);
+  }));
+  mostrarDeporte(deportesConAgenda[0]?.slug ?? "futbol");
 }
 function renderDinamico(){ renderTicker(); renderDeportes(); renderScore(); renderFixture(); renderEventos(); revObserve(); }
 
