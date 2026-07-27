@@ -5,7 +5,7 @@
       "deporte": "hockey",
       "categoria": "Damas A",
       "url": "https://admin.hockey.com.uy/posiciones?category_id=31",
-      "modo": "html"
+      "modo": "browser"
     },
     {
       "deporte": "basketball",
@@ -17,37 +17,37 @@
       "deporte": "futbol",
       "categoria": "Reserva Verde",
       "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS31.html",
-      "modo": "html"
+      "modo": "browser"
     },
     {
       "deporte": "futbol",
       "categoria": "Reserva Verde",
       "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS31.html",
-      "modo": "html"
+      "modo": "browser"
     },
     {
       "deporte": "futbol",
       "categoria": "Reserva A",
       "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS1.html",
-      "modo": "html"
+      "modo": "browser"
     },
     {
       "deporte": "futbol",
       "categoria": "Reserva A",
       "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS1.html",
-      "modo": "html"
+      "modo": "browser"
     },
     {
       "deporte": "futbol",
       "categoria": "Primera",
       "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
-      "modo": "html"
+      "modo": "browser"
     },
     {
       "deporte": "futbol",
       "categoria": "Primera",
       "url": "https://ligauniversitaria.org.uy/partidos/F21B.html",
-      "modo": "html"
+      "modo": "browser"
     },
     {
       "deporte": "rugby",
