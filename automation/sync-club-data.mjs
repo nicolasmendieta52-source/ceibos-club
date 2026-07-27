@@ -20,9 +20,10 @@ function isTeam(value, aliases) {
 }
 
 function parseLine(line, source, aliases) {
-  const text = clean(line);
+  const raw = String(line);
+  const cells = raw.split("\t").map(clean).filter(Boolean);
+  const text = clean(raw);
   if (!aliases.some(alias => text.toLocaleLowerCase("es").includes(alias.toLocaleLowerCase("es")))) return null;
-  const cells = String(line).split("\t").map(clean).filter(Boolean);
 
   // Tablas oficiales de la Liga Universitaria: fecha, cancha, local, goles, visitante, goles.
   if (cells.length >= 6 && /^\d{1,2}-\d{1,2}\s+\d{1,2}:\d{2}$/.test(cells[0]) && /^\d+$/.test(cells[3]) && /^\d+$/.test(cells[5])) {
