@@ -3,6 +3,20 @@
   "sources": [
     {
       "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "url": "https://admin.hockey.com.uy/posiciones?category_id=3",
+      "modo": "browser",
+      "formato": "hockey-admin"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "url": "https://admin.hockey.com.uy/posiciones?category_id=4",
+      "modo": "browser",
+      "formato": "hockey-admin"
+    },
+    {
+      "deporte": "hockey",
       "categoria": "Intermedia B",
       "url": "https://admin.hockey.com.uy/posiciones?category_id=31",
       "modo": "browser",
