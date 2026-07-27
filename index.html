@@ -423,7 +423,7 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 .score-card{
   background:linear-gradient(160deg,rgba(246,241,228,.07),rgba(246,241,228,.02));
   border:1px solid rgba(246,241,228,.1);border-radius:22px;padding:26px 24px;
-  position:relative;overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s,border-color .4s;
+  position:relative;overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s,border-color .4s;text-decoration:none;
 }
 .score-card:hover{transform:translateY(-8px) rotate(-.5deg);border-color:rgba(229,187,82,.5);box-shadow:0 22px 50px rgba(0,0,0,.4)}
 .score-card .dep{
@@ -438,6 +438,7 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 .score-num .sep{color:rgba(246,241,228,.3);font-size:.6em}
 .score-num .nos{color:var(--dorado)}
 .score-rival{margin-top:12px;font-weight:600;color:rgba(246,241,228,.75)}
+.score-ver-mas{display:inline-block;margin-top:15px;color:var(--dorado);font-size:.68rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
 .score-res{
   position:absolute;top:18px;right:-32px;transform:rotate(38deg);
   font-size:.62rem;font-weight:900;letter-spacing:.2em;padding:5px 38px;
@@ -870,8 +871,8 @@ const DEPORTES = [
   },
   {
     slug:"basketball", nombre:"Basketball", ico:"🏀", instagram:"ceibosbasketball",
-    desc:"La disciplina más joven del club ya compite en la divisional B de la Liga Universitaria. Vamos por más.",
-    categorias:["Divisional B · Liga Universitaria"]
+    desc:"La disciplina más joven del club sigue creciendo con intensidad, equipo y el sello verdiamarillo de Ceibos.",
+    categorias:["Basketball"]
   }
 ];
 
@@ -1017,6 +1018,17 @@ function activarDeporte(slug){
   document.querySelectorAll(".dep-panel").forEach(p=>p.classList.toggle("activo", p===panel));
 }
 
+function activarCategoria(deporte, categoria){
+  const panel = document.getElementById(deporte);
+  if (!panel) return;
+  panel.querySelectorAll(".cat-tab").forEach(tabCategoria => {
+    const activa = tabCategoria.dataset.categoria === categoria;
+    tabCategoria.classList.toggle("activo", activa);
+    tabCategoria.setAttribute("aria-selected", String(activa));
+  });
+  panel.querySelectorAll("[data-categoria-panel]").forEach(panelCategoria => panelCategoria.classList.toggle("activo", panelCategoria.dataset.categoriaPanel === categoria));
+}
+
 /* scoreboard */
 function renderScore(){
   const g = document.getElementById("scoreGrid");
@@ -1033,14 +1045,19 @@ function renderScore(){
   g.innerHTML = marcadores.map((r,i)=>{
     const cls = r.gf>r.gc?"v":r.gf===r.gc?"e":"d";
     const lbl = r.gf>r.gc?"VICTORIA":r.gf===r.gc?"EMPATE":"DERROTA";
-    return `<div class="score-card rev rev-d${(i%4)+1}">
+    return `<a class="score-card rev rev-d${(i%4)+1}" href="#${slugDeporte(r.deporte)}" data-score-deporte="${slugDeporte(r.deporte)}" data-score-categoria="${textoSeguro(r.categoria)}">
       <span class="score-res ${cls}">${lbl}</span>
       <div class="dep">${r.deporte}</div>
       <div class="score-categoria">${r.categoria}</div>
       <div class="score-num"><span class="nos">${r.gf}</span><span class="sep">—</span><span>${r.gc}</span></div>
       <div class="score-rival">vs ${r.rival}</div>
-    </div>`;
+      <span class="score-ver-mas">Ver detalle →</span>
+    </a>`;
   }).join("");
+  g.querySelectorAll("[data-score-deporte]").forEach(tarjeta => tarjeta.addEventListener("click", () => {
+    activarDeporte(tarjeta.dataset.scoreDeporte);
+    activarCategoria(tarjeta.dataset.scoreDeporte, tarjeta.dataset.scoreCategoria);
+  }));
 }
 
 /* fixture con cuenta regresiva */
