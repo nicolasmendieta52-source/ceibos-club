@@ -1070,10 +1070,11 @@ function renderFixture(){
   const lista = document.getElementById("fixLista");
   const tabs = document.getElementById("fixTabs");
   const proximos = PARTIDOS.filter(p => fechaValida(p.fecha) && new Date(p.fecha+"T00:00:00") >= hoy && DEPORTES.some(d => d.slug === slugDeporte(p.deporte))).sort(porFecha);
-  const deportesConAgenda = DEPORTES.filter(d => d.slug === "futbol" || d.slug === "basketball" || proximos.some(p => slugDeporte(p.deporte) === d.slug));
+  const deportesConAgenda = DEPORTES.filter(d => ["futbol", "basketball", "hockey"].includes(d.slug) || proximos.some(p => slugDeporte(p.deporte) === d.slug));
   tabs.innerHTML = deportesConAgenda.map((d,i) => `<button class="fix-tab${i===0?' activo':''}" type="button" data-fix-deporte="${d.slug}" role="tab" aria-selected="${i===0?'true':'false'}">${d.ico} ${d.nombre}</button>`).join("");
 
   const tarjeta = p => {
+    if (!p) return `<p class="sub">Sin proximos partidos publicados.</p>`;
     const f = fmtFecha(p.fecha);
     const dias = Math.round((new Date(p.fecha+"T00:00:00") - hoy)/86400000);
     const cuenta = dias===0?"¡HOY!":dias===1?"Mañana":`Faltan ${dias} días`;
@@ -1081,12 +1082,12 @@ function renderFixture(){
   };
 
   const mostrarDeporte = slug => {
-    const orden = ["Primera", "Reserva A", "Reserva Verde", "Sub 18", "Basketball"];
+    const orden = DEPORTES.find(d => d.slug === slug)?.categorias ?? [];
     const divisiones = [...proximos.filter(p => slugDeporte(p.deporte) === slug).reduce((mapa, partido) => {
       if (!mapa.has(partido.categoria)) mapa.set(partido.categoria, []);
       mapa.get(partido.categoria).push(partido);
       return mapa;
-    }, new Map()).entries()].sort((a,b) => orden.indexOf(a[0]) - orden.indexOf(b[0]));
+    }, new Map(orden.map(categoria => [categoria, []]))).entries()].sort((a,b) => orden.indexOf(a[0]) - orden.indexOf(b[0]));
     lista.innerHTML = divisiones.length ? divisiones.map(([categoria, partidos],grupo) => {
       const primero = partidos[0], resto = partidos.slice(1);
       return `<div class="fix-division rev rev-d${(grupo%4)+1}"><h3>${textoSeguro(categoria)}</h3>${tarjeta(primero)}${resto.length ? `<details class="dep-vermas"><summary>Ver ${resto.length} partido${resto.length===1?'':'s'} más</summary>${resto.map(tarjeta).join("")}</details>`:""}</div>`;

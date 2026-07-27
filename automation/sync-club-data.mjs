@@ -101,6 +101,7 @@ async function renderPage(source) {
   try {
     const page = await browser.newPage({ userAgent: "CeibosClubFixtureBot/1.0 (contacto: info@ceibosclub.com)" });
     await page.goto(source.url, { waitUntil: "domcontentloaded", timeout: 60000 });
+    await page.locator("table").first().waitFor({ state: "attached", timeout: 10000 }).catch(() => {});
     // Hockey muestra el fixture en una pestaña oculta y body.innerText solo
     // devuelve la clasificación. Leemos las celdas de cada fila para conservar
     // el orden: partido, fecha, horario, cancha, resultado y estado.
@@ -110,12 +111,16 @@ async function renderPage(source) {
         await fixtureTab.click();
         await page.waitForTimeout(400);
       }
-      return await page.locator("table tr").evaluateAll(rows => rows.map(row =>
-        [...row.querySelectorAll("th, td")]
-          .map(cell => cell.innerText.replace(/\s+/g, " ").trim())
-          .join("\t")
-      ).join("\n"));
     }
+    // Todas las fuentes oficiales publican los datos en tablas. Conservamos
+    // cada fila como una línea con tabulaciones, que es más confiable que
+    // body.innerText para no separar fecha, equipos y marcadores.
+    const rows = await page.locator("table tr").evaluateAll(rows => rows.map(row =>
+      [...row.querySelectorAll("th, td")]
+        .map(cell => cell.innerText.replace(/\s+/g, " ").trim())
+        .join("\t")
+    ).filter(Boolean).join("\n"));
+    if (rows) return rows;
     return await page.locator("body").innerText();
   } finally {
     await browser.close();
@@ -136,11 +141,16 @@ async function main() {
       console.warn(`${source.deporte}: no se pudo actualizar (${error.message})`);
     }
   }
-  const partidos = unique(gathered.filter(match => match.kind === "partido").map(({ kind, ...match }) => match), match => `${match.deporte}|${match.categoria}|${match.rival}|${match.fecha}|${match.hora}`);
-  const resultados = unique(gathered.filter(match => match.kind === "resultado").map(({ kind, ...match }) => match), match => `${match.deporte}|${match.categoria}|${match.rival}|${match.fecha}|${match.gf}|${match.gc}`);
+  // Una fuente puede no responder momentáneamente. Conservamos los datos que
+  // ya estaban publicados y sumamos los nuevos, para que un deporte nunca
+  // borre los resultados de los demás.
+  const nuevosPartidos = gathered.filter(match => match.kind === "partido").map(({ kind, ...match }) => match);
+  const nuevosResultados = gathered.filter(match => match.kind === "resultado").map(({ kind, ...match }) => match);
+  const partidos = unique([...nuevosPartidos, ...(previous.partidos ?? [])], match => `${match.deporte}|${match.categoria}|${match.rival}|${match.fecha}|${match.hora}`);
+  const resultados = unique([...nuevosResultados, ...(previous.resultados ?? [])], match => `${match.deporte}|${match.categoria}|${match.rival}|${match.fecha}`);
   const output = {
-    partidos: partidos.length ? partidos : (previous.partidos ?? []),
-    resultados: resultados.length ? resultados : (previous.resultados ?? []),
+    partidos,
+    resultados,
     eventos: previous.eventos ?? [],
     actualizadoEn: new Date().toISOString()
   };
