@@ -124,7 +124,7 @@
   "resultados": [
     {
       "deporte": "basketball",
-      "categoria": "Divisional B",
+      "categoria": "Basketball",
       "rival": "UNIVERSIDAD DE MONTEVIDEO",
       "gf": 65,
       "gc": 71,
@@ -132,7 +132,7 @@
     },
     {
       "deporte": "basketball",
-      "categoria": "Divisional B",
+      "categoria": "Basketball",
       "rival": "CLUB NAUTICO",
       "gf": 57,
       "gc": 69,
@@ -140,7 +140,7 @@
     },
     {
       "deporte": "basketball",
-      "categoria": "Divisional B",
+      "categoria": "Basketball",
       "rival": "UNIVERSIDAD ORT",
       "gf": 67,
       "gc": 76,
@@ -148,7 +148,7 @@
     },
     {
       "deporte": "basketball",
-      "categoria": "Divisional B",
+      "categoria": "Basketball",
       "rival": "AURIBLANCO BASKETBALL CLUB",
       "gf": 47,
       "gc": 67,
@@ -156,7 +156,7 @@
     },
     {
       "deporte": "basketball",
-      "categoria": "Divisional B",
+      "categoria": "Basketball",
       "rival": "CLUB CHAMPAGNAT RUGBY",
       "gf": 30,
       "gc": 47,
@@ -164,7 +164,7 @@
     },
     {
       "deporte": "basketball",
-      "categoria": "Divisional B",
+      "categoria": "Basketball",
       "rival": "BELLA UNION UNIVERSITARIO",
       "gf": 65,
       "gc": 44,
@@ -172,7 +172,7 @@
     },
     {
       "deporte": "basketball",
-      "categoria": "Divisional B",
+      "categoria": "Basketball",
       "rival": "REDUCTO UNIVERSITARIO",
       "gf": 59,
       "gc": 71,
@@ -180,7 +180,7 @@
     },
     {
       "deporte": "basketball",
-      "categoria": "Divisional B",
+      "categoria": "Basketball",
       "rival": "J.M.L.M",
       "gf": 48,
       "gc": 75,
@@ -188,7 +188,7 @@
     },
     {
       "deporte": "basketball",
-      "categoria": "Divisional B",
+      "categoria": "Basketball",
       "rival": "ELBIO FERNANDEZ",
       "gf": 59,
       "gc": 65,
@@ -196,7 +196,7 @@
     },
     {
       "deporte": "basketball",
-      "categoria": "Divisional B",
+      "categoria": "Basketball",
       "rival": "ORT BLANCO",
       "gf": 63,
       "gc": 61,
@@ -204,7 +204,7 @@
     },
     {
       "deporte": "basketball",
-      "categoria": "Divisional B",
+      "categoria": "Basketball",
       "rival": "MARISTAS DEPORTIVO",
       "gf": 48,
       "gc": 45,
@@ -212,7 +212,7 @@
     },
     {
       "deporte": "basketball",
-      "categoria": "Divisional B",
+      "categoria": "Basketball",
       "rival": "OLD BOYS CLUB",
       "gf": 61,
       "gc": 50,
@@ -220,7 +220,7 @@
     },
     {
       "deporte": "basketball",
-      "categoria": "Divisional B",
+      "categoria": "Basketball",
       "rival": "YOUNG UNIVERSITARIO",
       "gf": 60,
       "gc": 50,
@@ -228,7 +228,7 @@
     },
     {
       "deporte": "basketball",
-      "categoria": "Divisional B",
+      "categoria": "Basketball",
       "rival": "CLUB BELLAKEO C.B.",
       "gf": 84,
       "gc": 39,
@@ -236,7 +236,7 @@
     },
     {
       "deporte": "basketball",
-      "categoria": "Divisional B",
+      "categoria": "Basketball",
       "rival": "CLUB UNIVERSIDAD CATOLICA",
       "gf": 51,
       "gc": 59,
@@ -484,5 +484,5 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-07-27T20:14:27.241Z"
+  "actualizadoEn": "2026-07-27T20:19:30.761Z"
 }
