@@ -1,6 +1,368 @@
 {
-  "partidos": [],
-  "resultados": [],
+  "partidos": [
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
+      "fecha": "2026-08-01",
+      "hora": "11:15",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "PEÑAROL UNIVERSITARIO",
+      "fecha": "2026-08-08",
+      "hora": "09:00",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "DANUBIO FUTBOL CLUB",
+      "fecha": "2026-08-15",
+      "hora": "11:15",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "E.L.F.",
+      "fecha": "2026-08-29",
+      "hora": "11:15",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "LA BLANQUEADA",
+      "fecha": "2026-09-05",
+      "hora": "11:15",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "OBC AZULGRANA.",
+      "fecha": "2026-08-01",
+      "hora": "09:00",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
+      "fecha": "2026-08-08",
+      "hora": "09:00",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "CARRASCO LAWN TENNIS",
+      "fecha": "2026-08-15",
+      "hora": "09:00",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "OLD CHRISTIANS CLUB",
+      "fecha": "2026-08-29",
+      "hora": "09:00",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "TAPE",
+      "fecha": "2026-09-05",
+      "hora": "11:15",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "SAN JUAN BAUTISTA",
+      "fecha": "2026-08-02",
+      "hora": "09:00",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "CIRCULO DE TENIS MONTEVIDEO",
+      "fecha": "2026-08-09",
+      "hora": "11:15",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "ALEMAN UNIVERSITARIO",
+      "fecha": "2026-08-16",
+      "hora": "11:15",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
+      "fecha": "2026-08-30",
+      "hora": "11:15",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
+      "fecha": "2026-09-06",
+      "hora": "11:15",
+      "local": true
+    }
+  ],
+  "resultados": [
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "COLEGIO Y LICEO INGLES",
+      "gf": 1,
+      "gc": 0,
+      "fecha": "2026-04-11"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "NUMA TURCATTI",
+      "gf": 2,
+      "gc": 1,
+      "fecha": "2026-04-18"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "JUAN XXIII BLANCO",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-04-25"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "SAN PABLO UNIVERSITARIO",
+      "gf": 2,
+      "gc": 1,
+      "fecha": "2026-05-16"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "OLD CHRISTIANS NARANJA",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-05-23"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "CENTRO CRISTOBAL COLON",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-05-30"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "OLD BRENDANS VERDE",
+      "gf": 3,
+      "gc": 1,
+      "fecha": "2026-06-06"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "SEMINARIO UNIVERSITARIO",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-06-13"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "WANDERERS",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-06-20"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "SAN EUGENIO",
+      "gf": 2,
+      "gc": 1,
+      "fecha": "2026-06-27"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "NACIONAL UNIVERSITARIO",
+      "gf": 0,
+      "gc": 0,
+      "fecha": "2026-04-11"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "CLUB SEMINARIO",
+      "gf": 0,
+      "gc": 1,
+      "fecha": "2026-04-15"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "SAGRADA FAMILIA UNIVERSITARIO",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-04-25"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "ALEMAN UNIVERSITARIO",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-05-16"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "OLD CHRISTIANS AZUL",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-05-23"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "TENIS EL PINAR",
+      "gf": 1,
+      "gc": 0,
+      "fecha": "2026-05-30"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "OLD WOODLANDS CLUB",
+      "gf": 1,
+      "gc": 4,
+      "fecha": "2026-06-06"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "PLAYA HONDA UNIVERSITARIO",
+      "gf": 1,
+      "gc": 5,
+      "fecha": "2026-06-13"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "CARRASCO POLO CLUB",
+      "gf": 1,
+      "gc": 3,
+      "fecha": "2026-06-20"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "OLD BOYS CLUB",
+      "gf": 0,
+      "gc": 3,
+      "fecha": "2026-06-27"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "OLIMAR",
+      "gf": 4,
+      "gc": 2,
+      "fecha": "2026-04-12"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "CITY PARK",
+      "gf": 4,
+      "gc": 1,
+      "fecha": "2026-04-19"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "CLUB JESUS MARIA",
+      "gf": 2,
+      "gc": 1,
+      "fecha": "2026-04-26"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "INDEPENDIENTE",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-05-17"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "SAGRADA FAMILIA UNIVERSITARIO",
+      "gf": 2,
+      "gc": 1,
+      "fecha": "2026-05-24"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "CLUB UNIVERSIDAD CATOLICA",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-05-31"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "J.M.L.M",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-06-07"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "CENTRO CRISTOBAL COLON",
+      "gf": 2,
+      "gc": 1,
+      "fecha": "2026-06-14"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "ELBIO FERNANDEZ",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-06-21"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "OLD BRENDANS CLUB",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-06-28"
+    }
+  ],
   "eventos": [],
-  "actualizadoEn": "2026-07-27T14:48:51.724Z"
+  "actualizadoEn": "2026-07-27T14:54:24.802Z"
 }
