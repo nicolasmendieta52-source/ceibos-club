@@ -19,6 +19,14 @@
     {
       "deporte": "hockey",
       "categoria": "Intermedia B",
+      "rival": "Scuola Italiana Di Montevideo",
+      "fecha": "2026-08-02",
+      "hora": "17:00",
+      "local": false
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
       "rival": "Cgu – Los Cuervos",
       "fecha": "2026-07-19",
       "hora": "14:00",
@@ -836,5 +844,5 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-07-28T10:14:56.590Z"
+  "actualizadoEn": "2026-07-28T17:24:34.967Z"
 }
