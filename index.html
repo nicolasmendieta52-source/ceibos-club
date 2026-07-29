@@ -644,10 +644,12 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
   padding:6px 13px;border-radius:99px;background:var(--dorado);color:var(--verde-night);
 }
 .prod svg{width:150px;height:150px;margin:14px auto 18px;display:block;transition:transform .45s var(--ease)}
+.prod-foto{width:100%;aspect-ratio:4/4.35;object-fit:cover;object-position:center 50%;display:block;margin:0 auto 20px;border-radius:17px;background:#e9e9e7;border:1px solid rgba(246,241,228,.16);transition:transform .45s var(--ease)}
 .prod-escudo{width:150px;height:150px;margin:14px auto 18px;display:block;transition:transform .45s var(--ease)}
 .prod:hover .prod-escudo{transform:scale(1.1) rotate(3deg)}
 .prod:hover svg{transform:scale(1.1) rotate(2deg)}
-.prod.suspendido{cursor:default;filter:saturate(.72)}.prod.suspendido:hover{transform:none;border-color:rgba(229,187,82,.18);box-shadow:none}.prod.suspendido:hover::after{opacity:0}.prod.suspendido:hover svg{transform:none}.prod.suspendido .badge-prod{background:rgba(246,241,228,.18);color:var(--crema)}
+.prod:hover .prod-foto{transform:scale(1.025)}
+.prod.suspendido{cursor:default}.prod.suspendido:hover{transform:none;border-color:rgba(229,187,82,.18);box-shadow:none}.prod.suspendido:hover::after{opacity:0}.prod.suspendido:hover svg,.prod.suspendido:hover .prod-foto{transform:none}.prod.suspendido .badge-prod{background:rgba(246,241,228,.18);color:var(--crema)}
 .prod h3{font-family:var(--display);font-size:1.45rem;text-transform:uppercase;color:var(--blanco);letter-spacing:.04em}
 .prod .prod-desc{color:rgba(246,241,228,.6);font-size:.9rem;margin:8px 0 16px;line-height:1.5}
 .prod .prod-cta{
@@ -1049,9 +1051,9 @@ const SOLIDARIO = [
 const SHOP_ACTIVA = false;
 const SHOP_URL = "https://ceibosclubpreventabulk.netlify.app/";
 const SHOP = [
-  { nombre:"Camiseta oficial",      jersey:"titular",     badge:"Próximamente", desc:"Verde Ceibos, vivos dorados y el ceibo como protagonista." },
-  { nombre:"Indumentaria deportiva",jersey:"alternativa", badge:"Próximamente", desc:"Diseñada para entrenar y representar al club en cada cancha." },
-  { nombre:"Merch oficial",         jersey:"escudo",      badge:"Próximamente", desc:"Buzos, gorros y accesorios con la identidad verdiamarilla." },
+  { nombre:"Musculosa gimnasio", imagen:"assets/shop-musculosa-gimnasio.png", posicion:"50%", badge:"Próximamente", desc:"Modelo oficial en degradé verde y dorado, con escudo Ceibos original." },
+  { nombre:"Remera gimnasio", imagen:"assets/shop-remera-gimnasio.png", posicion:"33%", badge:"Próximamente", desc:"Remera verde con vivos dorados en hombros y escudo oficial." },
+  { nombre:"Campera forrada polar", imagen:"assets/shop-campera-polar.png", posicion:"56%", badge:"Próximamente", desc:"Campera verde con detalles dorados y el escudo original del club." },
 ];
 
 /* TRIVIA: cargá las preguntas acá cuando esté lista. La sección ya está
@@ -1285,36 +1287,11 @@ function renderEventos(){
     </div>`).join("");
 })();
 
-/* shop: camisetas dibujadas en SVG con los colores del manual */
+/* shop: fotos de las prendas oficiales. El escudo se conserva tal cual aparece
+   en la indumentaria real, sin recrearlo ni dibujarlo. */
 (() => {
-  const cuerpo = `M30 38 L52 24 L72 30 L88 24 L110 38 L102 58 L92 52 L92 116 Q70 124 48 116 L48 52 L38 58 Z`;
-  const JERSEYS = {
-    titular: `
-      <defs><clipPath id="clipT"><path d="${cuerpo}"/></clipPath></defs>
-      <path d="${cuerpo}" fill="#1A4036"/>
-      <g clip-path="url(#clipT)">
-        <path d="M70 42 V116 M70 54 C59 43 51 49 48 60 M70 54 C81 43 89 49 92 60 M70 72 C57 60 46 67 43 80 M70 72 C83 60 94 67 97 80 M70 89 C59 79 51 84 49 95 M70 89 C81 79 89 84 91 95" stroke="#2B674E" stroke-width="13" stroke-linecap="round" opacity=".78"/>
-        <path d="M36 43 L47 51 M104 43 L93 51" stroke="#E5BB52" stroke-width="3"/>
-        <path d="M48 58 V111 M92 58 V111" stroke="#0D2923" stroke-width="3" opacity=".8"/>
-      </g>
-      <path d="${cuerpo}" fill="none" stroke="#E5BB52" stroke-width="2.5"/>
-      <path d="M55 27 L70 39 L85 27" fill="none" stroke="#E5BB52" stroke-width="4.5" stroke-linecap="round"/>
-      <path d="M57 52 H66" stroke="#E5BB52" stroke-width="2.2" stroke-linecap="round"/><text x="70" y="98" text-anchor="middle" font-family="Arial" font-size="9" font-weight="800" fill="#E5BB52">CEIBOS</text>`,
-    alternativa: `
-      <path d="${cuerpo}" fill="#153A32"/>
-      <path d="M30 38 L52 24 L57 31 L48 52 L38 58 Z" fill="#10251F"/>
-      <path d="M110 38 L88 24 L83 31 L92 52 L102 58 Z" fill="#10251F"/>
-      <path d="${cuerpo}" fill="none" stroke="#E5BB52" stroke-width="2.5"/>
-      <path d="M55 27 L70 38 L85 27" fill="none" stroke="#E5BB52" stroke-width="4.5" stroke-linecap="round"/>
-      <path d="M42 48 V113 M98 48 V113" stroke="#E5BB52" stroke-width="2" opacity=".8"/>
-      <path d="M70 47 V111 M70 61 C61 52 55 58 52 67 M70 61 C79 52 85 58 88 67 M70 77 C61 69 56 74 54 83 M70 77 C79 69 84 74 86 83" stroke="#29634C" stroke-width="11" stroke-linecap="round" opacity=".78"/>
-      <path d="M57 52 H66" stroke="#E5BB52" stroke-width="2.2" stroke-linecap="round"/><text x="70" y="99" text-anchor="middle" font-family="Arial" font-size="9" font-weight="800" fill="#E5BB52">CEIBOS</text>`,
-    escudo: null  /* la card de merch usa <img> del escudo oficial, ver render */
-  };
   document.getElementById("shopGrid").innerHTML = SHOP.map((p,i)=>{
-    const visual = (p.jersey === "escudo" || !JERSEYS[p.jersey])
-      ? `<img class="prod-escudo" src="${ESCUDO_OFICIAL}" alt="Escudo Ceibos Club">`
-      : `<svg viewBox="0 0 140 140" fill="none" aria-hidden="true">${JERSEYS[p.jersey]}</svg>`;
+    const visual = `<img class="prod-foto" src="${p.imagen}" style="object-position:center ${p.posicion}" alt="${p.nombre} oficial de Ceibos Club">`;
     const contenedor = SHOP_ACTIVA ? "a" : "article";
     const atributos = SHOP_ACTIVA ? `href="${SHOP_URL}" target="_blank" rel="noopener"` : `aria-label="${p.nombre}: venta suspendida momentáneamente"`;
     return `
