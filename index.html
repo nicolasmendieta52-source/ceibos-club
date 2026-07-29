@@ -640,7 +640,7 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
   padding:6px 13px;border-radius:99px;background:var(--dorado);color:var(--verde-night);
 }
 .prod svg{width:150px;height:150px;margin:14px auto 18px;display:block;transition:transform .45s var(--ease)}
-.prod-foto{width:100%;aspect-ratio:4/4.35;object-fit:cover;object-position:center 50%;display:block;margin:0 auto 20px;border-radius:17px;background:#e9e9e7;border:1px solid rgba(246,241,228,.16);transition:transform .45s var(--ease)}
+.prod-foto{width:100%;aspect-ratio:4/4.35;object-fit:contain;object-position:center;display:block;margin:0 auto 20px;border-radius:17px;background:#fafafa;border:1px solid rgba(246,241,228,.16);transition:transform .45s var(--ease)}
 .prod-escudo{width:150px;height:150px;margin:14px auto 18px;display:block;transition:transform .45s var(--ease)}
 .prod:hover .prod-escudo{transform:scale(1.1) rotate(3deg)}
 .prod:hover svg{transform:scale(1.1) rotate(2deg)}
@@ -1047,9 +1047,9 @@ const SOLIDARIO = [
 const SHOP_ACTIVA = false;
 const SHOP_URL = "https://ceibosclubpreventabulk.netlify.app/";
 const SHOP = [
-  { nombre:"Musculosa gimnasio", imagen:"assets/shop-musculosa-gimnasio.png", posicion:"50%", badge:"Próximamente", desc:"Modelo oficial en degradé verde y dorado, con escudo Ceibos original." },
-  { nombre:"Remera gimnasio", imagen:"assets/shop-remera-gimnasio.png", posicion:"33%", badge:"Próximamente", desc:"Remera verde con vivos dorados en hombros y escudo oficial." },
-  { nombre:"Campera forrada polar", imagen:"assets/shop-campera-polar.png", posicion:"56%", badge:"Próximamente", desc:"Campera verde con detalles dorados y el escudo original del club." },
+  { nombre:"Musculosa gimnasio", imagen:"assets/merch-musculosa.png", badge:"Próximamente", desc:"Modelo en degradé verde y dorado para entrenar con los colores del club." },
+  { nombre:"Remera gimnasio", imagen:"assets/merch-remera.png", badge:"Próximamente", desc:"Remera verde con vivos dorados en hombros y escudo de la prenda." },
+  { nombre:"Campera forrada polar", imagen:"assets/merch-campera.png", badge:"Próximamente", desc:"Campera verde con detalles dorados para los días de club." },
 ];
 
 /* TRIVIA: cargá las preguntas acá cuando esté lista. La sección ya está
@@ -1287,7 +1287,7 @@ function renderEventos(){
    en la indumentaria real, sin recrearlo ni dibujarlo. */
 (() => {
   document.getElementById("shopGrid").innerHTML = SHOP.map((p,i)=>{
-    const visual = `<img class="prod-foto" src="${p.imagen}" style="object-position:center ${p.posicion}" alt="${p.nombre} oficial de Ceibos Club">`;
+    const visual = `<img class="prod-foto" src="${p.imagen}" alt="${p.nombre} de Ceibos Club">`;
     const contenedor = SHOP_ACTIVA ? "a" : "article";
     const atributos = SHOP_ACTIVA ? `href="${SHOP_URL}" target="_blank" rel="noopener"` : `aria-label="${p.nombre}: venta suspendida momentáneamente"`;
     return `
