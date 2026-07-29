@@ -1,6 +1,14 @@
 @echo off
 title Subir Ceibos Club a GitHub
-cd /d "%~dp0"
+setlocal
+set "REPO=C:\Users\Usuario\Documents\Codex\2026-07-20\e\outputs"
+if not exist "%REPO%\.git" (
+  echo No encontre la carpeta oficial de la web.
+  echo Ruta esperada: %REPO%
+  pause
+  exit /b 1
+)
+cd /d "%REPO%"
 git config --global --add safe.directory "C:/Users/Usuario/Documents/Codex/2026-07-20/e/outputs"
 git config --global credential.helper manager
 echo.
