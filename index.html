@@ -1278,24 +1278,24 @@ function renderEventos(){
   const JERSEYS = {
     titular: `
       <defs><clipPath id="clipT"><path d="${cuerpo}"/></clipPath></defs>
-      <path d="${cuerpo}" fill="#153f32"/>
+      <path d="${cuerpo}" fill="#1A4036"/>
       <g clip-path="url(#clipT)">
-        <path d="M70 40 V113 M70 54 C60 44 53 51 50 61 M70 54 C80 44 87 51 90 61 M70 70 C58 59 48 68 45 80 M70 70 C82 59 92 68 95 80" stroke="#286149" stroke-width="12" stroke-linecap="round" opacity=".8"/>
-        <path d="M34 43 L47 50 M106 43 L93 50" stroke="#E5BB52" stroke-width="4" opacity=".9"/>
+        <path d="M70 42 V116 M70 54 C59 43 51 49 48 60 M70 54 C81 43 89 49 92 60 M70 72 C57 60 46 67 43 80 M70 72 C83 60 94 67 97 80 M70 89 C59 79 51 84 49 95 M70 89 C81 79 89 84 91 95" stroke="#2B674E" stroke-width="13" stroke-linecap="round" opacity=".78"/>
+        <path d="M36 43 L47 51 M104 43 L93 51" stroke="#E5BB52" stroke-width="3"/>
+        <path d="M48 58 V111 M92 58 V111" stroke="#0D2923" stroke-width="3" opacity=".8"/>
       </g>
       <path d="${cuerpo}" fill="none" stroke="#E5BB52" stroke-width="2.5"/>
-      <path d="M55 27 L70 38 L85 27" fill="none" stroke="#E5BB52" stroke-width="4.5" stroke-linecap="round"/>
-      <circle cx="58" cy="56" r="7.5" fill="#2D4838" stroke="#E5BB52" stroke-width="1.6"/>
-      <path d="M58 52 V60 M58 54 C56 53 55 54 54.5 55.5 M58 54 C60 53 61 54 61.5 55.5" stroke="#E5BB52" stroke-width="1.1" stroke-linecap="round" fill="none"/>`,
+      <path d="M55 27 L70 39 L85 27" fill="none" stroke="#E5BB52" stroke-width="4.5" stroke-linecap="round"/>
+      <path d="M57 52 H66" stroke="#E5BB52" stroke-width="2.2" stroke-linecap="round"/><text x="70" y="98" text-anchor="middle" font-family="Arial" font-size="9" font-weight="800" fill="#E5BB52">CEIBOS</text>`,
     alternativa: `
-      <path d="${cuerpo}" fill="#204d3d"/>
-      <path d="M30 38 L52 24 L57 31 L48 52 L38 58 Z" fill="#E5BB52"/>
-      <path d="M110 38 L88 24 L83 31 L92 52 L102 58 Z" fill="#E5BB52"/>
+      <path d="${cuerpo}" fill="#153A32"/>
+      <path d="M30 38 L52 24 L57 31 L48 52 L38 58 Z" fill="#10251F"/>
+      <path d="M110 38 L88 24 L83 31 L92 52 L102 58 Z" fill="#10251F"/>
       <path d="${cuerpo}" fill="none" stroke="#E5BB52" stroke-width="2.5"/>
       <path d="M55 27 L70 38 L85 27" fill="none" stroke="#E5BB52" stroke-width="4.5" stroke-linecap="round"/>
-      <path d="M70 48 V110 M70 62 C60 55 53 61 50 70 M70 62 C80 55 87 61 90 70" stroke="#2e6b50" stroke-width="7" stroke-linecap="round" opacity=".8"/>
-      <circle cx="58" cy="56" r="7.5" fill="#153f32" stroke="#E5BB52" stroke-width="1.6"/>
-      <path d="M58 52 V60 M58 54 C56 53 55 54 54.5 55.5 M58 54 C60 53 61 54 61.5 55.5" stroke="#E5BB52" stroke-width="1.1" stroke-linecap="round" fill="none"/>`,
+      <path d="M42 48 V113 M98 48 V113" stroke="#E5BB52" stroke-width="2" opacity=".8"/>
+      <path d="M70 47 V111 M70 61 C61 52 55 58 52 67 M70 61 C79 52 85 58 88 67 M70 77 C61 69 56 74 54 83 M70 77 C79 69 84 74 86 83" stroke="#29634C" stroke-width="11" stroke-linecap="round" opacity=".78"/>
+      <path d="M57 52 H66" stroke="#E5BB52" stroke-width="2.2" stroke-linecap="round"/><text x="70" y="99" text-anchor="middle" font-family="Arial" font-size="9" font-weight="800" fill="#E5BB52">CEIBOS</text>`,
     escudo: null  /* la card de merch usa <img> del escudo oficial, ver render */
   };
   document.getElementById("shopGrid").innerHTML = SHOP.map((p,i)=>{
