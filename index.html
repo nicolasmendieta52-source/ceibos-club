@@ -1193,7 +1193,9 @@ function renderFixture(){
   const lista = document.getElementById("fixLista");
   const tabs = document.getElementById("fixTabs");
   const proximos = PARTIDOS.filter(p => fechaValida(p.fecha) && new Date(p.fecha+"T00:00:00") >= hoy && DEPORTES.some(d => d.slug === slugDeporte(p.deporte))).sort(porFecha);
-  const deportesConAgenda = DEPORTES.filter(d => ["futbol", "basketball", "hockey"].includes(d.slug) || proximos.some(p => slugDeporte(p.deporte) === d.slug));
+  // Mostramos siempre las cuatro disciplinas. Así Rugby no desaparece cuando
+  // la URU todavía no publicó su próxima fecha oficial.
+  const deportesConAgenda = DEPORTES.filter(d => ["rugby", "hockey", "futbol", "basketball"].includes(d.slug) || proximos.some(p => slugDeporte(p.deporte) === d.slug));
   tabs.innerHTML = deportesConAgenda.map((d,i) => `<button class="fix-tab${i===0?' activo':''}" type="button" data-fix-deporte="${d.slug}" role="tab" aria-selected="${i===0?'true':'false'}">${d.ico} ${d.nombre}</button>`).join("");
 
   const tarjeta = p => {
