@@ -674,19 +674,19 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 <section id="shop">
   <div class="shop-head">
     <div>
-      <div class="tag-sec rev">Ceibos Shop · Pausada</div>
+      <div class="tag-sec rev">Próxima colección</div>
       <h2 class="titulo rev rev-d1">Vestí <em>los colores</em></h2>
-      <p class="sub rev rev-d2">La venta de indumentaria está suspendida momentáneamente. Muy pronto volveremos con novedades.</p>
+      <p class="sub rev rev-d2">Estamos preparando la nueva indumentaria oficial de Ceibos. Conocé los primeros modelos y enterate antes que nadie cuando abra la preventa.</p>
     </div>
-    <span class="btn btn-oro suspendido rev rev-d2" aria-disabled="true">Tienda suspendida</span>
+    <span class="btn btn-oro suspendido rev rev-d2" aria-disabled="true">Próximamente</span>
   </div>
   <div class="shop-grid" id="shopGrid"></div>
   <div class="shop-banner rev">
     <div>
-      <h3>Venta suspendida momentáneamente</h3>
-      <p>Estamos preparando la próxima salida de indumentaria oficial. Seguinos en redes para enterarte primero.</p>
+      <h3>Preventa muy pronto</h3>
+      <p>Estos son los primeros modelos de la próxima colección Ceibos. Pronto vas a poder reservar el tuyo.</p>
     </div>
-    <span class="btn btn-verde suspendido" aria-disabled="true">Próximamente</span>
+    <a class="btn btn-verde" href="#noticias">Ver novedades</a>
   </div>
 </section>
 
@@ -905,11 +905,11 @@ footer .f-brand{display:flex;align-items:center;gap:10px;font-family:var(--displ
       <p>Pagá tu cuota social y de deporte online, mirá tu estado de cuenta y mantenete al día con el club.</p>
       <span class="ir">Ir a pagos →</span>
     </a>
-    <a class="socio-card rev rev-d2" href="https://ceibosclubpreventabulk.netlify.app/" target="_blank" rel="noopener">
+    <a class="socio-card rev rev-d2" href="#shop">
       <span class="emoji">👕</span>
-      <h3>Tienda oficial</h3>
-      <p>Camisetas y merch del club en preventa. Pedís online y retirás en el club.</p>
-      <span class="ir">Ir a la tienda →</span>
+      <h3>Próxima colección</h3>
+      <p>Conocé los primeros modelos de la nueva indumentaria oficial de Ceibos.</p>
+      <span class="ir">Ver colección →</span>
     </a>
     <a class="socio-card rev rev-d3" href="mailto:info@ceibosclub.com">
       <span class="emoji">📩</span>
@@ -1042,8 +1042,8 @@ const SOLIDARIO = [
   { emoji:"🎄", titulo:"Canastas navideñas", cuando:"Diciembre", desc:"Armado y entrega de canastas para que más familias tengan una linda Navidad." },
 ];
 
-/* SHOP: dejá SHOP_ACTIVA en false mientras la venta esté suspendida.
-   Cuando vuelva la venta, cambiá a true y cargá el enlace de la tienda. */
+/* SHOP: dejá SHOP_ACTIVA en false hasta que abra la preventa.
+   Cuando esté disponible, cambiá a true y cargá el enlace de la tienda. */
 const SHOP_ACTIVA = false;
 const SHOP_URL = "https://ceibosclubpreventabulk.netlify.app/";
 const SHOP = [
@@ -1289,13 +1289,13 @@ function renderEventos(){
   document.getElementById("shopGrid").innerHTML = SHOP.map((p,i)=>{
     const visual = `<img class="prod-foto" src="${p.imagen}" alt="${p.nombre} de Ceibos Club">`;
     const contenedor = SHOP_ACTIVA ? "a" : "article";
-    const atributos = SHOP_ACTIVA ? `href="${SHOP_URL}" target="_blank" rel="noopener"` : `aria-label="${p.nombre}: venta suspendida momentáneamente"`;
+    const atributos = SHOP_ACTIVA ? `href="${SHOP_URL}" target="_blank" rel="noopener"` : `aria-label="${p.nombre}: próxima colección Ceibos"`;
     return `
     <${contenedor} class="prod${SHOP_ACTIVA ? "" : " suspendido"} rev rev-d${i+1}" ${atributos}>
       ${visual}
       <h3>${p.nombre}</h3>
       <p class="prod-desc">${p.desc}</p>
-      <span class="prod-cta">${SHOP_ACTIVA ? "Ver en la tienda ↗" : "Venta suspendida"}</span>
+      <span class="prod-cta">${SHOP_ACTIVA ? "Ver en la tienda ↗" : "Próxima colección"}</span>
     </${contenedor}>`;
   }).join("");
 })();
