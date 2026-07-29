@@ -108,6 +108,11 @@ nav.topbar.solid{
 }
 .nav-mobile a:hover{color:var(--dorado);transform:translateX(8px)}
 
+/* ---------- BIENVENIDA / TRIVIA ---------- */
+.trivia-intro{position:fixed;inset:0;z-index:1200;display:grid;place-items:center;padding:22px;background:rgba(9,22,17,.8);backdrop-filter:blur(12px);transition:opacity .35s var(--ease),visibility .35s}.trivia-intro.cerrada{opacity:0;visibility:hidden;pointer-events:none}
+.trivia-modal{width:min(100%,560px);padding:clamp(30px,6vw,54px);border:1px solid rgba(229,187,82,.38);border-radius:28px;text-align:center;background:radial-gradient(circle at 78% 12%,rgba(229,187,82,.17),transparent 32%),linear-gradient(145deg,#315742,#17342a);box-shadow:0 26px 90px rgba(0,0,0,.5);position:relative;overflow:hidden}.trivia-modal::after{content:"?";position:absolute;right:-12px;bottom:-72px;font-family:var(--display);font-size:15rem;line-height:1;color:rgba(229,187,82,.08);pointer-events:none}
+.trivia-modal .trivia-etiqueta{position:relative;z-index:1;color:var(--dorado);font-size:.69rem;font-weight:900;letter-spacing:.24em;text-transform:uppercase}.trivia-modal h2{position:relative;z-index:1;font-family:var(--display);font-size:clamp(2.7rem,10vw,5rem);line-height:.9;text-transform:uppercase;color:var(--blanco);margin:16px 0}.trivia-modal h2 em{font-style:normal;color:var(--dorado)}.trivia-modal p{position:relative;z-index:1;color:rgba(246,241,228,.74);line-height:1.65;max-width:400px;margin:0 auto 26px}.trivia-modal .btn{position:relative;z-index:1;border:0;cursor:pointer}.trivia-proximamente{position:relative;z-index:1;display:block;margin-top:15px;color:rgba(246,241,228,.55);font-size:.72rem;letter-spacing:.08em}
+
 /* ---------- HERO ---------- */
 .hero{
   min-height:100svh;position:relative;display:grid;place-items:center;
@@ -282,6 +287,16 @@ nav.topbar.solid{
   <a href="#predio">Predio</a>
   <a href="#socios">Socios</a>
   <a href="#contacto">Sumate</a>
+</div>
+
+<div class="trivia-intro" id="triviaIntro" role="dialog" aria-modal="true" aria-labelledby="triviaTitulo">
+  <div class="trivia-modal">
+    <div class="trivia-etiqueta">Bienvenidos a Ceibos Club</div>
+    <h2 id="triviaTitulo">¿Cuánto sabés<br>de <em>Ceibos?</em></h2>
+    <p>Muy pronto vas a poder jugar la trivia del club, conocer su historia y desafiar a tus amigos.</p>
+    <button class="btn btn-oro" id="entrarWeb" type="button">Entrar a la web</button>
+    <span class="trivia-proximamente">Trivia en preparación · Próximamente</span>
+  </div>
 </div>
 
 <!-- ======================= HERO ======================= -->
@@ -645,6 +660,7 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 .prod-escudo{width:150px;height:150px;margin:14px auto 18px;display:block;transition:transform .45s var(--ease)}
 .prod:hover .prod-escudo{transform:scale(1.1) rotate(3deg)}
 .prod:hover svg{transform:scale(1.1) rotate(2deg)}
+.prod.suspendido{cursor:default;filter:saturate(.72)}.prod.suspendido:hover{transform:none;border-color:rgba(229,187,82,.18);box-shadow:none}.prod.suspendido:hover::after{opacity:0}.prod.suspendido:hover svg{transform:none}.prod.suspendido .badge-prod{background:rgba(246,241,228,.18);color:var(--crema)}
 .prod h3{font-family:var(--display);font-size:1.45rem;text-transform:uppercase;color:var(--blanco);letter-spacing:.04em}
 .prod .prod-desc{color:rgba(246,241,228,.6);font-size:.9rem;margin:8px 0 16px;line-height:1.5}
 .prod .prod-cta{
@@ -666,25 +682,26 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 .shop-banner p{font-weight:600;margin-top:8px;max-width:480px}
 .btn-verde{background:var(--verde-night);color:var(--dorado);box-shadow:0 12px 35px rgba(20,32,25,.35)}
 .btn-verde:hover{background:var(--verde-deep);color:var(--dorado-soft)}
+.btn.suspendido{background:rgba(20,32,25,.24);color:rgba(20,32,25,.7);box-shadow:none;pointer-events:none}
 </style>
 
 <!-- ======================= CEIBOS SHOP ======================= -->
 <section id="shop">
   <div class="shop-head">
     <div>
-      <div class="tag-sec rev">Ceibos Shop · Preventa</div>
+      <div class="tag-sec rev">Ceibos Shop · Pausada</div>
       <h2 class="titulo rev rev-d1">Vestí <em>los colores</em></h2>
-      <p class="sub rev rev-d2">La indumentaria oficial del club ya está en preventa. Asegurate la tuya antes de que vuele.</p>
+      <p class="sub rev rev-d2">La venta de indumentaria está suspendida momentáneamente. Muy pronto volveremos con novedades.</p>
     </div>
-    <a class="btn btn-oro rev rev-d2" href="https://ceibosclubpreventabulk.netlify.app/" target="_blank" rel="noopener">Ir a la tienda ↗</a>
+    <span class="btn btn-oro suspendido rev rev-d2" aria-disabled="true">Tienda suspendida</span>
   </div>
   <div class="shop-grid" id="shopGrid"></div>
   <div class="shop-banner rev">
     <div>
-      <h3>Preventa abierta 🟢🟡</h3>
-      <p>Hacé tu pedido en la tienda online y retiralo en el club. Todos los talles, todos los deportes, una sola camiseta.</p>
+      <h3>Venta suspendida momentáneamente</h3>
+      <p>Estamos preparando la próxima salida de indumentaria oficial. Seguinos en redes para enterarte primero.</p>
     </div>
-    <a class="btn btn-verde" href="https://ceibosclubpreventabulk.netlify.app/" target="_blank" rel="noopener">Comprar ahora</a>
+    <span class="btn btn-verde suspendido" aria-disabled="true">Próximamente</span>
   </div>
 </section>
 
@@ -1014,14 +1031,19 @@ const SOLIDARIO = [
   { emoji:"🎄", titulo:"Canastas navideñas", cuando:"Diciembre", desc:"Armado y entrega de canastas para que más familias tengan una linda Navidad." },
 ];
 
-/* SHOP: editá nombre, desc, badge y jersey ("titular" | "alternativa" | "escudo").
-   Todos los productos llevan al link de la tienda. */
+/* SHOP: dejá SHOP_ACTIVA en false mientras la venta esté suspendida.
+   Cuando vuelva la venta, cambiá a true y cargá el enlace de la tienda. */
+const SHOP_ACTIVA = false;
 const SHOP_URL = "https://ceibosclubpreventabulk.netlify.app/";
 const SHOP = [
-  { nombre:"Camiseta Titular",     jersey:"titular",     badge:"Preventa", desc:"La clásica a rayas verde y dorado, con el escudo bordado." },
-  { nombre:"Camiseta Alternativa", jersey:"alternativa", badge:"Preventa", desc:"Blanca con vivos verdiamarillos y el ceibo en marca de agua." },
-  { nombre:"Merch oficial",        jersey:"escudo",      badge:"Y más",    desc:"Buzos, gorros y accesorios con la marca Ceibos. Mirá todo en la tienda." },
+  { nombre:"Camiseta oficial",      jersey:"titular",     badge:"Próximamente", desc:"Verde Ceibos, vivos dorados y el ceibo como protagonista." },
+  { nombre:"Indumentaria deportiva",jersey:"alternativa", badge:"Próximamente", desc:"Diseñada para entrenar y representar al club en cada cancha." },
+  { nombre:"Merch oficial",         jersey:"escudo",      badge:"Próximamente", desc:"Buzos, gorros y accesorios con la identidad verdiamarilla." },
 ];
+
+/* TRIVIA: cargá las preguntas acá cuando esté lista. La bienvenida ya queda
+   preparada para abrir el juego sin modificar el diseño. */
+const TRIVIA_CEIBOS = [];
 
 /* ============================================================
    RENDER
@@ -1254,24 +1276,23 @@ function renderEventos(){
   const JERSEYS = {
     titular: `
       <defs><clipPath id="clipT"><path d="${cuerpo}"/></clipPath></defs>
-      <path d="${cuerpo}" fill="#2D4838"/>
+      <path d="${cuerpo}" fill="#153f32"/>
       <g clip-path="url(#clipT)">
-        <rect x="20" y="48" width="100" height="13" fill="#E5BB52"/>
-        <rect x="20" y="74" width="100" height="13" fill="#E5BB52"/>
-        <rect x="20" y="100" width="100" height="13" fill="#E5BB52"/>
+        <path d="M70 40 V113 M70 54 C60 44 53 51 50 61 M70 54 C80 44 87 51 90 61 M70 70 C58 59 48 68 45 80 M70 70 C82 59 92 68 95 80" stroke="#286149" stroke-width="12" stroke-linecap="round" opacity=".8"/>
+        <path d="M34 43 L47 50 M106 43 L93 50" stroke="#E5BB52" stroke-width="4" opacity=".9"/>
       </g>
       <path d="${cuerpo}" fill="none" stroke="#E5BB52" stroke-width="2.5"/>
-      <path d="M58 27 L70 35 L82 27" fill="none" stroke="#E5BB52" stroke-width="3" stroke-linecap="round"/>
+      <path d="M55 27 L70 38 L85 27" fill="none" stroke="#E5BB52" stroke-width="4.5" stroke-linecap="round"/>
       <circle cx="58" cy="56" r="7.5" fill="#2D4838" stroke="#E5BB52" stroke-width="1.6"/>
       <path d="M58 52 V60 M58 54 C56 53 55 54 54.5 55.5 M58 54 C60 53 61 54 61.5 55.5" stroke="#E5BB52" stroke-width="1.1" stroke-linecap="round" fill="none"/>`,
     alternativa: `
-      <path d="${cuerpo}" fill="#F8F8F6"/>
-      <path d="${cuerpo}" fill="none" stroke="#2D4838" stroke-width="2.5"/>
-      <path d="M58 27 L70 35 L82 27" fill="none" stroke="#2D4838" stroke-width="3" stroke-linecap="round"/>
-      <path d="M30 38 L52 24 L54 30 L48 52 L38 58 Z" fill="#2D4838" opacity=".12"/>
-      <path d="M110 38 L88 24 L86 30 L92 52 L102 58 Z" fill="#2D4838" opacity=".12"/>
-      <path d="M70 70 V100 M70 78 C62 74 56 76 52 84 M70 78 C78 74 84 76 88 84" stroke="#2D4838" stroke-width="3.5" stroke-linecap="round" fill="none" opacity=".12"/>
-      <circle cx="58" cy="56" r="7.5" fill="#2D4838" stroke="#E5BB52" stroke-width="1.6"/>
+      <path d="${cuerpo}" fill="#204d3d"/>
+      <path d="M30 38 L52 24 L57 31 L48 52 L38 58 Z" fill="#E5BB52"/>
+      <path d="M110 38 L88 24 L83 31 L92 52 L102 58 Z" fill="#E5BB52"/>
+      <path d="${cuerpo}" fill="none" stroke="#E5BB52" stroke-width="2.5"/>
+      <path d="M55 27 L70 38 L85 27" fill="none" stroke="#E5BB52" stroke-width="4.5" stroke-linecap="round"/>
+      <path d="M70 48 V110 M70 62 C60 55 53 61 50 70 M70 62 C80 55 87 61 90 70" stroke="#2e6b50" stroke-width="7" stroke-linecap="round" opacity=".8"/>
+      <circle cx="58" cy="56" r="7.5" fill="#153f32" stroke="#E5BB52" stroke-width="1.6"/>
       <path d="M58 52 V60 M58 54 C56 53 55 54 54.5 55.5 M58 54 C60 53 61 54 61.5 55.5" stroke="#E5BB52" stroke-width="1.1" stroke-linecap="round" fill="none"/>`,
     escudo: null  /* la card de merch usa <img> del escudo oficial, ver render */
   };
@@ -1279,15 +1300,28 @@ function renderEventos(){
     const visual = (p.jersey === "escudo" || !JERSEYS[p.jersey])
       ? `<img class="prod-escudo" src="${ESCUDO_OFICIAL}" alt="Escudo Ceibos Club">`
       : `<svg viewBox="0 0 140 140" fill="none" aria-hidden="true">${JERSEYS[p.jersey]}</svg>`;
+    const contenedor = SHOP_ACTIVA ? "a" : "article";
+    const atributos = SHOP_ACTIVA ? `href="${SHOP_URL}" target="_blank" rel="noopener"` : `aria-label="${p.nombre}: venta suspendida momentáneamente"`;
     return `
-    <a class="prod rev rev-d${i+1}" href="${SHOP_URL}" target="_blank" rel="noopener">
+    <${contenedor} class="prod${SHOP_ACTIVA ? "" : " suspendido"} rev rev-d${i+1}" ${atributos}>
       <span class="badge-prod">${p.badge}</span>
       ${visual}
       <h3>${p.nombre}</h3>
       <p class="prod-desc">${p.desc}</p>
-      <span class="prod-cta">Ver en la tienda ↗</span>
-    </a>`;
+      <span class="prod-cta">${SHOP_ACTIVA ? "Ver en la tienda ↗" : "Venta suspendida"}</span>
+    </${contenedor}>`;
   }).join("");
+})();
+
+/* bienvenida de trivia: cuando haya preguntas en TRIVIA_CEIBOS, este mismo
+   acceso será el punto de inicio del juego. */
+(() => {
+  const intro = document.getElementById("triviaIntro");
+  const entrar = document.getElementById("entrarWeb");
+  if (!intro || !entrar) return;
+  const cerrar = () => intro.classList.add("cerrada");
+  entrar.addEventListener("click", cerrar);
+  addEventListener("keydown", evento => { if (evento.key === "Escape") cerrar(); });
 })();
 
 /* banda del lema */
