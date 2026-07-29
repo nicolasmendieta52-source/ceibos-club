@@ -1,4 +1,3 @@
-import { load } from "cheerio";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -86,15 +85,6 @@ function parseText(text, source, aliases) {
   return text.split(/\n|\r|(?<=Cerrado)|(?<=Pendiente)/).map(line => parseLine(line, source, aliases)).filter(Boolean);
 }
 
-async function fetchHtml(source) {
-  const response = await fetch(source.url, { headers: { "user-agent": "CeibosClubFixtureBot/1.0 (contacto: info@ceibosclub.com)" } });
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
-  const html = await response.text();
-  const $ = load(html);
-  const rows = $("tr").map((_, row) => $(row).find("th, td").map((__, cell) => clean($(cell).text())).get().join("\t")).get();
-  return rows.length ? rows.join("\n") : $.text();
-}
-
 async function renderPage(source) {
   const { chromium } = await import("playwright");
   const browser = await chromium.launch({ headless: true });
@@ -131,15 +121,26 @@ async function main() {
   const config = JSON.parse(await fs.readFile(configPath, "utf8"));
   const previous = JSON.parse(await fs.readFile(dataPath, "utf8").catch(() => "{}"));
   const gathered = [];
+  let fuentesActualizadas = 0;
   for (const source of config.sources) {
     try {
-      const text = source.modo === "browser" ? await renderPage(source) : await fetchHtml(source);
+      // Todas las fuentes configuradas requieren JavaScript para mostrar el
+      // fixture. Usamos siempre Chromium para leer la misma tabla oficial que
+      // ve una persona y evitamos depender de parsers HTML adicionales.
+      const text = await renderPage(source);
       const matches = parseText(text, source, config.teamAliases);
       console.log(`${source.deporte}: ${matches.length} partidos encontrados`);
       gathered.push(...matches);
+      fuentesActualizadas += 1;
     } catch (error) {
       console.warn(`${source.deporte}: no se pudo actualizar (${error.message})`);
     }
+  }
+  // Si ninguna fuente respondió, no tocamos el JSON existente ni marcamos el
+  // trabajo como exitoso. GitHub Actions debe avisar el fallo para no dejar un
+  // fixture aparentemente actualizado pero con información vieja.
+  if (fuentesActualizadas === 0) {
+    throw new Error("No se pudo actualizar ninguna fuente oficial. Se conservaron los datos anteriores.");
   }
   // Una fuente puede no responder momentáneamente. Conservamos los datos que
   // ya estaban publicados y sumamos los nuevos, para que un deporte nunca
