@@ -35,14 +35,6 @@
     {
       "deporte": "futbol",
       "categoria": "Reserva Verde",
-      "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
-      "fecha": "2026-08-01",
-      "hora": "11:15",
-      "local": true
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
       "rival": "PEÑAROL UNIVERSITARIO",
       "fecha": "2026-08-08",
       "hora": "09:00",
@@ -74,10 +66,10 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "OBC AZULGRANA.",
-      "fecha": "2026-08-01",
-      "hora": "09:00",
+      "categoria": "Reserva Verde",
+      "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
+      "fecha": "2026-09-12",
+      "hora": "11:15",
       "local": true
     },
     {
@@ -111,6 +103,14 @@
       "fecha": "2026-09-05",
       "hora": "11:15",
       "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "OBC AZULGRANA.",
+      "fecha": "2026-09-12",
+      "hora": "09:00",
+      "local": true
     },
     {
       "deporte": "futbol",
@@ -199,6 +199,22 @@
       "fecha": "2026-09-13",
       "hora": "15:30",
       "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
+      "fecha": "2026-08-01",
+      "hora": "11:15",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "OBC AZULGRANA.",
+      "fecha": "2026-08-01",
+      "hora": "09:00",
+      "local": true
     }
   ],
   "resultados": [
@@ -844,5 +860,5 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-07-31T21:53:26.719Z"
+  "actualizadoEn": "2026-08-01T07:58:02.891Z"
 }
