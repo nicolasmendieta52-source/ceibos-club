@@ -19,14 +19,6 @@
     {
       "deporte": "hockey",
       "categoria": "Intermedia B",
-      "rival": "Scuola Italiana Di Montevideo",
-      "fecha": "2026-08-02",
-      "hora": "17:00",
-      "local": false
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
       "rival": "Cgu – Los Cuervos",
       "fecha": "2026-07-19",
       "hora": "14:00",
@@ -198,6 +190,14 @@
       "rival": "PLAYA HONDA UNIVERSITARIO",
       "fecha": "2026-09-13",
       "hora": "15:30",
+      "local": false
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Scuola Italiana Di Montevideo",
+      "fecha": "2026-08-02",
+      "hora": "17:00",
       "local": false
     },
     {
@@ -385,6 +385,14 @@
       "gf": 1,
       "gc": 5,
       "fecha": "2026-03-14"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Scuola Italiana Di Montevideo",
+      "gf": 0,
+      "gc": 7,
+      "fecha": "2026-08-02"
     },
     {
       "deporte": "hockey",
@@ -860,5 +868,5 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-02T18:44:00.759Z"
+  "actualizadoEn": "2026-08-03T08:53:14.408Z"
 }
