@@ -991,7 +991,7 @@ const DEPORTES = [
   {
     slug:"hockey", nombre:"Hockey", ico:"🏑", instagram:"ceiboshockeyclub",
     desc:"Los planteles de Hockey de Ceibos compiten con garra, juego colectivo y una hinchada que no falla.",
-    categorias:["Primera","Sub 18","Reserva","Intermedia A","Intermedia B","Intermedia C"],
+    categorias:["Intermedia A","Intermedia B","Intermedia C","Sub 18","Reserva"],
     foto:"assets/deporte-hockey.jpg"
   },
   {
@@ -1010,7 +1010,7 @@ const DEPORTES = [
 
 let PARTIDOS = [
   { deporte:"basketball", categoria:"Divisional B", rival:"Maristas",        fecha:"2026-06-12", hora:"19:15", local:false },
-  { deporte:"hockey",     categoria:"Damas A",      rival:"Carrasco Polo",   fecha:"2026-06-13", hora:"18:00", local:true  },
+  { deporte:"hockey",     categoria:"Intermedia A", rival:"Carrasco Polo",   fecha:"2026-06-13", hora:"18:00", local:true  },
   { deporte:"rugby",      categoria:"M19",          rival:"Trébol Paysandú", fecha:"2026-06-14", hora:"11:00", local:true  },
   { deporte:"rugby",      categoria:"Primera",      rival:"Trébol Paysandú", fecha:"2026-06-14", hora:"15:00", local:true  },
   { deporte:"futbol",     categoria:"Primera",      rival:"Defensor",        fecha:"2026-06-15", hora:"16:00", local:false },
@@ -1018,7 +1018,7 @@ let PARTIDOS = [
 
 let RESULTADOS = [
   { deporte:"Rugby",      categoria:"Primera",     rival:"Old Boys",      gf:24, gc:18 },
-  { deporte:"Hockey",     categoria:"Damas A",     rival:"Carrasco Polo", gf:3,  gc:1  },
+  { deporte:"Hockey",     categoria:"Intermedia A",rival:"Carrasco Polo", gf:3,  gc:1  },
   { deporte:"Basketball", categoria:"Divisional B",rival:"Waston",        gf:78, gc:71 },
   { deporte:"Fútbol",     categoria:"Primera",     rival:"Nacional",      gf:2,  gc:2  },
 ];
@@ -1062,6 +1062,7 @@ const TRIVIA_CEIBOS = [];
 const MESES = ["ENE","FEB","MAR","ABR","MAY","JUN","JUL","AGO","SET","OCT","NOV","DIC"];
 const fmtFecha = iso => { const [y,m,d] = iso.split("-"); return { dia:+d, mes:MESES[+m-1], anio:y }; };
 const textoSeguro = valor => String(valor ?? "").replace(/[&<>'\"]/g, caracter => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;","\"":"&quot;"}[caracter]));
+const etiquetaCategoria = categoria => textoSeguro(String(categoria ?? "").replace(/^Intermedia\s+([ABC])$/i, "Inter $1"));
 const fechaValida = fecha => /^\d{4}-\d{2}-\d{2}$/.test(fecha) && !Number.isNaN(new Date(fecha + "T00:00:00").getTime());
 const fechaBreve = fecha => { if (!fechaValida(fecha)) return ""; const f = fmtFecha(fecha); return `${f.dia} ${f.mes}`; };
 const textoPlano = valor => String(valor ?? "").replace(/[<>&"']/g, "").trim().slice(0, 180);
@@ -1081,7 +1082,7 @@ function renderTicker(){
     return aFutbol ? -1 : bFutbol ? 1 : 0;
   }).map(r => {
     const res = r.gf>r.gc ? "🟡 VICTORIA" : r.gf===r.gc ? "⚪ EMPATE" : "🔵 DERROTA";
-    return `<span class="ticker-item"><span class="dot"></span>${r.deporte} ${r.categoria} <span class="res">${r.gf}–${r.gc}</span> vs ${r.rival} · <span class="gano">${res}</span></span>`;
+    return `<span class="ticker-item"><span class="dot"></span>${r.deporte} ${etiquetaCategoria(r.categoria)} <span class="res">${r.gf}–${r.gc}</span> vs ${r.rival} · <span class="gano">${res}</span></span>`;
   }).join("");
   document.getElementById("tickerPista").innerHTML = items + items; /* duplicado para loop infinito */
 }
@@ -1117,7 +1118,7 @@ function renderDeportes(){
         <a class="ig" href="https://instagram.com/${d.instagram}" target="_blank" rel="noopener">@${d.instagram} ↗</a>
         ${d.foto ? `<figure class="dep-foto"><img src="${d.foto}" alt="Jugadores de ${textoSeguro(d.nombre)} de Ceibos" loading="lazy"></figure>` : ""}
         <p>${d.desc}</p>
-        <div class="dep-cats" role="tablist" aria-label="Categorías de ${textoSeguro(d.nombre)}">${categorias.map((c,indice)=>`<button class="chip cat-tab${indice===0?' activo':''}" type="button" data-categoria="${textoSeguro(c)}" aria-selected="${indice===0?'true':'false'}">${textoSeguro(c)}</button>`).join("")}</div>
+        <div class="dep-cats" role="tablist" aria-label="Categorías de ${textoSeguro(d.nombre)}">${categorias.map((c,indice)=>`<button class="chip cat-tab${indice===0?' activo':''}" type="button" data-categoria="${textoSeguro(c)}" aria-selected="${indice===0?'true':'false'}">${etiquetaCategoria(c)}</button>`).join("")}</div>
       </div>
       <div class="dep-fixture">
         <h4>Partidos y resultados</h4>
@@ -1129,7 +1130,7 @@ function renderDeportes(){
           const ultimoResultado = resultadosCategoria[0];
           const historial = resultadosCategoria.slice(1);
           return `<div class="dep-categoria${categorias.indexOf(c)===0?' activo':''}" data-categoria-panel="${textoSeguro(c)}">
-            <h4>${textoSeguro(c)}</h4>
+            <h4>${etiquetaCategoria(c)}</h4>
             <h5>Próximo partido</h5>
             ${proximo ? (()=>{ const f=fmtFecha(proximo.fecha); return `<div class="partido-mini"><div><div class="vs">vs ${textoSeguro(proximo.rival)}</div><div class="meta">${f.dia} ${f.mes} · ${textoSeguro(proximo.hora)} h</div></div><span class="pill ${proximo.local?'local':'visita'}">${proximo.local?'Local':'Visitante'}</span></div>`; })() : `<p class="sin-datos">Sin próximos partidos cargados.</p>`}
             ${futuros.length ? `<details class="dep-vermas"><summary>Ver ${futuros.length} partido${futuros.length===1?'':'s'} futuro${futuros.length===1?'':'s'}</summary>${futuros.map(p=>{ const f=fmtFecha(p.fecha); return `<div class="partido-mini"><div><div class="vs">vs ${textoSeguro(p.rival)}</div><div class="meta">${f.dia} ${f.mes} · ${textoSeguro(p.hora)} h</div></div><span class="pill ${p.local?'local':'visita'}">${p.local?'Local':'Visitante'}</span></div>`; }).join("")}</details>` : ""}
@@ -1186,7 +1187,7 @@ function renderScore(){
     return `<a class="score-card rev rev-d${(i%4)+1}" href="#${slugDeporte(r.deporte)}" data-score-deporte="${slugDeporte(r.deporte)}" data-score-categoria="${textoSeguro(r.categoria)}">
       <span class="score-res ${cls}">${lbl}</span>
       <div class="dep">${r.deporte}</div>
-      <div class="score-categoria">${r.categoria}</div>
+      <div class="score-categoria">${etiquetaCategoria(r.categoria)}</div>
       <div class="score-num"><span class="nos">${r.gf}</span><span class="sep">—</span><span>${r.gc}</span></div>
       <div class="score-rival">vs ${r.rival}</div>
       <span class="score-ver-mas">Ver detalle →</span>
@@ -1214,7 +1215,7 @@ function renderFixture(){
     const f = fmtFecha(p.fecha);
     const dias = Math.round((new Date(p.fecha+"T00:00:00") - hoy)/86400000);
     const cuenta = dias===0?"¡HOY!":dias===1?"Mañana":`Faltan ${dias} días`;
-    return `<div class="fix-row"><div class="fix-fecha"><div class="dia">${f.dia}</div><div class="mes">${f.mes}</div></div><div class="fix-det"><div class="dep-nombre">${p.categoria}</div><div class="enfrenta">Ceibos vs ${textoSeguro(p.rival)}</div><div class="cat-hora">${textoSeguro(p.hora)} h · ${p.local?"Cancha Los Ceibos":"Visitante"}</div></div><div class="fix-cd"><div class="cuenta">${cuenta}</div><div class="lbl">${p.local?"De local":"De visita"}</div></div></div>`;
+    return `<div class="fix-row"><div class="fix-fecha"><div class="dia">${f.dia}</div><div class="mes">${f.mes}</div></div><div class="fix-det"><div class="dep-nombre">${etiquetaCategoria(p.categoria)}</div><div class="enfrenta">Ceibos vs ${textoSeguro(p.rival)}</div><div class="cat-hora">${textoSeguro(p.hora)} h · ${p.local?"Cancha Los Ceibos":"Visitante"}</div></div><div class="fix-cd"><div class="cuenta">${cuenta}</div><div class="lbl">${p.local?"De local":"De visita"}</div></div></div>`;
   };
 
   const mostrarDeporte = slug => {
@@ -1251,7 +1252,7 @@ function renderHomeDeportiva(){
     return;
   }
   const f = fmtFecha(primero.fecha);
-  destacado.innerHTML = `<div class="pd-etiqueta"><span>${textoSeguro(primero.deporte)} · ${textoSeguro(primero.categoria)}</span><span class="pd-fecha">${f.dia} ${f.mes}</span></div><div class="pd-equipos"><div class="pd-equipo">Ceibos</div><div class="pd-versus">VS</div><div class="pd-equipo">${textoSeguro(primero.rival)}</div></div><div class="pd-detalle"><span>${textoSeguro(primero.hora)} h</span><span>${primero.local ? "Cancha Los Ceibos" : "Visitante"}</span><a href="#fixture">Ficha del partido</a></div>`;
+  destacado.innerHTML = `<div class="pd-etiqueta"><span>${textoSeguro(primero.deporte)} · ${etiquetaCategoria(primero.categoria)}</span><span class="pd-fecha">${f.dia} ${f.mes}</span></div><div class="pd-equipos"><div class="pd-equipo">Ceibos</div><div class="pd-versus">VS</div><div class="pd-equipo">${textoSeguro(primero.rival)}</div></div><div class="pd-detalle"><span>${textoSeguro(primero.hora)} h</span><span>${primero.local ? "Cancha Los Ceibos" : "Visitante"}</span><a href="#fixture">Ficha del partido</a></div>`;
   lista.innerHTML = proximos.slice(1).map(p => { const fecha = fmtFecha(p.fecha); return `<article class="home-proximo"><div class="home-proximo-fecha">${fecha.dia}<small>${fecha.mes}</small></div><div><div class="deporte">${textoSeguro(p.deporte)} · ${textoSeguro(p.categoria)}</div><strong>Ceibos vs ${textoSeguro(p.rival)}</strong><p>${textoSeguro(p.hora)} h · ${p.local ? "Local" : "Visitante"}</p></div></article>`; }).join("") || `<p class="home-sin-partidos">No hay más fechas publicadas por ahora.</p>`;
 }
 function renderDinamico(){ renderTicker(); renderHomeDeportiva(); renderDeportes(); renderScore(); renderFixture(); renderEventos(); revObserve(); }
