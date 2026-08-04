@@ -4,7 +4,7 @@
       "deporte": "hockey",
       "categoria": "Intermedia A",
       "rival": "Old Girls Azulgrana",
-      "fecha": "2026-03-21",
+      "fecha": "2026-08-08",
       "hora": "19:15",
       "local": false
     },
@@ -12,7 +12,7 @@
       "deporte": "hockey",
       "categoria": "Sub 18",
       "rival": "Colegio Seminario",
-      "fecha": "2026-03-21",
+      "fecha": "2026-08-08",
       "hora": "14:00",
       "local": false
     },
@@ -193,6 +193,22 @@
       "local": true
     },
     {
+      "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Old Girls Azulgrana",
+      "fecha": "2026-03-21",
+      "hora": "19:15",
+      "local": false
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Colegio Seminario",
+      "fecha": "2026-03-21",
+      "hora": "14:00",
+      "local": false
+    },
+    {
       "deporte": "futbol",
       "categoria": "Primera",
       "rival": "SAN JUAN BAUTISTA",
@@ -325,18 +341,18 @@
     {
       "deporte": "hockey",
       "categoria": "Sub 18",
-      "rival": "Old Sampa Club",
-      "gf": 1,
-      "gc": 8,
-      "fecha": "2026-07-25"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Sub 18",
       "rival": "Old Ivy",
       "gf": 2,
       "gc": 9,
       "fecha": "2026-06-06"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Old Sampa Club",
+      "gf": 1,
+      "gc": 8,
+      "fecha": "2026-07-25"
     },
     {
       "deporte": "hockey",
@@ -884,5 +900,5 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-03T21:55:22.923Z"
+  "actualizadoEn": "2026-08-04T10:19:03.542Z"
 }
