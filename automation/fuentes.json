@@ -25,6 +25,18 @@
     {
       "deporte": "basketball",
       "categoria": "Basketball",
+      "url": "https://ligauniversitaria.org.uy/resultados/B221B3.html",
+      "modo": "browser"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "url": "https://ligauniversitaria.org.uy/partidos/B221B3.html",
+      "modo": "browser"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
       "url": "https://ligauniversitaria.org.uy/resultados/B221B.html",
       "modo": "browser"
     },

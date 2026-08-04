@@ -251,6 +251,14 @@
   ],
   "resultados": [
     {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "CLUB BELLAKEO C.B.",
+      "gf": 62,
+      "gc": 43,
+      "fecha": "2026-08-01"
+    },
+    {
       "deporte": "hockey",
       "categoria": "Intermedia A",
       "rival": "Club Náutico Intermedia A",
