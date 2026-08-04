@@ -176,7 +176,13 @@ async function readInstagramPosts(aliases) {
   try {
     for (const image of images) {
       const { data } = await worker.recognize(image.media_url ?? image.thumbnail_url);
-      matches.push(...parseInstagramImage(data.text, aliases));
+      const imageMatches = parseInstagramImage(data.text, aliases);
+      if (!imageMatches.length) {
+        // Deja una muestra corta en Actions para poder adaptar el lector al
+        // diseño real de las placas del club, sin exponer el token.
+        console.log(`instagram OCR sin coincidencia: ${clean(data.text).slice(0, 220)}`);
+      }
+      matches.push(...imageMatches);
     }
   } finally {
     await worker.terminate();
