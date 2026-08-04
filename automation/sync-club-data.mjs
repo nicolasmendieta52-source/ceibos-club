@@ -85,6 +85,84 @@ function parseText(text, source, aliases) {
   return text.split(/\n|\r|(?<=Cerrado)|(?<=Pendiente)/).map(line => parseLine(line, source, aliases)).filter(Boolean);
 }
 
+function parseInstagramDate(value) {
+  const match = clean(value).match(/^(\d{1,2})\/(\d{1,2})(?:\/(\d{4}))?$/);
+  if (!match) return "";
+  const year = Number(match[3] ?? now.getFullYear());
+  return `${year}-${String(Number(match[2])).padStart(2, "0")}-${String(Number(match[1])).padStart(2, "0")}`;
+}
+
+function captionField(caption, label) {
+  const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return clean(caption.match(new RegExp(`^\\s*${escaped}\\s*:\\s*(.+)$`, "im"))?.[1]);
+}
+
+function parseInstagramCaption(caption, aliases) {
+  // Los posteos comunes son texto libre. Para no publicar datos inventados,
+  // solo importamos los que el club marque con #CeibosWeb y tengan los campos
+  // deportivos explícitos. Las placas pueden acompañar el post, pero no son la
+  // fuente de datos de la automatización.
+  if (!/#ceibosweb\b/i.test(caption)) return null;
+  const deporte = captionField(caption, "Deporte");
+  const categoria = captionField(caption, "Categoría") || captionField(caption, "Categoria");
+  const rival = captionField(caption, "Rival");
+  const fecha = parseInstagramDate(captionField(caption, "Fecha"));
+  const tipo = captionField(caption, "Tipo").toLocaleLowerCase("es");
+  if (!deporte || !categoria || !rival || !fecha || !tipo) return null;
+
+  if (tipo.includes("resultado")) {
+    const marcador = captionField(caption, "Resultado");
+    const score = marcador.match(/(\d+)\s*[-–]\s*(\d+)/);
+    if (!score) return null;
+    const marcadorNormalizado = marcador.toLocaleLowerCase("es");
+    const ceibosIndex = Math.min(...aliases
+      .map(alias => marcadorNormalizado.indexOf(alias.toLocaleLowerCase("es")))
+      .filter(index => index >= 0));
+    const rivalIndex = marcadorNormalizado.indexOf(rival.toLocaleLowerCase("es"));
+    const ceibosFirst = !Number.isFinite(ceibosIndex) || rivalIndex < 0 || ceibosIndex < rivalIndex;
+    return {
+      kind: "resultado",
+      deporte: deporte.toLocaleLowerCase("es").replace("básquetbol", "basketball").replace("basquetbol", "basketball"),
+      categoria,
+      rival,
+      gf: Number(ceibosFirst ? score[1] : score[2]),
+      gc: Number(ceibosFirst ? score[2] : score[1]),
+      fecha
+    };
+  }
+
+  if (!/(fixture|partido|próximo|proximo)/.test(tipo)) return null;
+  const localia = (captionField(caption, "Localía") || captionField(caption, "Localia")).toLocaleLowerCase("es");
+  const hora = captionField(caption, "Hora") || "A confirmar";
+  return {
+    kind: "partido",
+    deporte: deporte.toLocaleLowerCase("es").replace("básquetbol", "basketball").replace("basquetbol", "basketball"),
+    categoria,
+    rival,
+    fecha,
+    hora,
+    local: !/(visitante|visita)/.test(localia)
+  };
+}
+
+async function readInstagramPosts(aliases) {
+  const token = process.env.INSTAGRAM_ACCESS_TOKEN;
+  if (!token) {
+    console.log("instagram: sin token configurado; se omite la lectura de publicaciones");
+    return null;
+  }
+  const response = await fetch("https://graph.instagram.com/me/media?fields=id,caption,timestamp,permalink&limit=25", {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+  if (!response.ok) throw new Error(`Instagram API respondió ${response.status}`);
+  const payload = await response.json();
+  const matches = (payload.data ?? [])
+    .map(post => parseInstagramCaption(post.caption ?? "", aliases))
+    .filter(Boolean);
+  console.log(`instagram: ${matches.length} partidos o resultados encontrados en publicaciones etiquetadas`);
+  return matches;
+}
+
 async function renderPage(source) {
   const { chromium } = await import("playwright");
   const browser = await chromium.launch({ headless: true });
@@ -139,6 +217,15 @@ async function main() {
     } catch (error) {
       console.warn(`${source.deporte}: no se pudo actualizar (${error.message})`);
     }
+  }
+  try {
+    const instagramMatches = await readInstagramPosts(config.teamAliases);
+    if (instagramMatches) {
+      gathered.push(...instagramMatches);
+      fuentesActualizadas += 1;
+    }
+  } catch (error) {
+    console.warn(`instagram: no se pudo actualizar (${error.message})`);
   }
   // Si ninguna fuente respondió, no tocamos el JSON existente ni marcamos el
   // trabajo como exitoso. GitHub Actions debe avisar el fallo para no dejar un
