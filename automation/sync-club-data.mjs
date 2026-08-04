@@ -91,6 +91,10 @@ async function renderPage(source) {
   try {
     const page = await browser.newPage({ userAgent: "CeibosClubFixtureBot/1.0 (contacto: info@ceibosclub.com)" });
     await page.goto(source.url, { waitUntil: "domcontentloaded", timeout: 60000 });
+    // Forzamos una recarga equivalente a F5 antes de leer la tabla. Algunas
+    // federaciones actualizan el fixture dentro de la misma URL y pueden
+    // conservar una respuesta anterior durante unos minutos.
+    await page.reload({ waitUntil: "domcontentloaded", timeout: 60000 });
     await page.locator("table").first().waitFor({ state: "attached", timeout: 10000 }).catch(() => {});
     // Hockey muestra el fixture en una pestaña oculta y body.innerText solo
     // devuelve la clasificación. Leemos las celdas de cada fila para conservar
