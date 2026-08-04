@@ -92,74 +92,96 @@ function parseInstagramDate(value) {
   return `${year}-${String(Number(match[2])).padStart(2, "0")}-${String(Number(match[1])).padStart(2, "0")}`;
 }
 
-function captionField(caption, label) {
-  const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  return clean(caption.match(new RegExp(`^\\s*${escaped}\\s*:\\s*(.+)$`, "im"))?.[1]);
+const sinAcentos = value => clean(value).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es");
+
+function deporteDesdePlaca(text) {
+  const value = sinAcentos(text);
+  if (value.includes("futbol")) return "futbol";
+  if (value.includes("hockey")) return "hockey";
+  if (value.includes("rugby")) return "rugby";
+  if (value.includes("basket") || value.includes("basquet")) return "basketball";
+  return "";
 }
 
-function parseInstagramCaption(caption, aliases) {
-  // Los posteos comunes son texto libre. Para no publicar datos inventados,
-  // solo importamos los que el club marque con #CeibosWeb y tengan los campos
-  // deportivos explícitos. Las placas pueden acompañar el post, pero no son la
-  // fuente de datos de la automatización.
-  if (!/#ceibosweb\b/i.test(caption)) return null;
-  const deporte = captionField(caption, "Deporte");
-  const categoria = captionField(caption, "Categoría") || captionField(caption, "Categoria");
-  const rival = captionField(caption, "Rival");
-  const fecha = parseInstagramDate(captionField(caption, "Fecha"));
-  const tipo = captionField(caption, "Tipo").toLocaleLowerCase("es");
-  if (!deporte || !categoria || !rival || !fecha || !tipo) return null;
+function categoriaDesdePlaca(text) {
+  const value = sinAcentos(text);
+  const categorias = [
+    ["reserva verde", "Reserva Verde"], ["reserva a", "Reserva A"],
+    ["primera", "Primera"], ["pre senior", "PreSenior"], ["presenior", "PreSenior"],
+    ["sub 20", "Sub 20"], ["sub 18", "Sub 18"], ["intermedia a", "Intermedia A"],
+    ["inter a", "Intermedia A"], ["intermedia b", "Intermedia B"], ["inter b", "Intermedia B"],
+    ["intermedia c", "Intermedia C"], ["inter c", "Intermedia C"], ["reserva", "Reserva"]
+  ];
+  return categorias.find(([needle]) => value.includes(needle))?.[1] ?? "";
+}
 
-  if (tipo.includes("resultado")) {
-    const marcador = captionField(caption, "Resultado");
-    const score = marcador.match(/(\d+)\s*[-–]\s*(\d+)/);
-    if (!score) return null;
-    const marcadorNormalizado = marcador.toLocaleLowerCase("es");
-    const ceibosIndex = Math.min(...aliases
-      .map(alias => marcadorNormalizado.indexOf(alias.toLocaleLowerCase("es")))
-      .filter(index => index >= 0));
-    const rivalIndex = marcadorNormalizado.indexOf(rival.toLocaleLowerCase("es"));
-    const ceibosFirst = !Number.isFinite(ceibosIndex) || rivalIndex < 0 || ceibosIndex < rivalIndex;
-    return {
-      kind: "resultado",
-      deporte: deporte.toLocaleLowerCase("es").replace("básquetbol", "basketball").replace("basquetbol", "basketball"),
-      categoria,
-      rival,
-      gf: Number(ceibosFirst ? score[1] : score[2]),
-      gc: Number(ceibosFirst ? score[2] : score[1]),
-      fecha
-    };
+function parseInstagramImage(text, aliases) {
+  const deporte = deporteDesdePlaca(text);
+  const categoria = categoriaDesdePlaca(text);
+  const dateMatch = text.match(/\b(\d{1,2})\s*[\/-]\s*(\d{1,2})(?:\s*[\/-]\s*(\d{2,4}))?\b/);
+  if (!deporte || !categoria || !dateMatch) return [];
+  const fecha = parseInstagramDate(`${dateMatch[1]}/${dateMatch[2]}/${dateMatch[3] ?? now.getFullYear()}`);
+  const lines = text.split(/\r?\n/).map(clean).filter(Boolean);
+  const result = [];
+  const categoryPositions = lines
+    .map((line, index) => ({ index, categoria: categoriaDesdePlaca(line) }))
+    .filter(item => item.categoria);
+  const blocks = categoryPositions.length ? categoryPositions : [{ index: 0, categoria }];
+  for (const block of blocks) {
+    const next = categoryPositions.find(item => item.index > block.index)?.index ?? lines.length;
+    const fragment = lines.slice(block.index, Math.min(next, block.index + 5)).join(" ");
+    const versus = fragment.match(/\b(?:vs\.?|v\.)\s*([^\d]{2,90}?)(?=\s+\d{1,2}:\d{2}|\s+cancha\b|$)/i);
+    if (!versus) continue;
+    const rival = clean(versus[1].replace(/\b(universitario|club)\s*$/i, "$1"));
+    if (!rival || isTeam(rival, aliases)) continue;
+    const hora = fragment.match(/\b(\d{1,2}:\d{2})\b/)?.[1] ?? "A confirmar";
+    const local = !/cancha\s*:\s*[^.]*\b(visitante|rival)\b/i.test(fragment) && /cancha\s*:\s*[^.]*ceibos/i.test(fragment);
+    const score = fragment.match(/\b(\d+)\s*[-–]\s*(\d+)\b/);
+    if (score) {
+      const scoreIndex = score.index ?? 0;
+      const ceibosIndex = Math.min(...aliases
+        .map(alias => sinAcentos(fragment).indexOf(sinAcentos(alias)))
+        .filter(index => index >= 0));
+      const ceibosFirst = !Number.isFinite(ceibosIndex) || ceibosIndex < scoreIndex;
+      result.push({
+        kind: "resultado", deporte, categoria: block.categoria, rival, fecha,
+        gf: Number(ceibosFirst ? score[1] : score[2]), gc: Number(ceibosFirst ? score[2] : score[1])
+      });
+    } else {
+      result.push({ kind: "partido", deporte, categoria: block.categoria, rival, fecha, hora, local });
+    }
   }
-
-  if (!/(fixture|partido|próximo|proximo)/.test(tipo)) return null;
-  const localia = (captionField(caption, "Localía") || captionField(caption, "Localia")).toLocaleLowerCase("es");
-  const hora = captionField(caption, "Hora") || "A confirmar";
-  return {
-    kind: "partido",
-    deporte: deporte.toLocaleLowerCase("es").replace("básquetbol", "basketball").replace("basquetbol", "basketball"),
-    categoria,
-    rival,
-    fecha,
-    hora,
-    local: !/(visitante|visita)/.test(localia)
-  };
+  return result;
 }
 
 async function readInstagramPosts(aliases) {
   const token = process.env.INSTAGRAM_ACCESS_TOKEN;
   if (!token) {
-    console.log("instagram: sin token configurado; se omite la lectura de publicaciones");
+    console.log("instagram: sin token configurado; se omite la lectura de carruseles");
     return null;
   }
-  const response = await fetch("https://graph.instagram.com/me/media?fields=id,caption,timestamp,permalink&limit=25", {
+  const response = await fetch("https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url,children{id,media_type,media_url,thumbnail_url}&limit=10", {
     headers: { Authorization: `Bearer ${token}` }
   });
   if (!response.ok) throw new Error(`Instagram API respondió ${response.status}`);
   const payload = await response.json();
-  const matches = (payload.data ?? [])
-    .map(post => parseInstagramCaption(post.caption ?? "", aliases))
-    .filter(Boolean);
-  console.log(`instagram: ${matches.length} partidos o resultados encontrados en publicaciones etiquetadas`);
+  const images = (payload.data ?? []).flatMap(post => {
+    const items = post.media_type === "CAROUSEL_ALBUM" ? post.children?.data ?? [] : [post];
+    return items.filter(item => item.media_type === "IMAGE" && (item.media_url || item.thumbnail_url));
+  }).slice(0, 20);
+  if (!images.length) return [];
+  const { createWorker } = await import("tesseract.js");
+  const worker = await createWorker("spa+eng");
+  const matches = [];
+  try {
+    for (const image of images) {
+      const { data } = await worker.recognize(image.media_url ?? image.thumbnail_url);
+      matches.push(...parseInstagramImage(data.text, aliases));
+    }
+  } finally {
+    await worker.terminate();
+  }
+  console.log(`instagram: ${matches.length} próximos partidos encontrados leyendo ${images.length} imágenes`);
   return matches;
 }
 
