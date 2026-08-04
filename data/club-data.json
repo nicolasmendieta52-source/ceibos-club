@@ -29,7 +29,7 @@
       "categoria": "Basketball",
       "rival": "CLUB UNIVERSIDAD CATOLICA",
       "fecha": "2026-08-08",
-      "hora": "A confirmar",
+      "hora": "19:15",
       "local": true
     },
     {
@@ -238,6 +238,14 @@
       "rival": "ANGLO SCHOOL UNIVERSITARIO",
       "fecha": "2026-10-04",
       "hora": "15:30",
+      "local": true
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "CLUB UNIVERSIDAD CATOLICA",
+      "fecha": "2026-08-08",
+      "hora": "A confirmar",
       "local": true
     },
     {
@@ -964,5 +972,5 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-04T21:54:03.539Z"
+  "actualizadoEn": "2026-08-04T22:01:48.013Z"
 }
