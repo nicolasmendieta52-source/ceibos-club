@@ -25,6 +25,54 @@
       "local": false
     },
     {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "CLUB UNIVERSIDAD CATOLICA",
+      "fecha": "2026-08-08",
+      "hora": "A confirmar",
+      "local": true
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "MARISTAS DEPORTIVO",
+      "fecha": "2026-08-15",
+      "hora": "A confirmar",
+      "local": true
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "OLD BOYS CLUB",
+      "fecha": "2026-08-29",
+      "hora": "A confirmar",
+      "local": false
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "BELLA UNION UNIVERSITARIO",
+      "fecha": "2026-09-05",
+      "hora": "A confirmar",
+      "local": true
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "YOUNG UNIVERSITARIO",
+      "fecha": "2026-09-12",
+      "hora": "A confirmar",
+      "local": false
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "ORT BLANCO",
+      "fecha": "2026-09-19",
+      "hora": "A confirmar",
+      "local": true
+    },
+    {
       "deporte": "futbol",
       "categoria": "Reserva Verde",
       "rival": "PEÑAROL UNIVERSITARIO",
@@ -250,14 +298,6 @@
     }
   ],
   "resultados": [
-    {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "CLUB BELLAKEO C.B.",
-      "gf": 62,
-      "gc": 43,
-      "fecha": "2026-08-01"
-    },
     {
       "deporte": "hockey",
       "categoria": "Intermedia A",
@@ -537,6 +577,14 @@
       "gf": 0,
       "gc": 3,
       "fecha": "2026-03-15"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "CLUB BELLAKEO C.B.",
+      "gf": 62,
+      "gc": 43,
+      "fecha": "2026-08-01"
     },
     {
       "deporte": "basketball",
@@ -908,5 +956,5 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-04T10:19:03.542Z"
+  "actualizadoEn": "2026-08-04T11:43:21.397Z"
 }
