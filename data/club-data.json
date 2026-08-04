@@ -197,7 +197,7 @@
       "categoria": "Sub 18",
       "rival": "HCA UNIVERSITARIO",
       "fecha": "2026-08-09",
-      "hora": "A confirmar",
+      "hora": "15:30",
       "local": false
     },
     {
@@ -239,6 +239,14 @@
       "fecha": "2026-10-04",
       "hora": "15:30",
       "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "HCA UNIVERSITARIO",
+      "fecha": "2026-08-09",
+      "hora": "A confirmar",
+      "local": false
     },
     {
       "deporte": "hockey",
@@ -956,5 +964,5 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-04T18:19:16.449Z"
+  "actualizadoEn": "2026-08-04T21:31:44.683Z"
 }
