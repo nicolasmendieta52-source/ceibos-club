@@ -939,7 +939,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-05T12:31:11.848Z",
+  "actualizadoEn": "2026-08-05T16:14:34.817Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1049,11 +1049,10 @@
       }
     ],
     "instagram": {
-      "estado": "sin-coincidencias",
+      "estado": "error",
       "registros": 0,
-      "imagenes": 54,
-      "cache": 0,
-      "nuevas": 54
+      "imagenes": 0,
+      "detalle": "Instagram API respondió 400 en /me/media"
     }
   }
 }
