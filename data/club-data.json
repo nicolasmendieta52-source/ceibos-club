@@ -2,35 +2,12 @@
   "partidos": [
     {
       "deporte": "hockey",
-      "categoria": "Intermedia A",
-      "rival": "Old Girls Azulgrana",
-      "fecha": "2026-08-08",
-      "hora": "19:15",
-      "local": false
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Sub 18",
-      "rival": "Colegio Seminario",
-      "fecha": "2026-08-08",
-      "hora": "14:00",
-      "local": false
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Old Girls Inter B Red",
-      "fecha": "2026-08-09",
-      "hora": "17:00",
-      "local": true
-    },
-    {
-      "deporte": "hockey",
       "categoria": "Intermedia B",
       "rival": "Cgu – Los Cuervos",
       "fecha": "2026-07-19",
       "hora": "14:00",
-      "local": false
+      "local": false,
+      "cancha": "Carrasco Polo Club"
     },
     {
       "deporte": "basketball",
@@ -38,47 +15,17 @@
       "rival": "CLUB UNIVERSIDAD CATOLICA",
       "fecha": "2026-08-08",
       "hora": "19:15",
-      "local": true
+      "local": true,
+      "cancha": "G. TROUVILLE"
     },
     {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "MARISTAS DEPORTIVO",
-      "fecha": "2026-08-15",
-      "hora": "A confirmar",
-      "local": true
-    },
-    {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "OLD BOYS CLUB",
-      "fecha": "2026-08-29",
-      "hora": "A confirmar",
-      "local": false
-    },
-    {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "BELLA UNION UNIVERSITARIO",
-      "fecha": "2026-09-05",
-      "hora": "A confirmar",
-      "local": true
-    },
-    {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "YOUNG UNIVERSITARIO",
-      "fecha": "2026-09-12",
-      "hora": "A confirmar",
-      "local": false
-    },
-    {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "ORT BLANCO",
-      "fecha": "2026-09-19",
-      "hora": "A confirmar",
-      "local": true
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
+      "fecha": "2026-08-08",
+      "hora": "09:00",
+      "local": false,
+      "cancha": "COMP. DEVOTO (NAUT. PICHINCHA)"
     },
     {
       "deporte": "futbol",
@@ -86,79 +33,26 @@
       "rival": "PEÑAROL UNIVERSITARIO",
       "fecha": "2026-08-08",
       "hora": "09:00",
-      "local": false
+      "local": false,
+      "cancha": "COMPLEJO PEÑAROL UNIVERSITARIO"
     },
     {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "DANUBIO FUTBOL CLUB",
-      "fecha": "2026-08-15",
-      "hora": "11:15",
-      "local": true
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "E.L.F.",
-      "fecha": "2026-08-29",
-      "hora": "11:15",
-      "local": true
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "LA BLANQUEADA",
-      "fecha": "2026-09-05",
-      "hora": "11:15",
-      "local": false
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
-      "fecha": "2026-09-12",
-      "hora": "11:15",
-      "local": true
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
+      "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Old Girls Azulgrana",
       "fecha": "2026-08-08",
-      "hora": "09:00",
-      "local": false
+      "hora": "19:15",
+      "local": false,
+      "cancha": "British"
     },
     {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "CARRASCO LAWN TENNIS",
-      "fecha": "2026-08-15",
-      "hora": "09:00",
-      "local": true
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "OLD CHRISTIANS CLUB",
-      "fecha": "2026-08-29",
-      "hora": "09:00",
-      "local": true
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "TAPE",
-      "fecha": "2026-09-05",
-      "hora": "11:15",
-      "local": false
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "OBC AZULGRANA.",
-      "fecha": "2026-09-12",
-      "hora": "09:00",
-      "local": true
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Colegio Seminario",
+      "fecha": "2026-08-08",
+      "hora": "14:00",
+      "local": false,
+      "cancha": "Seminario"
     },
     {
       "deporte": "futbol",
@@ -166,7 +60,53 @@
       "rival": "CIRCULO DE TENIS MONTEVIDEO",
       "fecha": "2026-08-09",
       "hora": "11:15",
-      "local": true
+      "local": true,
+      "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "HCA UNIVERSITARIO",
+      "fecha": "2026-08-09",
+      "hora": "15:30",
+      "local": false,
+      "cancha": "COMPLEJO NORTHFIELD"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Old Girls Inter B Red",
+      "fecha": "2026-08-09",
+      "hora": "17:00",
+      "local": true,
+      "cancha": "Pilares"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "MARISTAS DEPORTIVO",
+      "fecha": "2026-08-15",
+      "hora": "A confirmar",
+      "local": true,
+      "cancha": "CANCHA A FIJAR"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "CARRASCO LAWN TENNIS",
+      "fecha": "2026-08-15",
+      "hora": "09:00",
+      "local": true,
+      "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "DANUBIO FUTBOL CLUB",
+      "fecha": "2026-08-15",
+      "hora": "11:15",
+      "local": true,
+      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "futbol",
@@ -174,39 +114,8 @@
       "rival": "ALEMAN UNIVERSITARIO",
       "fecha": "2026-08-16",
       "hora": "11:15",
-      "local": false
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
-      "fecha": "2026-08-30",
-      "hora": "11:15",
-      "local": false
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
-      "fecha": "2026-09-06",
-      "hora": "11:15",
-      "local": true
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "SAN JUAN BAUTISTA",
-      "fecha": "2026-09-13",
-      "hora": "09:00",
-      "local": false
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "HCA UNIVERSITARIO",
-      "fecha": "2026-08-09",
-      "hora": "15:30",
-      "local": false
+      "local": false,
+      "cancha": "CLUB ALEMAN"
     },
     {
       "deporte": "futbol",
@@ -214,7 +123,44 @@
       "rival": "JUAN XXIII",
       "fecha": "2026-08-16",
       "hora": "A confirmar",
-      "local": false
+      "local": false,
+      "cancha": "CANCHA A FIJAR"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "OLD BOYS CLUB",
+      "fecha": "2026-08-29",
+      "hora": "A confirmar",
+      "local": false,
+      "cancha": "CANCHA A FIJAR"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "OLD CHRISTIANS CLUB",
+      "fecha": "2026-08-29",
+      "hora": "09:00",
+      "local": true,
+      "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "E.L.F.",
+      "fecha": "2026-08-29",
+      "hora": "11:15",
+      "local": true,
+      "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
+      "fecha": "2026-08-30",
+      "hora": "11:15",
+      "local": false,
+      "cancha": "COMP. DEVOTO (NAUT. PICHINCHA)"
     },
     {
       "deporte": "futbol",
@@ -222,7 +168,44 @@
       "rival": "CLUB SOCIAL PIEDRAS BLANCAS",
       "fecha": "2026-08-30",
       "hora": "A confirmar",
-      "local": true
+      "local": true,
+      "cancha": "CANCHA A FIJAR"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "BELLA UNION UNIVERSITARIO",
+      "fecha": "2026-09-05",
+      "hora": "A confirmar",
+      "local": true,
+      "cancha": "CANCHA A FIJAR"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "TAPE",
+      "fecha": "2026-09-05",
+      "hora": "11:15",
+      "local": false,
+      "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "LA BLANQUEADA",
+      "fecha": "2026-09-05",
+      "hora": "11:15",
+      "local": false,
+      "cancha": "COMPLEJO JUAN XXIII"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
+      "fecha": "2026-09-06",
+      "hora": "11:15",
+      "local": true,
+      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "futbol",
@@ -230,7 +213,44 @@
       "rival": "COLEGIO Y LICEO INGLES",
       "fecha": "2026-09-06",
       "hora": "A confirmar",
-      "local": false
+      "local": false,
+      "cancha": "CANCHA A FIJAR"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "YOUNG UNIVERSITARIO",
+      "fecha": "2026-09-12",
+      "hora": "A confirmar",
+      "local": false,
+      "cancha": "CANCHA A FIJAR"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "OBC AZULGRANA.",
+      "fecha": "2026-09-12",
+      "hora": "09:00",
+      "local": true,
+      "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
+      "fecha": "2026-09-12",
+      "hora": "11:15",
+      "local": true,
+      "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "SAN JUAN BAUTISTA",
+      "fecha": "2026-09-13",
+      "hora": "09:00",
+      "local": false,
+      "cancha": "COMPLEJO LAS CASUARINAS"
     },
     {
       "deporte": "futbol",
@@ -238,7 +258,17 @@
       "rival": "PLAYA HONDA UNIVERSITARIO",
       "fecha": "2026-09-13",
       "hora": "15:30",
-      "local": false
+      "local": false,
+      "cancha": "PARQUE CUPRA - CLUB SEMINARIO"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "ORT BLANCO",
+      "fecha": "2026-09-19",
+      "hora": "A confirmar",
+      "local": true,
+      "cancha": "CANCHA A FIJAR"
     },
     {
       "deporte": "futbol",
@@ -246,145 +276,18 @@
       "rival": "ANGLO SCHOOL UNIVERSITARIO",
       "fecha": "2026-10-04",
       "hora": "15:30",
-      "local": true
-    },
-    {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "CLUB UNIVERSIDAD CATOLICA",
-      "fecha": "2026-08-08",
-      "hora": "A confirmar",
-      "local": true
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "HCA UNIVERSITARIO",
-      "fecha": "2026-08-09",
-      "hora": "A confirmar",
-      "local": false
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia A",
-      "rival": "Old Girls Azulgrana",
-      "fecha": "2026-03-21",
-      "hora": "19:15",
-      "local": false
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Sub 18",
-      "rival": "Colegio Seminario",
-      "fecha": "2026-03-21",
-      "hora": "14:00",
-      "local": false
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "SAN JUAN BAUTISTA",
-      "fecha": "2026-08-02",
-      "hora": "09:00",
-      "local": false
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "ANGLO SCHOOL UNIVERSITARIO",
-      "fecha": "2026-08-02",
-      "hora": "15:30",
-      "local": true
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Scuola Italiana Di Montevideo",
-      "fecha": "2026-08-02",
-      "hora": "17:00",
-      "local": false
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
-      "fecha": "2026-08-01",
-      "hora": "11:15",
-      "local": true
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "OBC AZULGRANA.",
-      "fecha": "2026-08-01",
-      "hora": "09:00",
-      "local": true
+      "local": true,
+      "cancha": "MONTE VI \"LOS CEIBOS\""
     }
   ],
   "resultados": [
     {
-      "deporte": "hockey",
-      "categoria": "Intermedia A",
-      "rival": "Club Náutico Intermedia A",
-      "gf": 3,
-      "gc": 3,
-      "fecha": "2026-06-24"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia A",
-      "rival": "Old Woodlands Club",
-      "gf": 1,
-      "gc": 2,
-      "fecha": "2026-06-13"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia A",
-      "rival": "Palo Y Pico",
-      "gf": 0,
-      "gc": 5,
-      "fecha": "2026-06-06"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia A",
-      "rival": "Lobas",
-      "gf": 2,
-      "gc": 2,
-      "fecha": "2026-05-23"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia A",
-      "rival": "Carrasco Polo Club Intermedia A",
-      "gf": 0,
-      "gc": 5,
-      "fecha": "2026-05-16"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia A",
-      "rival": "Old Girls Inter A",
-      "gf": 0,
-      "gc": 3,
-      "fecha": "2026-05-09"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia A",
-      "rival": "Yacht Intermedia",
-      "gf": 0,
-      "gc": 1,
-      "fecha": "2026-04-18"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia A",
-      "rival": "Old Brendan's Club",
-      "gf": 2,
-      "gc": 3,
-      "fecha": "2026-04-11"
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "UNIVERSIDAD DE MONTEVIDEO",
+      "gf": 65,
+      "gc": 71,
+      "fecha": "2026-03-14"
     },
     {
       "deporte": "hockey",
@@ -397,202 +300,10 @@
     {
       "deporte": "hockey",
       "categoria": "Sub 18",
-      "rival": "Club Náutico Sub 18",
-      "gf": 1,
-      "gc": 7,
-      "fecha": "2026-06-23"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Sub 18",
-      "rival": "Old Woodlands Club",
-      "gf": 1,
-      "gc": 8,
-      "fecha": "2026-06-13"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Sub 18",
-      "rival": "Old Ivy",
-      "gf": 2,
-      "gc": 9,
-      "fecha": "2026-06-06"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Sub 18",
-      "rival": "Old Sampa Club",
-      "gf": 1,
-      "gc": 8,
-      "fecha": "2026-07-25"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Sub 18",
-      "rival": "Lobas",
-      "gf": 4,
-      "gc": 2,
-      "fecha": "2026-05-23"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Sub 18",
-      "rival": "Carrasco Polo Club Sub 18",
-      "gf": 0,
-      "gc": 2,
-      "fecha": "2026-05-16"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Sub 18",
-      "rival": "Old Girls Sub18",
-      "gf": 0,
-      "gc": 9,
-      "fecha": "2026-05-09"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Sub 18",
-      "rival": "Biguá Sub 18",
-      "gf": 1,
-      "gc": 4,
-      "fecha": "2026-04-30"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Sub 18",
-      "rival": "Northfield",
-      "gf": 3,
-      "gc": 4,
-      "fecha": "2026-04-25"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Sub 18",
-      "rival": "Yacht Sub 18",
-      "gf": 2,
-      "gc": 8,
-      "fecha": "2026-04-18"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Sub 18",
-      "rival": "Old Brendan's Club",
-      "gf": 0,
-      "gc": 7,
-      "fecha": "2026-04-11"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Sub 18",
       "rival": "Old Christians Club",
       "gf": 1,
       "gc": 5,
       "fecha": "2026-03-14"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Scuola Italiana Di Montevideo",
-      "gf": 0,
-      "gc": 7,
-      "fecha": "2026-08-02"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Old Christians Club Lai",
-      "gf": 2,
-      "gc": 2,
-      "fecha": "2026-07-15"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Old Sampa Club",
-      "gf": 1,
-      "gc": 3,
-      "fecha": "2026-06-21"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Nautilus",
-      "gf": 0,
-      "gc": 2,
-      "fecha": "2026-06-14"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Palo Y Pico",
-      "gf": 1,
-      "gc": 2,
-      "fecha": "2026-05-31"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Psg",
-      "gf": 0,
-      "gc": 3,
-      "fecha": "2026-05-24"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Club Náutico Intermedia B",
-      "gf": 3,
-      "gc": 5,
-      "fecha": "2026-05-17"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Club Seminario",
-      "gf": 1,
-      "gc": 2,
-      "fecha": "2026-05-10"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Old Girls Inter B Red",
-      "gf": 2,
-      "gc": 0,
-      "fecha": "2026-04-29"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Scuola Italiana Di Montevideo",
-      "gf": 0,
-      "gc": 4,
-      "fecha": "2026-04-26"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Old Christians Club Lai",
-      "gf": 1,
-      "gc": 2,
-      "fecha": "2026-04-19"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Cgu – Los Cuervos",
-      "gf": 1,
-      "gc": 3,
-      "fecha": "2026-04-12"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Old Sampa Club",
-      "gf": 1,
-      "gc": 4,
-      "fecha": "2026-03-22"
     },
     {
       "deporte": "hockey",
@@ -605,26 +316,18 @@
     {
       "deporte": "basketball",
       "categoria": "Basketball",
-      "rival": "CLUB BELLAKEO C.B.",
-      "gf": 62,
-      "gc": 43,
-      "fecha": "2026-08-01"
-    },
-    {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "UNIVERSIDAD DE MONTEVIDEO",
-      "gf": 65,
-      "gc": 71,
-      "fecha": "2026-03-14"
-    },
-    {
-      "deporte": "basketball",
-      "categoria": "Basketball",
       "rival": "CLUB NAUTICO",
       "gf": 57,
       "gc": 69,
       "fecha": "2026-03-21"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Old Sampa Club",
+      "gf": 1,
+      "gc": 4,
+      "fecha": "2026-03-22"
     },
     {
       "deporte": "basketball",
@@ -643,12 +346,108 @@
       "fecha": "2026-04-11"
     },
     {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "NACIONAL UNIVERSITARIO",
+      "gf": 0,
+      "gc": 0,
+      "fecha": "2026-04-11"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "COLEGIO Y LICEO INGLES",
+      "gf": 1,
+      "gc": 0,
+      "fecha": "2026-04-11"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Old Brendan's Club",
+      "gf": 2,
+      "gc": 3,
+      "fecha": "2026-04-11"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Old Brendan's Club",
+      "gf": 0,
+      "gc": 7,
+      "fecha": "2026-04-11"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "OLIMAR",
+      "gf": 4,
+      "gc": 2,
+      "fecha": "2026-04-12"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Cgu – Los Cuervos",
+      "gf": 1,
+      "gc": 3,
+      "fecha": "2026-04-12"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "CLUB SEMINARIO",
+      "gf": 0,
+      "gc": 1,
+      "fecha": "2026-04-15"
+    },
+    {
       "deporte": "basketball",
       "categoria": "Basketball",
       "rival": "CLUB CHAMPAGNAT RUGBY",
       "gf": 30,
       "gc": 47,
       "fecha": "2026-04-18"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "NUMA TURCATTI",
+      "gf": 2,
+      "gc": 1,
+      "fecha": "2026-04-18"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Yacht Intermedia",
+      "gf": 0,
+      "gc": 1,
+      "fecha": "2026-04-18"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Yacht Sub 18",
+      "gf": 2,
+      "gc": 8,
+      "fecha": "2026-04-18"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "CITY PARK",
+      "gf": 4,
+      "gc": 1,
+      "fecha": "2026-04-19"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Old Christians Club Lai",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-04-19"
     },
     {
       "deporte": "basketball",
@@ -659,12 +458,84 @@
       "fecha": "2026-04-25"
     },
     {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "REDUCTO UNIVERSITARIO",
-      "gf": 59,
-      "gc": 71,
-      "fecha": "2026-05-20"
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "SAGRADA FAMILIA UNIVERSITARIO",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-04-25"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "JUAN XXIII BLANCO",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-04-25"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Northfield",
+      "gf": 3,
+      "gc": 4,
+      "fecha": "2026-04-25"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "CLUB JESUS MARIA",
+      "gf": 2,
+      "gc": 1,
+      "fecha": "2026-04-26"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Scuola Italiana Di Montevideo",
+      "gf": 0,
+      "gc": 4,
+      "fecha": "2026-04-26"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Old Girls Inter B Red",
+      "gf": 2,
+      "gc": 0,
+      "fecha": "2026-04-29"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Biguá Sub 18",
+      "gf": 1,
+      "gc": 4,
+      "fecha": "2026-04-30"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Old Girls Inter A",
+      "gf": 0,
+      "gc": 3,
+      "fecha": "2026-05-09"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Old Girls Sub18",
+      "gf": 0,
+      "gc": 9,
+      "fecha": "2026-05-09"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Club Seminario",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-05-10"
     },
     {
       "deporte": "basketball",
@@ -673,6 +544,150 @@
       "gf": 48,
       "gc": 75,
       "fecha": "2026-05-16"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "ALEMAN UNIVERSITARIO",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-05-16"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "SAN PABLO UNIVERSITARIO",
+      "gf": 2,
+      "gc": 1,
+      "fecha": "2026-05-16"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Carrasco Polo Club Intermedia A",
+      "gf": 0,
+      "gc": 5,
+      "fecha": "2026-05-16"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Carrasco Polo Club Sub 18",
+      "gf": 0,
+      "gc": 2,
+      "fecha": "2026-05-16"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "INDEPENDIENTE",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-05-17"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Club Náutico Intermedia B",
+      "gf": 3,
+      "gc": 5,
+      "fecha": "2026-05-17"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "REDUCTO UNIVERSITARIO",
+      "gf": 59,
+      "gc": 71,
+      "fecha": "2026-05-20"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "OLD CHRISTIANS AZUL",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-05-23"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "OLD CHRISTIANS NARANJA",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-05-23"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Lobas",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-05-23"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Lobas",
+      "gf": 4,
+      "gc": 2,
+      "fecha": "2026-05-23"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "SAGRADA FAMILIA UNIVERSITARIO",
+      "gf": 2,
+      "gc": 1,
+      "fecha": "2026-05-24"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Psg",
+      "gf": 0,
+      "gc": 3,
+      "fecha": "2026-05-24"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "ORT BLANCO",
+      "gf": 63,
+      "gc": 61,
+      "fecha": "2026-05-30"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "TENIS EL PINAR",
+      "gf": 1,
+      "gc": 0,
+      "fecha": "2026-05-30"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "CENTRO CRISTOBAL COLON",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-05-30"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "CLUB UNIVERSIDAD CATOLICA",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-05-31"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Palo Y Pico",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-05-31"
     },
     {
       "deporte": "basketball",
@@ -685,178 +700,10 @@
     {
       "deporte": "basketball",
       "categoria": "Basketball",
-      "rival": "ORT BLANCO",
-      "gf": 63,
-      "gc": 61,
-      "fecha": "2026-05-30"
-    },
-    {
-      "deporte": "basketball",
-      "categoria": "Basketball",
       "rival": "MARISTAS DEPORTIVO",
       "gf": 48,
       "gc": 45,
       "fecha": "2026-06-06"
-    },
-    {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "OLD BOYS CLUB",
-      "gf": 61,
-      "gc": 50,
-      "fecha": "2026-06-13"
-    },
-    {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "YOUNG UNIVERSITARIO",
-      "gf": 60,
-      "gc": 50,
-      "fecha": "2026-06-20"
-    },
-    {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "CLUB BELLAKEO C.B.",
-      "gf": 84,
-      "gc": 39,
-      "fecha": "2026-06-27"
-    },
-    {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "CLUB UNIVERSIDAD CATOLICA",
-      "gf": 51,
-      "gc": 62,
-      "fecha": "2026-07-25"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "COLEGIO Y LICEO INGLES",
-      "gf": 1,
-      "gc": 0,
-      "fecha": "2026-04-11"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "NUMA TURCATTI",
-      "gf": 2,
-      "gc": 1,
-      "fecha": "2026-04-18"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "JUAN XXIII BLANCO",
-      "gf": 1,
-      "gc": 2,
-      "fecha": "2026-04-25"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "SAN PABLO UNIVERSITARIO",
-      "gf": 2,
-      "gc": 1,
-      "fecha": "2026-05-16"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "OLD CHRISTIANS NARANJA",
-      "gf": 2,
-      "gc": 2,
-      "fecha": "2026-05-23"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "CENTRO CRISTOBAL COLON",
-      "gf": 2,
-      "gc": 2,
-      "fecha": "2026-05-30"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "OLD BRENDANS VERDE",
-      "gf": 3,
-      "gc": 1,
-      "fecha": "2026-06-06"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "SEMINARIO UNIVERSITARIO",
-      "gf": 1,
-      "gc": 2,
-      "fecha": "2026-06-13"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "WANDERERS",
-      "gf": 1,
-      "gc": 2,
-      "fecha": "2026-06-20"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "SAN EUGENIO",
-      "gf": 2,
-      "gc": 1,
-      "fecha": "2026-06-27"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "NACIONAL UNIVERSITARIO",
-      "gf": 0,
-      "gc": 0,
-      "fecha": "2026-04-11"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "CLUB SEMINARIO",
-      "gf": 0,
-      "gc": 1,
-      "fecha": "2026-04-15"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "SAGRADA FAMILIA UNIVERSITARIO",
-      "gf": 1,
-      "gc": 1,
-      "fecha": "2026-04-25"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "ALEMAN UNIVERSITARIO",
-      "gf": 2,
-      "gc": 2,
-      "fecha": "2026-05-16"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "OLD CHRISTIANS AZUL",
-      "gf": 2,
-      "gc": 2,
-      "fecha": "2026-05-23"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "TENIS EL PINAR",
-      "gf": 1,
-      "gc": 0,
-      "fecha": "2026-05-30"
     },
     {
       "deporte": "futbol",
@@ -868,11 +715,99 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "OLD BRENDANS VERDE",
+      "gf": 3,
+      "gc": 1,
+      "fecha": "2026-06-06"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Palo Y Pico",
+      "gf": 0,
+      "gc": 5,
+      "fecha": "2026-06-06"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Old Ivy",
+      "gf": 2,
+      "gc": 9,
+      "fecha": "2026-06-06"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "J.M.L.M",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-06-07"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "OLD BOYS CLUB",
+      "gf": 61,
+      "gc": 50,
+      "fecha": "2026-06-13"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "PLAYA HONDA UNIVERSITARIO",
       "gf": 1,
       "gc": 5,
       "fecha": "2026-06-13"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "SEMINARIO UNIVERSITARIO",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-06-13"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Old Woodlands Club",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-06-13"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Old Woodlands Club",
+      "gf": 1,
+      "gc": 8,
+      "fecha": "2026-06-13"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "CENTRO CRISTOBAL COLON",
+      "gf": 2,
+      "gc": 1,
+      "fecha": "2026-06-14"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Nautilus",
+      "gf": 0,
+      "gc": 2,
+      "fecha": "2026-06-14"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "YOUNG UNIVERSITARIO",
+      "gf": 60,
+      "gc": 50,
+      "fecha": "2026-06-20"
     },
     {
       "deporte": "futbol",
@@ -884,75 +819,11 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "OLD BOYS CLUB",
-      "gf": 0,
-      "gc": 3,
-      "fecha": "2026-06-27"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "OLIMAR",
-      "gf": 4,
-      "gc": 2,
-      "fecha": "2026-04-12"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "CITY PARK",
-      "gf": 4,
-      "gc": 1,
-      "fecha": "2026-04-19"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "CLUB JESUS MARIA",
-      "gf": 2,
-      "gc": 1,
-      "fecha": "2026-04-26"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "INDEPENDIENTE",
-      "gf": 1,
-      "gc": 1,
-      "fecha": "2026-05-17"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "SAGRADA FAMILIA UNIVERSITARIO",
-      "gf": 2,
-      "gc": 1,
-      "fecha": "2026-05-24"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "CLUB UNIVERSIDAD CATOLICA",
+      "categoria": "Reserva Verde",
+      "rival": "WANDERERS",
       "gf": 1,
       "gc": 2,
-      "fecha": "2026-05-31"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "J.M.L.M",
-      "gf": 2,
-      "gc": 2,
-      "fecha": "2026-06-07"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "CENTRO CRISTOBAL COLON",
-      "gf": 2,
-      "gc": 1,
-      "fecha": "2026-06-14"
+      "fecha": "2026-06-20"
     },
     {
       "deporte": "futbol",
@@ -961,6 +832,62 @@
       "gf": 1,
       "gc": 2,
       "fecha": "2026-06-21"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "ELBIO FERNANDEZ",
+      "gf": 6,
+      "gc": 1,
+      "fecha": "2026-06-21"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Old Sampa Club",
+      "gf": 1,
+      "gc": 3,
+      "fecha": "2026-06-21"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Club Náutico Sub 18",
+      "gf": 1,
+      "gc": 7,
+      "fecha": "2026-06-23"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Club Náutico Intermedia A",
+      "gf": 3,
+      "gc": 3,
+      "fecha": "2026-06-24"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "CLUB BELLAKEO C.B.",
+      "gf": 84,
+      "gc": 39,
+      "fecha": "2026-06-27"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "OLD BOYS CLUB",
+      "gf": 0,
+      "gc": 3,
+      "fecha": "2026-06-27"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "SAN EUGENIO",
+      "gf": 2,
+      "gc": 1,
+      "fecha": "2026-06-27"
     },
     {
       "deporte": "futbol",
@@ -971,14 +898,162 @@
       "fecha": "2026-06-28"
     },
     {
-      "deporte": "futbol",
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Old Christians Club Lai",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-07-15"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "CLUB UNIVERSIDAD CATOLICA",
+      "gf": 51,
+      "gc": 62,
+      "fecha": "2026-07-25"
+    },
+    {
+      "deporte": "hockey",
       "categoria": "Sub 18",
-      "rival": "ELBIO FERNANDEZ",
-      "gf": 6,
-      "gc": 1,
-      "fecha": "2026-06-21"
+      "rival": "Old Sampa Club",
+      "gf": 1,
+      "gc": 8,
+      "fecha": "2026-07-25"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "CLUB BELLAKEO C.B.",
+      "gf": 62,
+      "gc": 43,
+      "fecha": "2026-08-01"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Scuola Italiana Di Montevideo",
+      "gf": 0,
+      "gc": 7,
+      "fecha": "2026-08-02"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-05T06:46:15.386Z"
+  "actualizadoEn": "2026-08-05T12:31:11.848Z",
+  "diagnostico": {
+    "fuentes": [
+      {
+        "deporte": "hockey",
+        "categoria": "Intermedia A",
+        "url": "https://admin.hockey.com.uy/posiciones?category_id=3",
+        "registros": 10,
+        "estado": "ok"
+      },
+      {
+        "deporte": "hockey",
+        "categoria": "Sub 18",
+        "url": "https://admin.hockey.com.uy/posiciones?category_id=4",
+        "registros": 13,
+        "estado": "ok"
+      },
+      {
+        "deporte": "hockey",
+        "categoria": "Intermedia B",
+        "url": "https://admin.hockey.com.uy/posiciones?category_id=31",
+        "registros": 16,
+        "estado": "ok"
+      },
+      {
+        "deporte": "basketball",
+        "categoria": "Basketball",
+        "url": "https://ligauniversitaria.org.uy/resultados/B221B3.html",
+        "registros": 1,
+        "estado": "ok"
+      },
+      {
+        "deporte": "basketball",
+        "categoria": "Basketball",
+        "url": "https://ligauniversitaria.org.uy/partidos/B221B3.html",
+        "registros": 6,
+        "estado": "ok"
+      },
+      {
+        "deporte": "basketball",
+        "categoria": "Basketball",
+        "url": "https://ligauniversitaria.org.uy/resultados/B221B.html",
+        "registros": 15,
+        "estado": "ok"
+      },
+      {
+        "deporte": "basketball",
+        "categoria": "Basketball",
+        "url": "https://ligauniversitaria.org.uy/partidos/B221B.html",
+        "registros": 0,
+        "estado": "sin-coincidencias"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Reserva Verde",
+        "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS31.html",
+        "registros": 10,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Reserva Verde",
+        "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS31.html",
+        "registros": 5,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Reserva A",
+        "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS1.html",
+        "registros": 10,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Reserva A",
+        "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS1.html",
+        "registros": 5,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Primera",
+        "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
+        "registros": 10,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Primera",
+        "url": "https://ligauniversitaria.org.uy/partidos/F21B.html",
+        "registros": 5,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Sub 18",
+        "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
+        "registros": 1,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Sub 18",
+        "url": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
+        "registros": 6,
+        "estado": "ok"
+      }
+    ],
+    "instagram": {
+      "estado": "sin-coincidencias",
+      "registros": 0,
+      "imagenes": 54,
+      "cache": 0,
+      "nuevas": 54
+    }
+  }
 }
