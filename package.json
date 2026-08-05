@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "sync:club": "node automation/sync-club-data.mjs"
+    "sync:club": "node automation/sync-club-data.mjs",
+    "test": "node --test automation/*.test.mjs"
   },
   "dependencies": {
     "playwright": "1.55.0",

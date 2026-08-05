@@ -1,5 +1,5 @@
 {
-  "teamAliases": ["CEIBOS CLUB", "CEIBOS CLUB VERDE", "LOS CEIBOS"],
+  "teamAliases": ["CEIBOS", "CEIBOS CLUB", "CEIBOS CLUB VERDE", "LOS CEIBOS"],
   "sources": [
     {
       "deporte": "hockey",
@@ -92,12 +92,6 @@
       "deporte": "futbol",
       "categoria": "Sub 18",
       "url": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
-      "modo": "browser"
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Primera",
-      "url": "https://uru.org.uy/",
       "modo": "browser"
     }
   ]
