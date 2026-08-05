@@ -160,7 +160,10 @@ async function readInstagramPosts(aliases) {
     console.log("instagram: sin token configurado; se omite la lectura de carruseles");
     return null;
   }
-  const response = await fetch("https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url,children{id,media_type,media_url,thumbnail_url}&limit=10", {
+  // El club publica muchas fotos entre un fixture y otro. Leemos un historial
+  // más amplio para no perder un carrusel de partidos por no estar entre los
+  // últimos diez posteos.
+  const response = await fetch("https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url,children{id,media_type,media_url,thumbnail_url}&limit=30", {
     headers: { Authorization: `Bearer ${token}` }
   });
   if (!response.ok) throw new Error(`Instagram API respondió ${response.status}`);
@@ -168,7 +171,7 @@ async function readInstagramPosts(aliases) {
   const images = (payload.data ?? []).flatMap(post => {
     const items = post.media_type === "CAROUSEL_ALBUM" ? post.children?.data ?? [] : [post];
     return items.filter(item => item.media_type === "IMAGE" && (item.media_url || item.thumbnail_url));
-  }).slice(0, 20);
+  }).slice(0, 45);
   if (!images.length) return [];
   const { createWorker } = await import("tesseract.js");
   const worker = await createWorker("spa+eng");
