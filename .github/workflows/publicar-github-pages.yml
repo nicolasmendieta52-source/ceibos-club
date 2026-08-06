@@ -1,0 +1,51 @@
+name: Publicar GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_run:
+    workflows:
+      - "Actualizar datos del club"
+    types:
+      - completed
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: publicar-github-pages
+  cancel-in-progress: true
+
+jobs:
+  publicar:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    environment:
+      name: github-pages
+      url: ${{ steps.publicacion.outputs.page_url }}
+    steps:
+      - name: Descargar la ultima version
+        uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Preparar archivos de la web
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
+
+      - name: Publicar la web
+        id: publicacion
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: 1800000
+          error_count: 30
+          reporting_interval: 10000
