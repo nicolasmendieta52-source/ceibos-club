@@ -1094,8 +1094,8 @@ const DEPORTES = [
   },
   {
     slug:"futbol", nombre:"Fútbol", ico:"⚽", instagram:"ceibosfutbol",
-    desc:"La temporada 2026 de la Liga Universitaria tiene registros oficiales desde abril. Ceibos compite con Primera, Reserva A, Reserva Verde y Sub 18: elegí una categoría para ver su fixture e historial del año.",
-    categorias:["Primera","Reserva A","Reserva Verde","Sub 18"],
+    desc:"La temporada 2026 de la Liga Universitaria tiene registros oficiales desde abril. Ceibos compite con Primera, Reserva A, Reserva Verde, PreSenior, Sub 20 y Sub 18: elegí una categoría para ver su fixture e historial del año.",
+    categorias:["Primera","Reserva A","Reserva Verde","PreSenior","Sub 20","Sub 18"],
     foto:"assets/deporte-futbol.webp"
   },
   {
@@ -1190,7 +1190,7 @@ function renderTicker(){
     mapa.set(`${slugDeporte(resultado.deporte)}|${resultado.categoria}`, resultado);
     return mapa;
   }, new Map());
-  const ordenFutbol = ["Primera", "Reserva A", "Reserva Verde", "Sub 18"];
+  const ordenFutbol = ["Primera", "Reserva A", "Reserva Verde", "PreSenior", "Sub 20", "Sub 18"];
   const items = [...ultimosPorCategoria.values()].sort((a,b) => {
     const aFutbol = slugDeporte(a.deporte) === "futbol", bFutbol = slugDeporte(b.deporte) === "futbol";
     if (aFutbol && bFutbol) return ordenFutbol.indexOf(a.categoria) - ordenFutbol.indexOf(b.categoria);
@@ -1362,7 +1362,7 @@ function renderScore(){
     mapa.set(`${slugDeporte(resultado.deporte)}|${resultado.categoria}`, resultado);
     return mapa;
   }, new Map());
-  const ordenFutbol = ["Primera", "Reserva A", "Reserva Verde", "Sub 18"];
+  const ordenFutbol = ["Primera", "Reserva A", "Reserva Verde", "PreSenior", "Sub 20", "Sub 18"];
   const ordenDeportes = ["futbol", "hockey", "basketball", "rugby"];
   const marcadores = [...ultimosPorCategoria.values()].sort((a,b) => {
     const deporteA = slugDeporte(a.deporte), deporteB = slugDeporte(b.deporte);

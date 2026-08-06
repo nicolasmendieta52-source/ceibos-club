@@ -24,6 +24,21 @@ vs. San Isidro Lomas
   assert.equal(records[2].local, false);
 });
 
+test("reconoce PreSenior y Sub 20 de futbol", () => {
+  const text = `FÚTBOL
+SÁBADO - 16/08/2026
+PRE SENIOR
+vs. Flores
+09:00 hs - Cancha: Los Ceibos
+SUB 20
+vs. San Juan Bautista
+15:30 hs - Cancha: Los Ceibos`;
+  const records = parseInstagramImage(text, aliases);
+  assert.equal(records.length, 2);
+  assert.deepEqual(records.map(record => record.categoria), ["PreSenior", "Sub 20"]);
+  assert.ok(records.every(record => record.local));
+});
+
 test("lee una placa de resultados con varias categorias", () => {
   const text = `CEIBOS RUGBY RESULTADOS
 PRIMERA - 20 JUNIO 2026
