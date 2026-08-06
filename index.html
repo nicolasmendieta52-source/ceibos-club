@@ -1000,6 +1000,73 @@ footer .f-brand{display:flex;align-items:center;gap:10px;font-family:var(--displ
     <div>www.ceibosclub.com</div>
   </footer>
 </section>
+<style>
+/* ---------- seguridad de maquetacion a zoom 100% ---------- */
+html,body{max-width:100%;overflow-x:clip}
+img,video,svg{max-width:100%}
+
+/* Evita que los textos largos obliguen a los grids a salir de su caja. */
+.home-deportiva-grid,.dep-panel.activo,.score-cards,.fix-row,.shop-grid,
+.shop-banner,.predio-grid,.lanzamiento-final{min-width:0}
+.home-deportiva-grid>*,.dep-panel.activo>*,.score-cards>*,.fix-row>*,
+.shop-grid>*,.shop-banner>*,.predio-grid>*,.lanzamiento-final>*{min-width:0}
+
+.home-deportiva-grid{grid-auto-rows:max-content;align-items:start}
+.partido-destacado{height:max-content;max-height:none}
+.pd-etiqueta,.pd-equipos,.pd-detalle{flex-shrink:0}
+.pd-equipo,.home-proximo strong,.home-proximo p,.partido-mini .vs,
+.resultado-mini span,.score-categoria,.score-rival,.fix-det .enfrenta,
+.fix-det .cat-hora,.prod h3,.prod-desc,.shop-banner h3,.shop-banner p,
+.predio-info h3,.predio-vivo h4,.predio-partido-local strong,
+.lanzamiento-final h3,.lanzamiento-final p,.lanzamiento-accion span{
+  overflow-wrap:anywhere;word-break:normal
+}
+.pd-equipo{line-height:1.02}
+.partido-mini>div,.resultado-mini>span,.fix-det,.prod,.dep-info,.dep-fixture{min-width:0}
+
+.dep-panel.activo{height:auto;max-height:none;align-items:start}
+.score-card{min-width:0;height:auto;max-height:none}
+.score-categoria{max-width:calc(100% - 4px);white-space:normal;line-height:1.25}
+.score-rival{line-height:1.45}
+.fix-row{height:auto;max-height:none}
+.shop-banner{height:auto;max-height:none;align-items:center}
+.shop-banner>div{flex:1 1 320px}
+.shop-banner .btn{flex:0 1 auto;max-width:100%;white-space:normal;text-align:center}
+.prod{height:auto;max-height:none}
+.lanzamiento-final{height:auto;max-height:none;align-items:start}
+.lanzamiento-accion{min-width:0}
+
+/* La tipografia alta del titulo necesita aire para no recortar las letras. */
+.hero h1 .linea{padding:.14em .05em;margin:-.14em -.05em}
+</style>
+<style>
+@media (max-width:820px){
+  .home-deportiva-grid,.dep-panel.activo,.shop-grid,.predio-grid,.lanzamiento-final{width:100%}
+  .partido-destacado{width:100%;padding:26px 20px}
+  .pd-etiqueta{flex-wrap:wrap;line-height:1.35}
+  .pd-detalle{line-height:1.45}
+  .partido-mini,.resultado-mini{height:auto;min-height:0;flex-wrap:wrap}
+  .partido-mini .pill{flex:0 0 auto}
+  .score-sport-title{flex-wrap:wrap;line-height:1.15}
+  .score-sport-title small{width:100%;margin-left:0}
+  .fix-row{overflow:visible}
+  .fix-det .enfrenta{line-height:1.08}
+  .shop-banner{align-items:flex-start}
+  .shop-banner .btn{width:100%;justify-content:center}
+  .prod-foto{height:auto;max-height:310px;aspect-ratio:1/1}
+  .predio-invitacion{max-width:calc(100% - 18px);white-space:normal;line-height:1.25}
+  .lanzamiento-final h3{line-height:.96}
+}
+@media (max-width:390px){
+  .hero h1{font-size:clamp(3rem,16vw,3.55rem)}
+  .home-deportiva h2,.noticia-texto h3,.dep-info h3{overflow-wrap:anywhere}
+  .score-card{padding:22px 16px}
+  .score-categoria{font-size:.66rem;letter-spacing:.08em}
+  .fix-row{grid-template-columns:56px minmax(0,1fr);gap:10px;padding:15px 11px}
+  .fix-cd{grid-column:2;flex-wrap:wrap}
+  .lanzamiento-final{padding:26px 18px}
+}
+</style>
 </main>
 
 <button id="volver" type="button" aria-label="Volver arriba">↑</button>
