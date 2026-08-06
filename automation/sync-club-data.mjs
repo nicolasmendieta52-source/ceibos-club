@@ -252,8 +252,21 @@ async function instagramRequest(endpoint, token) {
   const response = await fetch(`https://graph.instagram.com${endpoint}`, {
     headers: { Authorization: `Bearer ${token}` }
   });
-  if (!response.ok) throw new Error(`Instagram API respondió ${response.status} en ${endpoint.split("?")[0]}`);
-  return response.json();
+  const body = await response.text();
+  let payload;
+  try {
+    payload = body ? JSON.parse(body) : {};
+  } catch {
+    payload = {};
+  }
+  if (!response.ok) {
+    const apiError = payload?.error ?? {};
+    const detail = [apiError.message, apiError.code && `código ${apiError.code}`, apiError.error_subcode && `subcódigo ${apiError.error_subcode}`]
+      .filter(Boolean)
+      .join("; ");
+    throw new Error(`Instagram API respondió ${response.status} en ${endpoint.split("?")[0]}${detail ? `: ${detail}` : ""}`);
+  }
+  return payload;
 }
 
 async function expandInstagramImages(posts, token) {
@@ -290,7 +303,10 @@ async function readInstagramPosts(aliases) {
     console.log("instagram: sin token configurado; se omite la lectura de carruseles");
     return null;
   }
-  const payload = await instagramRequest("/me/media?fields=id,media_type,media_url,thumbnail_url,permalink,timestamp,children{id,media_type,media_url,thumbnail_url}&limit=40", token);
+  // Pedimos solamente los campos del post. Las imágenes internas de cada
+  // carrusel se consultan después mediante /children. Meta rechaza en algunas
+  // versiones la expansión anidada children{...} dentro de /me/media.
+  const payload = await instagramRequest("/me/media?fields=id,media_type,media_url,thumbnail_url,permalink,timestamp&limit=40", token);
   // Los resultados se suelen compartir en historias. Cuando el token permite
   // leerlas, también analizamos las que siguen activas (24 horas). Para el
   // historial, los carruseles publicados continúan siendo la fuente estable.
@@ -360,7 +376,7 @@ async function readInstagramPosts(aliases) {
       }
       if (!imageMatches.length) {
         const sample = repairText(text);
-        if (/ceibos|futbol|fútbol|hockey|rugby|basket|reserva|intermedia|sub\s*18/i.test(sample)) {
+        if (/ceibos|futbol|fútbol|hockey|rugby|basket|reserva|intermedia|pre\s*senior|presenior|sub\s*(?:18|20)|m\s*19/i.test(sample)) {
           console.log(`instagram OCR sin coincidencia útil: ${sample.slice(0, 220)}`);
         }
       }
@@ -558,6 +574,12 @@ async function main() {
     diagnostico: { fuentes: sourceStatus, instagram: instagramStatus }
   };
   await fs.writeFile(dataPath, `${JSON.stringify(output, null, 2)}\n`);
+  // Si se configuró Instagram pero Meta rechazó la conexión, el trabajo debe
+  // quedar rojo. Así no confundimos una ejecución terminada con una lectura
+  // correcta de los carruseles.
+  if (process.env.INSTAGRAM_ACCESS_TOKEN && instagramStatus.estado === "error") {
+    throw new Error(`Falló la conexión con Instagram: ${instagramStatus.detalle}`);
+  }
 }
 
 export { categoriaDesdePlaca, mergeClubData, parseInstagramImage, parseInstagramResultsBoard, repairText };

@@ -39,6 +39,27 @@ vs. San Juan Bautista
   assert.ok(records.every(record => record.local));
 });
 
+test("lee las categorias de un fixture de rugby", () => {
+  const text = `CEIBOS RUGBY
+SÁBADO - 08/08/2026
+PRIMERA
+vs. Lobos
+15:30 hs - Cancha: Los Ceibos
+INTERMEDIA
+vs. Lobos
+13:30 hs - Cancha: Los Ceibos
+PRE INTERMEDIA
+vs. Lobos
+12:00 hs - Cancha: Los Ceibos
+M19
+vs. Lobos
+10:30 hs - Cancha: Los Ceibos`;
+  const records = parseInstagramImage(text, aliases);
+  assert.equal(records.length, 4);
+  assert.deepEqual(records.map(record => record.categoria), ["Primera", "Intermedia", "Pre Intermedia", "M19"]);
+  assert.ok(records.every(record => record.deporte === "rugby" && record.local));
+});
+
 test("lee una placa de resultados con varias categorias", () => {
   const text = `CEIBOS RUGBY RESULTADOS
 PRIMERA - 20 JUNIO 2026
