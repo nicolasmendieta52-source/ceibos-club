@@ -17,7 +17,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: publicar-github-pages
+  group: pages
   cancel-in-progress: true
 
 jobs:
@@ -27,7 +27,7 @@ jobs:
     timeout-minutes: 40
     environment:
       name: github-pages
-      url: ${{ steps.publicacion.outputs.page_url }}
+      url: ${{ steps.publicacion.outputs.page_url || steps.reintento.outputs.page_url }}
     steps:
       - name: Descargar la ultima version
         uses: actions/checkout@v6
@@ -44,8 +44,10 @@ jobs:
 
       - name: Publicar la web
         id: publicacion
+        continue-on-error: true
         uses: actions/deploy-pages@v4
-        with:
-          timeout: 1800000
-          error_count: 30
-          reporting_interval: 10000
+
+      - name: Reintentar la publicacion si GitHub demora
+        id: reintento
+        if: steps.publicacion.outcome == 'failure'
+        uses: actions/deploy-pages@v4
