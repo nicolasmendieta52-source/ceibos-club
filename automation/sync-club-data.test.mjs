@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { extractInstagramStoryMentionImages, mergeClubData, parseInstagramImage, parseInstagramResultsBoard, repairText } from "./sync-club-data.mjs";
+import { expandApifyInstagramImages, extractInstagramStoryMentionImages, mergeClubData, parseInstagramImage, parseInstagramResultsBoard, repairText } from "./sync-club-data.mjs";
 
 const aliases = ["CEIBOS", "CEIBOS CLUB", "LOS CEIBOS"];
 
@@ -118,4 +118,23 @@ test("extrae la imagen de una historia que menciona a la cuenta", () => {
     permalink: "",
     timestamp: "2026-08-07T12:00:00+0000"
   }]);
+});
+
+test("extrae todas las placas de un carrusel obtenido por Apify", () => {
+  const posts = [{
+    id: "post-1",
+    url: "https://www.instagram.com/p/ABC123/",
+    timestamp: "2026-08-07T12:00:00.000Z",
+    displayUrl: "https://cdn.example/portada.jpg",
+    carouselImages: [
+      "https://cdn.example/portada.jpg",
+      "https://cdn.example/futbol.jpg",
+      "https://cdn.example/rugby.jpg"
+    ]
+  }];
+  assert.deepEqual(expandApifyInstagramImages(posts), [
+    { id: "apify-post-1-0", url: "https://cdn.example/portada.jpg", permalink: "https://www.instagram.com/p/ABC123/", timestamp: "2026-08-07T12:00:00.000Z" },
+    { id: "apify-post-1-1", url: "https://cdn.example/futbol.jpg", permalink: "https://www.instagram.com/p/ABC123/", timestamp: "2026-08-07T12:00:00.000Z" },
+    { id: "apify-post-1-2", url: "https://cdn.example/rugby.jpg", permalink: "https://www.instagram.com/p/ABC123/", timestamp: "2026-08-07T12:00:00.000Z" }
+  ]);
 });

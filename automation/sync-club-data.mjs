@@ -363,43 +363,119 @@ async function readInstagramStoryMentions(token) {
   }
 }
 
+function expandApifyInstagramImages(posts) {
+  const images = new Map();
+  for (const post of posts ?? []) {
+    const candidates = [
+      ...(Array.isArray(post.carouselImages) ? post.carouselImages : []),
+      ...(Array.isArray(post.images) ? post.images : []),
+      ...(Array.isArray(post.carousel_media) ? post.carousel_media : []),
+      post.displayUrl,
+      post.image
+    ];
+    const urls = candidates
+      .map(value => typeof value === "string" ? value : value?.url ?? value?.displayUrl)
+      .filter(value => typeof value === "string" && /^https?:\/\//i.test(value));
+    const uniqueUrls = [...new Set(urls)];
+    for (let index = 0; index < uniqueUrls.length; index += 1) {
+      const id = clean(post.id ?? post.shortCode ?? post.code ?? "post");
+      const key = `${id}-${index}`;
+      if (!images.has(key)) images.set(key, {
+        id: `apify-${key}`,
+        url: uniqueUrls[index],
+        permalink: post.url ?? post.inputUrl ?? "",
+        timestamp: post.timestamp ?? post.takenAtIso ?? ""
+      });
+    }
+  }
+  return [...images.values()];
+}
+
+async function readApifyInstagramPosts() {
+  const token = process.env.APIFY_TOKEN;
+  if (!token) return { images: [], posts: 0, available: false };
+  const profile = clean(process.env.APIFY_INSTAGRAM_PROFILE ?? "ceibosfutbol").replace(/^@/, "");
+  const limit = Math.max(1, Math.min(20, Number(process.env.APIFY_INSTAGRAM_RESULTS_LIMIT ?? 8)));
+  const endpoint = "https://api.apify.com/v2/acts/apify~instagram-scraper/run-sync-get-dataset-items?clean=true&format=json";
+  const response = await fetch(endpoint, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      directUrls: [`https://www.instagram.com/${profile}/`],
+      resultsType: "posts",
+      resultsLimit: limit,
+      onlyPostsNewerThan: "14 days",
+      skipPinnedPosts: true
+    }),
+    signal: AbortSignal.timeout(240000)
+  });
+  const body = await response.text();
+  let posts;
+  try {
+    posts = body ? JSON.parse(body) : [];
+  } catch {
+    posts = [];
+  }
+  if (!response.ok) {
+    const detail = clean(posts?.error?.message ?? posts?.message ?? body).slice(0, 240);
+    throw new Error(`Apify respondió ${response.status}${detail ? `: ${detail}` : ""}`);
+  }
+  if (!Array.isArray(posts)) throw new Error("Apify devolvió un formato inesperado");
+  const images = expandApifyInstagramImages(posts);
+  console.log(`instagram/apify: ${posts.length} publicaciones públicas y ${images.length} imágenes para revisar`);
+  return { images, posts: posts.length, available: true };
+}
+
 async function readInstagramPosts(aliases) {
   const token = process.env.INSTAGRAM_ACCESS_TOKEN;
-  if (!token) {
-    console.log("instagram: sin token configurado; se omite la lectura de carruseles");
+  const apifyToken = process.env.APIFY_TOKEN;
+  if (!token && !apifyToken) {
+    console.log("instagram: sin token de Meta ni de Apify; se omite la lectura de carruseles");
     return null;
   }
-  // Pedimos solamente los campos del post. Las imágenes internas de cada
-  // carrusel se consultan después mediante /children. Meta rechaza en algunas
-  // versiones la expansión anidada children{...} dentro de /me/media.
-  const payload = await instagramRequest("/me/media?fields=id,media_type,media_url,thumbnail_url,permalink,timestamp&limit=40", token);
-  // Los fixtures actuales se publican desde la cuenta principal invitando a
-  // ceibosfutbol como colaborador. /me/media devuelve solamente publicaciones
-  // propias, por lo que consultamos también el borde de contenido colaborativo.
-  let collaborativePosts = [];
-  try {
-    collaborativePosts = (await instagramRequest("/me/collaborative_media?fields=id,media_type,media_url,thumbnail_url,permalink,timestamp&limit=40", token)).data ?? [];
-    console.log(`instagram: ${collaborativePosts.length} publicaciones colaborativas para revisar`);
-  } catch (error) {
-    console.log(`instagram: las publicaciones colaborativas no están disponibles (${error.message})`);
+  let officialPosts = [];
+  if (token) {
+    try {
+      // Pedimos solamente los campos del post. Las imágenes internas de cada
+      // carrusel se consultan después mediante /children.
+      officialPosts = (await instagramRequest("/me/media?fields=id,media_type,media_url,thumbnail_url,permalink,timestamp&limit=40", token)).data ?? [];
+    } catch (error) {
+      console.warn(`instagram: la API oficial no pudo leer publicaciones (${error.message}); se intenta Apify`);
+    }
   }
   // Los resultados se suelen compartir en historias. Cuando el token permite
   // leerlas, también analizamos las que siguen activas (24 horas). Para el
   // historial, los carruseles publicados continúan siendo la fuente estable.
   let stories = [];
-  try {
-    stories = (await instagramRequest("/me/stories?fields=id,media_type,media_url,thumbnail_url,timestamp&limit=25", token)).data ?? [];
-    console.log(`instagram: ${stories.length} historias activas para revisar`);
-  } catch {
-    console.log("instagram: las historias activas no están disponibles; se leen los carruseles publicados");
+  if (token) {
+    try {
+      stories = (await instagramRequest("/me/stories?fields=id,media_type,media_url,thumbnail_url,timestamp&limit=25", token)).data ?? [];
+      console.log(`instagram: ${stories.length} historias activas para revisar`);
+    } catch {
+      console.log("instagram: las historias activas no están disponibles; se leen los carruseles publicados");
+    }
   }
 
-  const storyMentions = await readInstagramStoryMentions(token);
+  const storyMentions = token ? await readInstagramStoryMentions(token) : { images: [], available: false };
+  let apify = { images: [], posts: 0, available: false };
+  try {
+    apify = await readApifyInstagramPosts();
+  } catch (error) {
+    console.warn(`instagram/apify: no se pudo actualizar (${error.message}); se conserva la API oficial como respaldo`);
+  }
 
   const maxImages = Math.max(10, Number(process.env.INSTAGRAM_OCR_MAX_IMAGES ?? 70));
-  const expanded = await expandInstagramImages([...(payload.data ?? []), ...collaborativePosts, ...stories], token);
-  const images = [...new Map([...storyMentions.images, ...expanded].map(image => [image.id, image])).values()].slice(0, maxImages);
-  if (!images.length) return { matches: [], imagesRead: 0, recognized: 0, cached: 0, collaborative: collaborativePosts.length, storyMentions: storyMentions.images.length };
+  const officialImages = token ? await expandInstagramImages([...officialPosts, ...stories], token) : [];
+  // Apify ve el feed público tal como aparece en el perfil, incluidas las
+  // colaboraciones. Si está configurado, ese feed reemplaza las publicaciones
+  // oficiales para evitar procesarlas dos veces. Las historias siguen llegando
+  // por la API oficial de Meta.
+  const feedImages = apify.available ? apify.images : officialImages;
+  const images = [...new Map([...storyMentions.images, ...feedImages].map(image => [image.id, image])).values()].slice(0, maxImages);
+  if (!images.length) return { matches: [], imagesRead: 0, recognized: 0, cached: 0, apifyPosts: apify.posts, storyMentions: storyMentions.images.length };
 
   const OCR_CACHE_VERSION = 2;
   const cache = JSON.parse(await fs.readFile(ocrCachePath, "utf8").catch(() => "{}"));
@@ -470,8 +546,8 @@ async function readInstagramPosts(aliases) {
   await fs.writeFile(ocrCachePath, `${JSON.stringify(cache, null, 2)}\n`);
   const partidos = matches.filter(match => match.kind === "partido").length;
   const resultados = matches.filter(match => match.kind === "resultado").length;
-  console.log(`instagram: ${partidos} partidos y ${resultados} resultados encontrados en ${images.length} imágenes (${collaborativePosts.length} publicaciones colaborativas, ${storyMentions.images.length} historias mencionadas, ${cached} desde caché, ${recognized} nuevas, ${sparseFallbacks} con segunda lectura)`);
-  return { matches, imagesRead: images.length, recognized, cached, collaborative: collaborativePosts.length, storyMentions: storyMentions.images.length };
+  console.log(`instagram: ${partidos} partidos y ${resultados} resultados encontrados en ${images.length} imágenes (${apify.posts} publicaciones de Apify, ${storyMentions.images.length} historias mencionadas, ${cached} desde caché, ${recognized} nuevas, ${sparseFallbacks} con segunda lectura)`);
+  return { matches, imagesRead: images.length, recognized, cached, apifyPosts: apify.posts, storyMentions: storyMentions.images.length };
 }
 
 let browserInstance;
@@ -628,7 +704,7 @@ async function main() {
     const instagram = await readInstagramPosts(config.teamAliases);
     if (instagram) {
       instagramRecords = instagram.matches;
-      instagramStatus = { estado: instagram.matches.length ? "ok" : "sin-coincidencias", registros: instagram.matches.length, imagenes: instagram.imagesRead, colaboraciones: instagram.collaborative, historiasMencionadas: instagram.storyMentions, cache: instagram.cached, nuevas: instagram.recognized };
+      instagramStatus = { estado: instagram.matches.length ? "ok" : "sin-coincidencias", registros: instagram.matches.length, imagenes: instagram.imagesRead, publicacionesApify: instagram.apifyPosts, historiasMencionadas: instagram.storyMentions, cache: instagram.cached, nuevas: instagram.recognized };
     }
   } catch (error) {
     console.warn(`instagram: no se pudo actualizar (${error.message})`);
@@ -660,7 +736,7 @@ async function main() {
   }
 }
 
-export { categoriaDesdePlaca, extractInstagramStoryMentionImages, mergeClubData, parseInstagramImage, parseInstagramResultsBoard, repairText };
+export { categoriaDesdePlaca, expandApifyInstagramImages, extractInstagramStoryMentionImages, mergeClubData, parseInstagramImage, parseInstagramResultsBoard, repairText };
 
 const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 if (isMain) main().catch(error => { console.error(error); process.exitCode = 1; });
