@@ -371,7 +371,7 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 .partido-destacado{min-height:298px;padding:clamp(26px,4vw,46px);border-radius:28px;background:linear-gradient(132deg,#315742,#1c3930 62%,#142b23);border:1px solid rgba(229,187,82,.32);box-shadow:0 24px 60px rgba(0,0,0,.24);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}.partido-destacado::after{content:"VS";position:absolute;right:4%;bottom:-12%;font-family:var(--display);font-size:clamp(9rem,21vw,17rem);color:rgba(229,187,82,.055);line-height:1}
 .pd-etiqueta{position:relative;z-index:1;display:flex;justify-content:space-between;gap:14px;color:var(--dorado-soft);font-size:.7rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.pd-fecha{color:rgba(246,241,228,.65)}
 .pd-equipos{position:relative;z-index:1;display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center;margin:22px 0}.pd-equipo{font-family:var(--display);font-size:clamp(1.55rem,3.6vw,3rem);line-height:.92;text-transform:uppercase;color:var(--blanco)}.pd-equipo:last-child{text-align:right}.pd-versus{font-family:var(--display);font-size:2rem;color:var(--dorado)}.pd-detalle{position:relative;z-index:1;display:flex;align-items:center;gap:12px;flex-wrap:wrap;color:rgba(246,241,228,.8);font-size:.88rem}.pd-detalle span{padding-right:12px;border-right:1px solid rgba(246,241,228,.2)}.pd-detalle span:last-child{border:0}.pd-detalle a{margin-left:auto;color:var(--verde-night);background:var(--dorado);border-radius:99px;padding:10px 15px;text-decoration:none;font-size:.68rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
-.home-agenda{border-radius:28px;padding:26px;background:rgba(246,241,228,.045);border:1px solid rgba(246,241,228,.12)}.home-agenda-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;color:var(--blanco);font-size:.74rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.home-agenda-top a{color:var(--dorado);font-size:.66rem;text-decoration:none}.home-proximos{display:flex;flex-direction:column}.home-proximo{display:grid;grid-template-columns:46px 1fr;gap:13px;padding:15px 0;border-top:1px solid rgba(246,241,228,.1)}.home-proximo-fecha{font-family:var(--display);font-size:1.5rem;line-height:.85;color:var(--dorado);text-align:center}.home-proximo-fecha small{display:block;font-family:var(--body);font-size:.58rem;letter-spacing:.12em;color:rgba(246,241,228,.52)}.home-proximo .deporte{color:var(--dorado-soft);font-size:.63rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.home-proximo strong{display:block;color:var(--blanco);font-size:.91rem;margin:4px 0}.home-proximo p{color:rgba(246,241,228,.55);font-size:.75rem}.home-sin-partidos{color:rgba(246,241,228,.6);font-size:.9rem;line-height:1.5;padding:20px 0}
+.home-agenda{border-radius:28px;padding:26px;background:rgba(246,241,228,.045);border:1px solid rgba(246,241,228,.12)}.home-agenda-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;color:var(--blanco);font-size:.74rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.home-agenda-top a{color:var(--dorado);font-size:.66rem;text-decoration:none}.home-proximos{display:flex;flex-direction:column}.home-proximo{display:grid;grid-template-columns:58px 1fr;gap:13px;padding:15px 0;border-top:1px solid rgba(246,241,228,.1)}.home-proximo-fecha{font-family:var(--display);font-size:1.5rem;line-height:.85;color:var(--dorado);text-align:center}.home-proximo-fecha small{display:block;font-family:var(--body);font-size:.52rem;letter-spacing:.05em;line-height:1.25;color:rgba(246,241,228,.52)}.home-proximo .deporte{color:var(--dorado-soft);font-size:.63rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.home-proximo strong{display:block;color:var(--blanco);font-size:.91rem;margin:4px 0}.home-proximo p{color:rgba(246,241,228,.55);font-size:.75rem}.home-sin-partidos{color:rgba(246,241,228,.6);font-size:.9rem;line-height:1.5;padding:20px 0}
 .home-accesos{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}.home-accesos a{padding:20px;border-radius:18px;text-decoration:none;background:rgba(246,241,228,.045);border:1px solid rgba(246,241,228,.1);transition:transform .25s var(--ease),background .25s,border-color .25s}.home-accesos a:hover{transform:translateY(-4px);background:rgba(229,187,82,.1);border-color:rgba(229,187,82,.55)}.home-accesos span{display:block;color:var(--dorado);font-size:1.5rem;line-height:1;margin-bottom:11px}.home-accesos strong{display:block;color:var(--blanco);font-size:.86rem}.home-accesos small{display:block;color:rgba(246,241,228,.55);font-size:.74rem;margin-top:4px}
 
 /* reveal on scroll */
@@ -525,6 +525,7 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 .fix-row:hover{background:rgba(229,187,82,.07);transform:translateX(8px)}
 .fix-row:hover::before{transform:scaleY(1)}
 .fix-fecha{text-align:center}
+.fix-fecha .semana{font-size:.56rem;font-weight:900;letter-spacing:.12em;color:var(--dorado-soft);margin-bottom:5px}
 .fix-fecha .dia{font-family:var(--display);font-size:2rem;color:var(--dorado);line-height:1}
 .fix-fecha .mes{font-size:.68rem;font-weight:800;letter-spacing:.25em;text-transform:uppercase;color:rgba(246,241,228,.55)}
 .fix-det .dep-nombre{font-size:.7rem;font-weight:800;letter-spacing:.25em;text-transform:uppercase;color:var(--dorado)}
@@ -1166,7 +1167,12 @@ const TRIVIA_CEIBOS = [];
    RENDER
    ============================================================ */
 const MESES = ["ENE","FEB","MAR","ABR","MAY","JUN","JUL","AGO","SET","OCT","NOV","DIC"];
-const fmtFecha = iso => { const [y,m,d] = iso.split("-"); return { dia:+d, mes:MESES[+m-1], anio:y }; };
+const DIAS_SEMANA = ["DOMINGO","LUNES","MARTES","MIÉRCOLES","JUEVES","VIERNES","SÁBADO"];
+const fmtFecha = iso => {
+  const [y,m,d] = iso.split("-");
+  const indiceDia = new Date(Date.UTC(+y, +m - 1, +d)).getUTCDay();
+  return { dia:+d, mes:MESES[+m-1], anio:y, semana:DIAS_SEMANA[indiceDia] };
+};
 const repararTextoWeb = valor => {
   let texto = String(valor ?? "");
   if (!/[ÃÂâð]/.test(texto)) return texto;
@@ -1181,7 +1187,7 @@ const repararTextoWeb = valor => {
 const textoSeguro = valor => repararTextoWeb(valor).replace(/[&<>'\"]/g, caracter => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;","\"":"&quot;"}[caracter]));
 const etiquetaCategoria = categoria => textoSeguro(String(categoria ?? "").replace(/^Intermedia\s+([ABC])$/i, "Inter $1"));
 const fechaValida = fecha => /^\d{4}-\d{2}-\d{2}$/.test(fecha) && !Number.isNaN(new Date(fecha + "T00:00:00").getTime());
-const fechaBreve = fecha => { if (!fechaValida(fecha)) return ""; const f = fmtFecha(fecha); return `${f.dia} ${f.mes}`; };
+const fechaBreve = fecha => { if (!fechaValida(fecha)) return ""; const f = fmtFecha(fecha); return `${f.semana} ${f.dia} ${f.mes}`; };
 const textoPlano = valor => repararTextoWeb(valor).replace(/[<>&"']/g, "").trim().slice(0, 180);
 const slugDeporte = valor => String(valor ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
 const porFecha = (a,b) => String(a.fecha ?? "").localeCompare(String(b.fecha ?? ""));
@@ -1314,7 +1320,7 @@ function renderDeportePanel(){
   const resultadosCategoria = resultados.filter(r => r.categoria === seleccionada).sort(porFecha).reverse();
   const [proximo, ...futuros] = partidosCategoria;
   const [ultimoResultado, ...historial] = resultadosCategoria;
-  const partidoMini = p => { const f=fmtFecha(p.fecha); return `<div class="partido-mini"><div><div class="vs">vs ${textoSeguro(p.rival)}</div><div class="meta">${f.dia} ${f.mes} &middot; ${horaVisible(p.hora)} &middot; ${textoSeguro(ubicacionVisible(p))}</div></div><span class="pill ${p.local?'local':'visita'}">${p.local?'Local':'Visitante'}</span></div>`; };
+  const partidoMini = p => { const f=fmtFecha(p.fecha); return `<div class="partido-mini"><div><div class="vs">vs ${textoSeguro(p.rival)}</div><div class="meta">${f.semana} ${f.dia} ${f.mes} &middot; ${horaVisible(p.hora)} &middot; ${textoSeguro(ubicacionVisible(p))}</div></div><span class="pill ${p.local?'local':'visita'}">${p.local?'Local':'Visitante'}</span></div>`; };
   const resultadoMini = r => `<div class="resultado-mini"><div><span>vs ${textoSeguro(r.rival)}</span>${fechaBreve(r.fecha)?`<small>${fechaBreve(r.fecha)}</small>`:""}</div><strong>${r.gf} &mdash; ${r.gc}</strong></div>`;
   panels.innerHTML = `<div class="dep-panel activo" id="${d.slug}" role="tabpanel" aria-labelledby="tab-${d.slug}">
     <div class="dep-info">
@@ -1420,7 +1426,7 @@ function renderFixture(){
     const f = fmtFecha(p.fecha);
     const dias = Math.round((new Date(p.fecha+"T00:00:00") - hoy)/86400000);
     const cuenta = dias===0?"¡HOY!":dias===1?"Mañana":`Faltan ${dias} días`;
-    return `<div class="fix-row"><div class="fix-fecha"><div class="dia">${f.dia}</div><div class="mes">${f.mes}</div></div><div class="fix-det"><div class="dep-nombre">${etiquetaCategoria(p.categoria)}</div><div class="enfrenta">Ceibos vs ${textoSeguro(p.rival)}</div><div class="cat-hora">${horaVisible(p.hora)} · ${textoSeguro(ubicacionVisible(p))}</div></div><div class="fix-cd"><div class="cuenta">${cuenta}</div><div class="lbl">${p.local?"De local":"De visita"}</div></div></div>`;
+    return `<div class="fix-row"><div class="fix-fecha"><div class="semana">${f.semana}</div><div class="dia">${f.dia}</div><div class="mes">${f.mes}</div></div><div class="fix-det"><div class="dep-nombre">${etiquetaCategoria(p.categoria)}</div><div class="enfrenta">Ceibos vs ${textoSeguro(p.rival)}</div><div class="cat-hora">${horaVisible(p.hora)} · ${textoSeguro(ubicacionVisible(p))}</div></div><div class="fix-cd"><div class="cuenta">${cuenta}</div><div class="lbl">${p.local?"De local":"De visita"}</div></div></div>`;
   };
 
   const mostrarDeporte = slug => {
@@ -1457,8 +1463,8 @@ function renderHomeDeportiva(){
     return;
   }
   const f = fmtFecha(primero.fecha);
-  destacado.innerHTML = `<div class="pd-etiqueta"><span>${textoSeguro(primero.deporte)} · ${etiquetaCategoria(primero.categoria)}</span><span class="pd-fecha">${f.dia} ${f.mes}</span></div><div class="pd-equipos"><div class="pd-equipo">Ceibos</div><div class="pd-versus">VS</div><div class="pd-equipo">${textoSeguro(primero.rival)}</div></div><div class="pd-detalle"><span>${horaVisible(primero.hora)}</span><span>${textoSeguro(ubicacionVisible(primero))}</span><a href="#fixture">Ficha del partido</a></div>`;
-  lista.innerHTML = proximos.slice(1).map(p => { const fecha = fmtFecha(p.fecha); return `<article class="home-proximo"><div class="home-proximo-fecha">${fecha.dia}<small>${fecha.mes}</small></div><div><div class="deporte">${textoSeguro(p.deporte)} · ${etiquetaCategoria(p.categoria)}</div><strong>Ceibos vs ${textoSeguro(p.rival)}</strong><p>${horaVisible(p.hora)} · ${textoSeguro(ubicacionVisible(p))}</p></div></article>`; }).join("") || `<p class="home-sin-partidos">No hay más fechas publicadas por ahora.</p>`;
+  destacado.innerHTML = `<div class="pd-etiqueta"><span>${textoSeguro(primero.deporte)} · ${etiquetaCategoria(primero.categoria)}</span><span class="pd-fecha">${f.semana} ${f.dia} ${f.mes}</span></div><div class="pd-equipos"><div class="pd-equipo">Ceibos</div><div class="pd-versus">VS</div><div class="pd-equipo">${textoSeguro(primero.rival)}</div></div><div class="pd-detalle"><span>${horaVisible(primero.hora)}</span><span>${textoSeguro(ubicacionVisible(primero))}</span><a href="#fixture">Ficha del partido</a></div>`;
+  lista.innerHTML = proximos.slice(1).map(p => { const fecha = fmtFecha(p.fecha); return `<article class="home-proximo"><div class="home-proximo-fecha">${fecha.dia}<small>${fecha.semana}</small><small>${fecha.mes}</small></div><div><div class="deporte">${textoSeguro(p.deporte)} · ${etiquetaCategoria(p.categoria)}</div><strong>Ceibos vs ${textoSeguro(p.rival)}</strong><p>${horaVisible(p.hora)} · ${textoSeguro(ubicacionVisible(p))}</p></div></article>`; }).join("") || `<p class="home-sin-partidos">No hay más fechas publicadas por ahora.</p>`;
 }
 let deportePredioActivo = "futbol";
 let zonaPredioActiva = "futbol-1";
@@ -1489,7 +1495,7 @@ function renderPredioVivo(){
   } else if (jornada.length) {
     const fecha = fmtFecha(fechaJornada);
     const partidos = jornada.map(partido => `<div class="predio-partido-local"><time datetime="${textoSeguro(partido.fecha)}T${textoSeguro(partido.hora || "00:00")}">${horaVisible(partido.hora)}</time><div><strong>${etiquetaCategoria(partido.categoria)}</strong><span>Ceibos vs ${textoSeguro(partido.rival)} · ${textoSeguro(ubicacionVisible(partido))}</span></div></div>`).join("");
-    contenedor.innerHTML = `<span class="predio-vivo-etiqueta">Cancha seleccionada · ${textoSeguro(deporte.nombre)}</span><h4>${textoSeguro(cancha)}</h4><div class="predio-jornada"><div class="predio-jornada-fecha">Próxima jornada de local · ${fecha.dia} ${fecha.mes}</div>${partidos}</div><a href="#${deporte.slug}" data-abrir-deporte="${deporte.slug}">Ver la agenda de ${textoSeguro(deporte.nombre)} →</a>`;
+    contenedor.innerHTML = `<span class="predio-vivo-etiqueta">Cancha seleccionada · ${textoSeguro(deporte.nombre)}</span><h4>${textoSeguro(cancha)}</h4><div class="predio-jornada"><div class="predio-jornada-fecha">Próxima jornada de local · ${fecha.semana} ${fecha.dia} ${fecha.mes}</div>${partidos}</div><a href="#${deporte.slug}" data-abrir-deporte="${deporte.slug}">Ver la agenda de ${textoSeguro(deporte.nombre)} →</a>`;
   } else {
     contenedor.innerHTML = `<span class="predio-vivo-etiqueta">Cancha seleccionada · ${textoSeguro(deporte.nombre)}</span><h4>${textoSeguro(cancha)}</h4><p>No hay partidos de local publicados para esta cancha. Volvé pronto para ver la agenda actualizada.</p><a href="#fixture">Ver fixture completo →</a>`;
   }
@@ -1511,7 +1517,7 @@ function renderEventos(){
   t.innerHTML = proximos.length ? proximos.map(e=>{
     const f = fmtFecha(e.fecha);
     return `<div class="ev">
-      <div class="ev-fecha">${f.dia} ${f.mes} ${f.anio}</div>
+      <div class="ev-fecha">${f.semana} ${f.dia} ${f.mes} ${f.anio}</div>
       <h3>${e.titulo}</h3>
       <p>${e.desc}</p>
       <span class="pill-ev ${e.tipo}">${e.tipo==="solidario"?"❤️ Solidario":"🎉 Social"}</span>
