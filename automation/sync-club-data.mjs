@@ -393,7 +393,10 @@ function expandApifyInstagramImages(posts) {
 
 async function readApifyInstagramPosts() {
   const token = process.env.APIFY_TOKEN;
-  if (!token) return { images: [], posts: 0, available: false };
+  if (!token) {
+    console.log("instagram/apify: falta el secreto APIFY_TOKEN; se usa solamente la API oficial de Meta");
+    return { images: [], posts: 0, available: false };
+  }
   const profile = clean(process.env.APIFY_INSTAGRAM_PROFILE ?? "ceibosfutbol").replace(/^@/, "");
   const limit = Math.max(1, Math.min(20, Number(process.env.APIFY_INSTAGRAM_RESULTS_LIMIT ?? 8)));
   const endpoint = "https://api.apify.com/v2/acts/apify~instagram-scraper/run-sync-get-dataset-items?clean=true&format=json";
