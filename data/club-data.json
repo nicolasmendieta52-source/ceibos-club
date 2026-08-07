@@ -12,6 +12,139 @@
     {
       "deporte": "basketball",
       "categoria": "Basketball",
+      "rival": "UCU",
+      "fecha": "2026-07-25",
+      "hora": "21:00",
+      "local": false,
+      "cancha": "Waston ltr 8) pepsi a ZILLERTAL Z merma WUM DOMINION ne"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Peñarol",
+      "fecha": "2026-07-26",
+      "hora": "19:45",
+      "local": false
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "Bellakeo",
+      "fecha": "2026-08-01",
+      "hora": "18:00",
+      "local": false,
+      "cancha": "Capitol ltr 8) pepsi a ZILLERTAL Z merma WUM DOMINION ne"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "San Isidro lomas U",
+      "fecha": "2026-08-01",
+      "hora": "11:15",
+      "local": false,
+      "cancha": "San Isidro lomas"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "Azulgrana BN",
+      "fecha": "2026-08-01",
+      "hora": "09:00",
+      "local": true,
+      "cancha": "Los Ceibos"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "Azulgrana",
+      "fecha": "2026-08-01",
+      "hora": "09:00",
+      "local": true,
+      "cancha": "Los Ceibos L"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "erde vs. San Isidro Lomas",
+      "fecha": "2026-08-01",
+      "hora": "11:15",
+      "local": true,
+      "cancha": "Los Ceibos E"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "San Juan Bautista",
+      "fecha": "2026-08-01",
+      "hora": "15:30",
+      "local": true,
+      "cancha": "Los Ceibos a fuer 8) pepsi a ZILLERTAL Z merma BUM AOMINON FED KASZ"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Carrasco Polo",
+      "fecha": "2026-08-01",
+      "hora": "16:15",
+      "local": false,
+      "cancha": "Carrasco Polo af Quella & pepsi a ZueerTa mum BUM AOMINON FED KASZ ño"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Seminario",
+      "fecha": "2026-08-01",
+      "hora": "14:00",
+      "local": true,
+      "cancha": "Ceibos Club"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Lions",
+      "fecha": "2026-08-01",
+      "hora": "12:30",
+      "local": true,
+      "cancha": "Ceibos Club"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Seminario",
+      "fecha": "2026-08-01",
+      "hora": "15:45",
+      "local": true,
+      "cancha": "Ceibos Club _ ole BUM DOMINION ne 8) pepsi a ZILLERTAL Emm KASZ"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "San Juan Bautista",
+      "fecha": "2026-08-02",
+      "hora": "09:00",
+      "local": false,
+      "cancha": "Las Casuarinas"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "Anglo",
+      "fecha": "2026-08-02",
+      "hora": "15:30",
+      "local": true,
+      "cancha": "Los Ceibos _ afer 8) pepsi a ZILLERTAL Z merma BUM AOMINON FED KASZ"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Scuola ltaliana",
+      "fecha": "2026-08-02",
+      "hora": "17:00",
+      "local": false
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
       "rival": "CLUB UNIVERSIDAD CATOLICA",
       "fecha": "2026-08-08",
       "hora": "19:15",
@@ -1099,7 +1232,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-07T12:58:28.335Z",
+  "actualizadoEn": "2026-08-07T13:18:30.335Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1210,12 +1343,12 @@
     ],
     "instagram": {
       "estado": "ok",
-      "registros": 29,
-      "imagenes": 7,
-      "publicacionesApify": 1,
+      "registros": 53,
+      "imagenes": 19,
+      "publicacionesApify": 3,
       "historiasMencionadas": 0,
       "cache": 7,
-      "nuevas": 0
+      "nuevas": 12
     }
   }
 }
