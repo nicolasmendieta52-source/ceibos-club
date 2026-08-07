@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { mergeClubData, parseInstagramImage, parseInstagramResultsBoard, repairText } from "./sync-club-data.mjs";
+import { extractInstagramStoryMentionImages, mergeClubData, parseInstagramImage, parseInstagramResultsBoard, repairText } from "./sync-club-data.mjs";
 
 const aliases = ["CEIBOS", "CEIBOS CLUB", "LOS CEIBOS"];
 
@@ -97,4 +97,25 @@ test("quita de proximos un partido que ya tiene resultado", () => {
 test("repara nombres guardados con codificacion incorrecta", () => {
   assert.equal(repairText("PE\u00c3\u2018AROL"), "PE\u00d1AROL");
   assert.equal(repairText("Pe\u00c3\u00b1arol"), "Pe\u00f1arol");
+});
+
+test("extrae la imagen de una historia que menciona a la cuenta", () => {
+  const payload = {
+    data: [{
+      id: "conversation-1",
+      messages: {
+        data: [{
+          id: "message-1",
+          created_time: "2026-08-07T12:00:00+0000",
+          attachments: [{ type: "story_mention", payload: { url: "https://lookaside.fbsbx.com/fixture.jpg" } }]
+        }]
+      }
+    }]
+  };
+  assert.deepEqual(extractInstagramStoryMentionImages(payload), [{
+    id: "story-mention-message-1",
+    url: "https://lookaside.fbsbx.com/fixture.jpg",
+    permalink: "",
+    timestamp: "2026-08-07T12:00:00+0000"
+  }]);
 });

@@ -297,6 +297,72 @@ async function expandInstagramImages(posts, token) {
   return images;
 }
 
+function extractInstagramStoryMentionImages(payload) {
+  const images = new Map();
+
+  function visit(value, context = {}) {
+    if (!value) return;
+    if (Array.isArray(value)) {
+      for (const item of value) visit(item, context);
+      return;
+    }
+    if (typeof value !== "object") return;
+
+    const marker = comparable([value.type, value.source, value.ref].filter(Boolean).join(" "));
+    const storyMention = context.storyMention
+      || marker.includes("story mention")
+      || Object.prototype.hasOwnProperty.call(value, "story_mention");
+    const nextContext = {
+      storyMention,
+      id: String(value.id ?? value.mid ?? context.id ?? ""),
+      timestamp: value.created_time ?? value.timestamp ?? context.timestamp ?? ""
+    };
+
+    if (storyMention) {
+      const candidates = [
+        value.url,
+        value.media_url,
+        value.payload?.url,
+        value.story?.url,
+        value.story_mention?.url,
+        value.image_data?.url
+      ];
+      for (const url of candidates) {
+        if (typeof url !== "string" || !/^https?:\/\//i.test(url)) continue;
+        const id = nextContext.id || `story-mention-${images.size + 1}`;
+        if (!images.has(url)) images.set(url, { id: `story-mention-${id}`, url, permalink: "", timestamp: nextContext.timestamp });
+      }
+    }
+
+    for (const child of Object.values(value)) visit(child, nextContext);
+  }
+
+  visit(payload);
+  return [...images.values()];
+}
+
+async function readInstagramStoryMentions(token) {
+  try {
+    // Instagram no tiene historias coautoradas. Cuando otra cuenta menciona a
+    // ceibosfutbol, Meta la expone como una conversacion con un adjunto
+    // story_mention. La tarea periodica consulta esas conversaciones para no
+    // necesitar un servidor permanente de webhooks.
+    const fields = encodeURIComponent("id,updated_time,messages.limit(20){id,created_time,from,attachments}");
+    const payload = await instagramRequest(`/me/conversations?platform=instagram&fields=${fields}&limit=20`, token);
+    const recentLimit = Date.now() - (72 * 60 * 60 * 1000);
+    const recent = (payload.data ?? []).filter(conversation => {
+      const updated = Date.parse(conversation.updated_time ?? "");
+      return !Number.isFinite(updated) || updated >= recentLimit;
+    });
+    const images = extractInstagramStoryMentionImages({ data: recent });
+    console.log(`instagram: ${images.length} historias mencionadas para revisar`);
+    return { images, available: true };
+  } catch (error) {
+    console.log(`instagram: las historias mencionadas no están disponibles (${error.message}). El token necesita instagram_business_manage_messages`);
+    return { images: [], available: false };
+  }
+}
+
 async function readInstagramPosts(aliases) {
   const token = process.env.INSTAGRAM_ACCESS_TOKEN;
   if (!token) {
@@ -328,10 +394,12 @@ async function readInstagramPosts(aliases) {
     console.log("instagram: las historias activas no están disponibles; se leen los carruseles publicados");
   }
 
+  const storyMentions = await readInstagramStoryMentions(token);
+
   const maxImages = Math.max(10, Number(process.env.INSTAGRAM_OCR_MAX_IMAGES ?? 70));
   const expanded = await expandInstagramImages([...(payload.data ?? []), ...collaborativePosts, ...stories], token);
-  const images = [...new Map(expanded.map(image => [image.id, image])).values()].slice(0, maxImages);
-  if (!images.length) return { matches: [], imagesRead: 0, recognized: 0, cached: 0 };
+  const images = [...new Map([...storyMentions.images, ...expanded].map(image => [image.id, image])).values()].slice(0, maxImages);
+  if (!images.length) return { matches: [], imagesRead: 0, recognized: 0, cached: 0, collaborative: collaborativePosts.length, storyMentions: storyMentions.images.length };
 
   const OCR_CACHE_VERSION = 2;
   const cache = JSON.parse(await fs.readFile(ocrCachePath, "utf8").catch(() => "{}"));
@@ -402,8 +470,8 @@ async function readInstagramPosts(aliases) {
   await fs.writeFile(ocrCachePath, `${JSON.stringify(cache, null, 2)}\n`);
   const partidos = matches.filter(match => match.kind === "partido").length;
   const resultados = matches.filter(match => match.kind === "resultado").length;
-  console.log(`instagram: ${partidos} partidos y ${resultados} resultados encontrados en ${images.length} imágenes (${collaborativePosts.length} publicaciones colaborativas, ${cached} desde caché, ${recognized} nuevas, ${sparseFallbacks} con segunda lectura)`);
-  return { matches, imagesRead: images.length, recognized, cached, collaborative: collaborativePosts.length };
+  console.log(`instagram: ${partidos} partidos y ${resultados} resultados encontrados en ${images.length} imágenes (${collaborativePosts.length} publicaciones colaborativas, ${storyMentions.images.length} historias mencionadas, ${cached} desde caché, ${recognized} nuevas, ${sparseFallbacks} con segunda lectura)`);
+  return { matches, imagesRead: images.length, recognized, cached, collaborative: collaborativePosts.length, storyMentions: storyMentions.images.length };
 }
 
 let browserInstance;
@@ -560,7 +628,7 @@ async function main() {
     const instagram = await readInstagramPosts(config.teamAliases);
     if (instagram) {
       instagramRecords = instagram.matches;
-      instagramStatus = { estado: instagram.matches.length ? "ok" : "sin-coincidencias", registros: instagram.matches.length, imagenes: instagram.imagesRead, colaboraciones: instagram.collaborative, cache: instagram.cached, nuevas: instagram.recognized };
+      instagramStatus = { estado: instagram.matches.length ? "ok" : "sin-coincidencias", registros: instagram.matches.length, imagenes: instagram.imagesRead, colaboraciones: instagram.collaborative, historiasMencionadas: instagram.storyMentions, cache: instagram.cached, nuevas: instagram.recognized };
     }
   } catch (error) {
     console.warn(`instagram: no se pudo actualizar (${error.message})`);
@@ -592,7 +660,7 @@ async function main() {
   }
 }
 
-export { categoriaDesdePlaca, mergeClubData, parseInstagramImage, parseInstagramResultsBoard, repairText };
+export { categoriaDesdePlaca, extractInstagramStoryMentionImages, mergeClubData, parseInstagramImage, parseInstagramResultsBoard, repairText };
 
 const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 if (isMain) main().catch(error => { console.error(error); process.exitCode = 1; });
