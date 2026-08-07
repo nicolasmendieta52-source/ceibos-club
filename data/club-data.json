@@ -172,15 +172,6 @@
     {
       "deporte": "futbol",
       "categoria": "Reserva A",
-      "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
-      "fecha": "2026-08-08",
-      "hora": "09:00",
-      "local": false,
-      "cancha": "COMP. DEVOTO (NAUT. PICHINCHA)"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
       "rival": "Club Nautico BN",
       "fecha": "2026-08-08",
       "hora": "09:00",
@@ -195,15 +186,6 @@
       "hora": "09:00",
       "local": false,
       "cancha": "Complejo Devoto “pichincha” L"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "PEÑAROL UNIVERSITARIO",
-      "fecha": "2026-08-08",
-      "hora": "09:00",
-      "local": false,
-      "cancha": "COMPLEJO PEÑAROL UNIVERSITARIO"
     },
     {
       "deporte": "futbol",
@@ -306,29 +288,11 @@
     {
       "deporte": "futbol",
       "categoria": "Primera",
-      "rival": "CIRCULO DE TENIS MONTEVIDEO",
-      "fecha": "2026-08-09",
-      "hora": "11:15",
-      "local": true,
-      "cancha": "MONTE VI \"LOS CEIBOS\""
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
       "rival": "C.T.M",
       "fecha": "2026-08-09",
       "hora": "11:15",
       "local": true,
       "cancha": "Los Ceibos"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "HCA UNIVERSITARIO",
-      "fecha": "2026-08-09",
-      "hora": "15:30",
-      "local": false,
-      "cancha": "COMPLEJO NORTHFIELD"
     },
     {
       "deporte": "futbol",
@@ -565,12 +529,48 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
+      "fecha": "2026-09-19",
+      "hora": "09:00",
+      "local": false,
+      "cancha": "COMP. DEVOTO (NAUT. PICHINCHA)"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "PEÑAROL UNIVERSITARIO",
+      "fecha": "2026-09-19",
+      "hora": "09:00",
+      "local": false,
+      "cancha": "COMPLEJO PEÑAROL UNIVERSITARIO"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "CIRCULO DE TENIS MONTEVIDEO",
+      "fecha": "2026-09-20",
+      "hora": "11:15",
+      "local": true,
+      "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Sub 18",
       "rival": "ANGLO SCHOOL UNIVERSITARIO",
       "fecha": "2026-10-04",
       "hora": "15:30",
       "local": true,
       "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "HCA UNIVERSITARIO",
+      "fecha": "2026-10-11",
+      "hora": "15:30",
+      "local": false,
+      "cancha": "COMPLEJO NORTHFIELD"
     }
   ],
   "resultados": [
@@ -1232,7 +1232,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-07T20:25:04.621Z",
+  "actualizadoEn": "2026-08-07T23:10:20.349Z",
   "diagnostico": {
     "fuentes": [
       {
