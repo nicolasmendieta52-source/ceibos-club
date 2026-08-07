@@ -100,10 +100,46 @@
     },
     {
       "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Old Girls",
+      "fecha": "2026-08-08",
+      "hora": "19:15",
+      "local": false,
+      "cancha": "British _ ¡Qué 8) pepsi a ZILLERTAL Z merma BUM AOMINON FED KASZ"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Seminario BN",
+      "fecha": "2026-08-08",
+      "hora": "15:45",
+      "local": false,
+      "cancha": "Seminario"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Seminario",
+      "fecha": "2026-08-08",
+      "hora": "15:45",
+      "local": false,
+      "cancha": "Seminario —_"
+    },
+    {
+      "deporte": "hockey",
       "categoria": "Sub 18",
       "rival": "Colegio Seminario",
       "fecha": "2026-08-08",
       "hora": "14:00",
+      "local": false,
+      "cancha": "Seminario"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Seminario",
+      "fecha": "2026-08-08",
+      "hora": "A confirmar",
       "local": false,
       "cancha": "Seminario"
     },
@@ -1063,7 +1099,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-07T12:51:38.394Z",
+  "actualizadoEn": "2026-08-07T12:58:28.335Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1174,12 +1210,12 @@
     ],
     "instagram": {
       "estado": "ok",
-      "registros": 23,
+      "registros": 29,
       "imagenes": 7,
       "publicacionesApify": 1,
       "historiasMencionadas": 0,
-      "cache": 0,
-      "nuevas": 7
+      "cache": 7,
+      "nuevas": 0
     }
   }
 }
