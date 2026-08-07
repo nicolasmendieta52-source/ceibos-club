@@ -127,6 +127,10 @@ function deporteDesdePlaca(text) {
   if (value.includes("hockey")) return "hockey";
   if (value.includes("rugby")) return "rugby";
   if (value.includes("basket") || value.includes("basquet")) return "basketball";
+  // En algunas placas el OCR pierde el logo que dice HOCKEY, pero conserva
+  // las divisionales exclusivas Inter A/B/C. Eso alcanza para identificar el
+  // deporte sin depender de textos o hashtags del post.
+  if (/\binter(?:media)?\s*[abc]\b/.test(value)) return "hockey";
   return "";
 }
 

@@ -60,6 +60,20 @@ vs. Lobos
   assert.ok(records.every(record => record.deporte === "rugby" && record.local));
 });
 
+test("infiere hockey cuando el OCR pierde el encabezado", () => {
+  const text = `SABADO - 08/08
+Sub 18 vs. Seminario
+14:00 hs - Cancha: Seminario
+Reserva vs. Seminario
+15:45 hs - Cancha: Seminario
+Inter A vs. Old Girls
+19:15 hs - Cancha: British`;
+  const records = parseInstagramImage(text, aliases);
+  assert.equal(records.length, 3);
+  assert.deepEqual(records.map(record => record.categoria), ["Sub 18", "Reserva", "Intermedia A"]);
+  assert.ok(records.every(record => record.deporte === "hockey"));
+});
+
 test("lee una placa de resultados con varias categorias", () => {
   const text = `CEIBOS RUGBY RESULTADOS
 PRIMERA - 20 JUNIO 2026
