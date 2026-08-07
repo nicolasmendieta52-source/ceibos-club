@@ -19,6 +19,24 @@
       "cancha": "G. TROUVILLE"
     },
     {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "Universidad Catolica",
+      "fecha": "2026-08-08",
+      "hora": "19:15",
+      "local": false,
+      "cancha": "Trouville ltr 8) pepsi a ZILLERTAL Z merma WUM DOMINION ne"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "Olimar",
+      "fecha": "2026-08-08",
+      "hora": "09:00",
+      "local": true,
+      "cancha": "Los Ceibos"
+    },
+    {
       "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
@@ -29,12 +47,47 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "Club Nautico BN",
+      "fecha": "2026-08-08",
+      "hora": "09:00",
+      "local": false,
+      "cancha": "Complejo Devoto “pichincha”"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "Club Nautico",
+      "fecha": "2026-08-08",
+      "hora": "09:00",
+      "local": false,
+      "cancha": "Complejo Devoto “pichincha” L"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva Verde",
       "rival": "PEÑAROL UNIVERSITARIO",
       "fecha": "2026-08-08",
       "hora": "09:00",
       "local": false,
       "cancha": "COMPLEJO PEÑAROL UNIVERSITARIO"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "erde vs. Peñarol U.",
+      "fecha": "2026-08-08",
+      "hora": "09:00",
+      "local": false,
+      "cancha": "Complejo Peñarol U. E"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "Club Nautico",
+      "fecha": "2026-08-08",
+      "hora": "15:30",
+      "local": false
     },
     {
       "deporte": "hockey",
@@ -55,6 +108,33 @@
       "cancha": "Seminario"
     },
     {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Old Christians",
+      "fecha": "2026-08-08",
+      "hora": "13:30",
+      "local": true,
+      "cancha": "Ceibos Club"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Old Christians",
+      "fecha": "2026-08-08",
+      "hora": "12:00",
+      "local": true,
+      "cancha": "Ceibos Club"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Old Christians",
+      "fecha": "2026-08-08",
+      "hora": "15:00",
+      "local": true,
+      "cancha": "Ceibos Club _ ole €) pepsi a ZuzErTAL mmm BUM AOMINON FED KASZ"
+    },
+    {
       "deporte": "futbol",
       "categoria": "Primera",
       "rival": "CIRCULO DE TENIS MONTEVIDEO",
@@ -62,6 +142,15 @@
       "hora": "11:15",
       "local": true,
       "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "C.T.M",
+      "fecha": "2026-08-09",
+      "hora": "11:15",
+      "local": true,
+      "cancha": "Los Ceibos"
     },
     {
       "deporte": "futbol",
@@ -73,6 +162,15 @@
       "cancha": "COMPLEJO NORTHFIELD"
     },
     {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "HCA",
+      "fecha": "2026-08-09",
+      "hora": "15:30",
+      "local": false,
+      "cancha": "Complejo Northfield afer 8) pepsi a ZILLERTAL Z merma BUM AOMINON FED KASZ"
+    },
+    {
       "deporte": "hockey",
       "categoria": "Intermedia B",
       "rival": "Old Girls Inter B Red",
@@ -80,6 +178,32 @@
       "hora": "17:00",
       "local": true,
       "cancha": "Pilares"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Old Girls",
+      "fecha": "2026-08-09",
+      "hora": "17:00",
+      "local": true,
+      "cancha": "Los Ceibos"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Areteia BN",
+      "fecha": "2026-08-09",
+      "hora": "A confirmar",
+      "local": false
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Areteia L",
+      "fecha": "2026-08-09",
+      "hora": "A confirmar",
+      "local": true,
+      "cancha": "Los Ceibos _ ¡Qué 8) pepsi a ZILLERTAL Z merma BUM AOMINON FED"
     },
     {
       "deporte": "basketball",
@@ -939,7 +1063,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-07T12:30:39.956Z",
+  "actualizadoEn": "2026-08-07T12:51:38.394Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1049,13 +1173,13 @@
       }
     ],
     "instagram": {
-      "estado": "sin-coincidencias",
-      "registros": 0,
-      "imagenes": 54,
-      "publicacionesApify": 0,
+      "estado": "ok",
+      "registros": 23,
+      "imagenes": 7,
+      "publicacionesApify": 1,
       "historiasMencionadas": 0,
-      "cache": 54,
-      "nuevas": 0
+      "cache": 0,
+      "nuevas": 7
     }
   }
 }
