@@ -39,5 +39,18 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/club-data.json data/instagram-ocr-cache.json
           git diff --cached --quiet || git commit -m "chore: actualizar fixture y resultados"
-          git pull --rebase origin main
-          git push
+          # Si alguien sube cambios mientras se ejecuta el OCR, incorporamos
+          # ese nuevo commit y conservamos los datos que acaba de generar el
+          # workflow. Reintentamos el push para evitar falsos fallos rojos por
+          # una carrera entre la actualización automática y una carga manual.
+          for intento in 1 2 3; do
+            git fetch origin main
+            git merge --no-edit -X ours origin/main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "El repositorio cambió durante el guardado; reintento ${intento}/3"
+            sleep 3
+          done
+          echo "No se pudieron guardar los datos después de 3 intentos"
+          exit 1
