@@ -939,7 +939,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-07T11:55:32.386Z",
+  "actualizadoEn": "2026-08-07T12:04:13.840Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1053,6 +1053,7 @@
       "registros": 0,
       "imagenes": 54,
       "colaboraciones": 0,
+      "historiasMencionadas": 0,
       "cache": 54,
       "nuevas": 0
     }
