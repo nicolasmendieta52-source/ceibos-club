@@ -307,6 +307,16 @@ async function readInstagramPosts(aliases) {
   // carrusel se consultan después mediante /children. Meta rechaza en algunas
   // versiones la expansión anidada children{...} dentro de /me/media.
   const payload = await instagramRequest("/me/media?fields=id,media_type,media_url,thumbnail_url,permalink,timestamp&limit=40", token);
+  // Los fixtures actuales se publican desde la cuenta principal invitando a
+  // ceibosfutbol como colaborador. /me/media devuelve solamente publicaciones
+  // propias, por lo que consultamos también el borde de contenido colaborativo.
+  let collaborativePosts = [];
+  try {
+    collaborativePosts = (await instagramRequest("/me/collaborative_media?fields=id,media_type,media_url,thumbnail_url,permalink,timestamp&limit=40", token)).data ?? [];
+    console.log(`instagram: ${collaborativePosts.length} publicaciones colaborativas para revisar`);
+  } catch (error) {
+    console.log(`instagram: las publicaciones colaborativas no están disponibles (${error.message})`);
+  }
   // Los resultados se suelen compartir en historias. Cuando el token permite
   // leerlas, también analizamos las que siguen activas (24 horas). Para el
   // historial, los carruseles publicados continúan siendo la fuente estable.
@@ -319,7 +329,7 @@ async function readInstagramPosts(aliases) {
   }
 
   const maxImages = Math.max(10, Number(process.env.INSTAGRAM_OCR_MAX_IMAGES ?? 70));
-  const expanded = await expandInstagramImages([...(payload.data ?? []), ...stories], token);
+  const expanded = await expandInstagramImages([...(payload.data ?? []), ...collaborativePosts, ...stories], token);
   const images = [...new Map(expanded.map(image => [image.id, image])).values()].slice(0, maxImages);
   if (!images.length) return { matches: [], imagesRead: 0, recognized: 0, cached: 0 };
 
@@ -392,8 +402,8 @@ async function readInstagramPosts(aliases) {
   await fs.writeFile(ocrCachePath, `${JSON.stringify(cache, null, 2)}\n`);
   const partidos = matches.filter(match => match.kind === "partido").length;
   const resultados = matches.filter(match => match.kind === "resultado").length;
-  console.log(`instagram: ${partidos} partidos y ${resultados} resultados encontrados en ${images.length} imágenes (${cached} desde caché, ${recognized} nuevas, ${sparseFallbacks} con segunda lectura)`);
-  return { matches, imagesRead: images.length, recognized, cached };
+  console.log(`instagram: ${partidos} partidos y ${resultados} resultados encontrados en ${images.length} imágenes (${collaborativePosts.length} publicaciones colaborativas, ${cached} desde caché, ${recognized} nuevas, ${sparseFallbacks} con segunda lectura)`);
+  return { matches, imagesRead: images.length, recognized, cached, collaborative: collaborativePosts.length };
 }
 
 let browserInstance;
@@ -550,7 +560,7 @@ async function main() {
     const instagram = await readInstagramPosts(config.teamAliases);
     if (instagram) {
       instagramRecords = instagram.matches;
-      instagramStatus = { estado: instagram.matches.length ? "ok" : "sin-coincidencias", registros: instagram.matches.length, imagenes: instagram.imagesRead, cache: instagram.cached, nuevas: instagram.recognized };
+      instagramStatus = { estado: instagram.matches.length ? "ok" : "sin-coincidencias", registros: instagram.matches.length, imagenes: instagram.imagesRead, colaboraciones: instagram.collaborative, cache: instagram.cached, nuevas: instagram.recognized };
     }
   } catch (error) {
     console.warn(`instagram: no se pudo actualizar (${error.message})`);
