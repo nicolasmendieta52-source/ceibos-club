@@ -401,7 +401,9 @@ async function readApifyInstagramPosts() {
     console.log("instagram/apify: falta el secreto APIFY_TOKEN; se usa solamente la API oficial de Meta");
     return { images: [], posts: 0, available: false };
   }
-  const profile = clean(process.env.APIFY_INSTAGRAM_PROFILE ?? "ceibosfutbol").replace(/^@/, "");
+  // La cuenta principal publica las placas de todos los deportes. Apify lee
+  // solamente su perfil público: no necesita usuario, contraseña ni cookies.
+  const profile = clean(process.env.APIFY_INSTAGRAM_PROFILE ?? "ceibos_club").replace(/^@/, "");
   const limit = Math.max(1, Math.min(20, Number(process.env.APIFY_INSTAGRAM_RESULTS_LIMIT ?? 8)));
   const endpoint = "https://api.apify.com/v2/acts/apify~instagram-scraper/run-sync-get-dataset-items?clean=true&format=json";
   const response = await fetch(endpoint, {
