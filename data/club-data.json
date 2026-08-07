@@ -1232,7 +1232,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-07T13:18:30.335Z",
+  "actualizadoEn": "2026-08-07T15:15:54.745Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1347,8 +1347,8 @@
       "imagenes": 19,
       "publicacionesApify": 3,
       "historiasMencionadas": 0,
-      "cache": 7,
-      "nuevas": 12
+      "cache": 19,
+      "nuevas": 0
     }
   }
 }
