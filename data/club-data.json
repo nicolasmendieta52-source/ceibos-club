@@ -10,15 +10,6 @@
       "cancha": "Carrasco Polo Club"
     },
     {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "UCU",
-      "fecha": "2026-07-25",
-      "hora": "21:00",
-      "local": false,
-      "cancha": "Waston ltr 8) pepsi a ZILLERTAL Z merma WUM DOMINION ne"
-    },
-    {
       "deporte": "hockey",
       "categoria": "Intermedia C",
       "rival": "Peñarol",
@@ -1232,7 +1223,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-07T23:10:20.349Z",
+  "actualizadoEn": "2026-08-08T04:34:15.018Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1343,11 +1334,11 @@
     ],
     "instagram": {
       "estado": "ok",
-      "registros": 53,
-      "imagenes": 19,
-      "publicacionesApify": 3,
+      "registros": 51,
+      "imagenes": 14,
+      "publicacionesApify": 2,
       "historiasMencionadas": 0,
-      "cache": 19,
+      "cache": 14,
       "nuevas": 0
     }
   }
