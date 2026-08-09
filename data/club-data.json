@@ -225,15 +225,6 @@
     {
       "deporte": "hockey",
       "categoria": "Sub 18",
-      "rival": "Colegio Seminario",
-      "fecha": "2026-08-08",
-      "hora": "14:00",
-      "local": false,
-      "cancha": "Seminario"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Sub 18",
       "rival": "Seminario",
       "fecha": "2026-08-08",
       "hora": "A confirmar",
@@ -1219,10 +1210,18 @@
       "gf": 0,
       "gc": 4,
       "fecha": "2026-08-08"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Colegio Seminario",
+      "gf": 1,
+      "gc": 6,
+      "fecha": "2026-08-08"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-09T19:53:48.633Z",
+  "actualizadoEn": "2026-08-09T22:58:15.027Z",
   "diagnostico": {
     "fuentes": [
       {
