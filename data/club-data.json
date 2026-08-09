@@ -198,15 +198,6 @@
     {
       "deporte": "hockey",
       "categoria": "Intermedia A",
-      "rival": "Old Girls Azulgrana",
-      "fecha": "2026-08-08",
-      "hora": "19:15",
-      "local": false,
-      "cancha": "British"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia A",
       "rival": "Old Girls",
       "fecha": "2026-08-08",
       "hora": "19:15",
@@ -1220,10 +1211,18 @@
       "gf": 0,
       "gc": 7,
       "fecha": "2026-08-02"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Old Girls Azulgrana",
+      "gf": 0,
+      "gc": 4,
+      "fecha": "2026-08-08"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-09T08:26:06.405Z",
+  "actualizadoEn": "2026-08-09T11:03:57.745Z",
   "diagnostico": {
     "fuentes": [
       {
