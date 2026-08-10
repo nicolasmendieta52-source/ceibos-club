@@ -334,9 +334,9 @@
       "categoria": "Sub 18",
       "rival": "JUAN XXIII",
       "fecha": "2026-08-16",
-      "hora": "A confirmar",
+      "hora": "15:30",
       "local": false,
-      "cancha": "CANCHA A FIJAR"
+      "cancha": "COMPLEJO JUAN XXIII"
     },
     {
       "deporte": "basketball",
@@ -1219,7 +1219,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-10T15:37:19.085Z",
+  "actualizadoEn": "2026-08-10T20:27:32.757Z",
   "diagnostico": {
     "fuentes": [
       {
