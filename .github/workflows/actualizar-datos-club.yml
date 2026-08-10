@@ -7,7 +7,9 @@ on:
       - "package.json"
       - ".github/workflows/actualizar-datos-club.yml"
   schedule:
-    - cron: "17 */3 * * *"
+    # Cuatro lecturas por día mantienen el consumo de Apify dentro
+    # del crédito mensual gratuito sin perder las novedades del club.
+    - cron: "17 */6 * * *"
   workflow_dispatch:
 
 permissions:
@@ -33,6 +35,7 @@ jobs:
         env:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          APIFY_INSTAGRAM_RESULTS_LIMIT: "5"
       - name: Guardar datos actualizados
         run: |
           git config user.name "github-actions[bot]"
