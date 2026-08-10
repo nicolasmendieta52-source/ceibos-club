@@ -136,15 +136,6 @@
     {
       "deporte": "basketball",
       "categoria": "Basketball",
-      "rival": "CLUB UNIVERSIDAD CATOLICA",
-      "fecha": "2026-08-08",
-      "hora": "19:15",
-      "local": true,
-      "cancha": "G. TROUVILLE"
-    },
-    {
-      "deporte": "basketball",
-      "categoria": "Basketball",
       "rival": "Universidad Catolica",
       "fecha": "2026-08-08",
       "hora": "19:15",
@@ -275,15 +266,6 @@
       "hora": "15:30",
       "local": false,
       "cancha": "Complejo Northfield afer 8) pepsi a ZILLERTAL Z merma BUM AOMINON FED KASZ"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Old Girls Inter B Red",
-      "fecha": "2026-08-09",
-      "hora": "17:00",
-      "local": true,
-      "cancha": "Pilares"
     },
     {
       "deporte": "hockey",
@@ -1204,6 +1186,14 @@
       "fecha": "2026-08-02"
     },
     {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "CLUB UNIVERSIDAD CATOLICA",
+      "gf": 58,
+      "gc": 56,
+      "fecha": "2026-08-08"
+    },
+    {
       "deporte": "hockey",
       "categoria": "Intermedia A",
       "rival": "Old Girls Azulgrana",
@@ -1218,10 +1208,18 @@
       "gf": 1,
       "gc": 6,
       "fecha": "2026-08-08"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Old Girls Inter B Red",
+      "gf": 0,
+      "gc": 1,
+      "fecha": "2026-08-09"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-10T12:01:49.907Z",
+  "actualizadoEn": "2026-08-10T15:37:19.085Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1249,14 +1247,14 @@
         "deporte": "basketball",
         "categoria": "Basketball",
         "url": "https://ligauniversitaria.org.uy/resultados/B221B3.html",
-        "registros": 1,
+        "registros": 2,
         "estado": "ok"
       },
       {
         "deporte": "basketball",
         "categoria": "Basketball",
         "url": "https://ligauniversitaria.org.uy/partidos/B221B3.html",
-        "registros": 6,
+        "registros": 5,
         "estado": "ok"
       },
       {
