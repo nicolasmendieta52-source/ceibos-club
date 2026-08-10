@@ -494,6 +494,7 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
   margin-bottom:8px;padding-right:56px;
 }
 .score-categoria{display:inline-flex;align-items:center;min-height:30px;padding:5px 12px;margin-bottom:15px;border:1px solid rgba(229,187,82,.55);border-radius:99px;background:rgba(229,187,82,.13);color:var(--dorado-soft);font-size:.82rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.score-fecha{display:flex;align-items:center;gap:7px;margin:-6px 0 12px;color:rgba(246,241,228,.62);font-size:.66rem;font-weight:900;letter-spacing:.11em;text-transform:uppercase}.score-fecha::before{content:"";width:18px;height:1px;background:var(--dorado);opacity:.75}.score-fecha time{color:var(--crema)}
 .score-num{
   font-family:var(--display);font-size:clamp(2.6rem,5vw,3.6rem);color:var(--blanco);
   display:flex;align-items:baseline;gap:14px;line-height:1;
@@ -1399,10 +1400,13 @@ function renderScore(){
     deporteAnterior = deporteActual;
     const cls = r.gf>r.gc?"v":r.gf===r.gc?"e":"d";
     const lbl = r.gf>r.gc?"VICTORIA":r.gf===r.gc?"EMPATE":"DERROTA";
+    const fecha = fechaValida(r.fecha) ? fmtFecha(r.fecha) : null;
+    const fechaResultado = fecha ? `<div class="score-fecha"><time datetime="${r.fecha}">${fecha.semana} ${fecha.dia} ${fecha.mes} ${fecha.anio}</time></div>` : "";
     return `${encabezado}<a class="score-card rev rev-d${(i%4)+1}" href="#${slugDeporte(r.deporte)}" data-score-deporte="${slugDeporte(r.deporte)}" data-score-categoria="${textoSeguro(r.categoria)}">
       <span class="score-res ${cls}">${lbl}</span>
       <div class="dep">${r.deporte}</div>
       <div class="score-categoria">${etiquetaCategoria(r.categoria)}</div>
+      ${fechaResultado}
       <div class="score-num"><span class="nos">${r.gf}</span><span class="sep">—</span><span>${r.gc}</span></div>
       <div class="score-rival">vs ${r.rival}</div>
       <span class="score-ver-mas">Ver detalle →</span>
