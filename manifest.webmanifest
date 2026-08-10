@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "Ceibos Club",
+  "short_name": "Ceibos Club",
+  "description": "Sitio oficial de Ceibos Club: partidos, resultados, noticias y vida del club.",
+  "lang": "es-UY",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#142019",
+  "theme_color": "#142019",
+  "icons": [
+    {
+      "src": "/assets/icono-app-ceibos.png?v=20260810b",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
