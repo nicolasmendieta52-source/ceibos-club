@@ -2,6 +2,20 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <script>
+  (() => {
+    /* En Cloudflare ya existe un control de acceso del servidor. Este control
+       local se usa en GitHub Pages y evita mostrar dos pantallas seguidas. */
+    if (location.hostname.endsWith(".pages.dev")) return;
+    const key = "ceibos_access_local_v1";
+    try {
+      const validUntil = Number(localStorage.getItem(key) || 0);
+      document.documentElement.dataset.ceibosAccess = validUntil > Date.now() ? "granted" : "locked";
+    } catch {
+      document.documentElement.dataset.ceibosAccess = "locked";
+    }
+  })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="512x512" href="/assets/escudo-ceibos.png?v=20260810">
   <link rel="apple-touch-icon" sizes="1024x1024" href="/assets/icono-app-ceibos.png?v=20260810b">
@@ -13,7 +27,7 @@
   <title>Ceibos Club | Rugby, Hockey, Fútbol y Basketball</title>
 <meta name="description" content="Sitio oficial de Ceibos Club. Consultá próximos partidos, resultados, noticias, deportes, el predio y toda la vida del club. Totus Tuus.">
 <meta name="theme-color" content="#142019">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="robots" content="noindex, nofollow, noarchive">
 <link rel="canonical" href="https://ceibosclub.com/">
 <meta property="og:title" content="Ceibos Club | Rugby, Hockey, Fútbol y Basketball">
 <meta property="og:description" content="Sitio oficial de Ceibos Club. Próximos partidos, resultados, noticias, deportes, predio y vida del club.">
@@ -257,8 +271,101 @@ nav.topbar.solid{
 .ticker-item .dot{width:8px;height:8px;border-radius:50%;background:var(--verde)}
 .ticker-item .gano{color:var(--verde)}
 </style>
+<style id="ceibos-access-styles">
+html[data-ceibos-access="locked"] body{overflow:hidden}
+html[data-ceibos-access="locked"] body>:not(#ceibosAccessGate):not(script){display:none!important}
+.ceibos-access-gate{display:none}
+html[data-ceibos-access="locked"] .ceibos-access-gate{
+  position:fixed;inset:0;z-index:2147483647;display:grid;place-items:center;
+  min-height:100vh;min-height:100svh;overflow:auto;padding:max(28px,env(safe-area-inset-top)) 18px max(28px,env(safe-area-inset-bottom));
+  color:#F6F1E4;text-align:center;font-family:'DM Sans',system-ui,sans-serif;
+  background:radial-gradient(circle at 50% 24%,rgba(229,187,82,.13),transparent 25rem),linear-gradient(145deg,#071b12,#244b38);
+}
+.ceibos-access-gate::before,.ceibos-access-gate::after{
+  content:"";position:fixed;width:28rem;height:28rem;border:1px solid rgba(229,187,82,.13);border-radius:50%;pointer-events:none
+}
+.ceibos-access-gate::before{left:-18rem;top:-16rem}.ceibos-access-gate::after{right:-19rem;bottom:-17rem}
+.ceibos-access-inner{position:relative;width:min(92vw,570px);margin:auto}
+.ceibos-access-logo{width:clamp(120px,27vw,165px);height:auto;margin:0 auto;filter:drop-shadow(0 18px 34px rgba(0,0,0,.32));animation:ceibosGateIn .7s cubic-bezier(.2,.8,.2,1) both}
+.ceibos-access-eyebrow{margin:22px 0 10px;color:#E5BB52;font-size:.74rem;font-weight:850;letter-spacing:.23em;text-transform:uppercase}
+.ceibos-access-gate h1{margin:0;color:#F6F1E4;font-family:'Anton',Impact,sans-serif;font-size:clamp(2.7rem,10vw,5rem);font-weight:400;line-height:.93;letter-spacing:.005em;text-transform:uppercase}
+.ceibos-access-gate h1 span{display:block;color:#E5BB52}
+.ceibos-access-intro{max-width:480px;margin:18px auto 0;color:#c5d0c8;font-size:clamp(.98rem,3vw,1.08rem);line-height:1.55}
+.ceibos-access-card{margin-top:28px;padding:18px;border:1px solid rgba(229,187,82,.22);border-radius:22px;background:rgba(4,23,14,.66);box-shadow:0 24px 65px rgba(0,0,0,.25);backdrop-filter:blur(14px)}
+.ceibos-access-title{margin:0 0 13px;font-size:.76rem;font-weight:850;letter-spacing:.16em;text-transform:uppercase}
+.ceibos-access-form{display:grid;grid-template-columns:1fr auto;gap:10px}
+.ceibos-access-form input,.ceibos-access-form button{min-height:54px;border-radius:14px;font:inherit}
+.ceibos-access-form input{width:100%;min-width:0;border:1px solid rgba(246,241,228,.25);outline:0;padding:0 16px;color:#F6F1E4;background:rgba(255,255,255,.07)}
+.ceibos-access-form input:focus{border-color:#E5BB52;box-shadow:0 0 0 3px rgba(229,187,82,.14)}
+.ceibos-access-form button{border:0;padding:0 24px;color:#071b12;font-weight:900;cursor:pointer;background:linear-gradient(135deg,#f0d28a,#E5BB52)}
+.ceibos-access-form button:hover{filter:brightness(1.05);transform:translateY(-1px)}
+.ceibos-access-form button:disabled{cursor:wait;opacity:.65}
+.ceibos-access-error{display:none;margin:0 0 12px;color:#ffc7bc;font-size:.9rem}
+.ceibos-access-error.visible{display:block}
+.ceibos-access-footer{margin-top:20px;color:rgba(246,241,228,.52);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+@keyframes ceibosGateIn{from{opacity:0;transform:translateY(12px) scale(.94)}to{opacity:1;transform:none}}
+@media(max-width:540px){.ceibos-access-form{grid-template-columns:1fr}.ceibos-access-form button{width:100%}.ceibos-access-card{padding:15px}.ceibos-access-intro{max-width:330px}}
+@media(prefers-reduced-motion:reduce){.ceibos-access-logo{animation:none}}
+</style>
 </head>
 <body>
+<div class="ceibos-access-gate" id="ceibosAccessGate" role="dialog" aria-modal="true" aria-labelledby="ceibosAccessTitle">
+  <main class="ceibos-access-inner">
+    <img class="ceibos-access-logo" src="/assets/escudo-ceibos.png" alt="Escudo oficial de Ceibos Club" width="512" height="512">
+    <p class="ceibos-access-eyebrow">Totus Tuus · Desde 2014</p>
+    <h1 id="ceibosAccessTitle">Estamos <span>construyendo</span></h1>
+    <p class="ceibos-access-intro">Estamos preparando la nueva web de Ceibos Club. El equipo autorizado puede ingresar con el código compartido.</p>
+    <section class="ceibos-access-card" aria-label="Acceso a la web">
+      <p class="ceibos-access-title">Acceso del equipo</p>
+      <p class="ceibos-access-error" id="ceibosAccessError" role="alert">El código no es correcto. Revisalo e intentá nuevamente.</p>
+      <form class="ceibos-access-form" id="ceibosAccessForm">
+        <input id="ceibosAccessCode" type="password" placeholder="Código de acceso" aria-label="Código de acceso" autocomplete="current-password" required>
+        <button type="submit">Ingresar</button>
+      </form>
+    </section>
+    <footer class="ceibos-access-footer">Ceibos Club · Montevideo, Uruguay</footer>
+  </main>
+</div>
+<script>
+(() => {
+  if (document.documentElement.dataset.ceibosAccess !== "locked") return;
+  const ACCESS_KEY = "ceibos_access_local_v1";
+  const EXPECTED_HASH = "8345d45268522f19ed378d745ffb0b6648b4dd6a0a948da82220dc4773769db2";
+  const THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000;
+  const form = document.getElementById("ceibosAccessForm");
+  const input = document.getElementById("ceibosAccessCode");
+  const error = document.getElementById("ceibosAccessError");
+  const button = form.querySelector("button");
+
+  async function hash(value) {
+    const bytes = new TextEncoder().encode(value.trim().toUpperCase());
+    const digest = await crypto.subtle.digest("SHA-256", bytes);
+    return [...new Uint8Array(digest)].map(byte => byte.toString(16).padStart(2, "0")).join("");
+  }
+
+  form.addEventListener("submit", async event => {
+    event.preventDefault();
+    error.classList.remove("visible");
+    button.disabled = true;
+    try {
+      if (await hash(input.value) !== EXPECTED_HASH) {
+        error.classList.add("visible");
+        input.select();
+        return;
+      }
+      localStorage.setItem(ACCESS_KEY, String(Date.now() + THIRTY_DAYS));
+      location.reload();
+    } catch {
+      error.textContent = "No se pudo validar el código en este navegador. Probá actualizar la página.";
+      error.classList.add("visible");
+    } finally {
+      button.disabled = false;
+    }
+  });
+
+  requestAnimationFrame(() => input.focus());
+})();
+</script>
 <!-- Árbol decorativo (watermark) — el escudo oficial va como imagen PNG del manual -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
