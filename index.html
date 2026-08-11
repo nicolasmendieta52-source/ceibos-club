@@ -4,9 +4,6 @@
   <meta charset="UTF-8">
   <script>
   (() => {
-    /* En Cloudflare ya existe un control de acceso del servidor. Este control
-       local se usa en GitHub Pages y evita mostrar dos pantallas seguidas. */
-    if (location.hostname.endsWith(".pages.dev")) return;
     const key = "ceibos_access_local_v1";
     try {
       const validUntil = Number(localStorage.getItem(key) || 0);
