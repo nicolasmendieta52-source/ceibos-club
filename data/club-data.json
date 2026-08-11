@@ -339,6 +339,15 @@
       "cancha": "COMPLEJO JUAN XXIII"
     },
     {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Club Seminario",
+      "fecha": "2026-08-16",
+      "hora": "17:00",
+      "local": true,
+      "cancha": "Pilares"
+    },
+    {
       "deporte": "basketball",
       "categoria": "Basketball",
       "rival": "OLD BOYS CLUB",
@@ -1219,15 +1228,16 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-10T20:27:32.757Z",
+  "actualizadoEn": "2026-08-11T04:55:08.116Z",
   "diagnostico": {
     "fuentes": [
       {
         "deporte": "hockey",
         "categoria": "Intermedia A",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=3",
-        "registros": 10,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "locator.click: Error: strict mode violation: locator('a[href^=\"#tab_3_\"]') resolved to 3 elements:\n    1) <a data-toggle=\"tab\" href=\"#tab_3_2733\" onclick=\"cargarFixture(2733)\">Fixture</a> aka getByRole('link', { name: 'Fixture' }).first()\n    2) <a data-toggle=\"tab\" href=\"#tab_3_2761\" onclick=\"cargarFixture(2761)\">Fixture</a> aka getByRole('link', { name: 'Fixture' }).nth(1)\n    3) <a data-toggle=\"tab\" href=\"#tab_3_2762\" onclick=\"cargarFixture(2762)\">Fixture</a> aka getByRole('link', { name: 'Fixture' }).nth(2)\n\nCall log:\n  - waiting for locator('a[href^=\"#tab_3_\"]')\n"
       },
       {
         "deporte": "hockey",
@@ -1240,7 +1250,7 @@
         "deporte": "hockey",
         "categoria": "Intermedia B",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=31",
-        "registros": 16,
+        "registros": 17,
         "estado": "ok"
       },
       {
