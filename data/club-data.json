@@ -298,9 +298,9 @@
       "categoria": "Basketball",
       "rival": "MARISTAS DEPORTIVO",
       "fecha": "2026-08-15",
-      "hora": "A confirmar",
+      "hora": "19:15",
       "local": true,
-      "cancha": "CANCHA A FIJAR"
+      "cancha": "G. CAPITOL"
     },
     {
       "deporte": "futbol",
@@ -1228,7 +1228,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-11T20:30:05.733Z",
+  "actualizadoEn": "2026-08-12T05:52:50.916Z",
   "diagnostico": {
     "fuentes": [
       {
