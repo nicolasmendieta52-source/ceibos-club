@@ -1228,7 +1228,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-12T20:33:29.338Z",
+  "actualizadoEn": "2026-08-13T05:54:21.196Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1257,97 +1257,85 @@
         "deporte": "basketball",
         "categoria": "Basketball",
         "url": "https://ligauniversitaria.org.uy/resultados/B221B3.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "page.goto: net::ERR_TIMED_OUT at https://ligauniversitaria.org.uy/resultados/B221B3.html\nCall log:\n  - navigating to \"https://ligauniversitaria.org.uy/resultados/B221B3.html\", waiting until \"domcontentloaded\"\n"
+        "registros": 2,
+        "estado": "ok"
       },
       {
         "deporte": "basketball",
         "categoria": "Basketball",
         "url": "https://ligauniversitaria.org.uy/partidos/B221B3.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "page.goto: net::ERR_TIMED_OUT at https://ligauniversitaria.org.uy/partidos/B221B3.html\nCall log:\n  - navigating to \"https://ligauniversitaria.org.uy/partidos/B221B3.html\", waiting until \"domcontentloaded\"\n"
+        "registros": 5,
+        "estado": "ok"
       },
       {
         "deporte": "basketball",
         "categoria": "Basketball",
         "url": "https://ligauniversitaria.org.uy/resultados/B221B.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "page.goto: net::ERR_TIMED_OUT at https://ligauniversitaria.org.uy/resultados/B221B.html\nCall log:\n  - navigating to \"https://ligauniversitaria.org.uy/resultados/B221B.html\", waiting until \"domcontentloaded\"\n"
+        "registros": 15,
+        "estado": "ok"
       },
       {
         "deporte": "basketball",
         "categoria": "Basketball",
         "url": "https://ligauniversitaria.org.uy/partidos/B221B.html",
         "registros": 0,
-        "estado": "error",
-        "detalle": "page.goto: net::ERR_TIMED_OUT at https://ligauniversitaria.org.uy/partidos/B221B.html\nCall log:\n  - navigating to \"https://ligauniversitaria.org.uy/partidos/B221B.html\", waiting until \"domcontentloaded\"\n"
+        "estado": "sin-coincidencias"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS31.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "page.goto: net::ERR_TIMED_OUT at https://ligauniversitaria.org.uy/resultados/F2B2RS31.html\nCall log:\n  - navigating to \"https://ligauniversitaria.org.uy/resultados/F2B2RS31.html\", waiting until \"domcontentloaded\"\n"
+        "registros": 10,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS31.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "page.goto: net::ERR_TIMED_OUT at https://ligauniversitaria.org.uy/partidos/F2B2RS31.html\nCall log:\n  - navigating to \"https://ligauniversitaria.org.uy/partidos/F2B2RS31.html\", waiting until \"domcontentloaded\"\n"
+        "registros": 5,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS1.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "page.goto: net::ERR_TIMED_OUT at https://ligauniversitaria.org.uy/resultados/F2B2RS1.html\nCall log:\n  - navigating to \"https://ligauniversitaria.org.uy/resultados/F2B2RS1.html\", waiting until \"domcontentloaded\"\n"
+        "registros": 10,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS1.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "page.goto: net::ERR_TIMED_OUT at https://ligauniversitaria.org.uy/partidos/F2B2RS1.html\nCall log:\n  - navigating to \"https://ligauniversitaria.org.uy/partidos/F2B2RS1.html\", waiting until \"domcontentloaded\"\n"
+        "registros": 5,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "page.goto: net::ERR_TIMED_OUT at https://ligauniversitaria.org.uy/resultados/F21B.html\nCall log:\n  - navigating to \"https://ligauniversitaria.org.uy/resultados/F21B.html\", waiting until \"domcontentloaded\"\n"
+        "registros": 10,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/partidos/F21B.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "page.goto: net::ERR_TIMED_OUT at https://ligauniversitaria.org.uy/partidos/F21B.html\nCall log:\n  - navigating to \"https://ligauniversitaria.org.uy/partidos/F21B.html\", waiting until \"domcontentloaded\"\n"
+        "registros": 5,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "page.goto: net::ERR_TIMED_OUT at https://ligauniversitaria.org.uy/resultados/F181818-52.html\nCall log:\n  - navigating to \"https://ligauniversitaria.org.uy/resultados/F181818-52.html\", waiting until \"domcontentloaded\"\n"
+        "registros": 1,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "page.goto: net::ERR_TIMED_OUT at https://ligauniversitaria.org.uy/partidos/F181818-52.html\nCall log:\n  - navigating to \"https://ligauniversitaria.org.uy/partidos/F181818-52.html\", waiting until \"domcontentloaded\"\n"
+        "registros": 6,
+        "estado": "ok"
       }
     ],
     "instagram": {
