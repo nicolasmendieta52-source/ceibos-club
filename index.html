@@ -192,7 +192,7 @@ nav.topbar.solid{
 .hero-escudo .anillo{
   position:absolute;top:50%;left:50%;width:calc(100% + 96px);height:calc(100% + 96px);
   max-width:none;transform:translate(-50%,-50%);transform-origin:center;
-  animation:girar 30s linear infinite;z-index:0;pointer-events:none;
+  animation:none;z-index:0;pointer-events:none;overflow:visible;
 }
 @keyframes girar{
   from{transform:translate(-50%,-50%) rotate(0deg)}
@@ -202,6 +202,7 @@ nav.topbar.solid{
   font-family:var(--body);font-weight:700;font-size:11.5px;letter-spacing:4.5px;
   fill:var(--dorado);opacity:.85;
 }
+.hero-escudo .anillo .anillo-abajo{letter-spacing:4px}
 .escudo-img{display:block;object-fit:contain}
 .brand .escudo-img{width:42px;height:42px;transition:transform .5s var(--ease)}
 .brand:hover .escudo-img{transform:rotate(-8deg) scale(1.08)}
@@ -444,8 +445,12 @@ html[data-ceibos-access="locked"] .ceibos-access-gate{
   <div class="hero-inner">
     <div class="hero-escudo">
       <svg class="anillo" viewBox="0 0 320 320" aria-hidden="true">
-        <defs><path id="circ" d="M160,160 m-150,0 a150,150 0 1,1 300,0 a150,150 0 1,1 -300,0"/></defs>
-        <text><textPath href="#circ" textLength="942" lengthAdjust="spacingAndGlyphs">· DESDE 2014 · FÚTBOL · HOCKEY · RUGBY · BASKETBALL · DESDE 2014 · FÚTBOL · HOCKEY · RUGBY · BASKETBALL </textPath></text>
+        <defs>
+          <path id="anilloSuperior" d="M 30,160 A 130,130 0 0,1 290,160"/>
+          <path id="anilloInferior" d="M 30,160 A 130,130 0 0,0 290,160"/>
+        </defs>
+        <text><textPath href="#anilloSuperior" startOffset="50%" text-anchor="middle">· DESDE 2014 · FÚTBOL · HOCKEY ·</textPath></text>
+        <text class="anillo-abajo"><textPath href="#anilloInferior" startOffset="50%" text-anchor="middle">· RUGBY · BASKETBALL · TOTUS TUUS ·</textPath></text>
       </svg>
       <img class="escudo-main escudo-img" data-escudo alt="Escudo oficial Ceibos Club">
     </div>
