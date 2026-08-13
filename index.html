@@ -192,11 +192,15 @@ nav.topbar.solid{
 .hero-escudo .anillo{
   position:absolute;top:50%;left:50%;width:calc(100% + 96px);height:calc(100% + 96px);
   max-width:none;transform:translate(-50%,-50%);transform-origin:center;
-  animation:girar 30s linear infinite;z-index:0;pointer-events:none;overflow:visible;
+  animation:none;z-index:0;pointer-events:none;overflow:visible;
 }
-@keyframes girar{
-  from{transform:translate(-50%,-50%) rotate(0deg)}
-  to{transform:translate(-50%,-50%) rotate(360deg)}
+@keyframes girarAnillo{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+.hero-escudo .anillo-giro{
+  transform-box:view-box;transform-origin:160px 160px;
+  animation:girarAnillo 30s linear infinite;
 }
 .hero-escudo .anillo text{
   font-family:var(--body);font-weight:700;font-size:11.5px;letter-spacing:4.5px;
@@ -449,8 +453,10 @@ html[data-ceibos-access="locked"] .ceibos-access-gate{
           <path id="anilloSuperior" d="M 30,160 A 130,130 0 0,1 290,160"/>
           <path id="anilloInferior" d="M 30,160 A 130,130 0 0,0 290,160"/>
         </defs>
-        <text><textPath href="#anilloSuperior" startOffset="50%" text-anchor="middle">· DESDE 2014 · FÚTBOL · HOCKEY ·</textPath></text>
-        <text class="anillo-abajo"><textPath href="#anilloInferior" startOffset="50%" text-anchor="middle">· RUGBY · BASKETBALL · TOTUS TUUS ·</textPath></text>
+        <g class="anillo-giro">
+          <text><textPath href="#anilloSuperior" startOffset="50%" text-anchor="middle">· DESDE 2014 · FÚTBOL · HOCKEY ·</textPath></text>
+          <text class="anillo-abajo"><textPath href="#anilloInferior" startOffset="50%" text-anchor="middle">· RUGBY · BASKETBALL · TOTUS TUUS ·</textPath></text>
+        </g>
       </svg>
       <img class="escudo-main escudo-img" data-escudo alt="Escudo oficial Ceibos Club">
     </div>
@@ -970,7 +976,7 @@ footer .f-brand{display:flex;align-items:center;gap:10px;font-family:var(--displ
   nav.topbar{padding:12px 18px;background:rgba(20,32,25,.92);backdrop-filter:blur(14px)}
   .brand-name{font-size:1rem}.brand .escudo-img{width:38px;height:38px}
   .nav-mobile{top:70px;right:14px;bottom:auto;left:14px;max-height:calc(100svh - 86px);padding:14px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-content:start;align-items:stretch;justify-content:initial;gap:8px;overflow-y:auto;border:1px solid rgba(229,187,82,.28);border-radius:20px;background:rgba(15,34,27,.98);box-shadow:0 20px 48px rgba(0,0,0,.4)}.nav-mobile a{width:auto;min-height:50px;padding:12px 11px;display:flex;align-items:center;font-family:var(--body);font-size:.73rem;font-weight:900;letter-spacing:.08em;line-height:1.15;text-transform:uppercase;color:var(--crema);border:1px solid rgba(246,241,228,.12);border-radius:12px;background:rgba(246,241,228,.045)}.nav-mobile a:hover{color:var(--verde-night);background:var(--dorado);border-color:var(--dorado);transform:none}.nav-mobile a:last-child{grid-column:1/-1;justify-content:center;background:var(--dorado);color:var(--verde-night);border-color:var(--dorado)}
-  .hero{min-height:720px}.hero-arbol{display:none}.hero-inner{padding:102px 20px 42px}.hero-escudo{width:min(52vw,200px);height:min(52vw,200px);margin-bottom:22px}.hero-escudo .anillo{display:block;width:calc(100% + 64px);height:calc(100% + 64px);animation:girar 30s linear infinite;transform:translate(-50%,-50%)}.hero-escudo .anillo text{font-size:8.5px;letter-spacing:2.8px}.hero-lema{letter-spacing:.28em;gap:10px;margin-top:16px}.hero-acciones{width:100%;margin-top:22px;gap:10px}.hero-acciones .btn{width:100%;justify-content:center;min-height:50px;padding:13px 20px}.hero-scroll{display:none}
+  .hero{min-height:720px}.hero-arbol{display:none}.hero-inner{padding:102px 20px 42px}.hero-escudo{width:min(52vw,200px);height:min(52vw,200px);margin-bottom:22px}.hero-escudo .anillo{display:block;width:calc(100% + 64px);height:calc(100% + 64px);animation:none;transform:translate(-50%,-50%)}.hero-escudo .anillo text{font-size:8.5px;letter-spacing:2.8px}.hero-lema{letter-spacing:.28em;gap:10px;margin-top:16px}.hero-acciones{width:100%;margin-top:22px;gap:10px}.hero-acciones .btn{width:100%;justify-content:center;min-height:50px;padding:13px 20px}.hero-scroll{display:none}
   section{padding:72px 20px}.tag-sec{font-size:.62rem;letter-spacing:.25em;margin-bottom:14px}.tag-sec::before{width:26px}h2.titulo{font-size:clamp(2.25rem,12vw,3.5rem)}.sub{font-size:.97rem}
   .ticker{height:44px}.ticker-item{padding:0 16px;font-size:.7rem;gap:7px}.ticker-item .res{font-size:.95rem}
   .fix-row{grid-template-columns:64px 1fr;gap:14px}
