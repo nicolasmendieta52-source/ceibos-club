@@ -1,3 +1,6 @@
 node_modules/
 assets/predio-interactivo.png
 .env*
+*-firebase-adminsdk-*.json
+firebase-service-account*.json
+service-account*.json

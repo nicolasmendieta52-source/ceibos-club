@@ -1343,8 +1343,68 @@ img,video,svg{max-width:100%}
   .hero h1{font-size:clamp(2.75rem,13.5vw,3.05rem)}
   .hero-escudo{width:158px;height:158px}
 }
+
+/* ---------- preferencias de notificaciones ---------- */
+.notif-fab{
+  position:fixed;left:20px;bottom:20px;z-index:850;width:54px;height:54px;
+  display:grid;place-items:center;border:1px solid rgba(229,187,82,.45);border-radius:50%;
+  color:var(--verde-night);background:var(--dorado);box-shadow:0 14px 34px rgba(0,0,0,.32);
+  cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s var(--ease)
+}
+.notif-fab:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 18px 40px rgba(0,0,0,.38)}
+.notif-fab svg{width:24px;height:24px;fill:currentColor}
+.notif-fab.activa::after{content:"";position:absolute;right:2px;top:2px;width:11px;height:11px;border:2px solid var(--verde-night);border-radius:50%;background:#52d273}
+.notif-modal[hidden]{display:none}
+.notif-modal{position:fixed;inset:0;z-index:1200;display:grid;place-items:center;padding:20px;background:rgba(5,18,12,.74);backdrop-filter:blur(9px)}
+.notif-dialog{position:relative;width:min(94vw,540px);max-height:min(760px,92svh);overflow:auto;padding:30px;border:1px solid rgba(229,187,82,.28);border-radius:26px;background:linear-gradient(155deg,#234236,#14271f);box-shadow:0 28px 90px rgba(0,0,0,.5)}
+.notif-cerrar{position:absolute;right:15px;top:15px;width:40px;height:40px;border:1px solid rgba(246,241,228,.18);border-radius:50%;color:var(--crema);background:rgba(255,255,255,.06);font-size:1.35rem;cursor:pointer}
+.notif-etiqueta{color:var(--dorado);font-size:.7rem;font-weight:850;letter-spacing:.18em;text-transform:uppercase}
+.notif-dialog h2{margin:9px 44px 8px 0;font-family:var(--display);font-size:clamp(2rem,8vw,3rem);font-weight:400;line-height:1;text-transform:uppercase}
+.notif-intro{color:rgba(246,241,228,.72);line-height:1.55}
+.notif-deportes{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:24px 0}
+.notif-opcion{position:relative;display:flex;align-items:center;gap:10px;min-height:58px;padding:12px 14px;border:1px solid rgba(246,241,228,.16);border-radius:15px;background:rgba(255,255,255,.04);cursor:pointer}
+.notif-opcion:has(input:checked){border-color:var(--dorado);background:rgba(229,187,82,.12)}
+.notif-opcion input{width:19px;height:19px;accent-color:var(--dorado)}
+.notif-opcion span{font-weight:750}
+.notif-acciones{display:flex;gap:10px;align-items:center}
+.notif-acciones button{min-height:50px;border-radius:14px;padding:0 18px;font:inherit;font-weight:850;cursor:pointer}
+#notifActivar{flex:1;border:0;color:var(--verde-night);background:var(--dorado)}
+#notifDesactivar{border:1px solid rgba(246,241,228,.2);color:var(--crema);background:transparent}
+.notif-estado{margin-top:16px;min-height:24px;color:rgba(246,241,228,.7);font-size:.88rem;line-height:1.45}
+.notif-estado.ok{color:#8de3a4}.notif-estado.error{color:#ffc1b6}.notif-estado.aviso{color:var(--dorado-soft)}
+.notif-ayuda{margin-top:16px;padding-top:15px;border-top:1px solid rgba(246,241,228,.11);color:rgba(246,241,228,.52);font-size:.76rem;line-height:1.5}
+@media(max-width:540px){
+  .notif-fab{left:14px;bottom:14px;width:50px;height:50px}
+  .notif-dialog{padding:25px 18px 20px;border-radius:22px}
+  .notif-deportes{grid-template-columns:1fr}
+  .notif-acciones{flex-direction:column}.notif-acciones button{width:100%}
+}
 </style>
 </main>
+
+<button class="notif-fab" id="notifFab" type="button" aria-label="Configurar notificaciones" aria-haspopup="dialog" aria-controls="notifModal">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2.5 2.5 0 0 0 2.35-1.65h-4.7A2.5 2.5 0 0 0 12 22Zm7-6.2-1.35-1.35V10a5.66 5.66 0 0 0-4.4-5.52V3.7a1.25 1.25 0 0 0-2.5 0v.78A5.66 5.66 0 0 0 6.35 10v4.45L5 15.8V18h14v-2.2Z"/></svg>
+</button>
+<div class="notif-modal" id="notifModal" role="dialog" aria-modal="true" aria-labelledby="notifTitulo" hidden>
+  <div class="notif-dialog">
+    <button class="notif-cerrar" id="notifCerrar" type="button" aria-label="Cerrar">&times;</button>
+    <p class="notif-etiqueta">Tu club, al instante</p>
+    <h2 id="notifTitulo">Notificaciones Ceibos</h2>
+    <p class="notif-intro">Elegí qué deportes querés seguir. Te avisaremos cuando se publique un partido y nuevamente el día que se juega.</p>
+    <div class="notif-deportes" aria-label="Deportes para recibir notificaciones">
+      <label class="notif-opcion"><input type="checkbox" value="futbol" checked><span>⚽ Fútbol</span></label>
+      <label class="notif-opcion"><input type="checkbox" value="rugby" checked><span>🏉 Rugby</span></label>
+      <label class="notif-opcion"><input type="checkbox" value="hockey" checked><span>🏑 Hockey</span></label>
+      <label class="notif-opcion"><input type="checkbox" value="basketball" checked><span>🏀 Basketball</span></label>
+    </div>
+    <div class="notif-acciones">
+      <button id="notifActivar" type="button">Activar notificaciones</button>
+      <button id="notifDesactivar" type="button" hidden>Desactivar</button>
+    </div>
+    <p class="notif-estado" id="notifEstado" role="status" aria-live="polite"></p>
+    <p class="notif-ayuda">En iPhone, agregá primero Ceibos Club a la pantalla de inicio y abrilo desde el ícono. El navegador siempre te pedirá permiso antes de activar los avisos.</p>
+  </div>
+</div>
 
 <button id="volver" type="button" aria-label="Volver arriba">↑</button>
 <script>
@@ -1928,5 +1988,6 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
   })
   .catch(() => {});
 </script>
+<script type="module" src="/notifications.js?v=20260814"></script>
 </body>
 </html>

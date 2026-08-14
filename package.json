@@ -4,10 +4,13 @@
   "type": "module",
   "scripts": {
     "sync:club": "node automation/sync-club-data.mjs",
+    "notify:club": "node automation/send-notifications.mjs",
     "test": "node --test automation/*.test.mjs"
   },
   "dependencies": {
+    "firebase-admin": "^13.4.0",
     "playwright": "1.55.0",
-    "tesseract.js": "7.0.0"
+    "tesseract.js": "7.0.0",
+    "web-push": "^3.6.7"
   }
 }

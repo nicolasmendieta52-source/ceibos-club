@@ -31,16 +31,25 @@ jobs:
       - run: npm install
       - run: npx playwright install --with-deps chromium
       - run: npm test
+      - name: Guardar fixture anterior para detectar novedades
+        run: cp data/club-data.json "$RUNNER_TEMP/club-data-before.json"
       - run: npm run sync:club
         env:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           APIFY_INSTAGRAM_RESULTS_LIMIT: "5"
+      - name: Enviar notificaciones de partidos
+        continue-on-error: true
+        run: npm run notify:club -- --previous "$RUNNER_TEMP/club-data-before.json"
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+          VAPID_SUBJECT: ${{ secrets.VAPID_SUBJECT }}
       - name: Guardar datos actualizados
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/club-data.json data/instagram-ocr-cache.json
+          git add data/club-data.json data/instagram-ocr-cache.json data/notification-state.json
           git diff --cached --quiet || git commit -m "chore: actualizar fixture y resultados"
           # Si alguien sube cambios mientras se ejecuta el OCR, incorporamos
           # ese nuevo commit y conservamos los datos que acaba de generar el
