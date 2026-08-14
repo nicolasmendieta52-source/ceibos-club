@@ -1228,7 +1228,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-13T20:09:52.712Z",
+  "actualizadoEn": "2026-08-14T05:52:26.807Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1243,8 +1243,9 @@
         "deporte": "hockey",
         "categoria": "Sub 18",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=4",
-        "registros": 13,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "locator.click: Error: strict mode violation: locator('a[href^=\"#tab_3_\"]') resolved to 3 elements:\n    1) <a data-toggle=\"tab\" href=\"#tab_3_2734\" onclick=\"cargarFixture(2734)\">Fixture</a> aka getByRole('link', { name: 'Fixture' }).first()\n    2) <a data-toggle=\"tab\" href=\"#tab_3_2763\" onclick=\"cargarFixture(2763)\">Fixture</a> aka getByRole('link', { name: 'Fixture' }).nth(1)\n    3) <a data-toggle=\"tab\" href=\"#tab_3_2764\" onclick=\"cargarFixture(2764)\">Fixture</a> aka getByRole('link', { name: 'Fixture' }).nth(2)\n\nCall log:\n  - waiting for locator('a[href^=\"#tab_3_\"]')\n"
       },
       {
         "deporte": "hockey",
