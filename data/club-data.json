@@ -307,7 +307,7 @@
       "categoria": "Reserva A",
       "rival": "CARRASCO LAWN TENNIS",
       "fecha": "2026-08-15",
-      "hora": "09:00",
+      "hora": "11:15",
       "local": true,
       "cancha": "MONTE VI \"LOS CEIBOS\""
     },
@@ -316,7 +316,7 @@
       "categoria": "Reserva Verde",
       "rival": "DANUBIO FUTBOL CLUB",
       "fecha": "2026-08-15",
-      "hora": "11:15",
+      "hora": "09:00",
       "local": true,
       "cancha": "MONTE VI \"LOS CEIBOS\""
     },
@@ -1228,7 +1228,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-14T15:13:12.521Z",
+  "actualizadoEn": "2026-08-14T20:07:04.933Z",
   "diagnostico": {
     "fuentes": [
       {
