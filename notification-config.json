@@ -1,12 +1,12 @@
 {
-  "enabled": false,
+  "enabled": true,
   "firebase": {
-    "apiKey": "",
-    "authDomain": "",
-    "projectId": "",
-    "storageBucket": "",
-    "messagingSenderId": "",
-    "appId": ""
+    "apiKey": "AIzaSyAZo74vPbcK03E7PknRru5U-PfECfd0XLw",
+    "authDomain": "ceibos-club.firebaseapp.com",
+    "projectId": "ceibos-club",
+    "storageBucket": "ceibos-club.firebasestorage.app",
+    "messagingSenderId": "669368976023",
+    "appId": "1:669368976023:web:4e54e0a152706030981fd2"
   },
-  "vapidPublicKey": ""
+  "vapidPublicKey": "BLmDs628QKpOmi0RzDZHrnL4QhXTHfz8fd2T7tJVL0v8e9YH3YUwe3AhfvqhWcUCvLMZeKAX9cDFmkIt9Qr1Zyc"
 }

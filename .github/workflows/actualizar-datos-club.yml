@@ -5,6 +5,8 @@ on:
     paths:
       - "automation/**"
       - "package.json"
+      - "package-lock.json"
+      - "notification-config.json"
       - ".github/workflows/actualizar-datos-club.yml"
   schedule:
     # Cuatro lecturas por día mantienen el consumo de Apify dentro
