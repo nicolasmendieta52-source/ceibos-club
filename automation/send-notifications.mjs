@@ -9,6 +9,7 @@ const estadoPath = path.join(raiz, "data", "notification-state.json");
 const configPath = path.join(raiz, "notification-config.json");
 const indiceAnterior = process.argv.indexOf("--previous");
 const anteriorPath = indiceAnterior >= 0 ? path.resolve(process.argv[indiceAnterior + 1]) : datosPath;
+const modoPrueba = process.argv.includes("--test");
 
 const NOMBRES = { futbol: "Fútbol", rugby: "Rugby", hockey: "Hockey", basketball: "Basketball" };
 let webpush;
@@ -85,6 +86,37 @@ async function enviarGrupo(snapshot, deporte, mensaje) {
   console.log(`notificaciones: ${NOMBRES[deporte]} · ${enviados} enviadas${eliminados ? ` · ${eliminados} suscripciones vencidas eliminadas` : ""}`);
 }
 
+async function enviarPrueba(snapshot) {
+  const mensaje = {
+    title: "Notificación de prueba · Ceibos Club",
+    body: "¡Listo! Vas a recibir avisos de los partidos de los deportes que elegiste.",
+    url: "/#fixture",
+    tag: `ceibos-prueba-${Date.now()}`,
+    renotify: true
+  };
+  let enviados = 0;
+  let eliminados = 0;
+  for (const documento of snapshot.docs) {
+    const suscriptor = documento.data();
+    if (!suscriptor.enabled || !suscriptor.endpoint || !suscriptor.keys?.p256dh || !suscriptor.keys?.auth) continue;
+    try {
+      await webpush.sendNotification({ endpoint: suscriptor.endpoint, keys: suscriptor.keys }, JSON.stringify(mensaje), {
+        TTL: 10 * 60,
+        urgency: "high"
+      });
+      enviados += 1;
+    } catch (error) {
+      if (error?.statusCode === 404 || error?.statusCode === 410) {
+        await documento.ref.delete();
+        eliminados += 1;
+      } else {
+        console.warn(`notificaciones: no se pudo enviar la prueba a una suscripción (${error?.statusCode || error?.message || "error"})`);
+      }
+    }
+  }
+  console.log(`notificaciones: prueba terminada · ${enviados} enviadas${eliminados ? ` · ${eliminados} suscripciones vencidas eliminadas` : ""}`);
+}
+
 async function main() {
   const [config, actuales, anteriores, estadoInicial] = await Promise.all([
     leerJson(configPath),
@@ -101,7 +133,7 @@ async function main() {
 
   const estado = podarEstado({ version: 1, ...estadoInicial });
   const eventos = detectarEventos(anteriores, actuales, estado, fechaMontevideo());
-  if (!eventos.nuevos.length && !eventos.delDia.length) {
+  if (!modoPrueba && !eventos.nuevos.length && !eventos.delDia.length) {
     console.log("notificaciones: no hay avisos nuevos para enviar");
     await fs.writeFile(estadoPath, `${JSON.stringify(estado, null, 2)}\n`);
     return;
@@ -117,6 +149,11 @@ async function main() {
   const db = getFirestore();
   const snapshot = await db.collection("notificationSubscriptions").where("enabled", "==", true).get();
   webpush.setVapidDetails(process.env.VAPID_SUBJECT || "mailto:administracion@ceibosclub.com", config.vapidPublicKey, clavePrivada);
+
+  if (modoPrueba) {
+    await enviarPrueba(snapshot);
+    return;
+  }
 
   for (const [tipo, partidos] of [["new", eventos.nuevos], ["today", eventos.delDia]]) {
     for (const [deporte, grupo] of agruparPorDeporte(partidos)) {
