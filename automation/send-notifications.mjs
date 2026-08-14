@@ -10,6 +10,7 @@ const configPath = path.join(raiz, "notification-config.json");
 const indiceAnterior = process.argv.indexOf("--previous");
 const anteriorPath = indiceAnterior >= 0 ? path.resolve(process.argv[indiceAnterior + 1]) : datosPath;
 const modoPrueba = process.argv.includes("--test");
+const soloInicios = process.argv.includes("--start-only");
 
 const NOMBRES = { futbol: "Fútbol", rugby: "Rugby", hockey: "Hockey", basketball: "Basketball" };
 let webpush;
@@ -44,6 +45,15 @@ function detallePartido(partido) {
 function crearMensaje(tipo, deporte, partidos) {
   const ordenados = [...partidos].sort((a, b) => String(a.fecha).localeCompare(String(b.fecha)) || String(a.hora || "").localeCompare(String(b.hora || "")));
   const primero = ordenados[0];
+  if (tipo === "start") {
+    return {
+      title: `Arranca ahora · Ceibos ${NOMBRES[deporte]}`,
+      body: ordenados.length === 1 ? detallePartido(primero) : `${ordenados.length} categorías comienzan ahora. Primero: ${detallePartido(primero)}.`,
+      url: "/#fixture",
+      tag: `ceibos-inicio-${deporte}-${primero.fecha}-${primero.hora}`,
+      renotify: true
+    };
+  }
   if (tipo === "today") {
     return {
       title: `Hoy juega Ceibos · ${NOMBRES[deporte]}`,
@@ -87,24 +97,43 @@ async function enviarGrupo(snapshot, deporte, mensaje) {
 }
 
 async function enviarPrueba(snapshot) {
-  const mensaje = {
-    title: "Notificación de prueba · Ceibos Club",
-    body: "¡Listo! Vas a recibir avisos de los partidos de los deportes que elegiste.",
-    url: "/#fixture",
-    tag: `ceibos-prueba-${Date.now()}`,
-    renotify: true
-  };
+  const instante = Date.now();
+  const mensajes = [
+    {
+      title: "PRUEBA · Nuevos partidos de Fútbol",
+      body: "Se publicó un nuevo partido: Primera vs Rival · sábado 15:30 h · Cancha Los Ceibos.",
+      url: "/#fixture",
+      tag: `ceibos-prueba-nuevo-${instante}`,
+      renotify: false
+    },
+    {
+      title: "PRUEBA · Hoy juega Ceibos · Fútbol",
+      body: "Primera vs Rival · 15:30 h · Cancha Los Ceibos.",
+      url: "/#fixture",
+      tag: `ceibos-prueba-hoy-${instante}`,
+      renotify: true
+    },
+    {
+      title: "PRUEBA · Arranca ahora · Ceibos Fútbol",
+      body: "Primera vs Rival · 15:30 h · Cancha Los Ceibos.",
+      url: "/#fixture",
+      tag: `ceibos-prueba-inicio-${instante}`,
+      renotify: true
+    }
+  ];
   let enviados = 0;
   let eliminados = 0;
   for (const documento of snapshot.docs) {
     const suscriptor = documento.data();
     if (!suscriptor.enabled || !suscriptor.endpoint || !suscriptor.keys?.p256dh || !suscriptor.keys?.auth) continue;
     try {
-      await webpush.sendNotification({ endpoint: suscriptor.endpoint, keys: suscriptor.keys }, JSON.stringify(mensaje), {
-        TTL: 10 * 60,
-        urgency: "high"
-      });
-      enviados += 1;
+      for (const mensaje of mensajes) {
+        await webpush.sendNotification({ endpoint: suscriptor.endpoint, keys: suscriptor.keys }, JSON.stringify(mensaje), {
+          TTL: 10 * 60,
+          urgency: mensaje.renotify ? "high" : "normal"
+        });
+        enviados += 1;
+      }
     } catch (error) {
       if (error?.statusCode === 404 || error?.statusCode === 410) {
         await documento.ref.delete();
@@ -114,7 +143,7 @@ async function enviarPrueba(snapshot) {
       }
     }
   }
-  console.log(`notificaciones: prueba terminada · ${enviados} enviadas${eliminados ? ` · ${eliminados} suscripciones vencidas eliminadas` : ""}`);
+  console.log(`notificaciones: prueba de 3 tipos terminada · ${enviados} enviadas${eliminados ? ` · ${eliminados} suscripciones vencidas eliminadas` : ""}`);
 }
 
 async function main() {
@@ -122,7 +151,7 @@ async function main() {
     leerJson(configPath),
     leerJson(datosPath, { partidos: [] }),
     leerJson(anteriorPath, { partidos: [] }),
-    leerJson(estadoPath, { version: 1, sentNew: {}, sentToday: {} })
+    leerJson(estadoPath, { version: 1, sentNew: {}, sentToday: {}, sentStart: {} })
   ]);
   const servicio = cuentaServicio(process.env.FIREBASE_SERVICE_ACCOUNT);
   const clavePrivada = process.env.VAPID_PRIVATE_KEY?.trim();
@@ -133,7 +162,8 @@ async function main() {
 
   const estado = podarEstado({ version: 1, ...estadoInicial });
   const eventos = detectarEventos(anteriores, actuales, estado, fechaMontevideo());
-  if (!modoPrueba && !eventos.nuevos.length && !eventos.delDia.length) {
+  const eventosPendientes = soloInicios ? eventos.inician : [...eventos.nuevos, ...eventos.delDia, ...eventos.inician];
+  if (!modoPrueba && !eventosPendientes.length) {
     console.log("notificaciones: no hay avisos nuevos para enviar");
     await fs.writeFile(estadoPath, `${JSON.stringify(estado, null, 2)}\n`);
     return;
@@ -155,14 +185,17 @@ async function main() {
     return;
   }
 
-  for (const [tipo, partidos] of [["new", eventos.nuevos], ["today", eventos.delDia]]) {
+  const gruposDeEnvio = soloInicios
+    ? [["start", eventos.inician]]
+    : [["new", eventos.nuevos], ["today", eventos.delDia], ["start", eventos.inician]];
+  for (const [tipo, partidos] of gruposDeEnvio) {
     for (const [deporte, grupo] of agruparPorDeporte(partidos)) {
       await enviarGrupo(snapshot, deporte, crearMensaje(tipo, deporte, grupo));
     }
     marcarEnviados(estado, tipo, partidos);
   }
   await fs.writeFile(estadoPath, `${JSON.stringify(podarEstado(estado), null, 2)}\n`);
-  console.log(`notificaciones: proceso terminado (${eventos.nuevos.length} partidos nuevos, ${eventos.delDia.length} recordatorios del día)`);
+  console.log(`notificaciones: proceso terminado (${eventos.nuevos.length} partidos nuevos, ${eventos.delDia.length} recordatorios del día, ${eventos.inician.length} avisos de inicio)`);
 }
 
 main().catch(error => {

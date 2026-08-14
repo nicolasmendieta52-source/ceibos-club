@@ -33,10 +33,22 @@ export function fechaMontevideo(fecha = new Date()) {
   return `${partes.year}-${partes.month}-${partes.day}`;
 }
 
-export function detectarEventos(datosAnteriores, datosActuales, estado = {}, hoy = fechaMontevideo()) {
+export function horaMontevideo(fecha = new Date()) {
+  const partes = Object.fromEntries(new Intl.DateTimeFormat("en", {
+    timeZone: "America/Montevideo",
+    hour: "2-digit",
+    minute: "2-digit",
+    hourCycle: "h23"
+  }).formatToParts(fecha).filter(parte => parte.type !== "literal").map(parte => [parte.type, parte.value]));
+  return Number(partes.hour) * 60 + Number(partes.minute);
+}
+
+export function detectarEventos(datosAnteriores, datosActuales, estado = {}, hoy = fechaMontevideo(), ahora = new Date(), ventanaInicio = 30) {
   const anteriores = new Set((datosAnteriores?.partidos || []).map(clavePartido));
   const enviadosNuevos = estado.sentNew || {};
   const enviadosHoy = estado.sentToday || {};
+  const enviadosInicio = estado.sentStart || {};
+  const minutoActual = horaMontevideo(ahora);
   const partidos = (datosActuales?.partidos || []).filter(partido => {
     return deporteValido(partido.deporte) && /^\d{4}-\d{2}-\d{2}$/.test(String(partido.fecha || ""));
   });
@@ -49,8 +61,16 @@ export function detectarEventos(datosAnteriores, datosActuales, estado = {}, hoy
     const clave = clavePartido(partido);
     return partido.fecha === hoy && !enviadosHoy[clave];
   });
+  const inician = partidos.filter(partido => {
+    const clave = clavePartido(partido);
+    const coincidencia = String(partido.hora || "").match(/^(\d{1,2}):(\d{2})$/);
+    if (partido.fecha !== hoy || !coincidencia || enviadosInicio[clave]) return false;
+    const minutoPartido = Number(coincidencia[1]) * 60 + Number(coincidencia[2]);
+    const transcurridos = minutoActual - minutoPartido;
+    return transcurridos >= 0 && transcurridos < ventanaInicio;
+  });
 
-  return { nuevos, delDia };
+  return { nuevos, delDia, inician };
 }
 
 export function agruparPorDeporte(partidos) {
@@ -64,7 +84,7 @@ export function agruparPorDeporte(partidos) {
 }
 
 export function marcarEnviados(estado, tipo, partidos, instante = new Date().toISOString()) {
-  const campo = tipo === "today" ? "sentToday" : "sentNew";
+  const campo = tipo === "today" ? "sentToday" : tipo === "start" ? "sentStart" : "sentNew";
   estado[campo] ||= {};
   partidos.forEach(partido => { estado[campo][clavePartido(partido)] = instante; });
   return estado;
@@ -72,7 +92,7 @@ export function marcarEnviados(estado, tipo, partidos, instante = new Date().toI
 
 export function podarEstado(estado, dias = 150, ahora = Date.now()) {
   const limite = ahora - dias * 24 * 60 * 60 * 1000;
-  for (const campo of ["sentNew", "sentToday"]) {
+  for (const campo of ["sentNew", "sentToday", "sentStart"]) {
     estado[campo] ||= {};
     for (const [clave, fecha] of Object.entries(estado[campo])) {
       if (!fecha || Date.parse(fecha) < limite) delete estado[campo][clave];

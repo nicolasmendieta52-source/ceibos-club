@@ -24,6 +24,21 @@ test("detecta partidos nuevos futuros y recordatorios del día sin duplicar", ()
   assert.equal(repetidos.delDia.length, 0);
 });
 
+test("avisa al comenzar el partido y no repite el aviso", () => {
+  const partido = { deporte: "futbol", categoria: "Primera", rival: "Old Boys", fecha: "2026-08-20", hora: "15:00" };
+  const ahora = new Date("2026-08-20T18:05:00Z");
+  const estado = { sentNew: {}, sentToday: {}, sentStart: {} };
+  const eventos = detectarEventos({ partidos: [partido] }, { partidos: [partido] }, estado, "2026-08-20", ahora);
+  assert.deepEqual(eventos.inician, [partido]);
+  marcarEnviados(estado, "start", eventos.inician);
+  const repetido = detectarEventos({ partidos: [partido] }, { partidos: [partido] }, estado, "2026-08-20", ahora);
+  assert.equal(repetido.inician.length, 0);
+  const antes = detectarEventos({ partidos: [partido] }, { partidos: [partido] }, { sentStart: {} }, "2026-08-20", new Date("2026-08-20T17:59:00Z"));
+  const tarde = detectarEventos({ partidos: [partido] }, { partidos: [partido] }, { sentStart: {} }, "2026-08-20", new Date("2026-08-20T18:31:00Z"));
+  assert.equal(antes.inician.length, 0);
+  assert.equal(tarde.inician.length, 0);
+});
+
 test("agrupa avisos según el deporte elegido", () => {
   const grupos = agruparPorDeporte([
     { deporte: "futbol", categoria: "Primera" },
