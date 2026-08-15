@@ -18,15 +18,6 @@
       "local": false
     },
     {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "Bellakeo",
-      "fecha": "2026-08-01",
-      "hora": "18:00",
-      "local": false,
-      "cancha": "Capitol ltr 8) pepsi a ZILLERTAL Z merma WUM DOMINION ne"
-    },
-    {
       "deporte": "futbol",
       "categoria": "PreSenior",
       "rival": "San Isidro lomas U",
@@ -34,33 +25,6 @@
       "hora": "11:15",
       "local": false,
       "cancha": "San Isidro lomas"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "Azulgrana BN",
-      "fecha": "2026-08-01",
-      "hora": "09:00",
-      "local": true,
-      "cancha": "Los Ceibos"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "Azulgrana",
-      "fecha": "2026-08-01",
-      "hora": "09:00",
-      "local": true,
-      "cancha": "Los Ceibos L"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "erde vs. San Isidro Lomas",
-      "fecha": "2026-08-01",
-      "hora": "11:15",
-      "local": true,
-      "cancha": "Los Ceibos E"
     },
     {
       "deporte": "futbol",
@@ -106,32 +70,6 @@
       "hora": "15:45",
       "local": true,
       "cancha": "Ceibos Club _ ole BUM DOMINION ne 8) pepsi a ZILLERTAL Emm KASZ"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "San Juan Bautista",
-      "fecha": "2026-08-02",
-      "hora": "09:00",
-      "local": false,
-      "cancha": "Las Casuarinas"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "Anglo",
-      "fecha": "2026-08-02",
-      "hora": "15:30",
-      "local": true,
-      "cancha": "Los Ceibos _ afer 8) pepsi a ZILLERTAL Z merma BUM AOMINON FED KASZ"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Scuola ltaliana",
-      "fecha": "2026-08-02",
-      "hora": "17:00",
-      "local": false
     },
     {
       "deporte": "basketball",
@@ -303,6 +241,24 @@
       "cancha": "G. CAPITOL"
     },
     {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "Marista Deportivo",
+      "fecha": "2026-08-15",
+      "hora": "19:15",
+      "local": false,
+      "cancha": "Capitol Hay Quester €) pepsi a ZuzErTAL Hmmm WUM DOMINION ne"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "Alemán U.",
+      "fecha": "2026-08-15",
+      "hora": "09:00",
+      "local": false,
+      "cancha": "Alemán"
+    },
+    {
       "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "CARRASCO LAWN TENNIS",
@@ -310,6 +266,24 @@
       "hora": "11:15",
       "local": true,
       "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "Lawn Tennis BN",
+      "fecha": "2026-08-15",
+      "hora": "11:15",
+      "local": true,
+      "cancha": "Los Ceibos"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "Lawn Tennis",
+      "fecha": "2026-08-15",
+      "hora": "11:15",
+      "local": true,
+      "cancha": "Los Ceibos L"
     },
     {
       "deporte": "futbol",
@@ -322,12 +296,82 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "erde vs. Danubio",
+      "fecha": "2026-08-15",
+      "hora": "09:00",
+      "local": true,
+      "cancha": "Los Ceibos E"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "Lawn Tennis _",
+      "fecha": "2026-08-15",
+      "hora": "15:30",
+      "local": true,
+      "cancha": "Los Ceibos _ fuer 8) pepsi a ZILLERTAL Z merma"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Old Brendans",
+      "fecha": "2026-08-15",
+      "hora": "19:15",
+      "local": false
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Lobas",
+      "fecha": "2026-08-15",
+      "hora": "14:00",
+      "local": true,
+      "cancha": "Ceibos BN"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Carrasco Polo",
+      "fecha": "2026-08-15",
+      "hora": "14:00",
+      "local": false,
+      "cancha": "Carrasco Polo"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Carrasco Polo BN",
+      "fecha": "2026-08-15",
+      "hora": "15:45",
+      "local": false
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Carrasco Polo",
+      "fecha": "2026-08-15",
+      "hora": "15:45",
+      "local": false,
+      "cancha": "Carrasco Polo L _ ole 8) pepsi a ZILLERTAL Emm BUM AOMINON FED"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Primera",
       "rival": "ALEMAN UNIVERSITARIO",
       "fecha": "2026-08-16",
       "hora": "11:15",
       "local": false,
       "cancha": "CLUB ALEMAN"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "Alemán U.",
+      "fecha": "2026-08-16",
+      "hora": "11:15",
+      "local": true,
+      "cancha": "Los Ceibos"
     },
     {
       "deporte": "futbol",
@@ -346,6 +390,23 @@
       "hora": "17:00",
       "local": true,
       "cancha": "Pilares"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Seminario",
+      "fecha": "2026-08-16",
+      "hora": "17:00",
+      "local": true,
+      "cancha": "Los Ceibos"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "CTM BN",
+      "fecha": "2026-08-16",
+      "hora": "A confirmar",
+      "local": false
     },
     {
       "deporte": "basketball",
@@ -1228,7 +1289,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-14T20:07:04.933Z",
+  "actualizadoEn": "2026-08-15T03:12:23.270Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1341,12 +1402,12 @@
     ],
     "instagram": {
       "estado": "ok",
-      "registros": 51,
+      "registros": 50,
       "imagenes": 14,
       "publicacionesApify": 2,
       "historiasMencionadas": 0,
-      "cache": 14,
-      "nuevas": 0
+      "cache": 7,
+      "nuevas": 7
     }
   }
 }

@@ -1,6 +1,36 @@
 {
   "version": 1,
-  "sentNew": {},
-  "sentToday": {},
+  "sentNew": {
+    "basketball|basketball|marista deportivo|2026-08-15": "2026-08-15T03:12:25.930Z",
+    "futbol|presenior|aleman u|2026-08-15": "2026-08-15T03:12:25.930Z",
+    "futbol|reserva a|lawn tennis bn|2026-08-15": "2026-08-15T03:12:25.930Z",
+    "futbol|reserva a|lawn tennis|2026-08-15": "2026-08-15T03:12:25.930Z",
+    "futbol|reserva verde|erde vs danubio|2026-08-15": "2026-08-15T03:12:25.930Z",
+    "futbol|sub 20|lawn tennis|2026-08-15": "2026-08-15T03:12:25.930Z",
+    "hockey|intermedia a|old brendans|2026-08-15": "2026-08-15T03:12:25.930Z",
+    "hockey|sub 18|lobas|2026-08-15": "2026-08-15T03:12:25.930Z",
+    "rugby|intermedia|carrasco polo|2026-08-15": "2026-08-15T03:12:25.930Z",
+    "rugby|primera|carrasco polo bn|2026-08-15": "2026-08-15T03:12:25.930Z",
+    "rugby|primera|carrasco polo|2026-08-15": "2026-08-15T03:12:25.930Z",
+    "futbol|primera|aleman u|2026-08-16": "2026-08-15T03:12:25.930Z",
+    "hockey|intermedia b|seminario|2026-08-16": "2026-08-15T03:12:25.930Z",
+    "hockey|intermedia c|ctm bn|2026-08-16": "2026-08-15T03:12:25.930Z"
+  },
+  "sentToday": {
+    "basketball|basketball|maristas deportivo|2026-08-15": "2026-08-15T03:12:26.815Z",
+    "basketball|basketball|marista deportivo|2026-08-15": "2026-08-15T03:12:26.815Z",
+    "futbol|presenior|aleman u|2026-08-15": "2026-08-15T03:12:26.815Z",
+    "futbol|reserva a|carrasco lawn tennis|2026-08-15": "2026-08-15T03:12:26.815Z",
+    "futbol|reserva a|lawn tennis bn|2026-08-15": "2026-08-15T03:12:26.815Z",
+    "futbol|reserva a|lawn tennis|2026-08-15": "2026-08-15T03:12:26.815Z",
+    "futbol|reserva verde|danubio futbol club|2026-08-15": "2026-08-15T03:12:26.815Z",
+    "futbol|reserva verde|erde vs danubio|2026-08-15": "2026-08-15T03:12:26.815Z",
+    "futbol|sub 20|lawn tennis|2026-08-15": "2026-08-15T03:12:26.815Z",
+    "hockey|intermedia a|old brendans|2026-08-15": "2026-08-15T03:12:26.815Z",
+    "hockey|sub 18|lobas|2026-08-15": "2026-08-15T03:12:26.815Z",
+    "rugby|intermedia|carrasco polo|2026-08-15": "2026-08-15T03:12:26.815Z",
+    "rugby|primera|carrasco polo bn|2026-08-15": "2026-08-15T03:12:26.815Z",
+    "rugby|primera|carrasco polo|2026-08-15": "2026-08-15T03:12:26.815Z"
+  },
   "sentStart": {}
 }
