@@ -261,15 +261,6 @@
     {
       "deporte": "futbol",
       "categoria": "Reserva A",
-      "rival": "CARRASCO LAWN TENNIS",
-      "fecha": "2026-08-15",
-      "hora": "11:15",
-      "local": true,
-      "cancha": "MONTE VI \"LOS CEIBOS\""
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
       "rival": "Lawn Tennis BN",
       "fecha": "2026-08-15",
       "hora": "11:15",
@@ -284,15 +275,6 @@
       "hora": "11:15",
       "local": true,
       "cancha": "Los Ceibos L"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "DANUBIO FUTBOL CLUB",
-      "fecha": "2026-08-15",
-      "hora": "09:00",
-      "local": true,
-      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "futbol",
@@ -1286,10 +1268,26 @@
       "gf": 0,
       "gc": 1,
       "fecha": "2026-08-09"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "CARRASCO LAWN TENNIS",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-08-15"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "DANUBIO FUTBOL CLUB",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-08-15"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-15T13:47:29.504Z",
+  "actualizadoEn": "2026-08-15T19:12:37.289Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1347,28 +1345,28 @@
         "deporte": "futbol",
         "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS31.html",
-        "registros": 10,
+        "registros": 11,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS31.html",
-        "registros": 5,
+        "registros": 4,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS1.html",
-        "registros": 10,
+        "registros": 11,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS1.html",
-        "registros": 5,
+        "registros": 4,
         "estado": "ok"
       },
       {
