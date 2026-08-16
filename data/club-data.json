@@ -340,15 +340,6 @@
     {
       "deporte": "futbol",
       "categoria": "Primera",
-      "rival": "ALEMAN UNIVERSITARIO",
-      "fecha": "2026-08-16",
-      "hora": "11:15",
-      "local": false,
-      "cancha": "CLUB ALEMAN"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
       "rival": "Alemán U.",
       "fecha": "2026-08-16",
       "hora": "11:15",
@@ -1284,10 +1275,18 @@
       "gf": 1,
       "gc": 1,
       "fecha": "2026-08-15"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "ALEMAN UNIVERSITARIO",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-08-16"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-16T13:50:05.920Z",
+  "actualizadoEn": "2026-08-16T19:11:56.187Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1373,14 +1372,14 @@
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
-        "registros": 10,
+        "registros": 11,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/partidos/F21B.html",
-        "registros": 5,
+        "registros": 4,
         "estado": "ok"
       },
       {
