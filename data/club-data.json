@@ -234,15 +234,6 @@
     {
       "deporte": "basketball",
       "categoria": "Basketball",
-      "rival": "MARISTAS DEPORTIVO",
-      "fecha": "2026-08-15",
-      "hora": "19:15",
-      "local": true,
-      "cancha": "G. CAPITOL"
-    },
-    {
-      "deporte": "basketball",
-      "categoria": "Basketball",
       "rival": "Marista Deportivo",
       "fecha": "2026-08-15",
       "hora": "19:15",
@@ -1252,6 +1243,14 @@
       "fecha": "2026-08-09"
     },
     {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "MARISTAS DEPORTIVO",
+      "gf": 58,
+      "gc": 83,
+      "fecha": "2026-08-15"
+    },
+    {
       "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "CARRASCO LAWN TENNIS",
@@ -1285,7 +1284,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-17T14:04:00.807Z",
+  "actualizadoEn": "2026-08-17T19:48:17.014Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1315,14 +1314,14 @@
         "deporte": "basketball",
         "categoria": "Basketball",
         "url": "https://ligauniversitaria.org.uy/resultados/B221B3.html",
-        "registros": 2,
+        "registros": 3,
         "estado": "ok"
       },
       {
         "deporte": "basketball",
         "categoria": "Basketball",
         "url": "https://ligauniversitaria.org.uy/partidos/B221B3.html",
-        "registros": 5,
+        "registros": 4,
         "estado": "ok"
       },
       {
