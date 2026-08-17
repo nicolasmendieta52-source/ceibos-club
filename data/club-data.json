@@ -358,15 +358,6 @@
     {
       "deporte": "hockey",
       "categoria": "Intermedia B",
-      "rival": "Club Seminario",
-      "fecha": "2026-08-16",
-      "hora": "17:00",
-      "local": true,
-      "cancha": "Pilares"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
       "rival": "Seminario",
       "fecha": "2026-08-16",
       "hora": "17:00",
@@ -1283,10 +1274,18 @@
       "gf": 1,
       "gc": 2,
       "fecha": "2026-08-16"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Club Seminario",
+      "gf": 0,
+      "gc": 1,
+      "fecha": "2026-08-16"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-17T08:28:05.927Z",
+  "actualizadoEn": "2026-08-17T14:04:00.807Z",
   "diagnostico": {
     "fuentes": [
       {
