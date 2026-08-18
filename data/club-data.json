@@ -364,6 +364,15 @@
       "local": false
     },
     {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Club Náutico Intermedia B",
+      "fecha": "2026-08-23",
+      "hora": "17:00",
+      "local": false,
+      "cancha": "Nautico"
+    },
+    {
       "deporte": "basketball",
       "categoria": "Basketball",
       "rival": "OLD BOYS CLUB",
@@ -1284,7 +1293,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-18T03:16:01.510Z",
+  "actualizadoEn": "2026-08-18T08:07:14.206Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1307,7 +1316,7 @@
         "deporte": "hockey",
         "categoria": "Intermedia B",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=31",
-        "registros": 17,
+        "registros": 18,
         "estado": "ok"
       },
       {
