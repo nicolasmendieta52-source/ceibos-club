@@ -338,15 +338,6 @@
       "cancha": "Los Ceibos"
     },
     {
-      "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "JUAN XXIII",
-      "fecha": "2026-08-16",
-      "hora": "15:30",
-      "local": false,
-      "cancha": "COMPLEJO JUAN XXIII"
-    },
-    {
       "deporte": "hockey",
       "categoria": "Intermedia B",
       "rival": "Seminario",
@@ -1284,6 +1275,14 @@
       "fecha": "2026-08-16"
     },
     {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "JUAN XXIII",
+      "gf": 2,
+      "gc": 0,
+      "fecha": "2026-08-16"
+    },
+    {
       "deporte": "hockey",
       "categoria": "Intermedia B",
       "rival": "Club Seminario",
@@ -1293,7 +1292,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-18T14:11:30.856Z",
+  "actualizadoEn": "2026-08-18T19:44:25.429Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1393,14 +1392,14 @@
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
-        "registros": 1,
+        "registros": 2,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
-        "registros": 6,
+        "registros": 5,
         "estado": "ok"
       }
     ],
