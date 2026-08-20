@@ -90,7 +90,7 @@
   --ease:cubic-bezier(.22,1,.36,1);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
 body{
   font-family:var(--body);
   background:var(--verde-night);
@@ -100,6 +100,7 @@ body{
 ::selection{background:var(--dorado);color:var(--verde-night)}
 img{max-width:100%;display:block}
 a{color:inherit}
+section[id]{scroll-margin-top:76px}
 a:focus-visible,button:focus-visible{outline:3px solid var(--dorado-soft);outline-offset:4px}
 
 /* ---------- barra de progreso de scroll ---------- */
@@ -290,8 +291,8 @@ html[data-ceibos-access="locked"] .ceibos-access-gate{
 .ceibos-access-inner{position:relative;width:min(92vw,570px);margin:auto}
 .ceibos-access-logo{width:clamp(120px,27vw,165px);height:auto;margin:0 auto;filter:drop-shadow(0 18px 34px rgba(0,0,0,.32));animation:ceibosGateIn .7s cubic-bezier(.2,.8,.2,1) both}
 .ceibos-access-eyebrow{margin:22px 0 10px;color:#E5BB52;font-size:.74rem;font-weight:850;letter-spacing:.23em;text-transform:uppercase}
-.ceibos-access-gate h1{margin:0;color:#F6F1E4;font-family:'Anton',Impact,sans-serif;font-size:clamp(2.7rem,10vw,5rem);font-weight:400;line-height:.93;letter-spacing:.005em;text-transform:uppercase}
-.ceibos-access-gate h1 span{display:block;color:#E5BB52}
+.ceibos-access-gate h2{margin:0;color:#F6F1E4;font-family:'Anton',Impact,sans-serif;font-size:clamp(2.7rem,10vw,5rem);font-weight:400;line-height:.93;letter-spacing:.005em;text-transform:uppercase}
+.ceibos-access-gate h2 span{display:block;color:#E5BB52}
 .ceibos-access-intro{max-width:480px;margin:18px auto 0;color:#c5d0c8;font-size:clamp(.98rem,3vw,1.08rem);line-height:1.55}
 .ceibos-access-card{margin-top:28px;padding:18px;border:1px solid rgba(229,187,82,.22);border-radius:22px;background:rgba(4,23,14,.66);box-shadow:0 24px 65px rgba(0,0,0,.25);backdrop-filter:blur(14px)}
 .ceibos-access-title{margin:0 0 13px;font-size:.76rem;font-weight:850;letter-spacing:.16em;text-transform:uppercase}
@@ -315,7 +316,7 @@ html[data-ceibos-access="locked"] .ceibos-access-gate{
   <main class="ceibos-access-inner">
     <img class="ceibos-access-logo" src="/assets/escudo-ceibos.png" alt="Escudo oficial de Ceibos Club" width="512" height="512">
     <p class="ceibos-access-eyebrow">Totus Tuus · Desde 2014</p>
-    <h1 id="ceibosAccessTitle">Estamos <span>construyendo</span></h1>
+    <h2 id="ceibosAccessTitle">Estamos <span>construyendo</span></h2>
     <p class="ceibos-access-intro">Estamos preparando la nueva web de Ceibos Club. El equipo autorizado puede ingresar con el código compartido.</p>
     <section class="ceibos-access-card" aria-label="Acceso a la web">
       <p class="ceibos-access-title">Acceso del equipo</p>
@@ -1309,8 +1310,9 @@ img,video,svg{max-width:100%}
 }
 
 @media (max-width:820px){
-  section{padding:58px 18px}
-  .home-deportiva{padding:62px 18px}
+  section{padding:52px 18px}
+  .home-deportiva{padding:56px 18px}
+  .ondas{height:52px}
   .hero{min-height:660px}
   .hero-inner{padding:86px 18px 34px}
   .hero-escudo{width:min(43vw,170px);height:min(43vw,170px);margin-bottom:17px}
@@ -1838,7 +1840,15 @@ function renderPredioVivo(){
     boton.onclick = () => { deportePredioActivo = boton.dataset.predioDeporte; zonaPredioActiva = boton.dataset.predioZona; renderPredioVivo(); };
   });
 }
-function renderDinamico(){ renderTicker(); renderHomeDeportiva(); renderDeportes(); renderScore(); renderFixture(); renderPredioVivo(); renderEventos(); revObserve(); }
+function realinearDestinoHash(){
+  const id = decodeURIComponent(location.hash.slice(1));
+  if (!id) return;
+  requestAnimationFrame(() => requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView({ block:"start" })));
+}
+function renderDinamico(){
+  renderTicker(); renderHomeDeportiva(); renderDeportes(); renderScore(); renderFixture(); renderPredioVivo(); renderEventos(); revObserve();
+  realinearDestinoHash();
+}
 
 /* timeline de eventos */
 function renderEventos(){
@@ -1962,10 +1972,16 @@ secciones.forEach(s => ioSpy.observe(s));
 /* primer render con los datos embebidos */
 renderDinamico();
 const deporteEnlace = location.hash.slice(1);
-if (DEPORTES.some(d => d.slug === deporteEnlace)) activarDeporte(deporteEnlace);
+if (DEPORTES.some(d => d.slug === deporteEnlace)) {
+  activarDeporte(deporteEnlace);
+  realinearDestinoHash();
+}
 addEventListener("hashchange", () => {
   const slug = location.hash.slice(1);
-  if (DEPORTES.some(d => d.slug === slug)) activarDeporte(slug);
+  if (DEPORTES.some(d => d.slug === slug)) {
+    activarDeporte(slug);
+    realinearDestinoHash();
+  }
 });
 
 /* si existe data/club-data.json (lo genera la automatización de Instagram),

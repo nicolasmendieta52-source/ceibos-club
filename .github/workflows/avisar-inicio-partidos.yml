@@ -2,8 +2,8 @@ name: Avisar inicio de partidos
 
 on:
   schedule:
-    # GitHub ejecuta cron en UTC. Revisamos cada cinco minutos y el programa
-    # compara la hora oficial del partido con la hora de Montevideo.
+    # GitHub ejecuta cron en UTC y puede demorar tareas programadas. El programa
+    # compara con Montevideo y recupera avisos demorados sin repetirlos.
     - cron: "*/5 * * * *"
   workflow_dispatch:
 
@@ -11,8 +11,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: actualizar-datos-club
-  cancel-in-progress: false
+  group: avisar-inicio-partidos
+  cancel-in-progress: true
 
 jobs:
   avisar:

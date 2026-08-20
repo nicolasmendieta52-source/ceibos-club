@@ -1,4 +1,5 @@
 const DEPORTES = new Set(["futbol", "rugby", "hockey", "basketball"]);
+export const VENTANA_INICIO_MINUTOS = 4 * 60;
 
 export function normalizar(valor) {
   return String(valor ?? "")
@@ -43,12 +44,27 @@ export function horaMontevideo(fecha = new Date()) {
   return Number(partes.hour) * 60 + Number(partes.minute);
 }
 
-export function detectarEventos(datosAnteriores, datosActuales, estado = {}, hoy = fechaMontevideo(), ahora = new Date(), ventanaInicio = 30) {
+function fechaAnteriorISO(fechaISO) {
+  const coincidencia = String(fechaISO || "").match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!coincidencia) return "";
+  const fecha = new Date(Date.UTC(Number(coincidencia[1]), Number(coincidencia[2]) - 1, Number(coincidencia[3]) - 1));
+  return fecha.toISOString().slice(0, 10);
+}
+
+export function minutosDesdeInicio(partido, ahora = new Date(), hoy = fechaMontevideo(ahora)) {
+  const coincidencia = String(partido?.hora || "").match(/^(\d{1,2}):(\d{2})$/);
+  if (!coincidencia) return null;
+  const minutoPartido = Number(coincidencia[1]) * 60 + Number(coincidencia[2]);
+  if (partido?.fecha === hoy) return horaMontevideo(ahora) - minutoPartido;
+  if (partido?.fecha === fechaAnteriorISO(hoy)) return horaMontevideo(ahora) + 24 * 60 - minutoPartido;
+  return null;
+}
+
+export function detectarEventos(datosAnteriores, datosActuales, estado = {}, hoy = fechaMontevideo(), ahora = new Date(), ventanaInicio = VENTANA_INICIO_MINUTOS) {
   const anteriores = new Set((datosAnteriores?.partidos || []).map(clavePartido));
   const enviadosNuevos = estado.sentNew || {};
   const enviadosHoy = estado.sentToday || {};
   const enviadosInicio = estado.sentStart || {};
-  const minutoActual = horaMontevideo(ahora);
   const partidos = (datosActuales?.partidos || []).filter(partido => {
     return deporteValido(partido.deporte) && /^\d{4}-\d{2}-\d{2}$/.test(String(partido.fecha || ""));
   });
@@ -63,10 +79,9 @@ export function detectarEventos(datosAnteriores, datosActuales, estado = {}, hoy
   });
   const inician = partidos.filter(partido => {
     const clave = clavePartido(partido);
-    const coincidencia = String(partido.hora || "").match(/^(\d{1,2}):(\d{2})$/);
-    if (partido.fecha !== hoy || !coincidencia || enviadosInicio[clave]) return false;
-    const minutoPartido = Number(coincidencia[1]) * 60 + Number(coincidencia[2]);
-    const transcurridos = minutoActual - minutoPartido;
+    if (enviadosInicio[clave]) return false;
+    const transcurridos = minutosDesdeInicio(partido, ahora, hoy);
+    if (transcurridos === null) return false;
     return transcurridos >= 0 && transcurridos < ventanaInicio;
   });
 

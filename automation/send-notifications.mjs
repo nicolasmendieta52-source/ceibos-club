@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
-import { agruparPorDeporte, detectarEventos, fechaMontevideo, marcarEnviados, podarEstado } from "./notification-utils.mjs";
+import { agruparPorDeporte, detectarEventos, fechaMontevideo, marcarEnviados, minutosDesdeInicio, podarEstado } from "./notification-utils.mjs";
 
 const raiz = path.resolve(import.meta.dirname, "..");
 const datosPath = path.join(raiz, "data", "club-data.json");
@@ -42,16 +42,34 @@ function detallePartido(partido) {
   return `${partido.categoria} vs ${partido.rival} · ${hora}${cancha}`;
 }
 
+function demoraHumana(minutos) {
+  if (!Number.isFinite(minutos) || minutos < 1) return "";
+  if (minutos < 60) return `Comenzó hace ${minutos} min. `;
+  const horas = Math.floor(minutos / 60);
+  const resto = minutos % 60;
+  return `Comenzó hace ${horas} h${resto ? ` ${resto} min` : ""}. `;
+}
+
 function crearMensaje(tipo, deporte, partidos) {
   const ordenados = [...partidos].sort((a, b) => String(a.fecha).localeCompare(String(b.fecha)) || String(a.hora || "").localeCompare(String(b.hora || "")));
   const primero = ordenados[0];
   if (tipo === "start") {
+    const ahora = new Date();
+    const conDemora = ordenados
+      .map(partido => ({ partido, minutos: minutosDesdeInicio(partido, ahora) }))
+      .filter(item => Number.isFinite(item.minutos) && item.minutos >= 0)
+      .sort((a, b) => a.minutos - b.minutos);
+    const reciente = conDemora[0] || { partido: primero, minutos: 0 };
+    const inmediato = reciente.minutos <= 15;
     return {
-      title: `Arranca ahora · Ceibos ${NOMBRES[deporte]}`,
-      body: ordenados.length === 1 ? detallePartido(primero) : `${ordenados.length} categorías comienzan ahora. Primero: ${detallePartido(primero)}.`,
+      title: `${inmediato ? "Arranca ahora" : ordenados.length === 1 ? "Inicio de partido" : "Partidos iniciados"} · Ceibos ${NOMBRES[deporte]}`,
+      body: ordenados.length === 1
+        ? `${demoraHumana(reciente.minutos)}${detallePartido(reciente.partido)}`
+        : `${ordenados.length} categorías ya comenzaron. Más reciente: ${demoraHumana(reciente.minutos).toLowerCase()}${detallePartido(reciente.partido)}.`,
       url: "/#fixture",
       tag: `ceibos-inicio-${deporte}-${primero.fecha}-${primero.hora}`,
-      renotify: true
+      renotify: true,
+      ttl: 60 * 60
     };
   }
   if (tipo === "today") {
@@ -79,8 +97,9 @@ async function enviarGrupo(snapshot, deporte, mensaje) {
     const suscriptor = documento.data();
     if (!suscriptor.enabled || suscriptor.deportes?.[deporte] !== true || !suscriptor.endpoint || !suscriptor.keys?.p256dh || !suscriptor.keys?.auth) continue;
     try {
-      await webpush.sendNotification({ endpoint: suscriptor.endpoint, keys: suscriptor.keys }, JSON.stringify(mensaje), {
-        TTL: 24 * 60 * 60,
+      const { ttl, ...contenido } = mensaje;
+      await webpush.sendNotification({ endpoint: suscriptor.endpoint, keys: suscriptor.keys }, JSON.stringify(contenido), {
+        TTL: ttl || 24 * 60 * 60,
         urgency: mensaje.renotify ? "high" : "normal"
       });
       enviados += 1;
