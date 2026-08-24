@@ -292,15 +292,6 @@
       "local": false
     },
     {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Club Náutico Intermedia B",
-      "fecha": "2026-08-23",
-      "hora": "17:00",
-      "local": false,
-      "cancha": "Nautico"
-    },
-    {
       "deporte": "basketball",
       "categoria": "Basketball",
       "rival": "OLD BOYS CLUB",
@@ -1226,10 +1217,18 @@
       "gf": 0,
       "gc": 1,
       "fecha": "2026-08-16"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Club Náutico Intermedia B",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-08-23"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-24T07:32:48.282Z",
+  "actualizadoEn": "2026-08-24T13:18:30.451Z",
   "diagnostico": {
     "fuentes": [
       {
