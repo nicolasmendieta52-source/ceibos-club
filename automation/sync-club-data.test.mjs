@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { expandApifyInstagramImages, extractInstagramStoryMentionImages, mergeClubData, parseInstagramImage, parseInstagramResultsBoard, repairText } from "./sync-club-data.mjs";
+import { expandApifyInstagramImages, extractInstagramStoryMentionImages, mergeClubData, parseG22TeamApi, parseHockeyLine, parseInstagramImage, parseInstagramResultsBoard, repairText, verifiedRugbyResults2026 } from "./sync-club-data.mjs";
 
 const aliases = ["CEIBOS", "CEIBOS CLUB", "LOS CEIBOS"];
 
@@ -106,6 +106,86 @@ test("quita de proximos un partido que ya tiene resultado", () => {
   const merged = mergeClubData(previous, official, []);
   assert.equal(merged.partidos.length, 0);
   assert.equal(merged.resultados.length, 1);
+});
+
+test("mantiene pendientes de FUH aunque la tabla muestre 0-0", () => {
+  const source = { deporte: "hockey", categoria: "Intermedia A" };
+  for (const estado of ["A Jugar", "A Designar", "Postergado"]) {
+    const record = parseHockeyLine(`Old Girls Azulgrana - Los Ceibos\tFecha 1\t08/08 19:15\tBritish\t0 - 0\t${estado}`, source, aliases);
+    assert.equal(record.kind, "partido");
+    assert.equal(record.rival, "Old Girls Azulgrana");
+  }
+});
+
+test("FUH pendiente elimina un marcador anterior de la misma fecha", () => {
+  const previous = {
+    partidos: [],
+    resultados: [{ deporte: "hockey", categoria: "Intermedia A", rival: "Old Girls Azulgrana", fecha: "2026-08-08", gf: 0, gc: 4 }]
+  };
+  const official = [{ kind: "partido", deporte: "hockey", categoria: "Intermedia A", rival: "Old Girls", fecha: "2026-08-08", hora: "19:15", local: false, cancha: "British" }];
+  const instagram = [{ kind: "resultado", deporte: "hockey", categoria: "Intermedia A", rival: "Old Girls Azulgrana", fecha: "2026-08-08", gf: 0, gc: 4 }];
+  const merged = mergeClubData(previous, official, instagram);
+  assert.equal(merged.resultados.length, 0);
+  assert.equal(merged.partidos.length, 1);
+});
+
+test("los resultados verificados de Primera de Rugby prevalecen sobre OCR", () => {
+  const previous = { partidos: [], resultados: [] };
+  const instagram = [
+    { kind: "resultado", deporte: "rugby", categoria: "Primera", rival: "PSG", fecha: "2026-05-23", gf: 22, gc: 22 },
+    { kind: "resultado", deporte: "rugby", categoria: "Primera", rival: "Los Cuervos", fecha: "2026-06-06", gf: 17, gc: 26 }
+  ];
+  const merged = mergeClubData(previous, verifiedRugbyResults2026, instagram);
+  const psg = merged.resultados.find(record => record.fecha === "2026-05-23");
+  const cuervos = merged.resultados.find(record => record.fecha === "2026-06-06");
+  assert.deepEqual([psg.gf, psg.gc], [21, 21]);
+  assert.deepEqual([cuervos.gf, cuervos.gc], [17, 36]);
+});
+
+test("lee resultados de Rugby directamente desde G22 y orienta el marcador a Ceibos", () => {
+  const source = { deporte: "rugby", categoria: "Primera", teamId: "ceibos-club" };
+  const payload = {
+    ok: true,
+    resolvedClubId: "ceibos-club",
+    results: [
+      { home_team: { team_id: "seminario", name: "Seminario" }, away_team: { team_id: "ceibos-club", name: "Ceibos Club" }, scores: { home: 24, away: 32 }, match_status: "final", timestamp: 1773496800 },
+      { home_team: { team_id: "ceibos-club", name: "Ceibos Club" }, away_team: { team_id: "psg", name: "PSG" }, scores: { home: 21, away: 21 }, match_status: "final", timestamp: 1779561000 }
+    ],
+    fixtures: []
+  };
+  const records = parseG22TeamApi(payload, source, aliases);
+  assert.equal(records.length, 2);
+  assert.deepEqual([records[0].gf, records[0].gc], [32, 24]);
+  assert.deepEqual([records[1].gf, records[1].gc], [21, 21]);
+  assert.ok(records.every(record => record.kind === "resultado"));
+});
+
+test("G22 mantiene un 0-0 programado como partido pendiente", () => {
+  const source = { deporte: "rugby", categoria: "Primera", teamId: "ceibos-club" };
+  const payload = {
+    ok: true,
+    resolvedClubId: "ceibos-club",
+    results: [],
+    fixtures: [{
+      home_team: { team_id: "lobos", name: "Lobos" },
+      away_team: { team_id: "ceibos-club", name: "Ceibos Club" },
+      scores: { home: 0, away: 0 },
+      match_status: "scheduled",
+      timestamp: 1781982000
+    }]
+  };
+  const [record] = parseG22TeamApi(payload, source, aliases);
+  assert.equal(record.kind, "partido");
+  assert.equal(record.rival, "Lobos");
+  assert.equal(record.local, false);
+  assert.equal("gf" in record, false);
+});
+
+test("un resultado oficial directo reemplaza otro marcador de la misma fecha", () => {
+  const previous = { partidos: [], resultados: [{ deporte: "rugby", categoria: "Primera", rival: "PSG Rugby", fecha: "2026-05-23", gf: 22, gc: 22 }] };
+  const official = [{ kind: "resultado", deporte: "rugby", categoria: "Primera", rival: "PSG", fecha: "2026-05-23", gf: 21, gc: 21 }];
+  const merged = mergeClubData(previous, official, []);
+  assert.deepEqual(merged.resultados, [{ deporte: "rugby", categoria: "Primera", rival: "PSG", fecha: "2026-05-23", gf: 21, gc: 21 }]);
 });
 
 test("repara nombres guardados con codificacion incorrecta", () => {

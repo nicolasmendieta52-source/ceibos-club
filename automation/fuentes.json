@@ -2,6 +2,14 @@
   "teamAliases": ["CEIBOS", "CEIBOS CLUB", "CEIBOS CLUB VERDE", "LOS CEIBOS"],
   "sources": [
     {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "url": "https://www.g22scores.com/api/teams?team_id=ceibos-club&team_name=Ceibos+Club&preferred_sport=rugby&skip_squad=true",
+      "modo": "direct",
+      "formato": "g22-team-api",
+      "teamId": "ceibos-club"
+    },
+    {
       "deporte": "hockey",
       "categoria": "Intermedia A",
       "url": "https://admin.hockey.com.uy/posiciones?category_id=3",

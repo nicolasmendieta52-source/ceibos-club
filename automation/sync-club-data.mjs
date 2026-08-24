@@ -9,6 +9,25 @@ const ocrCachePath = path.resolve(directory, "../data/instagram-ocr-cache.json")
 const now = new Date();
 const clean = value => String(value ?? "").replace(/\s+/g, " ").trim();
 
+// Marcadores de Primera verificados para la temporada 2026. Se incorporan
+// con prioridad oficial para que una lectura OCR incompleta o equivocada no
+// pueda reemplazarlos en futuras sincronizaciones.
+const verifiedRugbyResults2026 = [
+  { kind: "resultado", deporte: "rugby", categoria: "Primera", rival: "Seminario", fecha: "2026-03-14", gf: 32, gc: 24 },
+  { kind: "resultado", deporte: "rugby", categoria: "Primera", rival: "Old Christians", fecha: "2026-04-11", gf: 7, gc: 60 },
+  { kind: "resultado", deporte: "rugby", categoria: "Primera", rival: "Carrasco Polo", fecha: "2026-04-18", gf: 8, gc: 39 },
+  { kind: "resultado", deporte: "rugby", categoria: "Primera", rival: "Montevideo Cricket", fecha: "2026-04-25", gf: 29, gc: 26 },
+  { kind: "resultado", deporte: "rugby", categoria: "Primera", rival: "Círculo de Tenis", fecha: "2026-05-02", gf: 38, gc: 7 },
+  { kind: "resultado", deporte: "rugby", categoria: "Primera", rival: "Champagnat", fecha: "2026-05-09", gf: 26, gc: 6 },
+  { kind: "resultado", deporte: "rugby", categoria: "Primera", rival: "PSG", fecha: "2026-05-23", gf: 21, gc: 21 },
+  { kind: "resultado", deporte: "rugby", categoria: "Primera", rival: "Old Boys", fecha: "2026-05-30", gf: 0, gc: 43 },
+  { kind: "resultado", deporte: "rugby", categoria: "Primera", rival: "Los Cuervos", fecha: "2026-06-06", gf: 17, gc: 36 },
+  { kind: "resultado", deporte: "rugby", categoria: "Primera", rival: "Trébol de Paysandú", fecha: "2026-06-13", gf: 5, gc: 45 },
+  { kind: "resultado", deporte: "rugby", categoria: "Primera", rival: "Lobos", fecha: "2026-06-20", gf: 28, gc: 42 },
+  { kind: "resultado", deporte: "rugby", categoria: "Primera", rival: "Lobos", fecha: "2026-07-25", gf: 19, gc: 28 },
+  { kind: "resultado", deporte: "rugby", categoria: "Primera", rival: "Seminario", fecha: "2026-08-01", gf: 13, gc: 13 }
+];
+
 function repairText(value) {
   let text = clean(value);
   const controls = new Map([["‘", 0x91], ["’", 0x92], ["“", 0x93], ["”", 0x94], ["–", 0x96], ["—", 0x97]]);
@@ -107,6 +126,67 @@ function parseLine(line, source, aliases) {
 
 function parseText(text, source, aliases) {
   return text.split(/\n|\r|(?<=Cerrado)|(?<=Pendiente)/).map(line => parseLine(line, source, aliases)).filter(Boolean);
+}
+
+function uruguayDateTime(timestamp) {
+  const seconds = Number(timestamp);
+  if (!Number.isFinite(seconds) || seconds <= 0) return null;
+  const parts = Object.fromEntries(new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/Montevideo",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hourCycle: "h23"
+  }).formatToParts(new Date(seconds * 1000)).map(part => [part.type, part.value]));
+  return { fecha: `${parts.year}-${parts.month}-${parts.day}`, hora: `${parts.hour}:${parts.minute}` };
+}
+
+function parseG22TeamApi(payload, source, aliases = []) {
+  const data = typeof payload === "string" ? JSON.parse(payload) : payload;
+  if (!data || data.ok === false) throw new Error("G22 no devolvió una respuesta válida");
+  const teamId = comparable(source.teamId ?? data.resolvedClubId ?? "ceibos-club");
+  const belongsToCeibos = team => comparable(team?.team_id) === teamId || isTeam(team?.name, aliases);
+  const records = [];
+  for (const match of [...(data.results ?? []), ...(data.fixtures ?? [])]) {
+    const home = match.home_team ?? {};
+    const away = match.away_team ?? {};
+    const homeIsCeibos = belongsToCeibos(home);
+    const awayIsCeibos = belongsToCeibos(away);
+    if (homeIsCeibos === awayIsCeibos) continue;
+    const dateTime = uruguayDateTime(match.timestamp);
+    if (!dateTime) continue;
+    const rival = repairText(homeIsCeibos ? away.name : home.name);
+    if (!rival) continue;
+    const status = comparable(match.match_status);
+    const homeScore = Number(match.scores?.home);
+    const awayScore = Number(match.scores?.away);
+    const isFinal = ["final", "finished", "closed", "cerrado"].includes(status) && Number.isFinite(homeScore) && Number.isFinite(awayScore);
+    if (isFinal) {
+      records.push({
+        kind: "resultado",
+        deporte: source.deporte,
+        categoria: source.categoria,
+        rival,
+        fecha: dateTime.fecha,
+        gf: homeIsCeibos ? homeScore : awayScore,
+        gc: homeIsCeibos ? awayScore : homeScore
+      });
+      continue;
+    }
+    records.push({
+      kind: "partido",
+      deporte: source.deporte,
+      categoria: source.categoria,
+      rival,
+      fecha: dateTime.fecha,
+      hora: dateTime.hora,
+      local: homeIsCeibos,
+      ...(clean(match.venue?.name ?? match.venue ?? match.location) ? { cancha: repairText(match.venue?.name ?? match.venue ?? match.location) } : {})
+    });
+  }
+  return records;
 }
 
 function parseInstagramDate(value) {
@@ -592,8 +672,12 @@ async function renderPage(source) {
     // el orden: partido, fecha, horario, cancha, resultado y estado.
     if (source.formato === "hockey-admin") {
       const fixtureTab = page.locator('a[href^="#tab_3_"]');
-      if (await fixtureTab.count()) {
-        await fixtureTab.click();
+      const fixtureCount = await fixtureTab.count();
+      for (let index = 0; index < fixtureCount; index += 1) {
+        // Algunas categorías de FUH tienen Apertura y fases posteriores en la
+        // misma página. Activamos cada pestaña para que todas sus tablas se
+        // carguen antes de extraer los partidos.
+        await fixtureTab.nth(index).click();
         await page.waitForTimeout(400);
       }
     }
@@ -641,6 +725,30 @@ function recordIdentity(record) {
   return [record.deporte, record.categoria, record.rival, record.fecha].map(comparable).join("|");
 }
 
+async function fetchDirectSource(source) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 30000);
+  try {
+    const response = await fetch(source.url, {
+      headers: {
+        "user-agent": "CeibosClubFixtureBot/1.0 (contacto: info@ceibosclub.com)",
+        accept: "application/json",
+        "cache-control": "no-cache"
+      },
+      cache: "no-store",
+      signal: controller.signal
+    });
+    if (!response.ok) throw new Error(`HTTP ${response.status} al consultar la fuente directa`);
+    return await response.text();
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+function recordSlotIdentity(record) {
+  return [record.deporte, record.categoria, record.fecha].map(comparable).join("|");
+}
+
 function recordQuality(record, kind) {
   const priority = Number(record._priority ?? 0) * 100;
   if (kind === "resultado") return priority;
@@ -668,14 +776,26 @@ function mergeClubData(previous, officialRecords, instagramRecords) {
     .filter(record => record.kind === "partido")
     .map(record => `${comparable(record.deporte)}|${comparable(record.categoria)}`));
   const officialUpcoming = new Set(officialRecords.filter(record => record.kind === "partido").map(recordIdentity));
+  // Las federaciones son la fuente de verdad. Un registro oficial (resultado
+  // o pendiente) reemplaza cualquier marcador OCR de la misma categoría y
+  // fecha. Así un 0-0 programado nunca se publica como resultado definitivo.
+  const officialSlots = new Set(officialRecords.map(recordSlotIdentity));
+  const officialResultSlots = new Set(officialRecords.filter(record => record.kind === "resultado").map(recordSlotIdentity));
   const priorPartidos = (previous.partidos ?? [])
+    .filter(record => !officialResultSlots.has(recordSlotIdentity(record)))
     .filter(record => !replaceUpcoming.has(`${comparable(record.deporte)}|${comparable(record.categoria)}`) || officialUpcoming.has(recordIdentity(record)))
     .map(record => ({ ...record, _priority: 0 }));
   const officialPartidos = officialRecords.filter(record => record.kind === "partido").map(record => ({ ...record, _priority: 2 }));
-  const instagramPartidos = instagramRecords.filter(record => record.kind === "partido").map(record => ({ ...record, _priority: 1 }));
+  const instagramPartidos = instagramRecords
+    .filter(record => record.kind === "partido" && !officialSlots.has(recordSlotIdentity(record)))
+    .map(record => ({ ...record, _priority: 1 }));
   const officialResultados = officialRecords.filter(record => record.kind === "resultado").map(record => ({ ...record, _priority: 2 }));
-  const instagramResultados = instagramRecords.filter(record => record.kind === "resultado").map(record => ({ ...record, _priority: 1 }));
-  const priorResultados = (previous.resultados ?? []).map(record => ({ ...record, _priority: 0 }));
+  const instagramResultados = instagramRecords
+    .filter(record => record.kind === "resultado" && !officialSlots.has(recordSlotIdentity(record)))
+    .map(record => ({ ...record, _priority: 1 }));
+  const priorResultados = (previous.resultados ?? [])
+    .filter(record => !officialSlots.has(recordSlotIdentity(record)))
+    .map(record => ({ ...record, _priority: 0 }));
   const resultados = dedupeRecords([...priorResultados, ...instagramResultados, ...officialResultados], "resultado");
   const played = new Set(resultados.map(recordIdentity));
   const partidos = dedupeRecords([...priorPartidos, ...instagramPartidos, ...officialPartidos], "partido")
@@ -690,11 +810,12 @@ async function main() {
   const sourceStatus = [];
   for (const source of config.sources) {
     try {
-      // Todas las fuentes configuradas requieren JavaScript para mostrar el
-      // fixture. Usamos siempre Chromium para leer la misma tabla oficial que
-      // ve una persona y evitamos depender de parsers HTML adicionales.
-      const text = await renderPage(source);
-      const matches = parseText(text, source, config.teamAliases);
+      // G22 ofrece los datos de Rugby en JSON. Las demás federaciones todavía
+      // requieren Chromium porque construyen sus tablas con JavaScript.
+      const text = source.modo === "direct" ? await fetchDirectSource(source) : await renderPage(source);
+      const matches = source.formato === "g22-team-api"
+        ? parseG22TeamApi(text, source, config.teamAliases)
+        : parseText(text, source, config.teamAliases);
       console.log(`${source.deporte}: ${matches.length} partidos encontrados`);
       officialRecords.push(...matches);
       sourceStatus.push({ deporte: source.deporte, categoria: source.categoria, url: source.url, registros: matches.length, estado: matches.length ? "ok" : "sin-coincidencias" });
@@ -728,7 +849,12 @@ async function main() {
   // Una fuente puede no responder momentáneamente. Conservamos los datos que
   // ya estaban publicados y sumamos los nuevos, para que un deporte nunca
   // borre los resultados de los demás.
-  const { partidos, resultados } = mergeClubData(previous, officialRecords, instagramRecords);
+  // Los marcadores verificados sirven como respaldo para fechas que G22 aún
+  // no cerró o que ya no expone. Cuando G22 sí devuelve el resultado, el dato
+  // directo prevalece y no se duplica.
+  const directResultSlots = new Set(officialRecords.filter(record => record.kind === "resultado").map(recordSlotIdentity));
+  const rugbyFallback = verifiedRugbyResults2026.filter(record => !directResultSlots.has(recordSlotIdentity(record)));
+  const { partidos, resultados } = mergeClubData(previous, [...officialRecords, ...rugbyFallback], instagramRecords);
   const output = {
     partidos,
     resultados,
@@ -745,7 +871,7 @@ async function main() {
   }
 }
 
-export { categoriaDesdePlaca, expandApifyInstagramImages, extractInstagramStoryMentionImages, mergeClubData, parseInstagramImage, parseInstagramResultsBoard, repairText };
+export { categoriaDesdePlaca, expandApifyInstagramImages, extractInstagramStoryMentionImages, mergeClubData, parseG22TeamApi, parseHockeyLine, parseInstagramImage, parseInstagramResultsBoard, repairText, verifiedRugbyResults2026 };
 
 const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 if (isMain) main().catch(error => { console.error(error); process.exitCode = 1; });

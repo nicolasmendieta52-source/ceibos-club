@@ -544,11 +544,16 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 /* ---------- NOTICIAS ---------- */
 #noticias{background:linear-gradient(180deg,var(--verde-night),#1d392f)}
 .noticia-destacada{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:clamp(24px,5vw,64px);align-items:center;margin-top:42px;padding:clamp(18px,3vw,32px);border:1px solid rgba(229,187,82,.28);border-radius:28px;background:rgba(246,241,228,.045);overflow:hidden}
-.noticia-video{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:18px;background:#10251f;box-shadow:0 18px 40px rgba(0,0,0,.3)}
+.noticia-video{display:block;width:min(100%,420px);aspect-ratio:9/16;object-fit:contain;margin-inline:auto;border-radius:18px;background:#10251f;box-shadow:0 18px 40px rgba(0,0,0,.3)}
 .noticia-fecha{font-size:.7rem;font-weight:800;letter-spacing:.25em;text-transform:uppercase;color:var(--dorado);margin-bottom:12px}
 .noticia-texto h3{font-family:var(--display);font-size:clamp(2rem,4vw,3.4rem);line-height:.98;text-transform:uppercase;color:var(--blanco);margin-bottom:18px}
 .noticia-texto p{color:rgba(246,241,228,.75);line-height:1.7;margin:0 0 14px}
 .noticia-texto strong{color:var(--dorado-soft)}
+.noticia-datos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:18px 0}
+.noticia-dato{padding:13px 14px;border:1px solid rgba(229,187,82,.22);border-radius:14px;background:rgba(16,37,31,.45)}
+.noticia-dato strong{display:block;font-family:var(--display);font-size:1.55rem;line-height:1;color:var(--dorado);text-transform:uppercase}
+.noticia-dato span{display:block;margin-top:5px;font-size:.7rem;font-weight:700;line-height:1.35;color:rgba(246,241,228,.68)}
+.noticia-proyecto{padding-top:12px;border-top:1px solid rgba(246,241,228,.12);font-size:.82rem}
 .dep-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:40px 0 34px}
 .dep-tab{
   font-family:var(--display);font-size:clamp(1rem,2.4vw,1.4rem);letter-spacing:.06em;
@@ -733,15 +738,23 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
   <h2 class="titulo rev rev-d1">Conocé el <em>Gimnasio</em> de Ceibos</h2>
   <div class="noticia-destacada rev rev-d2">
     <video class="noticia-video" controls preload="metadata" playsinline aria-label="Video del Gimnasio de Ceibos">
-      <source src="assets/gimnasio-ceibos.mp4" type="video/mp4">
+      <source src="assets/gimnasio-ceibos.mp4?v=20260824" type="video/mp4">
       Tu navegador no puede reproducir este video.
     </video>
     <article class="noticia-texto">
-      <div class="noticia-fecha">Novedad del club</div>
-      <h3>Un espacio para crecer</h3>
-      <p>En Ceibos seguimos creciendo para brindarles a nuestros socios y deportistas las mejores herramientas para entrenar y superarse día a día. Nuestro gimnasio está pensado para acompañar el desarrollo físico de todas las disciplinas del club.</p>
-      <p>Con equipamiento moderno, un ambiente cómodo y un equipo comprometido, potencia el rendimiento, previene lesiones y promueve hábitos saludables.</p>
-      <p><strong>Dale play y conocé el lugar donde el esfuerzo, la disciplina y la pasión se transforman en resultados. ¡Te esperamos en Ceibos!</strong></p>
+      <div class="noticia-fecha">Proyecto de infraestructura · Primera etapa</div>
+      <h3>El primer paso del masterplan</h3>
+      <p>Ceibos sigue creciendo. El nuevo gimnasio será la primera etapa de un plan de infraestructura que continuará con vestuarios y Club House, pensado para acompañar el desarrollo deportivo y social del club.</p>
+      <p>Estará ubicado junto al parrillero y frente a la cancha de fútbol, con un espacio preparado para todas las disciplinas y también para socios que no compiten en un plantel.</p>
+      <div class="noticia-datos" aria-label="Datos principales del proyecto">
+        <div class="noticia-dato"><strong>200 m²</strong><span>de área interior proyectada</span></div>
+        <div class="noticia-dato"><strong>3 m</strong><span>de altura prevista</span></div>
+        <div class="noticia-dato"><strong>+400</strong><span>socios activos estimados</span></div>
+        <div class="noticia-dato"><strong>Todas</strong><span>las disciplinas del club</span></div>
+      </div>
+      <p>El proyecto contempla entrenamiento de fuerza y funcional, equipamiento para prevención y rehabilitación, y un sector cerrado para trabajos grupales. Su funcionamiento prevé cubrir financiación, mantenimiento, limpieza y seguridad.</p>
+      <p><strong>Dale play y conocé el proyecto que estamos construyendo entre todos.</strong></p>
+      <p class="noticia-proyecto"><strong>Proyecto arquitectónico:</strong> Cabrera Inciarte Arquitectos.</p>
     </article>
   </div>
 </section>
@@ -1454,7 +1467,7 @@ let PARTIDOS = [
 ];
 
 let RESULTADOS = [
-  { deporte:"Rugby",      categoria:"Primera",     rival:"Old Boys",      gf:24, gc:18 },
+  { deporte:"Rugby",      categoria:"Primera",     rival:"Seminario",      gf:13, gc:13, fecha:"2026-08-01" },
   { deporte:"Hockey",     categoria:"Intermedia A",rival:"Carrasco Polo", gf:3,  gc:1  },
   { deporte:"Basketball", categoria:"Divisional B",rival:"Waston",        gf:78, gc:71 },
   { deporte:"Fútbol",     categoria:"Primera",     rival:"Nacional",      gf:2,  gc:2  },
