@@ -71,15 +71,6 @@
       "cancha": "Ceibos Club"
     },
     {
-      "deporte": "rugby",
-      "categoria": "Primera",
-      "rival": "Seminario",
-      "fecha": "2026-08-01",
-      "hora": "15:45",
-      "local": true,
-      "cancha": "Ceibos Club _ ole BUM DOMINION ne 8) pepsi a ZILLERTAL Emm KASZ"
-    },
-    {
       "deporte": "futbol",
       "categoria": "PreSenior",
       "rival": "Olimar",
@@ -133,15 +124,6 @@
       "cancha": "Ceibos Club"
     },
     {
-      "deporte": "rugby",
-      "categoria": "Primera",
-      "rival": "Old Christians",
-      "fecha": "2026-08-08",
-      "hora": "15:00",
-      "local": true,
-      "cancha": "Ceibos Club _ ole €) pepsi a ZuzErTAL mmm BUM AOMINON FED KASZ"
-    },
-    {
       "deporte": "hockey",
       "categoria": "Intermedia C",
       "rival": "Areteia BN",
@@ -184,6 +166,23 @@
       "hora": "14:00",
       "local": false,
       "cancha": "Carrasco Polo"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Carrasco Polo BN",
+      "fecha": "2026-08-15",
+      "hora": "15:45",
+      "local": false
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Carrasco Polo",
+      "fecha": "2026-08-15",
+      "hora": "15:45",
+      "local": false,
+      "cancha": "Carrasco Polo L _ ole 8) pepsi a ZILLERTAL Emm BUM AOMINON FED"
     },
     {
       "deporte": "hockey",
@@ -1242,6 +1241,22 @@
     },
     {
       "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Old Woodlands Club",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-08-22"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Northfield",
+      "gf": 4,
+      "gc": 2,
+      "fecha": "2026-08-22"
+    },
+    {
+      "deporte": "hockey",
       "categoria": "Intermedia B",
       "rival": "Club Náutico Intermedia B",
       "gf": 1,
@@ -1250,7 +1265,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-24T13:18:30.451Z",
+  "actualizadoEn": "2026-08-24T13:28:34.302Z",
   "diagnostico": {
     "fuentes": [
       {
