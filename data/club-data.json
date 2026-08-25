@@ -220,6 +220,15 @@
       "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Carrasco Polo Club Sub 18",
+      "fecha": "2026-08-29",
+      "hora": "14:00",
+      "local": true,
+      "cancha": "Pilares"
+    },
+    {
       "deporte": "futbol",
       "categoria": "Primera",
       "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
@@ -236,6 +245,15 @@
       "hora": "A confirmar",
       "local": true,
       "cancha": "CANCHA A FIJAR"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Psg",
+      "fecha": "2026-08-30",
+      "hora": "17:00",
+      "local": true,
+      "cancha": "Pilares"
     },
     {
       "deporte": "basketball",
@@ -1265,7 +1283,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-25T13:15:50.959Z",
+  "actualizadoEn": "2026-08-25T19:01:26.207Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1286,14 +1304,14 @@
         "deporte": "hockey",
         "categoria": "Sub 18",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=4",
-        "registros": 15,
+        "registros": 16,
         "estado": "ok"
       },
       {
         "deporte": "hockey",
         "categoria": "Intermedia B",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=31",
-        "registros": 18,
+        "registros": 19,
         "estado": "ok"
       },
       {
