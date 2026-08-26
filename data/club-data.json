@@ -206,7 +206,7 @@
       "categoria": "Reserva A",
       "rival": "OLD CHRISTIANS CLUB",
       "fecha": "2026-08-29",
-      "hora": "09:00",
+      "hora": "11:15",
       "local": true,
       "cancha": "MONTE VI \"LOS CEIBOS\""
     },
@@ -215,7 +215,7 @@
       "categoria": "Reserva Verde",
       "rival": "E.L.F.",
       "fecha": "2026-08-29",
-      "hora": "11:15",
+      "hora": "09:00",
       "local": true,
       "cancha": "MONTE VI \"LOS CEIBOS\""
     },
@@ -1283,7 +1283,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-26T13:20:21.580Z",
+  "actualizadoEn": "2026-08-26T20:06:46.021Z",
   "diagnostico": {
     "fuentes": [
       {
