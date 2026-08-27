@@ -220,6 +220,15 @@
       "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "CLUB SOCIAL PIEDRAS BLANCAS",
+      "fecha": "2026-08-29",
+      "hora": "17:30",
+      "local": true,
+      "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
       "deporte": "hockey",
       "categoria": "Sub 18",
       "rival": "Carrasco Polo Club Sub 18",
@@ -236,15 +245,6 @@
       "hora": "11:15",
       "local": false,
       "cancha": "COMP. DEVOTO (NAUT. PICHINCHA)"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "CLUB SOCIAL PIEDRAS BLANCAS",
-      "fecha": "2026-08-30",
-      "hora": "15:30",
-      "local": true,
-      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "hockey",
@@ -1283,7 +1283,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-27T09:56:14.463Z",
+  "actualizadoEn": "2026-08-27T22:20:23.094Z",
   "diagnostico": {
     "fuentes": [
       {
