@@ -197,9 +197,9 @@
       "categoria": "Basketball",
       "rival": "OLD BOYS CLUB",
       "fecha": "2026-08-29",
-      "hora": "A confirmar",
+      "hora": "21:00",
       "local": false,
-      "cancha": "CANCHA A FIJAR"
+      "cancha": "G. TROUVILLE"
     },
     {
       "deporte": "futbol",
@@ -242,9 +242,9 @@
       "categoria": "Sub 18",
       "rival": "CLUB SOCIAL PIEDRAS BLANCAS",
       "fecha": "2026-08-30",
-      "hora": "A confirmar",
+      "hora": "15:30",
       "local": true,
-      "cancha": "CANCHA A FIJAR"
+      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "hockey",
@@ -1283,7 +1283,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-26T20:06:46.021Z",
+  "actualizadoEn": "2026-08-27T09:56:14.463Z",
   "diagnostico": {
     "fuentes": [
       {
