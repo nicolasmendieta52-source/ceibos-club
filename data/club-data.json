@@ -195,15 +195,6 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "OLD CHRISTIANS CLUB",
-      "fecha": "2026-08-29",
-      "hora": "11:15",
-      "local": true,
-      "cancha": "MONTE VI \"LOS CEIBOS\""
-    },
-    {
-      "deporte": "futbol",
       "categoria": "Sub 18",
       "rival": "CLUB SOCIAL PIEDRAS BLANCAS",
       "fecha": "2026-08-29",
@@ -228,15 +219,6 @@
       "hora": "A confirmar",
       "local": true,
       "cancha": "Ceibos _ ¡Quedar 8) pepsi a ZILLERTAL Zero BUM AOMINON FED"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Sub 18",
-      "rival": "Carrasco Polo Club Sub 18",
-      "fecha": "2026-08-29",
-      "hora": "13:30",
-      "local": true,
-      "cancha": "Pilares"
     },
     {
       "deporte": "rugby",
@@ -1319,15 +1301,31 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "OLD CHRISTIANS CLUB",
+      "gf": 2,
+      "gc": 3,
+      "fecha": "2026-08-29"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva Verde",
       "rival": "E.L.F.",
       "gf": 0,
       "gc": 2,
       "fecha": "2026-08-29"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Carrasco Polo Club Sub 18",
+      "gf": 2,
+      "gc": 3,
+      "fecha": "2026-08-29"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-29T16:47:00.617Z",
+  "actualizadoEn": "2026-08-29T20:59:15.907Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1404,14 +1402,14 @@
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS1.html",
-        "registros": 11,
+        "registros": 12,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS1.html",
-        "registros": 4,
+        "registros": 3,
         "estado": "ok"
       },
       {
