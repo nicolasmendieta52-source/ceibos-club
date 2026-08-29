@@ -168,23 +168,6 @@
       "cancha": "Carrasco Polo"
     },
     {
-      "deporte": "rugby",
-      "categoria": "Primera",
-      "rival": "Carrasco Polo BN",
-      "fecha": "2026-08-15",
-      "hora": "15:45",
-      "local": false
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Primera",
-      "rival": "Carrasco Polo",
-      "fecha": "2026-08-15",
-      "hora": "15:45",
-      "local": false,
-      "cancha": "Carrasco Polo L _ ole 8) pepsi a ZILLERTAL Emm BUM AOMINON FED"
-    },
-    {
       "deporte": "hockey",
       "categoria": "Intermedia C",
       "rival": "CTM BN",
@@ -200,6 +183,15 @@
       "hora": "21:00",
       "local": false,
       "cancha": "G. TROUVILLE"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "San Eugenio",
+      "fecha": "2026-08-29",
+      "hora": "09:00",
+      "local": false,
+      "cancha": "San Eugenio"
     },
     {
       "deporte": "futbol",
@@ -229,6 +221,24 @@
       "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "ELF",
+      "fecha": "2026-08-29",
+      "hora": "15:30",
+      "local": true,
+      "cancha": "Los Ceibos"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Old brendans",
+      "fecha": "2026-08-29",
+      "hora": "A confirmar",
+      "local": true,
+      "cancha": "Ceibos _ ¡Quedar 8) pepsi a ZILLERTAL Zero BUM AOMINON FED"
+    },
+    {
       "deporte": "hockey",
       "categoria": "Sub 18",
       "rival": "Carrasco Polo Club Sub 18",
@@ -236,6 +246,33 @@
       "hora": "13:30",
       "local": true,
       "cancha": "Pilares"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "MVCC",
+      "fecha": "2026-08-29",
+      "hora": "13:30",
+      "local": true,
+      "cancha": "Ceibos Club"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "MVCC",
+      "fecha": "2026-08-29",
+      "hora": "12:00",
+      "local": true,
+      "cancha": "Ceibos Club"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "MVCC",
+      "fecha": "2026-08-29",
+      "hora": "15:15",
+      "local": true,
+      "cancha": "Ceibos Club _ Blut BUM AOMINON FED 8) pepsi a ZILLERTAL Zero KASD"
     },
     {
       "deporte": "futbol",
@@ -254,6 +291,14 @@
       "hora": "17:00",
       "local": true,
       "cancha": "Pilares"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Old Girls BR",
+      "fecha": "2026-08-30",
+      "hora": "18:45",
+      "local": false
     },
     {
       "deporte": "basketball",
@@ -1283,7 +1328,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-28T22:26:28.778Z",
+  "actualizadoEn": "2026-08-29T07:10:39.896Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1401,12 +1446,12 @@
     ],
     "instagram": {
       "estado": "ok",
-      "registros": 21,
+      "registros": 24,
       "imagenes": 7,
       "publicacionesApify": 1,
       "historiasMencionadas": 0,
-      "cache": 7,
-      "nuevas": 0
+      "cache": 0,
+      "nuevas": 7
     }
   }
 }
