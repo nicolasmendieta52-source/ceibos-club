@@ -204,15 +204,6 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "E.L.F.",
-      "fecha": "2026-08-29",
-      "hora": "09:00",
-      "local": true,
-      "cancha": "MONTE VI \"LOS CEIBOS\""
-    },
-    {
-      "deporte": "futbol",
       "categoria": "Sub 18",
       "rival": "CLUB SOCIAL PIEDRAS BLANCAS",
       "fecha": "2026-08-29",
@@ -1325,10 +1316,18 @@
       "gf": 1,
       "gc": 2,
       "fecha": "2026-08-23"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "E.L.F.",
+      "gf": 0,
+      "gc": 2,
+      "fecha": "2026-08-29"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-29T07:10:39.896Z",
+  "actualizadoEn": "2026-08-29T16:47:00.617Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1391,14 +1390,14 @@
         "deporte": "futbol",
         "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS31.html",
-        "registros": 11,
+        "registros": 12,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS31.html",
-        "registros": 4,
+        "registros": 3,
         "estado": "ok"
       },
       {
@@ -1450,8 +1449,8 @@
       "imagenes": 7,
       "publicacionesApify": 1,
       "historiasMencionadas": 0,
-      "cache": 0,
-      "nuevas": 7
+      "cache": 7,
+      "nuevas": 0
     }
   }
 }
