@@ -195,15 +195,6 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "CLUB SOCIAL PIEDRAS BLANCAS",
-      "fecha": "2026-08-29",
-      "hora": "17:30",
-      "local": true,
-      "cancha": "MONTE VI \"LOS CEIBOS\""
-    },
-    {
-      "deporte": "futbol",
       "categoria": "Sub 20",
       "rival": "ELF",
       "fecha": "2026-08-29",
@@ -1307,6 +1298,14 @@
       "fecha": "2026-08-29"
     },
     {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "CLUB SOCIAL PIEDRAS BLANCAS",
+      "gf": 5,
+      "gc": 1,
+      "fecha": "2026-08-29"
+    },
+    {
       "deporte": "hockey",
       "categoria": "Sub 18",
       "rival": "Carrasco Polo Club Sub 18",
@@ -1324,7 +1323,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-30T16:46:03.598Z",
+  "actualizadoEn": "2026-08-30T21:12:26.964Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1429,25 +1428,25 @@
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
-        "registros": 2,
+        "registros": 3,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
-        "registros": 5,
+        "registros": 4,
         "estado": "ok"
       }
     ],
     "instagram": {
       "estado": "ok",
       "registros": 24,
-      "imagenes": 8,
+      "imagenes": 7,
       "publicacionesApify": 1,
       "historiasMencionadas": 0,
       "cache": 7,
-      "nuevas": 1
+      "nuevas": 0
     }
   }
 }
