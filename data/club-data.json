@@ -248,15 +248,6 @@
       "cancha": "Ceibos Club _ Blut BUM AOMINON FED 8) pepsi a ZILLERTAL Zero KASD"
     },
     {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
-      "fecha": "2026-08-30",
-      "hora": "11:15",
-      "local": false,
-      "cancha": "COMP. DEVOTO (NAUT. PICHINCHA)"
-    },
-    {
       "deporte": "hockey",
       "categoria": "Intermedia B",
       "rival": "Psg",
@@ -1322,10 +1313,18 @@
       "gf": 2,
       "gc": 3,
       "fecha": "2026-08-29"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
+      "gf": 1,
+      "gc": 0,
+      "fecha": "2026-08-30"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-30T12:00:29.892Z",
+  "actualizadoEn": "2026-08-30T16:46:03.598Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1416,14 +1415,14 @@
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
-        "registros": 11,
+        "registros": 12,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/partidos/F21B.html",
-        "registros": 4,
+        "registros": 3,
         "estado": "ok"
       },
       {
@@ -1444,11 +1443,11 @@
     "instagram": {
       "estado": "ok",
       "registros": 24,
-      "imagenes": 7,
+      "imagenes": 8,
       "publicacionesApify": 1,
       "historiasMencionadas": 0,
       "cache": 7,
-      "nuevas": 0
+      "nuevas": 1
     }
   }
 }
