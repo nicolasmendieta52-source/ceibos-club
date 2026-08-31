@@ -26,24 +26,6 @@
       "local": false
     },
     {
-      "deporte": "futbol",
-      "categoria": "PreSenior",
-      "rival": "San Isidro lomas U",
-      "fecha": "2026-08-01",
-      "hora": "11:15",
-      "local": false,
-      "cancha": "San Isidro lomas"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 20",
-      "rival": "San Juan Bautista",
-      "fecha": "2026-08-01",
-      "hora": "15:30",
-      "local": true,
-      "cancha": "Los Ceibos a fuer 8) pepsi a ZILLERTAL Z merma BUM AOMINON FED KASZ"
-    },
-    {
       "deporte": "hockey",
       "categoria": "Reserva",
       "rival": "Carrasco Polo",
@@ -69,23 +51,6 @@
       "hora": "12:30",
       "local": true,
       "cancha": "Ceibos Club"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "PreSenior",
-      "rival": "Olimar",
-      "fecha": "2026-08-08",
-      "hora": "09:00",
-      "local": true,
-      "cancha": "Los Ceibos"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 20",
-      "rival": "Club Nautico",
-      "fecha": "2026-08-08",
-      "hora": "15:30",
-      "local": false
     },
     {
       "deporte": "hockey",
@@ -141,24 +106,6 @@
       "cancha": "Los Ceibos _ ¡Qué 8) pepsi a ZILLERTAL Z merma BUM AOMINON FED"
     },
     {
-      "deporte": "futbol",
-      "categoria": "PreSenior",
-      "rival": "Alemán U.",
-      "fecha": "2026-08-15",
-      "hora": "09:00",
-      "local": false,
-      "cancha": "Alemán"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 20",
-      "rival": "Lawn Tennis _",
-      "fecha": "2026-08-15",
-      "hora": "15:30",
-      "local": true,
-      "cancha": "Los Ceibos _ fuer 8) pepsi a ZILLERTAL Z merma"
-    },
-    {
       "deporte": "rugby",
       "categoria": "Intermedia",
       "rival": "Carrasco Polo",
@@ -186,21 +133,12 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "PreSenior",
-      "rival": "San Eugenio",
-      "fecha": "2026-08-29",
-      "hora": "09:00",
-      "local": false,
-      "cancha": "San Eugenio"
-    },
-    {
-      "deporte": "futbol",
       "categoria": "Sub 20",
-      "rival": "ELF",
+      "rival": "E.L.F.",
       "fecha": "2026-08-29",
       "hora": "15:30",
       "local": true,
-      "cancha": "Los Ceibos"
+      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "hockey",
@@ -257,6 +195,15 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "ARQUITECTURA JRS.",
+      "fecha": "2026-09-05",
+      "hora": "09:00",
+      "local": true,
+      "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "TAPE",
       "fecha": "2026-09-05",
@@ -272,6 +219,15 @@
       "hora": "11:15",
       "local": false,
       "cancha": "COMPLEJO JUAN XXIII"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "OLD BRENDANS CLUB",
+      "fecha": "2026-09-05",
+      "hora": "15:30",
+      "local": false,
+      "cancha": "ST. BRENDANS"
     },
     {
       "deporte": "futbol",
@@ -302,6 +258,15 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
+      "fecha": "2026-09-12",
+      "hora": "11:15",
+      "local": false,
+      "cancha": "SAN ISIDRO LOMAS"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "OBC AZULGRANA.",
       "fecha": "2026-09-12",
@@ -315,6 +280,15 @@
       "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
       "fecha": "2026-09-12",
       "hora": "11:15",
+      "local": true,
+      "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "SAN JUAN BAUTISTA",
+      "fecha": "2026-09-12",
+      "hora": "15:30",
       "local": true,
       "cancha": "MONTE VI \"LOS CEIBOS\""
     },
@@ -347,6 +321,15 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "OLIMAR",
+      "fecha": "2026-09-19",
+      "hora": "09:00",
+      "local": true,
+      "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
       "fecha": "2026-09-19",
@@ -362,6 +345,15 @@
       "hora": "09:00",
       "local": false,
       "cancha": "COMPLEJO PEÑAROL UNIVERSITARIO"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
+      "fecha": "2026-09-19",
+      "hora": "15:30",
+      "local": false,
+      "cancha": "COMP. DEVOTO (NAUT. PICHINCHA)"
     },
     {
       "deporte": "futbol",
@@ -466,6 +458,14 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "OLD WOODLANDS CLUB",
+      "gf": 3,
+      "gc": 2,
+      "fecha": "2026-04-11"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "NACIONAL UNIVERSITARIO",
       "gf": 0,
@@ -478,6 +478,14 @@
       "rival": "COLEGIO Y LICEO INGLES",
       "gf": 1,
       "gc": 0,
+      "fecha": "2026-04-11"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "NACIONAL UNIVERSITARIO",
+      "gf": 4,
+      "gc": 1,
       "fecha": "2026-04-11"
     },
     {
@@ -538,9 +546,25 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "FLORES UNIVERSITARIO",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-04-18"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva Verde",
       "rival": "NUMA TURCATTI",
       "gf": 2,
+      "gc": 1,
+      "fecha": "2026-04-18"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "CLUB SEMINARIO",
+      "gf": 3,
       "gc": 1,
       "fecha": "2026-04-18"
     },
@@ -594,6 +618,14 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "LA ESCAPADA UNIVERSITARIO",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-04-25"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "SAGRADA FAMILIA UNIVERSITARIO",
       "gf": 1,
@@ -606,6 +638,14 @@
       "rival": "JUAN XXIII BLANCO",
       "gf": 1,
       "gc": 2,
+      "fecha": "2026-04-25"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "MATURANA UNIVERSITARIO",
+      "gf": 3,
+      "gc": 0,
       "fecha": "2026-04-25"
     },
     {
@@ -706,6 +746,14 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "CLUB ESTUDIANTES INGENIERIA",
+      "gf": 5,
+      "gc": 0,
+      "fecha": "2026-05-16"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "ALEMAN UNIVERSITARIO",
       "gf": 2,
@@ -718,6 +766,14 @@
       "rival": "SAN PABLO UNIVERSITARIO",
       "gf": 2,
       "gc": 1,
+      "fecha": "2026-05-16"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "SAN PABLO UNIVERSITARIO",
+      "gf": 1,
+      "gc": 3,
       "fecha": "2026-05-16"
     },
     {
@@ -762,6 +818,14 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "SAN JUAN BAUTISTA",
+      "gf": 1,
+      "gc": 4,
+      "fecha": "2026-05-23"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "OLD CHRISTIANS AZUL",
       "gf": 2,
@@ -774,6 +838,14 @@
       "rival": "OLD CHRISTIANS NARANJA",
       "gf": 2,
       "gc": 2,
+      "fecha": "2026-05-23"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "OLD CHRISTIANS CLUB",
+      "gf": 2,
+      "gc": 3,
       "fecha": "2026-05-23"
     },
     {
@@ -826,6 +898,14 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "DEPORTIVO MITRE",
+      "gf": 5,
+      "gc": 1,
+      "fecha": "2026-05-30"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "TENIS EL PINAR",
       "gf": 1,
@@ -837,6 +917,14 @@
       "categoria": "Reserva Verde",
       "rival": "CENTRO CRISTOBAL COLON",
       "gf": 2,
+      "gc": 2,
+      "fecha": "2026-05-30"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "TENIS EL PINAR",
+      "gf": 4,
       "gc": 2,
       "fecha": "2026-05-30"
     },
@@ -882,6 +970,14 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "TACUAREMBO UNIVERSITARIO",
+      "gf": 8,
+      "gc": 2,
+      "fecha": "2026-06-06"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "OLD WOODLANDS CLUB",
       "gf": 1,
@@ -894,6 +990,14 @@
       "rival": "OLD BRENDANS VERDE",
       "gf": 3,
       "gc": 1,
+      "fecha": "2026-06-06"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "OLD WOODLANDS CLUB",
+      "gf": 1,
+      "gc": 2,
       "fecha": "2026-06-06"
     },
     {
@@ -934,6 +1038,14 @@
       "rival": "OLD BOYS CLUB",
       "gf": 61,
       "gc": 50,
+      "fecha": "2026-06-13"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "CLARA JACKSON UNIVERSITARIO",
+      "gf": 1,
+      "gc": 2,
       "fecha": "2026-06-13"
     },
     {
@@ -1002,6 +1114,14 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "EL CHORRO FUTBOL CLUB",
+      "gf": 3,
+      "gc": 1,
+      "fecha": "2026-06-20"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "CARRASCO POLO CLUB",
       "gf": 1,
@@ -1014,6 +1134,14 @@
       "rival": "WANDERERS",
       "gf": 1,
       "gc": 2,
+      "fecha": "2026-06-20"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "J.M.L.M",
+      "gf": 3,
+      "gc": 3,
       "fecha": "2026-06-20"
     },
     {
@@ -1074,6 +1202,14 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "ODONTOLOGIA UNIVERSITARIO",
+      "gf": 1,
+      "gc": 3,
+      "fecha": "2026-06-27"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "OLD BOYS CLUB",
       "gf": 0,
@@ -1090,11 +1226,27 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "OLD BOYS CLUB",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-06-27"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Primera",
       "rival": "OLD BRENDANS CLUB",
       "gf": 1,
       "gc": 1,
       "fecha": "2026-06-28"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "PLAYA HONDA UNIVERSITARIO",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-07-04"
     },
     {
       "deporte": "hockey",
@@ -1194,6 +1346,14 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "ALEMAN UNIVERSITARIO",
+      "gf": 2,
+      "gc": 5,
+      "fecha": "2026-08-15"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "CARRASCO LAWN TENNIS",
       "gf": 1,
@@ -1206,6 +1366,14 @@
       "rival": "DANUBIO FUTBOL CLUB",
       "gf": 1,
       "gc": 1,
+      "fecha": "2026-08-15"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "CARRASCO LAWN TENNIS",
+      "gf": 3,
+      "gc": 0,
       "fecha": "2026-08-15"
     },
     {
@@ -1274,6 +1442,14 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "SAN EUGENIO",
+      "gf": 1,
+      "gc": 0,
+      "fecha": "2026-08-29"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "OLD CHRISTIANS CLUB",
       "gf": 2,
@@ -1322,7 +1498,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-31T05:43:19.271Z",
+  "actualizadoEn": "2026-08-31T12:25:15.368Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1434,6 +1610,34 @@
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
+        "registros": 4,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "PreSenior",
+        "url": "https://ligauniversitaria.org.uy/resultados/F3232PSC.html",
+        "registros": 12,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "PreSenior",
+        "url": "https://ligauniversitaria.org.uy/partidos/F3232PSC.html",
+        "registros": 3,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Sub 20",
+        "url": "https://ligauniversitaria.org.uy/resultados/F202020A.html",
+        "registros": 11,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Sub 20",
+        "url": "https://ligauniversitaria.org.uy/partidos/F202020A.html",
         "registros": 4,
         "estado": "ok"
       }

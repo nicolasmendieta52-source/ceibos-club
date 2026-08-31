@@ -101,6 +101,30 @@
       "categoria": "Sub 18",
       "url": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
       "modo": "browser"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "PreSenior",
+      "url": "https://ligauniversitaria.org.uy/resultados/F3232PSC.html",
+      "modo": "browser"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "PreSenior",
+      "url": "https://ligauniversitaria.org.uy/partidos/F3232PSC.html",
+      "modo": "browser"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "url": "https://ligauniversitaria.org.uy/resultados/F202020A.html",
+      "modo": "browser"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "url": "https://ligauniversitaria.org.uy/partidos/F202020A.html",
+      "modo": "browser"
     }
   ]
 }

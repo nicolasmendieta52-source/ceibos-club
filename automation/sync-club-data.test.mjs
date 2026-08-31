@@ -1,8 +1,27 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import fs from "node:fs";
 import { expandApifyInstagramImages, extractInstagramStoryMentionImages, mergeClubData, parseG22TeamApi, parseHockeyLine, parseInstagramImage, parseInstagramResultsBoard, repairText, verifiedRugbyResults2026 } from "./sync-club-data.mjs";
 
 const aliases = ["CEIBOS", "CEIBOS CLUB", "LOS CEIBOS"];
+
+test("mantiene las fuentes oficiales de PreSenior y Sub 20", () => {
+  const config = JSON.parse(fs.readFileSync(new URL("./fuentes.json", import.meta.url), "utf8"));
+  const footballSources = config.sources.filter(source => source.deporte === "futbol");
+  const expected = [
+    ["PreSenior", "https://ligauniversitaria.org.uy/resultados/F3232PSC.html"],
+    ["PreSenior", "https://ligauniversitaria.org.uy/partidos/F3232PSC.html"],
+    ["Sub 20", "https://ligauniversitaria.org.uy/resultados/F202020A.html"],
+    ["Sub 20", "https://ligauniversitaria.org.uy/partidos/F202020A.html"]
+  ];
+
+  for (const [categoria, url] of expected) {
+    assert.ok(
+      footballSources.some(source => source.categoria === categoria && source.url === url),
+      `Falta la fuente oficial de ${categoria}: ${url}`
+    );
+  }
+});
 
 test("lee varias categorias de un carrusel de proximos partidos", () => {
   const text = `F\u00daTBOL
