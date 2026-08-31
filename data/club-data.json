@@ -78,15 +78,6 @@
       "local": false
     },
     {
-      "deporte": "futbol",
-      "categoria": "Sub 20",
-      "rival": "E.L.F.",
-      "fecha": "2026-08-29",
-      "hora": "15:30",
-      "local": true,
-      "cancha": "MONTE VI \"LOS CEIBOS\""
-    },
-    {
       "deporte": "hockey",
       "categoria": "Reserva",
       "rival": "Old brendans",
@@ -2021,7 +2012,10 @@
       "rival": "SAN EUGENIO",
       "gf": 1,
       "gc": 0,
-      "fecha": "2026-08-29"
+      "fecha": "2026-08-29",
+      "goleadores": [
+        "NICOLAS ORDOQUI (89') · en contra"
+      ]
     },
     {
       "deporte": "futbol",
@@ -2029,7 +2023,11 @@
       "rival": "OLD CHRISTIANS CLUB",
       "gf": 2,
       "gc": 3,
-      "fecha": "2026-08-29"
+      "fecha": "2026-08-29",
+      "goleadores": [
+        "RAFAEL MONESTIER (8')",
+        "AGUSTIN CALVO (63')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -2045,7 +2043,26 @@
       "rival": "CLUB SOCIAL PIEDRAS BLANCAS",
       "gf": 5,
       "gc": 1,
-      "fecha": "2026-08-29"
+      "fecha": "2026-08-29",
+      "goleadores": [
+        "GERONIMO RODRIGO (51')",
+        "LEANDRO CAMBÒN (53')",
+        "GERONIMO RODRIGO (67')",
+        "FELIPE SOBRAL (82')",
+        "JOAQUIN MARIA BARTOL (90')"
+      ]
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "E.L.F.",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-08-29",
+      "goleadores": [
+        "IGNACIO SERE (24')",
+        "PABLO MARTIN BARTABURU (98')"
+      ]
     },
     {
       "deporte": "hockey",
@@ -2097,7 +2114,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-31T14:20:09.712Z",
+  "actualizadoEn": "2026-08-31T22:55:42.028Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2229,14 +2246,14 @@
         "deporte": "futbol",
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/resultados/F202020A.html",
-        "registros": 11,
+        "registros": 12,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/partidos/F202020A.html",
-        "registros": 4,
+        "registros": 3,
         "estado": "ok"
       }
     ],
