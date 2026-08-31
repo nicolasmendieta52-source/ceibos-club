@@ -1,14 +1,6 @@
 {
   "partidos": [
     {
-      "deporte": "rugby",
-      "categoria": "Primera",
-      "rival": "Lobos PdE",
-      "fecha": "2026-06-20",
-      "hora": "16:30",
-      "local": false
-    },
-    {
       "deporte": "hockey",
       "categoria": "Intermedia B",
       "rival": "Cgu – Los Cuervos",
@@ -35,24 +27,6 @@
       "cancha": "Carrasco Polo af Quella & pepsi a ZueerTa mum BUM AOMINON FED KASZ ño"
     },
     {
-      "deporte": "rugby",
-      "categoria": "Intermedia",
-      "rival": "Seminario",
-      "fecha": "2026-08-01",
-      "hora": "14:00",
-      "local": true,
-      "cancha": "Ceibos Club"
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "M19",
-      "rival": "Lions",
-      "fecha": "2026-08-01",
-      "hora": "12:30",
-      "local": true,
-      "cancha": "Ceibos Club"
-    },
-    {
       "deporte": "hockey",
       "categoria": "Reserva",
       "rival": "Seminario BN",
@@ -69,24 +43,6 @@
       "hora": "15:45",
       "local": false,
       "cancha": "Seminario —_"
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Intermedia",
-      "rival": "Old Christians",
-      "fecha": "2026-08-08",
-      "hora": "13:30",
-      "local": true,
-      "cancha": "Ceibos Club"
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "M19",
-      "rival": "Old Christians",
-      "fecha": "2026-08-08",
-      "hora": "12:00",
-      "local": true,
-      "cancha": "Ceibos Club"
     },
     {
       "deporte": "hockey",
@@ -107,12 +63,11 @@
     },
     {
       "deporte": "rugby",
-      "categoria": "Intermedia",
-      "rival": "Carrasco Polo",
+      "categoria": "M19",
+      "rival": "Lobos",
       "fecha": "2026-08-15",
-      "hora": "14:00",
-      "local": false,
-      "cancha": "Carrasco Polo"
+      "hora": "12:00",
+      "local": true
     },
     {
       "deporte": "hockey",
@@ -148,33 +103,6 @@
       "hora": "A confirmar",
       "local": true,
       "cancha": "Ceibos _ ¡Quedar 8) pepsi a ZILLERTAL Zero BUM AOMINON FED"
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Intermedia",
-      "rival": "MVCC",
-      "fecha": "2026-08-29",
-      "hora": "13:30",
-      "local": true,
-      "cancha": "Ceibos Club"
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "M19",
-      "rival": "MVCC",
-      "fecha": "2026-08-29",
-      "hora": "12:00",
-      "local": true,
-      "cancha": "Ceibos Club"
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Primera",
-      "rival": "MVCC",
-      "fecha": "2026-08-29",
-      "hora": "15:15",
-      "local": true,
-      "cancha": "Ceibos Club _ Blut BUM AOMINON FED 8) pepsi a ZILLERTAL Zero KASD"
     },
     {
       "deporte": "hockey",
@@ -228,6 +156,30 @@
       "hora": "15:30",
       "local": false,
       "cancha": "ST. BRENDANS"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Lions",
+      "fecha": "2026-09-05",
+      "hora": "12:00",
+      "local": false
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Seminario",
+      "fecha": "2026-09-05",
+      "hora": "12:00",
+      "local": true
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "CTM",
+      "fecha": "2026-09-05",
+      "hora": "12:00",
+      "local": false
     },
     {
       "deporte": "futbol",
@@ -293,6 +245,30 @@
       "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Champa",
+      "fecha": "2026-09-12",
+      "hora": "12:00",
+      "local": false
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "OBC",
+      "fecha": "2026-09-12",
+      "hora": "12:00",
+      "local": true
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Champa",
+      "fecha": "2026-09-12",
+      "hora": "12:00",
+      "local": false
+    },
+    {
       "deporte": "futbol",
       "categoria": "Primera",
       "rival": "SAN JUAN BAUTISTA",
@@ -356,6 +332,22 @@
       "cancha": "COMP. DEVOTO (NAUT. PICHINCHA)"
     },
     {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "PSG",
+      "fecha": "2026-09-19",
+      "hora": "12:00",
+      "local": false
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "PSG",
+      "fecha": "2026-09-19",
+      "hora": "12:00",
+      "local": false
+    },
+    {
       "deporte": "futbol",
       "categoria": "Primera",
       "rival": "CIRCULO DE TENIS MONTEVIDEO",
@@ -363,6 +355,22 @@
       "hora": "11:15",
       "local": true,
       "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "OBC",
+      "fecha": "2026-10-03",
+      "hora": "12:00",
+      "local": true
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "OBC",
+      "fecha": "2026-10-03",
+      "hora": "12:00",
+      "local": true
     },
     {
       "deporte": "futbol",
@@ -374,6 +382,22 @@
       "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Cuervos",
+      "fecha": "2026-10-10",
+      "hora": "12:00",
+      "local": false
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Cuervos",
+      "fecha": "2026-10-10",
+      "hora": "12:00",
+      "local": false
+    },
+    {
       "deporte": "futbol",
       "categoria": "Sub 18",
       "rival": "HCA UNIVERSITARIO",
@@ -381,9 +405,65 @@
       "hora": "15:30",
       "local": false,
       "cancha": "COMPLEJO NORTHFIELD"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Trebol",
+      "fecha": "2026-10-17",
+      "hora": "12:00",
+      "local": true
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Trebol",
+      "fecha": "2026-10-17",
+      "hora": "12:00",
+      "local": true
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Lobos",
+      "fecha": "2026-10-24",
+      "hora": "12:00",
+      "local": true
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Lobos",
+      "fecha": "2026-10-24",
+      "hora": "12:00",
+      "local": true
     }
   ],
   "resultados": [
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Seminario",
+      "gf": 12,
+      "gc": 22,
+      "fecha": "2025-03-14"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Club Seminario",
+      "gf": 13,
+      "gc": 23,
+      "fecha": "2026-03-13"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Club Seminario",
+      "gf": 32,
+      "gc": 24,
+      "fecha": "2026-03-13"
+    },
     {
       "deporte": "basketball",
       "categoria": "Basketball",
@@ -411,7 +491,7 @@
     {
       "deporte": "rugby",
       "categoria": "Primera",
-      "rival": "Club Seminario",
+      "rival": "Seminario",
       "gf": 32,
       "gc": 24,
       "fecha": "2026-03-14"
@@ -506,8 +586,24 @@
     },
     {
       "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Old Christians",
+      "gf": 7,
+      "gc": 92,
+      "fecha": "2026-04-11"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Old Christians",
+      "gf": 5,
+      "gc": 40,
+      "fecha": "2026-04-11"
+    },
+    {
+      "deporte": "rugby",
       "categoria": "Primera",
-      "rival": "Old Christians Club",
+      "rival": "Old Christians",
       "gf": 7,
       "gc": 60,
       "fecha": "2026-04-11"
@@ -586,6 +682,22 @@
     },
     {
       "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Carrasco Polo",
+      "gf": 21,
+      "gc": 45,
+      "fecha": "2026-04-18"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Carrasco Polo",
+      "gf": 5,
+      "gc": 14,
+      "fecha": "2026-04-18"
+    },
+    {
+      "deporte": "rugby",
       "categoria": "Primera",
       "rival": "Carrasco Polo",
       "gf": 8,
@@ -607,6 +719,14 @@
       "gf": 1,
       "gc": 2,
       "fecha": "2026-04-19"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Montevideo Cricket",
+      "gf": 19,
+      "gc": 25,
+      "fecha": "2026-04-24"
     },
     {
       "deporte": "basketball",
@@ -658,8 +778,16 @@
     },
     {
       "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Montevideo Cricket",
+      "gf": 19,
+      "gc": 3,
+      "fecha": "2026-04-25"
+    },
+    {
+      "deporte": "rugby",
       "categoria": "Primera",
-      "rival": "Montevideo C.C.",
+      "rival": "Montevideo Cricket",
       "gf": 29,
       "gc": 26,
       "fecha": "2026-04-25"
@@ -698,6 +826,30 @@
     },
     {
       "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Lions",
+      "gf": 20,
+      "gc": 21,
+      "fecha": "2026-05-01"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Círculo de Tenis",
+      "gf": 39,
+      "gc": 10,
+      "fecha": "2026-05-01"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Círculo de Tenis",
+      "gf": 38,
+      "gc": 7,
+      "fecha": "2026-05-01"
+    },
+    {
+      "deporte": "rugby",
       "categoria": "Primera",
       "rival": "Círculo de Tenis",
       "gf": 38,
@@ -722,6 +874,22 @@
     },
     {
       "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Champagnat",
+      "gf": 5,
+      "gc": 10,
+      "fecha": "2026-05-09"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Champagnat",
+      "gf": 19,
+      "gc": 15,
+      "fecha": "2026-05-09"
+    },
+    {
+      "deporte": "rugby",
       "categoria": "Primera",
       "rival": "Champagnat",
       "gf": 26,
@@ -734,6 +902,14 @@
       "rival": "Club Seminario",
       "gf": 1,
       "gc": 2,
+      "fecha": "2026-05-10"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Champagnat",
+      "gf": 26,
+      "gc": 6,
       "fecha": "2026-05-10"
     },
     {
@@ -817,6 +993,14 @@
       "fecha": "2026-05-20"
     },
     {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "PSG",
+      "gf": 15,
+      "gc": 14,
+      "fecha": "2026-05-22"
+    },
+    {
       "deporte": "futbol",
       "categoria": "PreSenior",
       "rival": "SAN JUAN BAUTISTA",
@@ -866,8 +1050,16 @@
     },
     {
       "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Pucaru Stade Gaulois",
+      "gf": 88,
+      "gc": 0,
+      "fecha": "2026-05-23"
+    },
+    {
+      "deporte": "rugby",
       "categoria": "Primera",
-      "rival": "PSG",
+      "rival": "Pucaru Stade Gaulois",
       "gf": 21,
       "gc": 21,
       "fecha": "2026-05-23"
@@ -930,8 +1122,16 @@
     },
     {
       "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Old Boys",
+      "gf": 15,
+      "gc": 57,
+      "fecha": "2026-05-30"
+    },
+    {
+      "deporte": "rugby",
       "categoria": "Primera",
-      "rival": "Old Boys & Girls Club",
+      "rival": "Old Boys",
       "gf": 0,
       "gc": 43,
       "fecha": "2026-05-30"
@@ -1018,8 +1218,24 @@
     },
     {
       "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Los Cuervos CGU",
+      "gf": 14,
+      "gc": 21,
+      "fecha": "2026-06-06"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Los Cuervos CGU",
+      "gf": 45,
+      "gc": 12,
+      "fecha": "2026-06-06"
+    },
+    {
+      "deporte": "rugby",
       "categoria": "Primera",
-      "rival": "Los Cuervos",
+      "rival": "Los Cuervos CGU",
       "gf": 17,
       "gc": 36,
       "fecha": "2026-06-06"
@@ -1031,6 +1247,30 @@
       "gf": 2,
       "gc": 2,
       "fecha": "2026-06-07"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "PGC Trébol",
+      "gf": 7,
+      "gc": 38,
+      "fecha": "2026-06-12"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "PGC Trébol",
+      "gf": 24,
+      "gc": 5,
+      "fecha": "2026-06-12"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "PGC Trébol",
+      "gf": 5,
+      "gc": 45,
+      "fecha": "2026-06-12"
     },
     {
       "deporte": "basketball",
@@ -1103,6 +1343,30 @@
       "gf": 0,
       "gc": 2,
       "fecha": "2026-06-14"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Lobos",
+      "gf": 21,
+      "gc": 26,
+      "fecha": "2026-06-19"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Lobos",
+      "gf": 24,
+      "gc": 24,
+      "fecha": "2026-06-19"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Lobos",
+      "gf": 28,
+      "gc": 42,
+      "fecha": "2026-06-19"
     },
     {
       "deporte": "basketball",
@@ -1257,6 +1521,22 @@
       "fecha": "2026-07-15"
     },
     {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Champagnat",
+      "gf": 3,
+      "gc": 5,
+      "fecha": "2026-07-19"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Los Cuervos",
+      "gf": 26,
+      "gc": 24,
+      "fecha": "2026-07-19"
+    },
+    {
       "deporte": "basketball",
       "categoria": "Basketball",
       "rival": "CLUB UNIVERSIDAD CATOLICA",
@@ -1270,6 +1550,14 @@
       "rival": "Old Sampa Club",
       "gf": 1,
       "gc": 8,
+      "fecha": "2026-07-25"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Carrasco Polo",
+      "gf": 10,
+      "gc": 12,
       "fecha": "2026-07-25"
     },
     {
@@ -1290,6 +1578,22 @@
     },
     {
       "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Club Seminario",
+      "gf": 10,
+      "gc": 13,
+      "fecha": "2026-08-01"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Lions",
+      "gf": 24,
+      "gc": 14,
+      "fecha": "2026-08-01"
+    },
+    {
+      "deporte": "rugby",
       "categoria": "Primera",
       "rival": "Seminario",
       "gf": 13,
@@ -1302,6 +1606,14 @@
       "rival": "Scuola Italiana Di Montevideo",
       "gf": 0,
       "gc": 7,
+      "fecha": "2026-08-02"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Club Seminario",
+      "gf": 13,
+      "gc": 13,
       "fecha": "2026-08-02"
     },
     {
@@ -1326,6 +1638,30 @@
       "rival": "Colegio Seminario",
       "gf": 1,
       "gc": 6,
+      "fecha": "2026-08-08"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Old Christians",
+      "gf": 7,
+      "gc": 50,
+      "fecha": "2026-08-08"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Old Christians",
+      "gf": 3,
+      "gc": 12,
+      "fecha": "2026-08-08"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Old Christians",
+      "gf": 0,
+      "gc": 26,
       "fecha": "2026-08-08"
     },
     {
@@ -1393,6 +1729,14 @@
       "fecha": "2026-08-15"
     },
     {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Carrasco Polo",
+      "gf": 7,
+      "gc": 29,
+      "fecha": "2026-08-15"
+    },
+    {
       "deporte": "futbol",
       "categoria": "Primera",
       "rival": "ALEMAN UNIVERSITARIO",
@@ -1414,6 +1758,14 @@
       "rival": "Club Seminario",
       "gf": 0,
       "gc": 1,
+      "fecha": "2026-08-16"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Carrasco Polo",
+      "gf": 23,
+      "gc": 29,
       "fecha": "2026-08-16"
     },
     {
@@ -1481,6 +1833,30 @@
       "fecha": "2026-08-29"
     },
     {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Montevideo Cricket",
+      "gf": 14,
+      "gc": 9,
+      "fecha": "2026-08-29"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Montevideo Cricket",
+      "gf": 32,
+      "gc": 12,
+      "fecha": "2026-08-29"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Montevideo Cricket",
+      "gf": 10,
+      "gc": 27,
+      "fecha": "2026-08-29"
+    },
+    {
       "deporte": "futbol",
       "categoria": "Primera",
       "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
@@ -1498,14 +1874,13 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-31T12:31:59.361Z",
+  "actualizadoEn": "2026-08-31T13:43:19.619Z",
   "diagnostico": {
     "fuentes": [
       {
         "deporte": "rugby",
-        "categoria": "Primera",
-        "url": "https://www.g22scores.com/api/teams?team_id=ceibos-club&team_name=Ceibos+Club&preferred_sport=rugby&skip_squad=true",
-        "registros": 11,
+        "url": "https://50-22.base44.app/functions/getPublicContent",
+        "registros": 65,
         "estado": "ok"
       },
       {
@@ -1645,10 +2020,10 @@
     "instagram": {
       "estado": "ok",
       "registros": 24,
-      "imagenes": 8,
+      "imagenes": 7,
       "publicacionesApify": 1,
       "historiasMencionadas": 0,
-      "cache": 8,
+      "cache": 7,
       "nuevas": 0
     }
   }
