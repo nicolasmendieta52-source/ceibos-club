@@ -1540,8 +1540,14 @@ const goleadoresResultado = resultado => {
     ? resultado.goleadores
     : resultado?.goleadores ? [resultado.goleadores] : [];
   const nombres = valores.map(textoPlano).filter(Boolean);
-  if (!nombres.length) return "";
-  return `<div class="resultado-goleadores"><span class="resultado-goleadores-etiqueta">Goles</span>${nombres.map(textoSeguro).join(" &middot; ")}</div>`;
+  const esFutbol = slugDeporte(resultado?.deporte) === "futbol";
+  if (!nombres.length && !esFutbol) return "";
+  const detalle = nombres.length
+    ? nombres.map(textoSeguro).join(" &middot; ")
+    : Number(resultado?.gf) === 0
+      ? "Ceibos no convirtió"
+      : "Goleadores aún no informados por la Liga";
+  return `<div class="resultado-goleadores"><span class="resultado-goleadores-etiqueta">Goles</span>${detalle}</div>`;
 };
 const slugDeporte = valor => String(valor ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
 const porFecha = (a,b) => String(a.fecha ?? "").localeCompare(String(b.fecha ?? ""));
