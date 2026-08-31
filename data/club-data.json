@@ -78,15 +78,6 @@
       "local": false
     },
     {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "OLD BOYS CLUB",
-      "fecha": "2026-08-29",
-      "hora": "21:00",
-      "local": false,
-      "cancha": "G. TROUVILLE"
-    },
-    {
       "deporte": "futbol",
       "categoria": "Sub 20",
       "rival": "E.L.F.",
@@ -1793,6 +1784,14 @@
       "fecha": "2026-08-23"
     },
     {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "OLD BOYS CLUB",
+      "gf": 57,
+      "gc": 60,
+      "fecha": "2026-08-29"
+    },
+    {
       "deporte": "futbol",
       "categoria": "PreSenior",
       "rival": "SAN EUGENIO",
@@ -1874,7 +1873,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-31T13:43:19.619Z",
+  "actualizadoEn": "2026-08-31T14:00:05.305Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1908,14 +1907,14 @@
         "deporte": "basketball",
         "categoria": "Basketball",
         "url": "https://ligauniversitaria.org.uy/resultados/B221B3.html",
-        "registros": 3,
+        "registros": 4,
         "estado": "ok"
       },
       {
         "deporte": "basketball",
         "categoria": "Basketball",
         "url": "https://ligauniversitaria.org.uy/partidos/B221B3.html",
-        "registros": 4,
+        "registros": 3,
         "estado": "ok"
       },
       {
