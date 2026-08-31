@@ -1498,7 +1498,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-31T12:25:15.368Z",
+  "actualizadoEn": "2026-08-31T12:31:59.361Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -1645,10 +1645,10 @@
     "instagram": {
       "estado": "ok",
       "registros": 24,
-      "imagenes": 7,
+      "imagenes": 8,
       "publicacionesApify": 1,
       "historiasMencionadas": 0,
-      "cache": 7,
+      "cache": 8,
       "nuevas": 0
     }
   }
