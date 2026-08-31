@@ -240,15 +240,6 @@
     },
     {
       "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Psg",
-      "fecha": "2026-08-30",
-      "hora": "17:00",
-      "local": true,
-      "cancha": "Pilares"
-    },
-    {
-      "deporte": "hockey",
       "categoria": "Intermedia C",
       "rival": "Old Girls BR",
       "fecha": "2026-08-30",
@@ -1320,10 +1311,18 @@
       "gf": 1,
       "gc": 0,
       "fecha": "2026-08-30"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Psg",
+      "gf": 1,
+      "gc": 4,
+      "fecha": "2026-08-30"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-30T21:12:26.964Z",
+  "actualizadoEn": "2026-08-31T05:43:19.271Z",
   "diagnostico": {
     "fuentes": [
       {
