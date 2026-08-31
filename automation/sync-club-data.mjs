@@ -189,6 +189,84 @@ function parseG22TeamApi(payload, source, aliases = []) {
   return records;
 }
 
+function categoria5022(competition) {
+  const label = comparable(`${competition?.category ?? ""} ${competition?.name ?? ""}`);
+  if (/\btop 12\b|\bprimera\b/.test(label)) return "Primera";
+  if (/\bintermedia\b/.test(label)) return "Intermedia";
+  if (/\bm ?19\b|\bsub ?19\b/.test(label)) return "M19";
+  return "";
+}
+
+function isoDateTimeUruguay(value) {
+  const raw = clean(value);
+  if (!/^\d{4}-\d{2}-\d{2}/.test(raw)) return null;
+  if (!raw.includes("T")) return { fecha: raw.slice(0, 10), hora: "A confirmar" };
+  const parsed = new Date(raw);
+  if (Number.isNaN(parsed.getTime())) return null;
+  const parts = Object.fromEntries(new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/Montevideo",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hourCycle: "h23"
+  }).formatToParts(parsed).map(part => [part.type, part.value]));
+  return { fecha: `${parts.year}-${parts.month}-${parts.day}`, hora: `${parts.hour}:${parts.minute}` };
+}
+
+function parse5022PublicContent(payload, source, aliases = []) {
+  const data = typeof payload === "string" ? JSON.parse(payload) : payload;
+  if (!data || !Array.isArray(data.matches) || !Array.isArray(data.competitions)) {
+    throw new Error("50/22 no devolvio partidos y competencias en el formato esperado");
+  }
+  const competitions = new Map(data.competitions.map(competition => [String(competition.id), competition]));
+  const season = clean(source.temporada);
+  const records = [];
+  for (const match of data.matches) {
+    const competition = competitions.get(String(match.competition_id));
+    const categoria = categoria5022(competition);
+    const competitionYear = clean(competition?.season) || clean(competition?.name).match(/\b20\d{2}\b/)?.[0] || "";
+    if (!categoria || (season && competitionYear !== season)) continue;
+    const homeIsCeibos = isTeam(match.home_club_name, aliases);
+    const awayIsCeibos = isTeam(match.away_club_name, aliases);
+    if (homeIsCeibos === awayIsCeibos) continue;
+    const dateTime = isoDateTimeUruguay(match.date);
+    if (!dateTime) continue;
+    const rival = repairText(homeIsCeibos ? match.away_club_name : match.home_club_name);
+    if (!rival) continue;
+    const status = comparable(match.status);
+    const homeScore = Number(match.home_score);
+    const awayScore = Number(match.away_score);
+    const isFinal = ["completed", "final", "finished", "closed", "cerrado"].includes(status)
+      && match.home_score !== null && match.away_score !== null
+      && Number.isFinite(homeScore) && Number.isFinite(awayScore);
+    if (isFinal) {
+      records.push({
+        kind: "resultado",
+        deporte: "rugby",
+        categoria,
+        rival,
+        fecha: dateTime.fecha,
+        gf: homeIsCeibos ? homeScore : awayScore,
+        gc: homeIsCeibos ? awayScore : homeScore
+      });
+      continue;
+    }
+    records.push({
+      kind: "partido",
+      deporte: "rugby",
+      categoria,
+      rival,
+      fecha: dateTime.fecha,
+      hora: dateTime.hora,
+      local: homeIsCeibos,
+      ...(clean(match.venue) && comparable(match.venue) !== "a confirmar" ? { cancha: repairText(match.venue) } : {})
+    });
+  }
+  return records;
+}
+
 function parseInstagramDate(value) {
   const match = clean(value).match(/^(\d{1,2})\/(\d{1,2})(?:\/(\d{4}))?$/);
   if (!match) return "";
@@ -706,7 +784,10 @@ function normalizeRecord(record, kind, priority = 0) {
     const gf = Number(record.gf);
     const gc = Number(record.gc);
     if (!Number.isFinite(gf) || !Number.isFinite(gc)) return null;
-    return { deporte, categoria, rival, gf, gc, fecha, _priority: priority };
+    const goleadores = Array.isArray(record.goleadores)
+      ? record.goleadores.map(repairText).filter(Boolean)
+      : clean(record.goleadores) ? [repairText(record.goleadores)] : [];
+    return { deporte, categoria, rival, gf, gc, fecha, ...(goleadores.length ? { goleadores } : {}), _priority: priority };
   }
   const hora = /^\d{2}:\d{2}$/.test(clean(record.hora)) ? clean(record.hora) : "A confirmar";
   return {
@@ -729,12 +810,16 @@ async function fetchDirectSource(source) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 30000);
   try {
+    const method = clean(source.metodo || "GET").toUpperCase();
     const response = await fetch(source.url, {
+      method,
       headers: {
         "user-agent": "CeibosClubFixtureBot/1.0 (contacto: info@ceibosclub.com)",
         accept: "application/json",
+        ...(method === "POST" ? { "content-type": "application/json" } : {}),
         "cache-control": "no-cache"
       },
+      ...(method === "POST" ? { body: JSON.stringify(source.body ?? {}) } : {}),
       cache: "no-store",
       signal: controller.signal
     });
@@ -815,6 +900,8 @@ async function main() {
       const text = source.modo === "direct" ? await fetchDirectSource(source) : await renderPage(source);
       const matches = source.formato === "g22-team-api"
         ? parseG22TeamApi(text, source, config.teamAliases)
+        : source.formato === "5022-public-content"
+          ? parse5022PublicContent(text, source, config.teamAliases)
         : parseText(text, source, config.teamAliases);
       console.log(`${source.deporte}: ${matches.length} partidos encontrados`);
       officialRecords.push(...matches);
@@ -871,7 +958,7 @@ async function main() {
   }
 }
 
-export { categoriaDesdePlaca, expandApifyInstagramImages, extractInstagramStoryMentionImages, mergeClubData, parseG22TeamApi, parseHockeyLine, parseInstagramImage, parseInstagramResultsBoard, repairText, verifiedRugbyResults2026 };
+export { categoriaDesdePlaca, expandApifyInstagramImages, extractInstagramStoryMentionImages, mergeClubData, parse5022PublicContent, parseG22TeamApi, parseHockeyLine, parseInstagramImage, parseInstagramResultsBoard, repairText, verifiedRugbyResults2026 };
 
 const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 if (isMain) main().catch(error => { console.error(error); process.exitCode = 1; });

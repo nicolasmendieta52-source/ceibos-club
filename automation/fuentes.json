@@ -3,11 +3,11 @@
   "sources": [
     {
       "deporte": "rugby",
-      "categoria": "Primera",
-      "url": "https://www.g22scores.com/api/teams?team_id=ceibos-club&team_name=Ceibos+Club&preferred_sport=rugby&skip_squad=true",
+      "url": "https://50-22.base44.app/functions/getPublicContent",
       "modo": "direct",
-      "formato": "g22-team-api",
-      "teamId": "ceibos-club"
+      "metodo": "POST",
+      "formato": "5022-public-content",
+      "temporada": "2026"
     },
     {
       "deporte": "hockey",

@@ -1,9 +1,37 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { expandApifyInstagramImages, extractInstagramStoryMentionImages, mergeClubData, parseG22TeamApi, parseHockeyLine, parseInstagramImage, parseInstagramResultsBoard, repairText, verifiedRugbyResults2026 } from "./sync-club-data.mjs";
+import { expandApifyInstagramImages, extractInstagramStoryMentionImages, mergeClubData, parse5022PublicContent, parseG22TeamApi, parseHockeyLine, parseInstagramImage, parseInstagramResultsBoard, repairText, verifiedRugbyResults2026 } from "./sync-club-data.mjs";
 
 const aliases = ["CEIBOS", "CEIBOS CLUB", "LOS CEIBOS"];
+
+test("usa 50/22 como fuente oficial de las tres divisiones de rugby", () => {
+  const config = JSON.parse(fs.readFileSync(new URL("./fuentes.json", import.meta.url), "utf8"));
+  const source = config.sources.find(item => item.deporte === "rugby");
+  assert.equal(source.formato, "5022-public-content");
+  assert.equal(source.metodo, "POST");
+  assert.equal(source.url, "https://50-22.base44.app/functions/getPublicContent");
+});
+
+test("lee Primera, Intermedia y M19 de 50/22 sin convertir pendientes en 0 a 0", () => {
+  const competitions = [
+    { id: "top", name: "Clausura 2026 - Top 12", category: "Top 12", season: "2026" },
+    { id: "inter", name: "Clausura 2026 - Intermedia", category: "Intermedia", season: "2026" },
+    { id: "m19", name: "Clausura 2026 - M19", category: "M19", season: "2026" }
+  ];
+  const matches = [
+    { competition_id: "top", date: "2026-08-29T18:15:00.000Z", status: "completed", home_club_name: "Ceibos", away_club_name: "Montevideo Cricket", home_score: 10, away_score: 27 },
+    { competition_id: "inter", date: "2026-09-05T18:00:00.000Z", status: "scheduled", home_club_name: "Ceibos", away_club_name: "Lobos", home_score: 0, away_score: 0, venue: "A confirmar" },
+    { competition_id: "m19", date: "2026-08-30T15:00:00.000Z", status: "completed", home_club_name: "Old Boys", away_club_name: "Ceibos", home_score: 12, away_score: 18 }
+  ];
+  const records = parse5022PublicContent({ competitions, matches }, { temporada: "2026" }, aliases);
+  assert.deepEqual(records.map(record => record.categoria), ["Primera", "Intermedia", "M19"]);
+  assert.deepEqual(records[0], { kind: "resultado", deporte: "rugby", categoria: "Primera", rival: "Montevideo Cricket", fecha: "2026-08-29", gf: 10, gc: 27 });
+  assert.equal(records[1].kind, "partido");
+  assert.equal("gf" in records[1], false);
+  assert.equal(records[2].gf, 18);
+  assert.equal(records[2].gc, 12);
+});
 
 test("mantiene las fuentes oficiales de PreSenior y Sub 20", () => {
   const config = JSON.parse(fs.readFileSync(new URL("./fuentes.json", import.meta.url), "utf8"));

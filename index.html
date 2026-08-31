@@ -625,6 +625,8 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 .resultado-mini{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 14px;border-radius:13px;background:rgba(37,67,105,.2);margin-bottom:7px}
 .resultado-mini strong{font-family:var(--display);font-size:1.15rem;color:var(--dorado)}
 .resultado-mini small{display:block;margin-top:3px;color:rgba(246,241,228,.5);font-size:.7rem}
+.resultado-goleadores{margin-top:7px;color:#d6aa45;font-size:.72rem;font-weight:800;line-height:1.4}
+.resultado-goleadores .resultado-goleadores-etiqueta{margin-right:6px;color:var(--dorado-soft);font-size:.61rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
 .dep-vermas{margin-top:10px}
 .dep-vermas summary{cursor:pointer;color:var(--dorado);font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;list-style:none}
 .dep-vermas summary::-webkit-details-marker{display:none}
@@ -659,6 +661,7 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 .score-num .sep{color:rgba(246,241,228,.3);font-size:.6em}
 .score-num .nos{color:var(--dorado)}
 .score-rival{margin-top:12px;font-weight:600;color:rgba(246,241,228,.75)}
+.score-card .resultado-goleadores{margin-top:10px;padding-top:9px;border-top:1px solid rgba(229,187,82,.2)}
 .score-ver-mas{display:inline-block;margin-top:15px;color:var(--dorado);font-size:.68rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
 .score-res{
   position:absolute;top:18px;right:-32px;transform:rotate(38deg);
@@ -1532,6 +1535,14 @@ const etiquetaCategoria = categoria => textoSeguro(String(categoria ?? "").repla
 const fechaValida = fecha => /^\d{4}-\d{2}-\d{2}$/.test(fecha) && !Number.isNaN(new Date(fecha + "T00:00:00").getTime());
 const fechaBreve = fecha => { if (!fechaValida(fecha)) return ""; const f = fmtFecha(fecha); return `${f.semana} ${f.dia} ${f.mes}`; };
 const textoPlano = valor => repararTextoWeb(valor).replace(/[<>&"']/g, "").trim().slice(0, 180);
+const goleadoresResultado = resultado => {
+  const valores = Array.isArray(resultado?.goleadores)
+    ? resultado.goleadores
+    : resultado?.goleadores ? [resultado.goleadores] : [];
+  const nombres = valores.map(textoPlano).filter(Boolean);
+  if (!nombres.length) return "";
+  return `<div class="resultado-goleadores"><span class="resultado-goleadores-etiqueta">Goles</span>${nombres.map(textoSeguro).join(" &middot; ")}</div>`;
+};
 const slugDeporte = valor => String(valor ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
 const porFecha = (a,b) => String(a.fecha ?? "").localeCompare(String(b.fecha ?? ""));
 const horaOrdenable = hora => /^\d{1,2}:\d{2}$/.test(String(hora ?? "").trim()) ? String(hora).padStart(5,"0") : "99:99";
@@ -1607,8 +1618,8 @@ function renderDeportes(){
             ${proximo ? (()=>{ const f=fmtFecha(proximo.fecha); return `<div class="partido-mini"><div><div class="vs">vs ${textoSeguro(proximo.rival)}</div><div class="meta">${f.dia} ${f.mes} · ${horaVisible(proximo.hora)}</div></div><span class="pill ${proximo.local?'local':'visita'}">${proximo.local?'Local':'Visitante'}</span></div>`; })() : `<p class="sin-datos">Sin próximos partidos cargados.</p>`}
             ${futuros.length ? `<details class="dep-vermas"><summary>Ver ${futuros.length} partido${futuros.length===1?'':'s'} futuro${futuros.length===1?'':'s'}</summary>${futuros.map(p=>{ const f=fmtFecha(p.fecha); return `<div class="partido-mini"><div><div class="vs">vs ${textoSeguro(p.rival)}</div><div class="meta">${f.dia} ${f.mes} · ${horaVisible(p.hora)}</div></div><span class="pill ${p.local?'local':'visita'}">${p.local?'Local':'Visitante'}</span></div>`; }).join("")}</details>` : ""}
             <h5>Último resultado</h5>
-            ${ultimoResultado ? `<div class="resultado-mini"><div><span>vs ${textoSeguro(ultimoResultado.rival)}</span>${fechaBreve(ultimoResultado.fecha)?`<small>${fechaBreve(ultimoResultado.fecha)}</small>`:""}</div><strong>${ultimoResultado.gf} — ${ultimoResultado.gc}</strong></div>` : `<p class="sin-datos">Sin resultados cargados.</p>`}
-            ${historial.length ? `<details class="dep-vermas"><summary>Ver historial 2026 (${historial.length})</summary>${historial.map(r=>`<div class="resultado-mini"><div><span>vs ${textoSeguro(r.rival)}</span>${fechaBreve(r.fecha)?`<small>${fechaBreve(r.fecha)}</small>`:""}</div><strong>${r.gf} — ${r.gc}</strong></div>`).join("")}</details>` : ""}
+            ${ultimoResultado ? `<div class="resultado-mini"><div><span>vs ${textoSeguro(ultimoResultado.rival)}</span>${fechaBreve(ultimoResultado.fecha)?`<small>${fechaBreve(ultimoResultado.fecha)}</small>`:""}${goleadoresResultado(ultimoResultado)}</div><strong>${ultimoResultado.gf} — ${ultimoResultado.gc}</strong></div>` : `<p class="sin-datos">Sin resultados cargados.</p>`}
+            ${historial.length ? `<details class="dep-vermas"><summary>Ver historial 2026 (${historial.length})</summary>${historial.map(r=>`<div class="resultado-mini"><div><span>vs ${textoSeguro(r.rival)}</span>${fechaBreve(r.fecha)?`<small>${fechaBreve(r.fecha)}</small>`:""}${goleadoresResultado(r)}</div><strong>${r.gf} — ${r.gc}</strong></div>`).join("")}</details>` : ""}
           </div>`;
         }).join("")}
       </div>`;
@@ -1664,7 +1675,7 @@ function renderDeportePanel(){
   const [proximo, ...futuros] = partidosCategoria;
   const [ultimoResultado, ...historial] = resultadosCategoria;
   const partidoMini = p => { const f=fmtFecha(p.fecha); return `<div class="partido-mini"><div><div class="vs">vs ${textoSeguro(p.rival)}</div><div class="meta">${f.semana} ${f.dia} ${f.mes} &middot; ${horaVisible(p.hora)} &middot; ${textoSeguro(ubicacionVisible(p))}</div></div><span class="pill ${p.local?'local':'visita'}">${p.local?'Local':'Visitante'}</span></div>`; };
-  const resultadoMini = r => `<div class="resultado-mini"><div><span>vs ${textoSeguro(r.rival)}</span>${fechaBreve(r.fecha)?`<small>${fechaBreve(r.fecha)}</small>`:""}</div><strong>${r.gf} &mdash; ${r.gc}</strong></div>`;
+  const resultadoMini = r => `<div class="resultado-mini"><div><span>vs ${textoSeguro(r.rival)}</span>${fechaBreve(r.fecha)?`<small>${fechaBreve(r.fecha)}</small>`:""}${goleadoresResultado(r)}</div><strong>${r.gf} &mdash; ${r.gc}</strong></div>`;
   panels.innerHTML = `<div class="dep-panel activo" id="${d.slug}" role="tabpanel" aria-labelledby="tab-${d.slug}">
     <div class="dep-info">
       <h3>${textoSeguro(d.nombre)} ${textoSeguro(d.ico)}</h3>
@@ -1744,6 +1755,7 @@ function renderScore(){
       ${fechaResultado}
       <div class="score-num"><span class="nos">${r.gf}</span><span class="sep">—</span><span>${r.gc}</span></div>
       <div class="score-rival">vs ${r.rival}</div>
+      ${goleadoresResultado(r)}
       <span class="score-ver-mas">Ver detalle →</span>
     </a>`;
   }).join("");
