@@ -2021,7 +2021,17 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
       .filter(p => DEPORTES.some(dep => dep.slug === p.deporte) && fechaValida(p.fecha))
       .map(p => ({ deporte:p.deporte, categoria:textoPlano(p.categoria), rival:textoPlano(p.rival), fecha:p.fecha, hora:textoPlano(p.hora), local:Boolean(p.local), cancha:textoPlano(p.cancha), predioZona:textoPlano(p.predioZona || p.zonaPredio) }));
     if (Array.isArray(d.resultados)) RESULTADOS = d.resultados
-      .map(r => ({ deporte:textoPlano(r.deporte), categoria:textoPlano(r.categoria), rival:textoPlano(r.rival), fecha:fechaValida(r.fecha) ? r.fecha : "", gf:Number(r.gf) || 0, gc:Number(r.gc) || 0 }));
+      .map(r => ({
+        deporte:textoPlano(r.deporte),
+        categoria:textoPlano(r.categoria),
+        rival:textoPlano(r.rival),
+        fecha:fechaValida(r.fecha) ? r.fecha : "",
+        gf:Number(r.gf) || 0,
+        gc:Number(r.gc) || 0,
+        goleadores:(Array.isArray(r.goleadores) ? r.goleadores : r.goleadores ? [r.goleadores] : [])
+          .map(textoPlano)
+          .filter(Boolean)
+      }));
     if (Array.isArray(d.eventos) && d.eventos.length) EVENTOS = d.eventos
       .filter(e => fechaValida(e.fecha))
       .map(e => ({ fecha:e.fecha, titulo:textoPlano(e.titulo), tipo:e.tipo === "solidario" ? "solidario" : "social", desc:textoPlano(e.desc) }));
