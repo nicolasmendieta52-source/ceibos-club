@@ -533,7 +533,12 @@
       "rival": "OLD WOODLANDS CLUB",
       "gf": 3,
       "gc": 2,
-      "fecha": "2026-04-11"
+      "fecha": "2026-04-11",
+      "goleadores": [
+        "SANTIAGO JORGE KIRIAKIDIS (21')",
+        "CARLOS JAVIER MORALES (32')",
+        "FACUNDO SILVEIRA (61')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -549,7 +554,10 @@
       "rival": "COLEGIO Y LICEO INGLES",
       "gf": 1,
       "gc": 0,
-      "fecha": "2026-04-11"
+      "fecha": "2026-04-11",
+      "goleadores": [
+        "JUAN FRANCISCO TORRES NEGREIRA (55') · en contra"
+      ]
     },
     {
       "deporte": "futbol",
@@ -557,7 +565,13 @@
       "rival": "NACIONAL UNIVERSITARIO",
       "gf": 4,
       "gc": 1,
-      "fecha": "2026-04-11"
+      "fecha": "2026-04-11",
+      "goleadores": [
+        "IGNACIO SERE (4') · en contra",
+        "RAFAEL FERBER (32') · en contra",
+        "JUAN IGNACIO CABRERA (51') · en contra",
+        "HECTOR RUBIO (73') · en contra"
+      ]
     },
     {
       "deporte": "hockey",
@@ -605,7 +619,13 @@
       "rival": "OLIMAR",
       "gf": 4,
       "gc": 2,
-      "fecha": "2026-04-12"
+      "fecha": "2026-04-12",
+      "goleadores": [
+        "RODRIGO LOPEZ (19')",
+        "ISMAEL MAESO (30')",
+        "JUAN PEDRO IRURETA-GOYENA (90')",
+        "JUAN DIEGO TORRES NEGREIRA (92')"
+      ]
     },
     {
       "deporte": "hockey",
@@ -637,7 +657,11 @@
       "rival": "FLORES UNIVERSITARIO",
       "gf": 2,
       "gc": 2,
-      "fecha": "2026-04-18"
+      "fecha": "2026-04-18",
+      "goleadores": [
+        "PABLO RAFAEL VERDE (28') · en contra",
+        "JUAN MARTIN DIAZ (75') · en contra"
+      ]
     },
     {
       "deporte": "futbol",
@@ -645,7 +669,11 @@
       "rival": "NUMA TURCATTI",
       "gf": 2,
       "gc": 1,
-      "fecha": "2026-04-18"
+      "fecha": "2026-04-18",
+      "goleadores": [
+        "SANTIAGO MARIA FIGUEREDO (16')",
+        "JOAQUIN ETCHELAR (21')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -653,7 +681,12 @@
       "rival": "CLUB SEMINARIO",
       "gf": 3,
       "gc": 1,
-      "fecha": "2026-04-18"
+      "fecha": "2026-04-18",
+      "goleadores": [
+        "JUAN IGNACIO CABRERA (13')",
+        "AGUSTIN ALVEZ (65')",
+        "PABLO MARTIN BARTABURU (86')"
+      ]
     },
     {
       "deporte": "hockey",
@@ -701,7 +734,13 @@
       "rival": "CITY PARK",
       "gf": 4,
       "gc": 1,
-      "fecha": "2026-04-19"
+      "fecha": "2026-04-19",
+      "goleadores": [
+        "JUAN PEDRO IRURETA-GOYENA (18') · en contra",
+        "JUAN PEDRO IRURETA-GOYENA (18') · en contra",
+        "FEDERICO CASTELLS (42') · en contra",
+        "PATRICK HOBBINS (66') · en contra"
+      ]
     },
     {
       "deporte": "hockey",
@@ -733,7 +772,10 @@
       "rival": "LA ESCAPADA UNIVERSITARIO",
       "gf": 1,
       "gc": 1,
-      "fecha": "2026-04-25"
+      "fecha": "2026-04-25",
+      "goleadores": [
+        "SANTIAGO JORGE KIRIAKIDIS (69')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -741,7 +783,10 @@
       "rival": "SAGRADA FAMILIA UNIVERSITARIO",
       "gf": 1,
       "gc": 1,
-      "fecha": "2026-04-25"
+      "fecha": "2026-04-25",
+      "goleadores": [
+        "ATILIO FRANCISCO NARANCIO (26') · en contra"
+      ]
     },
     {
       "deporte": "futbol",
@@ -749,7 +794,10 @@
       "rival": "JUAN XXIII BLANCO",
       "gf": 1,
       "gc": 2,
-      "fecha": "2026-04-25"
+      "fecha": "2026-04-25",
+      "goleadores": [
+        "JUAN ANDRES BRATSCHI (40') · en contra"
+      ]
     },
     {
       "deporte": "futbol",
@@ -757,7 +805,12 @@
       "rival": "MATURANA UNIVERSITARIO",
       "gf": 3,
       "gc": 0,
-      "fecha": "2026-04-25"
+      "fecha": "2026-04-25",
+      "goleadores": [
+        "HECTOR RUBIO (17') · en contra",
+        "JUAN IGNACIO CABRERA (23') · en contra",
+        "PABLO MARTIN BARTABURU (86') · en contra"
+      ]
     },
     {
       "deporte": "hockey",
@@ -789,7 +842,11 @@
       "rival": "CLUB JESUS MARIA",
       "gf": 2,
       "gc": 1,
-      "fecha": "2026-04-26"
+      "fecha": "2026-04-26",
+      "goleadores": [
+        "PATRICK HOBBINS (46')",
+        "JUAN IGNACIO CABRERA (68')"
+      ]
     },
     {
       "deporte": "hockey",
@@ -917,7 +974,14 @@
       "rival": "CLUB ESTUDIANTES INGENIERIA",
       "gf": 5,
       "gc": 0,
-      "fecha": "2026-05-16"
+      "fecha": "2026-05-16",
+      "goleadores": [
+        "JUAN MARTIN DIAZ (7') · en contra",
+        "ALEJANDRO MARIA GONZALEZ (17') · en contra",
+        "WELLINGTON RODRIGO BERENGUER (48') · en contra",
+        "FRANCISCO CARRIQUIRY (77') · en contra",
+        "WELLINGTON RODRIGO BERENGUER (92') · en contra"
+      ]
     },
     {
       "deporte": "futbol",
@@ -925,7 +989,11 @@
       "rival": "ALEMAN UNIVERSITARIO",
       "gf": 2,
       "gc": 2,
-      "fecha": "2026-05-16"
+      "fecha": "2026-05-16",
+      "goleadores": [
+        "ATILIO FRANCISCO NARANCIO (48')",
+        "AGUSTIN CALVO (89')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -933,7 +1001,11 @@
       "rival": "SAN PABLO UNIVERSITARIO",
       "gf": 2,
       "gc": 1,
-      "fecha": "2026-05-16"
+      "fecha": "2026-05-16",
+      "goleadores": [
+        "SANTIAGO MARIA FIGUEREDO (21')",
+        "TOMAS JOSE TARIGO (46')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -941,7 +1013,10 @@
       "rival": "SAN PABLO UNIVERSITARIO",
       "gf": 1,
       "gc": 3,
-      "fecha": "2026-05-16"
+      "fecha": "2026-05-16",
+      "goleadores": [
+        "PABLO MARTIN BARTABURU (50')"
+      ]
     },
     {
       "deporte": "hockey",
@@ -965,7 +1040,10 @@
       "rival": "INDEPENDIENTE",
       "gf": 1,
       "gc": 1,
-      "fecha": "2026-05-17"
+      "fecha": "2026-05-17",
+      "goleadores": [
+        "JUAN PEDRO IRURETA-GOYENA (12') · en contra"
+      ]
     },
     {
       "deporte": "hockey",
@@ -997,7 +1075,10 @@
       "rival": "SAN JUAN BAUTISTA",
       "gf": 1,
       "gc": 4,
-      "fecha": "2026-05-23"
+      "fecha": "2026-05-23",
+      "goleadores": [
+        "CARLOS JAVIER MORALES (17')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1005,7 +1086,11 @@
       "rival": "OLD CHRISTIANS AZUL",
       "gf": 2,
       "gc": 2,
-      "fecha": "2026-05-23"
+      "fecha": "2026-05-23",
+      "goleadores": [
+        "SANTIAGO LOPEZ (29') · en contra",
+        "SANTIAGO LOPEZ (55') · en contra"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1013,7 +1098,11 @@
       "rival": "OLD CHRISTIANS NARANJA",
       "gf": 2,
       "gc": 2,
-      "fecha": "2026-05-23"
+      "fecha": "2026-05-23",
+      "goleadores": [
+        "TOMAS JOSE TARIGO (28') · en contra",
+        "JUAN ANDRES BRATSCHI (81') · en contra"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1021,7 +1110,11 @@
       "rival": "OLD CHRISTIANS CLUB",
       "gf": 2,
       "gc": 3,
-      "fecha": "2026-05-23"
+      "fecha": "2026-05-23",
+      "goleadores": [
+        "IGNACIO SERE (65') · en contra",
+        "SANTIAGO PONS (90') · en contra"
+      ]
     },
     {
       "deporte": "hockey",
@@ -1061,7 +1154,11 @@
       "rival": "SAGRADA FAMILIA UNIVERSITARIO",
       "gf": 2,
       "gc": 1,
-      "fecha": "2026-05-24"
+      "fecha": "2026-05-24",
+      "goleadores": [
+        "JUAN PEDRO IRURETA-GOYENA (12')",
+        "JUAN PEDRO IRURETA-GOYENA (43')"
+      ]
     },
     {
       "deporte": "hockey",
@@ -1085,7 +1182,14 @@
       "rival": "DEPORTIVO MITRE",
       "gf": 5,
       "gc": 1,
-      "fecha": "2026-05-30"
+      "fecha": "2026-05-30",
+      "goleadores": [
+        "FACUNDO SILVEIRA (62') · en contra",
+        "JUAN MARTIN DIAZ (72') · en contra",
+        "SANTIAGO JORGE KIRIAKIDIS (75') · en contra",
+        "EMETERIO MARTIN MORALES (80') · en contra",
+        "SANTIAGO JORGE KIRIAKIDIS (89') · en contra"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1093,7 +1197,10 @@
       "rival": "TENIS EL PINAR",
       "gf": 1,
       "gc": 0,
-      "fecha": "2026-05-30"
+      "fecha": "2026-05-30",
+      "goleadores": [
+        "ENRIQUE MARTIN BOIX (83')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1101,7 +1208,11 @@
       "rival": "CENTRO CRISTOBAL COLON",
       "gf": 2,
       "gc": 2,
-      "fecha": "2026-05-30"
+      "fecha": "2026-05-30",
+      "goleadores": [
+        "SANTIAGO MARIA FIGUEREDO (28')",
+        "SANTIAGO MARIA FIGUEREDO (41')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1109,7 +1220,13 @@
       "rival": "TENIS EL PINAR",
       "gf": 4,
       "gc": 2,
-      "fecha": "2026-05-30"
+      "fecha": "2026-05-30",
+      "goleadores": [
+        "JUAN IGNACIO CABRERA (2')",
+        "BAUTISTA SANTOS MUSTO (24')",
+        "SEBASTIAN FERBER (68')",
+        "DIEGO VALENTIN COSTA (85')"
+      ]
     },
     {
       "deporte": "rugby",
@@ -1133,7 +1250,10 @@
       "rival": "CLUB UNIVERSIDAD CATOLICA",
       "gf": 1,
       "gc": 2,
-      "fecha": "2026-05-31"
+      "fecha": "2026-05-31",
+      "goleadores": [
+        "JUAN PEDRO IRURETA-GOYENA (62') · en contra"
+      ]
     },
     {
       "deporte": "hockey",
@@ -1165,7 +1285,17 @@
       "rival": "TACUAREMBO UNIVERSITARIO",
       "gf": 8,
       "gc": 2,
-      "fecha": "2026-06-06"
+      "fecha": "2026-06-06",
+      "goleadores": [
+        "CARLOS JAVIER MORALES (2')",
+        "CARLOS JAVIER MORALES (4')",
+        "CARLOS JAVIER MORALES (10')",
+        "CARLOS JAVIER MORALES (25')",
+        "CARLOS JAVIER MORALES (65')",
+        "EMETERIO MARTIN MORALES (79')",
+        "CARLOS JAVIER MORALES (85')",
+        "CARLOS JAVIER MORALES (90')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1173,7 +1303,10 @@
       "rival": "OLD WOODLANDS CLUB",
       "gf": 1,
       "gc": 4,
-      "fecha": "2026-06-06"
+      "fecha": "2026-06-06",
+      "goleadores": [
+        "JOAQUIN NARANCIO (85') · en contra"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1181,7 +1314,12 @@
       "rival": "OLD BRENDANS VERDE",
       "gf": 3,
       "gc": 1,
-      "fecha": "2026-06-06"
+      "fecha": "2026-06-06",
+      "goleadores": [
+        "GUILLERMO JOSE BARREIRO (13') · en contra",
+        "TOMAS SEVERI (40') · en contra",
+        "JUAN FRANCISCO TORRES NEGREIRA (55') · en contra"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1189,7 +1327,10 @@
       "rival": "OLD WOODLANDS CLUB",
       "gf": 1,
       "gc": 2,
-      "fecha": "2026-06-06"
+      "fecha": "2026-06-06",
+      "goleadores": [
+        "PABLO MARTIN BARTABURU (17') · en contra"
+      ]
     },
     {
       "deporte": "hockey",
@@ -1237,7 +1378,11 @@
       "rival": "J.M.L.M",
       "gf": 2,
       "gc": 2,
-      "fecha": "2026-06-07"
+      "fecha": "2026-06-07",
+      "goleadores": [
+        "FERNANDO INTHAMOUSSU (39')",
+        "FEDERICO CASTELLS (94')"
+      ]
     },
     {
       "deporte": "rugby",
@@ -1277,7 +1422,10 @@
       "rival": "CLARA JACKSON UNIVERSITARIO",
       "gf": 1,
       "gc": 2,
-      "fecha": "2026-06-13"
+      "fecha": "2026-06-13",
+      "goleadores": [
+        "JUAN IGNACIO KIRIAKIDIS (2') · en contra"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1285,7 +1433,10 @@
       "rival": "PLAYA HONDA UNIVERSITARIO",
       "gf": 1,
       "gc": 5,
-      "fecha": "2026-06-13"
+      "fecha": "2026-06-13",
+      "goleadores": [
+        "AGUSTIN CALVO (20')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1293,7 +1444,10 @@
       "rival": "SEMINARIO UNIVERSITARIO",
       "gf": 1,
       "gc": 2,
-      "fecha": "2026-06-13"
+      "fecha": "2026-06-13",
+      "goleadores": [
+        "JUAN FRANCISCO TORRES NEGREIRA (64')"
+      ]
     },
     {
       "deporte": "hockey",
@@ -1325,7 +1479,11 @@
       "rival": "CENTRO CRISTOBAL COLON",
       "gf": 2,
       "gc": 1,
-      "fecha": "2026-06-14"
+      "fecha": "2026-06-14",
+      "goleadores": [
+        "JUAN IGNACIO CABRERA (52') · en contra",
+        "ISMAEL MAESO (53') · en contra"
+      ]
     },
     {
       "deporte": "hockey",
@@ -1373,7 +1531,12 @@
       "rival": "EL CHORRO FUTBOL CLUB",
       "gf": 3,
       "gc": 1,
-      "fecha": "2026-06-20"
+      "fecha": "2026-06-20",
+      "goleadores": [
+        "CARLOS JAVIER MORALES (22')",
+        "CARLOS JAVIER MORALES (80')",
+        "EMETERIO MARTIN MORALES (90')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1381,7 +1544,10 @@
       "rival": "CARRASCO POLO CLUB",
       "gf": 1,
       "gc": 3,
-      "fecha": "2026-06-20"
+      "fecha": "2026-06-20",
+      "goleadores": [
+        "AGUSTIN CALVO (65') · en contra"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1389,7 +1555,10 @@
       "rival": "WANDERERS",
       "gf": 1,
       "gc": 2,
-      "fecha": "2026-06-20"
+      "fecha": "2026-06-20",
+      "goleadores": [
+        "LUCA BROUKAERT (60') · en contra"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1397,7 +1566,12 @@
       "rival": "J.M.L.M",
       "gf": 3,
       "gc": 3,
-      "fecha": "2026-06-20"
+      "fecha": "2026-06-20",
+      "goleadores": [
+        "JUAN IGNACIO CABRERA (44') · en contra",
+        "RAFAEL FERBER (85') · en contra",
+        "IGNACIO SERE (93') · en contra"
+      ]
     },
     {
       "deporte": "rugby",
@@ -1413,7 +1587,10 @@
       "rival": "ELBIO FERNANDEZ",
       "gf": 1,
       "gc": 2,
-      "fecha": "2026-06-21"
+      "fecha": "2026-06-21",
+      "goleadores": [
+        "JUAN PEDRO IRURETA-GOYENA (40')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1421,7 +1598,15 @@
       "rival": "ELBIO FERNANDEZ",
       "gf": 6,
       "gc": 1,
-      "fecha": "2026-06-21"
+      "fecha": "2026-06-21",
+      "goleadores": [
+        "AGUSTIN ALVEZ (14')",
+        "AGUSTIN ALVEZ (21')",
+        "APARICIO VOSS (47')",
+        "JUAN BAUTISTA RODRIGUEZ (52')",
+        "JUAN BAUTISTA RODRIGUEZ (81')",
+        "GERONIMO RODRIGO (82')"
+      ]
     },
     {
       "deporte": "hockey",
@@ -1461,7 +1646,10 @@
       "rival": "ODONTOLOGIA UNIVERSITARIO",
       "gf": 1,
       "gc": 3,
-      "fecha": "2026-06-27"
+      "fecha": "2026-06-27",
+      "goleadores": [
+        "FACUNDO SILVEIRA (50') · en contra"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1477,7 +1665,11 @@
       "rival": "SAN EUGENIO",
       "gf": 2,
       "gc": 1,
-      "fecha": "2026-06-27"
+      "fecha": "2026-06-27",
+      "goleadores": [
+        "JUAN ANDRES BRATSCHI (36')",
+        "JUAN ANDRES BRATSCHI (40')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1485,7 +1677,11 @@
       "rival": "OLD BOYS CLUB",
       "gf": 2,
       "gc": 2,
-      "fecha": "2026-06-27"
+      "fecha": "2026-06-27",
+      "goleadores": [
+        "SANTIAGO PONS (7')",
+        "JUAN IGNACIO CABRERA (20')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1493,7 +1689,10 @@
       "rival": "OLD BRENDANS CLUB",
       "gf": 1,
       "gc": 1,
-      "fecha": "2026-06-28"
+      "fecha": "2026-06-28",
+      "goleadores": [
+        "JUAN IGNACIO CABRERA (51') · en contra"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1501,7 +1700,10 @@
       "rival": "PLAYA HONDA UNIVERSITARIO",
       "gf": 1,
       "gc": 1,
-      "fecha": "2026-07-04"
+      "fecha": "2026-07-04",
+      "goleadores": [
+        "JUAN IGNACIO CABRERA (50')"
+      ]
     },
     {
       "deporte": "hockey",
@@ -1677,7 +1879,11 @@
       "rival": "ALEMAN UNIVERSITARIO",
       "gf": 2,
       "gc": 5,
-      "fecha": "2026-08-15"
+      "fecha": "2026-08-15",
+      "goleadores": [
+        "FACUNDO SILVEIRA (5') · en contra",
+        "VARTAN AGHASI SANTURIAN (62') · en contra"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1685,7 +1891,10 @@
       "rival": "CARRASCO LAWN TENNIS",
       "gf": 1,
       "gc": 2,
-      "fecha": "2026-08-15"
+      "fecha": "2026-08-15",
+      "goleadores": [
+        "GONZALO VARELA (90')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1693,7 +1902,10 @@
       "rival": "DANUBIO FUTBOL CLUB",
       "gf": 1,
       "gc": 1,
-      "fecha": "2026-08-15"
+      "fecha": "2026-08-15",
+      "goleadores": [
+        "JUAN ANDRES BRATSCHI (44')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1701,7 +1913,12 @@
       "rival": "CARRASCO LAWN TENNIS",
       "gf": 3,
       "gc": 0,
-      "fecha": "2026-08-15"
+      "fecha": "2026-08-15",
+      "goleadores": [
+        "GERONIMO RODRIGO (15')",
+        "PABLO MARTIN BARTABURU (50')",
+        "JOAQUIN MARIA BARTOL (83')"
+      ]
     },
     {
       "deporte": "hockey",
@@ -1733,7 +1950,10 @@
       "rival": "ALEMAN UNIVERSITARIO",
       "gf": 1,
       "gc": 2,
-      "fecha": "2026-08-16"
+      "fecha": "2026-08-16",
+      "goleadores": [
+        "IGNACIO SERE (92') · en contra"
+      ]
     },
     {
       "deporte": "futbol",
@@ -1741,7 +1961,11 @@
       "rival": "JUAN XXIII",
       "gf": 2,
       "gc": 0,
-      "fecha": "2026-08-16"
+      "fecha": "2026-08-16",
+      "goleadores": [
+        "GERONIMO RODRIGO (51') · en contra",
+        "AGUSTIN TOMMA (83') · en contra"
+      ]
     },
     {
       "deporte": "hockey",
@@ -1873,7 +2097,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-31T14:00:05.305Z",
+  "actualizadoEn": "2026-08-31T14:20:09.712Z",
   "diagnostico": {
     "fuentes": [
       {
