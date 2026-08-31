@@ -1,9 +1,28 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { expandApifyInstagramImages, extractInstagramStoryMentionImages, mergeClubData, parse5022PublicContent, parseG22TeamApi, parseHockeyLine, parseInstagramImage, parseInstagramResultsBoard, repairText, verifiedRugbyResults2026 } from "./sync-club-data.mjs";
+import { expandApifyInstagramImages, extractInstagramStoryMentionImages, mergeClubData, parse5022PublicContent, parseG22TeamApi, parseHockeyLine, parseInstagramImage, parseInstagramResultsBoard, parseLigaResultsApi, repairText, verifiedRugbyResults2026 } from "./sync-club-data.mjs";
 
 const aliases = ["CEIBOS", "CEIBOS CLUB", "LOS CEIBOS"];
+
+test("asocia los goleadores y minutos oficiales de la Liga al lado de Ceibos", () => {
+  const rows = [
+    { ID: "98076", Fecha_Hora: "2026-04-12 11:15:00", Locatario: "CEIBOS CLUB", GL: "4", Visitante: "OLIMAR", GV: "2" },
+    { ID: "98111", Fecha_Hora: "2026-04-19 09:00:00", Locatario: "OLD BOYS", GL: "2", Visitante: "CEIBOS CLUB", GV: "1" }
+  ];
+  const goals = new Map([
+    ["98076", [
+      { Nombre: "JUAN DIEGO TORRES", minutos: "92", EnContra: "0" },
+      { Nombre: "ISMAEL MAESO", minutos: "30", EnContra: "0" }
+    ]],
+    ["98111", [{ Nombre: "DEFENSOR RIVAL", minutos: "44", EnContra: "1" }]]
+  ]);
+  const records = parseLigaResultsApi(rows, { deporte: "futbol", categoria: "Primera" }, aliases, goals);
+  assert.deepEqual(records[0].goleadores, ["ISMAEL MAESO (30')", "JUAN DIEGO TORRES (92')"]);
+  assert.deepEqual(records[1].goleadores, ["DEFENSOR RIVAL (44') · en contra"]);
+  assert.equal(records[1].gf, 1);
+  assert.equal(records[1].gc, 2);
+});
 
 test("usa 50/22 como fuente oficial de las tres divisiones de rugby", () => {
   const config = JSON.parse(fs.readFileSync(new URL("./fuentes.json", import.meta.url), "utf8"));

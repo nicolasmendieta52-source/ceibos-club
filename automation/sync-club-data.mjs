@@ -128,6 +128,131 @@ function parseText(text, source, aliases) {
   return text.split(/\n|\r|(?<=Cerrado)|(?<=Pendiente)/).map(line => parseLine(line, source, aliases)).filter(Boolean);
 }
 
+function ligaDateTime(value) {
+  const match = clean(value).match(/^(\d{4}-\d{2}-\d{2})(?:[ T](\d{2}:\d{2}))?/);
+  return match ? { fecha: match[1], hora: match[2] || "A confirmar" } : null;
+}
+
+function ligaOwnGoal(value) {
+  return ["1", "true", "si", "sí"].includes(comparable(value));
+}
+
+function ligaGoalMinute(value) {
+  const minute = clean(value).replace(/[^0-9+]/g, "");
+  return minute ? `${minute}'` : "";
+}
+
+function parseLigaResultsApi(rows, source, aliases, goalsByMatchId = new Map()) {
+  if (!Array.isArray(rows)) throw new Error("La Liga Universitaria no devolvio una lista de resultados");
+  const records = [];
+  for (const row of rows) {
+    const home = repairText(row.Locatario);
+    const away = repairText(row.Visitante);
+    const homeIsCeibos = isTeam(home, aliases);
+    const awayIsCeibos = isTeam(away, aliases);
+    if (homeIsCeibos === awayIsCeibos) continue;
+    const dateTime = ligaDateTime(row.Fecha_Hora);
+    const homeScore = Number(row.GL);
+    const awayScore = Number(row.GV);
+    if (!dateTime || !Number.isFinite(homeScore) || !Number.isFinite(awayScore)) continue;
+
+    const goalEvents = goalsByMatchId.get(String(row.ID)) ?? [];
+    const goleadores = [...goalEvents]
+      .filter(goal => clean(goal.Nombre))
+      .sort((left, right) => Number.parseInt(clean(left.minutos), 10) - Number.parseInt(clean(right.minutos), 10))
+      .map(goal => {
+        const minute = ligaGoalMinute(goal.minutos);
+        const ownGoal = ligaOwnGoal(goal.EnContra) ? " · en contra" : "";
+        return `${repairText(goal.Nombre)}${minute ? ` (${minute})` : ""}${ownGoal}`;
+      });
+
+    records.push({
+      kind: "resultado",
+      deporte: source.deporte,
+      categoria: source.categoria,
+      rival: homeIsCeibos ? away : home,
+      fecha: dateTime.fecha,
+      gf: homeIsCeibos ? homeScore : awayScore,
+      gc: homeIsCeibos ? awayScore : homeScore,
+      ...(goleadores.length ? { goleadores } : {})
+    });
+  }
+  return records;
+}
+
+async function fetchLigaJson(url) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 30000);
+  try {
+    const response = await fetch(url, {
+      headers: {
+        "user-agent": "CeibosClubFixtureBot/1.0 (contacto: info@ceibosclub.com)",
+        accept: "application/json",
+        "cache-control": "no-cache"
+      },
+      cache: "no-store",
+      signal: controller.signal
+    });
+    if (!response.ok) throw new Error(`HTTP ${response.status} al consultar la Liga Universitaria`);
+    return await response.json();
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+async function mapWithConcurrency(items, limit, mapper) {
+  const output = new Array(items.length);
+  let next = 0;
+  const workers = Array.from({ length: Math.min(limit, items.length) }, async () => {
+    while (next < items.length) {
+      const index = next;
+      next += 1;
+      output[index] = await mapper(items[index], index);
+    }
+  });
+  await Promise.all(workers);
+  return output;
+}
+
+async function fetchLigaResultsWithScorers(source, aliases) {
+  const pageResponse = await fetch(source.url, {
+    headers: { "user-agent": "CeibosClubFixtureBot/1.0 (contacto: info@ceibosclub.com)", "cache-control": "no-cache" },
+    cache: "no-store"
+  });
+  if (!pageResponse.ok) throw new Error(`HTTP ${pageResponse.status} al abrir resultados de la Liga Universitaria`);
+  const page = await pageResponse.text();
+  const configId = page.match(/<meta\s+name=["']config-id["']\s+content=["']([^"']+)["']/i)?.[1];
+  if (!configId) throw new Error("La pagina de resultados no informa su config-id");
+
+  const configurations = await fetchLigaJson(new URL("../config/config.json", source.url));
+  const configuration = Array.isArray(configurations)
+    ? configurations.find(item => String(item.ID) === String(configId))
+    : null;
+  if (!configuration) throw new Error(`No se encontro la configuracion ${configId} de la Liga Universitaria`);
+
+  const apiUrl = new URL("api.php", source.url);
+  apiUrl.search = new URLSearchParams({
+    action: "cargarPartidos",
+    temporada: configuration.Temporada,
+    deporte: configuration.Deporte,
+    torneo: configuration.Torneo,
+    categoria: configuration.Categoria,
+    serie: configuration.Serie
+  }).toString();
+  const rows = await fetchLigaJson(apiUrl);
+  if (!Array.isArray(rows)) throw new Error("La Liga Universitaria no devolvio los resultados esperados");
+
+  const ceibosRows = rows.filter(row => isTeam(row.Locatario, aliases) !== isTeam(row.Visitante, aliases));
+  const scorerEntries = await mapWithConcurrency(ceibosRows, 4, async row => {
+    const action = isTeam(row.Locatario, aliases) ? "GolesLocatario" : "GolesVisitante";
+    const goalsUrl = new URL("api.php", source.url);
+    goalsUrl.search = new URLSearchParams({ action, id: String(row.ID) }).toString();
+    const goals = await fetchLigaJson(goalsUrl);
+    return [String(row.ID), Array.isArray(goals) ? goals : []];
+  });
+  return parseLigaResultsApi(rows, source, aliases, new Map(scorerEntries));
+}
+
 function uruguayDateTime(timestamp) {
   const seconds = Number(timestamp);
   if (!Number.isFinite(seconds) || seconds <= 0) return null;
@@ -897,12 +1022,17 @@ async function main() {
     try {
       // G22 ofrece los datos de Rugby en JSON. Las demás federaciones todavía
       // requieren Chromium porque construyen sus tablas con JavaScript.
-      const text = source.modo === "direct" ? await fetchDirectSource(source) : await renderPage(source);
-      const matches = source.formato === "g22-team-api"
-        ? parseG22TeamApi(text, source, config.teamAliases)
-        : source.formato === "5022-public-content"
-          ? parse5022PublicContent(text, source, config.teamAliases)
-        : parseText(text, source, config.teamAliases);
+      let matches;
+      if (source.deporte === "futbol" && source.url.includes("/resultados/")) {
+        matches = await fetchLigaResultsWithScorers(source, config.teamAliases);
+      } else {
+        const text = source.modo === "direct" ? await fetchDirectSource(source) : await renderPage(source);
+        matches = source.formato === "g22-team-api"
+          ? parseG22TeamApi(text, source, config.teamAliases)
+          : source.formato === "5022-public-content"
+            ? parse5022PublicContent(text, source, config.teamAliases)
+            : parseText(text, source, config.teamAliases);
+      }
       console.log(`${source.deporte}: ${matches.length} partidos encontrados`);
       officialRecords.push(...matches);
       sourceStatus.push({ deporte: source.deporte, categoria: source.categoria, url: source.url, registros: matches.length, estado: matches.length ? "ok" : "sin-coincidencias" });
@@ -958,7 +1088,7 @@ async function main() {
   }
 }
 
-export { categoriaDesdePlaca, expandApifyInstagramImages, extractInstagramStoryMentionImages, mergeClubData, parse5022PublicContent, parseG22TeamApi, parseHockeyLine, parseInstagramImage, parseInstagramResultsBoard, repairText, verifiedRugbyResults2026 };
+export { categoriaDesdePlaca, expandApifyInstagramImages, extractInstagramStoryMentionImages, fetchLigaResultsWithScorers, mergeClubData, parse5022PublicContent, parseG22TeamApi, parseHockeyLine, parseInstagramImage, parseInstagramResultsBoard, parseLigaResultsApi, repairText, verifiedRugbyResults2026 };
 
 const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 if (isMain) main().catch(error => { console.error(error); process.exitCode = 1; });
