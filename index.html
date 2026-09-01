@@ -417,6 +417,7 @@ html[data-ceibos-access="locked"] .ceibos-access-gate{
         <a href="#basketball" data-deporte-link="basketball">Basketball</a>
       </div>
     </div>
+    <a href="#archivo">Archivo histórico</a>
     <a href="#resultados">Resultados</a>
     <a href="#fixture">Fixture</a>
     <a href="#vida">Vida Ceibos</a>
@@ -432,6 +433,7 @@ html[data-ceibos-access="locked"] .ceibos-access-gate{
 <div class="nav-mobile" id="navMobile" aria-label="Navegación principal" aria-hidden="true">
   <a href="#noticias">Noticias</a>
   <a href="#deportes">Deportes</a>
+  <a href="#archivo">Archivo histórico</a>
   <a href="#resultados">Resultados</a>
   <a href="#fixture">Fixture</a>
   <a href="#vida">Vida Ceibos</a>
@@ -540,6 +542,8 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 
 /* ---------- DEPORTES ---------- */
 #deportes{background:linear-gradient(180deg,var(--verde-night),var(--verde-deep))}
+#archivo{background:var(--verde-deep);scroll-margin-top:78px}
+#archivo .archivo-shell{margin-top:0;padding-top:0;border-top:0}
 
 /* ---------- NOTICIAS ---------- */
 #noticias{background:linear-gradient(180deg,var(--verde-night),#1d392f)}
@@ -683,14 +687,35 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 .archivo-lista strong{color:var(--blanco)}
 .archivo-goleador{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .archivo-goleador b{color:var(--dorado)}
+.archivo-actualidad{display:grid;gap:16px}
+.archivo-actualidad-resumen{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.archivo-actualidad-resumen .archivo-stat{background:linear-gradient(145deg,rgba(229,187,82,.1),rgba(246,241,228,.025))}
+.archivo-actualidad-grid{display:grid;grid-template-columns:minmax(230px,.72fr) minmax(0,1.48fr);gap:16px;align-items:start}
+.archivo-actualidad-panel{min-width:0;padding:20px;border:1px solid rgba(246,241,228,.1);border-radius:19px;background:rgba(246,241,228,.025)}
+.archivo-actualidad-panel h4{margin-bottom:14px;color:var(--dorado-soft);font-size:.7rem;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.archivo-top-goleadores{list-style:none;counter-reset:archivo-goleador;display:grid;gap:9px}
+.archivo-top-goleadores li{counter-increment:archivo-goleador;display:grid;grid-template-columns:28px 1fr auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid rgba(246,241,228,.08)}
+.archivo-top-goleadores li:last-child{border-bottom:0}
+.archivo-top-goleadores li::before{content:counter(archivo-goleador);display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--dorado);color:var(--verde-night);font-family:var(--display);font-size:.95rem}
+.archivo-top-goleadores span{color:var(--blanco);font-size:.78rem;font-weight:800;line-height:1.35}
+.archivo-top-goleadores b{font-family:var(--display);font-size:1.3rem;color:var(--dorado)}
+.archivo-tabla-wrap{overflow-x:auto;border-radius:12px}
+.archivo-tabla{width:100%;min-width:520px;border-collapse:collapse;font-size:.73rem}
+.archivo-tabla th{padding:0 10px 10px;color:rgba(246,241,228,.48);font-size:.59rem;letter-spacing:.11em;text-align:center;text-transform:uppercase}
+.archivo-tabla th:first-child,.archivo-tabla td:first-child{text-align:left}
+.archivo-tabla td{padding:11px 10px;border-top:1px solid rgba(246,241,228,.08);color:rgba(246,241,228,.72);text-align:center}
+.archivo-tabla td:first-child{color:var(--blanco);font-weight:800}
+.archivo-tabla td:last-child{color:var(--dorado);font-weight:900}
+.archivo-actualidad-nota{margin-top:11px;color:rgba(246,241,228,.42);font-size:.65rem;line-height:1.45}
 .archivo-vacio{padding:17px;border:1px dashed rgba(246,241,228,.2);border-radius:14px;color:rgba(246,241,228,.52);font-size:.78rem;line-height:1.55}
 .archivo-fuentes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.archivo-fuentes,.archivo-subtitulo:has(+ .archivo-fuentes){display:none}
 .archivo-fuente{display:block;padding:13px 15px;border:1px solid rgba(246,241,228,.1);border-radius:14px;color:var(--blanco);font-size:.76rem;text-decoration:none;transition:border-color .2s,background .2s}
 .archivo-fuente:hover{border-color:var(--dorado);background:rgba(229,187,82,.07)}
 .archivo-fuente small{display:block;margin-top:4px;color:rgba(246,241,228,.48)}
 .archivo-metodo{margin-top:22px;padding:15px 17px;border-radius:15px;background:rgba(229,187,82,.08);color:rgba(246,241,228,.66);font-size:.76rem;line-height:1.55}
-@media(max-width:980px){.archivo-grid{grid-template-columns:repeat(2,1fr)}.archivo-categorias{grid-template-columns:repeat(2,1fr)}.archivo-stats{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:680px){.archivo-topline{display:block}.archivo-topline p{margin-top:12px}.archivo-grid,.archivo-categorias,.archivo-dos-columnas,.archivo-fuentes{grid-template-columns:1fr}.archivo-hero{grid-template-columns:1fr;padding:18px}.archivo-card{min-height:180px}.archivo-stats{grid-template-columns:repeat(2,1fr)}.archivo-hito{grid-template-columns:56px 1fr}}
+@media(max-width:980px){.archivo-grid{grid-template-columns:repeat(2,1fr)}.archivo-categorias{grid-template-columns:repeat(2,1fr)}.archivo-stats{grid-template-columns:repeat(3,1fr)}.archivo-actualidad-grid{grid-template-columns:1fr}}
+@media(max-width:680px){.archivo-topline{display:block}.archivo-topline p{margin-top:12px}.archivo-grid,.archivo-categorias,.archivo-dos-columnas,.archivo-fuentes{grid-template-columns:1fr}.archivo-hero{grid-template-columns:1fr;padding:18px}.archivo-card{min-height:180px}.archivo-stats,.archivo-actualidad-resumen{grid-template-columns:repeat(2,1fr)}.archivo-hito{grid-template-columns:56px 1fr}.archivo-actualidad-panel{padding:16px}}
 
 /* ---------- RESULTADOS scoreboard ---------- */
 #resultados{background:var(--verde-deep)}
@@ -825,6 +850,9 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
   <p class="sub rev rev-d2">Rugby, hockey, fútbol y basketball: elegí tu cancha. En todas se juega con los mismos colores y el mismo lema.</p>
   <div class="dep-tabs rev rev-d3" id="depTabs" role="tablist" aria-label="Deportes"></div>
   <div id="depPanels"></div>
+</section>
+
+<section id="archivo" aria-label="Archivo histórico deportivo">
   <div id="archivoHistorico" class="archivo-shell" aria-live="polite"></div>
 </section>
 
@@ -1770,9 +1798,11 @@ function renderDeportePanel(){
 /* Archivo historico: los hitos curados viven en data/sports-history.json.
    La estadistica 2026 se calcula con el mismo club-data.json que alimenta la web. */
 const claveCategoriaArchivo = valor => String(valor ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
-const resultadosArchivo = (deporte, categoria) => RESULTADOS
-  .filter(resultado => slugDeporte(resultado.deporte) === deporte && claveCategoriaArchivo(resultado.categoria) === claveCategoriaArchivo(categoria) && fechaValida(resultado.fecha) && String(resultado.fecha).startsWith("2026-"))
+const resultadosDeporteArchivo = deporte => RESULTADOS
+  .filter(resultado => slugDeporte(resultado.deporte) === deporte && fechaValida(resultado.fecha) && String(resultado.fecha).startsWith("2026-"))
   .sort(porFecha);
+const resultadosArchivo = (deporte, categoria) => resultadosDeporteArchivo(deporte)
+  .filter(resultado => claveCategoriaArchivo(resultado.categoria) === claveCategoriaArchivo(categoria));
 const estadisticaArchivo = (deporte, categoria) => resultadosArchivo(deporte, categoria).reduce((total, resultado) => {
   total.pj += 1;
   total.gf += Number(resultado.gf) || 0;
@@ -1785,15 +1815,40 @@ const estadisticaArchivo = (deporte, categoria) => resultadosArchivo(deporte, ca
 function goleadoresTemporadaArchivo(deporte, categoria){
   if (deporte !== "futbol") return [];
   const conteo = new Map();
-  resultadosArchivo(deporte, categoria).forEach(resultado => {
+  const resultados = categoria ? resultadosArchivo(deporte, categoria) : resultadosDeporteArchivo(deporte);
+  resultados.forEach(resultado => {
     const valores = Array.isArray(resultado.goleadores) ? resultado.goleadores : resultado.goleadores ? [resultado.goleadores] : [];
-    valores.flatMap(valor => repararTextoWeb(valor).split(/\s*[·;]\s*/)).forEach(valor => {
+    [...new Set(valores.flatMap(valor => repararTextoWeb(valor).split(/\s*[·;]\s*/)).map(valor => valor.trim()).filter(Boolean))].forEach(valor => {
       if (!valor || /en contra/i.test(valor)) return;
       const nombre = valor.replace(/\s*\(\s*\d+[^)]*\)\s*$/, "").replace(/\s+-.*$/, "").trim();
       if (nombre) conteo.set(nombre, (conteo.get(nombre) || 0) + 1);
     });
   });
   return [...conteo.entries()].map(([nombre,goles]) => ({nombre,goles})).sort((a,b) => b.goles-a.goles || a.nombre.localeCompare(b.nombre, "es"));
+}
+function actualidadDeporteArchivo(deporte){
+  const filas = deporte.categories.map(categoria => ({
+    categoria: categoria.name,
+    ...estadisticaArchivo(deporte.slug, categoria.name)
+  })).filter(fila => fila.pj > 0);
+  const total = filas.reduce((suma, fila) => ({
+    pj:suma.pj+fila.pj, pg:suma.pg+fila.pg, pe:suma.pe+fila.pe, pp:suma.pp+fila.pp,
+    gf:suma.gf+fila.gf, gc:suma.gc+fila.gc
+  }), {pj:0,pg:0,pe:0,pp:0,gf:0,gc:0});
+  const goleadores = goleadoresTemporadaArchivo(deporte.slug).slice(0,3);
+  const tabla = filas.length ? `<div class="archivo-tabla-wrap"><table class="archivo-tabla"><thead><tr><th>Categoría</th><th>PJ</th><th>V</th><th>E</th><th>D</th><th>F</th><th>C</th><th>Dif.</th></tr></thead><tbody>${filas.map(fila => `<tr><td>${textoSeguro(fila.categoria)}</td><td>${fila.pj}</td><td>${fila.pg}</td><td>${fila.pe}</td><td>${fila.pp}</td><td>${fila.gf}</td><td>${fila.gc}</td><td>${fila.gf-fila.gc > 0 ? '+' : ''}${fila.gf-fila.gc}</td></tr>`).join("")}</tbody></table></div>` : `<div class="archivo-vacio">Aún no hay resultados 2026 para construir la tabla actual.</div>`;
+  return `<div class="archivo-actualidad">
+    <div class="archivo-actualidad-resumen">
+      <div class="archivo-stat"><strong>${total.pj}</strong><span>Partidos</span></div>
+      <div class="archivo-stat"><strong>${total.pg}</strong><span>Victorias</span></div>
+      <div class="archivo-stat"><strong>${total.pe}</strong><span>Empates</span></div>
+      <div class="archivo-stat"><strong>${total.pp}</strong><span>Derrotas</span></div>
+    </div>
+    <div class="archivo-actualidad-grid">
+      <div class="archivo-actualidad-panel"><h4>Top 3 goleadores</h4>${goleadores.length ? `<ol class="archivo-top-goleadores">${goleadores.map(jugador => `<li><span>${textoSeguro(jugador.nombre)}</span><b>${jugador.goles}</b></li>`).join("")}</ol>` : `<div class="archivo-vacio">Todavía no hay autores de goles oficiales suficientes para publicar este ranking.</div>`}</div>
+      <div class="archivo-actualidad-panel"><h4>Tabla actual de Ceibos</h4>${tabla}<p class="archivo-actualidad-nota">Rendimiento 2026 calculado con los resultados publicados para cada categoría. F: tantos a favor &middot; C: tantos en contra.</p></div>
+    </div>
+  </div>`;
 }
 const fuenteArchivo = id => ARCHIVO_HISTORICO?.sources?.[id];
 function enlacesFuentesArchivo(ids){
@@ -1814,11 +1869,11 @@ function hitoArchivo(hito){
   return `<div class="archivo-hito"><time>${textoSeguro(hito.year)}</time><div><strong>${textoSeguro(hito.title)}</strong><p>${textoSeguro(hito.detail)}</p></div></div>`;
 }
 function renderIndiceArchivo(contenedor){
-  contenedor.innerHTML = `<div class="archivo-topline"><div><span class="archivo-kicker">Memoria verdiamarilla</span><h3>Archivo hist\u00f3rico</h3></div><p>Historia verificada, temporadas documentadas y estad\u00edsticas actuales de cada plantel. Cada dato hist\u00f3rico conserva su fuente.</p></div><div class="archivo-grid">${ARCHIVO_HISTORICO.sports.map(deporte => `<a class="archivo-card" href="#archivo/${deporte.slug}"><img src="${textoSeguro(deporte.photo)}" alt="${textoSeguro(deporte.name)} de Ceibos" loading="lazy"><strong>${textoSeguro(deporte.name)}</strong><small>${deporte.categories.length} categor\u00eda${deporte.categories.length===1?'':'s'} &middot; Ver archivo</small></a>`).join("")}</div><div class="archivo-metodo"><strong>Sobre los datos.</strong> ${textoSeguro(ARCHIVO_HISTORICO.methodology.summary)}</div>`;
+  contenedor.innerHTML = `<div class="archivo-topline"><div><span class="archivo-kicker">Memoria verdiamarilla</span><h3>Archivo hist\u00f3rico</h3></div><p>Historia verificada, temporadas documentadas y estad\u00edsticas actuales de cada plantel. Cada dato hist\u00f3rico conserva su fuente.</p></div><div class="archivo-grid">${ARCHIVO_HISTORICO.sports.map(deporte => `<a class="archivo-card" href="#archivo/${deporte.slug}"><img src="${textoSeguro(deporte.photo)}" alt="${textoSeguro(deporte.name)} de Ceibos" loading="lazy"><strong>${textoSeguro(deporte.name)}</strong><small>${deporte.categories.length} categor\u00eda${deporte.categories.length===1?'':'s'} &middot; Ver archivo</small></a>`).join("")}</div>`;
 }
 function renderDeporteArchivo(contenedor, deporte){
   const fuentes = fuentesCompletasArchivo(deporte);
-  contenedor.innerHTML = `<a class="archivo-back" href="#archivo">&larr; Todos los deportes</a><div class="archivo-hero"><figure><img src="${textoSeguro(deporte.photo)}" alt="Archivo de ${textoSeguro(deporte.name)} de Ceibos" loading="lazy"></figure><div><span class="archivo-kicker">Archivo deportivo</span><h3>${textoSeguro(deporte.name)}</h3><p>${textoSeguro(deporte.description)}</p><div class="archivo-meta"><span>${textoSeguro(deporte.league)}</span><span>${textoSeguro(deporte.startLabel)}</span></div><p>${textoSeguro(deporte.startDetail)}</p></div></div><h3 class="archivo-subtitulo">Categor\u00edas</h3><div class="archivo-categorias">${deporte.categories.map(categoria => { const estadistica=estadisticaArchivo(deporte.slug,categoria.name); return `<a class="archivo-categoria" href="#archivo/${deporte.slug}/${categoria.slug}"><strong>${textoSeguro(categoria.name)}</strong><span>${textoSeguro(categoria.competition)}</span><em>${estadistica.pj ? `${estadistica.pj} partidos documentados en 2026` : 'Abrir ficha hist\u00f3rica'} &rarr;</em></a>`; }).join("")}</div><h3 class="archivo-subtitulo">L\u00ednea de tiempo confirmada</h3>${deporte.milestones.length ? `<div class="archivo-timeline">${deporte.milestones.map(hitoArchivo).join("")}</div>` : `<div class="archivo-vacio">${textoSeguro(ARCHIVO_HISTORICO.methodology.missingLabel)}</div>`}<h3 class="archivo-subtitulo">Fuentes</h3><div class="archivo-fuentes">${enlacesFuentesArchivo(fuentes)}</div>`;
+  contenedor.innerHTML = `<a class="archivo-back" href="#archivo">&larr; Todos los deportes</a><div class="archivo-hero"><figure><img src="${textoSeguro(deporte.photo)}" alt="Archivo de ${textoSeguro(deporte.name)} de Ceibos" loading="lazy"></figure><div><span class="archivo-kicker">Archivo deportivo</span><h3>${textoSeguro(deporte.name)}</h3><p>${textoSeguro(deporte.description)}</p><div class="archivo-meta"><span>${textoSeguro(deporte.league)}</span><span>${textoSeguro(deporte.startLabel)}</span></div><p>${textoSeguro(deporte.startDetail)}</p></div></div><h3 class="archivo-subtitulo">Categor\u00edas</h3><div class="archivo-categorias">${deporte.categories.map(categoria => { const estadistica=estadisticaArchivo(deporte.slug,categoria.name); return `<a class="archivo-categoria" href="#archivo/${deporte.slug}/${categoria.slug}"><strong>${textoSeguro(categoria.name)}</strong><span>${textoSeguro(categoria.competition)}</span><em>${estadistica.pj ? `${estadistica.pj} partidos documentados en 2026` : 'Abrir ficha hist\u00f3rica'} &rarr;</em></a>`; }).join("")}</div><h3 class="archivo-subtitulo">L\u00ednea de tiempo confirmada</h3>${deporte.milestones.length ? `<div class="archivo-timeline">${deporte.milestones.map(hitoArchivo).join("")}</div>` : `<div class="archivo-vacio">${textoSeguro(ARCHIVO_HISTORICO.methodology.missingLabel)}</div>`}<h3 class="archivo-subtitulo">Actualidad</h3>${actualidadDeporteArchivo(deporte)}<h3 class="archivo-subtitulo">Fuentes</h3><div class="archivo-fuentes">${enlacesFuentesArchivo(fuentes)}</div>`;
 }
 function renderCategoriaArchivo(contenedor, deporte, categoria){
   const estadistica = estadisticaArchivo(deporte.slug, categoria.name);
@@ -2011,7 +2066,7 @@ function renderPredioVivo(){
 function realinearDestinoHash(){
   const id = decodeURIComponent(location.hash.slice(1));
   if (!id) return;
-  const destino = id.startsWith("archivo") ? document.getElementById("archivoHistorico") : document.getElementById(id);
+  const destino = id.startsWith("archivo") ? document.getElementById("archivo") : document.getElementById(id);
   requestAnimationFrame(() => requestAnimationFrame(() => destino?.scrollIntoView({ block:"start" })));
 }
 function renderDinamico(){
