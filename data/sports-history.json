@@ -1,0 +1,205 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-01",
+  "methodology": {
+    "title": "Archivo histórico verificado",
+    "summary": "Los hitos históricos se publican únicamente cuando existe una fuente institucional identificable. Las estadísticas 2026 se calculan en el navegador con los resultados actuales de data/club-data.json y se distinguen de los datos históricos.",
+    "missingLabel": "No se encontró una fuente oficial suficiente para completar este dato."
+  },
+  "sources": {
+    "club-current-site": {
+      "title": "Ceibos Club — sitio institucional",
+      "url": "https://ceibosclub.com/",
+      "authority": "Ceibos Club",
+      "scope": "Identidad del club, deportes y categorías que comunica la institución."
+    },
+    "liga-affiliation": {
+      "title": "Afiliación de instituciones por fecha",
+      "url": "https://ligauniversitaria.org.uy/wp-content/uploads/2025/08/AFILIACION-INSTITUCIONES-POR-FECHA.pdf",
+      "authority": "Liga Universitaria de Deportes",
+      "scope": "Registra a Ceibos Club como institución afiliada el 18/03/1998. No prueba el inicio de cada categoría."
+    },
+    "liga-sub20-2022": {
+      "title": "¡Náutico campeón en Sub 20!",
+      "url": "https://ligauniversitaria.org.uy/nautico-campeon-en-sub-20/",
+      "authority": "Liga Universitaria de Deportes",
+      "scope": "Confirma a Ceibos campeón de la Divisional A Sub 20 en 2022 y finalista de la Copa de Campeones."
+    },
+    "liga-2025-champions": {
+      "title": "Campeones y ascensos en 2025",
+      "url": "https://ligauniversitaria.org.uy/campeones-y-ascensos-en-2025-de-todos-los-deportes-de-la-liga-universitaria/",
+      "authority": "Liga Universitaria de Deportes",
+      "scope": "Confirma a Ceibos vicecampeón de Reserva B 2025 y su ascenso."
+    },
+    "liga-football-2026": {
+      "title": "Estadísticas oficiales de fútbol 2026",
+      "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-mayores-a-2/",
+      "authority": "Liga Universitaria de Deportes",
+      "scope": "Resultados y fixture de las categorías de fútbol; la automatización usa las páginas específicas por divisional."
+    },
+    "liga-basketball-2026": {
+      "title": "Estadísticas oficiales de básquetbol B",
+      "url": "https://ligauniversitaria.org.uy/estadisticas-basquetbol-b/",
+      "authority": "Liga Universitaria de Deportes",
+      "scope": "Resultados y fixture del plantel de Basketball en 2026."
+    },
+    "liga-hockey-2016": {
+      "title": "El Apertura ya está en marcha",
+      "url": "https://ligauniversitaria.org.uy/el-apertura-ya-esta-en-marcha/",
+      "authority": "Liga Universitaria de Deportes",
+      "scope": "Documenta participación de Los Ceibos en hockey de la Liga Universitaria en 2016."
+    },
+    "fuh-inter-a": {
+      "title": "FUH — Intermedia A 2026",
+      "url": "https://admin.hockey.com.uy/posiciones?category_id=3",
+      "authority": "Federación Uruguaya de Hockey",
+      "scope": "Fixture, estados y resultados de Intermedia A."
+    },
+    "fuh-inter-b": {
+      "title": "FUH — Intermedia B 2026",
+      "url": "https://admin.hockey.com.uy/posiciones?category_id=31",
+      "authority": "Federación Uruguaya de Hockey",
+      "scope": "Fixture, estados y resultados de Intermedia B."
+    },
+    "fuh-sub18": {
+      "title": "FUH — Sub 18 2026",
+      "url": "https://admin.hockey.com.uy/posiciones?category_id=4",
+      "authority": "Federación Uruguaya de Hockey",
+      "scope": "Fixture, estados y resultados de Sub 18."
+    },
+    "fuh-reserva": {
+      "title": "FUH — Reserva 2026",
+      "url": "https://admin.hockey.com.uy/posiciones?category_id=2",
+      "authority": "Federación Uruguaya de Hockey",
+      "scope": "Página pública de posiciones y resultados de Reserva."
+    },
+    "uru-club": {
+      "title": "Ceibos Rugby — ficha institucional",
+      "url": "https://uru.org.uy/english/ceibos-rugby-66",
+      "authority": "Unión de Rugby del Uruguay",
+      "scope": "Ficha del club dentro de la URU."
+    },
+    "uru-2017-championship": {
+      "title": "Así llega Ceibos al inicio del Uruguayo de Clubes",
+      "url": "https://www.uru.org.uy/espanol/asi-llega-ceibos-al-inicio-del-uruguayodeclubes-13?nid=300",
+      "authority": "Unión de Rugby del Uruguay",
+      "scope": "Documenta el debut de Ceibos en la Zona Campeonato del Uruguayo de Clubes en 2017."
+    },
+    "uru-reubicacion-2021": {
+      "title": "Torneo Reubicación: Ceibos se quedó con el título",
+      "url": "https://www.uru.org.uy/espanol/torneoreubicacion-ceibos-se-quedo-con-el-titulo-13?nid=1224",
+      "authority": "Unión de Rugby del Uruguay",
+      "scope": "Confirma el título de Primera y la final 16-11 ante Champagnat en 2021."
+    },
+    "uru-seven-2018": {
+      "title": "Old Boys campeón del Seven URU",
+      "url": "https://www.uru.org.uy/espanol/old-boys-campeon-del-seven-uru-13?nid=883",
+      "authority": "Unión de Rugby del Uruguay",
+      "scope": "Confirma a Ceibos campeón de la Copa de Plata del Seven URU 2018."
+    },
+    "uru-m19-2017": {
+      "title": "Otro año histórico para el Valentín Martínez",
+      "url": "https://uru.org.uy/otro-ano-historico-para-el-valentin-martinez-13?nid=470",
+      "authority": "Unión de Rugby del Uruguay",
+      "scope": "Confirma a Ceibos M19 campeón de la Copa de Plata del Valentín Martínez 2017."
+    },
+    "uru-seven-2017": {
+      "title": "El Seven de Old Christians fue una fiesta",
+      "url": "https://www.uru.org.uy/espanol/el-seven-de-old-christians-fue-una-fiesta-13?nid=510",
+      "authority": "Unión de Rugby del Uruguay",
+      "scope": "Confirma a Ceibos finalista de Copa de Oro y ganador del reconocimiento Fair Play/equipo revelación en 2017."
+    },
+    "uru-apertura-2026": {
+      "title": "Todos los campeones del Torneo Apertura 2026",
+      "url": "https://mail.uru.org.uy/todos-los-campeones-del-torneo-apertura-2026-13?nid=1737",
+      "authority": "Unión de Rugby del Uruguay",
+      "scope": "Confirma la final de Copa de Plata: Lobos 28-19 Ceibos."
+    },
+    "fifty22-2026": {
+      "title": "50/22 — rugby uruguayo 2026",
+      "url": "https://50-22.base44.app/",
+      "authority": "50/22",
+      "scope": "Fuente operativa del fixture y resultados 2026 utilizada por la automatización."
+    }
+  },
+  "sports": [
+    {
+      "slug": "futbol",
+      "name": "Fútbol",
+      "photo": "assets/deporte-futbol.webp",
+      "description": "El archivo reúne la participación de los planteles de fútbol de Ceibos en la Liga Universitaria y separa los logros históricos de la estadística viva de la temporada actual.",
+      "startLabel": "Afiliación institucional registrada desde 1998",
+      "startDetail": "La Liga registra la afiliación de Ceibos Club el 18/03/1998. Esa fecha no se presenta como comienzo de cada categoría y convive con 2014, año de inicio que comunica el club en su identidad actual.",
+      "league": "Liga Universitaria de Deportes",
+      "sourceIds": ["liga-affiliation", "club-current-site", "liga-football-2026"],
+      "milestones": [
+        {"year": 1998, "title": "Afiliación institucional", "detail": "Ceibos Club figura afiliado a la Liga Universitaria desde el 18 de marzo de 1998.", "sourceIds": ["liga-affiliation"]},
+        {"year": 2022, "title": "Sub 20 campeón de la Divisional A", "detail": "El plantel ganó la Divisional A y luego fue finalista de la Copa de Campeones.", "sourceIds": ["liga-sub20-2022"]},
+        {"year": 2025, "title": "Reserva vicecampeón y ascenso", "detail": "Ceibos fue vicecampeón de Reserva B y obtuvo el ascenso para 2026.", "sourceIds": ["liga-2025-champions"]}
+      ],
+      "categories": [
+        {"slug":"primera","name":"Primera","competition":"Liga Universitaria — Mayores","description":"Plantel mayor de fútbol de Ceibos.","sourceIds":["liga-football-2026"],"achievements":[],"documentedSeasons":[2026]},
+        {"slug":"reserva-a","name":"Reserva A","competition":"Liga Universitaria — Reserva","description":"Plantel de Reserva que en 2025 compitió en la Divisional B y logró el ascenso.","sourceIds":["liga-2025-champions","liga-football-2026"],"achievements":[{"year":2025,"title":"Vicecampeón de Reserva B","detail":"Ascenso confirmado junto a Tape, Alemán y J.M.L.M.","sourceIds":["liga-2025-champions"]}],"documentedSeasons":[2025,2026]},
+        {"slug":"reserva-verde","name":"Reserva Verde","competition":"Liga Universitaria — Reserva C","description":"Segundo plantel de Reserva de Ceibos, identificado en la web como Reserva Verde.","sourceIds":["liga-football-2026"],"achievements":[],"documentedSeasons":[2026]},
+        {"slug":"presenior","name":"PreSenior","competition":"Liga Universitaria — Pre Senior","description":"Categoría Pre Senior de Ceibos.","sourceIds":["liga-football-2026"],"achievements":[],"documentedSeasons":[2026]},
+        {"slug":"sub-20","name":"Sub 20","competition":"Liga Universitaria — Sub 20 A","description":"Categoría formativa con un título oficial confirmado en 2022.","sourceIds":["liga-sub20-2022","liga-football-2026"],"achievements":[{"year":2022,"title":"Campeón Divisional A","detail":"Ceibos fue el primer equipo que aseguró un título de la Liga en la temporada 2022.","sourceIds":["liga-sub20-2022"]},{"year":2022,"title":"Finalista Copa de Campeones","detail":"Náutico ganó la final 1-0 ante Ceibos.","sourceIds":["liga-sub20-2022"]}],"notableMatches":[{"date":"2022-11-12","label":"Final Copa de Campeones","opponent":"Náutico","score":"0-1","sourceIds":["liga-sub20-2022"]}],"documentedSeasons":[2022,2026]},
+        {"slug":"sub-18","name":"Sub 18","competition":"Liga Universitaria — Sub 18","description":"Categoría juvenil de fútbol de Ceibos.","sourceIds":["liga-football-2026"],"achievements":[],"documentedSeasons":[2026]}
+      ]
+    },
+    {
+      "slug": "rugby",
+      "name": "Rugby",
+      "photo": "assets/deporte-rugby.webp",
+      "description": "El rugby es una de las disciplinas centrales de Ceibos. El archivo reúne hitos confirmados por la URU y las estadísticas vigentes provenientes de 50/22.",
+      "startLabel": "Actividad institucional actual desde 2014",
+      "startDetail": "2014 es el año que comunica Ceibos en su identidad institucional. La primera participación de máximo nivel localizada en la URU es el ingreso a la Zona Campeonato del Uruguayo de Clubes en 2017.",
+      "league": "Unión de Rugby del Uruguay / Super URU de Clubes",
+      "sourceIds": ["club-current-site", "uru-club", "uru-2017-championship", "fifty22-2026"],
+      "milestones": [
+        {"year":2017,"title":"Ingreso a Zona Campeonato","detail":"La URU documentó el debut de Ceibos en la Zona Campeonato del Uruguayo de Clubes.","sourceIds":["uru-2017-championship"]},
+        {"year":2018,"title":"Campeón Copa de Plata — Seven URU","detail":"Ceibos venció a Seminario en la definición de la Copa de Plata.","sourceIds":["uru-seven-2018"]},
+        {"year":2021,"title":"Campeón del Torneo Reubicación","detail":"Primera venció 16-11 a Champagnat en la final.","sourceIds":["uru-reubicacion-2021"]}
+      ],
+      "categories": [
+        {"slug":"primera","name":"Primera","competition":"Super URU de Clubes","description":"Plantel superior de Ceibos.","sourceIds":["uru-reubicacion-2021","uru-apertura-2026","fifty22-2026"],"achievements":[{"year":2021,"title":"Campeón Torneo Reubicación","detail":"Final ganada 16-11 ante Champagnat.","sourceIds":["uru-reubicacion-2021"]},{"year":2026,"title":"Finalista Copa de Plata del Apertura","detail":"Lobos ganó la final 28-19.","sourceIds":["uru-apertura-2026"]}],"notableMatches":[{"date":"2021-11-14","label":"Final Torneo Reubicación","opponent":"Champagnat","score":"16-11","sourceIds":["uru-reubicacion-2021"]},{"date":"2026-07-25","label":"Final Copa de Plata","opponent":"Lobos","score":"19-28","sourceIds":["uru-apertura-2026"]}],"documentedSeasons":[2021,2026]},
+        {"slug":"intermedia","name":"Intermedia","competition":"URU — Intermedia","description":"Plantel de Intermedia de Ceibos.","sourceIds":["fifty22-2026"],"achievements":[],"documentedSeasons":[2026]},
+        {"slug":"pre-intermedia","name":"Pre Intermedia","competition":"URU — Pre Intermedia","description":"Categoría declarada por el club. No se encontró todavía un archivo público completo de resultados históricos.","sourceIds":["club-current-site"],"achievements":[],"documentedSeasons":[]},
+        {"slug":"m19","name":"M19","competition":"URU — M19","description":"Categoría juvenil de rugby de Ceibos.","sourceIds":["uru-m19-2017","fifty22-2026"],"achievements":[{"year":2017,"title":"Campeón Copa de Plata — Valentín Martínez","detail":"Título juvenil confirmado por la URU.","sourceIds":["uru-m19-2017"]}],"documentedSeasons":[2017,2026]}
+      ]
+    },
+    {
+      "slug": "hockey",
+      "name": "Hockey",
+      "photo": "assets/deporte-hockey.webp",
+      "description": "El archivo de hockey prioriza el dashboard oficial de la Federación Uruguaya de Hockey para la temporada actual y conserva por separado los antecedentes de participación encontrados en la Liga Universitaria.",
+      "startLabel": "Participación documentada al menos desde 2016",
+      "startDetail": "Una publicación oficial de la Liga Universitaria documenta a Los Ceibos en la Divisional A de hockey en 2016. No se encontró una fuente institucional que permita afirmar que ese haya sido el año de inicio de la disciplina.",
+      "league": "Federación Uruguaya de Hockey",
+      "sourceIds": ["liga-hockey-2016", "fuh-inter-a", "fuh-inter-b", "fuh-sub18", "fuh-reserva"],
+      "milestones": [
+        {"year":2016,"title":"Participación oficial documentada","detail":"Los Ceibos figura en la Divisional A del Apertura de hockey de la Liga Universitaria.","sourceIds":["liga-hockey-2016"]}
+      ],
+      "categories": [
+        {"slug":"intermedia-a","name":"Intermedia A","competition":"FUH — Intermedia A","description":"Plantel de Intermedia A de Ceibos.","sourceIds":["fuh-inter-a"],"achievements":[],"documentedSeasons":[2026]},
+        {"slug":"intermedia-b","name":"Intermedia B","competition":"FUH — Intermedia B","description":"Plantel de Intermedia B de Ceibos.","sourceIds":["fuh-inter-b"],"achievements":[],"documentedSeasons":[2026]},
+        {"slug":"intermedia-c","name":"Intermedia C","competition":"Hockey — Intermedia C","description":"Categoría identificada por el club; todavía sin un archivo oficial histórico completo localizado.","sourceIds":["club-current-site"],"achievements":[],"documentedSeasons":[]},
+        {"slug":"sub-18","name":"Sub 18","competition":"FUH — Sub 18","description":"Categoría juvenil de hockey de Ceibos.","sourceIds":["fuh-sub18"],"achievements":[],"documentedSeasons":[2026]},
+        {"slug":"reserva","name":"Reserva","competition":"FUH — Reserva","description":"Plantel de Reserva de hockey de Ceibos.","sourceIds":["fuh-reserva"],"achievements":[],"documentedSeasons":[2026]}
+      ]
+    },
+    {
+      "slug": "basketball",
+      "name": "Basketball",
+      "photo": "assets/deporte-basketball.webp",
+      "description": "La disciplina más joven del club compite en la Liga Universitaria. La estadística disponible se construye con los partidos oficiales de la temporada 2026.",
+      "startLabel": "Año de inicio no confirmado en una fuente pública",
+      "startDetail": "La comunicación institucional presenta a Basketball como la disciplina más joven, pero no se localizó una fecha oficial de fundación ni un palmarés histórico verificable.",
+      "league": "Liga Universitaria de Deportes — Divisional B",
+      "sourceIds": ["club-current-site", "liga-basketball-2026"],
+      "milestones": [],
+      "categories": [
+        {"slug":"basketball","name":"Basketball","competition":"Liga Universitaria — Divisional B","description":"Plantel de Basketball de Ceibos.","sourceIds":["liga-basketball-2026"],"achievements":[],"documentedSeasons":[2026]}
+      ]
+    }
+  ]
+}
