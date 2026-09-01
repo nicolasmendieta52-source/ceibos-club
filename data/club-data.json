@@ -78,6 +78,15 @@
       "local": false
     },
     {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "ELF",
+      "fecha": "2026-08-29",
+      "hora": "15:30",
+      "local": true,
+      "cancha": "Los Ceibos"
+    },
+    {
       "deporte": "hockey",
       "categoria": "Reserva",
       "rival": "Old brendans",
@@ -2114,7 +2123,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-08-31T22:55:42.028Z",
+  "actualizadoEn": "2026-09-01T05:19:05.819Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2232,29 +2241,31 @@
         "deporte": "futbol",
         "categoria": "PreSenior",
         "url": "https://ligauniversitaria.org.uy/resultados/F3232PSC.html",
-        "registros": 12,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "This operation was aborted"
       },
       {
         "deporte": "futbol",
         "categoria": "PreSenior",
         "url": "https://ligauniversitaria.org.uy/partidos/F3232PSC.html",
-        "registros": 3,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "sin-coincidencias"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/resultados/F202020A.html",
-        "registros": 12,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "This operation was aborted"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/partidos/F202020A.html",
-        "registros": 3,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "sin-coincidencias"
       }
     ],
     "instagram": {
