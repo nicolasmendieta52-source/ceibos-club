@@ -78,15 +78,6 @@
       "local": false
     },
     {
-      "deporte": "futbol",
-      "categoria": "Sub 20",
-      "rival": "ELF",
-      "fecha": "2026-08-29",
-      "hora": "15:30",
-      "local": true,
-      "cancha": "Los Ceibos"
-    },
-    {
       "deporte": "hockey",
       "categoria": "Reserva",
       "rival": "Old brendans",
@@ -2023,7 +2014,7 @@
       "gc": 0,
       "fecha": "2026-08-29",
       "goleadores": [
-        "NICOLAS ORDOQUI (89') · en contra"
+        "NICOLAS ORDOQUI (89')"
       ]
     },
     {
@@ -2123,7 +2114,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-01T05:19:05.819Z",
+  "actualizadoEn": "2026-09-01T11:23:56.085Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2241,31 +2232,29 @@
         "deporte": "futbol",
         "categoria": "PreSenior",
         "url": "https://ligauniversitaria.org.uy/resultados/F3232PSC.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "This operation was aborted"
+        "registros": 12,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "PreSenior",
         "url": "https://ligauniversitaria.org.uy/partidos/F3232PSC.html",
-        "registros": 0,
-        "estado": "sin-coincidencias"
+        "registros": 3,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/resultados/F202020A.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "This operation was aborted"
+        "registros": 12,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/partidos/F202020A.html",
-        "registros": 0,
-        "estado": "sin-coincidencias"
+        "registros": 3,
+        "estado": "ok"
       }
     ],
     "instagram": {
