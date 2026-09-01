@@ -140,6 +140,15 @@
       "cancha": "ST. BRENDANS"
     },
     {
+      "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Yacht Intermedia",
+      "fecha": "2026-09-05",
+      "hora": "18:30",
+      "local": false,
+      "cancha": "Cancha Celeste FUH"
+    },
+    {
       "deporte": "rugby",
       "categoria": "Intermedia",
       "rival": "Lions",
@@ -180,6 +189,15 @@
       "hora": "A confirmar",
       "local": false,
       "cancha": "CANCHA A FIJAR"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Palo Y Pico",
+      "fecha": "2026-09-06",
+      "hora": "17:00",
+      "local": false,
+      "cancha": "Pilares"
     },
     {
       "deporte": "basketball",
@@ -2100,7 +2118,7 @@
       "deporte": "futbol",
       "categoria": "Primera",
       "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
-      "gf": 1,
+      "gf": 0,
       "gc": 0,
       "fecha": "2026-08-30"
     },
@@ -2114,7 +2132,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-01T16:44:45.952Z",
+  "actualizadoEn": "2026-09-01T21:07:49.861Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2127,7 +2145,7 @@
         "deporte": "hockey",
         "categoria": "Intermedia A",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=3",
-        "registros": 12,
+        "registros": 13,
         "estado": "ok"
       },
       {
@@ -2141,7 +2159,7 @@
         "deporte": "hockey",
         "categoria": "Intermedia B",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=31",
-        "registros": 19,
+        "registros": 20,
         "estado": "ok"
       },
       {
