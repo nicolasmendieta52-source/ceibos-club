@@ -19,7 +19,7 @@ test("asocia los goleadores y minutos oficiales de la Liga al lado de Ceibos", (
   ]);
   const records = parseLigaResultsApi(rows, { deporte: "futbol", categoria: "Primera" }, aliases, goals);
   assert.deepEqual(records[0].goleadores, ["ISMAEL MAESO (30')", "JUAN DIEGO TORRES (92')"]);
-  assert.deepEqual(records[1].goleadores, ["DEFENSOR RIVAL (44') · en contra"]);
+  assert.deepEqual(records[1].goleadores, ["DEFENSOR RIVAL (44')"]);
   assert.equal(records[1].gf, 1);
   assert.equal(records[1].gc, 2);
 });

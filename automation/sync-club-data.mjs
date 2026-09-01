@@ -133,10 +133,6 @@ function ligaDateTime(value) {
   return match ? { fecha: match[1], hora: match[2] || "A confirmar" } : null;
 }
 
-function ligaOwnGoal(value) {
-  return ["1", "true", "si", "sí"].includes(comparable(value));
-}
-
 function ligaGoalMinute(value) {
   const minute = clean(value).replace(/[^0-9+]/g, "");
   return minute ? `${minute}'` : "";
@@ -162,8 +158,8 @@ function parseLigaResultsApi(rows, source, aliases, goalsByMatchId = new Map()) 
       .sort((left, right) => Number.parseInt(clean(left.minutos), 10) - Number.parseInt(clean(right.minutos), 10))
       .map(goal => {
         const minute = ligaGoalMinute(goal.minutos);
-        const ownGoal = ligaOwnGoal(goal.EnContra) ? " · en contra" : "";
-        return `${repairText(goal.Nombre)}${minute ? ` (${minute})` : ""}${ownGoal}`;
+        // EnContra vale 0 para el local y 1 para el visitante; no identifica un autogol.
+        return `${repairText(goal.Nombre)}${minute ? ` (${minute})` : ""}`;
       });
 
     records.push({
