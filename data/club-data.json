@@ -99,9 +99,9 @@
       "categoria": "Basketball",
       "rival": "BELLA UNION UNIVERSITARIO",
       "fecha": "2026-09-05",
-      "hora": "A confirmar",
+      "hora": "17:30",
       "local": true,
-      "cancha": "CANCHA A FIJAR"
+      "cancha": "G. TROUVILLE"
     },
     {
       "deporte": "futbol",
@@ -2132,7 +2132,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-01T21:07:49.861Z",
+  "actualizadoEn": "2026-09-02T04:42:44.410Z",
   "diagnostico": {
     "fuentes": [
       {
