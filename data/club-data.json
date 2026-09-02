@@ -2118,9 +2118,12 @@
       "deporte": "futbol",
       "categoria": "Primera",
       "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
-      "gf": 0,
+      "gf": 1,
       "gc": 0,
-      "fecha": "2026-08-30"
+      "fecha": "2026-08-30",
+      "goleadores": [
+        "JUAN PEDRO IRURETA-GOYENA (97')"
+      ]
     },
     {
       "deporte": "hockey",
@@ -2132,7 +2135,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-02T16:40:16.585Z",
+  "actualizadoEn": "2026-09-02T21:08:37.101Z",
   "diagnostico": {
     "fuentes": [
       {
