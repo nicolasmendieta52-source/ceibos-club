@@ -153,23 +153,23 @@
       "categoria": "Intermedia",
       "rival": "Lions",
       "fecha": "2026-09-05",
-      "hora": "12:00",
+      "hora": "14:00",
       "local": false
     },
     {
       "deporte": "rugby",
       "categoria": "M19",
-      "rival": "Seminario",
+      "rival": "Club Seminario",
       "fecha": "2026-09-05",
-      "hora": "12:00",
+      "hora": "12:30",
       "local": true
     },
     {
       "deporte": "rugby",
       "categoria": "Primera",
-      "rival": "CTM",
+      "rival": "Circulo de Tenis",
       "fecha": "2026-09-05",
-      "hora": "12:00",
+      "hora": "15:45",
       "local": false
     },
     {
@@ -2135,7 +2135,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-03T04:39:43.666Z",
+  "actualizadoEn": "2026-09-03T11:22:34.916Z",
   "diagnostico": {
     "fuentes": [
       {
