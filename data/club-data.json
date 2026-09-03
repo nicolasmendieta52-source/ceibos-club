@@ -191,15 +191,6 @@
       "cancha": "CANCHA A FIJAR"
     },
     {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Palo Y Pico",
-      "fecha": "2026-09-06",
-      "hora": "17:00",
-      "local": false,
-      "cancha": "Pilares"
-    },
-    {
       "deporte": "basketball",
       "categoria": "Basketball",
       "rival": "YOUNG UNIVERSITARIO",
@@ -355,6 +346,15 @@
       "hora": "11:15",
       "local": true,
       "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Palo Y Pico",
+      "fecha": "2026-09-30",
+      "hora": "20:00",
+      "local": false,
+      "cancha": "Pilares"
     },
     {
       "deporte": "rugby",
@@ -2135,7 +2135,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-03T11:22:34.916Z",
+  "actualizadoEn": "2026-09-03T16:31:28.752Z",
   "diagnostico": {
     "fuentes": [
       {
