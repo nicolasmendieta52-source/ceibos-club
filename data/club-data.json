@@ -2013,8 +2013,8 @@
       "deporte": "hockey",
       "categoria": "Intermedia A",
       "rival": "Old Woodlands Club",
-      "gf": 1,
-      "gc": 2,
+      "gf": 0,
+      "gc": 3,
       "fecha": "2026-08-22"
     },
     {
@@ -2152,7 +2152,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-04T16:27:17.427Z",
+  "actualizadoEn": "2026-09-04T20:50:11.996Z",
   "diagnostico": {
     "fuentes": [
       {
