@@ -149,6 +149,15 @@
       "cancha": "Cancha Celeste FUH"
     },
     {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Old Girls",
+      "fecha": "2026-09-05",
+      "hora": "16:00",
+      "local": true,
+      "cancha": "Ceibos"
+    },
+    {
       "deporte": "rugby",
       "categoria": "Intermedia",
       "rival": "Lions",
@@ -186,9 +195,17 @@
       "categoria": "Sub 18",
       "rival": "COLEGIO Y LICEO INGLES",
       "fecha": "2026-09-06",
-      "hora": "A confirmar",
+      "hora": "15:30",
       "local": false,
-      "cancha": "CANCHA A FIJAR"
+      "cancha": "CAMPO DEP. COLEGIO INGLES"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Seminario",
+      "fecha": "2026-09-06",
+      "hora": "18:45",
+      "local": false
     },
     {
       "deporte": "basketball",
@@ -2135,7 +2152,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-03T21:07:52.742Z",
+  "actualizadoEn": "2026-09-04T04:42:20.318Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2280,12 +2297,12 @@
     ],
     "instagram": {
       "estado": "ok",
-      "registros": 24,
-      "imagenes": 7,
-      "publicacionesApify": 1,
+      "registros": 46,
+      "imagenes": 14,
+      "publicacionesApify": 2,
       "historiasMencionadas": 0,
       "cache": 7,
-      "nuevas": 0
+      "nuevas": 7
     }
   }
 }
