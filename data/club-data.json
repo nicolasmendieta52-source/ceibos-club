@@ -78,15 +78,6 @@
       "local": false
     },
     {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "erde vs. ELF",
-      "fecha": "2026-08-29",
-      "hora": "09:00",
-      "local": true,
-      "cancha": "Los Ceibos BN"
-    },
-    {
       "deporte": "hockey",
       "categoria": "Reserva",
       "rival": "Old brendans",
@@ -2161,7 +2152,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-05T04:38:03.646Z",
+  "actualizadoEn": "2026-09-05T10:42:16.812Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2209,8 +2200,8 @@
         "deporte": "basketball",
         "categoria": "Basketball",
         "url": "https://ligauniversitaria.org.uy/resultados/B221B.html",
-        "registros": 0,
-        "estado": "sin-coincidencias"
+        "registros": 15,
+        "estado": "ok"
       },
       {
         "deporte": "basketball",
@@ -2223,9 +2214,8 @@
         "deporte": "futbol",
         "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS31.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "fetch failed"
+        "registros": 12,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
@@ -2308,11 +2298,11 @@
     "instagram": {
       "estado": "ok",
       "registros": 46,
-      "imagenes": 14,
+      "imagenes": 15,
       "publicacionesApify": 2,
       "historiasMencionadas": 0,
       "cache": 14,
-      "nuevas": 0
+      "nuevas": 1
     }
   }
 }
