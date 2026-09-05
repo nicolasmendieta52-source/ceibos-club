@@ -105,15 +105,6 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "PreSenior",
-      "rival": "ARQUITECTURA JRS.",
-      "fecha": "2026-09-05",
-      "hora": "09:00",
-      "local": true,
-      "cancha": "MONTE VI \"LOS CEIBOS\""
-    },
-    {
-      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "TAPE",
       "fecha": "2026-09-05",
@@ -2149,10 +2140,18 @@
       "gf": 1,
       "gc": 4,
       "fecha": "2026-08-30"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "ARQUITECTURA JRS.",
+      "gf": 2,
+      "gc": 0,
+      "fecha": "2026-09-05"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-05T10:42:16.812Z",
+  "actualizadoEn": "2026-09-05T15:19:50.604Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2270,14 +2269,14 @@
         "deporte": "futbol",
         "categoria": "PreSenior",
         "url": "https://ligauniversitaria.org.uy/resultados/F3232PSC.html",
-        "registros": 12,
+        "registros": 13,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "PreSenior",
         "url": "https://ligauniversitaria.org.uy/partidos/F3232PSC.html",
-        "registros": 3,
+        "registros": 2,
         "estado": "ok"
       },
       {
@@ -2298,11 +2297,11 @@
     "instagram": {
       "estado": "ok",
       "registros": 46,
-      "imagenes": 15,
+      "imagenes": 14,
       "publicacionesApify": 2,
       "historiasMencionadas": 0,
       "cache": 14,
-      "nuevas": 1
+      "nuevas": 0
     }
   }
 }
