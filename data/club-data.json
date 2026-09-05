@@ -105,24 +105,6 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "TAPE",
-      "fecha": "2026-09-05",
-      "hora": "11:15",
-      "local": false,
-      "cancha": "MONTE VI \"LOS CEIBOS\""
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "LA BLANQUEADA",
-      "fecha": "2026-09-05",
-      "hora": "11:15",
-      "local": false,
-      "cancha": "COMPLEJO JUAN XXIII"
-    },
-    {
-      "deporte": "futbol",
       "categoria": "Sub 20",
       "rival": "OLD BRENDANS CLUB",
       "fecha": "2026-09-05",
@@ -2148,10 +2130,26 @@
       "gf": 2,
       "gc": 0,
       "fecha": "2026-09-05"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "TAPE",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-09-05"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "LA BLANQUEADA",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-09-05"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-05T15:19:50.604Z",
+  "actualizadoEn": "2026-09-05T20:27:50.109Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2213,28 +2211,28 @@
         "deporte": "futbol",
         "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS31.html",
-        "registros": 12,
+        "registros": 13,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS31.html",
-        "registros": 3,
+        "registros": 2,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS1.html",
-        "registros": 12,
+        "registros": 13,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS1.html",
-        "registros": 3,
+        "registros": 2,
         "estado": "ok"
       },
       {
