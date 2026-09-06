@@ -104,24 +104,6 @@
       "cancha": "G. TROUVILLE"
     },
     {
-      "deporte": "futbol",
-      "categoria": "Sub 20",
-      "rival": "OLD BRENDANS CLUB",
-      "fecha": "2026-09-05",
-      "hora": "15:30",
-      "local": false,
-      "cancha": "ST. BRENDANS"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia A",
-      "rival": "Yacht Intermedia",
-      "fecha": "2026-09-05",
-      "hora": "18:30",
-      "local": false,
-      "cancha": "Cancha Celeste FUH"
-    },
-    {
       "deporte": "hockey",
       "categoria": "Reserva",
       "rival": "Old Girls",
@@ -129,30 +111,6 @@
       "hora": "16:00",
       "local": true,
       "cancha": "Ceibos"
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Intermedia",
-      "rival": "Lions",
-      "fecha": "2026-09-05",
-      "hora": "14:00",
-      "local": false
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "M19",
-      "rival": "Club Seminario",
-      "fecha": "2026-09-05",
-      "hora": "12:30",
-      "local": true
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Primera",
-      "rival": "Circulo de Tenis",
-      "fecha": "2026-09-05",
-      "hora": "15:45",
-      "local": false
     },
     {
       "deporte": "futbol",
@@ -2146,10 +2104,50 @@
       "gf": 2,
       "gc": 2,
       "fecha": "2026-09-05"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "OLD BRENDANS CLUB",
+      "gf": 0,
+      "gc": 2,
+      "fecha": "2026-09-05"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Yacht Intermedia",
+      "gf": 0,
+      "gc": 0,
+      "fecha": "2026-09-05"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Lions",
+      "gf": 10,
+      "gc": 31,
+      "fecha": "2026-09-05"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Club Seminario",
+      "gf": 33,
+      "gc": 23,
+      "fecha": "2026-09-05"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Circulo de Tenis",
+      "gf": 33,
+      "gc": 21,
+      "fecha": "2026-09-05"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-05T20:27:50.109Z",
+  "actualizadoEn": "2026-09-06T04:46:48.700Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2281,14 +2279,14 @@
         "deporte": "futbol",
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/resultados/F202020A.html",
-        "registros": 12,
+        "registros": 13,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/partidos/F202020A.html",
-        "registros": 3,
+        "registros": 2,
         "estado": "ok"
       }
     ],
