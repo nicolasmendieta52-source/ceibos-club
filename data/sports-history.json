@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-01",
+  "updatedAt": "2026-09-07",
   "methodology": {
     "title": "Archivo histórico verificado",
     "summary": "Los hitos históricos se publican únicamente cuando existe una fuente institucional identificable. Las estadísticas 2026 se calculan en el navegador con los resultados actuales de data/club-data.json y se distinguen de los datos históricos.",
@@ -120,6 +120,24 @@
       "url": "https://50-22.base44.app/",
       "authority": "50/22",
       "scope": "Fuente operativa del fixture y resultados 2026 utilizada por la automatización."
+    },
+    "ceibos-rugby-players-2026": {
+      "title": "BBDD Jugadores 2026",
+      "url": "https://docs.google.com/spreadsheets/d/1T99XkubT9Gg8NCPpdrFSXGEo2QSPt-JsuOwksyXzZzs/edit",
+      "authority": "Ceibos Rugby",
+      "scope": "Base interna de jugadores y estadísticas individuales de la temporada 2026."
+    },
+    "ceibos-rugby-intermedia-2026": {
+      "title": "Plantel Intermedia 2026",
+      "url": "https://docs.google.com/spreadsheets/d/1SaVlF3_0gh0MHG6QANpmQWuIOlnPn0nzQCmJ4B3E0U0/edit",
+      "authority": "Ceibos Rugby",
+      "scope": "Registro interno por fecha del plantel de Intermedia, con anotadores y participaciones."
+    },
+    "ceibos-rugby-superior-2026": {
+      "title": "Plantel Superior 2026",
+      "url": "https://docs.google.com/spreadsheets/d/1pRkUNsi__KZQa81M_wDltAmLil_yHExeP_KyJS6nmvs/edit",
+      "authority": "Ceibos Rugby",
+      "scope": "Registro interno por fecha del Plantel Superior, con anotadores y participaciones."
     }
   },
   "sports": [
@@ -154,15 +172,70 @@
       "startLabel": "Actividad institucional actual desde 2014",
       "startDetail": "2014 es el año que comunica Ceibos en su identidad institucional. La primera participación de máximo nivel localizada en la URU es el ingreso a la Zona Campeonato del Uruguayo de Clubes en 2017.",
       "league": "Unión de Rugby del Uruguay / Super URU de Clubes",
-      "sourceIds": ["club-current-site", "uru-club", "uru-2017-championship", "fifty22-2026"],
+      "sourceIds": ["club-current-site", "uru-club", "uru-2017-championship", "fifty22-2026", "ceibos-rugby-players-2026", "ceibos-rugby-intermedia-2026", "ceibos-rugby-superior-2026"],
       "milestones": [
         {"year":2017,"title":"Ingreso a Zona Campeonato","detail":"La URU documentó el debut de Ceibos en la Zona Campeonato del Uruguayo de Clubes.","sourceIds":["uru-2017-championship"]},
         {"year":2018,"title":"Campeón Copa de Plata — Seven URU","detail":"Ceibos venció a Seminario en la definición de la Copa de Plata.","sourceIds":["uru-seven-2018"]},
         {"year":2021,"title":"Campeón del Torneo Reubicación","detail":"Primera venció 16-11 a Champagnat en la final.","sourceIds":["uru-reubicacion-2021"]}
       ],
+      "currentPlayerStats": {
+        "season": 2026,
+        "updatedAt": "2026-09-07",
+        "note": "Las planillas internas completan anotadores y estadísticas individuales. Los marcadores publicados siguen teniendo como fuente de verdad a URU y 50/22; solo se vinculan anotadores cuando rival y tanteador coinciden.",
+        "categories": [
+          {
+            "name": "Primera",
+            "sourceId": "ceibos-rugby-superior-2026",
+            "players": [
+              {"name":"Andrew","points":97,"tries":10,"conversions":19,"penalties":3},
+              {"name":"Federico Mengot","points":40,"tries":8,"conversions":0,"penalties":0},
+              {"name":"Facundo Pizzichillo","points":25,"tries":5,"conversions":0,"penalties":0},
+              {"name":"Juan Pedro Lage","points":23,"tries":1,"conversions":9,"penalties":0},
+              {"name":"Keji Takata","points":6,"tries":0,"conversions":0,"penalties":2}
+            ]
+          },
+          {
+            "name": "Intermedia",
+            "sourceId": "ceibos-rugby-intermedia-2026",
+            "players": [
+              {"name":"Keji Takata","points":49,"tries":0,"conversions":14,"penalties":7},
+              {"name":"Pape","points":15,"tries":1,"conversions":2,"penalties":2},
+              {"name":"Alfonso Vilarrubi","points":10,"tries":2,"conversions":0,"penalties":0},
+              {"name":"Cuet Calvete","points":10,"tries":2,"conversions":0,"penalties":0},
+              {"name":"Muno","points":10,"tries":2,"conversions":0,"penalties":0},
+              {"name":"Nahuel Suarez","points":10,"tries":2,"conversions":0,"penalties":0},
+              {"name":"Nito","points":10,"tries":2,"conversions":0,"penalties":0},
+              {"name":"Pampo Calvete","points":10,"tries":2,"conversions":0,"penalties":0},
+              {"name":"Pichon Gonzalez","points":10,"tries":2,"conversions":0,"penalties":0}
+            ]
+          }
+        ],
+        "matches": [
+          {"category":"Primera","date":"2026-03-13","opponent":"Club Seminario","gf":32,"gc":24,"scorers":[{"name":"Federico Mengot","tries":3},{"name":"Felipe Brum","tries":1},{"name":"Andrew","tries":1,"conversions":1,"penalties":1},{"name":"Juan Pedro Lage","conversions":1}]},
+          {"category":"Primera","date":"2026-03-14","opponent":"Seminario","gf":32,"gc":24,"scorers":[{"name":"Federico Mengot","tries":3},{"name":"Felipe Brum","tries":1},{"name":"Andrew","tries":1,"conversions":1,"penalties":1},{"name":"Juan Pedro Lage","conversions":1}]},
+          {"category":"Primera","date":"2026-04-11","opponent":"Old Christians","gf":7,"gc":60,"scorers":[{"name":"Juan Martin Gómez","tries":1},{"name":"Juan Pedro Lage","conversions":1}]},
+          {"category":"Primera","date":"2026-04-25","opponent":"Montevideo Cricket","gf":29,"gc":26,"scorers":[{"name":"Facundo Pizzichillo","tries":1},{"name":"Thomas Johnson","tries":1},{"name":"Geronimo Koster","tries":1},{"name":"Andrew","tries":2,"conversions":2}]},
+          {"category":"Primera","date":"2026-05-23","opponent":"Pucaru Stade Gaulois","gf":21,"gc":21,"scorers":[{"name":"Facundo Pizzichillo","tries":1},{"name":"Marcos Passadore","tries":1},{"name":"Toto","tries":1},{"name":"Juan Pedro Lage","conversions":3}]},
+          {"category":"Primera","date":"2026-06-12","opponent":"PGC Trébol","gf":5,"gc":45,"scorers":[{"name":"Manuel Inciarte","tries":1}]},
+          {"category":"Primera","date":"2026-06-13","opponent":"Trébol de Paysandú","gf":5,"gc":45,"scorers":[{"name":"Manuel Inciarte","tries":1}]},
+          {"category":"Primera","date":"2026-07-19","opponent":"Los Cuervos","gf":26,"gc":24,"scorers":[{"name":"Facundo Pizzichillo","tries":1},{"name":"Federico Mengot","tries":2},{"name":"Andrew","tries":1,"conversions":3}]},
+          {"category":"Primera","date":"2026-07-25","opponent":"Lobos","gf":19,"gc":28,"scorers":[{"name":"Federico Mengot","tries":2},{"name":"Andrew","tries":1,"conversions":2}]},
+          {"category":"Intermedia","date":"2026-04-11","opponent":"Old Christians","gf":7,"gc":92,"scorers":[{"name":"Geronimo Koster","tries":1},{"name":"Keji Takata","conversions":1}]},
+          {"category":"Intermedia","date":"2026-04-18","opponent":"Carrasco Polo","gf":21,"gc":45,"scorers":[{"name":"Alfonso Vilarrubi","tries":2},{"name":"Chaki","tries":1},{"name":"Keji Takata","conversions":3}]},
+          {"category":"Intermedia","date":"2026-04-24","opponent":"Montevideo Cricket","gf":19,"gc":25,"scorers":[{"name":"Pampo Calvete","tries":1},{"name":"Keji Takata","conversions":1,"penalties":4}]},
+          {"category":"Intermedia","date":"2026-05-01","opponent":"Lions","gf":20,"gc":21,"scorers":[{"name":"Cuet Calvete","tries":1},{"name":"Pape","tries":1},{"name":"Keji Takata","conversions":2,"penalties":2}]},
+          {"category":"Intermedia","date":"2026-05-22","opponent":"PSG","gf":15,"gc":14,"scorers":[{"name":"Muno","tries":1},{"name":"Biko Brazionis","tries":1},{"name":"Lucas P.","tries":1}]},
+          {"category":"Intermedia","date":"2026-05-30","opponent":"Old Boys","gf":15,"gc":57,"scorers":[{"name":"Cuet Calvete","tries":1},{"name":"Pampo Calvete","tries":1},{"name":"Keji Takata","conversions":1,"penalties":1}]},
+          {"category":"Intermedia","date":"2026-06-06","opponent":"Los Cuervos CGU","gf":14,"gc":21,"scorers":[{"name":"Nahuel Suarez","tries":1},{"name":"Pichon Gonzalez","tries":1},{"name":"Keji Takata","conversions":2}]},
+          {"category":"Intermedia","date":"2026-06-12","opponent":"PGC Trébol","gf":7,"gc":38,"scorers":[{"name":"Leonardo Silveira","tries":1},{"name":"Keji Takata","conversions":1}]},
+          {"category":"Intermedia","date":"2026-06-19","opponent":"Lobos","gf":21,"gc":26,"scorers":[{"name":"Muno","tries":1},{"name":"Nito","tries":2},{"name":"Keji Takata","conversions":3}]},
+          {"category":"Intermedia","date":"2026-07-19","opponent":"Champagnat","gf":3,"gc":5,"scorers":[{"name":"Pape","penalties":1}]},
+          {"category":"Intermedia","date":"2026-08-08","opponent":"Old Christians","gf":7,"gc":50,"scorers":[{"name":"Nazareno Vergara","tries":1},{"name":"Pape","conversions":1}]}
+        ]
+      },
       "categories": [
-        {"slug":"primera","name":"Primera","competition":"Super URU de Clubes","description":"Plantel superior de Ceibos.","sourceIds":["uru-reubicacion-2021","uru-apertura-2026","fifty22-2026"],"achievements":[{"year":2021,"title":"Campeón Torneo Reubicación","detail":"Final ganada 16-11 ante Champagnat.","sourceIds":["uru-reubicacion-2021"]},{"year":2026,"title":"Finalista Copa de Plata del Apertura","detail":"Lobos ganó la final 28-19.","sourceIds":["uru-apertura-2026"]}],"notableMatches":[{"date":"2021-11-14","label":"Final Torneo Reubicación","opponent":"Champagnat","score":"16-11","sourceIds":["uru-reubicacion-2021"]},{"date":"2026-07-25","label":"Final Copa de Plata","opponent":"Lobos","score":"19-28","sourceIds":["uru-apertura-2026"]}],"documentedSeasons":[2021,2026]},
-        {"slug":"intermedia","name":"Intermedia","competition":"URU — Intermedia","description":"Plantel de Intermedia de Ceibos.","sourceIds":["fifty22-2026"],"achievements":[],"documentedSeasons":[2026]},
+        {"slug":"primera","name":"Primera","competition":"Super URU de Clubes","description":"Plantel superior de Ceibos.","sourceIds":["uru-reubicacion-2021","uru-apertura-2026","fifty22-2026","ceibos-rugby-players-2026","ceibos-rugby-superior-2026"],"achievements":[{"year":2021,"title":"Campeón Torneo Reubicación","detail":"Final ganada 16-11 ante Champagnat.","sourceIds":["uru-reubicacion-2021"]},{"year":2026,"title":"Finalista Copa de Plata del Apertura","detail":"Lobos ganó la final 28-19.","sourceIds":["uru-apertura-2026"]}],"notableMatches":[{"date":"2021-11-14","label":"Final Torneo Reubicación","opponent":"Champagnat","score":"16-11","sourceIds":["uru-reubicacion-2021"]},{"date":"2026-07-25","label":"Final Copa de Plata","opponent":"Lobos","score":"19-28","sourceIds":["uru-apertura-2026"]}],"documentedSeasons":[2021,2026]},
+        {"slug":"intermedia","name":"Intermedia","competition":"URU — Intermedia","description":"Plantel de Intermedia de Ceibos.","sourceIds":["fifty22-2026","ceibos-rugby-players-2026","ceibos-rugby-intermedia-2026"],"achievements":[],"documentedSeasons":[2026]},
         {"slug":"pre-intermedia","name":"Pre Intermedia","competition":"URU — Pre Intermedia","description":"Categoría declarada por el club. No se encontró todavía un archivo público completo de resultados históricos.","sourceIds":["club-current-site"],"achievements":[],"documentedSeasons":[]},
         {"slug":"m19","name":"M19","competition":"URU — M19","description":"Categoría juvenil de rugby de Ceibos.","sourceIds":["uru-m19-2017","fifty22-2026"],"achievements":[{"year":2017,"title":"Campeón Copa de Plata — Valentín Martínez","detail":"Título juvenil confirmado por la URU.","sourceIds":["uru-m19-2017"]}],"documentedSeasons":[2017,2026]}
       ]

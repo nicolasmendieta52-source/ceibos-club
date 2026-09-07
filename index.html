@@ -717,73 +717,41 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 @media(max-width:980px){.archivo-grid{grid-template-columns:repeat(2,1fr)}.archivo-categorias{grid-template-columns:repeat(2,1fr)}.archivo-stats{grid-template-columns:repeat(3,1fr)}.archivo-actualidad-grid{grid-template-columns:1fr}}
 @media(max-width:680px){.archivo-topline{display:block}.archivo-topline p{margin-top:12px}.archivo-grid,.archivo-categorias,.archivo-dos-columnas,.archivo-fuentes{grid-template-columns:1fr}.archivo-hero{grid-template-columns:1fr;padding:18px}.archivo-card{min-height:180px}.archivo-stats,.archivo-actualidad-resumen{grid-template-columns:repeat(2,1fr)}.archivo-hito{grid-template-columns:56px 1fr}.archivo-actualidad-panel{padding:16px}}
 
-/* ---------- RESULTADOS scoreboard ---------- */
+/* ---------- RESULTADOS Y FIXTURE COMPACTOS ---------- */
 #resultados{background:var(--verde-deep)}
-.score-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:18px;margin-top:46px}
-.score-sport-title{grid-column:1/-1;display:flex;align-items:center;gap:11px;margin:20px 0 -2px;padding-top:14px;border-top:1px solid rgba(229,187,82,.3);font-family:var(--display);font-size:clamp(1.35rem,3vw,1.9rem);letter-spacing:.06em;text-transform:uppercase;color:var(--dorado)}
-.score-sport-title .score-sport-icon{font-family:var(--body);font-size:1.35rem;letter-spacing:0}
-.score-sport-title small{margin-left:auto;font-family:var(--body);font-size:.64rem;font-weight:900;letter-spacing:.16em;color:rgba(246,241,228,.5)}
-.score-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:18px}
-.score-card{
-  background:linear-gradient(160deg,rgba(246,241,228,.07),rgba(246,241,228,.02));
-  border:1px solid rgba(246,241,228,.1);border-radius:22px;padding:26px 24px;
-  position:relative;overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s,border-color .4s;text-decoration:none;
-}
-.score-card:hover{transform:translateY(-8px) rotate(-.5deg);border-color:rgba(229,187,82,.5);box-shadow:0 22px 50px rgba(0,0,0,.4)}
-.score-card .dep{
-  font-size:.68rem;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--dorado);
-  margin-bottom:8px;padding-right:56px;
-}
-.score-categoria{display:inline-flex;align-items:center;min-height:30px;padding:5px 12px;margin-bottom:15px;border:1px solid rgba(229,187,82,.55);border-radius:99px;background:rgba(229,187,82,.13);color:var(--dorado-soft);font-size:.82rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
-.score-fecha{display:flex;align-items:center;gap:7px;margin:-6px 0 12px;color:rgba(246,241,228,.62);font-size:.66rem;font-weight:900;letter-spacing:.11em;text-transform:uppercase}.score-fecha::before{content:"";width:18px;height:1px;background:var(--dorado);opacity:.75}.score-fecha time{color:var(--crema)}
-.score-num{
-  font-family:var(--display);font-size:clamp(2.6rem,5vw,3.6rem);color:var(--blanco);
-  display:flex;align-items:baseline;gap:14px;line-height:1;
-}
-.score-num .sep{color:rgba(246,241,228,.3);font-size:.6em}
-.score-num .nos{color:var(--dorado)}
-.score-rival{margin-top:12px;font-weight:600;color:rgba(246,241,228,.75)}
-.score-card .resultado-goleadores{margin-top:10px;padding-top:9px;border-top:1px solid rgba(229,187,82,.2)}
-.score-ver-mas{display:inline-block;margin-top:15px;color:var(--dorado);font-size:.68rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
-.score-res{
-  position:absolute;top:18px;right:-32px;transform:rotate(38deg);
-  font-size:.62rem;font-weight:900;letter-spacing:.2em;padding:5px 38px;
-}
-.score-res.v{background:var(--dorado);color:var(--verde-night)}
-.score-res.e{background:rgba(246,241,228,.25);color:var(--blanco)}
-.score-res.d{background:rgba(37,67,105,.7);color:#bcd0ec}
-
-/* ---------- FIXTURE ---------- */
 #fixture{background:linear-gradient(180deg,var(--verde-deep),var(--verde-night))}
-.fix-tabs{display:flex;gap:9px;flex-wrap:wrap;margin-top:32px}
-.fix-tab{border:1px solid rgba(229,187,82,.45);border-radius:99px;padding:9px 15px;background:transparent;color:var(--dorado-soft);font-family:var(--body);font-size:.76rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
-.fix-tab.activo,.fix-tab:hover{background:var(--dorado);color:var(--verde-night)}
-.fix-lista{margin-top:46px;display:flex;flex-direction:column;gap:14px}
-.fix-division{padding:22px;border:1px solid rgba(229,187,82,.22);border-radius:22px;background:rgba(246,241,228,.025)}
-.fix-division + .fix-division{margin-top:16px}
-.fix-division h3{font-family:var(--display);font-size:clamp(1.35rem,3vw,1.9rem);letter-spacing:.05em;text-transform:uppercase;color:var(--dorado);margin:0 0 16px}
-.fix-row{
-  display:grid;grid-template-columns:86px 1fr auto;gap:22px;align-items:center;
-  background:rgba(246,241,228,.04);border:1px solid rgba(246,241,228,.09);
-  border-radius:20px;padding:20px 26px;transition:all .35s var(--ease);
-  position:relative;overflow:hidden;
+.resumen-deportivo{
+  margin-top:34px;padding:18px;border:1px solid rgba(229,187,82,.24);border-radius:24px;
+  background:linear-gradient(145deg,rgba(246,241,228,.065),rgba(20,32,25,.3));
+  box-shadow:0 22px 55px rgba(0,0,0,.18);overflow:hidden;
 }
-.fix-row::before{
-  content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--dorado);
-  transform:scaleY(0);transition:transform .35s var(--ease);transform-origin:top;
+.resumen-deportivo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.resumen-deporte{min-width:0;border:1px solid rgba(246,241,228,.09);border-radius:17px;background:rgba(20,32,25,.28);overflow:hidden}
+.resumen-deporte-head{display:flex;align-items:center;gap:9px;padding:13px 14px;background:rgba(229,187,82,.09);color:var(--dorado)}
+.resumen-deporte-head span{font-size:1.05rem}
+.resumen-deporte-head h3{font-family:var(--display);font-size:1.18rem;line-height:1;letter-spacing:.05em;text-transform:uppercase}
+.resumen-lista{display:flex;flex-direction:column}
+.resumen-partido{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:9px;align-items:center;padding:11px 13px;border-top:1px solid rgba(246,241,228,.075);color:inherit;text-decoration:none;transition:background .25s,border-color .25s}
+.resumen-partido:first-child{border-top:0}
+.resumen-partido:hover,.resumen-partido:focus-visible{background:rgba(229,187,82,.085);outline:none}
+.resumen-categoria{display:block;color:var(--dorado-soft);font-size:.63rem;font-weight:900;letter-spacing:.12em;line-height:1.2;text-transform:uppercase}
+.resumen-rival{display:block;margin-top:3px;color:var(--blanco);font-size:.76rem;font-weight:800;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.resumen-meta{display:block;margin-top:4px;color:rgba(246,241,228,.48);font-size:.58rem;font-weight:800;letter-spacing:.045em;line-height:1.25;text-transform:uppercase}
+.resumen-marcador{font-family:var(--display);font-size:1.45rem;letter-spacing:.03em;white-space:nowrap;color:var(--dorado)}
+.resumen-marcador em{font-family:var(--body);font-size:.68rem;font-style:normal;color:rgba(246,241,228,.34)}
+.resumen-estado{display:block;margin-top:2px;font-size:.52rem;font-weight:900;letter-spacing:.08em;text-align:right;text-transform:uppercase}
+.resumen-estado.v{color:var(--dorado)}.resumen-estado.e{color:var(--crema)}.resumen-estado.d{color:#9bb9df}
+.resumen-cuenta{color:var(--dorado);font-family:var(--display);font-size:.88rem;line-height:1.05;text-align:right;white-space:nowrap}
+.resumen-cuenta small{display:block;margin-top:4px;color:rgba(246,241,228,.42);font-family:var(--body);font-size:.5rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.resumen-vacio{padding:16px 13px;color:rgba(246,241,228,.5);font-size:.72rem;line-height:1.45}
+.resumen-ayuda{margin-top:13px;color:rgba(246,241,228,.48);font-size:.66rem;text-align:right}
+@media(max-width:1020px){.resumen-deportivo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){
+  .resumen-deportivo{padding:10px;border-radius:19px}
+  .resumen-deportivo-grid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:3px;scrollbar-width:thin;scrollbar-color:rgba(229,187,82,.55) transparent}
+  .resumen-deporte{flex:0 0:min(82vw,310px);scroll-snap-align:start}
+  .resumen-ayuda{text-align:left}
 }
-.fix-row:hover{background:rgba(229,187,82,.07);transform:translateX(8px)}
-.fix-row:hover::before{transform:scaleY(1)}
-.fix-fecha{text-align:center}
-.fix-fecha .semana{font-size:.56rem;font-weight:900;letter-spacing:.12em;color:var(--dorado-soft);margin-bottom:5px}
-.fix-fecha .dia{font-family:var(--display);font-size:2rem;color:var(--dorado);line-height:1}
-.fix-fecha .mes{font-size:.68rem;font-weight:800;letter-spacing:.25em;text-transform:uppercase;color:rgba(246,241,228,.55)}
-.fix-det .dep-nombre{font-size:.7rem;font-weight:800;letter-spacing:.25em;text-transform:uppercase;color:var(--dorado)}
-.fix-det .enfrenta{font-family:var(--display);font-size:clamp(1.15rem,3vw,1.6rem);text-transform:uppercase;color:var(--blanco);letter-spacing:.03em}
-.fix-det .cat-hora{font-size:.82rem;color:rgba(246,241,228,.55);margin-top:3px}
-.fix-cd{text-align:right}
-.fix-cd .cuenta{font-family:var(--display);font-size:1.15rem;color:var(--dorado-soft)}
-.fix-cd .lbl{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(246,241,228,.45)}
 
 /* ---------- VIDA CEIBOS (eventos) ---------- */
 #vida{background:var(--crema);color:var(--verde-night)}
@@ -863,16 +831,15 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
   <div class="tag-sec rev">Marcador</div>
   <h2 class="titulo rev rev-d1">El finde <em>verdiamarillo</em></h2>
   <p class="sub rev rev-d2">Lo que dejó la última fecha en todas las disciplinas del club.</p>
-  <div class="score-grid" id="scoreGrid"></div>
+  <div class="resumen-deportivo rev rev-d3" id="scoreGrid" aria-label="Últimos resultados por deporte y categoría"></div>
 </section>
 
 <!-- ======================= FIXTURE ======================= -->
 <section id="fixture">
   <div class="tag-sec rev">Agenda deportiva</div>
   <h2 class="titulo rev rev-d1">Próximos <em>partidos</em></h2>
-  <p class="sub rev rev-d2">Anotá la fecha y vení a alentar. Cada partido cuenta los días que faltan.</p>
-  <div class="fix-tabs rev rev-d3" id="fixTabs" role="tablist" aria-label="Deportes con próximos partidos"></div>
-  <div class="fix-lista" id="fixLista"></div>
+  <p class="sub rev rev-d2">La próxima fecha de cada categoría, reunida en una sola placa.</p>
+  <div class="resumen-deportivo rev rev-d3" id="fixLista" aria-label="Próximos partidos por deporte y categoría"></div>
 </section>
 
 <svg class="ondas" viewBox="0 0 1440 90" preserveAspectRatio="none" style="background:var(--verde-night)"><path d="M0,45 C240,90 480,0 720,45 C960,90 1200,0 1440,45 L1440,90 L0,90 Z" fill="#F6F1E4"/></svg>
@@ -949,19 +916,19 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 <section id="shop">
   <div class="shop-head">
     <div>
-      <div class="tag-sec rev">Próxima colección</div>
+      <div class="tag-sec rev">Tienda oficial</div>
       <h2 class="titulo rev rev-d1">Vestí <em>los colores</em></h2>
-      <p class="sub rev rev-d2">Estamos preparando la nueva indumentaria oficial de Ceibos. Conocé los primeros modelos y enterate antes que nadie cuando abra la preventa.</p>
+      <p class="sub rev rev-d2">La indumentaria oficial de Ceibos está disponible todo el año en Bulk. Mirá los modelos destacados y comprá desde el catálogo oficial.</p>
     </div>
-    <span class="btn btn-oro suspendido rev rev-d2" aria-disabled="true">Próximamente</span>
+    <a class="btn btn-oro rev rev-d2" href="https://tienda.bulk.uy/index.php/ceibos-club/" target="_blank" rel="noopener">Comprar en Bulk ↗</a>
   </div>
   <div class="shop-grid" id="shopGrid"></div>
   <div class="shop-banner rev">
     <div>
-      <h3>Preventa muy pronto</h3>
-      <p>Estos son los primeros modelos de la próxima colección Ceibos. Pronto vas a poder reservar el tuyo.</p>
+      <h3>Toda la colección Ceibos</h3>
+      <p>Encontrá camisetas, buzos, canguros, pantalones, shorts y más prendas oficiales para grandes y chicos.</p>
     </div>
-    <a class="btn btn-verde" href="#noticias">Ver novedades</a>
+    <a class="btn btn-verde" href="https://tienda.bulk.uy/index.php/ceibos-club/" target="_blank" rel="noopener">Ver catálogo completo ↗</a>
   </div>
 </section>
 
@@ -1582,14 +1549,13 @@ const SOLIDARIO = [
   { emoji:"🎄", titulo:"Canastas navideñas", cuando:"Diciembre", desc:"Armado y entrega de canastas para que más familias tengan una linda Navidad." },
 ];
 
-/* SHOP: dejá SHOP_ACTIVA en false hasta que abra la preventa.
-   Cuando esté disponible, cambiá a true y cargá el enlace de la tienda. */
-const SHOP_ACTIVA = false;
-const SHOP_URL = "https://ceibosclubpreventabulk.netlify.app/";
+/* Tienda oficial de Ceibos, gestionada por Bulk y disponible todo el año. */
+const SHOP_ACTIVA = true;
+const SHOP_URL = "https://tienda.bulk.uy/index.php/ceibos-club/";
 const SHOP = [
-  { nombre:"Musculosa gimnasio", imagen:"assets/merch-musculosa.webp", badge:"Próximamente", desc:"Modelo en degradé verde y dorado para entrenar con los colores del club." },
-  { nombre:"Remera gimnasio", imagen:"assets/merch-remera.webp", badge:"Próximamente", desc:"Remera verde con vivos dorados en hombros y escudo de la prenda." },
-  { nombre:"Campera forrada polar", imagen:"assets/merch-campera.webp", badge:"Próximamente", desc:"Campera verde con detalles dorados para los días de club." },
+  { nombre:"Musculosa Gimnasio", imagen:"assets/merch-musculosa.webp", badge:"Disponible todo el año", desc:"Musculosa oficial de gimnasio en degradé verde y dorado." },
+  { nombre:"Remera Gimnasio", imagen:"assets/merch-remera.webp", badge:"Disponible todo el año", desc:"Remera oficial verde con vivos dorados y escudo de Ceibos." },
+  { nombre:"Buzo impermeable", imagen:"assets/merch-campera.webp", badge:"Disponible todo el año", desc:"Abrigo oficial verde con capucha y detalles dorados." },
 ];
 
 /* TRIVIA: cargá las preguntas acá cuando esté lista. La sección ya está
@@ -1622,7 +1588,31 @@ const etiquetaCategoria = categoria => textoSeguro(String(categoria ?? "").repla
 const fechaValida = fecha => /^\d{4}-\d{2}-\d{2}$/.test(fecha) && !Number.isNaN(new Date(fecha + "T00:00:00").getTime());
 const fechaBreve = fecha => { if (!fechaValida(fecha)) return ""; const f = fmtFecha(fecha); return `${f.semana} ${f.dia} ${f.mes}`; };
 const textoPlano = valor => repararTextoWeb(valor).replace(/[<>&"']/g, "").trim().slice(0, 180);
+const anotadoresRugbyResultado = resultado => {
+  if (slugDeporte(resultado?.deporte) !== "rugby") return [];
+  const rugby = ARCHIVO_HISTORICO?.sports?.find(deporte => deporte.slug === "rugby");
+  return rugby?.currentPlayerStats?.matches?.find(partido =>
+    claveCategoriaArchivo(partido.category) === claveCategoriaArchivo(resultado.categoria) &&
+    partido.date === resultado.fecha &&
+    claveCategoriaArchivo(partido.opponent) === claveCategoriaArchivo(resultado.rival) &&
+    Number(partido.gf) === Number(resultado.gf) &&
+    Number(partido.gc) === Number(resultado.gc)
+  )?.scorers || [];
+};
+const detalleAnotadorRugby = anotador => {
+  const acciones = [];
+  if (anotador.tries) acciones.push(`${anotador.tries} ${anotador.tries === 1 ? "try" : "tries"}`);
+  if (anotador.conversions) acciones.push(`${anotador.conversions} conv.`);
+  if (anotador.penalties) acciones.push(`${anotador.penalties} ${anotador.penalties === 1 ? "penal" : "penales"}`);
+  return `${textoSeguro(anotador.name)} — ${acciones.join(", ")}`;
+};
 const goleadoresResultado = resultado => {
+  const esRugby = slugDeporte(resultado?.deporte) === "rugby";
+  if (esRugby) {
+    const anotadores = anotadoresRugbyResultado(resultado);
+    if (!anotadores.length) return "";
+    return `<div class="resultado-goleadores"><span class="resultado-goleadores-etiqueta">Anotadores</span>${anotadores.map(detalleAnotadorRugby).join(" &middot; ")}</div>`;
+  }
   const valores = Array.isArray(resultado?.goleadores)
     ? resultado.goleadores
     : resultado?.goleadores ? [resultado.goleadores] : [];
@@ -1813,6 +1803,22 @@ const estadisticaArchivo = (deporte, categoria) => resultadosArchivo(deporte, ca
   return total;
 }, { pj:0, pg:0, pe:0, pp:0, gf:0, gc:0 });
 function goleadoresTemporadaArchivo(deporte, categoria){
+  if (deporte === "rugby") {
+    const rugby = ARCHIVO_HISTORICO?.sports?.find(item => item.slug === "rugby");
+    const categorias = (rugby?.currentPlayerStats?.categories || []).filter(item =>
+      !categoria || claveCategoriaArchivo(item.name) === claveCategoriaArchivo(categoria)
+    );
+    const conteo = new Map();
+    categorias.flatMap(item => item.players || []).forEach(jugador => {
+      const actual = conteo.get(jugador.name) || { nombre:jugador.name, puntos:0, tries:0, conversions:0, penalties:0 };
+      actual.puntos += Number(jugador.points) || 0;
+      actual.tries += Number(jugador.tries) || 0;
+      actual.conversions += Number(jugador.conversions) || 0;
+      actual.penalties += Number(jugador.penalties) || 0;
+      conteo.set(jugador.name, actual);
+    });
+    return [...conteo.values()].sort((a,b) => b.puntos-a.puntos || b.tries-a.tries || a.nombre.localeCompare(b.nombre, "es"));
+  }
   if (deporte !== "futbol") return [];
   const conteo = new Map();
   const resultados = categoria ? resultadosArchivo(deporte, categoria) : resultadosDeporteArchivo(deporte);
@@ -1836,6 +1842,12 @@ function actualidadDeporteArchivo(deporte){
     gf:suma.gf+fila.gf, gc:suma.gc+fila.gc
   }), {pj:0,pg:0,pe:0,pp:0,gf:0,gc:0});
   const goleadores = goleadoresTemporadaArchivo(deporte.slug).slice(0,3);
+  const esRugby = deporte.slug === "rugby";
+  const tituloRanking = esRugby ? "Top 3 anotadores" : "Top 3 goleadores";
+  const valorRanking = jugador => esRugby ? `${jugador.puntos} pts` : jugador.goles;
+  const vacioRanking = esRugby
+    ? "Todavía no hay anotadores registrados para publicar este ranking."
+    : "Todavía no hay autores de goles oficiales suficientes para publicar este ranking.";
   const tabla = filas.length ? `<div class="archivo-tabla-wrap"><table class="archivo-tabla"><thead><tr><th>Categoría</th><th>PJ</th><th>V</th><th>E</th><th>D</th><th>F</th><th>C</th><th>Dif.</th></tr></thead><tbody>${filas.map(fila => `<tr><td>${textoSeguro(fila.categoria)}</td><td>${fila.pj}</td><td>${fila.pg}</td><td>${fila.pe}</td><td>${fila.pp}</td><td>${fila.gf}</td><td>${fila.gc}</td><td>${fila.gf-fila.gc > 0 ? '+' : ''}${fila.gf-fila.gc}</td></tr>`).join("")}</tbody></table></div>` : `<div class="archivo-vacio">Aún no hay resultados 2026 para construir la tabla actual.</div>`;
   return `<div class="archivo-actualidad">
     <div class="archivo-actualidad-resumen">
@@ -1845,7 +1857,7 @@ function actualidadDeporteArchivo(deporte){
       <div class="archivo-stat"><strong>${total.pp}</strong><span>Derrotas</span></div>
     </div>
     <div class="archivo-actualidad-grid">
-      <div class="archivo-actualidad-panel"><h4>Top 3 goleadores</h4>${goleadores.length ? `<ol class="archivo-top-goleadores">${goleadores.map(jugador => `<li><span>${textoSeguro(jugador.nombre)}</span><b>${jugador.goles}</b></li>`).join("")}</ol>` : `<div class="archivo-vacio">Todavía no hay autores de goles oficiales suficientes para publicar este ranking.</div>`}</div>
+      <div class="archivo-actualidad-panel"><h4>${tituloRanking}</h4>${goleadores.length ? `<ol class="archivo-top-goleadores">${goleadores.map(jugador => `<li><span>${textoSeguro(jugador.nombre)}</span><b>${valorRanking(jugador)}</b></li>`).join("")}</ol>` : `<div class="archivo-vacio">${vacioRanking}</div>`}</div>
       <div class="archivo-actualidad-panel"><h4>Tabla actual de Ceibos</h4>${tabla}<p class="archivo-actualidad-nota">Rendimiento 2026 calculado con los resultados publicados para cada categoría. F: tantos a favor &middot; C: tantos en contra.</p></div>
     </div>
   </div>`;
@@ -1885,6 +1897,15 @@ function renderCategoriaArchivo(contenedor, deporte, categoria){
   const destacados = categoria.notableMatches || [];
   contenedor.innerHTML = `<a class="archivo-back" href="#archivo/${deporte.slug}">&larr; Archivo de ${textoSeguro(deporte.name)}</a><div class="archivo-hero"><figure><img src="${textoSeguro(deporte.photo)}" alt="${textoSeguro(categoria.name)} de ${textoSeguro(deporte.name)}" loading="lazy"></figure><div><span class="archivo-kicker">${textoSeguro(deporte.name)} &middot; Categor\u00eda</span><h3>${textoSeguro(categoria.name)}</h3><p>${textoSeguro(categoria.description)}</p><div class="archivo-meta"><span>${textoSeguro(categoria.competition)}</span><span>Actualizado con datos 2026</span></div></div></div><h3 class="archivo-subtitulo">Temporada 2026</h3>${estadistica.pj ? `<div class="archivo-stats"><div class="archivo-stat"><strong>${estadistica.pj}</strong><span>Jugados</span></div><div class="archivo-stat"><strong>${estadistica.pg}</strong><span>Ganados</span></div><div class="archivo-stat"><strong>${estadistica.pe}</strong><span>Empatados</span></div><div class="archivo-stat"><strong>${estadistica.pp}</strong><span>Perdidos</span></div><div class="archivo-stat"><strong>${estadistica.gf}</strong><span>${etiquetaTantos} a favor</span></div><div class="archivo-stat"><strong>${estadistica.gc}</strong><span>${etiquetaTantos} en contra</span></div></div>` : `<div class="archivo-vacio">A\u00fan no hay resultados 2026 disponibles para calcular estad\u00edsticas de esta categor\u00eda.</div>`}<div class="archivo-dos-columnas"><div><h3 class="archivo-subtitulo">Palmar\u00e9s documentado</h3><div class="archivo-bloque">${logros.length ? `<ul class="archivo-lista">${logros.map(logro => `<li><strong>${textoSeguro(logro.year)} &middot; ${textoSeguro(logro.title)}</strong><br>${textoSeguro(logro.detail)}</li>`).join("")}</ul>` : `<div class="archivo-vacio">${textoSeguro(ARCHIVO_HISTORICO.methodology.missingLabel)}</div>`}</div></div><div><h3 class="archivo-subtitulo">Temporadas localizadas</h3><div class="archivo-bloque">${temporadas.length ? `<ul class="archivo-lista">${temporadas.map(anio => `<li><strong>${textoSeguro(anio)}</strong> &middot; temporada con documentaci\u00f3n oficial o datos cargados.</li>`).join("")}</ul>` : `<div class="archivo-vacio">No se localiz\u00f3 un archivo oficial de temporadas anteriores.</div>`}</div></div></div><div class="archivo-dos-columnas"><div><h3 class="archivo-subtitulo">Goleadores 2026</h3><div class="archivo-bloque">${deporte.slug === 'futbol' && goleadores.length ? `<ul class="archivo-lista">${goleadores.map((jugador,indice)=>`<li class="archivo-goleador"><span>${indice+1}. ${textoSeguro(jugador.nombre)}</span><b>${jugador.goles}</b></li>`).join("")}</ul>` : `<div class="archivo-vacio">${deporte.slug === 'futbol' ? 'La fuente actual no informa suficientes autores de goles para esta categor\u00eda.' : 'No se encontr\u00f3 una estad\u00edstica oficial de goleadores para esta competencia.'}</div>`}</div></div><div><h3 class="archivo-subtitulo">Goleadores hist\u00f3ricos</h3><div class="archivo-bloque"><div class="archivo-vacio">No se publica un ranking acumulado: no se encontr\u00f3 una fuente oficial completa que permita calcularlo sin inventar datos.</div></div></div></div><h3 class="archivo-subtitulo">Partidos hist\u00f3ricos confirmados</h3>${destacados.length ? `<div class="archivo-bloque"><ul class="archivo-lista">${destacados.map(partido=>`<li><strong>${textoSeguro(partido.date)} &middot; ${textoSeguro(partido.label)}</strong><br>Ceibos ${textoSeguro(partido.score)} ${textoSeguro(partido.opponent)}</li>`).join("")}</ul></div>` : `<div class="archivo-vacio">No se agregaron partidos destacados sin respaldo institucional verificable.</div>`}<h3 class="archivo-subtitulo">Fuentes de esta ficha</h3><div class="archivo-fuentes">${enlacesFuentesArchivo(fuentes)}</div><div class="archivo-metodo">Las cifras 2026 se recalculan desde los resultados que actualizan la web. Los hitos hist\u00f3ricos solo cambian cuando se incorpora una nueva fuente verificada.</div>`;
 }
+function completarRankingRugbyCategoria(contenedor, deporte, categoria){
+  if (deporte.slug !== "rugby") return;
+  const columnas = contenedor.querySelectorAll(".archivo-dos-columnas");
+  const ranking = columnas[1]?.children?.[0];
+  const historico = columnas[1]?.children?.[1];
+  const anotadores = goleadoresTemporadaArchivo("rugby", categoria.name);
+  if (ranking) ranking.innerHTML = `<h3 class="archivo-subtitulo">Anotadores 2026</h3><div class="archivo-bloque">${anotadores.length ? `<ul class="archivo-lista">${anotadores.map((jugador,indice) => `<li class="archivo-goleador"><span>${indice+1}. ${textoSeguro(jugador.nombre)}</span><b>${jugador.puntos} pts</b></li>`).join("")}</ul>` : `<div class="archivo-vacio">Todavía no hay anotadores registrados para esta categoría.</div>`}</div>`;
+  if (historico) historico.innerHTML = `<h3 class="archivo-subtitulo">Anotadores históricos</h3><div class="archivo-bloque"><div class="archivo-vacio">No se publica un ranking acumulado: todavía no existe una base histórica completa para calcularlo sin inventar datos.</div></div>`;
+}
 function renderArchivoHistorico(){
   const contenedor = document.getElementById("archivoHistorico");
   if (!contenedor) return;
@@ -1896,6 +1917,7 @@ function renderArchivoHistorico(){
   const categoria = ruta[2] ? deporte.categories.find(item => item.slug === ruta[2]) : null;
   if (ruta[2] && !categoria) { renderDeporteArchivo(contenedor, deporte); return; }
   categoria ? renderCategoriaArchivo(contenedor, deporte, categoria) : renderDeporteArchivo(contenedor, deporte);
+  if (categoria) completarRankingRugbyCategoria(contenedor, deporte, categoria);
   revObserve();
 }
 
@@ -1928,35 +1950,22 @@ function renderScore(){
     mapa.set(`${slugDeporte(resultado.deporte)}|${resultado.categoria}`, resultado);
     return mapa;
   }, new Map());
-  const ordenFutbol = ["Primera", "Reserva A", "Reserva Verde", "PreSenior", "Sub 20", "Sub 18"];
-  const ordenDeportes = ["futbol", "hockey", "basketball", "rugby"];
-  const marcadores = [...ultimosPorCategoria.values()].sort((a,b) => {
-    const deporteA = slugDeporte(a.deporte), deporteB = slugDeporte(b.deporte);
-    const aFutbol = deporteA === "futbol", bFutbol = deporteB === "futbol";
-    if (aFutbol && bFutbol) return ordenFutbol.indexOf(a.categoria) - ordenFutbol.indexOf(b.categoria);
-    return (ordenDeportes.indexOf(deporteA) + 1 || 99) - (ordenDeportes.indexOf(deporteB) + 1 || 99);
-  });
-  let deporteAnterior = "";
-  g.innerHTML = marcadores.map((r,i)=>{
-    const deporteActual = slugDeporte(r.deporte);
-    const deporteInfo = DEPORTES.find(d => d.slug === deporteActual) ?? { nombre: r.deporte, ico: "●" };
-    const encabezado = deporteActual === deporteAnterior ? "" : `<h3 class="score-sport-title"><span class="score-sport-icon">${deporteInfo.ico}</span>${textoSeguro(deporteInfo.nombre)}<small>Resultados por categoría</small></h3>`;
-    deporteAnterior = deporteActual;
-    const cls = r.gf>r.gc?"v":r.gf===r.gc?"e":"d";
-    const lbl = r.gf>r.gc?"VICTORIA":r.gf===r.gc?"EMPATE":"DERROTA";
-    const fecha = fechaValida(r.fecha) ? fmtFecha(r.fecha) : null;
-    const fechaResultado = fecha ? `<div class="score-fecha"><time datetime="${r.fecha}">${fecha.semana} ${fecha.dia} ${fecha.mes} ${fecha.anio}</time></div>` : "";
-    return `${encabezado}<a class="score-card rev rev-d${(i%4)+1}" href="#${slugDeporte(r.deporte)}" data-score-deporte="${slugDeporte(r.deporte)}" data-score-categoria="${textoSeguro(r.categoria)}">
-      <span class="score-res ${cls}">${lbl}</span>
-      <div class="dep">${r.deporte}</div>
-      <div class="score-categoria">${etiquetaCategoria(r.categoria)}</div>
-      ${fechaResultado}
-      <div class="score-num"><span class="nos">${r.gf}</span><span class="sep">—</span><span>${r.gc}</span></div>
-      <div class="score-rival">vs ${r.rival}</div>
-      ${goleadoresResultado(r)}
-      <span class="score-ver-mas">Ver detalle →</span>
-    </a>`;
-  }).join("");
+  const ordenDeportes = ["futbol", "hockey", "rugby", "basketball"];
+  const deportes = DEPORTES.slice().sort((a,b) => ordenDeportes.indexOf(a.slug) - ordenDeportes.indexOf(b.slug));
+  g.innerHTML = `<div class="resumen-deportivo-grid">${deportes.map(deporte => {
+    const resultados = deporte.categorias.map(categoria => ultimosPorCategoria.get(`${deporte.slug}|${categoria}`)).filter(Boolean);
+    const filas = resultados.length ? resultados.map(r => {
+      const cls = r.gf>r.gc?"v":r.gf===r.gc?"e":"d";
+      const lbl = r.gf>r.gc?"Victoria":r.gf===r.gc?"Empate":"Derrota";
+      const fecha = fechaValida(r.fecha) ? fmtFecha(r.fecha) : null;
+      const fechaTexto = fecha ? `${fecha.semana} ${fecha.dia} ${fecha.mes}` : "Fecha sin confirmar";
+      return `<a class="resumen-partido" href="#${deporte.slug}" data-score-deporte="${deporte.slug}" data-score-categoria="${textoSeguro(r.categoria)}">
+        <span><span class="resumen-categoria">${etiquetaCategoria(r.categoria)}</span><span class="resumen-rival">vs ${textoSeguro(r.rival)}</span><time class="resumen-meta" datetime="${textoSeguro(r.fecha)}">${fechaTexto}</time></span>
+        <span><span class="resumen-marcador">${r.gf}<em> — </em>${r.gc}</span><span class="resumen-estado ${cls}">${lbl}</span></span>
+      </a>`;
+    }).join("") : `<p class="resumen-vacio">Todavía no hay resultados oficiales publicados.</p>`;
+    return `<article class="resumen-deporte"><header class="resumen-deporte-head"><span aria-hidden="true">${deporte.ico}</span><h3>${textoSeguro(deporte.nombre)}</h3></header><div class="resumen-lista">${filas}</div></article>`;
+  }).join("")}</div><p class="resumen-ayuda">Tocá un partido para abrir el historial completo de su categoría.</p>`;
   g.querySelectorAll("[data-score-deporte]").forEach(tarjeta => tarjeta.addEventListener("click", () => {
     activarCategoria(tarjeta.dataset.scoreDeporte, tarjeta.dataset.scoreCategoria);
   }));
@@ -1966,44 +1975,28 @@ function renderScore(){
 function renderFixture(){
   const hoy = new Date(); hoy.setHours(0,0,0,0);
   const lista = document.getElementById("fixLista");
-  const tabs = document.getElementById("fixTabs");
   const proximos = PARTIDOS.filter(p => fechaValida(p.fecha) && new Date(p.fecha+"T00:00:00") >= hoy && DEPORTES.some(d => d.slug === slugDeporte(p.deporte))).sort(porFecha);
-  // Mostramos siempre las cuatro disciplinas. Así Rugby no desaparece cuando
-  // la URU todavía no publicó su próxima fecha oficial.
-  const ordenAgenda = ["futbol", "basketball", "hockey", "rugby"];
-  const deportesConAgenda = DEPORTES
-    .filter(d => ordenAgenda.includes(d.slug) || proximos.some(p => slugDeporte(p.deporte) === d.slug))
-    .sort((a,b) => ordenAgenda.indexOf(a.slug) - ordenAgenda.indexOf(b.slug));
-  const deporteInicial = deportesConAgenda.find(d => proximos.some(p => slugDeporte(p.deporte) === d.slug))?.slug ?? "futbol";
-  tabs.innerHTML = deportesConAgenda.map(d => `<button class="fix-tab${d.slug===deporteInicial?' activo':''}" type="button" data-fix-deporte="${d.slug}" role="tab" aria-selected="${d.slug===deporteInicial?'true':'false'}">${d.ico} ${d.nombre}</button>`).join("");
-
-  const tarjeta = p => {
-    if (!p) return `<p class="sub">Sin proximos partidos publicados.</p>`;
-    const f = fmtFecha(p.fecha);
-    const dias = Math.round((new Date(p.fecha+"T00:00:00") - hoy)/86400000);
-    const cuenta = dias===0?"¡HOY!":dias===1?"Mañana":`Faltan ${dias} días`;
-    return `<div class="fix-row"><div class="fix-fecha"><div class="semana">${f.semana}</div><div class="dia">${f.dia}</div><div class="mes">${f.mes}</div></div><div class="fix-det"><div class="dep-nombre">${etiquetaCategoria(p.categoria)}</div><div class="enfrenta">Ceibos vs ${textoSeguro(p.rival)}</div><div class="cat-hora">${horaVisible(p.hora)} · ${textoSeguro(ubicacionVisible(p))}</div></div><div class="fix-cd"><div class="cuenta">${cuenta}</div><div class="lbl">${p.local?"De local":"De visita"}</div></div></div>`;
-  };
-
-  const mostrarDeporte = slug => {
-    const orden = DEPORTES.find(d => d.slug === slug)?.categorias ?? [];
-    const divisiones = [...proximos.filter(p => slugDeporte(p.deporte) === slug).reduce((mapa, partido) => {
-      if (!mapa.has(partido.categoria)) mapa.set(partido.categoria, []);
-      mapa.get(partido.categoria).push(partido);
-      return mapa;
-    }, new Map(orden.map(categoria => [categoria, []]))).entries()].sort((a,b) => orden.indexOf(a[0]) - orden.indexOf(b[0]));
-    lista.innerHTML = divisiones.length ? divisiones.map(([categoria, partidos],grupo) => {
-      const primero = partidos[0], resto = partidos.slice(1);
-      return `<div class="fix-division rev rev-d${(grupo%4)+1}"><h3>${textoSeguro(categoria)}</h3>${tarjeta(primero)}${resto.length ? `<details class="dep-vermas"><summary>Ver ${resto.length} partido${resto.length===1?'':'s'} más</summary>${resto.map(tarjeta).join("")}</details>`:""}</div>`;
-    }).join("") : `<p class="sub">La Liga todavía no publicó próximos partidos de este deporte. Volvé pronto para ver el fixture actualizado.</p>`;
-    revObserve();
-  };
-
-  tabs.querySelectorAll("[data-fix-deporte]").forEach(boton => boton.addEventListener("click", () => {
-    tabs.querySelectorAll(".fix-tab").forEach(tab => { const activa = tab === boton; tab.classList.toggle("activo", activa); tab.setAttribute("aria-selected", String(activa)); });
-    mostrarDeporte(boton.dataset.fixDeporte);
-  }));
-  mostrarDeporte(deporteInicial);
+  const ordenAgenda = ["futbol", "hockey", "rugby", "basketball"];
+  const deportes = DEPORTES.slice().sort((a,b) => ordenAgenda.indexOf(a.slug) - ordenAgenda.indexOf(b.slug));
+  lista.innerHTML = `<div class="resumen-deportivo-grid">${deportes.map(deporte => {
+    const partidosDeporte = proximos.filter(p => slugDeporte(p.deporte) === deporte.slug);
+    const primeros = deporte.categorias.map(categoria => {
+      const partidosCategoria = partidosDeporte.filter(p => p.categoria === categoria);
+      return { partido: partidosCategoria[0], restantes: Math.max(0, partidosCategoria.length - 1) };
+    }).filter(item => item.partido);
+    const filas = primeros.length ? primeros.map(({partido:p, restantes}) => {
+      const f = fmtFecha(p.fecha);
+      const dias = Math.round((new Date(p.fecha+"T00:00:00") - hoy)/86400000);
+      const cuenta = dias===0?"¡Hoy!":dias===1?"Mañana":`${dias} días`;
+      const extras = restantes ? ` · +${restantes} fecha${restantes===1?"":"s"}` : "";
+      return `<a class="resumen-partido" href="#${deporte.slug}" data-fix-deporte="${deporte.slug}" data-fix-categoria="${textoSeguro(p.categoria)}">
+        <span><span class="resumen-categoria">${etiquetaCategoria(p.categoria)}</span><span class="resumen-rival">vs ${textoSeguro(p.rival)}</span><time class="resumen-meta" datetime="${textoSeguro(p.fecha)}">${f.semana} ${f.dia} ${f.mes} · ${horaVisible(p.hora)}${extras}</time></span>
+        <span class="resumen-cuenta">${cuenta}<small>${p.local?"Local":"Visitante"}</small></span>
+      </a>`;
+    }).join("") : `<p class="resumen-vacio">Sin próximas fechas oficiales publicadas.</p>`;
+    return `<article class="resumen-deporte"><header class="resumen-deporte-head"><span aria-hidden="true">${deporte.ico}</span><h3>${textoSeguro(deporte.nombre)}</h3></header><div class="resumen-lista">${filas}</div></article>`;
+  }).join("")}</div><p class="resumen-ayuda">Tocá un partido para ver todas las fechas futuras de esa categoría.</p>`;
+  lista.querySelectorAll("[data-fix-deporte]").forEach(tarjeta => tarjeta.addEventListener("click", () => activarCategoria(tarjeta.dataset.fixDeporte, tarjeta.dataset.fixCategoria)));
 }
 function renderHomeDeportiva(){
   const destacado = document.getElementById("homePartidoDestacado");
@@ -2110,6 +2103,7 @@ function renderEventos(){
     const atributos = SHOP_ACTIVA ? `href="${SHOP_URL}" target="_blank" rel="noopener"` : `aria-label="${p.nombre}: próxima colección Ceibos"`;
     return `
     <${contenedor} class="prod${SHOP_ACTIVA ? "" : " suspendido"} rev rev-d${i+1}" ${atributos}>
+      <span class="badge-prod">${p.badge}</span>
       ${visual}
       <h3>${p.nombre}</h3>
       <p class="prod-desc">${p.desc}</p>
@@ -2220,7 +2214,7 @@ fetch(`data/sports-history.json?actualizado=${Date.now()}`, { cache: "no-store" 
   .then(datos => {
     if (!datos || !Array.isArray(datos.sports) || !datos.sources) return;
     ARCHIVO_HISTORICO = datos;
-    renderArchivoHistorico();
+    renderDinamico();
     if (location.hash.startsWith("#archivo")) realinearDestinoHash();
   })
   .catch(() => {
