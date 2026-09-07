@@ -748,9 +748,21 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 @media(max-width:1020px){.resumen-deportivo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){
   .resumen-deportivo{padding:10px;border-radius:19px}
-  .resumen-deportivo-grid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:3px;scrollbar-width:thin;scrollbar-color:rgba(229,187,82,.55) transparent}
-  .resumen-deporte{flex:0 0:min(82vw,310px);scroll-snap-align:start}
+  .resumen-deportivo-grid{
+    display:flex;grid-template-columns:none;gap:10px;width:100%;max-width:100%;
+    overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;padding:0 0 5px;scrollbar-width:thin;
+    scrollbar-color:rgba(229,187,82,.55) transparent
+  }
+  .resumen-deporte{
+    flex-grow:0;flex-shrink:0;flex-basis:calc(100% - 24px);width:calc(100% - 24px);
+    scroll-snap-align:start;scroll-snap-stop:always
+  }
+  .resumen-deporte-head{padding:12px 13px}
+  .resumen-deporte-head h3{font-size:1.1rem}
+  .resumen-partido{padding:11px 12px}
   .resumen-ayuda{text-align:left}
+  .resumen-ayuda::before{content:"Deslizá para ver otro deporte. ";color:var(--dorado-soft);font-weight:800}
 }
 
 /* ---------- VIDA CEIBOS (eventos) ---------- */
