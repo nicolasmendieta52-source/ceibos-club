@@ -983,19 +983,19 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 #predio{background:linear-gradient(145deg,#18362d,#11261f);overflow:hidden}
 .predio-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(310px,.75fr);gap:clamp(24px,4vw,52px);align-items:center;margin-top:38px}
 .predio-plano{margin:0;border-radius:26px;overflow:hidden;border:1px solid rgba(229,187,82,.35);background:#10251f;box-shadow:0 24px 55px rgba(0,0,0,.32)}
-.predio-mapa-vivo{position:relative;isolation:isolate;overflow:hidden;aspect-ratio:441/389;background:#123327}.predio-plano img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.92) contrast(1.03) brightness(.93);transition:filter .4s}
+.predio-mapa-vivo{position:relative;isolation:isolate;overflow:hidden;aspect-ratio:1013/797;background:#4f4f4f}.predio-plano img{display:block;width:100%;height:100%;object-fit:contain;filter:saturate(.96) contrast(1.03) brightness(.96);transition:filter .4s}
 .predio-mapa-vivo::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(120deg,rgba(7,29,21,.22),rgba(14,65,47,.04)),radial-gradient(circle at 56% 50%,transparent 0 28%,rgba(5,20,14,.16) 100%)}.predio-mapa-vivo::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.1;background:linear-gradient(90deg,transparent,rgba(229,187,82,.25),transparent);mix-blend-mode:screen}
 .predio-mapa-vivo:has(.predio-zona.activa)>img{filter:saturate(.76) contrast(1.02) brightness(.68)}
 .predio-zonas{position:absolute;inset:0;z-index:3}
-.predio-invitacion{position:absolute;z-index:6;left:14px;top:14px;display:flex;align-items:center;gap:7px;padding:8px 11px;border:1px solid rgba(229,187,82,.55);border-radius:99px;background:rgba(8,27,20,.9);box-shadow:0 8px 24px rgba(0,0,0,.3);color:var(--crema);font-size:.62rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;pointer-events:none;animation:invitacionPredio 2.8s ease-in-out infinite}.predio-invitacion span{color:var(--dorado);font-size:.9rem}
+.predio-invitacion{position:absolute;z-index:6;left:50%;top:8.5%;transform:translateX(-50%);display:flex;align-items:center;gap:7px;padding:8px 11px;border:1px solid rgba(229,187,82,.55);border-radius:99px;background:rgba(8,27,20,.92);box-shadow:0 8px 24px rgba(0,0,0,.3);color:var(--crema);font-size:.62rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;pointer-events:none;animation:invitacionPredio 2.8s ease-in-out infinite}.predio-invitacion span{color:var(--dorado);font-size:.9rem}
 .predio-zona{position:absolute;left:var(--x);top:var(--y);width:var(--w);height:var(--h);transform:translate(-50%,-50%);padding:0;border:0;border-radius:var(--radio,10px);background:rgba(229,187,82,.035);box-shadow:inset 0 0 0 1px rgba(229,187,82,.28);cursor:pointer;outline:none;transition:background .22s,box-shadow .22s,transform .25s var(--ease);will-change:transform}
 .predio-zona:hover,.predio-zona:focus-visible{z-index:4;background:rgba(229,187,82,.12);box-shadow:inset 0 0 0 2px rgba(229,187,82,.9),0 0 16px rgba(229,187,82,.28);transform:translate(-50%,-50%) scale(1.015)}
-.predio-zona.activa{z-index:5;transform:translate(-50%,calc(-50% - 8px)) scale(1.045);background-color:#1b4436;background-image:linear-gradient(rgba(229,187,82,.05),rgba(6,26,19,.04)),url("assets/predio-interactivo.webp");background-repeat:no-repeat;background-size:100% 100%,var(--bg-size-x) var(--bg-size-y);background-position:center,var(--bg-pos-x) var(--bg-pos-y);box-shadow:inset 0 0 0 3px var(--dorado),0 16px 24px rgba(0,0,0,.62),0 0 24px rgba(229,187,82,.42)}
+.predio-zona.activa{z-index:5;transform:translate(-50%,calc(-50% - 8px)) scale(1.045);background-color:#1b4436;background-image:linear-gradient(rgba(229,187,82,.05),rgba(6,26,19,.04)),url("assets/predio-plano-ceibos.png");background-repeat:no-repeat;background-size:100% 100%,var(--bg-size-x) var(--bg-size-y);background-position:center,var(--bg-pos-x) var(--bg-pos-y);box-shadow:inset 0 0 0 3px var(--dorado),0 16px 24px rgba(0,0,0,.62),0 0 24px rgba(229,187,82,.42)}
 .predio-zona.activa:hover,.predio-zona.activa:focus-visible{transform:translate(-50%,calc(-50% - 10px)) scale(1.055)}
 .predio-zona.activa::after{content:"";position:absolute;inset:-4px;border:2px solid rgba(229,187,82,.76);border-radius:inherit;animation:ondaPredio 2.1s ease-out infinite;pointer-events:none}
 .predio-zona span{position:absolute;left:50%;bottom:calc(100% + 7px);transform:translateX(-50%) translateY(4px);padding:5px 8px;border-radius:7px;background:rgba(8,27,20,.96);box-shadow:0 5px 14px rgba(0,0,0,.35);color:var(--crema);font-size:.54rem;font-weight:900;letter-spacing:.05em;line-height:1.2;white-space:nowrap;text-transform:uppercase;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s}.predio-zona:hover span,.predio-zona:focus-visible span,.predio-zona.activa span{opacity:1;transform:translateX(-50%) translateY(0)}.predio-zona-gym span{bottom:auto;top:calc(100% + 7px)}
 @keyframes ondaPredio{0%{opacity:.75;transform:scale(.98)}100%{opacity:0;transform:scale(1.06)}}
-@keyframes invitacionPredio{0%,100%{transform:translateY(0);box-shadow:0 8px 24px rgba(0,0,0,.3)}50%{transform:translateY(-3px);box-shadow:0 11px 28px rgba(229,187,82,.18)}}
+@keyframes invitacionPredio{0%,100%{transform:translateX(-50%) translateY(0);box-shadow:0 8px 24px rgba(0,0,0,.3)}50%{transform:translateX(-50%) translateY(-3px);box-shadow:0 11px 28px rgba(229,187,82,.18)}}
 .predio-plano figcaption{padding:15px 18px;color:rgba(246,241,228,.68);font-size:.78rem;line-height:1.45}.predio-plano figcaption strong{color:var(--dorado-soft);font-weight:900;text-transform:uppercase;letter-spacing:.06em}
 .predio-info{padding:clamp(24px,4vw,40px);border:1px solid rgba(246,241,228,.12);border-radius:26px;background:rgba(246,241,228,.045)}
 .predio-info h3{font-family:var(--display);font-size:clamp(1.8rem,3.6vw,2.7rem);line-height:.95;text-transform:uppercase;color:var(--blanco);margin-bottom:16px}.predio-info p{color:rgba(246,241,228,.72);line-height:1.7;margin-bottom:20px}
@@ -1055,7 +1055,7 @@ footer .f-brand{display:flex;align-items:center;gap:10px;font-family:var(--displ
   .score-grid{grid-template-columns:1fr;gap:12px;margin-top:30px}.score-sport-title{margin:18px 0 0;font-size:1.45rem}.score-sport-title small{font-size:.57rem}.score-cards{grid-template-columns:1fr;gap:12px}.score-card{padding:22px 18px;min-height:190px}.score-categoria{font-size:.7rem}.score-num{font-size:3rem}
   .noticia-destacada{margin-top:28px;padding:14px;border-radius:20px}.noticia-texto h3{font-size:2.35rem}.noticia-video{border-radius:13px}
   .home-deportiva-cabecera{align-items:flex-start;flex-direction:column}.home-accesos{grid-template-columns:repeat(2,1fr)}.pd-equipos{gap:10px}.pd-detalle a{margin-left:0}.pd-equipo{font-size:1.65rem}
-  .predio-grid{margin-top:26px}.predio-info{padding:22px 18px;border-radius:20px}.predio-plano{border-radius:20px}.predio-zona span{display:none}.predio-invitacion{left:9px;top:9px;padding:7px 9px;font-size:.53rem}.predio-zona.activa{transform:translate(-50%,calc(-50% - 5px)) scale(1.035)}.predio-zona.activa:hover,.predio-zona.activa:focus-visible{transform:translate(-50%,calc(-50% - 6px)) scale(1.04)}.predio-mapa{min-height:52px}.club-grid{gap:28px}.stats{gap:10px}.stat{padding:22px 12px;border-radius:16px}.stat .lbl{font-size:.58rem;letter-spacing:.12em}
+  .predio-grid{margin-top:26px}.predio-info{padding:22px 18px;border-radius:20px}.predio-plano{border-radius:20px}.predio-zona span{display:none}.predio-invitacion{left:50%;top:8.5%;padding:6px 8px;font-size:.49rem}.predio-zona.activa{transform:translate(-50%,calc(-50% - 5px)) scale(1.035)}.predio-zona.activa:hover,.predio-zona.activa:focus-visible{transform:translate(-50%,calc(-50% - 6px)) scale(1.04)}.predio-mapa{min-height:52px}.club-grid{gap:28px}.stats{gap:10px}.stat{padding:22px 12px;border-radius:16px}.stat .lbl{font-size:.58rem;letter-spacing:.12em}
   .shop-grid,.soli-grid,.socios-grid{grid-template-columns:1fr;gap:14px;margin-top:30px}.prod,.soli-card,.socio-card{padding:24px 20px;border-radius:20px}.timeline{margin-top:38px;padding-left:28px}.ev{padding-left:20px}.ev::before{left:-28px}.redes{gap:9px}.red{width:100%;justify-content:center;min-height:48px}.cta-final{margin-bottom:48px}.cta-final h2{font-size:clamp(2.45rem,13vw,4rem)}footer{justify-content:center;text-align:center;padding-top:26px}.lema-banda{margin-top:54px;padding:24px 0}#volver{width:46px;height:46px;right:16px;bottom:16px}
 }
 @media (max-width:390px){
@@ -1108,19 +1108,18 @@ footer .f-brand{display:flex;align-items:center;gap:10px;font-family:var(--displ
   <div class="predio-grid">
     <figure class="predio-plano rev rev-d2">
       <div class="predio-mapa-vivo">
-        <img src="assets/predio-interactivo.webp" alt="Mapa ilustrado e interactivo del Predio Ceibos con canchas de rugby, hockey y fútbol" loading="lazy" decoding="async">
+        <img src="assets/predio-plano-ceibos.png" alt="Plano interactivo del Campo Deportivo Los Ceibos con canchas de rugby, hockey y fútbol" loading="lazy" decoding="async">
         <div class="predio-invitacion"><span aria-hidden="true">☝</span> Elegí una cancha</div>
         <div class="predio-zonas" aria-label="Seleccioná una cancha completa del predio">
-          <button class="predio-zona" type="button" data-predio-deporte="rugby" data-predio-zona="rugby-ceibos" aria-label="Seleccionar cancha de Rugby Ceibos Club" aria-pressed="false" style="--x:84%;--y:39%;--w:25%;--h:23%;--bg-size-x:400%;--bg-size-y:434.783%;--bg-pos-x:95.333%;--bg-pos-y:35.714%"><span>Cancha Rugby · Ceibos Club</span></button>
-          <button class="predio-zona" type="button" data-predio-deporte="hockey" data-predio-zona="hockey" aria-label="Seleccionar cancha de Hockey" aria-pressed="false" style="--x:54%;--y:38%;--w:23%;--h:22%;--bg-size-x:434.783%;--bg-size-y:454.545%;--bg-pos-x:55.195%;--bg-pos-y:34.615%"><span>Cancha Hockey</span></button>
-          <button class="predio-zona" type="button" data-predio-deporte="futbol" data-predio-zona="futbol-4" aria-label="Seleccionar cancha 4 de Fútbol" aria-pressed="false" style="--x:64%;--y:61%;--w:26%;--h:21%;--bg-size-x:384.615%;--bg-size-y:476.19%;--bg-pos-x:68.919%;--bg-pos-y:63.924%"><span>Cancha 4 · Fútbol</span></button>
-          <button class="predio-zona activa" type="button" data-predio-deporte="futbol" data-predio-zona="futbol-1" aria-label="Seleccionar cancha 1 de Fútbol" aria-pressed="true" style="--x:34%;--y:61%;--w:29%;--h:22%;--bg-size-x:344.828%;--bg-size-y:454.545%;--bg-pos-x:27.465%;--bg-pos-y:64.103%"><span>Cancha 1 · Fútbol</span></button>
-          <button class="predio-zona" type="button" data-predio-deporte="futbol" data-predio-zona="futbol-3" aria-label="Seleccionar cancha 3 de Fútbol" aria-pressed="false" style="--x:64%;--y:84%;--w:27%;--h:23%;--bg-size-x:370.37%;--bg-size-y:434.783%;--bg-pos-x:69.178%;--bg-pos-y:94.156%"><span>Cancha 3 · Fútbol</span></button>
-          <button class="predio-zona" type="button" data-predio-deporte="futbol" data-predio-zona="futbol-5" aria-label="Seleccionar cancha 5 de Fútbol" aria-pressed="false" style="--x:88%;--y:84%;--w:19%;--h:24%;--bg-size-x:526.316%;--bg-size-y:416.667%;--bg-pos-x:96.914%;--bg-pos-y:94.737%"><span>Cancha 5 · Fútbol</span></button>
-          <button class="predio-zona predio-zona-gym" type="button" data-predio-deporte="basketball" data-predio-zona="gym" aria-label="Gimnasio Ceibos, en construcción" aria-pressed="false" style="--x:49.5%;--y:13.5%;--w:16%;--h:22%;--bg-size-x:625%;--bg-size-y:454.545%;--bg-pos-x:49.405%;--bg-pos-y:3.205%"><span>Gimnasio · En construcción</span></button>
+          <button class="predio-zona" type="button" data-predio-deporte="rugby" data-predio-zona="rugby-ceibos" aria-label="Seleccionar cancha de Rugby Ceibos Club" aria-pressed="false" style="--x:73.25%;--y:43.35%;--w:20.53%;--h:15.18%;--bg-size-x:487.09%;--bg-size-y:658.76%;--bg-pos-x:79.27%;--bg-pos-y:42.16%"><span>Cancha Rugby · Ceibos Club</span></button>
+          <button class="predio-zona" type="button" data-predio-deporte="hockey" data-predio-zona="hockey" aria-label="Seleccionar cancha de Hockey" aria-pressed="false" style="--x:52.17%;--y:43.54%;--w:18.86%;--h:14.55%;--bg-size-x:530.22%;--bg-size-y:687.29%;--bg-pos-x:52.68%;--bg-pos-y:42.43%"><span>Cancha Hockey</span></button>
+          <button class="predio-zona" type="button" data-predio-deporte="futbol" data-predio-zona="futbol-4" aria-label="Seleccionar cancha 4 de Fútbol" aria-pressed="false" style="--x:60.61%;--y:62.86%;--w:18.56%;--h:14.30%;--bg-size-x:538.79%;--bg-size-y:699.30%;--bg-pos-x:63.03%;--bg-pos-y:65.01%"><span>Cancha 4 · Fútbol</span></button>
+          <button class="predio-zona activa" type="button" data-predio-deporte="futbol" data-predio-zona="futbol-1" aria-label="Seleccionar cancha 1 de Fútbol" aria-pressed="true" style="--x:31.05%;--y:79.17%;--w:20.04%;--h:15.06%;--bg-size-x:499%;--bg-size-y:664.01%;--bg-pos-x:26.30%;--bg-pos-y:84.34%"><span>Cancha 1 · Fútbol</span></button>
+          <button class="predio-zona" type="button" data-predio-deporte="futbol" data-predio-zona="futbol-3" aria-label="Seleccionar cancha 3 de Fútbol" aria-pressed="false" style="--x:60.61%;--y:79.05%;--w:18.56%;--h:13.55%;--bg-size-x:538.79%;--bg-size-y:738.01%;--bg-pos-x:63.03%;--bg-pos-y:83.60%"><span>Cancha 3 · Fútbol</span></button>
+          <button class="predio-zona" type="button" data-predio-deporte="futbol" data-predio-zona="futbol-5" aria-label="Seleccionar cancha 5 de Fútbol" aria-pressed="false" style="--x:78.73%;--y:84.07%;--w:14.91%;--h:13.05%;--bg-size-x:670.69%;--bg-size-y:766.28%;--bg-pos-x:83.76%;--bg-pos-y:89.18%"><span>Cancha 5 · Fútbol</span></button>
         </div>
       </div>
-      <figcaption><strong>Mapa interactivo:</strong> tocá directamente una cancha para seleccionarla y ver su próxima actividad.</figcaption>
+      <figcaption><strong>Mapa interactivo:</strong> tocá una de las canchas de Ceibos para seleccionarla y ver su próxima actividad.</figcaption>
     </figure>
     <div class="predio-info rev rev-d3">
       <h3>Donde se vive Ceibos</h3>
@@ -1209,7 +1208,7 @@ footer .f-brand{display:flex;align-items:center;gap:10px;font-family:var(--displ
     </div>
     <div class="lanzamiento-accion">
       <strong>Mapa interactivo</strong>
-      <span>Fútbol, hockey, rugby y el gimnasio en construcción, reunidos en una experiencia pensada para el lanzamiento.</span>
+            <span>Fútbol, hockey y rugby, reunidos en una experiencia pensada para recorrer el predio.</span>
       <a class="btn btn-primario" href="#predio">Explorar el predio</a>
     </div>
   </div>
@@ -2023,8 +2022,7 @@ const NOMBRES_ZONAS_PREDIO = {
   "futbol-1": "Cancha 1 · Fútbol",
   "futbol-3": "Cancha 3 · Fútbol",
   "futbol-4": "Cancha 4 · Fútbol",
-  "futbol-5": "Cancha 5 · Fútbol",
-  gym: "Gimnasio Ceibos"
+  "futbol-5": "Cancha 5 · Fútbol"
 };
 function renderPredioVivo(){
   const contenedor = document.getElementById("predioVivo");
@@ -2039,9 +2037,7 @@ function renderPredioVivo(){
   const fechaJornada = candidatos[0]?.fecha ?? "";
   const jornada = fechaJornada ? candidatos.filter(p => p.fecha === fechaJornada).sort(porFechaHora) : [];
   const cancha = NOMBRES_ZONAS_PREDIO[zonaPredioActiva] ?? "Espacio Ceibos";
-  if (zonaPredioActiva === "gym") {
-    contenedor.innerHTML = `<span class="predio-vivo-etiqueta">Mapa vivo · Gimnasio</span><h4>${textoSeguro(cancha)}</h4><p><strong>En construcción.</strong> El nuevo espacio acompañará la preparación física de todos los planteles del club.</p><a href="#noticias">Conocer el proyecto →</a>`;
-  } else if (jornada.length) {
+  if (jornada.length) {
     const fecha = fmtFecha(fechaJornada);
     const partidos = jornada.map(partido => `<div class="predio-partido-local"><time datetime="${textoSeguro(partido.fecha)}T${textoSeguro(partido.hora || "00:00")}">${horaVisible(partido.hora)}</time><div><strong>${etiquetaCategoria(partido.categoria)}</strong><span>Ceibos vs ${textoSeguro(partido.rival)} · ${textoSeguro(ubicacionVisible(partido))}</span></div></div>`).join("");
     contenedor.innerHTML = `<span class="predio-vivo-etiqueta">Cancha seleccionada · ${textoSeguro(deporte.nombre)}</span><h4>${textoSeguro(cancha)}</h4><div class="predio-jornada"><div class="predio-jornada-fecha">Próxima jornada de local · ${fecha.semana} ${fecha.dia} ${fecha.mes}</div>${partidos}</div><a href="#${deporte.slug}" data-abrir-deporte="${deporte.slug}">Ver la agenda de ${textoSeguro(deporte.nombre)} →</a>`;
