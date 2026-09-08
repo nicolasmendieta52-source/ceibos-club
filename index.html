@@ -1078,14 +1078,15 @@ footer .f-brand{display:flex;align-items:center;gap:10px;font-family:var(--displ
   nav.topbar{padding:12px 18px;background:rgba(20,32,25,.92);backdrop-filter:blur(14px)}
   .brand-name{font-size:1rem}.brand .escudo-img{width:38px;height:38px}
   .nav-mobile{top:70px;right:14px;bottom:auto;left:14px;max-height:calc(100svh - 86px);padding:14px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-content:start;align-items:stretch;justify-content:initial;gap:8px;overflow-y:auto;border:1px solid rgba(229,187,82,.28);border-radius:20px;background:rgba(15,34,27,.98);box-shadow:0 20px 48px rgba(0,0,0,.4)}.nav-mobile a{width:auto;min-height:50px;padding:12px 11px;display:flex;align-items:center;font-family:var(--body);font-size:.73rem;font-weight:900;letter-spacing:.08em;line-height:1.15;text-transform:uppercase;color:var(--crema);border:1px solid rgba(246,241,228,.12);border-radius:12px;background:rgba(246,241,228,.045)}.nav-mobile a:hover{color:var(--verde-night);background:var(--dorado);border-color:var(--dorado);transform:none}.nav-mobile a:last-child{grid-column:1/-1;justify-content:center;background:var(--dorado);color:var(--verde-night);border-color:var(--dorado)}
-  .mobile-section-rail{--rail-step:38px;position:fixed;top:50%;right:0;z-index:860;display:block;width:82px;height:304px;overflow:hidden;transform:translateY(-50%);background:linear-gradient(90deg,transparent,rgba(8,28,21,.76) 48%,rgba(8,28,21,.94));border-right:2px solid rgba(229,187,82,.42);pointer-events:none;transition:opacity .25s var(--ease),visibility .25s var(--ease);-webkit-mask-image:linear-gradient(to bottom,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(to bottom,transparent,#000 14%,#000 86%,transparent)}
+  .mobile-section-rail{--rail-step:35px;position:fixed;top:50%;right:0;z-index:860;display:block;width:68px;height:280px;overflow:hidden;opacity:0;visibility:hidden;transform:translateY(-50%) translateX(8px);background:linear-gradient(90deg,transparent,rgba(8,28,21,.34) 58%,rgba(8,28,21,.62));border-right:1px solid rgba(229,187,82,.22);pointer-events:none;transition:opacity .34s var(--ease),transform .34s var(--ease),visibility 0s linear .34s;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 17%,#000 83%,transparent);mask-image:linear-gradient(to bottom,transparent,#000 17%,#000 83%,transparent)}
+  .mobile-section-rail.rail-visible{opacity:.78;visibility:visible;transform:translateY(-50%) translateX(0);transition-delay:0s}
   .mobile-section-rail-track{position:absolute;top:0;right:0;width:100%;will-change:transform;transition:transform .42s var(--ease)}
-  .mobile-section-rail a{height:var(--rail-step);padding:0 9px 0 2px;display:flex;align-items:center;justify-content:flex-end;gap:6px;color:rgba(246,241,228,.52);font-size:.48rem;font-weight:900;letter-spacing:.055em;line-height:1;text-align:right;text-decoration:none;text-transform:uppercase;white-space:nowrap;opacity:.16;pointer-events:auto;transform-origin:right center;text-shadow:0 1px 5px rgba(0,0,0,.9);transition:color .28s var(--ease),font-size .28s var(--ease),opacity .28s var(--ease),transform .28s var(--ease)}
-  .mobile-section-rail a::after{content:"";flex:0 0 auto;width:4px;height:4px;border-radius:50%;background:rgba(246,241,228,.45);transition:width .28s var(--ease),height .28s var(--ease),background .28s var(--ease),box-shadow .28s var(--ease)}
-  .mobile-section-rail a.rail-media{opacity:.34;font-size:.51rem}
-  .mobile-section-rail a.rail-cerca{opacity:.68;font-size:.56rem;transform:translateX(-1px)}
-  .mobile-section-rail a.rail-activo{color:var(--dorado);font-size:.66rem;opacity:1;transform:translateX(-4px) scale(1.06)}
-  .mobile-section-rail a.rail-activo::after{width:8px;height:8px;background:var(--dorado);box-shadow:0 0 0 4px rgba(229,187,82,.15),0 0 14px rgba(229,187,82,.65)}
+  .mobile-section-rail a{height:var(--rail-step);padding:0 7px 0 2px;display:flex;align-items:center;justify-content:flex-end;gap:5px;color:rgba(246,241,228,.46);font-size:.43rem;font-weight:850;letter-spacing:.045em;line-height:1;text-align:right;text-decoration:none;text-transform:uppercase;white-space:nowrap;opacity:.12;pointer-events:auto;transform-origin:right center;text-shadow:0 1px 4px rgba(0,0,0,.72);transition:color .25s var(--ease),font-size .25s var(--ease),opacity .25s var(--ease),transform .25s var(--ease)}
+  .mobile-section-rail a::after{content:"";flex:0 0 auto;width:3px;height:3px;border-radius:50%;background:rgba(246,241,228,.36);transition:width .25s var(--ease),height .25s var(--ease),background .25s var(--ease),box-shadow .25s var(--ease)}
+  .mobile-section-rail a.rail-media{opacity:.25;font-size:.45rem}
+  .mobile-section-rail a.rail-cerca{opacity:.5;font-size:.49rem;transform:translateX(-1px)}
+  .mobile-section-rail a.rail-activo{color:rgba(229,187,82,.92);font-size:.57rem;opacity:.92;transform:translateX(-2px) scale(1.025)}
+  .mobile-section-rail a.rail-activo::after{width:6px;height:6px;background:var(--dorado);box-shadow:0 0 0 2px rgba(229,187,82,.12),0 0 8px rgba(229,187,82,.34)}
   .nav-mobile.open + .mobile-section-rail{opacity:0;visibility:hidden}
   .hero{min-height:720px}.hero-arbol{display:none}.hero-inner{padding:102px 20px 42px}.hero-escudo{width:min(52vw,200px);height:min(52vw,200px);margin-bottom:22px}.hero-escudo .anillo{display:block;width:calc(100% + 64px);height:calc(100% + 64px);animation:none;transform:translate(-50%,-50%)}.hero-escudo .anillo text{font-size:8.5px;letter-spacing:2.8px}.hero-lema{letter-spacing:.28em;gap:10px;margin-top:16px}.hero-acciones{width:100%;margin-top:22px;gap:10px}.hero-acciones .btn{width:100%;justify-content:center;min-height:50px;padding:13px 20px}.hero-scroll{display:none}
   section{padding:72px 20px}.tag-sec{font-size:.62rem;letter-spacing:.25em;margin-bottom:14px}.tag-sec::before{width:26px}h2.titulo{font-size:clamp(2.25rem,12vw,3.5rem)}.sub{font-size:.97rem}
@@ -1101,7 +1102,7 @@ footer .f-brand{display:flex;align-items:center;gap:10px;font-family:var(--displ
 }
 @media (max-width:390px){
   .brand-name{font-size:.92rem;letter-spacing:.1em}.hero h1{font-size:3.55rem}.hero-lema{font-size:.62rem;letter-spacing:.2em}.home-accesos{grid-template-columns:1fr}.dep-tab{font-size:.95rem}.pd-equipos{grid-template-columns:1fr;text-align:center}.pd-equipo,.pd-equipo:last-child{text-align:center}.pd-versus{display:none}.pd-detalle{display:block}.pd-detalle span{display:block;border:0;padding:0 0 5px}.pd-detalle a{display:inline-flex;margin-top:9px}.stats{grid-template-columns:1fr}
-  .mobile-section-rail{width:74px}.mobile-section-rail a{padding-right:7px}.mobile-section-rail a.rail-activo{font-size:.61rem}
+  .mobile-section-rail{width:62px}.mobile-section-rail a{padding-right:6px}.mobile-section-rail a.rail-activo{font-size:.54rem}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
@@ -2230,6 +2231,7 @@ const mobileSectionRail = document.getElementById("mobileSectionRail");
 const mobileSectionRailTrack = document.getElementById("mobileSectionRailTrack");
 const mobileSectionRailLinks = [...document.querySelectorAll("[data-rail-section]")];
 let mobileSectionRailFrame = 0;
+let mobileSectionRailIdleTimer = 0;
 function actualizarMobileSectionRail(){
   mobileSectionRailFrame = 0;
   if (!mobileSectionRail || !mobileSectionRailTrack || !mobileSectionRailLinks.length || innerWidth > 820) return;
@@ -2255,8 +2257,20 @@ function solicitarMobileSectionRail(){
   if (mobileSectionRailFrame) return;
   mobileSectionRailFrame = requestAnimationFrame(actualizarMobileSectionRail);
 }
-addEventListener("scroll", solicitarMobileSectionRail, {passive:true});
-addEventListener("resize", solicitarMobileSectionRail, {passive:true});
+function mostrarMobileSectionRail(){
+  if (!mobileSectionRail || innerWidth > 820) return;
+  mobileSectionRail.classList.add("rail-visible");
+  clearTimeout(mobileSectionRailIdleTimer);
+  mobileSectionRailIdleTimer = setTimeout(() => {
+    mobileSectionRail.classList.remove("rail-visible");
+  }, 950);
+  solicitarMobileSectionRail();
+}
+addEventListener("scroll", mostrarMobileSectionRail, {passive:true});
+addEventListener("resize", () => {
+  if (innerWidth > 820) mobileSectionRail?.classList.remove("rail-visible");
+  solicitarMobileSectionRail();
+}, {passive:true});
 addEventListener("load", actualizarMobileSectionRail, {once:true});
 actualizarMobileSectionRail();
 
