@@ -123,10 +123,10 @@ nav.topbar.solid{
   box-shadow:0 8px 30px rgba(0,0,0,.35);
   padding:9px 4vw;
 }
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:0 0 auto;min-width:max-content}
 .brand svg{width:42px;height:42px;transition:transform .5s var(--ease)}
 .brand:hover svg{transform:rotate(-8deg) scale(1.08)}
-.brand-name{font-family:var(--display);font-size:1.15rem;letter-spacing:.14em;color:var(--blanco)}
+.brand-name{font-family:var(--display);font-size:1.15rem;line-height:1;letter-spacing:.14em;color:var(--blanco);white-space:nowrap}
 .brand-name em{font-style:normal;color:var(--dorado)}
 .nav-links{display:flex;gap:4px;align-items:center;white-space:nowrap}
 .nav-deportes{position:relative}
@@ -460,7 +460,6 @@ html[data-ceibos-access="locked"] .ceibos-access-gate{
     <a href="#club" data-rail-section="club">El club</a>
     <a href="#predio" data-rail-section="predio">Predio</a>
     <a href="#socios" data-rail-section="socios">Socios</a>
-    <a href="#lanzamiento" data-rail-section="lanzamiento">Experiencia</a>
     <a href="#contacto" data-rail-section="contacto">Sumate</a>
   </div>
 </nav>
@@ -518,6 +517,7 @@ html[data-ceibos-access="locked"] .ceibos-access-gate{
       <div id="homeProximos" class="home-proximos"></div>
     </aside>
   </div>
+  <div class="dato-ceibos" id="datoCeibos" aria-live="polite"></div>
   <div class="home-accesos" aria-label="Accesos rápidos">
     <a href="#noticias"><span aria-hidden="true">◉</span><strong>Noticias</strong><small>La actualidad del club</small></a>
     <a href="#deportes"><span aria-hidden="true">◆</span><strong>Equipos</strong><small>Planteles y categorías</small></a>
@@ -525,6 +525,19 @@ html[data-ceibos-access="locked"] .ceibos-access-gate{
     <a href="#socios"><span aria-hidden="true">◇</span><strong>Socios</strong><small>Beneficios y comunidad</small></a>
   </div>
 </section>
+<dialog class="modo-partido" id="modoPartidoDialog" aria-labelledby="modoPartidoTitulo">
+  <div class="modo-partido-interior">
+    <button class="modo-cerrar" type="button" data-cerrar-modo aria-label="Cerrar modo partido">×</button>
+    <div class="modo-kicker">Modo partido · Ceibos Club</div>
+    <div id="modoPartidoContenido"></div>
+    <div class="modo-acciones">
+      <button class="principal" type="button" data-postal-partido>Compartir postal</button>
+      <button type="button" data-calendario-partido>Agregar al calendario</button>
+      <a data-mapa-partido target="_blank" rel="noopener">Cómo llegar</a>
+    </div>
+    <p class="modo-estado" id="modoPartidoEstado" role="status"></p>
+  </div>
+</dialog>
 <style>
 /* ---------- estructura común de secciones ---------- */
 section{position:relative;padding:110px 5vw}
@@ -554,6 +567,9 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 .pd-equipos{position:relative;z-index:1;display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center;margin:22px 0}.pd-equipo{font-family:var(--display);font-size:clamp(1.55rem,3.6vw,3rem);line-height:.92;text-transform:uppercase;color:var(--blanco)}.pd-equipo:last-child{text-align:right}.pd-versus{font-family:var(--display);font-size:2rem;color:var(--dorado)}.pd-detalle{position:relative;z-index:1;display:flex;align-items:center;gap:12px;flex-wrap:wrap;color:rgba(246,241,228,.8);font-size:.88rem}.pd-detalle span{padding-right:12px;border-right:1px solid rgba(246,241,228,.2)}.pd-detalle span:last-child{border:0}.pd-detalle a{margin-left:auto;color:var(--verde-night);background:var(--dorado);border-radius:99px;padding:10px 15px;text-decoration:none;font-size:.68rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
 .home-agenda{border-radius:28px;padding:26px;background:rgba(246,241,228,.045);border:1px solid rgba(246,241,228,.12)}.home-agenda-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;color:var(--blanco);font-size:.74rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.home-agenda-top a{color:var(--dorado);font-size:.66rem;text-decoration:none}.home-proximos{display:flex;flex-direction:column}.home-proximo{display:grid;grid-template-columns:58px 1fr;gap:13px;padding:15px 0;border-top:1px solid rgba(246,241,228,.1)}.home-proximo-fecha{font-family:var(--display);font-size:1.5rem;line-height:.85;color:var(--dorado);text-align:center}.home-proximo-fecha small{display:block;font-family:var(--body);font-size:.52rem;letter-spacing:.05em;line-height:1.25;color:rgba(246,241,228,.52)}.home-proximo .deporte{color:var(--dorado-soft);font-size:.63rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.home-proximo strong{display:block;color:var(--blanco);font-size:.91rem;margin:4px 0}.home-proximo p{color:rgba(246,241,228,.55);font-size:.75rem}.home-sin-partidos{color:rgba(246,241,228,.6);font-size:.9rem;line-height:1.5;padding:20px 0}
 .home-accesos{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}.home-accesos a{padding:20px;border-radius:18px;text-decoration:none;background:rgba(246,241,228,.045);border:1px solid rgba(246,241,228,.1);transition:transform .25s var(--ease),background .25s,border-color .25s}.home-accesos a:hover{transform:translateY(-4px);background:rgba(229,187,82,.1);border-color:rgba(229,187,82,.55)}.home-accesos span{display:block;color:var(--dorado);font-size:1.5rem;line-height:1;margin-bottom:11px}.home-accesos strong{display:block;color:var(--blanco);font-size:.86rem}.home-accesos small{display:block;color:rgba(246,241,228,.55);font-size:.74rem;margin-top:4px}
+.pd-acciones{position:relative;z-index:2;display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.pd-accion{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:39px;padding:9px 14px;border:1px solid rgba(229,187,82,.42);border-radius:99px;background:rgba(16,39,31,.48);color:var(--dorado-soft);font:900 .64rem/1 var(--body);letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:transform .25s var(--ease),background .25s,color .25s}.pd-accion:hover{transform:translateY(-2px);background:rgba(229,187,82,.14)}.pd-accion-principal{background:var(--dorado);color:var(--verde-night);border-color:var(--dorado)}
+.dato-ceibos{position:relative;z-index:1;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:14px;margin-top:18px;padding:15px 18px;border:1px solid rgba(229,187,82,.2);border-radius:18px;background:linear-gradient(90deg,rgba(229,187,82,.1),rgba(246,241,228,.035));color:rgba(246,241,228,.76)}.dato-ceibos-icono{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--dorado);color:var(--verde-night);font-family:var(--display);font-size:1.2rem}.dato-ceibos strong{display:block;margin-bottom:3px;color:var(--dorado-soft);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase}.dato-ceibos p{font-size:.86rem;line-height:1.45}.dato-ceibos small{color:rgba(246,241,228,.4);font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;white-space:nowrap}
+.modo-partido{width:min(92vw,720px);max-height:90svh;padding:0;border:1px solid rgba(229,187,82,.42);border-radius:28px;background:#10271f;color:var(--crema);box-shadow:0 28px 90px rgba(0,0,0,.62);overflow:auto}.modo-partido::backdrop{background:rgba(4,15,11,.78);backdrop-filter:blur(8px)}.modo-partido-interior{position:relative;padding:clamp(26px,5vw,46px);overflow:hidden}.modo-partido-interior::after{content:"CEIBOS";position:absolute;right:-.04em;bottom:-.19em;font-family:var(--display);font-size:clamp(7rem,22vw,12rem);line-height:1;color:rgba(229,187,82,.045);pointer-events:none}.modo-cerrar{position:absolute;top:16px;right:16px;z-index:3;width:42px;height:42px;border:1px solid rgba(246,241,228,.18);border-radius:50%;background:rgba(246,241,228,.06);color:var(--crema);font-size:1.35rem;cursor:pointer}.modo-kicker{position:relative;z-index:1;color:var(--dorado);font-size:.68rem;font-weight:900;letter-spacing:.2em;text-transform:uppercase}.modo-partido h3{position:relative;z-index:1;margin:10px 48px 24px 0;font-family:var(--display);font-size:clamp(2.25rem,7vw,4.6rem);line-height:.9;text-transform:uppercase;color:var(--blanco)}.modo-partido h3 em{font-style:normal;color:var(--dorado)}.modo-marcador{position:relative;z-index:1;display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center;padding:24px 0;border-block:1px solid rgba(246,241,228,.12)}.modo-equipo{font-family:var(--display);font-size:clamp(1.55rem,4.5vw,2.65rem);line-height:.95;text-transform:uppercase;color:var(--blanco)}.modo-equipo:last-child{text-align:right}.modo-vs{font-family:var(--display);font-size:1.8rem;color:var(--dorado)}.modo-meta{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.modo-meta span{padding:8px 11px;border-radius:99px;background:rgba(246,241,228,.065);color:rgba(246,241,228,.78);font-size:.75rem}.modo-cuenta{position:relative;z-index:1;margin-top:18px;color:var(--dorado-soft);font-family:var(--display);font-size:clamp(1.45rem,4vw,2.15rem);letter-spacing:.03em;text-transform:uppercase}.modo-acciones{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:24px}.modo-acciones button,.modo-acciones a{min-height:48px;padding:11px 12px;border:1px solid rgba(229,187,82,.38);border-radius:13px;background:rgba(246,241,228,.055);color:var(--crema);font:800 .7rem/1.25 var(--body);text-align:center;text-decoration:none;cursor:pointer;display:flex;align-items:center;justify-content:center}.modo-acciones .principal{background:var(--dorado);color:var(--verde-night);border-color:var(--dorado)}.modo-estado{position:relative;z-index:1;min-height:1.2em;margin-top:14px;color:rgba(246,241,228,.58);font-size:.72rem;text-align:center}
 
 /* reveal on scroll */
 .rev{opacity:0;transform:translateY(36px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
@@ -578,6 +594,7 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 .noticia-dato strong{display:block;font-family:var(--display);font-size:1.55rem;line-height:1;color:var(--dorado);text-transform:uppercase}
 .noticia-dato span{display:block;margin-top:5px;font-size:.7rem;font-weight:700;line-height:1.35;color:rgba(246,241,228,.68)}
 .noticia-proyecto{padding-top:12px;border-top:1px solid rgba(246,241,228,.12);font-size:.82rem}
+.noticia-ampliacion{margin-top:4px}.noticia-ampliacion summary{display:inline-flex;align-items:center;gap:8px;margin:5px 0 14px;padding:10px 15px;border:1px solid rgba(229,187,82,.35);border-radius:99px;color:var(--dorado-soft);font-size:.7rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;list-style:none}.noticia-ampliacion summary::-webkit-details-marker{display:none}.noticia-ampliacion summary::after{content:"+";font-size:1rem}.noticia-ampliacion[open] summary::after{content:"−"}
 .dep-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:40px 0 34px}
 .dep-tab{
   font-family:var(--display);font-size:clamp(1rem,2.4vw,1.4rem);letter-spacing:.06em;
@@ -830,16 +847,19 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
       <div class="noticia-fecha">Proyecto de infraestructura · Primera etapa</div>
       <h3>El primer paso del masterplan</h3>
       <p>Ceibos sigue creciendo. El nuevo gimnasio será la primera etapa de un plan de infraestructura que continuará con vestuarios y Club House, pensado para acompañar el desarrollo deportivo y social del club.</p>
-      <p>Estará ubicado junto al parrillero y frente a la cancha de fútbol, con un espacio preparado para todas las disciplinas y también para socios que no compiten en un plantel.</p>
-      <div class="noticia-datos" aria-label="Datos principales del proyecto">
-        <div class="noticia-dato"><strong>200 m²</strong><span>de área interior proyectada</span></div>
-        <div class="noticia-dato"><strong>3 m</strong><span>de altura prevista</span></div>
-        <div class="noticia-dato"><strong>+400</strong><span>socios activos estimados</span></div>
-        <div class="noticia-dato"><strong>Todas</strong><span>las disciplinas del club</span></div>
-      </div>
-      <p>El proyecto contempla entrenamiento de fuerza y funcional, equipamiento para prevención y rehabilitación, y un sector cerrado para trabajos grupales. Su funcionamiento prevé cubrir financiación, mantenimiento, limpieza y seguridad.</p>
-      <p><strong>Dale play y conocé el proyecto que estamos construyendo entre todos.</strong></p>
-      <p class="noticia-proyecto"><strong>Proyecto arquitectónico:</strong> Cabrera Inciarte Arquitectos.</p>
+      <details class="noticia-ampliacion">
+        <summary>Ver proyecto completo</summary>
+        <p>Estará ubicado junto al parrillero y frente a la cancha de fútbol, con un espacio preparado para todas las disciplinas y también para socios que no compiten en un plantel.</p>
+        <div class="noticia-datos" aria-label="Datos principales del proyecto">
+          <div class="noticia-dato"><strong>200 m²</strong><span>de área interior proyectada</span></div>
+          <div class="noticia-dato"><strong>3 m</strong><span>de altura prevista</span></div>
+          <div class="noticia-dato"><strong>+400</strong><span>socios activos estimados</span></div>
+          <div class="noticia-dato"><strong>Todas</strong><span>las disciplinas del club</span></div>
+        </div>
+        <p>El proyecto contempla entrenamiento de fuerza y funcional, equipamiento para prevención y rehabilitación, y un sector cerrado para trabajos grupales. Su funcionamiento prevé cubrir financiación, mantenimiento, limpieza y seguridad.</p>
+        <p><strong>Dale play y conocé el proyecto que estamos construyendo entre todos.</strong></p>
+        <p class="noticia-proyecto"><strong>Proyecto arquitectónico:</strong> Cabrera Inciarte Arquitectos.</p>
+      </details>
     </article>
   </div>
 </section>
@@ -1214,11 +1234,11 @@ footer .f-brand{display:flex;align-items:center;gap:10px;font-family:var(--displ
       <p>Pagá tu cuota social y de deporte online, mirá tu estado de cuenta y mantenete al día con el club.</p>
       <span class="ir">Ir a pagos →</span>
     </a>
-    <a class="socio-card rev rev-d2" href="#shop">
+    <a class="socio-card rev rev-d2" href="https://tienda.bulk.uy/index.php/ceibos-club/" target="_blank" rel="noopener">
       <span class="emoji">👕</span>
-      <h3>Próxima colección</h3>
-      <p>Conocé los primeros modelos de la nueva indumentaria oficial de Ceibos.</p>
-      <span class="ir">Ver colección →</span>
+      <h3>Tienda oficial</h3>
+      <p>Encontrá la indumentaria oficial de Ceibos, disponible durante todo el año en la tienda de Bulk.</p>
+      <span class="ir">Comprar en Bulk ↗</span>
     </a>
     <a class="socio-card rev rev-d3" href="mailto:info@ceibosclub.com">
       <span class="emoji">📩</span>
@@ -1226,34 +1246,6 @@ footer .f-brand{display:flex;align-items:center;gap:10px;font-family:var(--displ
       <p>¿Consultas sobre tu cuota, inscripciones o datos de socio? Escribile directo a la administración.</p>
       <span class="ir">Escribir →</span>
     </a>
-  </div>
-</section>
-
-<!-- ======================= LANZAMIENTO ======================= -->
-<style>
-#lanzamiento{background:radial-gradient(circle at 82% 18%,rgba(229,187,82,.18),transparent 25%),linear-gradient(135deg,#23483a,#10261f);overflow:hidden}
-.lanzamiento-final{max-width:980px;margin:0 auto;padding:clamp(30px,5vw,58px);border:1px solid rgba(229,187,82,.36);border-radius:30px;background:rgba(9,25,19,.38);position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(250px,.9fr);gap:36px;align-items:center}
-.lanzamiento-final::after{content:"⌖";position:absolute;right:-18px;bottom:-105px;font-family:var(--display);font-size:18rem;line-height:1;color:rgba(229,187,82,.07);pointer-events:none}
-.lanzamiento-final h3{position:relative;z-index:1;font-family:var(--display);font-size:clamp(2.7rem,6vw,5rem);line-height:.88;text-transform:uppercase;color:var(--blanco)}
-.lanzamiento-final h3 em{font-style:normal;color:var(--dorado)}.lanzamiento-final p{position:relative;z-index:1;margin-top:18px;max-width:560px;color:rgba(246,241,228,.75);line-height:1.7}
-.lanzamiento-accion{position:relative;z-index:1;padding:26px;border-radius:20px;background:rgba(246,241,228,.07);border:1px solid rgba(246,241,228,.13)}
-.lanzamiento-accion strong{display:block;font-family:var(--display);font-size:1.65rem;line-height:1;text-transform:uppercase;color:var(--dorado)}.lanzamiento-accion span{display:block;margin-top:10px;color:rgba(246,241,228,.7);font-size:.9rem;line-height:1.55}
-.lanzamiento-accion .btn{margin-top:18px;width:100%;justify-content:center}
-@media (max-width:820px){.lanzamiento-final{grid-template-columns:1fr;gap:22px;padding:28px 22px;border-radius:22px}.lanzamiento-final::after{font-size:13rem;bottom:-62px}.lanzamiento-accion{padding:20px}}
-</style>
-<section id="lanzamiento">
-  <div class="tag-sec rev">Experiencia Ceibos</div>
-  <h2 class="titulo rev rev-d1">Descubrí <em>el club</em></h2>
-  <div class="lanzamiento-final rev rev-d2">
-    <div>
-      <h3>Entrá al<br><em>Predio Ceibos</em></h3>
-      <p>Recorré el mapa interactivo, tocá cada cancha y descubrí qué equipo juega, dónde se encuentra y cuál es su próxima actividad.</p>
-    </div>
-    <div class="lanzamiento-accion">
-      <strong>Mapa interactivo</strong>
-            <span>Fútbol, hockey y rugby, reunidos en una experiencia pensada para recorrer el predio.</span>
-      <a class="btn btn-primario" href="#predio">Explorar el predio</a>
-    </div>
   </div>
 </section>
 
@@ -1491,6 +1483,19 @@ img,video,svg{max-width:100%}
   .notif-dialog{padding:25px 18px 20px;border-radius:22px}
   .notif-deportes{grid-template-columns:1fr}
   .notif-acciones{flex-direction:column}.notif-acciones button{width:100%}
+}
+@media(max-width:820px){
+  .shop-grid{display:flex;width:auto;margin-inline:-18px;padding:0 18px 8px;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-inline:contain;scrollbar-width:none}
+  .shop-grid::-webkit-scrollbar{display:none}
+  .shop-grid .prod{flex:0 0 min(82vw,330px);scroll-snap-align:center}
+  .soli-grid,.socios-grid{display:grid;grid-template-columns:1fr}
+  .dato-ceibos{grid-template-columns:auto minmax(0,1fr);padding:14px}
+  .dato-ceibos small{grid-column:2;white-space:normal}
+  .modo-partido{width:calc(100vw - 24px);border-radius:22px}
+  .modo-partido-interior{padding:26px 20px}
+  .modo-marcador{gap:10px}
+  .modo-equipo{font-size:clamp(1.35rem,8vw,2.1rem)}
+  .modo-acciones{grid-template-columns:1fr}
 }
 </style>
 </main>
@@ -1786,6 +1791,36 @@ const hoyISO = () => {
   return `${partes.year}-${partes.month}-${partes.day}`;
 };
 const ubicacionVisible = partido => textoPlano(partido.cancha) || (partido.local ? "Cancha Los Ceibos" : "Visitante");
+const nombreDeporte = valor => DEPORTES.find(deporte => deporte.slug === slugDeporte(valor))?.nombre || textoPlano(valor) || "Ceibos";
+const horaConfirmada = partido => /^\d{1,2}:\d{2}$/.test(textoPlano(partido?.hora));
+let partidoDestacadoActual = null;
+let modoPartidoTimer = 0;
+
+function instantePartido(partido){
+  if (!partido || !fechaValida(partido.fecha)) return null;
+  const hora = horaConfirmada(partido) ? partido.hora.padStart(5, "0") : "12:00";
+  const fecha = new Date(`${partido.fecha}T${hora}:00-03:00`);
+  return Number.isNaN(fecha.getTime()) ? null : fecha;
+}
+function cuentaRegresivaPartido(partido){
+  const instante = instantePartido(partido);
+  if (!instante) return "Fecha a confirmar";
+  const diferencia = instante.getTime() - Date.now();
+  if (!horaConfirmada(partido)) {
+    const hoy = new Date(); hoy.setHours(0,0,0,0);
+    const fecha = new Date(`${partido.fecha}T00:00:00`); fecha.setHours(0,0,0,0);
+    const dias = Math.round((fecha-hoy)/86400000);
+    if (dias === 0) return "Se juega hoy · horario a confirmar";
+    if (dias === 1) return "Se juega mañana · horario a confirmar";
+    return dias > 1 ? `Faltan ${dias} días · horario a confirmar` : "Fecha disputada";
+  }
+  if (diferencia <= 0 && diferencia > -3*60*60*1000) return "Partido en juego";
+  if (diferencia <= 0) return "Partido finalizado";
+  const dias = Math.floor(diferencia/86400000);
+  const horas = Math.floor((diferencia%86400000)/3600000);
+  const minutos = Math.max(0, Math.floor((diferencia%3600000)/60000));
+  return dias ? `Faltan ${dias} d · ${horas} h` : `Faltan ${horas} h · ${minutos} min`;
+}
 
 function renderDeportePanel(){
   const d = DEPORTES.find(deporte => deporte.slug === deporteActivo) ?? DEPORTES[0];
@@ -2048,14 +2083,161 @@ function renderHomeDeportiva(){
   const proximos = PARTIDOS.filter(p => fechaValida(p.fecha) && new Date(p.fecha + "T00:00:00") >= hoy)
     .sort(porFecha).slice(0, 4);
   const primero = proximos[0];
+  partidoDestacadoActual = primero || null;
   if (!primero) {
     destacado.innerHTML = `<div class="pd-etiqueta"><span>Próximo partido</span><span class="pd-fecha">Fixture en actualización</span></div><div class="pd-equipos"><div class="pd-equipo">Ceibos</div><div class="pd-versus">VS</div><div class="pd-equipo">Próximamente</div></div><div class="pd-detalle"><span>Consultá la agenda para enterarte apenas se publique.</span><a href="#fixture">Ver fixture</a></div>`;
     lista.innerHTML = `<p class="home-sin-partidos">La próxima fecha oficial todavía no fue publicada.</p>`;
     return;
   }
   const f = fmtFecha(primero.fecha);
-  destacado.innerHTML = `<div class="pd-etiqueta"><span>${textoSeguro(primero.deporte)} · ${etiquetaCategoria(primero.categoria)}</span><span class="pd-fecha">${f.semana} ${f.dia} ${f.mes}</span></div><div class="pd-equipos"><div class="pd-equipo">Ceibos</div><div class="pd-versus">VS</div><div class="pd-equipo">${textoSeguro(primero.rival)}</div></div><div class="pd-detalle"><span>${horaVisible(primero.hora)}</span><span>${textoSeguro(ubicacionVisible(primero))}</span><a href="#fixture">Ficha del partido</a></div>`;
+  destacado.innerHTML = `<div class="pd-etiqueta"><span>${textoSeguro(nombreDeporte(primero.deporte))} · ${etiquetaCategoria(primero.categoria)}</span><span class="pd-fecha">${f.semana} ${f.dia} ${f.mes}</span></div><div class="pd-equipos"><div class="pd-equipo">Ceibos</div><div class="pd-versus">VS</div><div class="pd-equipo">${textoSeguro(primero.rival)}</div></div><div class="pd-detalle"><span>${horaVisible(primero.hora)}</span><span>${textoSeguro(ubicacionVisible(primero))}</span><a href="#fixture">Ficha del partido</a></div><div class="pd-acciones"><button class="pd-accion pd-accion-principal" type="button" data-modo-partido>Modo partido</button><button class="pd-accion" type="button" data-postal-partido>Compartir postal</button></div>`;
   lista.innerHTML = proximos.slice(1).map(p => { const fecha = fmtFecha(p.fecha); return `<article class="home-proximo"><div class="home-proximo-fecha">${fecha.dia}<small>${fecha.semana}</small><small>${fecha.mes}</small></div><div><div class="deporte">${textoSeguro(p.deporte)} · ${etiquetaCategoria(p.categoria)}</div><strong>Ceibos vs ${textoSeguro(p.rival)}</strong><p>${horaVisible(p.hora)} · ${textoSeguro(ubicacionVisible(p))}</p></div></article>`; }).join("") || `<p class="home-sin-partidos">No hay más fechas publicadas por ahora.</p>`;
+}
+
+function renderDatoCeibos(){
+  const contenedor = document.getElementById("datoCeibos");
+  if (!contenedor) return;
+  const resultados = RESULTADOS.filter(resultado => fechaValida(resultado.fecha));
+  const victorias = resultados.filter(resultado => Number(resultado.gf) > Number(resultado.gc)).length;
+  const categorias = new Set([...PARTIDOS, ...RESULTADOS].map(item => `${slugDeporte(item.deporte)}|${item.categoria}`).filter(valor => !valor.endsWith("|undefined"))).size;
+  const hoy = new Date(); hoy.setHours(0,0,0,0);
+  const estaSemana = PARTIDOS.filter(partido => {
+    if (!fechaValida(partido.fecha)) return false;
+    const dias = Math.round((new Date(`${partido.fecha}T00:00:00`)-hoy)/86400000);
+    return dias >= 0 && dias <= 7;
+  }).length;
+  const datos = [
+    resultados.length ? `La base deportiva ya reúne ${resultados.length} resultados oficiales de Ceibos.` : "La agenda deportiva se actualiza con las fuentes oficiales del club.",
+    victorias ? `Ceibos suma ${victorias} victorias en los resultados que hoy están publicados.` : "Cada resultado queda guardado en el historial de su categoría.",
+    categorias ? `La web sigue ${categorias} categorías entre fútbol, hockey, rugby y basketball.` : "Fútbol, hockey, rugby y basketball conviven en una sola agenda.",
+    estaSemana ? `Hay ${estaSemana} partido${estaSemana===1?"":"s"} de Ceibos publicado${estaSemana===1?"":"s"} para los próximos siete días.` : "Todavía no hay una fecha publicada para los próximos siete días."
+  ];
+  const indice = Math.floor(Date.now()/86400000) % datos.length;
+  contenedor.innerHTML = `<span class="dato-ceibos-icono" aria-hidden="true">!</span><div><strong>Dato Ceibos</strong><p>${textoSeguro(datos[indice])}</p></div><small>Se renueva con la agenda</small>`;
+}
+
+function contenidoModoPartido(partido){
+  const fecha = fmtFecha(partido.fecha);
+  return `<h3 id="modoPartidoTitulo">Próximo <em>partido</em></h3>
+    <div class="modo-marcador"><strong class="modo-equipo">Ceibos</strong><span class="modo-vs">VS</span><strong class="modo-equipo">${textoSeguro(partido.rival)}</strong></div>
+    <div class="modo-meta"><span>${textoSeguro(nombreDeporte(partido.deporte))} · ${etiquetaCategoria(partido.categoria)}</span><span>${fecha.semana} ${fecha.dia} ${fecha.mes} ${fecha.anio}</span><span>${horaVisible(partido.hora)} · ${textoSeguro(ubicacionVisible(partido))}</span></div>
+    <div class="modo-cuenta" data-modo-cuenta>${textoSeguro(cuentaRegresivaPartido(partido))}</div>`;
+}
+function abrirModoPartido(){
+  if (!partidoDestacadoActual) return;
+  const dialogo = document.getElementById("modoPartidoDialog");
+  const contenido = document.getElementById("modoPartidoContenido");
+  const mapa = dialogo?.querySelector("[data-mapa-partido]");
+  if (!dialogo || !contenido || !mapa) return;
+  contenido.innerHTML = contenidoModoPartido(partidoDestacadoActual);
+  const ubicacion = textoPlano(partidoDestacadoActual.cancha) || (partidoDestacadoActual.local ? "Ceibos Club Montevideo Uruguay" : "");
+  mapa.href = ubicacion ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ubicacion)}` : "#";
+  mapa.hidden = !ubicacion;
+  document.getElementById("modoPartidoEstado").textContent = "";
+  if (typeof dialogo.showModal === "function") dialogo.showModal(); else dialogo.setAttribute("open", "");
+  clearInterval(modoPartidoTimer);
+  modoPartidoTimer = setInterval(() => {
+    const cuenta = dialogo.querySelector("[data-modo-cuenta]");
+    if (cuenta) cuenta.textContent = cuentaRegresivaPartido(partidoDestacadoActual);
+  }, 30000);
+}
+
+const slugArchivo = valor => textoPlano(valor).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+function descargarBlob(blob, nombre){
+  const enlace = document.createElement("a");
+  const url = URL.createObjectURL(blob);
+  enlace.href = url; enlace.download = nombre; document.body.appendChild(enlace); enlace.click(); enlace.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+function ajustarTextoCanvas(contexto, texto, ancho, tamanoInicial, tamanoMinimo, peso="700"){
+  let tamano = tamanoInicial;
+  do { contexto.font = `${peso} ${tamano}px "Arial Narrow", Impact, sans-serif`; tamano -= 2; }
+  while (tamano >= tamanoMinimo && contexto.measureText(texto).width > ancho);
+  return Math.max(tamanoMinimo, tamano + 2);
+}
+function lineasCanvas(contexto, texto, ancho){
+  const palabras = texto.split(/\s+/); const lineas = []; let linea = "";
+  palabras.forEach(palabra => {
+    const prueba = linea ? `${linea} ${palabra}` : palabra;
+    if (linea && contexto.measureText(prueba).width > ancho) { lineas.push(linea); linea = palabra; }
+    else linea = prueba;
+  });
+  if (linea) lineas.push(linea);
+  return lineas;
+}
+async function cargarImagenPostal(ruta){
+  return new Promise(resolve => {
+    const imagen = new Image(); imagen.onload = () => resolve(imagen); imagen.onerror = () => resolve(null); imagen.src = ruta;
+  });
+}
+async function crearPostalPartido(partido){
+  const canvas = document.createElement("canvas"); canvas.width = 1080; canvas.height = 1350;
+  const ctx = canvas.getContext("2d");
+  const fondo = ctx.createLinearGradient(0,0,1080,1350); fondo.addColorStop(0,"#0a2d22"); fondo.addColorStop(1,"#173f31");
+  ctx.fillStyle = fondo; ctx.fillRect(0,0,1080,1350);
+  ctx.strokeStyle = "rgba(237,190,66,.23)"; ctx.lineWidth = 3;
+  [760,900,1040].forEach(radio => { ctx.beginPath(); ctx.arc(1060,280,radio/2,0,Math.PI*2); ctx.stroke(); });
+  ctx.fillStyle = "#edbe42"; ctx.fillRect(72,70,936,8);
+  const escudo = await cargarImagenPostal("assets/escudo-ceibos.png");
+  if (escudo) {
+    const proporcion = Math.min(170/escudo.width,170/escudo.height);
+    ctx.drawImage(escudo,72,112,escudo.width*proporcion,escudo.height*proporcion);
+  }
+  ctx.textAlign = "right"; ctx.fillStyle = "#edbe42"; ctx.font = '700 28px Arial, sans-serif'; ctx.fillText("CEIBOS CLUB",1008,152);
+  ctx.fillStyle = "rgba(255,255,255,.74)"; ctx.font = '600 20px Arial, sans-serif'; ctx.fillText("TOTUS TUUS",1008,188);
+  ctx.textAlign = "left"; ctx.fillStyle = "#edbe42"; ctx.font = '700 28px Arial, sans-serif'; ctx.fillText(`${nombreDeporte(partido.deporte).toUpperCase()} · ${etiquetaCategoria(partido.categoria).toUpperCase()}`,72,365);
+  ctx.fillStyle = "#fff"; ctx.font = '900 92px "Arial Narrow", Impact, sans-serif'; ctx.fillText("PRÓXIMO",72,470);
+  ctx.fillStyle = "#edbe42"; ctx.fillText("PARTIDO",72,565);
+  ctx.fillStyle = "rgba(255,255,255,.18)"; ctx.fillRect(72,635,936,2);
+  ctx.fillStyle = "#fff"; ctx.font = '900 88px "Arial Narrow", Impact, sans-serif'; ctx.fillText("CEIBOS",72,760);
+  ctx.fillStyle = "#edbe42"; ctx.font = '700 34px Arial, sans-serif'; ctx.fillText("VS",72,820);
+  const rival = textoPlano(partido.rival).toUpperCase();
+  const tamanoRival = ajustarTextoCanvas(ctx,rival,936,82,48,"900"); ctx.font = `900 ${tamanoRival}px "Arial Narrow", Impact, sans-serif`; ctx.fillStyle = "#fff";
+  lineasCanvas(ctx,rival,936).slice(0,2).forEach((linea,indice) => ctx.fillText(linea,72,920+indice*(tamanoRival+8)));
+  const fecha = fmtFecha(partido.fecha);
+  ctx.fillStyle = "#edbe42"; ctx.font = '800 34px Arial, sans-serif'; ctx.fillText(`${fecha.semana} ${fecha.dia} ${fecha.mes} ${fecha.anio}`,72,1100);
+  ctx.fillStyle = "#fff"; ctx.font = '600 28px Arial, sans-serif'; ctx.fillText(`${horaVisible(partido.hora)} · ${ubicacionVisible(partido)}`,72,1155);
+  ctx.fillStyle = "rgba(255,255,255,.62)"; ctx.font = '600 22px Arial, sans-serif'; ctx.fillText("ceibosclub.com",72,1272);
+  return new Promise((resolve,reject) => canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error("No se pudo crear la postal")), "image/png", .96));
+}
+async function compartirPostalPartido(){
+  const partido = partidoDestacadoActual;
+  if (!partido) return;
+  const estado = document.getElementById("modoPartidoEstado");
+  if (estado) estado.textContent = "Preparando la postal…";
+  try {
+    const blob = await crearPostalPartido(partido);
+    const nombre = `ceibos-${slugArchivo(partido.categoria)}-${partido.fecha}.png`;
+    const archivo = new File([blob], nombre, {type:"image/png"});
+    const datos = {title:`Ceibos vs ${partido.rival}`, text:`${nombreDeporte(partido.deporte)} · ${partido.categoria}`, files:[archivo]};
+    if (navigator.share && navigator.canShare?.({files:[archivo]})) {
+      await navigator.share(datos);
+      if (estado) estado.textContent = "Postal compartida.";
+    } else {
+      descargarBlob(blob, nombre);
+      if (estado) estado.textContent = "Postal descargada. Ya podés compartirla.";
+    }
+  } catch (error) {
+    if (error?.name !== "AbortError" && estado) estado.textContent = "No se pudo crear la postal. Probá nuevamente.";
+  }
+}
+function agregarPartidoCalendario(){
+  const partido = partidoDestacadoActual;
+  if (!partido) return;
+  const limpiar = valor => textoPlano(valor).replace(/([,;\\])/g,"\\$1").replace(/\n/g,"\\n");
+  const fechaCompacta = partido.fecha.replaceAll("-", "");
+  let inicio, fin;
+  if (horaConfirmada(partido)) {
+    const fecha = instantePartido(partido); const final = new Date(fecha.getTime()+2*60*60*1000);
+    const utc = valor => valor.toISOString().replace(/[-:]/g,"").replace(/\.\d{3}/,"");
+    inicio = `DTSTART:${utc(fecha)}`; fin = `DTEND:${utc(final)}`;
+  } else {
+    const siguiente = new Date(`${partido.fecha}T12:00:00Z`); siguiente.setUTCDate(siguiente.getUTCDate()+1);
+    inicio = `DTSTART;VALUE=DATE:${fechaCompacta}`; fin = `DTEND;VALUE=DATE:${siguiente.toISOString().slice(0,10).replaceAll("-","")}`;
+  }
+  const ics = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Ceibos Club//Agenda//ES","BEGIN:VEVENT",`UID:${partido.fecha}-${slugArchivo(partido.categoria)}@ceibosclub.com`,`DTSTAMP:${new Date().toISOString().replace(/[-:]/g,"").replace(/\.\d{3}/,"")}`,inicio,fin,`SUMMARY:${limpiar(`Ceibos vs ${partido.rival}`)}`,`DESCRIPTION:${limpiar(`${nombreDeporte(partido.deporte)} · ${partido.categoria}`)}`,`LOCATION:${limpiar(ubicacionVisible(partido))}`,"END:VEVENT","END:VCALENDAR"].join("\r\n");
+  descargarBlob(new Blob([ics],{type:"text/calendar;charset=utf-8"}), `ceibos-${partido.fecha}.ics`);
+  const estado = document.getElementById("modoPartidoEstado"); if (estado) estado.textContent = "Partido agregado: abrí el archivo descargado para guardarlo en tu calendario.";
 }
 let deportePredioActivo = "futbol";
 let zonaPredioActiva = "futbol-1";
@@ -2102,7 +2284,7 @@ function realinearDestinoHash(){
   requestAnimationFrame(() => requestAnimationFrame(() => destino?.scrollIntoView({ block:"start" })));
 }
 function renderDinamico(){
-  renderTicker(); renderHomeDeportiva(); renderDeportes(); renderScore(); renderFixture(); renderPredioVivo(); renderEventos(); renderArchivoHistorico(); revObserve();
+  renderTicker(); renderHomeDeportiva(); renderDatoCeibos(); renderDeportes(); renderScore(); renderFixture(); renderPredioVivo(); renderEventos(); renderArchivoHistorico(); revObserve();
   realinearDestinoHash();
 }
 
@@ -2192,6 +2374,23 @@ hamb.onclick = () => {
 navMobile.querySelectorAll("a").forEach(a => a.onclick = cerrarMenu);
 document.querySelectorAll("[data-deporte-link]").forEach(a => a.addEventListener("click", () => activarDeporte(a.dataset.deporteLink)));
 addEventListener("keydown", e => { if (e.key === "Escape" && hamb.classList.contains("open")) { cerrarMenu(); hamb.focus(); } });
+
+/* Modo partido + postal social. Los botones son dinamicos porque cambian junto
+   con la agenda, por eso se resuelven mediante delegacion de eventos. */
+const modoPartidoDialog = document.getElementById("modoPartidoDialog");
+document.addEventListener("click", evento => {
+  if (evento.target.closest("[data-modo-partido]")) abrirModoPartido();
+  if (evento.target.closest("[data-postal-partido]")) compartirPostalPartido();
+  if (evento.target.closest("[data-calendario-partido]")) agregarPartidoCalendario();
+  if (evento.target.closest("[data-cerrar-modo]")) modoPartidoDialog?.close();
+});
+modoPartidoDialog?.addEventListener("click", evento => {
+  if (evento.target === modoPartidoDialog) modoPartidoDialog.close();
+});
+modoPartidoDialog?.addEventListener("close", () => {
+  clearInterval(modoPartidoTimer);
+  modoPartidoTimer = 0;
+});
 
 /* reveal on scroll */
 const io = new IntersectionObserver(entries => {
