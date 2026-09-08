@@ -78,15 +78,6 @@
       "local": false
     },
     {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "erde vs. ELF",
-      "fecha": "2026-08-29",
-      "hora": "09:00",
-      "local": true,
-      "cancha": "Los Ceibos BN"
-    },
-    {
       "deporte": "hockey",
       "categoria": "Reserva",
       "rival": "Old brendans",
@@ -96,39 +87,12 @@
       "cancha": "Ceibos _ ¡Quedar 8) pepsi a ZILLERTAL Zero BUM AOMINON FED"
     },
     {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "Club Náutico _",
-      "fecha": "2026-08-30",
-      "hora": "11:15",
-      "local": false,
-      "cancha": "Nautico “pichincha” _ afer 8) pepsi a ZILLERTAL Zero BUM AOMINON FED"
-    },
-    {
       "deporte": "hockey",
       "categoria": "Intermedia C",
       "rival": "Old Girls BR",
       "fecha": "2026-08-30",
       "hora": "18:45",
       "local": false
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "erde vs. La Blanqueada",
-      "fecha": "2026-09-05",
-      "hora": "11:15",
-      "local": false,
-      "cancha": "Juan XXIII"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "erde VS La Blangueada",
-      "fecha": "2026-09-05",
-      "hora": "11:15",
-      "local": false,
-      "cancha": "Juan XXIII"
     },
     {
       "deporte": "hockey",
@@ -141,39 +105,12 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "San Isidro Lomas BN",
-      "fecha": "2026-09-06",
-      "hora": "11:15",
-      "local": true,
-      "cancha": "Los Ceibos"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "San Isidro Lomas E",
-      "fecha": "2026-09-06",
-      "hora": "11:15",
-      "local": true,
-      "cancha": "Los Ceibos"
-    },
-    {
-      "deporte": "futbol",
       "categoria": "Sub 18",
       "rival": "COLEGIO Y LICEO INGLES",
       "fecha": "2026-09-06",
       "hora": "15:30",
       "local": false,
       "cancha": "CAMPO DEP. COLEGIO INGLES"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "L & C Inglés",
-      "fecha": "2026-09-06",
-      "hora": "15:30",
-      "local": false,
-      "cancha": "inglés utr 8) pepsi a ZILLERTAL Zero BUM AOMINON FED KASD"
     },
     {
       "deporte": "hockey",
@@ -2228,7 +2165,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-08T04:46:33.613Z",
+  "actualizadoEn": "2026-09-08T11:26:25.262Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2290,9 +2227,8 @@
         "deporte": "futbol",
         "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS31.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "This operation was aborted"
+        "registros": 13,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
@@ -2319,9 +2255,8 @@
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "This operation was aborted"
+        "registros": 13,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
@@ -2341,8 +2276,8 @@
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
-        "registros": 0,
-        "estado": "sin-coincidencias"
+        "registros": 4,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
