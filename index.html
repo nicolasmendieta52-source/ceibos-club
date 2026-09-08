@@ -2135,6 +2135,8 @@ function abrirModoPartido(){
   mapa.hidden = !ubicacion;
   document.getElementById("modoPartidoEstado").textContent = "";
   if (typeof dialogo.showModal === "function") dialogo.showModal(); else dialogo.setAttribute("open", "");
+  dialogo.scrollTop = 0;
+  requestAnimationFrame(() => { dialogo.scrollTop = 0; });
   clearInterval(modoPartidoTimer);
   modoPartidoTimer = setInterval(() => {
     const cuenta = dialogo.querySelector("[data-modo-cuenta]");
