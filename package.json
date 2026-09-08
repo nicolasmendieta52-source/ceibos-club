@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "sync:club": "node automation/sync-club-data.mjs",
+    "sync:weather": "node automation/sync-inumet-weather.mjs",
     "notify:club": "node automation/send-notifications.mjs",
     "test": "node --test automation/*.test.mjs"
   },

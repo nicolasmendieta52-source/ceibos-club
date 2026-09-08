@@ -33,6 +33,9 @@ jobs:
       - run: npm install
       - run: npx playwright install --with-deps chromium
       - run: npm test
+      - name: Actualizar clima oficial de INUMET
+        continue-on-error: true
+        run: npm run sync:weather
       - name: Guardar fixture anterior para detectar novedades
         run: cp data/club-data.json "$RUNNER_TEMP/club-data-before.json"
       - run: npm run sync:club
@@ -51,7 +54,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/club-data.json data/instagram-ocr-cache.json data/notification-state.json
+          git add data/club-data.json data/instagram-ocr-cache.json data/notification-state.json data/inumet-weather.json
           git diff --cached --quiet || git commit -m "chore: actualizar fixture y resultados"
           # Si alguien sube cambios mientras se ejecuta el OCR, incorporamos
           # ese nuevo commit y conservamos los datos que acaba de generar el

@@ -1,0 +1,126 @@
+{
+  "fuente": "INUMET",
+  "fuenteUrl": "https://www.inumet.gub.uy/",
+  "datosUrl": "https://www.inumet.gub.uy/reportes/pronosticos/pronosticoV4.json",
+  "zona": "Área Metropolitana",
+  "ubicacion": "Zona del predio Los Ceibos",
+  "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
+  "publicado": "2026-09-08 12:00",
+  "actualizado": "2026-09-08T15:23:06.975Z",
+  "pronosticos": [
+    {
+      "fecha": "2026-09-08",
+      "diaMasN": 0,
+      "etiqueta": "Martes 08",
+      "temperaturaMin": 5,
+      "temperaturaMax": 16,
+      "probabilidadLluvia": "",
+      "periodos": [
+        {
+          "orden": 1,
+          "nombre": "Mañana",
+          "descripcion": "Algo nuboso y nuboso.",
+          "evolucion": "",
+          "detalle": "Neblinas.",
+          "viento": "sector N 10-20 km/h."
+        },
+        {
+          "orden": 2,
+          "nombre": "Tarde/Noche",
+          "descripcion": "Algo nuboso y nuboso, períodos de claro.",
+          "evolucion": "",
+          "detalle": "",
+          "viento": "Sector N 10-20 km/h. Períodos de variables 0-10 km/h."
+        }
+      ]
+    },
+    {
+      "fecha": "2026-09-09",
+      "diaMasN": 1,
+      "etiqueta": "Miércoles 09",
+      "temperaturaMin": 5,
+      "temperaturaMax": 17,
+      "probabilidadLluvia": "",
+      "periodos": [
+        {
+          "orden": 1,
+          "nombre": "Mañana",
+          "descripcion": "Algo nuboso, períodos de nuboso.",
+          "evolucion": "Neblinas.",
+          "detalle": "",
+          "viento": "Sector N 10-20 km/h. Períodos de variables 0-10 km/h."
+        },
+        {
+          "orden": 2,
+          "nombre": "Tarde/Noche",
+          "descripcion": "Nuboso, períodos de cubierto.",
+          "evolucion": "",
+          "detalle": "",
+          "viento": "NE 10-20 km/h. Períodos de variables 0-10 km/h."
+        }
+      ]
+    },
+    {
+      "fecha": "2026-09-10",
+      "diaMasN": 2,
+      "etiqueta": "Jueves 10",
+      "temperaturaMin": 8,
+      "temperaturaMax": 18,
+      "probabilidadLluvia": "",
+      "periodos": [
+        {
+          "orden": 1,
+          "nombre": "Mañana",
+          "descripcion": "Algo nuboso y nuboso.",
+          "evolucion": "Baja probabilidad de precipitaciones escasas.",
+          "detalle": "Neblinas.",
+          "viento": "Sector E 10-20 km/h. Periodo de variables 0-10 km/h."
+        },
+        {
+          "orden": 2,
+          "nombre": "Tarde/Noche",
+          "descripcion": "Algo nuboso y nuboso.",
+          "evolucion": "",
+          "detalle": "",
+          "viento": "Sector E 10-30 km/h."
+        }
+      ]
+    },
+    {
+      "fecha": "2026-09-11",
+      "diaMasN": 3,
+      "etiqueta": "Viernes 11",
+      "temperaturaMin": 10,
+      "temperaturaMax": 14,
+      "probabilidadLluvia": "Media",
+      "periodos": []
+    },
+    {
+      "fecha": "2026-09-12",
+      "diaMasN": 4,
+      "etiqueta": "Sábado 12",
+      "temperaturaMin": 9,
+      "temperaturaMax": 11,
+      "probabilidadLluvia": "Alta",
+      "periodos": []
+    },
+    {
+      "fecha": "2026-09-13",
+      "diaMasN": 5,
+      "etiqueta": "Domingo 13",
+      "temperaturaMin": 6,
+      "temperaturaMax": 9,
+      "probabilidadLluvia": "Baja",
+      "periodos": []
+    },
+    {
+      "fecha": "2026-09-14",
+      "diaMasN": 6,
+      "etiqueta": "Lunes 14",
+      "temperaturaMin": 2,
+      "temperaturaMax": 13,
+      "probabilidadLluvia": "Baja",
+      "periodos": []
+    }
+  ]
+}
