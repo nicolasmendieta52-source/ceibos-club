@@ -5,15 +5,15 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-09-08 12:00",
-  "actualizado": "2026-09-08T16:41:35.329Z",
+  "publicado": "2026-09-08 18:00",
+  "actualizado": "2026-09-08T21:13:29.868Z",
   "pronosticos": [
     {
       "fecha": "2026-09-08",
       "diaMasN": 0,
       "etiqueta": "Martes 08",
       "temperaturaMin": 5,
-      "temperaturaMax": 16,
+      "temperaturaMax": 18,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -27,10 +27,10 @@
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Algo nuboso y nuboso, períodos de claro.",
+          "descripcion": "Claro y algo nuboso.",
           "evolucion": "",
           "detalle": "",
-          "viento": "Sector N 10-20 km/h. Períodos de variables 0-10 km/h."
+          "viento": "NE y N 10-20 km/h. Períodos de variables 0-10 km/h."
         }
       ]
     },
@@ -39,7 +39,7 @@
       "diaMasN": 1,
       "etiqueta": "Miércoles 09",
       "temperaturaMin": 5,
-      "temperaturaMax": 17,
+      "temperaturaMax": 18,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -56,7 +56,7 @@
           "descripcion": "Nuboso, períodos de cubierto.",
           "evolucion": "Baja probabilidad de precipitaciones escasas.",
           "detalle": "",
-          "viento": "NE 10-20 km/h. Períodos de variables 0-10 km/h."
+          "viento": "Sector E 10-20 km/h. Períodos de variables 0-10 km/h."
         }
       ]
     },
@@ -64,7 +64,7 @@
       "fecha": "2026-09-10",
       "diaMasN": 2,
       "etiqueta": "Jueves 10",
-      "temperaturaMin": 8,
+      "temperaturaMin": 7,
       "temperaturaMax": 18,
       "probabilidadLluvia": "",
       "periodos": [
@@ -73,13 +73,13 @@
           "nombre": "Mañana",
           "descripcion": "Nuboso a algo nuboso.",
           "evolucion": "Probables precipitaciones escasas.",
-          "detalle": "Neblinas.",
-          "viento": "Sector E 10-20 km/h. Periodo de variables 0-10 km/h."
+          "detalle": "",
+          "viento": "NE y E 10-20 km/h. Periodo de variables 0-10 km/h."
         },
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Algo nuboso y nuboso.",
+          "descripcion": "Algo nuboso a nuboso.",
           "evolucion": "",
           "detalle": "",
           "viento": "Sector E 10-30 km/h."
@@ -90,8 +90,8 @@
       "fecha": "2026-09-11",
       "diaMasN": 3,
       "etiqueta": "Viernes 11",
-      "temperaturaMin": 10,
-      "temperaturaMax": 14,
+      "temperaturaMin": 8,
+      "temperaturaMax": 15,
       "probabilidadLluvia": "Media",
       "periodos": []
     },
@@ -109,7 +109,7 @@
       "diaMasN": 5,
       "etiqueta": "Domingo 13",
       "temperaturaMin": 6,
-      "temperaturaMax": 9,
+      "temperaturaMax": 10,
       "probabilidadLluvia": "Baja",
       "periodos": []
     },
@@ -118,8 +118,8 @@
       "diaMasN": 6,
       "etiqueta": "Lunes 14",
       "temperaturaMin": 2,
-      "temperaturaMax": 13,
-      "probabilidadLluvia": "Baja",
+      "temperaturaMax": 14,
+      "probabilidadLluvia": "Nula",
       "periodos": []
     }
   ]

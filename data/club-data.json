@@ -78,6 +78,24 @@
       "local": false
     },
     {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "OCC BR",
+      "fecha": "2026-08-29",
+      "hora": "11:15",
+      "local": true,
+      "cancha": "Los Ceibos"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "OCC",
+      "fecha": "2026-08-29",
+      "hora": "11:15",
+      "local": true,
+      "cancha": "Los Ceibos —"
+    },
+    {
       "deporte": "hockey",
       "categoria": "Reserva",
       "rival": "Old brendans",
@@ -85,6 +103,15 @@
       "hora": "A confirmar",
       "local": true,
       "cancha": "Ceibos _ ¡Quedar 8) pepsi a ZILLERTAL Zero BUM AOMINON FED"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "Club Náutico _",
+      "fecha": "2026-08-30",
+      "hora": "11:15",
+      "local": false,
+      "cancha": "Nautico “pichincha” _ afer 8) pepsi a ZILLERTAL Zero BUM AOMINON FED"
     },
     {
       "deporte": "hockey",
@@ -105,12 +132,21 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "COLEGIO Y LICEO INGLES",
+      "categoria": "Primera",
+      "rival": "San Isidro Lomas BN",
       "fecha": "2026-09-06",
-      "hora": "15:30",
-      "local": false,
-      "cancha": "CAMPO DEP. COLEGIO INGLES"
+      "hora": "11:15",
+      "local": true,
+      "cancha": "Los Ceibos"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "San Isidro Lomas E",
+      "fecha": "2026-09-06",
+      "hora": "11:15",
+      "local": true,
+      "cancha": "Los Ceibos"
     },
     {
       "deporte": "hockey",
@@ -119,15 +155,6 @@
       "fecha": "2026-09-06",
       "hora": "18:45",
       "local": false
-    },
-    {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "YOUNG UNIVERSITARIO",
-      "fecha": "2026-09-12",
-      "hora": "A confirmar",
-      "local": false,
-      "cancha": "CANCHA A FIJAR"
     },
     {
       "deporte": "futbol",
@@ -164,6 +191,15 @@
       "hora": "15:30",
       "local": true,
       "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Old Christians Club",
+      "fecha": "2026-09-12",
+      "hora": "17:30",
+      "local": false,
+      "cancha": "Old Christians"
     },
     {
       "deporte": "hockey",
@@ -215,6 +251,15 @@
       "hora": "15:30",
       "local": false,
       "cancha": "PARQUE CUPRA - CLUB SEMINARIO"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "YOUNG UNIVERSITARIO",
+      "fecha": "2026-09-16",
+      "hora": "22:00",
+      "local": false,
+      "cancha": "G. 25 DE AGOSTO"
     },
     {
       "deporte": "basketball",
@@ -2162,10 +2207,22 @@
       "gf": 0,
       "gc": 2,
       "fecha": "2026-09-06"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "COLEGIO Y LICEO INGLES",
+      "gf": 2,
+      "gc": 0,
+      "fecha": "2026-09-06",
+      "goleadores": [
+        "JOAQUIN PILONI (50')",
+        "FACUNDO IMANOL OLARREAGA (66')"
+      ]
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-08T16:43:20.112Z",
+  "actualizadoEn": "2026-09-08T21:16:27.935Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2178,7 +2235,7 @@
         "deporte": "hockey",
         "categoria": "Intermedia A",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=3",
-        "registros": 13,
+        "registros": 14,
         "estado": "ok"
       },
       {
@@ -2241,22 +2298,24 @@
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS1.html",
-        "registros": 13,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "This operation was aborted"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS1.html",
-        "registros": 2,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "sin-coincidencias"
       },
       {
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
-        "registros": 13,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "This operation was aborted"
       },
       {
         "deporte": "futbol",
@@ -2269,14 +2328,14 @@
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
-        "registros": 3,
+        "registros": 4,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
-        "registros": 4,
+        "registros": 3,
         "estado": "ok"
       },
       {
