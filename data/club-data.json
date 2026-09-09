@@ -78,24 +78,6 @@
       "local": false
     },
     {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "OCC BR",
-      "fecha": "2026-08-29",
-      "hora": "11:15",
-      "local": true,
-      "cancha": "Los Ceibos"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "OCC",
-      "fecha": "2026-08-29",
-      "hora": "11:15",
-      "local": true,
-      "cancha": "Los Ceibos —"
-    },
-    {
       "deporte": "hockey",
       "categoria": "Reserva",
       "rival": "Old brendans",
@@ -103,15 +85,6 @@
       "hora": "A confirmar",
       "local": true,
       "cancha": "Ceibos _ ¡Quedar 8) pepsi a ZILLERTAL Zero BUM AOMINON FED"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "Club Náutico _",
-      "fecha": "2026-08-30",
-      "hora": "11:15",
-      "local": false,
-      "cancha": "Nautico “pichincha” _ afer 8) pepsi a ZILLERTAL Zero BUM AOMINON FED"
     },
     {
       "deporte": "hockey",
@@ -129,24 +102,6 @@
       "hora": "16:00",
       "local": true,
       "cancha": "Ceibos"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "San Isidro Lomas BN",
-      "fecha": "2026-09-06",
-      "hora": "11:15",
-      "local": true,
-      "cancha": "Los Ceibos"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "San Isidro Lomas E",
-      "fecha": "2026-09-06",
-      "hora": "11:15",
-      "local": true,
-      "cancha": "Los Ceibos"
     },
     {
       "deporte": "hockey",
@@ -2222,7 +2177,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-08T21:16:27.935Z",
+  "actualizadoEn": "2026-09-09T04:49:59.480Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2298,24 +2253,22 @@
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS1.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "This operation was aborted"
+        "registros": 13,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS1.html",
-        "registros": 0,
-        "estado": "sin-coincidencias"
+        "registros": 2,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "This operation was aborted"
+        "registros": 13,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
