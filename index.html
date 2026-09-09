@@ -538,6 +538,26 @@ html[data-ceibos-access="locked"] .ceibos-access-gate{
     <p class="modo-estado" id="modoPartidoEstado" role="status"></p>
   </div>
 </dialog>
+<dialog class="postal-partido" id="postalPartidoDialog" aria-labelledby="postalPartidoTitulo">
+  <div class="postal-partido-interior">
+    <button class="modo-cerrar postal-cerrar" type="button" data-cerrar-postal aria-label="Cerrar vista previa">×</button>
+    <div class="postal-partido-grid">
+      <div class="postal-marco">
+        <img id="postalPartidoImagen" alt="Vista previa de la postal del próximo partido">
+      </div>
+      <div class="postal-panel">
+        <div class="modo-kicker">Postal Ceibos · Lista para compartir</div>
+        <h3 id="postalPartidoTitulo">Compartí el <em>partido</em></h3>
+        <p>Revisá la postal completa antes de enviarla. Está preparada en formato 4:5 para que se lea bien tanto en el celular como en redes.</p>
+        <div class="postal-acciones">
+          <button class="principal" type="button" data-postal-compartir>Compartir</button>
+          <button type="button" data-postal-descargar>Descargar PNG</button>
+        </div>
+        <p class="modo-estado" id="postalPartidoEstado" role="status"></p>
+      </div>
+    </div>
+  </div>
+</dialog>
 <style>
 /* ---------- estructura común de secciones ---------- */
 section{position:relative;padding:110px 5vw}
@@ -571,6 +591,39 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 .dato-ceibos{position:relative;z-index:1;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:14px;margin-top:18px;padding:15px 18px;border:1px solid rgba(229,187,82,.2);border-radius:18px;background:linear-gradient(90deg,rgba(229,187,82,.1),rgba(246,241,228,.035));color:rgba(246,241,228,.76)}.dato-ceibos-icono{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--dorado);color:var(--verde-night);font-family:var(--display);font-size:1.2rem}.dato-ceibos strong{display:block;margin-bottom:3px;color:var(--dorado-soft);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase}.dato-ceibos p{font-size:.86rem;line-height:1.45}.dato-ceibos small{color:rgba(246,241,228,.4);font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;white-space:nowrap}
 .modo-partido{width:min(92vw,720px);max-height:90svh;padding:0;border:1px solid rgba(229,187,82,.42);border-radius:28px;background:#10271f;color:var(--crema);box-shadow:0 28px 90px rgba(0,0,0,.62);overflow:auto}.modo-partido::backdrop{background:rgba(4,15,11,.78);backdrop-filter:blur(8px)}.modo-partido-interior{position:relative;padding:clamp(26px,5vw,46px);overflow:hidden}.modo-partido-interior::after{content:"CEIBOS";position:absolute;right:-.04em;bottom:-.19em;font-family:var(--display);font-size:clamp(7rem,22vw,12rem);line-height:1;color:rgba(229,187,82,.045);pointer-events:none}.modo-cerrar{position:absolute;top:16px;right:16px;z-index:3;width:42px;height:42px;border:1px solid rgba(246,241,228,.18);border-radius:50%;background:rgba(246,241,228,.06);color:var(--crema);font-size:1.35rem;cursor:pointer}.modo-kicker{position:relative;z-index:1;color:var(--dorado);font-size:.68rem;font-weight:900;letter-spacing:.2em;text-transform:uppercase}.modo-partido h3{position:relative;z-index:1;margin:10px 48px 24px 0;font-family:var(--display);font-size:clamp(2.25rem,7vw,4.6rem);line-height:.9;text-transform:uppercase;color:var(--blanco)}.modo-partido h3 em{font-style:normal;color:var(--dorado)}.modo-marcador{position:relative;z-index:1;display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center;padding:24px 0;border-block:1px solid rgba(246,241,228,.12)}.modo-equipo{font-family:var(--display);font-size:clamp(1.55rem,4.5vw,2.65rem);line-height:.95;text-transform:uppercase;color:var(--blanco)}.modo-equipo:last-child{text-align:right}.modo-vs{font-family:var(--display);font-size:1.8rem;color:var(--dorado)}.modo-meta{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.modo-meta span{padding:8px 11px;border-radius:99px;background:rgba(246,241,228,.065);color:rgba(246,241,228,.78);font-size:.75rem}.modo-cuenta{position:relative;z-index:1;margin-top:18px;color:var(--dorado-soft);font-family:var(--display);font-size:clamp(1.45rem,4vw,2.15rem);letter-spacing:.03em;text-transform:uppercase}.modo-acciones{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:24px}.modo-acciones button,.modo-acciones a{min-height:48px;padding:11px 12px;border:1px solid rgba(229,187,82,.38);border-radius:13px;background:rgba(246,241,228,.055);color:var(--crema);font:800 .7rem/1.25 var(--body);text-align:center;text-decoration:none;cursor:pointer;display:flex;align-items:center;justify-content:center}.modo-acciones .principal{background:var(--dorado);color:var(--verde-night);border-color:var(--dorado)}.modo-estado{position:relative;z-index:1;min-height:1.2em;margin-top:14px;color:rgba(246,241,228,.58);font-size:.72rem;text-align:center}
 .modo-clima{position:relative;z-index:1;margin-top:22px;padding:16px;border:1px solid rgba(229,187,82,.25);border-radius:18px;background:linear-gradient(135deg,rgba(49,87,66,.72),rgba(16,39,31,.88))}.modo-clima-cabecera{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;color:var(--dorado);font-size:.65rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.modo-clima-cabecera a{color:rgba(246,241,228,.64);text-decoration:none;letter-spacing:.06em}.modo-clima-principal{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:13px}.modo-clima-icono{font-size:2rem;line-height:1}.modo-clima-texto strong{display:block;color:var(--blanco);font-size:.92rem;line-height:1.35}.modo-clima-texto span{display:block;margin-top:3px;color:rgba(246,241,228,.62);font-size:.7rem;line-height:1.4}.modo-clima-temperatura{font-family:var(--display);font-size:1.65rem;white-space:nowrap;color:var(--dorado-soft)}.modo-clima-detalle{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}.modo-clima-detalle span{padding:5px 8px;border-radius:99px;background:rgba(246,241,228,.06);color:rgba(246,241,228,.67);font-size:.64rem}.modo-clima-espera{color:rgba(246,241,228,.72);font-size:.78rem;line-height:1.5}.modo-clima-espera strong{display:block;margin-bottom:3px;color:var(--blanco)}
+
+/* Modo partido y postal: composiciones amplias en escritorio y lectura segura en celular. */
+.modo-partido,.postal-partido{margin:auto}
+.postal-partido{width:min(calc(100vw - 48px),980px);max-height:92svh;padding:0;border:1px solid rgba(229,187,82,.42);border-radius:28px;background:#10271f;color:var(--crema);box-shadow:0 28px 90px rgba(0,0,0,.68);overflow:auto}
+.postal-partido::backdrop{background:rgba(4,15,11,.82);backdrop-filter:blur(9px)}
+.postal-partido-interior{position:relative;padding:26px;overflow:hidden}
+.postal-partido-grid{display:grid;grid-template-columns:minmax(320px,500px) minmax(260px,1fr);gap:34px;align-items:center}
+.postal-marco{display:grid;place-items:center;padding:10px;border:1px solid rgba(229,187,82,.28);border-radius:22px;background:linear-gradient(145deg,rgba(229,187,82,.12),rgba(246,241,228,.035));box-shadow:0 20px 48px rgba(0,0,0,.34)}
+.postal-marco img{display:block;width:100%;max-height:calc(92svh - 72px);aspect-ratio:4/5;object-fit:contain;border-radius:14px;background:#0a2d22}
+.postal-panel{padding-right:16px}
+.postal-panel h3{margin:10px 0 16px;font-family:var(--display);font-size:clamp(2.7rem,5vw,4.7rem);line-height:.9;text-transform:uppercase;color:var(--blanco)}
+.postal-panel h3 em{font-style:normal;color:var(--dorado)}
+.postal-panel>p:not(.modo-estado){max-width:32rem;color:rgba(246,241,228,.68);font-size:.92rem;line-height:1.6}
+.postal-acciones{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
+.postal-acciones button{min-height:50px;padding:11px 14px;border:1px solid rgba(229,187,82,.42);border-radius:13px;background:rgba(246,241,228,.055);color:var(--crema);font:900 .72rem/1.2 var(--body);cursor:pointer}
+.postal-acciones .principal{background:var(--dorado);border-color:var(--dorado);color:var(--verde-night)}
+.postal-cerrar{top:14px;right:14px}
+
+@media(min-width:821px){
+  .modo-partido{width:min(calc(100vw - 64px),940px);max-height:min(860px,calc(100svh - 48px))}
+  .modo-partido-interior{padding:36px 40px 30px}
+  #modoPartidoContenido{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(300px,.88fr);grid-template-rows:auto auto auto 1fr;gap:0 34px;align-items:start}
+  #modoPartidoContenido>h3{grid-column:1/-1;margin:10px 56px 24px 0;font-size:clamp(3.5rem,5.4vw,5.2rem)}
+  #modoPartidoContenido>.modo-marcador{grid-column:1;grid-row:2/5;align-self:stretch;display:flex;min-height:300px;flex-direction:column;align-items:flex-start;justify-content:center;gap:14px;padding:32px;border:1px solid rgba(229,187,82,.22);border-radius:24px;background:linear-gradient(145deg,rgba(229,187,82,.09),rgba(246,241,228,.025));overflow:hidden}
+  #modoPartidoContenido .modo-equipo{max-width:100%;font-size:clamp(2.15rem,3.6vw,3.55rem);overflow-wrap:anywhere}
+  #modoPartidoContenido .modo-equipo:last-child{text-align:left}
+  #modoPartidoContenido .modo-vs{font-size:1.35rem}
+  #modoPartidoContenido>.modo-meta{grid-column:2;grid-row:2;display:grid;grid-template-columns:1fr;margin-top:0}
+  #modoPartidoContenido>.modo-meta span{padding:11px 13px;border-radius:12px;line-height:1.35}
+  #modoPartidoContenido>.modo-cuenta{grid-column:2;grid-row:3;margin-top:18px;font-size:clamp(1.75rem,2.5vw,2.35rem)}
+  #modoPartidoContenido>.modo-clima{grid-column:2;grid-row:4;margin-top:18px}
+  .modo-acciones{margin-top:22px}
+}
 
 /* reveal on scroll */
 .rev{opacity:0;transform:translateY(36px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
@@ -657,6 +710,14 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 .partido-mini:hover{transform:translateX(6px);border-color:rgba(229,187,82,.5)}
 .partido-mini .vs{font-weight:700;color:var(--blanco)}
 .partido-mini .meta{font-size:.78rem;color:rgba(246,241,228,.55)}
+.partido-mini-acciones{display:flex;align-items:center;justify-content:flex-end;gap:9px;flex:0 0 auto}
+.partido-postal{
+  display:inline-flex;align-items:center;justify-content:center;min-height:32px;padding:6px 11px;
+  border:1px solid rgba(229,187,82,.48);border-radius:99px;background:rgba(229,187,82,.08);
+  color:var(--dorado-soft);font:800 .62rem/1 var(--body);letter-spacing:.08em;text-transform:uppercase;
+  cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .2s;
+}
+.partido-postal:hover,.partido-postal:focus-visible{background:var(--dorado);border-color:var(--dorado);color:var(--verde-night);transform:translateY(-1px)}
 .pill{font-size:.66rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:99px}
 .pill.local{background:rgba(229,187,82,.16);color:var(--dorado)}
 .pill.visita{background:rgba(37,67,105,.4);color:#9db8dd}
@@ -1114,7 +1175,7 @@ footer .f-brand{display:flex;align-items:center;gap:10px;font-family:var(--displ
   .ticker{height:44px}.ticker-item{padding:0 16px;font-size:.7rem;gap:7px}.ticker-item .res{font-size:.95rem}
   .fix-row{grid-template-columns:64px 1fr;gap:14px}
   .fix-division{padding:15px}.fix-division h3{font-size:1.45rem}.fix-row{padding:16px 14px;border-radius:16px}.fix-fecha .dia{font-size:1.7rem}.fix-det .enfrenta{font-size:1.2rem}.fix-cd{grid-column:2;text-align:left;display:flex;gap:10px;align-items:baseline}.fix-cd .cuenta{font-size:1rem}
-  .dep-tabs{margin:28px 0 22px;gap:8px}.dep-tab{flex:1 1 calc(50% - 8px);justify-content:center;padding:12px 10px;font-size:1.05rem}.dep-panel{padding:20px 16px;border-radius:20px}.dep-info h3{font-size:2.15rem}.dep-info .ig{margin:11px 0 15px}.dep-cats{gap:7px}.chip{padding:8px 11px;font-size:.65rem}.partido-mini{padding:13px;align-items:flex-start}.partido-mini .vs{font-size:.88rem}.resultado-mini{padding:11px;font-size:.88rem}
+  .dep-tabs{margin:28px 0 22px;gap:8px}.dep-tab{flex:1 1 calc(50% - 8px);justify-content:center;padding:12px 10px;font-size:1.05rem}.dep-panel{padding:20px 16px;border-radius:20px}.dep-info h3{font-size:2.15rem}.dep-info .ig{margin:11px 0 15px}.dep-cats{gap:7px}.chip{padding:8px 11px;font-size:.65rem}.partido-mini{padding:13px;align-items:flex-start}.partido-mini .vs{font-size:.88rem}.partido-mini-acciones{width:100%;justify-content:space-between}.partido-postal{min-height:36px;padding:8px 12px}.resultado-mini{padding:11px;font-size:.88rem}
   .score-grid{grid-template-columns:1fr;gap:12px;margin-top:30px}.score-sport-title{margin:18px 0 0;font-size:1.45rem}.score-sport-title small{font-size:.57rem}.score-cards{grid-template-columns:1fr;gap:12px}.score-card{padding:22px 18px;min-height:190px}.score-categoria{font-size:.7rem}.score-num{font-size:3rem}
   .noticia-destacada{margin-top:28px;padding:14px;border-radius:20px}.noticia-texto h3{font-size:2.35rem}.noticia-video{border-radius:13px}
   .home-deportiva-cabecera{align-items:flex-start;flex-direction:column}.home-accesos{grid-template-columns:repeat(2,1fr)}.pd-equipos{gap:10px}.pd-detalle a{margin-left:0}.pd-equipo{font-size:1.65rem}
@@ -1499,6 +1560,18 @@ img,video,svg{max-width:100%}
   .modo-clima-principal{grid-template-columns:auto minmax(0,1fr)}
   .modo-clima-temperatura{grid-column:2;font-size:1.4rem}
   .modo-acciones{grid-template-columns:1fr}
+  .postal-partido{width:calc(100vw - 18px);max-height:94svh;border-radius:22px}
+  .postal-partido-interior{padding:14px}
+  .postal-partido-grid{display:block}
+  .postal-marco{padding:7px;border-radius:17px}
+  .postal-marco img{width:100%;max-height:67svh;border-radius:11px}
+  .postal-panel{padding:16px 4px 2px}
+  .postal-panel .modo-kicker{padding-right:44px;font-size:.6rem}
+  .postal-panel h3{margin:8px 0 7px;font-size:2.15rem}
+  .postal-panel>p:not(.modo-estado){display:none}
+  .postal-acciones{grid-template-columns:1fr 1fr;margin-top:12px}
+  .postal-acciones button{min-height:46px;padding:9px;font-size:.68rem}
+  .postal-cerrar{top:22px;right:22px;width:38px;height:38px;background:rgba(4,15,11,.78)}
 }
 </style>
 </main>
@@ -1838,7 +1911,11 @@ function renderDeportePanel(){
   const resultadosCategoria = resultados.filter(r => r.categoria === seleccionada).sort(porFecha).reverse();
   const [proximo, ...futuros] = partidosCategoria;
   const [ultimoResultado, ...historial] = resultadosCategoria;
-  const partidoMini = p => { const f=fmtFecha(p.fecha); return `<div class="partido-mini"><div><div class="vs">vs ${textoSeguro(p.rival)}</div><div class="meta">${f.semana} ${f.dia} ${f.mes} &middot; ${horaVisible(p.hora)} &middot; ${textoSeguro(ubicacionVisible(p))}</div></div><span class="pill ${p.local?'local':'visita'}">${p.local?'Local':'Visitante'}</span></div>`; };
+  const partidoMini = p => {
+    const f = fmtFecha(p.fecha);
+    const indicePartido = PARTIDOS.indexOf(p);
+    return `<div class="partido-mini"><div><div class="vs">vs ${textoSeguro(p.rival)}</div><div class="meta">${f.semana} ${f.dia} ${f.mes} &middot; ${horaVisible(p.hora)} &middot; ${textoSeguro(ubicacionVisible(p))}</div></div><div class="partido-mini-acciones"><span class="pill ${p.local?'local':'visita'}">${p.local?'Local':'Visitante'}</span><button class="partido-postal" type="button" data-postal-partido-indice="${indicePartido}" aria-label="Crear postal del partido contra ${textoSeguro(p.rival)}">Compartir postal</button></div></div>`;
+  };
   const resultadoMini = r => `<div class="resultado-mini"><div><span>vs ${textoSeguro(r.rival)}</span>${fechaBreve(r.fecha)?`<small>${fechaBreve(r.fecha)}</small>`:""}${goleadoresResultado(r)}</div><strong>${r.gf} &mdash; ${r.gc}</strong></div>`;
   panels.innerHTML = `<div class="dep-panel activo" id="${d.slug}" role="tabpanel" aria-labelledby="tab-${d.slug}">
     <div class="dep-info">
@@ -2219,7 +2296,7 @@ async function cargarImagenPostal(ruta){
     const imagen = new Image(); imagen.onload = () => resolve(imagen); imagen.onerror = () => resolve(null); imagen.src = ruta;
   });
 }
-async function crearPostalPartido(partido){
+async function crearPostalPartidoLegacy(partido){
   const canvas = document.createElement("canvas"); canvas.width = 1080; canvas.height = 1350;
   const ctx = canvas.getContext("2d");
   const fondo = ctx.createLinearGradient(0,0,1080,1350); fondo.addColorStop(0,"#0a2d22"); fondo.addColorStop(1,"#173f31");
@@ -2249,7 +2326,7 @@ async function crearPostalPartido(partido){
   ctx.fillStyle = "rgba(255,255,255,.62)"; ctx.font = '600 22px Arial, sans-serif'; ctx.fillText("ceibosclub.com",72,1272);
   return new Promise((resolve,reject) => canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error("No se pudo crear la postal")), "image/png", .96));
 }
-async function compartirPostalPartido(){
+async function compartirPostalPartidoLegacy(){
   const partido = partidoDestacadoActual;
   if (!partido) return;
   const estado = document.getElementById("modoPartidoEstado");
@@ -2270,6 +2347,177 @@ async function compartirPostalPartido(){
     if (error?.name !== "AbortError" && estado) estado.textContent = "No se pudo crear la postal. Probá nuevamente.";
   }
 }
+function rectRedondeadoCanvas(contexto,x,y,ancho,alto,radio){
+  const r = Math.min(radio,ancho/2,alto/2);
+  contexto.beginPath();
+  contexto.moveTo(x+r,y);
+  contexto.arcTo(x+ancho,y,x+ancho,y+alto,r);
+  contexto.arcTo(x+ancho,y+alto,x,y+alto,r);
+  contexto.arcTo(x,y+alto,x,y,r);
+  contexto.arcTo(x,y,x+ancho,y,r);
+  contexto.closePath();
+}
+async function crearPostalPartido(partido){
+  const canvas = document.createElement("canvas");
+  canvas.width = 1080;
+  canvas.height = 1350;
+  const ctx = canvas.getContext("2d");
+  const fondo = ctx.createLinearGradient(0,0,1080,1350);
+  fondo.addColorStop(0,"#071f18");
+  fondo.addColorStop(.55,"#0e3528");
+  fondo.addColorStop(1,"#173f31");
+  ctx.fillStyle = fondo;
+  ctx.fillRect(0,0,1080,1350);
+  ctx.strokeStyle = "rgba(237,190,66,.13)";
+  ctx.lineWidth = 3;
+  [680,820,960].forEach(radio => {
+    ctx.beginPath();
+    ctx.arc(1010,230,radio/2,0,Math.PI*2);
+    ctx.stroke();
+  });
+  ctx.fillStyle = "#edbe42";
+  ctx.fillRect(72,64,936,8);
+
+  const escudo = await cargarImagenPostal("assets/escudo-ceibos.png");
+  if (escudo) {
+    const proporcion = Math.min(146/escudo.width,146/escudo.height);
+    ctx.drawImage(escudo,72,104,escudo.width*proporcion,escudo.height*proporcion);
+    ctx.save();
+    ctx.globalAlpha = .045;
+    const marca = Math.min(620/escudo.width,620/escudo.height);
+    ctx.drawImage(escudo,590,332,escudo.width*marca,escudo.height*marca);
+    ctx.restore();
+  }
+  ctx.textAlign = "right";
+  ctx.fillStyle = "#edbe42";
+  ctx.font = '800 30px Arial, sans-serif';
+  ctx.fillText("CEIBOS CLUB",1008,150);
+  ctx.fillStyle = "rgba(255,255,255,.68)";
+  ctx.font = '700 20px Arial, sans-serif';
+  ctx.fillText("TOTUS TUUS",1008,188);
+
+  ctx.textAlign = "left";
+  const categoria = `${nombreDeporte(partido.deporte).toUpperCase()} · ${etiquetaCategoria(partido.categoria).toUpperCase()}`;
+  ctx.fillStyle = "#edbe42";
+  ctx.font = '800 27px Arial, sans-serif';
+  ctx.fillText(categoria,72,342);
+  ctx.fillStyle = "#fff";
+  ctx.font = '900 90px "Arial Narrow", Impact, sans-serif';
+  ctx.fillText("PRÓXIMO",72,446);
+  ctx.fillStyle = "#edbe42";
+  ctx.fillText("PARTIDO",72,528);
+
+  rectRedondeadoCanvas(ctx,72,572,936,360,34);
+  ctx.fillStyle = "rgba(4,22,16,.66)";
+  ctx.fill();
+  ctx.strokeStyle = "rgba(237,190,66,.28)";
+  ctx.lineWidth = 2;
+  ctx.stroke();
+  ctx.fillStyle = "rgba(255,255,255,.56)";
+  ctx.font = '800 20px Arial, sans-serif';
+  ctx.fillText("CEIBOS CLUB",112,626);
+  ctx.fillStyle = "#fff";
+  ctx.font = '900 84px "Arial Narrow", Impact, sans-serif';
+  ctx.fillText("CEIBOS",112,718);
+  rectRedondeadoCanvas(ctx,112,756,74,48,24);
+  ctx.fillStyle = "#edbe42";
+  ctx.fill();
+  ctx.fillStyle = "#09241a";
+  ctx.font = '900 25px Arial, sans-serif';
+  ctx.textAlign = "center";
+  ctx.fillText("VS",149,789);
+  ctx.textAlign = "left";
+  const rival = textoPlano(partido.rival).toUpperCase();
+  const tamanoRival = ajustarTextoCanvas(ctx,rival,842,66,40,"900");
+  ctx.font = `900 ${tamanoRival}px "Arial Narrow", Impact, sans-serif`;
+  ctx.fillStyle = "#fff";
+  const lineasRival = lineasCanvas(ctx,rival,842).slice(0,2);
+  lineasRival.forEach((linea,indice) => ctx.fillText(linea,112,858+indice*(tamanoRival+7)));
+
+  rectRedondeadoCanvas(ctx,72,968,936,244,30);
+  ctx.fillStyle = "rgba(246,241,228,.065)";
+  ctx.fill();
+  ctx.strokeStyle = "rgba(246,241,228,.12)";
+  ctx.stroke();
+  const fecha = fmtFecha(partido.fecha);
+  ctx.fillStyle = "#edbe42";
+  ctx.font = '800 34px Arial, sans-serif';
+  ctx.fillText(`${fecha.semana} ${fecha.dia} ${fecha.mes} ${fecha.anio}`,112,1038);
+  ctx.fillStyle = "#fff";
+  ctx.font = '800 29px Arial, sans-serif';
+  ctx.fillText(horaVisible(partido.hora),112,1092);
+  ctx.fillStyle = "rgba(255,255,255,.72)";
+  ctx.font = '600 25px Arial, sans-serif';
+  const lugar = ubicacionVisible(partido);
+  lineasCanvas(ctx,lugar,842).slice(0,2).forEach((linea,indice) => ctx.fillText(linea,112,1144+indice*34));
+
+  ctx.fillStyle = "rgba(255,255,255,.62)";
+  ctx.font = '700 22px Arial, sans-serif';
+  ctx.fillText("ceibosclub.com",72,1301);
+  ctx.textAlign = "right";
+  ctx.fillStyle = "#edbe42";
+  ctx.fillText("#HayQueEstar",1008,1301);
+  return new Promise((resolve,reject) => canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error("No se pudo crear la postal")),"image/png",.96));
+}
+
+let postalPartidoActual = null;
+function limpiarVistaPostal(){
+  if (postalPartidoActual?.url) URL.revokeObjectURL(postalPartidoActual.url);
+  postalPartidoActual = null;
+  document.getElementById("postalPartidoImagen")?.removeAttribute("src");
+}
+function cerrarVistaPostal(){
+  document.getElementById("postalPartidoDialog")?.close();
+}
+async function compartirPostalPartido(){
+  const partido = partidoDestacadoActual;
+  if (!partido) return;
+  const estadoModo = document.getElementById("modoPartidoEstado");
+  if (estadoModo) estadoModo.textContent = "Preparando la postal…";
+  try {
+    const blob = await crearPostalPartido(partido);
+    const nombre = `ceibos-${slugArchivo(partido.categoria)}-${partido.fecha}.png`;
+    const archivo = new File([blob],nombre,{type:"image/png"});
+    limpiarVistaPostal();
+    const url = URL.createObjectURL(blob);
+    postalPartidoActual = {blob,archivo,url,partido,nombre};
+    const imagen = document.getElementById("postalPartidoImagen");
+    if (imagen) imagen.src = url;
+    const estado = document.getElementById("postalPartidoEstado");
+    if (estado) estado.textContent = "";
+    document.getElementById("modoPartidoDialog")?.close();
+    const dialogo = document.getElementById("postalPartidoDialog");
+    if (dialogo) {
+      dialogo.showModal();
+      dialogo.scrollTop = 0;
+    }
+  } catch (error) {
+    if (error?.name !== "AbortError" && estadoModo) estadoModo.textContent = "No se pudo crear la postal. Probá nuevamente.";
+  }
+}
+async function compartirArchivoPostal(){
+  if (!postalPartidoActual) return;
+  const {archivo,partido} = postalPartidoActual;
+  const estado = document.getElementById("postalPartidoEstado");
+  try {
+    const datos = {title:`Ceibos vs ${partido.rival}`,text:`${nombreDeporte(partido.deporte)} · ${partido.categoria}`,files:[archivo]};
+    if (navigator.share && navigator.canShare?.({files:[archivo]})) {
+      await navigator.share(datos);
+      if (estado) estado.textContent = "Postal compartida.";
+    } else {
+      descargarPostalActual();
+    }
+  } catch (error) {
+    if (error?.name !== "AbortError" && estado) estado.textContent = "No se pudo compartir. Podés descargar el PNG.";
+  }
+}
+function descargarPostalActual(){
+  if (!postalPartidoActual) return;
+  descargarBlob(postalPartidoActual.blob,postalPartidoActual.nombre);
+  const estado = document.getElementById("postalPartidoEstado");
+  if (estado) estado.textContent = "Postal descargada. Ya podés compartirla.";
+}
+
 function agregarPartidoCalendario(){
   const partido = partidoDestacadoActual;
   if (!partido) return;
@@ -2427,9 +2675,21 @@ addEventListener("keydown", e => { if (e.key === "Escape" && hamb.classList.cont
 /* Modo partido + postal social. Los botones son dinamicos porque cambian junto
    con la agenda, por eso se resuelven mediante delegacion de eventos. */
 const modoPartidoDialog = document.getElementById("modoPartidoDialog");
+const postalPartidoDialog = document.getElementById("postalPartidoDialog");
 document.addEventListener("click", evento => {
+  const botonPostalPartido = evento.target.closest("[data-postal-partido-indice]");
+  if (botonPostalPartido) {
+    const partidoSeleccionado = PARTIDOS[Number(botonPostalPartido.dataset.postalPartidoIndice)];
+    if (partidoSeleccionado) {
+      partidoDestacadoActual = partidoSeleccionado;
+      compartirPostalPartido();
+    }
+  }
   if (evento.target.closest("[data-modo-partido]")) abrirModoPartido();
   if (evento.target.closest("[data-postal-partido]")) compartirPostalPartido();
+  if (evento.target.closest("[data-postal-compartir]")) compartirArchivoPostal();
+  if (evento.target.closest("[data-postal-descargar]")) descargarPostalActual();
+  if (evento.target.closest("[data-cerrar-postal]")) cerrarVistaPostal();
   if (evento.target.closest("[data-calendario-partido]")) agregarPartidoCalendario();
   if (evento.target.closest("[data-cerrar-modo]")) modoPartidoDialog?.close();
 });
@@ -2440,6 +2700,10 @@ modoPartidoDialog?.addEventListener("close", () => {
   clearInterval(modoPartidoTimer);
   modoPartidoTimer = 0;
 });
+postalPartidoDialog?.addEventListener("click", evento => {
+  if (evento.target === postalPartidoDialog) cerrarVistaPostal();
+});
+postalPartidoDialog?.addEventListener("close", limpiarVistaPostal);
 
 /* reveal on scroll */
 const io = new IntersectionObserver(entries => {
