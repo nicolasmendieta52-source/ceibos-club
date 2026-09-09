@@ -2296,6 +2296,58 @@ async function cargarImagenPostal(ruta){
     const imagen = new Image(); imagen.onload = () => resolve(imagen); imagen.onerror = () => resolve(null); imagen.src = ruta;
   });
 }
+function dibujarImagenCoverCanvas(ctx, imagen, x, y, ancho, alto){
+  if (!imagen) return;
+  const escala = Math.max(ancho / imagen.width, alto / imagen.height);
+  const w = imagen.width * escala;
+  const h = imagen.height * escala;
+  ctx.drawImage(imagen, x + (ancho - w) / 2, y + (alto - h) / 2, w, h);
+}
+function dibujarTextoEspaciadoCanvas(ctx, texto, centroX, y, espaciado){
+  const caracteres = [...texto];
+  const ancho = caracteres.reduce((total, caracter) => total + ctx.measureText(caracter).width, 0) + Math.max(0, caracteres.length - 1) * espaciado;
+  let x = centroX - ancho / 2;
+  ctx.textAlign = "left";
+  caracteres.forEach(caracter => {
+    ctx.fillText(caracter, x, y);
+    x += ctx.measureText(caracter).width + espaciado;
+  });
+}
+function dibujarEscudoPostalBlanco(ctx, imagen, centroX, y, ancho, alto){
+  if (!imagen) return;
+  const temporal = document.createElement("canvas");
+  temporal.width = ancho;
+  temporal.height = alto;
+  const tctx = temporal.getContext("2d");
+  tctx.drawImage(imagen, 157, 139, 198, 257, 0, 0, ancho, alto);
+  const pixeles = tctx.getImageData(0,0,ancho,alto);
+  for (let indice=0; indice<pixeles.data.length; indice+=4){
+    const rojo = pixeles.data[indice];
+    const verde = pixeles.data[indice+1];
+    const azul = pixeles.data[indice+2];
+    const esTrazo = rojo > 105 && verde > 85 && rojo + verde > azul * 2.15;
+    pixeles.data[indice] = 245;
+    pixeles.data[indice+1] = 241;
+    pixeles.data[indice+2] = 232;
+    pixeles.data[indice+3] = esTrazo ? Math.min(255, Math.max(0, (rojo + verde - azul * 2) * 2.2)) : 0;
+  }
+  tctx.putImageData(pixeles,0,0);
+  ctx.drawImage(temporal, centroX - ancho / 2, y);
+}
+function dibujarIconoCalendario(ctx, x, y){
+  ctx.save(); ctx.strokeStyle="#f5f1e8"; ctx.lineWidth=4;
+  ctx.strokeRect(x,y+6,34,31); ctx.beginPath(); ctx.moveTo(x,y+16); ctx.lineTo(x+34,y+16); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(x+8,y); ctx.lineTo(x+8,y+12); ctx.moveTo(x+26,y); ctx.lineTo(x+26,y+12); ctx.stroke(); ctx.restore();
+}
+function dibujarIconoReloj(ctx, x, y){
+  ctx.save(); ctx.strokeStyle="#f5f1e8"; ctx.lineWidth=4; ctx.beginPath(); ctx.arc(x+19,y+19,18,0,Math.PI*2); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(x+19,y+7); ctx.lineTo(x+19,y+20); ctx.moveTo(x+19,y+20); ctx.lineTo(x+29,y+20); ctx.stroke(); ctx.restore();
+}
+function dibujarIconoUbicacion(ctx, x, y){
+  ctx.save(); ctx.fillStyle="#f5f1e8"; ctx.beginPath(); ctx.arc(x+16,y+14,13,Math.PI,0);
+  ctx.lineTo(x+16,y+42); ctx.lineTo(x+3,y+14); ctx.fill();
+  ctx.fillStyle="#163d32"; ctx.beginPath(); ctx.arc(x+16,y+14,5,0,Math.PI*2); ctx.fill(); ctx.restore();
+}
 async function crearPostalPartidoLegacy(partido){
   const canvas = document.createElement("canvas"); canvas.width = 1080; canvas.height = 1350;
   const ctx = canvas.getContext("2d");
@@ -2357,7 +2409,7 @@ function rectRedondeadoCanvas(contexto,x,y,ancho,alto,radio){
   contexto.arcTo(x,y,x+ancho,y,r);
   contexto.closePath();
 }
-async function crearPostalPartido(partido){
+async function crearPostalPartidoAnterior(partido){
   const canvas = document.createElement("canvas");
   canvas.width = 1080;
   canvas.height = 1350;
@@ -2457,6 +2509,129 @@ async function crearPostalPartido(partido){
   ctx.textAlign = "right";
   ctx.fillStyle = "#edbe42";
   ctx.fillText("#HayQueEstar",1008,1301);
+  return new Promise((resolve,reject) => canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error("No se pudo crear la postal")),"image/png",.96));
+}
+
+async function crearPostalPartido(partido){
+  const canvas = document.createElement("canvas");
+  canvas.width = 1080;
+  canvas.height = 1350;
+  const ctx = canvas.getContext("2d");
+  await document.fonts?.ready;
+
+  const crema = "#f5f1e8";
+  const verde = "#073f31";
+  const foto = await cargarImagenPostal(`assets/deporte-${slugDeporte(partido.deporte)}.webp`);
+  const escudo = await cargarImagenPostal("assets/escudo-ceibos.png");
+
+  ctx.fillStyle = "#173a31";
+  ctx.fillRect(0,0,1080,1350);
+  dibujarImagenCoverCanvas(ctx,foto,0,0,1080,1350);
+
+  const velo = ctx.createLinearGradient(0,0,0,1350);
+  velo.addColorStop(0,"rgba(5,30,25,.88)");
+  velo.addColorStop(.48,"rgba(5,30,25,.78)");
+  velo.addColorStop(.67,"rgba(5,30,25,.42)");
+  velo.addColorStop(1,"rgba(5,30,25,.22)");
+  ctx.fillStyle = velo;
+  ctx.fillRect(0,0,1080,1350);
+
+  ctx.strokeStyle = "rgba(245,241,232,.92)";
+  ctx.lineWidth = 2;
+  ctx.strokeRect(15,15,1050,1320);
+
+  const deporte = nombreDeporte(partido.deporte).toUpperCase();
+  const categoria = etiquetaCategoria(partido.categoria).toUpperCase();
+  const mostrarCategoria = categoria && categoria !== deporte;
+  ctx.fillStyle = crema;
+  ctx.textAlign = "left";
+  ctx.font = '500 19px "DM Sans", Arial, sans-serif';
+  ctx.fillText(deporte,60,77);
+  if (mostrarCategoria) ctx.fillText(categoria,60,105);
+  ctx.fillRect(60,122,82,2);
+
+  const anio = String(partido.fecha || "").slice(0,4) || String(new Date().getFullYear());
+  ctx.textAlign = "right";
+  ctx.fillText("TEMPORADA",1020,77);
+  ctx.font = '500 18px "DM Sans", Arial, sans-serif';
+  ctx.fillText(anio,1020,105);
+  ctx.fillRect(940,122,80,2);
+
+  dibujarEscudoPostalBlanco(ctx,escudo,540,44,82,100);
+  ctx.fillStyle = crema;
+  ctx.font = '500 20px "DM Sans", Arial, sans-serif';
+  dibujarTextoEspaciadoCanvas(ctx,"CEIBOS CLUB",540,182,7);
+
+  ctx.textAlign = "center";
+  ctx.fillStyle = crema;
+  ctx.font = '900 132px "Anton", Impact, sans-serif';
+  ctx.fillText("PRÓXIMO",540,342);
+  ctx.fillText("PARTIDO",540,462);
+  ctx.fillRect(516,495,48,2);
+
+  ctx.strokeStyle = "rgba(245,241,232,.9)";
+  ctx.lineWidth = 1;
+  ctx.strokeRect(80,523,405,70);
+  ctx.fillStyle = "rgba(0,70,53,.74)";
+  ctx.fillRect(81,524,403,68);
+  ctx.fillStyle = crema;
+  ctx.font = '800 31px "DM Sans", Arial, sans-serif';
+  ctx.fillText("CEIBOS",282,569);
+
+  ctx.fillStyle = "rgba(245,241,232,.95)";
+  ctx.fillRect(595,523,405,70);
+  const rival = textoPlano(partido.rival).toUpperCase();
+  const tamanoRival = ajustarTextoCanvas(ctx,rival,360,29,18,"800");
+  ctx.fillStyle = verde;
+  ctx.font = `800 ${tamanoRival}px "DM Sans", Arial, sans-serif`;
+  ctx.fillText(rival,797,568);
+  ctx.fillStyle = crema;
+  ctx.font = '500 29px "DM Sans", Arial, sans-serif';
+  ctx.fillText("VS",540,570);
+
+  const [year,month,day] = String(partido.fecha).split("-").map(Number);
+  const fecha = fmtFecha(partido.fecha);
+  const meses = ["ENERO","FEBRERO","MARZO","ABRIL","MAYO","JUNIO","JULIO","AGOSTO","SEPTIEMBRE","OCTUBRE","NOVIEMBRE","DICIEMBRE"];
+  const textoDia = `${fecha.semana} ${day} DE ${meses[(month || 1)-1]}`;
+  const hora = horaVisible(partido.hora);
+  const lugar = textoPlano(partido.cancha) || (partido.local ? "PREDIO LOS CEIBOS" : "CANCHA A CONFIRMAR");
+  const condicion = partido.local ? "LOCAL" : "VISITANTE";
+  const infoY = 648;
+  dibujarIconoCalendario(ctx,95,infoY-23);
+  dibujarIconoReloj(ctx,435,infoY-23);
+  dibujarIconoUbicacion(ctx,655,infoY-25);
+
+  ctx.textAlign = "left";
+  ctx.fillStyle = crema;
+  ctx.font = '500 17px "DM Sans", Arial, sans-serif';
+  const partesFecha = textoDia.split(" ");
+  const corte = partesFecha.length > 3 ? 2 : 1;
+  ctx.fillText(partesFecha.slice(0,corte).join(" "),145,646);
+  ctx.fillText(partesFecha.slice(corte).join(" "),145,671);
+  ctx.font = '700 25px "DM Sans", Arial, sans-serif';
+  ctx.fillText(hora,490,657);
+
+  ctx.font = '500 16px "DM Sans", Arial, sans-serif';
+  const lineasLugar = lineasCanvas(ctx,lugar.toUpperCase(),165).slice(0,2);
+  lineasLugar.forEach((linea,indice)=>ctx.fillText(linea,700,644+indice*24));
+  ctx.fillText(condicion,928,657);
+  ctx.fillStyle = "rgba(245,241,232,.75)";
+  ctx.fillRect(400,622,1,62);
+  ctx.fillRect(622,622,1,62);
+  ctx.fillRect(891,622,1,62);
+
+  const degradadoInferior = ctx.createLinearGradient(0,760,0,1350);
+  degradadoInferior.addColorStop(0,"rgba(4,35,27,0)");
+  degradadoInferior.addColorStop(1,"rgba(4,30,24,.52)");
+  ctx.fillStyle = degradadoInferior;
+  ctx.fillRect(0,760,1080,590);
+
+  ctx.fillStyle = crema;
+  ctx.fillRect(40,1298,360,2);
+  ctx.fillRect(680,1298,360,2);
+  ctx.font = '500 18px "DM Sans", Arial, sans-serif';
+  dibujarTextoEspaciadoCanvas(ctx,"TOTUS TUUS",540,1305,8);
+
   return new Promise((resolve,reject) => canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error("No se pudo crear la postal")),"image/png",.96));
 }
 
