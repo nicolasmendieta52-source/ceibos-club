@@ -78,6 +78,42 @@
       "local": false
     },
     {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "OCC BR",
+      "fecha": "2026-08-29",
+      "hora": "11:15",
+      "local": true,
+      "cancha": "Los Ceibos"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "OCC",
+      "fecha": "2026-08-29",
+      "hora": "11:15",
+      "local": true,
+      "cancha": "Los Ceibos —"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "erde vs. ELF",
+      "fecha": "2026-08-29",
+      "hora": "09:00",
+      "local": true,
+      "cancha": "Los Ceibos BN"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "ELF",
+      "fecha": "2026-08-29",
+      "hora": "15:30",
+      "local": true,
+      "cancha": "Los Ceibos"
+    },
+    {
       "deporte": "hockey",
       "categoria": "Reserva",
       "rival": "Old brendans",
@@ -93,6 +129,41 @@
       "fecha": "2026-08-30",
       "hora": "18:45",
       "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "erde vs. La Blanqueada",
+      "fecha": "2026-09-05",
+      "hora": "11:15",
+      "local": false,
+      "cancha": "Juan XXIII"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "erde VS La Blangueada",
+      "fecha": "2026-09-05",
+      "hora": "11:15",
+      "local": false,
+      "cancha": "Juan XXIII"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "Old Brendans BN",
+      "fecha": "2026-09-05",
+      "hora": "15:30",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "Old Brendans _",
+      "fecha": "2026-09-05",
+      "hora": "15:30",
+      "local": false,
+      "cancha": "St Brendans _ utr 8) pepsi a ZILLERTAL Zero BUM AOMINON FED"
     },
     {
       "deporte": "hockey",
@@ -2177,7 +2248,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-09T21:01:18.260Z",
+  "actualizadoEn": "2026-09-10T04:51:54.955Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2239,8 +2310,9 @@
         "deporte": "futbol",
         "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS31.html",
-        "registros": 13,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "fetch failed"
       },
       {
         "deporte": "futbol",
@@ -2253,8 +2325,9 @@
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS1.html",
-        "registros": 13,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "This operation was aborted"
       },
       {
         "deporte": "futbol",
@@ -2288,8 +2361,8 @@
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
-        "registros": 3,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "sin-coincidencias"
       },
       {
         "deporte": "futbol",
@@ -2309,8 +2382,9 @@
         "deporte": "futbol",
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/resultados/F202020A.html",
-        "registros": 13,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "fetch failed"
       },
       {
         "deporte": "futbol",
