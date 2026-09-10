@@ -70,32 +70,6 @@
       "local": false
     },
     {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "OCC BR",
-      "fecha": "2026-08-29",
-      "hora": "11:15",
-      "local": true,
-      "cancha": "Los Ceibos"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "OCC",
-      "fecha": "2026-08-29",
-      "hora": "11:15",
-      "local": true,
-      "cancha": "Los Ceibos —"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "Piedras Blancas",
-      "fecha": "2026-08-29",
-      "hora": "17:30",
-      "local": false
-    },
-    {
       "deporte": "hockey",
       "categoria": "Reserva",
       "rival": "Old brendans",
@@ -103,15 +77,6 @@
       "hora": "A confirmar",
       "local": true,
       "cancha": "Ceibos _ ¡Quedar 8) pepsi a ZILLERTAL Zero BUM AOMINON FED"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "Club Náutico _",
-      "fecha": "2026-08-30",
-      "hora": "11:15",
-      "local": false,
-      "cancha": "Nautico “pichincha” _ afer 8) pepsi a ZILLERTAL Zero BUM AOMINON FED"
     },
     {
       "deporte": "hockey",
@@ -129,33 +94,6 @@
       "hora": "16:00",
       "local": true,
       "cancha": "Ceibos"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "San Isidro Lomas BN",
-      "fecha": "2026-09-06",
-      "hora": "11:15",
-      "local": true,
-      "cancha": "Los Ceibos"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "San Isidro Lomas E",
-      "fecha": "2026-09-06",
-      "hora": "11:15",
-      "local": true,
-      "cancha": "Los Ceibos"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "L & C Inglés",
-      "fecha": "2026-09-06",
-      "hora": "15:30",
-      "local": false,
-      "cancha": "inglés utr 8) pepsi a ZILLERTAL Zero BUM AOMINON FED KASD"
     },
     {
       "deporte": "hockey",
@@ -222,25 +160,25 @@
     {
       "deporte": "rugby",
       "categoria": "Intermedia",
-      "rival": "Champa",
+      "rival": "Champagnat",
       "fecha": "2026-09-12",
-      "hora": "12:00",
+      "hora": "14:00",
       "local": false
     },
     {
       "deporte": "rugby",
       "categoria": "M19",
-      "rival": "OBC",
+      "rival": "Old Boys",
       "fecha": "2026-09-12",
-      "hora": "12:00",
+      "hora": "12:30",
       "local": true
     },
     {
       "deporte": "rugby",
       "categoria": "Primera",
-      "rival": "Champa",
+      "rival": "Champagnat",
       "fecha": "2026-09-12",
-      "hora": "12:00",
+      "hora": "15:45",
       "local": false
     },
     {
@@ -2239,7 +2177,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-10T11:30:51.805Z",
+  "actualizadoEn": "2026-09-10T16:30:48.561Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2308,61 +2246,57 @@
         "deporte": "futbol",
         "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS31.html",
-        "registros": 0,
-        "estado": "sin-coincidencias"
+        "registros": 2,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS1.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "This operation was aborted"
+        "registros": 13,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS1.html",
-        "registros": 0,
-        "estado": "sin-coincidencias"
+        "registros": 2,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "This operation was aborted"
+        "registros": 13,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/partidos/F21B.html",
-        "registros": 0,
-        "estado": "sin-coincidencias"
+        "registros": 2,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "This operation was aborted"
+        "registros": 4,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
-        "registros": 0,
-        "estado": "sin-coincidencias"
+        "registros": 3,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "PreSenior",
         "url": "https://ligauniversitaria.org.uy/resultados/F3232PSC.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "This operation was aborted"
+        "registros": 13,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
