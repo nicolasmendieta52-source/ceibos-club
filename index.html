@@ -65,6 +65,8 @@
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="/assets/gym-campaign.css?v=20260911b">
+<script type="module" src="/assets/gym-campaign.js?v=20260911b"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,300..900;1,9..40,300..900&display=swap" rel="stylesheet">
 <style>
@@ -448,6 +450,7 @@ html[data-ceibos-access="locked"] .ceibos-access-gate{
 <nav class="mobile-section-rail" id="mobileSectionRail" aria-label="Secciones de la página">
   <div class="mobile-section-rail-track" id="mobileSectionRailTrack">
     <a href="#inicio" data-rail-section="inicio">Inicio</a>
+    <a href="#gym-campaign" data-rail-section="gym-campaign">Gimnasio</a>
     <a href="#partido-destacado" data-rail-section="partido-destacado">Próximo</a>
     <a href="#noticias" data-rail-section="noticias">Noticias</a>
     <a href="#deportes" data-rail-section="deportes">Deportes</a>
@@ -498,7 +501,60 @@ html[data-ceibos-access="locked"] .ceibos-access-gate{
   <div class="hero-scroll"><div class="rueda"></div>Bajá</div>
 </header>
 
-<!-- ======================= TICKER ======================= -->
+<!-- ======================= CAMPAÑA GIMNASIO ======================= -->
+<section id="gym-campaign" aria-labelledby="gym-title">
+  <div class="gym-inner">
+    <div class="gym-poster">
+      <div class="gym-campaign-header">
+        <div class="gym-brand">
+          <svg class="gym-crest" viewBox="73 36 86 108" role="img" aria-label="Escudo Ceibos Club">
+            <image href="/assets/gym-campaign-reference.png" width="1448" height="1086" />
+          </svg>
+          <div class="gym-brand-name">Ceibos Club<span>Gimnasio</span></div>
+        </div>
+        <div class="gym-heading">
+          <h2 id="gym-title"><span>Entre todos,</span><span>lo hacemos posible</span></h2>
+          <p>Cada aporte nos acerca al nuevo gimnasio</p>
+        </div>
+        <div class="gym-funding">
+          <span class="gym-label">Objetivo</span>
+          <strong class="gym-goal" data-gym-goal>—</strong>
+          <div class="gym-progress-wrap">
+            <progress class="gym-progress" data-gym-progress max="100" aria-label="Avance de la recaudación para el gimnasio"></progress>
+            <strong class="gym-percent" data-gym-percent>—</strong>
+          </div>
+          <div class="gym-totals">
+            <div><span class="gym-label">Recaudado</span><strong data-gym-raised>Cargando…</strong></div>
+            <div><span class="gym-label">Faltan</span><strong data-gym-remaining>—</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="gym-copy">
+        <p>Cada ladrillo representa el aporte de quienes creen en este proyecto y en el valor de nuestro club.</p>
+        <strong>¡Gracias por ser parte!</strong>
+      </div>
+      <div class="gym-mobile-scene" role="img" aria-label="Vista del proyecto del gimnasio de Ceibos Club"></div>
+      <figure class="gym-build" aria-labelledby="gym-wall-caption">
+        <div class="gym-wall" data-gym-wall aria-hidden="true"></div>
+        <figcaption class="gym-wall-caption" id="gym-wall-caption">
+          <span data-gym-wall-summary>100 ladrillos. Un mismo proyecto.</span>
+          <span>Cada ladrillo: <b data-gym-unit>una parte de la meta</b></span>
+        </figcaption>
+        <p class="gym-sr-only" data-gym-contributors></p>
+      </figure>
+      <p class="gym-tagline">Un gimnasio para todos</p>
+    </div>
+    <div class="gym-participate">
+      <a class="gym-cta" data-gym-cta href="mailto:info@ceibosclub.com?subject=Quiero%20colaborar%20con%20el%20Gimnasio%20de%20Ceibos">Sumá tu ladrillo <span aria-hidden="true">↗</span></a>
+      <a class="gym-project-link" href="#noticias">Conocé el proyecto</a>
+      <p class="gym-contact-note" data-gym-contact-note>Escribile al club para coordinar tu aporte.</p>
+      <p class="gym-status" data-gym-status role="status" aria-live="polite" aria-atomic="true"></p>
+      <p class="gym-updated" data-gym-updated></p>
+      <noscript><p>Activá JavaScript para ver el avance actualizado. Podés escribirle al club para colaborar.</p></noscript>
+    </div>
+  </div>
+</section>
+<!-- ======================= TICKER DE RESULTADOS ======================= -->
 <div class="ticker" aria-label="Últimos resultados">
   <div class="ticker-pista" id="tickerPista"></div>
 </div>
