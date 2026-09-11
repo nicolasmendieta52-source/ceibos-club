@@ -5,15 +5,15 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-09-11 12:0",
-  "actualizado": "2026-09-11T16:32:37.899Z",
+  "publicado": "2026-09-11 18:00",
+  "actualizado": "2026-09-11T21:01:20.088Z",
   "pronosticos": [
     {
       "fecha": "2026-09-11",
       "diaMasN": 0,
       "etiqueta": "Viernes 11",
       "temperaturaMin": 7,
-      "temperaturaMax": 16,
+      "temperaturaMax": 17,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -30,7 +30,7 @@
           "descripcion": "Nuboso y cubierto.",
           "evolucion": "",
           "detalle": "",
-          "viento": "SE 10-30 km/h, rachas de hasta 40 km/h."
+          "viento": "SE 10-30 km/h."
         }
       ]
     },
@@ -38,23 +38,23 @@
       "fecha": "2026-09-12",
       "diaMasN": 1,
       "etiqueta": "Sábado 12",
-      "temperaturaMin": 8,
-      "temperaturaMax": 12,
+      "temperaturaMin": 9,
+      "temperaturaMax": 14,
       "probabilidadLluvia": "",
       "periodos": [
         {
           "orden": 1,
           "nombre": "Mañana",
           "descripcion": "Nuboso, períodos de cubierto.",
-          "evolucion": "Precipitaciones escasas y aisladas.",
-          "detalle": "Ventoso.",
-          "viento": "SE 20-40 km/h, rachas de hasta 60 km/h."
+          "evolucion": "Precipitaciones aisladas.",
+          "detalle": "",
+          "viento": "SE 20-40 km/h, rachas de hasta 50 km/h."
         },
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
           "descripcion": "Nuboso, períodos de cubierto.",
-          "evolucion": "Precipitaciones escasas y aisladas.",
+          "evolucion": "Precipitaciones aisladas.",
           "detalle": "Bajas temperaturas y sensaciones térmicas.",
           "viento": "SE 20-40 km/h, rachas de hasta 50 km/h."
         }
@@ -90,9 +90,9 @@
       "fecha": "2026-09-14",
       "diaMasN": 3,
       "etiqueta": "Lunes 14",
-      "temperaturaMin": 3,
+      "temperaturaMin": 4,
       "temperaturaMax": 13,
-      "probabilidadLluvia": "Nula",
+      "probabilidadLluvia": "Baja",
       "periodos": []
     },
     {
@@ -108,7 +108,7 @@
       "fecha": "2026-09-16",
       "diaMasN": 5,
       "etiqueta": "Miércoles 16",
-      "temperaturaMin": 5,
+      "temperaturaMin": 3,
       "temperaturaMax": 15,
       "probabilidadLluvia": "Nula",
       "periodos": []
