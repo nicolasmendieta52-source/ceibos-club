@@ -21,24 +21,6 @@
       "cancha": "SAN ISIDRO LOMAS"
     },
     {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
-      "fecha": "2026-09-12",
-      "hora": "11:15",
-      "local": true,
-      "cancha": "MONTE VI \"LOS CEIBOS\""
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 20",
-      "rival": "SAN JUAN BAUTISTA",
-      "fecha": "2026-09-12",
-      "hora": "13:30",
-      "local": true,
-      "cancha": "MONTE VI \"LOS CEIBOS\""
-    },
-    {
       "deporte": "hockey",
       "categoria": "Intermedia A",
       "rival": "Old Christians Club",
@@ -48,28 +30,6 @@
       "fase": "COPA DE PLATA (Intermedia A)",
       "estado": "A Designar",
       "cancha": "Old Christians"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Reserva",
-      "rival": "Old Christians Club",
-      "fecha": "2026-09-12",
-      "hora": "16:00",
-      "local": false,
-      "fase": "COPA DE ORO (Reserva )",
-      "estado": "A Designar",
-      "cancha": "Old Christians"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Sub 18",
-      "rival": "Old Woodlands Club",
-      "fecha": "2026-09-12",
-      "hora": "14:00",
-      "local": false,
-      "fase": "COPA DE PLATA (Sub 18)",
-      "estado": "A Designar",
-      "cancha": "Woodlands"
     },
     {
       "deporte": "rugby",
@@ -2603,10 +2563,44 @@
       "gf": 0,
       "gc": 2,
       "fecha": "2026-09-12"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
+      "gf": 3,
+      "gc": 0,
+      "fecha": "2026-09-12"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "SAN JUAN BAUTISTA",
+      "gf": 1,
+      "gc": 0,
+      "fecha": "2026-09-12"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Old Christians Club",
+      "gf": 2,
+      "gc": 3,
+      "fecha": "2026-09-12",
+      "fase": "COPA DE ORO (Reserva )"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Old Woodlands Club",
+      "gf": 1,
+      "gc": 8,
+      "fecha": "2026-09-12",
+      "fase": "COPA DE PLATA (Sub 18)"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-12T15:37:51.119Z",
+  "actualizadoEn": "2026-09-12T20:39:11.460Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2682,14 +2676,14 @@
         "deporte": "futbol",
         "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS31.html",
-        "registros": 13,
+        "registros": 14,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS31.html",
-        "registros": 2,
+        "registros": 1,
         "estado": "ok"
       },
       {
@@ -2752,14 +2746,14 @@
         "deporte": "futbol",
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/resultados/F202020A.html",
-        "registros": 13,
+        "registros": 14,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/partidos/F202020A.html",
-        "registros": 2,
+        "registros": 1,
         "estado": "ok"
       },
       {
