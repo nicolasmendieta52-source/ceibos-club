@@ -1878,7 +1878,7 @@ function renderDeportes(){
             <h4>${etiquetaCategoria(c)}</h4>
             <h5>Próximo partido</h5>
             ${proximo ? (()=>{ const f=fmtFecha(proximo.fecha); return `<div class="partido-mini"><div><div class="vs">vs ${textoSeguro(proximo.rival)}</div><div class="meta">${f.dia} ${f.mes} · ${horaVisible(proximo.hora)}</div></div><span class="pill ${proximo.local?'local':'visita'}">${proximo.local?'Local':'Visitante'}</span></div>`; })() : `<p class="sin-datos">Sin próximos partidos cargados.</p>`}
-            ${futuros.length ? `<details class="dep-vermas"><summary>Ver ${futuros.length} partido${futuros.length===1?'':'s'} futuro${futuros.length===1?'':'s'}</summary>${futuros.map(p=>{ const f=fmtFecha(p.fecha); return `<div class="partido-mini"><div><div class="vs">vs ${textoSeguro(p.rival)}</div><div class="meta">${f.dia} ${f.mes} · ${horaVisible(p.hora)}</div></div><span class="pill ${p.local?'local':'visita'}">${p.local?'Local':'Visitante'}</span></div>`; }).join("")}</details>` : ""}
+            ${futuros.length ? `<details class="dep-vermas"><summary>Ver ${futuros.length} partido${futuros.length===1?'':'s'} futuro${futuros.length===1?'':'s'}</summary>${futuros.map(p=>{ const f=fmtFecha(p.fecha); return `<div class="partido-mini"><div><div class="vs">vs ${textoSeguro(p.rival)}</div><div class="meta">${f.dia} ${f.mes} · ${horaPartidoVisible(p)}</div></div><span class="pill ${p.local?'local':'visita'}">${p.local?'Local':'Visitante'}</span></div>`; }).join("")}</details>` : ""}
             <h5>Último resultado</h5>
             ${ultimoResultado ? `<div class="resultado-mini"><div><span>vs ${textoSeguro(ultimoResultado.rival)}</span>${fechaBreve(ultimoResultado.fecha)?`<small>${fechaBreve(ultimoResultado.fecha)}</small>`:""}${goleadoresResultado(ultimoResultado)}</div><strong>${ultimoResultado.gf} — ${ultimoResultado.gc}</strong></div>` : `<p class="sin-datos">Sin resultados cargados.</p>`}
             ${historial.length ? `<details class="dep-vermas"><summary>Ver historial 2026 (${historial.length})</summary>${historial.map(r=>`<div class="resultado-mini"><div><span>vs ${textoSeguro(r.rival)}</span>${fechaBreve(r.fecha)?`<small>${fechaBreve(r.fecha)}</small>`:""}${goleadoresResultado(r)}</div><strong>${r.gf} — ${r.gc}</strong></div>`).join("")}</details>` : ""}
@@ -1922,6 +1922,7 @@ const hoyISO = () => {
   }).formatToParts(new Date()).filter(parte => parte.type !== "literal").map(parte => [parte.type, parte.value]));
   return `${partes.year}-${partes.month}-${partes.day}`;
 };
+const horaPartidoVisible = partido => horaVisible(partido.hora) + (partido.estado ? " · FUH: " + textoSeguro(partido.estado) : "");
 const ubicacionVisible = partido => textoPlano(partido.cancha) || (partido.local ? "Cancha Los Ceibos" : "Visitante");
 const nombreDeporte = valor => DEPORTES.find(deporte => deporte.slug === slugDeporte(valor))?.nombre || textoPlano(valor) || "Ceibos";
 const horaConfirmada = partido => /^\d{1,2}:\d{2}$/.test(textoPlano(partido?.hora));
@@ -1970,7 +1971,7 @@ function renderDeportePanel(){
   const partidoMini = p => {
     const f = fmtFecha(p.fecha);
     const indicePartido = PARTIDOS.indexOf(p);
-    return `<div class="partido-mini"><div><div class="vs">vs ${textoSeguro(p.rival)}</div><div class="meta">${f.semana} ${f.dia} ${f.mes} &middot; ${horaVisible(p.hora)} &middot; ${textoSeguro(ubicacionVisible(p))}</div></div><div class="partido-mini-acciones"><span class="pill ${p.local?'local':'visita'}">${p.local?'Local':'Visitante'}</span><button class="partido-postal" type="button" data-postal-partido-indice="${indicePartido}" aria-label="Crear postal del partido contra ${textoSeguro(p.rival)}">Compartir postal</button></div></div>`;
+    return `<div class="partido-mini"><div><div class="vs">vs ${textoSeguro(p.rival)}</div><div class="meta">${f.semana} ${f.dia} ${f.mes} &middot; ${horaPartidoVisible(p)} &middot; ${textoSeguro(ubicacionVisible(p))}</div></div><div class="partido-mini-acciones"><span class="pill ${p.local?'local':'visita'}">${p.local?'Local':'Visitante'}</span><button class="partido-postal" type="button" data-postal-partido-indice="${indicePartido}" aria-label="Crear postal del partido contra ${textoSeguro(p.rival)}">Compartir postal</button></div></div>`;
   };
   const resultadoMini = r => `<div class="resultado-mini"><div><span>vs ${textoSeguro(r.rival)}</span>${fechaBreve(r.fecha)?`<small>${fechaBreve(r.fecha)}</small>`:""}${goleadoresResultado(r)}</div><strong>${r.gf} &mdash; ${r.gc}</strong></div>`;
   panels.innerHTML = `<div class="dep-panel activo" id="${d.slug}" role="tabpanel" aria-labelledby="tab-${d.slug}">
@@ -2088,8 +2089,14 @@ function fuentesCompletasArchivo(deporte, categoria){
     ...(deporte.sourceIds || []), ...(categoria?.sourceIds || []),
     ...(deporte.milestones || []).flatMap(hito => hito.sourceIds || []),
     ...(categoria?.achievements || []).flatMap(logro => logro.sourceIds || []),
-    ...(categoria?.notableMatches || []).flatMap(partido => partido.sourceIds || [])
+    ...(categoria?.notableMatches || []).flatMap(partido => partido.sourceIds || []),
+    ...(categoria?.seasonSnapshots || []).map(tabla => tabla.sourceId)
   ])];
+}
+function tablasOficialesArchivo(categoria){
+  const tablas = categoria.seasonSnapshots || [];
+  if (!tablas.length) return "";
+  return '<h3 class="archivo-subtitulo">Registro de tablas oficiales</h3>' + tablas.map(tabla => `<div class="archivo-bloque"><strong>${textoSeguro(tabla.phase)} · ${tabla.season}</strong><p class="archivo-actualidad-nota">Consulta: ${textoSeguro(tabla.asOf.split('-').reverse().join('/'))}. Este registro conserva la tabla de esa fecha.</p><div class="archivo-tabla-wrap"><table class="archivo-tabla"><caption class="sr-only">Ceibos · ${textoSeguro(tabla.phase)}</caption><thead><tr><th scope="col">Equipo</th><th scope="col">PJ</th><th scope="col">V</th><th scope="col">E</th><th scope="col">D</th><th scope="col">F</th><th scope="col">C</th><th scope="col">Pts.</th></tr></thead><tbody><tr><td>Ceibos</td>${['pj','pg','pe','pp','gf','gc','points'].map(campo => '<td>'+textoSeguro(String(tabla[campo]).replace('.',','))+'</td>').join('')}</tr></tbody></table></div>${tabla.note ? '<p class="archivo-actualidad-nota">'+textoSeguro(tabla.note)+'</p>' : ''}${enlacesFuentesArchivo([tabla.sourceId])}</div>`).join('');
 }
 function hitoArchivo(hito){
   return `<div class="archivo-hito"><time>${textoSeguro(hito.year)}</time><div><strong>${textoSeguro(hito.title)}</strong><p>${textoSeguro(hito.detail)}</p></div></div>`;
@@ -2118,6 +2125,7 @@ function completarRankingRugbyCategoria(contenedor, deporte, categoria){
   const historico = columnas[1]?.children?.[1];
   const anotadores = goleadoresTemporadaArchivo("rugby", categoria.name);
   if (ranking) ranking.innerHTML = `<h3 class="archivo-subtitulo">Anotadores 2026</h3><div class="archivo-bloque">${anotadores.length ? `<ul class="archivo-lista">${anotadores.map((jugador,indice) => `<li class="archivo-goleador"><span>${indice+1}. ${textoSeguro(jugador.nombre)}</span><b>${jugador.puntos} pts</b></li>`).join("")}</ul>` : `<div class="archivo-vacio">Todavía no hay anotadores registrados para esta categoría.</div>`}</div>`;
+  if (ranking) ranking.insertAdjacentHTML("beforeend", `<p class="archivo-actualidad-nota">Estadísticas registradas por el club al 11/09/2026. La cobertura de las planillas es parcial y no representa todos los partidos de la temporada.</p>`);
   if (historico) historico.innerHTML = `<h3 class="archivo-subtitulo">Anotadores históricos</h3><div class="archivo-bloque"><div class="archivo-vacio">No se publica un ranking acumulado: todavía no existe una base histórica completa para calcularlo sin inventar datos.</div></div>`;
 }
 function renderArchivoHistorico(){
@@ -2131,7 +2139,10 @@ function renderArchivoHistorico(){
   const categoria = ruta[2] ? deporte.categories.find(item => item.slug === ruta[2]) : null;
   if (ruta[2] && !categoria) { renderDeporteArchivo(contenedor, deporte); return; }
   categoria ? renderCategoriaArchivo(contenedor, deporte, categoria) : renderDeporteArchivo(contenedor, deporte);
-  if (categoria) completarRankingRugbyCategoria(contenedor, deporte, categoria);
+  if (categoria) {
+    completarRankingRugbyCategoria(contenedor, deporte, categoria);
+    contenedor.querySelector(".archivo-hero")?.insertAdjacentHTML("afterend", tablasOficialesArchivo(categoria));
+  }
   revObserve();
 }
 
@@ -2204,7 +2215,7 @@ function renderFixture(){
       const cuenta = dias===0?"¡Hoy!":dias===1?"Mañana":`${dias} días`;
       const extras = restantes ? ` · +${restantes} fecha${restantes===1?"":"s"}` : "";
       return `<a class="resumen-partido" href="#${deporte.slug}" data-fix-deporte="${deporte.slug}" data-fix-categoria="${textoSeguro(p.categoria)}">
-        <span><span class="resumen-categoria">${etiquetaCategoria(p.categoria)}</span><span class="resumen-rival">vs ${textoSeguro(p.rival)}</span><time class="resumen-meta" datetime="${textoSeguro(p.fecha)}">${f.semana} ${f.dia} ${f.mes} · ${horaVisible(p.hora)}${extras}</time></span>
+        <span><span class="resumen-categoria">${etiquetaCategoria(p.categoria)}</span><span class="resumen-rival">vs ${textoSeguro(p.rival)}</span><time class="resumen-meta" datetime="${textoSeguro(p.fecha)}">${f.semana} ${f.dia} ${f.mes} · ${horaPartidoVisible(p)}${extras}</time></span>
         <span class="resumen-cuenta">${cuenta}<small>${p.local?"Local":"Visitante"}</small></span>
       </a>`;
     }).join("") : `<p class="resumen-vacio">Sin próximas fechas oficiales publicadas.</p>`;
@@ -2228,7 +2239,7 @@ function renderHomeDeportiva(){
   }
   const f = fmtFecha(primero.fecha);
   destacado.innerHTML = `<div class="pd-etiqueta"><span>${textoSeguro(nombreDeporte(primero.deporte))} · ${etiquetaCategoria(primero.categoria)}</span><span class="pd-fecha">${f.semana} ${f.dia} ${f.mes}</span></div><div class="pd-equipos"><div class="pd-equipo">Ceibos</div><div class="pd-versus">VS</div><div class="pd-equipo">${textoSeguro(primero.rival)}</div></div><div class="pd-detalle"><span>${horaVisible(primero.hora)}</span><span>${textoSeguro(ubicacionVisible(primero))}</span><a href="#fixture">Ficha del partido</a></div><div class="pd-acciones"><button class="pd-accion pd-accion-principal" type="button" data-modo-partido>Modo partido</button><button class="pd-accion" type="button" data-postal-partido>Compartir postal</button></div>`;
-  lista.innerHTML = proximos.slice(1).map(p => { const fecha = fmtFecha(p.fecha); return `<article class="home-proximo"><div class="home-proximo-fecha">${fecha.dia}<small>${fecha.semana}</small><small>${fecha.mes}</small></div><div><div class="deporte">${textoSeguro(p.deporte)} · ${etiquetaCategoria(p.categoria)}</div><strong>Ceibos vs ${textoSeguro(p.rival)}</strong><p>${horaVisible(p.hora)} · ${textoSeguro(ubicacionVisible(p))}</p></div></article>`; }).join("") || `<p class="home-sin-partidos">No hay más fechas publicadas por ahora.</p>`;
+  lista.innerHTML = proximos.slice(1).map(p => { const fecha = fmtFecha(p.fecha); return `<article class="home-proximo"><div class="home-proximo-fecha">${fecha.dia}<small>${fecha.semana}</small><small>${fecha.mes}</small></div><div><div class="deporte">${textoSeguro(p.deporte)} · ${etiquetaCategoria(p.categoria)}</div><strong>Ceibos vs ${textoSeguro(p.rival)}</strong><p>${horaPartidoVisible(p)} · ${textoSeguro(ubicacionVisible(p))}</p></div></article>`; }).join("") || `<p class="home-sin-partidos">No hay más fechas publicadas por ahora.</p>`;
 }
 
 function renderDatoCeibos(){
@@ -2257,7 +2268,7 @@ function contenidoModoPartido(partido){
   const fecha = fmtFecha(partido.fecha);
   return `<h3 id="modoPartidoTitulo">Próximo <em>partido</em></h3>
     <div class="modo-marcador"><strong class="modo-equipo">Ceibos</strong><span class="modo-vs">VS</span><strong class="modo-equipo">${textoSeguro(partido.rival)}</strong></div>
-    <div class="modo-meta"><span>${textoSeguro(nombreDeporte(partido.deporte))} · ${etiquetaCategoria(partido.categoria)}</span><span>${fecha.semana} ${fecha.dia} ${fecha.mes} ${fecha.anio}</span><span>${horaVisible(partido.hora)} · ${textoSeguro(ubicacionVisible(partido))}</span></div>
+    <div class="modo-meta"><span>${textoSeguro(nombreDeporte(partido.deporte))} · ${etiquetaCategoria(partido.categoria)}</span><span>${fecha.semana} ${fecha.dia} ${fecha.mes} ${fecha.anio}</span><span>${horaPartidoVisible(partido)} · ${textoSeguro(ubicacionVisible(partido))}</span></div>
     <div class="modo-cuenta" data-modo-cuenta>${textoSeguro(cuentaRegresivaPartido(partido))}</div>
     <section class="modo-clima" data-modo-clima aria-label="Clima en la zona de Los Ceibos" aria-live="polite">${contenidoClimaModoPartido(partido)}</section>`;
 }
@@ -2430,7 +2441,7 @@ async function crearPostalPartidoLegacy(partido){
   lineasCanvas(ctx,rival,936).slice(0,2).forEach((linea,indice) => ctx.fillText(linea,72,920+indice*(tamanoRival+8)));
   const fecha = fmtFecha(partido.fecha);
   ctx.fillStyle = "#edbe42"; ctx.font = '800 34px Arial, sans-serif'; ctx.fillText(`${fecha.semana} ${fecha.dia} ${fecha.mes} ${fecha.anio}`,72,1100);
-  ctx.fillStyle = "#fff"; ctx.font = '600 28px Arial, sans-serif'; ctx.fillText(`${horaVisible(partido.hora)} · ${ubicacionVisible(partido)}`,72,1155);
+  ctx.fillStyle = "#fff"; ctx.font = '600 28px Arial, sans-serif'; ctx.fillText(`${horaPartidoVisible(partido)} · ${ubicacionVisible(partido)}`,72,1155);
   ctx.fillStyle = "rgba(255,255,255,.62)"; ctx.font = '600 22px Arial, sans-serif'; ctx.fillText("ceibosclub.com",72,1272);
   return new Promise((resolve,reject) => canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error("No se pudo crear la postal")), "image/png", .96));
 }
@@ -2553,7 +2564,7 @@ async function crearPostalPartidoAnterior(partido){
   ctx.fillText(`${fecha.semana} ${fecha.dia} ${fecha.mes} ${fecha.anio}`,112,1038);
   ctx.fillStyle = "#fff";
   ctx.font = '800 29px Arial, sans-serif';
-  ctx.fillText(horaVisible(partido.hora),112,1092);
+  ctx.fillText(horaPartidoVisible(partido),112,1092);
   ctx.fillStyle = "rgba(255,255,255,.72)";
   ctx.font = '600 25px Arial, sans-serif';
   const lugar = ubicacionVisible(partido);
@@ -2649,7 +2660,7 @@ async function crearPostalPartido(partido){
   const fecha = fmtFecha(partido.fecha);
   const meses = ["ENERO","FEBRERO","MARZO","ABRIL","MAYO","JUNIO","JULIO","AGOSTO","SEPTIEMBRE","OCTUBRE","NOVIEMBRE","DICIEMBRE"];
   const textoDia = `${fecha.semana} ${day} DE ${meses[(month || 1)-1]}`;
-  const hora = horaVisible(partido.hora);
+  const hora = horaPartidoVisible(partido);
   const lugar = textoPlano(partido.cancha) || (partido.local ? "PREDIO LOS CEIBOS" : "CANCHA A CONFIRMAR");
   const condicion = partido.local ? "LOCAL" : "VISITANTE";
   const infoY = 648;
@@ -2792,7 +2803,7 @@ function renderPredioVivo(){
   const cancha = NOMBRES_ZONAS_PREDIO[zonaPredioActiva] ?? "Espacio Ceibos";
   if (jornada.length) {
     const fecha = fmtFecha(fechaJornada);
-    const partidos = jornada.map(partido => `<div class="predio-partido-local"><time datetime="${textoSeguro(partido.fecha)}T${textoSeguro(partido.hora || "00:00")}">${horaVisible(partido.hora)}</time><div><strong>${etiquetaCategoria(partido.categoria)}</strong><span>Ceibos vs ${textoSeguro(partido.rival)} · ${textoSeguro(ubicacionVisible(partido))}</span></div></div>`).join("");
+    const partidos = jornada.map(partido => `<div class="predio-partido-local"><time datetime="${textoSeguro(partido.fecha)}T${textoSeguro(partido.hora || "00:00")}">${horaPartidoVisible(partido)}</time><div><strong>${etiquetaCategoria(partido.categoria)}</strong><span>Ceibos vs ${textoSeguro(partido.rival)} · ${textoSeguro(ubicacionVisible(partido))}</span></div></div>`).join("");
     contenedor.innerHTML = `<span class="predio-vivo-etiqueta">Cancha seleccionada · ${textoSeguro(deporte.nombre)}</span><h4>${textoSeguro(cancha)}</h4><div class="predio-jornada"><div class="predio-jornada-fecha">Próxima jornada de local · ${fecha.semana} ${fecha.dia} ${fecha.mes}</div>${partidos}</div><a href="#${deporte.slug}" data-abrir-deporte="${deporte.slug}">Ver la agenda de ${textoSeguro(deporte.nombre)} →</a>`;
   } else {
     contenedor.innerHTML = `<span class="predio-vivo-etiqueta">Cancha seleccionada · ${textoSeguro(deporte.nombre)}</span><h4>${textoSeguro(cancha)}</h4><p>No hay partidos de local publicados para esta cancha. Volvé pronto para ver la agenda actualizada.</p><a href="#fixture">Ver fixture completo →</a>`;
@@ -3073,13 +3084,14 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
     if (!d) return;
     if (Array.isArray(d.partidos)) PARTIDOS = d.partidos
       .filter(p => DEPORTES.some(dep => dep.slug === p.deporte) && fechaValida(p.fecha))
-      .map(p => ({ deporte:p.deporte, categoria:textoPlano(p.categoria), rival:textoPlano(p.rival), fecha:p.fecha, hora:textoPlano(p.hora), local:Boolean(p.local), cancha:textoPlano(p.cancha), predioZona:textoPlano(p.predioZona || p.zonaPredio) }));
+      .map(p => ({ deporte:p.deporte, categoria:textoPlano(p.categoria), rival:textoPlano(p.rival), fecha:p.fecha, hora:textoPlano(p.hora), local:Boolean(p.local), cancha:textoPlano(p.cancha), estado:textoPlano(p.estado), fase:textoPlano(p.fase), predioZona:textoPlano(p.predioZona || p.zonaPredio) }));
     if (Array.isArray(d.resultados)) RESULTADOS = d.resultados
       .map(r => ({
         deporte:textoPlano(r.deporte),
         categoria:textoPlano(r.categoria),
         rival:textoPlano(r.rival),
         fecha:fechaValida(r.fecha) ? r.fecha : "",
+        fase:textoPlano(r.fase),
         gf:Number(r.gf) || 0,
         gc:Number(r.gc) || 0,
         goleadores:(Array.isArray(r.goleadores) ? r.goleadores : r.goleadores ? [r.goleadores] : [])

@@ -47,9 +47,8 @@ const comparable = value => repairText(value)
   .replace(/[^a-z0-9]+/g, " ")
   .trim();
 
-function dateFromDayMonth(day, month) {
+function dateFromDayMonth(day, month, year = now.getFullYear()) {
   if (!Number.isInteger(day) || !Number.isInteger(month) || day < 1 || day > 31 || month < 1 || month > 12) return "";
-  const year = now.getFullYear();
   return `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
 }
 
@@ -71,14 +70,15 @@ function parseHockeyLine(line, source, aliases) {
   const date = cells[2].match(/^(\d{1,2})\/(\d{1,2})\s+(\d{1,2}:\d{2})/);
   if (!date) return null;
   const local = isTeam(home, aliases);
-  const fecha = dateFromDayMonth(Number(date[1]), Number(date[2]));
+  const fecha = dateFromDayMonth(Number(date[1]), Number(date[2]), source.temporada || now.getFullYear());
+  const fase = cells[6] || source.fase;
   const score = cells[4].match(/^(\d+)\s*-\s*(\d+)$/);
   const cerrado = cells[5].toLocaleLowerCase("es").includes("cerrado");
   if (cerrado && score) {
     const [homeScore, awayScore] = [Number(score[1]), Number(score[2])];
-    return { kind: "resultado", deporte: source.deporte, categoria: source.categoria, rival: local ? away : home, gf: local ? homeScore : awayScore, gc: local ? awayScore : homeScore, fecha };
+    return { kind: "resultado", deporte: source.deporte, categoria: source.categoria, rival: local ? away : home, gf: local ? homeScore : awayScore, gc: local ? awayScore : homeScore, fecha, ...(fase ? { fase } : {}) };
   }
-  return { kind: "partido", deporte: source.deporte, categoria: source.categoria, rival: local ? away : home, fecha, hora: date[3], local, cancha: repairText(cells[3]) };
+  return { kind: "partido", deporte: source.deporte, categoria: source.categoria, rival: local ? away : home, fecha, hora: date[3], local, cancha: repairText(cells[3]), estado: cells[5], ...(fase ? { fase } : {}) };
 }
 
 function parseLine(line, source, aliases) {
@@ -125,7 +125,8 @@ function parseLine(line, source, aliases) {
 }
 
 function parseText(text, source, aliases) {
-  return text.split(/\n|\r|(?<=Cerrado)|(?<=Pendiente)/).map(line => parseLine(line, source, aliases)).filter(Boolean);
+  const lines = text.includes("\t") ? text.split(/\r?\n/) : text.split(/\n|\r|(?<=Cerrado)|(?<=Pendiente)/);
+  return lines.map(line => parseLine(line, source, aliases)).filter(Boolean);
 }
 
 function ligaDateTime(value) {
@@ -879,6 +880,21 @@ async function renderPage(source) {
         await fixtureTab.nth(index).click();
         await page.waitForTimeout(400);
       }
+      return await page.evaluate(() => {
+        let fase = "";
+        const lines = [];
+        for (const element of document.querySelectorAll("h1,h2,h3,h4,h5,h6,table")) {
+          if (element.tagName !== "TABLE") {
+            if (/APERTURA|CLAUSURA|COPA/i.test(element.innerText)) fase = element.innerText.replace(/\s+/g, " ").trim();
+          } else {
+            for (const row of element.querySelectorAll("tr")) {
+              const cells = [...row.querySelectorAll("th,td")].slice(0, 6).map(cell => cell.innerText.replace(/\s+/g, " ").trim());
+              lines.push([...cells, fase].join("\t"));
+            }
+          }
+        }
+        return lines.join("\n");
+      });
     }
     // Todas las fuentes oficiales publican los datos en tablas. Conservamos
     // cada fila como una línea con tabulaciones, que es más confiable que
@@ -900,6 +916,7 @@ function normalizeRecord(record, kind, priority = 0) {
   const categoria = repairText(record.categoria);
   const rival = repairText(record.rival);
   const fecha = clean(record.fecha);
+  const fase = clean(record.fase) ? { fase: repairText(record.fase) } : {};
   if (!deporte || !categoria || !rival || !/^\d{4}-\d{2}-\d{2}$/.test(fecha)) return null;
   if (kind === "resultado") {
     const gf = Number(record.gf);
@@ -908,7 +925,7 @@ function normalizeRecord(record, kind, priority = 0) {
     const goleadores = Array.isArray(record.goleadores)
       ? record.goleadores.map(repairText).filter(Boolean)
       : clean(record.goleadores) ? [repairText(record.goleadores)] : [];
-    return { deporte, categoria, rival, gf, gc, fecha, ...(goleadores.length ? { goleadores } : {}), _priority: priority };
+    return { deporte, categoria, rival, gf, gc, fecha, ...fase, ...(goleadores.length ? { goleadores } : {}), _priority: priority };
   }
   const hora = /^\d{2}:\d{2}$/.test(clean(record.hora)) ? clean(record.hora) : "A confirmar";
   return {
@@ -918,6 +935,8 @@ function normalizeRecord(record, kind, priority = 0) {
     fecha,
     hora,
     local: Boolean(record.local),
+    ...fase,
+    ...(clean(record.estado) ? { estado: repairText(record.estado) } : {}),
     ...(clean(record.cancha) ? { cancha: repairText(record.cancha) } : {}),
     _priority: priority
   };
@@ -1030,7 +1049,7 @@ async function main() {
             : parseText(text, source, config.teamAliases);
       }
       console.log(`${source.deporte}: ${matches.length} partidos encontrados`);
-      officialRecords.push(...matches);
+      officialRecords.push(...matches.map(record => source.fase ? { ...record, fase: source.fase } : record));
       sourceStatus.push({ deporte: source.deporte, categoria: source.categoria, url: source.url, registros: matches.length, estado: matches.length ? "ok" : "sin-coincidencias" });
     } catch (error) {
       console.warn(`${source.deporte}: no se pudo actualizar (${error.message})`);

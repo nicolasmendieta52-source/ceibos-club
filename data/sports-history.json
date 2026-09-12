@@ -1,12 +1,18 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-07",
+  "updatedAt": "2026-09-11",
   "methodology": {
     "title": "Archivo histórico verificado",
     "summary": "Los hitos históricos se publican únicamente cuando existe una fuente institucional identificable. Las estadísticas 2026 se calculan en el navegador con los resultados actuales de data/club-data.json y se distinguen de los datos históricos.",
     "missingLabel": "No se encontró una fuente oficial suficiente para completar este dato."
   },
   "sources": {
+    "fuh-inter-c": {"title":"FUH — Intermedia C 2026","url":"https://admin.hockey.com.uy/posiciones?category_id=79","authority":"Federación Uruguaya de Hockey","scope":"Apertura y Copa de Oro de Intermedia C: fixture, resultados y posiciones."},
+    "liga-sub18-rueda1": {"title":"Sub 18 — Primera rueda, Serie 5","url":"https://ligauniversitaria.org.uy/posiciones/F181818-5-.html","authority":"Liga Universitaria de Deportes","scope":"Tabla oficial de la primera rueda de 2026."},
+    "liga-goleros-2023": {"title":"Goleadores y goleros menos vencidos 2023","url":"https://ligauniversitaria.org.uy/goleadores-y-goleros-menos-vencidos-2023/","authority":"Liga Universitaria de Deportes","scope":"Distinción de Alfonso Giménez como golero menos vencido de Sub 20 B."},
+    "liga-reserva-copa-2025": {"title":"Copa de Campeones Reserva 2025 — Cuartos de final","url":"https://ligauniversitaria.org.uy/resultados-de-los-cuartos-de-final-de-la-copa-de-campeones-reserva/","authority":"Liga Universitaria de Deportes","scope":"Danubio 2–1 Ceibos, 18 de noviembre de 2025."},
+    "inisa-halcones-2026": {"title":"Copa Segundas Oportunidades en Colonia Berro","url":"https://inisa.gub.uy/index.php/prensa/1961-halcones-volvio-a-la-cancha-en-colonia-berro","authority":"INISA","scope":"Encuentro entre Halcones y Ceibos Rugby Club del 14 de marzo de 2026."},
+    "liga-basket-serie2": {"title":"Básquetbol B — Serie 2","url":"https://ligauniversitaria.org.uy/posiciones/B221B3.html","authority":"Liga Universitaria de Deportes","scope":"Tabla de la segunda fase, con los puntos oficiales de arrastre."},
     "club-current-site": {
       "title": "Ceibos Club — sitio institucional",
       "url": "https://ceibosclub.com/",
@@ -157,11 +163,11 @@
       ],
       "categories": [
         {"slug":"primera","name":"Primera","competition":"Liga Universitaria — Mayores","description":"Plantel mayor de fútbol de Ceibos.","sourceIds":["liga-football-2026"],"achievements":[],"documentedSeasons":[2026]},
-        {"slug":"reserva-a","name":"Reserva A","competition":"Liga Universitaria — Reserva","description":"Plantel de Reserva que en 2025 compitió en la Divisional B y logró el ascenso.","sourceIds":["liga-2025-champions","liga-football-2026"],"achievements":[{"year":2025,"title":"Vicecampeón de Reserva B","detail":"Ascenso confirmado junto a Tape, Alemán y J.M.L.M.","sourceIds":["liga-2025-champions"]}],"documentedSeasons":[2025,2026]},
+        {"slug":"reserva-a","name":"Reserva A","competition":"Liga Universitaria — Reserva","description":"Plantel de Reserva que en 2025 compitió en la Divisional B y logró el ascenso.","sourceIds":["liga-2025-champions","liga-football-2026","liga-reserva-copa-2025"],"achievements":[{"year":2025,"title":"Vicecampeón de Reserva B","detail":"Ascenso confirmado junto a Tape, Alemán y J.M.L.M.","sourceIds":["liga-2025-champions"]}],"documentedSeasons":[2025,2026],"notableMatches":[{"date":"2025-11-18","label":"Cuartos de final · Copa de Campeones Reserva","opponent":"Danubio","score":"1–2","sourceIds":["liga-reserva-copa-2025"]}]},
         {"slug":"reserva-verde","name":"Reserva Verde","competition":"Liga Universitaria — Reserva C","description":"Segundo plantel de Reserva de Ceibos, identificado en la web como Reserva Verde.","sourceIds":["liga-football-2026"],"achievements":[],"documentedSeasons":[2026]},
-        {"slug":"presenior","name":"PreSenior","competition":"Liga Universitaria — Pre Senior","description":"Categoría Pre Senior de Ceibos.","sourceIds":["liga-football-2026"],"achievements":[],"documentedSeasons":[2026]},
-        {"slug":"sub-20","name":"Sub 20","competition":"Liga Universitaria — Sub 20 A","description":"Categoría formativa con un título oficial confirmado en 2022.","sourceIds":["liga-sub20-2022","liga-football-2026"],"achievements":[{"year":2022,"title":"Campeón Divisional A","detail":"Ceibos fue el primer equipo que aseguró un título de la Liga en la temporada 2022.","sourceIds":["liga-sub20-2022"]},{"year":2022,"title":"Finalista Copa de Campeones","detail":"Náutico ganó la final 1-0 ante Ceibos.","sourceIds":["liga-sub20-2022"]}],"notableMatches":[{"date":"2022-11-12","label":"Final Copa de Campeones","opponent":"Náutico","score":"0-1","sourceIds":["liga-sub20-2022"]}],"documentedSeasons":[2022,2026]},
-        {"slug":"sub-18","name":"Sub 18","competition":"Liga Universitaria — Sub 18","description":"Categoría juvenil de fútbol de Ceibos.","sourceIds":["liga-football-2026"],"achievements":[],"documentedSeasons":[2026]}
+        {"slug":"presenior","name":"PreSenior","competition":"Liga Universitaria — Pre Senior C","description":"Categoría Pre Senior de Ceibos.","sourceIds":["liga-football-2026"],"achievements":[],"documentedSeasons":[2026]},
+        {"slug":"sub-20","name":"Sub 20","competition":"Liga Universitaria — Sub 20 A","description":"Categoría formativa con un título oficial confirmado en 2022.","sourceIds":["liga-sub20-2022","liga-football-2026","liga-goleros-2023"],"achievements":[{"year":2022,"title":"Campeón Divisional A","detail":"Ceibos fue el primer equipo que aseguró un título de la Liga en la temporada 2022.","sourceIds":["liga-sub20-2022"]},{"year":2022,"title":"Finalista Copa de Campeones","detail":"Náutico ganó la final 1-0 ante Ceibos.","sourceIds":["liga-sub20-2022"]},{"year":2023,"title":"Alfonso Giménez, golero menos vencido de Sub 20 B","detail":"Reconocimiento individual de la Liga Universitaria, con promedio de 1,11 goles recibidos.","sourceIds":["liga-goleros-2023"]}],"notableMatches":[{"date":"2022-11-12","label":"Final Copa de Campeones","opponent":"Náutico","score":"0-1","sourceIds":["liga-sub20-2022"]}],"documentedSeasons":[2022,2026,2023]},
+        {"slug":"sub-18","name":"Sub 18","competition":"Liga Universitaria — Sub 18","description":"Categoría juvenil de fútbol de Ceibos. El archivo 2026 reúne la primera y la segunda rueda de la Serie 5.","sourceIds":["liga-football-2026","liga-sub18-rueda1"],"achievements":[],"documentedSeasons":[2026],"seasonSnapshots":[{"season":2026,"phase":"Primera rueda · Serie 5","asOf":"2026-09-11","sourceId":"liga-sub18-rueda1","pj":7,"pg":5,"pe":2,"pp":0,"gf":39,"gc":7,"points":17,"note":""}]}
       ]
     },
     {
@@ -174,40 +180,25 @@
       "league": "Unión de Rugby del Uruguay / Super URU de Clubes",
       "sourceIds": ["club-current-site", "uru-club", "uru-2017-championship", "fifty22-2026", "ceibos-rugby-players-2026", "ceibos-rugby-intermedia-2026", "ceibos-rugby-superior-2026"],
       "milestones": [
+        {"year":2026,"title":"Rugby y comunidad · Copa Segundas Oportunidades","detail":"Ceibos compartió un encuentro con Halcones el 14 de marzo en Colonia Berro, con un tercer tiempo entre ambos equipos.","sourceIds":["inisa-halcones-2026"]},
         {"year":2017,"title":"Ingreso a Zona Campeonato","detail":"La URU documentó el debut de Ceibos en la Zona Campeonato del Uruguayo de Clubes.","sourceIds":["uru-2017-championship"]},
         {"year":2018,"title":"Campeón Copa de Plata — Seven URU","detail":"Ceibos venció a Seminario en la definición de la Copa de Plata.","sourceIds":["uru-seven-2018"]},
         {"year":2021,"title":"Campeón del Torneo Reubicación","detail":"Primera venció 16-11 a Champagnat en la final.","sourceIds":["uru-reubicacion-2021"]}
       ],
       "currentPlayerStats": {
         "season": 2026,
-        "updatedAt": "2026-09-07",
+        "updatedAt": "2026-09-11",
         "note": "Las planillas internas completan anotadores y estadísticas individuales. Los marcadores publicados siguen teniendo como fuente de verdad a URU y 50/22; solo se vinculan anotadores cuando rival y tanteador coinciden.",
         "categories": [
           {
             "name": "Primera",
             "sourceId": "ceibos-rugby-superior-2026",
-            "players": [
-              {"name":"Andrew","points":97,"tries":10,"conversions":19,"penalties":3},
-              {"name":"Federico Mengot","points":40,"tries":8,"conversions":0,"penalties":0},
-              {"name":"Facundo Pizzichillo","points":25,"tries":5,"conversions":0,"penalties":0},
-              {"name":"Juan Pedro Lage","points":23,"tries":1,"conversions":9,"penalties":0},
-              {"name":"Keji Takata","points":6,"tries":0,"conversions":0,"penalties":2}
-            ]
+            "players": [{"name":"Andrew","points":97,"tries":10,"conversions":19,"penalties":3},{"name":"Federico Mengot","points":40,"tries":8,"conversions":0,"penalties":0},{"name":"Facundo Pizzichillo","points":25,"tries":5,"conversions":0,"penalties":0},{"name":"Juan Pedro Lage","points":23,"tries":1,"conversions":9,"penalties":0},{"name":"Manuel Inciarte","points":15,"tries":3,"conversions":0,"penalties":0},{"name":"Toto","points":15,"tries":3,"conversions":0,"penalties":0},{"name":"Felipe Brum","points":10,"tries":2,"conversions":0,"penalties":0},{"name":"Santiago Correa","points":10,"tries":2,"conversions":0,"penalties":0},{"name":"Keji Takata","points":6,"tries":0,"conversions":0,"penalties":2},{"name":"Geronimo Koster","points":5,"tries":1,"conversions":0,"penalties":0},{"name":"Juan Martin Gómez","points":5,"tries":1,"conversions":0,"penalties":0},{"name":"Lucas P.","points":5,"tries":1,"conversions":0,"penalties":0},{"name":"Marcos Passadore","points":5,"tries":1,"conversions":0,"penalties":0},{"name":"Santiago Pizurnia","points":5,"tries":1,"conversions":0,"penalties":0},{"name":"Thomas Johnson","points":5,"tries":1,"conversions":0,"penalties":0}]
           },
           {
             "name": "Intermedia",
             "sourceId": "ceibos-rugby-intermedia-2026",
-            "players": [
-              {"name":"Keji Takata","points":49,"tries":0,"conversions":14,"penalties":7},
-              {"name":"Pape","points":15,"tries":1,"conversions":2,"penalties":2},
-              {"name":"Alfonso Vilarrubi","points":10,"tries":2,"conversions":0,"penalties":0},
-              {"name":"Cuet Calvete","points":10,"tries":2,"conversions":0,"penalties":0},
-              {"name":"Muno","points":10,"tries":2,"conversions":0,"penalties":0},
-              {"name":"Nahuel Suarez","points":10,"tries":2,"conversions":0,"penalties":0},
-              {"name":"Nito","points":10,"tries":2,"conversions":0,"penalties":0},
-              {"name":"Pampo Calvete","points":10,"tries":2,"conversions":0,"penalties":0},
-              {"name":"Pichon Gonzalez","points":10,"tries":2,"conversions":0,"penalties":0}
-            ]
+            "players": [{"name":"Keji Takata","points":49,"tries":0,"conversions":14,"penalties":7},{"name":"Pape","points":15,"tries":1,"conversions":2,"penalties":2},{"name":"Alfonso Vilarrubi","points":10,"tries":2,"conversions":0,"penalties":0},{"name":"Cuet Calvete","points":10,"tries":2,"conversions":0,"penalties":0},{"name":"Muno","points":10,"tries":2,"conversions":0,"penalties":0},{"name":"Nahuel Suarez","points":10,"tries":2,"conversions":0,"penalties":0},{"name":"Nito","points":10,"tries":2,"conversions":0,"penalties":0},{"name":"Pampo Calvete","points":10,"tries":2,"conversions":0,"penalties":0},{"name":"Pichon Gonzalez","points":10,"tries":2,"conversions":0,"penalties":0},{"name":"Biko Brazionis","points":5,"tries":1,"conversions":0,"penalties":0},{"name":"Chaki","points":5,"tries":1,"conversions":0,"penalties":0},{"name":"Geronimo Koster","points":5,"tries":1,"conversions":0,"penalties":0},{"name":"Leonardo Silveira","points":5,"tries":1,"conversions":0,"penalties":0},{"name":"Lucas Ciceri","points":5,"tries":1,"conversions":0,"penalties":0},{"name":"Lucas P.","points":5,"tries":1,"conversions":0,"penalties":0},{"name":"Nazareno Vergara","points":5,"tries":1,"conversions":0,"penalties":0},{"name":"Toto","points":5,"tries":1,"conversions":0,"penalties":0},{"name":"Jose Serrato","points":3,"tries":0,"conversions":0,"penalties":1}]
           }
         ],
         "matches": [
@@ -248,16 +239,16 @@
       "startLabel": "Participación documentada al menos desde 2016",
       "startDetail": "Una publicación oficial de la Liga Universitaria documenta a Los Ceibos en la Divisional A de hockey en 2016. No se encontró una fuente institucional que permita afirmar que ese haya sido el año de inicio de la disciplina.",
       "league": "Federación Uruguaya de Hockey",
-      "sourceIds": ["liga-hockey-2016", "fuh-inter-a", "fuh-inter-b", "fuh-sub18", "fuh-reserva"],
+      "sourceIds": ["liga-hockey-2016", "fuh-inter-a", "fuh-inter-b", "fuh-inter-c", "fuh-sub18", "fuh-reserva"],
       "milestones": [
         {"year":2016,"title":"Participación oficial documentada","detail":"Los Ceibos figura en la Divisional A del Apertura de hockey de la Liga Universitaria.","sourceIds":["liga-hockey-2016"]}
       ],
       "categories": [
         {"slug":"intermedia-a","name":"Intermedia A","competition":"FUH — Intermedia A","description":"Plantel de Intermedia A de Ceibos.","sourceIds":["fuh-inter-a"],"achievements":[],"documentedSeasons":[2026]},
         {"slug":"intermedia-b","name":"Intermedia B","competition":"FUH — Intermedia B","description":"Plantel de Intermedia B de Ceibos.","sourceIds":["fuh-inter-b"],"achievements":[],"documentedSeasons":[2026]},
-        {"slug":"intermedia-c","name":"Intermedia C","competition":"Hockey — Intermedia C","description":"Categoría identificada por el club; todavía sin un archivo oficial histórico completo localizado.","sourceIds":["club-current-site"],"achievements":[],"documentedSeasons":[]},
+        {"slug":"intermedia-c","name":"Intermedia C","competition":"FUH — Intermedia C","description":"Plantel de Intermedia C de Ceibos. Participación documentada en Apertura y Copa de Oro 2026.","sourceIds":["fuh-inter-c"],"achievements":[],"documentedSeasons":[2026],"seasonSnapshots":[{"season":2026,"phase":"Apertura","asOf":"2026-09-11","sourceId":"fuh-inter-c","pj":15,"pg":9,"pe":0,"pp":6,"gf":47,"gc":22,"points":27,"note":""},{"season":2026,"phase":"Copa de Oro","asOf":"2026-09-11","sourceId":"fuh-inter-c","pj":3,"pg":1,"pe":1,"pp":1,"gf":3,"gc":5,"points":4,"note":""}]},
         {"slug":"sub-18","name":"Sub 18","competition":"FUH — Sub 18","description":"Categoría juvenil de hockey de Ceibos.","sourceIds":["fuh-sub18"],"achievements":[],"documentedSeasons":[2026]},
-        {"slug":"reserva","name":"Reserva","competition":"FUH — Reserva","description":"Plantel de Reserva de hockey de Ceibos.","sourceIds":["fuh-reserva"],"achievements":[],"documentedSeasons":[2026]}
+        {"slug":"reserva","name":"Reserva","competition":"FUH — Reserva","description":"Plantel de Reserva de hockey de Ceibos.","sourceIds":["fuh-reserva"],"achievements":[],"documentedSeasons":[2026],"seasonSnapshots":[{"season":2026,"phase":"Apertura","asOf":"2026-09-11","sourceId":"fuh-reserva","pj":14,"pg":6,"pe":2,"pp":6,"gf":30,"gc":28,"points":20,"note":""},{"season":2026,"phase":"Copa de Oro","asOf":"2026-09-11","sourceId":"fuh-reserva","pj":4,"pg":0,"pe":0,"pp":4,"gf":0,"gc":13,"points":0,"note":""}]}
       ]
     },
     {
@@ -271,7 +262,7 @@
       "sourceIds": ["club-current-site", "liga-basketball-2026"],
       "milestones": [],
       "categories": [
-        {"slug":"basketball","name":"Basketball","competition":"Liga Universitaria — Divisional B","description":"Plantel de Basketball de Ceibos.","sourceIds":["liga-basketball-2026"],"achievements":[],"documentedSeasons":[2026]}
+        {"slug":"basketball","name":"Basketball","competition":"Liga Universitaria — Divisional B","description":"Plantel de Basketball de Ceibos.","sourceIds":["liga-basketball-2026","liga-basket-serie2"],"achievements":[],"documentedSeasons":[2026],"seasonSnapshots":[{"season":2026,"phase":"Divisional B · Serie 2","asOf":"2026-09-11","sourceId":"liga-basket-serie2","pj":5,"pg":2,"pe":0,"pp":3,"gf":266,"gc":309,"points":17.5,"note":"Puntos de tabla oficiales, incluidos los arrastres de la competencia."}]}
       ]
     }
   ]

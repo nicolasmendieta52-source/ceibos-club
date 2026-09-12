@@ -5,6 +5,30 @@ import { expandApifyInstagramImages, extractInstagramStoryMentionImages, mergeCl
 
 const aliases = ["CEIBOS", "CEIBOS CLUB", "LOS CEIBOS"];
 
+test("conserva la fase y el estado de FUH durante la conciliación", () => {
+  const source = { deporte: "hockey", categoria: "Intermedia C", temporada: "2026" };
+  const result = parseHockeyLine("Club Seminario - Los Ceibos\t3\t06/09 18:45\tSeminario\t1 - 2\tCerrado\tCOPA DE ORO (Intermedia C)", source, aliases);
+  const pending = parseHockeyLine("C.t.m. - Los Ceibos\t4\t13/09 18:45\tPilares\t0 - 0\tA Designar\tCOPA DE ORO (Intermedia C)", source, aliases);
+  const previous = { partidos: [{ deporte: "hockey", categoria: "Intermedia C", rival: "Rival antiguo", fecha: "2026-07-01", hora: "18:00", local: true }], resultados: [] };
+  const merged = mergeClubData(previous, [result, pending], []);
+  assert.equal(merged.partidos.length, 1);
+  assert.equal(merged.partidos[0].estado, "A Designar");
+  assert.equal(merged.partidos[0].fase, "COPA DE ORO (Intermedia C)");
+  assert.equal(merged.resultados[0].gf, 2);
+  assert.equal(merged.resultados[0].gc, 1);
+  assert.equal(merged.resultados[0].fase, "COPA DE ORO (Intermedia C)");
+  assert.equal(merged.resultados[0].fecha, "2026-09-06");
+  assert.equal("gf" in merged.partidos[0], false);
+});
+
+test("completar primera rueda no elimina resultados de segunda rueda", () => {
+  const previous = { partidos: [], resultados: [{ deporte: "futbol", categoria: "Sub 18", rival: "Inglés", fecha: "2026-09-06", gf: 2, gc: 0, fase: "Segunda rueda" }] };
+  const official = [{ kind: "resultado", deporte: "futbol", categoria: "Sub 18", rival: "Inglés", fecha: "2026-06-07", gf: 14, gc: 0, fase: "Primera rueda" }];
+  const merged = mergeClubData(previous, official, []);
+  assert.equal(merged.resultados.length, 2);
+  assert.deepEqual(merged.resultados.map(r => r.fase), ["Primera rueda", "Segunda rueda"]);
+});
+
 test("asocia los goleadores y minutos oficiales de la Liga al lado de Ceibos", () => {
   const rows = [
     { ID: "98076", Fecha_Hora: "2026-04-12 11:15:00", Locatario: "CEIBOS CLUB", GL: "4", Visitante: "OLIMAR", GV: "2" },

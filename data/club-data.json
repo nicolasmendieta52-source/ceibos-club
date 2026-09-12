@@ -10,100 +10,6 @@
       "cancha": "Carrasco Polo Club"
     },
     {
-      "deporte": "hockey",
-      "categoria": "Intermedia C",
-      "rival": "Peñarol",
-      "fecha": "2026-07-26",
-      "hora": "19:45",
-      "local": false
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Reserva",
-      "rival": "Carrasco Polo",
-      "fecha": "2026-08-01",
-      "hora": "16:15",
-      "local": false,
-      "cancha": "Carrasco Polo af Quella & pepsi a ZueerTa mum BUM AOMINON FED KASZ ño"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Reserva",
-      "rival": "Seminario BN",
-      "fecha": "2026-08-08",
-      "hora": "15:45",
-      "local": false,
-      "cancha": "Seminario"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Reserva",
-      "rival": "Seminario",
-      "fecha": "2026-08-08",
-      "hora": "15:45",
-      "local": false,
-      "cancha": "Seminario —_"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia C",
-      "rival": "Areteia BN",
-      "fecha": "2026-08-09",
-      "hora": "A confirmar",
-      "local": false
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia C",
-      "rival": "Areteia L",
-      "fecha": "2026-08-09",
-      "hora": "A confirmar",
-      "local": true,
-      "cancha": "Los Ceibos _ ¡Qué 8) pepsi a ZILLERTAL Z merma BUM AOMINON FED"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia C",
-      "rival": "CTM BN",
-      "fecha": "2026-08-16",
-      "hora": "A confirmar",
-      "local": false
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Reserva",
-      "rival": "Old brendans",
-      "fecha": "2026-08-29",
-      "hora": "A confirmar",
-      "local": true,
-      "cancha": "Ceibos _ ¡Quedar 8) pepsi a ZILLERTAL Zero BUM AOMINON FED"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia C",
-      "rival": "Old Girls BR",
-      "fecha": "2026-08-30",
-      "hora": "18:45",
-      "local": false
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Reserva",
-      "rival": "Old Girls",
-      "fecha": "2026-09-05",
-      "hora": "16:00",
-      "local": true,
-      "cancha": "Ceibos"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia C",
-      "rival": "Seminario",
-      "fecha": "2026-09-06",
-      "hora": "18:45",
-      "local": false
-    },
-    {
       "deporte": "futbol",
       "categoria": "PreSenior",
       "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
@@ -146,6 +52,17 @@
       "fecha": "2026-09-12",
       "hora": "17:30",
       "local": false,
+      "cancha": "Old Christians"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Old Christians Club",
+      "fecha": "2026-09-12",
+      "hora": "16:00",
+      "local": false,
+      "fase": "COPA DE ORO (Reserva )",
+      "estado": "A Designar",
       "cancha": "Old Christians"
     },
     {
@@ -198,6 +115,17 @@
       "hora": "15:30",
       "local": false,
       "cancha": "PARQUE CUPRA - CLUB SEMINARIO"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "C.t.m.",
+      "fecha": "2026-09-13",
+      "hora": "18:45",
+      "local": false,
+      "fase": "COPA DE ORO (Intermedia C)",
+      "estado": "A Designar",
+      "cancha": "Pilares"
     },
     {
       "deporte": "basketball",
@@ -413,6 +341,15 @@
     },
     {
       "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Old Christians Club",
+      "gf": 1,
+      "gc": 0,
+      "fecha": "2026-03-14",
+      "fase": "APERTURA (Reserva )"
+    },
+    {
+      "deporte": "hockey",
       "categoria": "Sub 18",
       "rival": "Old Christians Club",
       "gf": 1,
@@ -436,6 +373,15 @@
       "fecha": "2026-03-15"
     },
     {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Old Christians Club",
+      "gf": 1,
+      "gc": 0,
+      "fecha": "2026-03-15",
+      "fase": "APERTURA 2026 (Intermedia C)"
+    },
+    {
       "deporte": "basketball",
       "categoria": "Basketball",
       "rival": "CLUB NAUTICO",
@@ -450,6 +396,15 @@
       "gf": 1,
       "gc": 4,
       "fecha": "2026-03-22"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Lobas",
+      "gf": 0,
+      "gc": 1,
+      "fecha": "2026-03-22",
+      "fase": "APERTURA 2026 (Intermedia C)"
     },
     {
       "deporte": "basketball",
@@ -523,6 +478,15 @@
     },
     {
       "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Old Brendans Club",
+      "gf": 0,
+      "gc": 0,
+      "fecha": "2026-04-11",
+      "fase": "APERTURA (Reserva )"
+    },
+    {
+      "deporte": "hockey",
       "categoria": "Sub 18",
       "rival": "Old Brendan's Club",
       "gf": 0,
@@ -574,6 +538,15 @@
       "gf": 1,
       "gc": 3,
       "fecha": "2026-04-12"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Northfield",
+      "gf": 9,
+      "gc": 0,
+      "fecha": "2026-04-12",
+      "fase": "APERTURA 2026 (Intermedia C)"
     },
     {
       "deporte": "futbol",
@@ -638,6 +611,15 @@
     },
     {
       "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Yacht Reserva",
+      "gf": 0,
+      "gc": 3,
+      "fecha": "2026-04-18",
+      "fase": "APERTURA (Reserva )"
+    },
+    {
+      "deporte": "hockey",
       "categoria": "Sub 18",
       "rival": "Yacht Sub 18",
       "gf": 2,
@@ -683,12 +665,35 @@
       ]
     },
     {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "ELBIO FERNANDEZ",
+      "gf": 3,
+      "gc": 1,
+      "fecha": "2026-04-19",
+      "fase": "Primera rueda · Serie 5",
+      "goleadores": [
+        "AGUSTIN ALVEZ (47')",
+        "ALFONSO FERBER (66')",
+        "APARICIO VOSS (83')"
+      ]
+    },
+    {
       "deporte": "hockey",
       "categoria": "Intermedia B",
       "rival": "Old Christians Club Lai",
       "gf": 1,
       "gc": 2,
       "fecha": "2026-04-19"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Old Girls Inter C",
+      "gf": 1,
+      "gc": 4,
+      "fecha": "2026-04-19",
+      "fase": "APERTURA 2026 (Intermedia C)"
     },
     {
       "deporte": "rugby",
@@ -754,6 +759,15 @@
     },
     {
       "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Northfield",
+      "gf": 1,
+      "gc": 3,
+      "fecha": "2026-04-25",
+      "fase": "APERTURA (Reserva )"
+    },
+    {
+      "deporte": "hockey",
       "categoria": "Sub 18",
       "rival": "Northfield",
       "gf": 3,
@@ -789,6 +803,18 @@
       ]
     },
     {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "PLAYA HONDA UNIVERSITARIO",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-04-26",
+      "fase": "Primera rueda · Serie 5",
+      "goleadores": [
+        "FRANCISCO ROSSIGUOLO (46')"
+      ]
+    },
+    {
       "deporte": "hockey",
       "categoria": "Intermedia B",
       "rival": "Scuola Italiana Di Montevideo",
@@ -798,11 +824,29 @@
     },
     {
       "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Nacional",
+      "gf": 2,
+      "gc": 1,
+      "fecha": "2026-04-26",
+      "fase": "APERTURA 2026 (Intermedia C)"
+    },
+    {
+      "deporte": "hockey",
       "categoria": "Intermedia B",
       "rival": "Old Girls Inter B Red",
       "gf": 2,
       "gc": 0,
       "fecha": "2026-04-29"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Bigua Reserva",
+      "gf": 2,
+      "gc": 1,
+      "fecha": "2026-04-30",
+      "fase": "APERTURA (Reserva )"
     },
     {
       "deporte": "hockey",
@@ -846,11 +890,29 @@
     },
     {
       "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Club Seminario",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-05-05",
+      "fase": "APERTURA 2026 (Intermedia C)"
+    },
+    {
+      "deporte": "hockey",
       "categoria": "Intermedia A",
       "rival": "Old Girls Inter A",
       "gf": 0,
       "gc": 3,
       "fecha": "2026-05-09"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Old Girls Reserva",
+      "gf": 2,
+      "gc": 3,
+      "fecha": "2026-05-09",
+      "fase": "APERTURA (Reserva )"
     },
     {
       "deporte": "hockey",
@@ -891,6 +953,15 @@
       "gf": 1,
       "gc": 2,
       "fecha": "2026-05-10"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Club Champagnat",
+      "gf": 9,
+      "gc": 0,
+      "fecha": "2026-05-10",
+      "fase": "APERTURA 2026 (Intermedia C)"
     },
     {
       "deporte": "rugby",
@@ -968,6 +1039,15 @@
     },
     {
       "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Carrasco Polo Club Rese Negro",
+      "gf": 4,
+      "gc": 2,
+      "fecha": "2026-05-16",
+      "fase": "APERTURA (Reserva )"
+    },
+    {
+      "deporte": "hockey",
       "categoria": "Sub 18",
       "rival": "Carrasco Polo Club Sub 18",
       "gf": 0,
@@ -986,6 +1066,23 @@
       ]
     },
     {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "HCA UNIVERSITARIO",
+      "gf": 6,
+      "gc": 3,
+      "fecha": "2026-05-17",
+      "fase": "Primera rueda · Serie 5",
+      "goleadores": [
+        "ALFONSO FERBER (15')",
+        "JOAQUIN MARIA BARTOL (19')",
+        "JOAQUIN MARIA BARTOL (29')",
+        "GERONIMO RODRIGO (37')",
+        "FELIPE SOBRAL (61')",
+        "APARICIO VOSS (81')"
+      ]
+    },
+    {
       "deporte": "hockey",
       "categoria": "Intermedia B",
       "rival": "Club Náutico Intermedia B",
@@ -1000,6 +1097,15 @@
       "gf": 59,
       "gc": 71,
       "fecha": "2026-05-20"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Hockey Prado",
+      "gf": 6,
+      "gc": 0,
+      "fecha": "2026-05-21",
+      "fase": "APERTURA 2026 (Intermedia C)"
     },
     {
       "deporte": "rugby",
@@ -1066,6 +1172,15 @@
     },
     {
       "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Lobas",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-05-23",
+      "fase": "APERTURA (Reserva )"
+    },
+    {
+      "deporte": "hockey",
       "categoria": "Sub 18",
       "rival": "Lobas",
       "gf": 4,
@@ -1101,12 +1216,33 @@
       ]
     },
     {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "JUAN XXIII",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-05-24",
+      "fase": "Primera rueda · Serie 5",
+      "goleadores": [
+        "PEDRO NARANCIO (87')"
+      ]
+    },
+    {
       "deporte": "hockey",
       "categoria": "Intermedia B",
       "rival": "Psg",
       "gf": 0,
       "gc": 3,
       "fecha": "2026-05-24"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Cgu – Los Cuervos",
+      "gf": 3,
+      "gc": 1,
+      "fecha": "2026-05-24",
+      "fase": "APERTURA 2026 (Intermedia C)"
     },
     {
       "deporte": "basketball",
@@ -1196,12 +1332,36 @@
       ]
     },
     {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "CLUB SOCIAL PIEDRAS BLANCAS",
+      "gf": 4,
+      "gc": 1,
+      "fecha": "2026-05-31",
+      "fase": "Primera rueda · Serie 5",
+      "goleadores": [
+        "APARICIO VOSS (22')",
+        "FRANCISCO GIMENEZ (26')",
+        "TIMOTEO PERRIER (79')",
+        "ESTEBAN TORRES (83')"
+      ]
+    },
+    {
       "deporte": "hockey",
       "categoria": "Intermedia B",
       "rival": "Palo Y Pico",
       "gf": 1,
       "gc": 2,
       "fecha": "2026-05-31"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Hockey Lp Inter C",
+      "gf": 3,
+      "gc": 1,
+      "fecha": "2026-05-31",
+      "fase": "APERTURA 2026 (Intermedia C)"
     },
     {
       "deporte": "basketball",
@@ -1282,6 +1442,15 @@
     },
     {
       "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Old Ivy Club",
+      "gf": 8,
+      "gc": 1,
+      "fecha": "2026-06-06",
+      "fase": "APERTURA (Reserva )"
+    },
+    {
+      "deporte": "hockey",
       "categoria": "Sub 18",
       "rival": "Old Ivy",
       "gf": 2,
@@ -1323,6 +1492,40 @@
         "FERNANDO INTHAMOUSSU (39')",
         "FEDERICO CASTELLS (94')"
       ]
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "COLEGIO Y LICEO INGLES",
+      "gf": 14,
+      "gc": 0,
+      "fecha": "2026-06-07",
+      "fase": "Primera rueda · Serie 5",
+      "goleadores": [
+        "APARICIO VOSS (2')",
+        "APARICIO VOSS (8')",
+        "APARICIO VOSS (9')",
+        "JOAQUIN CURBELO (11')",
+        "JUAN PONS (20')",
+        "ESTEBAN TORRES (23')",
+        "FRANCISCO GIMENEZ (35')",
+        "ESTEBAN TORRES (40')",
+        "BENJAMIN FERNANDEZ (50')",
+        "JOAQUIN PILONI (61')",
+        "JOAQUIN PILONI (72')",
+        "JOAQUIN PILONI (75')",
+        "BENJAMIN FERNANDEZ (78')",
+        "JUAN BAUTISTA RODRIGUEZ (84')"
+      ]
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Psg",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-06-07",
+      "fase": "APERTURA 2026 (Intermedia C)"
     },
     {
       "deporte": "rugby",
@@ -1399,6 +1602,15 @@
     },
     {
       "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Old Woodlands Club Reserva",
+      "gf": 0,
+      "gc": 1,
+      "fecha": "2026-06-13",
+      "fase": "APERTURA (Reserva )"
+    },
+    {
+      "deporte": "hockey",
       "categoria": "Sub 18",
       "rival": "Old Woodlands Club",
       "gf": 1,
@@ -1426,12 +1638,42 @@
       ]
     },
     {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "ANGLO SCHOOL UNIVERSITARIO",
+      "gf": 10,
+      "gc": 0,
+      "fecha": "2026-06-14",
+      "fase": "Primera rueda · Serie 5",
+      "goleadores": [
+        "ESTEBAN TORRES (18')",
+        "JUAN BAUTISTA RODRIGUEZ (28')",
+        "ESTEBAN TORRES (40')",
+        "APARICIO VOSS (48')",
+        "LEANDRO CAMBÒN (52')",
+        "JOAQUIN MARIA BARTOL (63')",
+        "APARICIO VOSS (70')",
+        "ALFONSO FERBER (73')",
+        "APARICIO VOSS (78')",
+        "JOAQUIN MARIA BARTOL (90')"
+      ]
+    },
+    {
       "deporte": "hockey",
       "categoria": "Intermedia B",
       "rival": "Nautilus",
       "gf": 0,
       "gc": 2,
       "fecha": "2026-06-14"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "La Olla Florida Club",
+      "gf": 6,
+      "gc": 2,
+      "fecha": "2026-06-14",
+      "fase": "APERTURA 2026 (Intermedia C)"
     },
     {
       "deporte": "rugby",
@@ -1546,7 +1788,8 @@
         "JUAN BAUTISTA RODRIGUEZ (52')",
         "JUAN BAUTISTA RODRIGUEZ (81')",
         "GERONIMO RODRIGO (82')"
-      ]
+      ],
+      "fase": "Segunda rueda · Serie 5"
     },
     {
       "deporte": "hockey",
@@ -1555,6 +1798,24 @@
       "gf": 1,
       "gc": 3,
       "fecha": "2026-06-21"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "JupavÉ H.c.",
+      "gf": 2,
+      "gc": 0,
+      "fecha": "2026-06-21",
+      "fase": "APERTURA 2026 (Intermedia C)"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Club Náutico Reserva",
+      "gf": 1,
+      "gc": 8,
+      "fecha": "2026-06-23",
+      "fase": "APERTURA (Reserva )"
     },
     {
       "deporte": "hockey",
@@ -1679,6 +1940,15 @@
     },
     {
       "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Old Sampa Club",
+      "gf": 4,
+      "gc": 1,
+      "fecha": "2026-07-25",
+      "fase": "APERTURA (Reserva )"
+    },
+    {
+      "deporte": "hockey",
       "categoria": "Sub 18",
       "rival": "Old Sampa Club",
       "gf": 1,
@@ -1702,12 +1972,30 @@
       "fecha": "2026-07-25"
     },
     {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Club Atlético Peñarol",
+      "gf": 2,
+      "gc": 4,
+      "fecha": "2026-07-26",
+      "fase": "APERTURA 2026 (Intermedia C)"
+    },
+    {
       "deporte": "basketball",
       "categoria": "Basketball",
       "rival": "CLUB BELLAKEO C.B.",
       "gf": 62,
       "gc": 43,
       "fecha": "2026-08-01"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Carrasco Polo Club Rese Azul",
+      "gf": 5,
+      "gc": 2,
+      "fecha": "2026-08-01",
+      "fase": "APERTURA (Reserva )"
     },
     {
       "deporte": "rugby",
@@ -1767,6 +2055,15 @@
     },
     {
       "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Club Seminario",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-08-08",
+      "fase": "APERTURA (Reserva )"
+    },
+    {
+      "deporte": "hockey",
       "categoria": "Sub 18",
       "rival": "Colegio Seminario",
       "gf": 1,
@@ -1804,6 +2101,15 @@
       "gf": 0,
       "gc": 1,
       "fecha": "2026-08-09"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Bigua Reserva",
+      "gf": 0,
+      "gc": 3,
+      "fecha": "2026-08-13",
+      "fase": "COPA DE ORO (Reserva )"
     },
     {
       "deporte": "basketball",
@@ -1913,7 +2219,8 @@
       "goleadores": [
         "GERONIMO RODRIGO (51')",
         "AGUSTIN TOMMA (83')"
-      ]
+      ],
+      "fase": "Segunda rueda · Serie 5"
     },
     {
       "deporte": "hockey",
@@ -1922,6 +2229,15 @@
       "gf": 0,
       "gc": 1,
       "fecha": "2026-08-16"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "C.t.m.",
+      "gf": 1,
+      "gc": 4,
+      "fecha": "2026-08-16",
+      "fase": "APERTURA 2026 (Intermedia C)"
     },
     {
       "deporte": "rugby",
@@ -1941,6 +2257,15 @@
     },
     {
       "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Club Náutico Reserva",
+      "gf": 0,
+      "gc": 8,
+      "fecha": "2026-08-22",
+      "fase": "COPA DE ORO (Reserva )"
+    },
+    {
+      "deporte": "hockey",
       "categoria": "Sub 18",
       "rival": "Northfield",
       "gf": 4,
@@ -1954,6 +2279,15 @@
       "gf": 1,
       "gc": 2,
       "fecha": "2026-08-23"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Cgu – Los Cuervos",
+      "gf": 0,
+      "gc": 3,
+      "fecha": "2026-08-27",
+      "fase": "COPA DE ORO (Intermedia C)"
     },
     {
       "deporte": "basketball",
@@ -2007,7 +2341,8 @@
         "GERONIMO RODRIGO (67')",
         "FELIPE SOBRAL (82')",
         "JOAQUIN MARIA BARTOL (90')"
-      ]
+      ],
+      "fase": "Segunda rueda · Serie 5"
     },
     {
       "deporte": "futbol",
@@ -2020,6 +2355,15 @@
         "IGNACIO SERE (24')",
         "PABLO MARTIN BARTABURU (98')"
       ]
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Old Brendans Club",
+      "gf": 0,
+      "gc": 1,
+      "fecha": "2026-08-29",
+      "fase": "COPA DE ORO (Reserva )"
     },
     {
       "deporte": "hockey",
@@ -2071,6 +2415,15 @@
       "gf": 1,
       "gc": 4,
       "fecha": "2026-08-30"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Old Girls Inter C",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-08-30",
+      "fase": "COPA DE ORO (Intermedia C)"
     },
     {
       "deporte": "basketball",
@@ -2132,6 +2485,15 @@
       "fecha": "2026-09-05"
     },
     {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Old Girls Reserva",
+      "gf": 0,
+      "gc": 1,
+      "fecha": "2026-09-05",
+      "fase": "COPA DE ORO (Reserva )"
+    },
+    {
       "deporte": "rugby",
       "categoria": "Intermedia",
       "rival": "Lions",
@@ -2173,11 +2535,21 @@
       "goleadores": [
         "JOAQUIN PILONI (50')",
         "FACUNDO IMANOL OLARREAGA (66')"
-      ]
+      ],
+      "fase": "Segunda rueda · Serie 5"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Club Seminario",
+      "gf": 2,
+      "gc": 1,
+      "fecha": "2026-09-06",
+      "fase": "COPA DE ORO (Intermedia C)"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-11T21:03:13.083Z",
+  "actualizadoEn": "2026-09-12T02:10:54.072Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2317,6 +2689,27 @@
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/partidos/F202020A.html",
         "registros": 2,
+        "estado": "ok"
+      },
+      {
+        "deporte": "hockey",
+        "categoria": "Intermedia C",
+        "url": "https://admin.hockey.com.uy/posiciones?category_id=79",
+        "registros": 19,
+        "estado": "ok"
+      },
+      {
+        "deporte": "hockey",
+        "categoria": "Reserva",
+        "url": "https://admin.hockey.com.uy/posiciones?category_id=2",
+        "registros": 19,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Sub 18",
+        "url": "https://ligauniversitaria.org.uy/resultados/F181818-5-.html",
+        "registros": 7,
         "estado": "ok"
       }
     ],

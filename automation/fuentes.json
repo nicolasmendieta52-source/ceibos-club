@@ -1,5 +1,10 @@
 {
-  "teamAliases": ["CEIBOS", "CEIBOS CLUB", "CEIBOS CLUB VERDE", "LOS CEIBOS"],
+  "teamAliases": [
+    "CEIBOS",
+    "CEIBOS CLUB",
+    "CEIBOS CLUB VERDE",
+    "LOS CEIBOS"
+  ],
   "sources": [
     {
       "deporte": "rugby",
@@ -29,6 +34,22 @@
       "url": "https://admin.hockey.com.uy/posiciones?category_id=31",
       "modo": "browser",
       "formato": "hockey-admin"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "url": "https://admin.hockey.com.uy/posiciones?category_id=79",
+      "modo": "browser",
+      "formato": "hockey-admin",
+      "temporada": "2026"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "url": "https://admin.hockey.com.uy/posiciones?category_id=2",
+      "modo": "browser",
+      "formato": "hockey-admin",
+      "temporada": "2026"
     },
     {
       "deporte": "basketball",
@@ -94,13 +115,15 @@
       "deporte": "futbol",
       "categoria": "Sub 18",
       "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
-      "modo": "browser"
+      "modo": "browser",
+      "fase": "Segunda rueda · Serie 5"
     },
     {
       "deporte": "futbol",
       "categoria": "Sub 18",
       "url": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
-      "modo": "browser"
+      "modo": "browser",
+      "fase": "Segunda rueda · Serie 5"
     },
     {
       "deporte": "futbol",
@@ -125,6 +148,14 @@
       "categoria": "Sub 20",
       "url": "https://ligauniversitaria.org.uy/partidos/F202020A.html",
       "modo": "browser"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "url": "https://ligauniversitaria.org.uy/resultados/F181818-5-.html",
+      "modo": "browser",
+      "temporada": "2026",
+      "fase": "Primera rueda · Serie 5"
     }
   ]
 }
