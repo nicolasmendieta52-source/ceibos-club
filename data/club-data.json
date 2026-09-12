@@ -1781,6 +1781,7 @@
       "gf": 6,
       "gc": 1,
       "fecha": "2026-06-21",
+      "fase": "Segunda rueda · Serie 5",
       "goleadores": [
         "AGUSTIN ALVEZ (14')",
         "AGUSTIN ALVEZ (21')",
@@ -1788,8 +1789,7 @@
         "JUAN BAUTISTA RODRIGUEZ (52')",
         "JUAN BAUTISTA RODRIGUEZ (81')",
         "GERONIMO RODRIGO (82')"
-      ],
-      "fase": "Segunda rueda · Serie 5"
+      ]
     },
     {
       "deporte": "hockey",
@@ -2216,11 +2216,11 @@
       "gf": 2,
       "gc": 0,
       "fecha": "2026-08-16",
+      "fase": "Segunda rueda · Serie 5",
       "goleadores": [
         "GERONIMO RODRIGO (51')",
         "AGUSTIN TOMMA (83')"
-      ],
-      "fase": "Segunda rueda · Serie 5"
+      ]
     },
     {
       "deporte": "hockey",
@@ -2335,14 +2335,14 @@
       "gf": 5,
       "gc": 1,
       "fecha": "2026-08-29",
+      "fase": "Segunda rueda · Serie 5",
       "goleadores": [
         "GERONIMO RODRIGO (51')",
         "LEANDRO CAMBÒN (53')",
         "GERONIMO RODRIGO (67')",
         "FELIPE SOBRAL (82')",
         "JOAQUIN MARIA BARTOL (90')"
-      ],
-      "fase": "Segunda rueda · Serie 5"
+      ]
     },
     {
       "deporte": "futbol",
@@ -2532,11 +2532,11 @@
       "gf": 2,
       "gc": 0,
       "fecha": "2026-09-06",
+      "fase": "Segunda rueda · Serie 5",
       "goleadores": [
         "JOAQUIN PILONI (50')",
         "FACUNDO IMANOL OLARREAGA (66')"
-      ],
-      "fase": "Segunda rueda · Serie 5"
+      ]
     },
     {
       "deporte": "hockey",
@@ -2549,7 +2549,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-12T02:10:54.072Z",
+  "actualizadoEn": "2026-09-12T12:16:00.221Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2715,7 +2715,7 @@
     ],
     "instagram": {
       "estado": "ok",
-      "registros": 46,
+      "registros": 45,
       "imagenes": 16,
       "publicacionesApify": 3,
       "historiasMencionadas": 0,

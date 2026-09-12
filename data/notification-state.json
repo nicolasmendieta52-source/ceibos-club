@@ -54,7 +54,9 @@
     "basketball|basketball|young universitario|2026-09-16": "2026-09-08T21:16:30.091Z",
     "rugby|intermedia|champagnat|2026-09-12": "2026-09-10T16:30:50.580Z",
     "rugby|m19|old boys|2026-09-12": "2026-09-10T16:30:50.580Z",
-    "rugby|primera|champagnat|2026-09-12": "2026-09-10T16:30:50.580Z"
+    "rugby|primera|champagnat|2026-09-12": "2026-09-10T16:30:50.580Z",
+    "hockey|reserva|occ|2026-09-12": "2026-09-12T04:43:08.280Z",
+    "hockey|intermedia c|ctm|2026-09-13": "2026-09-12T04:43:08.280Z"
   },
   "sentToday": {
     "basketball|basketball|maristas deportivo|2026-08-15": "2026-08-15T03:12:26.815Z",
@@ -104,7 +106,17 @@
     "rugby|primera|circulo de tenis|2026-09-05": "2026-09-05T04:38:06.196Z",
     "futbol|primera|san isidro lomas universitario|2026-09-06": "2026-09-06T04:46:50.550Z",
     "futbol|sub 18|colegio y liceo ingles|2026-09-06": "2026-09-06T04:46:50.550Z",
-    "hockey|intermedia c|seminario|2026-09-06": "2026-09-06T04:46:50.550Z"
+    "hockey|intermedia c|seminario|2026-09-06": "2026-09-06T04:46:50.550Z",
+    "futbol|presenior|san isidro lomas universitario|2026-09-12": "2026-09-12T04:43:08.711Z",
+    "futbol|reserva a|obc azulgrana|2026-09-12": "2026-09-12T04:43:08.711Z",
+    "futbol|reserva verde|san isidro lomas universitario|2026-09-12": "2026-09-12T04:43:08.711Z",
+    "futbol|sub 20|san juan bautista|2026-09-12": "2026-09-12T04:43:08.711Z",
+    "hockey|intermedia a|old christians club|2026-09-12": "2026-09-12T04:43:08.711Z",
+    "hockey|reserva|occ|2026-09-12": "2026-09-12T04:43:08.711Z",
+    "hockey|sub 18|old woodlands club|2026-09-12": "2026-09-12T04:43:08.711Z",
+    "rugby|intermedia|champagnat|2026-09-12": "2026-09-12T04:43:08.711Z",
+    "rugby|m19|old boys|2026-09-12": "2026-09-12T04:43:08.711Z",
+    "rugby|primera|champagnat|2026-09-12": "2026-09-12T04:43:08.711Z"
   },
   "sentStart": {
     "futbol|presenior|aleman u|2026-08-15": "2026-08-15T12:01:32.146Z",
