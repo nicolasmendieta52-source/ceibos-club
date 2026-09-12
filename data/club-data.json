@@ -22,15 +22,6 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "OBC AZULGRANA.",
-      "fecha": "2026-09-12",
-      "hora": "09:00",
-      "local": true,
-      "cancha": "MONTE VI \"LOS CEIBOS\""
-    },
-    {
-      "deporte": "futbol",
       "categoria": "Reserva Verde",
       "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
       "fecha": "2026-09-12",
@@ -131,7 +122,7 @@
       "hora": "18:45",
       "local": false,
       "fase": "COPA DE ORO (Intermedia C)",
-      "estado": "A Designar",
+      "estado": "A Jugar",
       "cancha": "Pilares"
     },
     {
@@ -2604,10 +2595,18 @@
       "gc": 1,
       "fecha": "2026-09-06",
       "fase": "COPA DE ORO (Intermedia C)"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "OBC AZULGRANA.",
+      "gf": 0,
+      "gc": 2,
+      "fecha": "2026-09-12"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-12T12:19:43.681Z",
+  "actualizadoEn": "2026-09-12T15:37:51.119Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2697,14 +2696,14 @@
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS1.html",
-        "registros": 13,
+        "registros": 14,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS1.html",
-        "registros": 2,
+        "registros": 1,
         "estado": "ok"
       },
       {
