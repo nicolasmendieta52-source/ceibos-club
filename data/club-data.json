@@ -7,6 +7,8 @@
       "fecha": "2026-07-19",
       "hora": "14:00",
       "local": false,
+      "fase": "APERTURA 2026 (Intermedia B)",
+      "estado": "A Designar",
       "cancha": "Carrasco Polo Club"
     },
     {
@@ -52,6 +54,8 @@
       "fecha": "2026-09-12",
       "hora": "17:30",
       "local": false,
+      "fase": "COPA DE PLATA (Intermedia A)",
+      "estado": "A Designar",
       "cancha": "Old Christians"
     },
     {
@@ -72,6 +76,8 @@
       "fecha": "2026-09-12",
       "hora": "14:00",
       "local": false,
+      "fase": "COPA DE PLATA (Sub 18)",
+      "estado": "A Designar",
       "cancha": "Woodlands"
     },
     {
@@ -114,6 +120,7 @@
       "fecha": "2026-09-13",
       "hora": "15:30",
       "local": false,
+      "fase": "Segunda rueda · Serie 5",
       "cancha": "PARQUE CUPRA - CLUB SEMINARIO"
     },
     {
@@ -213,6 +220,8 @@
       "fecha": "2026-09-30",
       "hora": "20:00",
       "local": false,
+      "fase": "APERTURA 2026 (Intermedia B)",
+      "estado": "A Designar",
       "cancha": "Pilares"
     },
     {
@@ -238,6 +247,7 @@
       "fecha": "2026-10-04",
       "hora": "15:30",
       "local": true,
+      "fase": "Segunda rueda · Serie 5",
       "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
@@ -263,6 +273,7 @@
       "fecha": "2026-10-11",
       "hora": "15:30",
       "local": false,
+      "fase": "Segunda rueda · Serie 5",
       "cancha": "COMPLEJO NORTHFIELD"
     },
     {
@@ -337,7 +348,8 @@
       "rival": "Old Christians Club",
       "gf": 0,
       "gc": 1,
-      "fecha": "2026-03-14"
+      "fecha": "2026-03-14",
+      "fase": "APERTURA 2026 (Intermedia A)"
     },
     {
       "deporte": "hockey",
@@ -354,7 +366,8 @@
       "rival": "Old Christians Club",
       "gf": 1,
       "gc": 5,
-      "fecha": "2026-03-14"
+      "fecha": "2026-03-14",
+      "fase": "APERTURA 2026 (Sub 18)"
     },
     {
       "deporte": "rugby",
@@ -370,7 +383,8 @@
       "rival": "Nautilus",
       "gf": 0,
       "gc": 3,
-      "fecha": "2026-03-15"
+      "fecha": "2026-03-15",
+      "fase": "APERTURA 2026 (Intermedia B)"
     },
     {
       "deporte": "hockey",
@@ -395,7 +409,8 @@
       "rival": "Old Sampa Club",
       "gf": 1,
       "gc": 4,
-      "fecha": "2026-03-22"
+      "fecha": "2026-03-22",
+      "fase": "APERTURA 2026 (Intermedia B)"
     },
     {
       "deporte": "hockey",
@@ -474,7 +489,8 @@
       "rival": "Old Brendan's Club",
       "gf": 2,
       "gc": 3,
-      "fecha": "2026-04-11"
+      "fecha": "2026-04-11",
+      "fase": "APERTURA 2026 (Intermedia A)"
     },
     {
       "deporte": "hockey",
@@ -491,7 +507,8 @@
       "rival": "Old Brendan's Club",
       "gf": 0,
       "gc": 7,
-      "fecha": "2026-04-11"
+      "fecha": "2026-04-11",
+      "fase": "APERTURA 2026 (Sub 18)"
     },
     {
       "deporte": "rugby",
@@ -537,7 +554,8 @@
       "rival": "Cgu – Los Cuervos",
       "gf": 1,
       "gc": 3,
-      "fecha": "2026-04-12"
+      "fecha": "2026-04-12",
+      "fase": "APERTURA 2026 (Intermedia B)"
     },
     {
       "deporte": "hockey",
@@ -607,7 +625,8 @@
       "rival": "Yacht Intermedia",
       "gf": 0,
       "gc": 1,
-      "fecha": "2026-04-18"
+      "fecha": "2026-04-18",
+      "fase": "APERTURA 2026 (Intermedia A)"
     },
     {
       "deporte": "hockey",
@@ -624,7 +643,8 @@
       "rival": "Yacht Sub 18",
       "gf": 2,
       "gc": 8,
-      "fecha": "2026-04-18"
+      "fecha": "2026-04-18",
+      "fase": "APERTURA 2026 (Sub 18)"
     },
     {
       "deporte": "rugby",
@@ -684,7 +704,8 @@
       "rival": "Old Christians Club Lai",
       "gf": 1,
       "gc": 2,
-      "fecha": "2026-04-19"
+      "fecha": "2026-04-19",
+      "fase": "APERTURA 2026 (Intermedia B)"
     },
     {
       "deporte": "hockey",
@@ -772,7 +793,8 @@
       "rival": "Northfield",
       "gf": 3,
       "gc": 4,
-      "fecha": "2026-04-25"
+      "fecha": "2026-04-25",
+      "fase": "APERTURA 2026 (Sub 18)"
     },
     {
       "deporte": "rugby",
@@ -820,7 +842,8 @@
       "rival": "Scuola Italiana Di Montevideo",
       "gf": 0,
       "gc": 4,
-      "fecha": "2026-04-26"
+      "fecha": "2026-04-26",
+      "fase": "APERTURA 2026 (Intermedia B)"
     },
     {
       "deporte": "hockey",
@@ -837,7 +860,8 @@
       "rival": "Old Girls Inter B Red",
       "gf": 2,
       "gc": 0,
-      "fecha": "2026-04-29"
+      "fecha": "2026-04-29",
+      "fase": "APERTURA 2026 (Intermedia B)"
     },
     {
       "deporte": "hockey",
@@ -854,7 +878,8 @@
       "rival": "Biguá Sub 18",
       "gf": 1,
       "gc": 4,
-      "fecha": "2026-04-30"
+      "fecha": "2026-04-30",
+      "fase": "APERTURA 2026 (Sub 18)"
     },
     {
       "deporte": "rugby",
@@ -903,7 +928,8 @@
       "rival": "Old Girls Inter A",
       "gf": 0,
       "gc": 3,
-      "fecha": "2026-05-09"
+      "fecha": "2026-05-09",
+      "fase": "APERTURA 2026 (Intermedia A)"
     },
     {
       "deporte": "hockey",
@@ -920,7 +946,8 @@
       "rival": "Old Girls Sub18",
       "gf": 0,
       "gc": 9,
-      "fecha": "2026-05-09"
+      "fecha": "2026-05-09",
+      "fase": "APERTURA 2026 (Sub 18)"
     },
     {
       "deporte": "rugby",
@@ -952,7 +979,8 @@
       "rival": "Club Seminario",
       "gf": 1,
       "gc": 2,
-      "fecha": "2026-05-10"
+      "fecha": "2026-05-10",
+      "fase": "APERTURA 2026 (Intermedia B)"
     },
     {
       "deporte": "hockey",
@@ -1035,7 +1063,8 @@
       "rival": "Carrasco Polo Club Intermedia A",
       "gf": 0,
       "gc": 5,
-      "fecha": "2026-05-16"
+      "fecha": "2026-05-16",
+      "fase": "APERTURA 2026 (Intermedia A)"
     },
     {
       "deporte": "hockey",
@@ -1052,7 +1081,8 @@
       "rival": "Carrasco Polo Club Sub 18",
       "gf": 0,
       "gc": 2,
-      "fecha": "2026-05-16"
+      "fecha": "2026-05-16",
+      "fase": "APERTURA 2026 (Sub 18)"
     },
     {
       "deporte": "futbol",
@@ -1088,7 +1118,8 @@
       "rival": "Club Náutico Intermedia B",
       "gf": 3,
       "gc": 5,
-      "fecha": "2026-05-17"
+      "fecha": "2026-05-17",
+      "fase": "APERTURA 2026 (Intermedia B)"
     },
     {
       "deporte": "basketball",
@@ -1168,7 +1199,8 @@
       "rival": "Lobas",
       "gf": 2,
       "gc": 2,
-      "fecha": "2026-05-23"
+      "fecha": "2026-05-23",
+      "fase": "APERTURA 2026 (Intermedia A)"
     },
     {
       "deporte": "hockey",
@@ -1185,7 +1217,8 @@
       "rival": "Lobas",
       "gf": 4,
       "gc": 2,
-      "fecha": "2026-05-23"
+      "fecha": "2026-05-23",
+      "fase": "APERTURA 2026 (Sub 18)"
     },
     {
       "deporte": "rugby",
@@ -1233,7 +1266,8 @@
       "rival": "Psg",
       "gf": 0,
       "gc": 3,
-      "fecha": "2026-05-24"
+      "fecha": "2026-05-24",
+      "fase": "APERTURA 2026 (Intermedia B)"
     },
     {
       "deporte": "hockey",
@@ -1352,7 +1386,8 @@
       "rival": "Palo Y Pico",
       "gf": 1,
       "gc": 2,
-      "fecha": "2026-05-31"
+      "fecha": "2026-05-31",
+      "fase": "APERTURA 2026 (Intermedia B)"
     },
     {
       "deporte": "hockey",
@@ -1438,7 +1473,8 @@
       "rival": "Palo Y Pico",
       "gf": 0,
       "gc": 5,
-      "fecha": "2026-06-06"
+      "fecha": "2026-06-06",
+      "fase": "APERTURA 2026 (Intermedia A)"
     },
     {
       "deporte": "hockey",
@@ -1455,7 +1491,8 @@
       "rival": "Old Ivy",
       "gf": 2,
       "gc": 9,
-      "fecha": "2026-06-06"
+      "fecha": "2026-06-06",
+      "fase": "APERTURA 2026 (Sub 18)"
     },
     {
       "deporte": "rugby",
@@ -1598,7 +1635,8 @@
       "rival": "Old Woodlands Club",
       "gf": 1,
       "gc": 2,
-      "fecha": "2026-06-13"
+      "fecha": "2026-06-13",
+      "fase": "APERTURA 2026 (Intermedia A)"
     },
     {
       "deporte": "hockey",
@@ -1615,7 +1653,8 @@
       "rival": "Old Woodlands Club",
       "gf": 1,
       "gc": 8,
-      "fecha": "2026-06-13"
+      "fecha": "2026-06-13",
+      "fase": "APERTURA 2026 (Sub 18)"
     },
     {
       "deporte": "rugby",
@@ -1664,7 +1703,8 @@
       "rival": "Nautilus",
       "gf": 0,
       "gc": 2,
-      "fecha": "2026-06-14"
+      "fecha": "2026-06-14",
+      "fase": "APERTURA 2026 (Intermedia B)"
     },
     {
       "deporte": "hockey",
@@ -1797,7 +1837,8 @@
       "rival": "Old Sampa Club",
       "gf": 1,
       "gc": 3,
-      "fecha": "2026-06-21"
+      "fecha": "2026-06-21",
+      "fase": "APERTURA 2026 (Intermedia B)"
     },
     {
       "deporte": "hockey",
@@ -1823,7 +1864,8 @@
       "rival": "Club Náutico Sub 18",
       "gf": 1,
       "gc": 7,
-      "fecha": "2026-06-23"
+      "fecha": "2026-06-23",
+      "fase": "APERTURA 2026 (Sub 18)"
     },
     {
       "deporte": "hockey",
@@ -1831,7 +1873,8 @@
       "rival": "Club Náutico Intermedia A",
       "gf": 3,
       "gc": 3,
-      "fecha": "2026-06-24"
+      "fecha": "2026-06-24",
+      "fase": "APERTURA 2026 (Intermedia A)"
     },
     {
       "deporte": "basketball",
@@ -1912,7 +1955,8 @@
       "rival": "Old Christians Club Lai",
       "gf": 2,
       "gc": 2,
-      "fecha": "2026-07-15"
+      "fecha": "2026-07-15",
+      "fase": "APERTURA 2026 (Intermedia B)"
     },
     {
       "deporte": "rugby",
@@ -1953,7 +1997,8 @@
       "rival": "Old Sampa Club",
       "gf": 1,
       "gc": 8,
-      "fecha": "2026-07-25"
+      "fecha": "2026-07-25",
+      "fase": "APERTURA 2026 (Sub 18)"
     },
     {
       "deporte": "rugby",
@@ -2027,7 +2072,8 @@
       "rival": "Scuola Italiana Di Montevideo",
       "gf": 0,
       "gc": 7,
-      "fecha": "2026-08-02"
+      "fecha": "2026-08-02",
+      "fase": "APERTURA 2026 (Intermedia B)"
     },
     {
       "deporte": "rugby",
@@ -2051,7 +2097,8 @@
       "rival": "Old Girls Azulgrana",
       "gf": 0,
       "gc": 4,
-      "fecha": "2026-08-08"
+      "fecha": "2026-08-08",
+      "fase": "APERTURA 2026 (Intermedia A)"
     },
     {
       "deporte": "hockey",
@@ -2068,7 +2115,8 @@
       "rival": "Colegio Seminario",
       "gf": 1,
       "gc": 6,
-      "fecha": "2026-08-08"
+      "fecha": "2026-08-08",
+      "fase": "APERTURA 2026 (Sub 18)"
     },
     {
       "deporte": "rugby",
@@ -2100,7 +2148,8 @@
       "rival": "Old Girls Inter B Red",
       "gf": 0,
       "gc": 1,
-      "fecha": "2026-08-09"
+      "fecha": "2026-08-09",
+      "fase": "APERTURA 2026 (Intermedia B)"
     },
     {
       "deporte": "hockey",
@@ -2172,7 +2221,8 @@
       "rival": "Old Brendan's Club",
       "gf": 4,
       "gc": 1,
-      "fecha": "2026-08-15"
+      "fecha": "2026-08-15",
+      "fase": "COPA DE PLATA (Intermedia A)"
     },
     {
       "deporte": "hockey",
@@ -2180,7 +2230,8 @@
       "rival": "Lobas",
       "gf": 2,
       "gc": 1,
-      "fecha": "2026-08-15"
+      "fecha": "2026-08-15",
+      "fase": "COPA DE PLATA (Sub 18)"
     },
     {
       "deporte": "rugby",
@@ -2228,7 +2279,8 @@
       "rival": "Club Seminario",
       "gf": 0,
       "gc": 1,
-      "fecha": "2026-08-16"
+      "fecha": "2026-08-16",
+      "fase": "APERTURA 2026 (Intermedia B)"
     },
     {
       "deporte": "hockey",
@@ -2253,7 +2305,8 @@
       "rival": "Old Woodlands Club",
       "gf": 0,
       "gc": 3,
-      "fecha": "2026-08-22"
+      "fecha": "2026-08-22",
+      "fase": "COPA DE PLATA (Intermedia A)"
     },
     {
       "deporte": "hockey",
@@ -2270,7 +2323,8 @@
       "rival": "Northfield",
       "gf": 4,
       "gc": 2,
-      "fecha": "2026-08-22"
+      "fecha": "2026-08-22",
+      "fase": "COPA DE PLATA (Sub 18)"
     },
     {
       "deporte": "hockey",
@@ -2278,7 +2332,8 @@
       "rival": "Club Náutico Intermedia B",
       "gf": 1,
       "gc": 2,
-      "fecha": "2026-08-23"
+      "fecha": "2026-08-23",
+      "fase": "APERTURA 2026 (Intermedia B)"
     },
     {
       "deporte": "hockey",
@@ -2371,7 +2426,8 @@
       "rival": "Carrasco Polo Club Sub 18",
       "gf": 2,
       "gc": 3,
-      "fecha": "2026-08-29"
+      "fecha": "2026-08-29",
+      "fase": "COPA DE PLATA (Sub 18)"
     },
     {
       "deporte": "rugby",
@@ -2414,7 +2470,8 @@
       "rival": "Psg",
       "gf": 1,
       "gc": 4,
-      "fecha": "2026-08-30"
+      "fecha": "2026-08-30",
+      "fase": "APERTURA 2026 (Intermedia B)"
     },
     {
       "deporte": "hockey",
@@ -2482,7 +2539,8 @@
       "rival": "Yacht Intermedia",
       "gf": 0,
       "gc": 0,
-      "fecha": "2026-09-05"
+      "fecha": "2026-09-05",
+      "fase": "COPA DE PLATA (Intermedia A)"
     },
     {
       "deporte": "hockey",
@@ -2549,7 +2607,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-12T12:16:00.221Z",
+  "actualizadoEn": "2026-09-12T12:19:43.681Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2577,6 +2635,20 @@
         "categoria": "Intermedia B",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=31",
         "registros": 20,
+        "estado": "ok"
+      },
+      {
+        "deporte": "hockey",
+        "categoria": "Intermedia C",
+        "url": "https://admin.hockey.com.uy/posiciones?category_id=79",
+        "registros": 19,
+        "estado": "ok"
+      },
+      {
+        "deporte": "hockey",
+        "categoria": "Reserva",
+        "url": "https://admin.hockey.com.uy/posiciones?category_id=2",
+        "registros": 19,
         "estado": "ok"
       },
       {
@@ -2689,20 +2761,6 @@
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/partidos/F202020A.html",
         "registros": 2,
-        "estado": "ok"
-      },
-      {
-        "deporte": "hockey",
-        "categoria": "Intermedia C",
-        "url": "https://admin.hockey.com.uy/posiciones?category_id=79",
-        "registros": 19,
-        "estado": "ok"
-      },
-      {
-        "deporte": "hockey",
-        "categoria": "Reserva",
-        "url": "https://admin.hockey.com.uy/posiciones?category_id=2",
-        "registros": 19,
         "estado": "ok"
       },
       {
