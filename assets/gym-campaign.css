@@ -1,7 +1,7 @@
 /* Campaña Gym · composición de la referencia enviada por el club. */
 #gym-campaign{padding:0;background:#faf9f6;color:#25483e;overflow:hidden}
 .gym-inner{max-width:1600px;margin:auto}
-.gym-poster{position:relative;container-type:inline-size;aspect-ratio:1448/1086;background:url('/assets/gym-campaign-scene.png') center top/100% auto no-repeat}
+.gym-poster{position:relative;container-type:inline-size;aspect-ratio:1448/1086;background:url('/assets/gym-campaign-scene-20260912.png') center top/100% auto no-repeat}
 .gym-campaign-header{position:absolute;left:3.9%;right:2.8%;top:3.7%;display:grid;grid-template-columns:29.5% 42.5% 28%;align-items:start}
 .gym-brand{display:flex;align-items:center;gap:1.9cqw;min-width:0;padding-left:1.3cqw}
 .gym-crest{display:block;width:5.7cqw;height:7.45cqw;flex:none;overflow:hidden;clip-path:polygon(50% 2%,98% 12%,98% 64%,88% 80%,50% 99%,14% 82%,2% 64%,2% 12%)}
@@ -25,12 +25,12 @@
 .gym-totals>div+div{border-left:1px solid var(--dorado);padding-left:1.3cqw;text-align:right}
 .gym-totals strong{display:block;font:500 1.43cqw/1.35 var(--body);white-space:nowrap;letter-spacing:-.045em;font-variant-numeric:tabular-nums}
 .gym-totals .gym-label{font-size:.9cqw;letter-spacing:.13em;margin-bottom:.2cqw}
-.gym-copy{position:absolute;left:3.9%;top:14.5%;width:17.8%;font:400 1.31cqw/1.36 var(--body)}
+.gym-copy{position:absolute;left:3.9%;top:14.1%;width:17.8%;font:400 1.31cqw/1.36 var(--body)}
 .gym-copy::before{content:'';display:block;width:9.3cqw;height:1px;background:var(--dorado);margin-bottom:1cqw}
-.gym-copy strong{display:block;margin-top:.45cqw;font:bold 1.75cqw/1.2 Georgia,'Times New Roman',serif;white-space:nowrap;letter-spacing:-.035em}
+.gym-copy strong{display:block;margin-top:.45cqw;font:bold 1.45cqw/1.2 Georgia,'Times New Roman',serif;white-space:nowrap;letter-spacing:-.035em}
 .gym-mobile-scene{display:none}
-.gym-build{position:absolute;top:42.4%;left:3.9%;right:3.7%;margin:0}
-.gym-wall{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));grid-template-rows:repeat(10,3.1cqw);gap:.28cqw}
+.gym-build{position:absolute;top:47.7%;left:3.9%;right:3.7%;margin:0}
+.gym-wall{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));grid-template-rows:repeat(10,2.7cqw);gap:.28cqw}
 .gym-brick{position:relative;min-width:0;border:1px solid #d2d0ca;background:linear-gradient(145deg,#e9e7e2,#d9d7d1);border-radius:4px;isolation:isolate;box-shadow:inset 0 1px 3px #ffffffa0}
 .gym-brick::after{content:'+';position:absolute;inset:0;display:grid;place-items:center;color:#858982;font-size:1.35cqw;font-weight:300;z-index:-1}
 .gym-brick-fill{position:absolute;inset:-1px auto -1px -1px;width:var(--fill,0%);background:linear-gradient(115deg,#2d5044,#25473c);border-radius:4px;box-shadow:inset 0 1px 4px #ffffff30,inset 0 -2px 4px #00000010}
@@ -61,7 +61,7 @@
  .gym-progress-wrap{margin:8px 0 17px}.gym-progress{height:22px}.gym-percent{font-size:11px;line-height:22px;left:12px}
  .gym-totals{gap:20px}.gym-totals>div+div{padding-left:20px}.gym-totals strong{font-size:21px}.gym-totals .gym-label{font-size:10px;margin-bottom:3px}
  .gym-copy{position:static;width:min(88%,440px);margin:24px auto 0;text-align:center;font-size:13px;line-height:1.5}.gym-copy::before{display:none}.gym-copy strong{font-size:21px;margin-top:6px}
- .gym-mobile-scene{display:block;height:40vw;margin-top:2px;background:url('/assets/gym-campaign-scene.png') center -23vw/180% auto no-repeat}
+ .gym-mobile-scene{display:block;height:32vw;margin-top:2px;background:url('/assets/gym-campaign-scene-20260912.png') center -14.3vw/132% auto no-repeat}
  .gym-build{position:relative;top:auto;left:auto;right:auto;margin:-2px 4% 0}
  .gym-wall{grid-template-columns:repeat(10,minmax(0,1fr));grid-template-rows:repeat(10,40px);gap:3px}
  .gym-brick::after{font-size:14px}.gym-brick-label{font-size:9px;padding:2px}
