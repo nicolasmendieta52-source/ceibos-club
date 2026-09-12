@@ -150,6 +150,15 @@
     },
     {
       "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "OCC",
+      "fecha": "2026-09-12",
+      "hora": "16:00",
+      "local": false,
+      "cancha": "Old Christians"
+    },
+    {
+      "deporte": "hockey",
       "categoria": "Sub 18",
       "rival": "Old Woodlands Club",
       "fecha": "2026-09-12",
@@ -198,6 +207,14 @@
       "hora": "15:30",
       "local": false,
       "cancha": "PARQUE CUPRA - CLUB SEMINARIO"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "CTM",
+      "fecha": "2026-09-13",
+      "hora": "18:45",
+      "local": false
     },
     {
       "deporte": "basketball",
@@ -2177,7 +2194,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-11T21:03:13.083Z",
+  "actualizadoEn": "2026-09-12T04:43:06.196Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2322,12 +2339,12 @@
     ],
     "instagram": {
       "estado": "ok",
-      "registros": 46,
+      "registros": 45,
       "imagenes": 16,
       "publicacionesApify": 3,
       "historiasMencionadas": 0,
-      "cache": 16,
-      "nuevas": 0
+      "cache": 9,
+      "nuevas": 7
     }
   }
 }
