@@ -1,4 +1,4 @@
-const BRICK_COUNT = 100;
+export const BRICK_COUNT = 60;
 const FALLBACK_CONTACT = 'mailto:info@ceibosclub.com?subject=Quiero%20colaborar%20con%20el%20Gimnasio%20de%20Ceibos';
 
 export function campaignModel(data) {
@@ -20,6 +20,45 @@ export function contributionLink(value) {
     if (url.protocol === 'https:') return url.href;
   } catch { /* El correo del club funciona mientras no haya formulario. */ }
   return FALLBACK_CONTACT;
+}
+
+// La pestaña publicada solo contiene totales y nombres aprobados, nunca pagos individuales.
+export function campaignFromCsv(text) {
+  const rows = [];
+  let row = [], field = '', quoted = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (c === '"') {
+      if (quoted && text[i + 1] === '"') { field += '"'; i++; }
+      else quoted = !quoted;
+    } else if (c === ',' && !quoted) { row.push(field); field = ''; }
+    else if ((c === '\n' || c === '\r') && !quoted) {
+      if (c === '\r' && text[i + 1] === '\n') i++;
+      row.push(field); rows.push(row); row = []; field = '';
+    } else field += c;
+  }
+  if (quoted) throw new TypeError('CSV incompleto.');
+  if (field || row.length) { row.push(field); rows.push(row); }
+  if (rows[0]?.[0]?.replace(/^\uFEFF/, '') !== 'Campo' || rows[0]?.[1] !== 'Valor') throw new TypeError('Fuente inesperada.');
+  const values = new Map();
+  for (const entry of rows.slice(1)) {
+    if (entry.length !== 2 || values.has(entry[0])) throw new TypeError('Filas incompletas o duplicadas.');
+    values.set(entry[0], entry[1]);
+  }
+  const numeric = key => {
+    const value = values.get(key)?.trim();
+    if (!/^\d+(?:[.,]\d+)?$/.test(value || '')) throw new TypeError(`Valor inválido: ${key}`);
+    return Number(value.replace(',', '.'));
+  };
+  if (numeric('brickCount') !== BRICK_COUNT) throw new TypeError('Se esperan 60 ladrillos.');
+  const brickLabels = Array.from({ length: BRICK_COUNT }, (_, i) => {
+    const key = `brick${i + 1}`;
+    if (!values.has(key)) throw new TypeError('Faltan ladrillos en la fuente.');
+    const name = values.get(key).trim();
+    if (name.length > 160 || /^#(REF!|VALUE!|ERROR!|N\/A|DIV\/0!|NAME\?)/.test(name)) throw new TypeError('Nombre inválido.');
+    return name.replace(/ y flia$/, '\ny flia');
+  });
+  return campaignModel({ goal: numeric('goal'), raised: numeric('raised'), brickLabels });
 }
 
 export function initCampaign(root) {
@@ -67,12 +106,15 @@ export function initCampaign(root) {
       brick.style.setProperty('--fill', `${next.fills[i] * 100}%`);
       brick.classList.toggle('is-partial', next.fills[i] > 0 && next.fills[i] < 1);
       brick.classList.remove('is-placing');
-      const label = next.fills[i] > 0 && Array.isArray(next.brickLabels) ? next.brickLabels[i] : '';
+      const label = Array.isArray(next.brickLabels) ? next.brickLabels[i] : '';
       brick.querySelector('.gym-brick-label').textContent = typeof label === 'string' ? label : '';
-      if (previous && next.fills[i] > previous.fills[i]) changed.push(i);
+      brick.classList.toggle('has-contributor', Boolean(label));
+      brick.classList.toggle('has-unfilled-label', Boolean(label) && next.fills[i] < 1);
+      brick.title = `Ladrillo ${i + 1}${label ? ` · ${label.replace(/\s+/g, ' ')}` : ''}`;
+      if (previous && (next.fills[i] > previous.fills[i] || (label && label !== previous.brickLabels?.[i]))) changed.push(i);
     });
     const names = Array.isArray(next.brickLabels)
-      ? next.brickLabels.filter((name, i) => next.fills[i] > 0 && typeof name === 'string' && name.trim()).map(name => name.replace(/\s+/g, ' ')) : [];
+      ? next.brickLabels.filter(name => typeof name === 'string' && name.trim()).map(name => name.replace(/\s+/g, ' ')) : [];
     select('contributors').textContent = names.length ? `Aportaron: ${names.join('; ')}.` : '';
     select('raised').textContent = money(next.raised);
     select('goal').textContent = money(next.goal);
@@ -81,7 +123,7 @@ export function initCampaign(root) {
     select('progress').value = next.percent;
     select('progress').setAttribute('aria-valuetext', `${percentage(next.percent)}% de la meta. ${money(next.raised)} recaudados de ${money(next.goal)}.`);
     select('unit').textContent = money(next.brickValue);
-    select('wall-summary').textContent = `${Math.floor(next.progress * BRICK_COUNT)} de 100 ladrillos completos`;
+    select('wall-summary').textContent = `${Math.floor(next.progress * BRICK_COUNT)} de ${BRICK_COUNT} ladrillos completos`;
     const cta = select('cta');
     cta.href = contributionLink(next.contributionUrl);
     const external = cta.href.startsWith('https:');
@@ -126,7 +168,12 @@ export function initCampaign(root) {
         try {
           const url = new URL(config.sourceUrl, window.location.href);
           if (url.protocol !== 'https:' && url.origin !== window.location.origin) throw new Error('Fuente no válida');
-          const live = await readJson(url.href);
+          let live;
+          if (config.sourceFormat === 'sheets-csv') {
+            const response = await fetch(url.href, { cache: 'no-store', signal: AbortSignal.timeout(15000) });
+            if (!response.ok) throw new Error(`Campaña: HTTP ${response.status}`);
+            live = campaignFromCsv(await response.text());
+          } else live = await readJson(url.href);
           campaignModel(live);
           data = { ...config, goal: live.goal, raised: live.raised, updatedAt: live.updatedAt || '', brickLabels: live.brickLabels || config.brickLabels || [] };
         } catch {
