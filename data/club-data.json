@@ -21,41 +21,6 @@
       "cancha": "SAN ISIDRO LOMAS"
     },
     {
-      "deporte": "hockey",
-      "categoria": "Intermedia A",
-      "rival": "Old Christians Club",
-      "fecha": "2026-09-12",
-      "hora": "17:30",
-      "local": false,
-      "fase": "COPA DE PLATA (Intermedia A)",
-      "estado": "A Designar",
-      "cancha": "Old Christians"
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Intermedia",
-      "rival": "Champagnat",
-      "fecha": "2026-09-12",
-      "hora": "14:00",
-      "local": false
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "M19",
-      "rival": "Old Boys",
-      "fecha": "2026-09-12",
-      "hora": "12:30",
-      "local": true
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Primera",
-      "rival": "Champagnat",
-      "fecha": "2026-09-12",
-      "hora": "15:45",
-      "local": false
-    },
-    {
       "deporte": "futbol",
       "categoria": "Primera",
       "rival": "SAN JUAN BAUTISTA",
@@ -2582,6 +2547,15 @@
     },
     {
       "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Old Christians Club",
+      "gf": 1,
+      "gc": 3,
+      "fecha": "2026-09-12",
+      "fase": "COPA DE PLATA (Intermedia A)"
+    },
+    {
+      "deporte": "hockey",
       "categoria": "Reserva",
       "rival": "Old Christians Club",
       "gf": 2,
@@ -2597,10 +2571,34 @@
       "gc": 8,
       "fecha": "2026-09-12",
       "fase": "COPA DE PLATA (Sub 18)"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Champagnat",
+      "gf": 28,
+      "gc": 33,
+      "fecha": "2026-09-12"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Old Boys",
+      "gf": 17,
+      "gc": 12,
+      "fecha": "2026-09-12"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Champagnat",
+      "gf": 12,
+      "gc": 22,
+      "fecha": "2026-09-12"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-12T20:39:11.460Z",
+  "actualizadoEn": "2026-09-13T04:56:48.755Z",
   "diagnostico": {
     "fuentes": [
       {
