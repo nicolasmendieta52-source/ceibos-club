@@ -40,17 +40,6 @@
       "cancha": "PARQUE CUPRA - CLUB SEMINARIO"
     },
     {
-      "deporte": "hockey",
-      "categoria": "Intermedia C",
-      "rival": "C.t.m.",
-      "fecha": "2026-09-13",
-      "hora": "18:45",
-      "local": false,
-      "fase": "COPA DE ORO (Intermedia C)",
-      "estado": "A Jugar",
-      "cancha": "Pilares"
-    },
-    {
       "deporte": "basketball",
       "categoria": "Basketball",
       "rival": "YOUNG UNIVERSITARIO",
@@ -2595,10 +2584,19 @@
       "gf": 12,
       "gc": 22,
       "fecha": "2026-09-12"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "C.t.m.",
+      "gf": 2,
+      "gc": 3,
+      "fecha": "2026-09-13",
+      "fase": "COPA DE ORO (Intermedia C)"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-14T05:04:58.680Z",
+  "actualizadoEn": "2026-09-14T12:58:13.529Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2768,8 +2766,8 @@
       "imagenes": 17,
       "publicacionesApify": 4,
       "historiasMencionadas": 0,
-      "cache": 16,
-      "nuevas": 1
+      "cache": 17,
+      "nuevas": 0
     }
   }
 }
