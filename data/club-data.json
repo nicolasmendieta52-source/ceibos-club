@@ -14,30 +14,29 @@
     {
       "deporte": "futbol",
       "categoria": "PreSenior",
-      "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
+      "rival": "San lsidro de Lomas",
       "fecha": "2026-09-12",
       "hora": "11:15",
       "local": false,
-      "cancha": "SAN ISIDRO LOMAS"
+      "cancha": "San isdro de lomas"
     },
     {
       "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "SAN JUAN BAUTISTA",
-      "fecha": "2026-09-13",
-      "hora": "09:00",
+      "categoria": "PreSenior",
+      "rival": "San Isidro de Lomas",
+      "fecha": "2026-09-12",
+      "hora": "11:15",
       "local": false,
-      "cancha": "COMPLEJO LAS CASUARINAS"
+      "cancha": "San isdro de lomas"
     },
     {
       "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "PLAYA HONDA UNIVERSITARIO",
-      "fecha": "2026-09-13",
-      "hora": "15:30",
+      "categoria": "PreSenior",
+      "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
+      "fecha": "2026-09-14",
+      "hora": "21:00",
       "local": false,
-      "fase": "Segunda rueda · Serie 5",
-      "cancha": "PARQUE CUPRA - CLUB SEMINARIO"
+      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "basketball",
@@ -2532,7 +2531,10 @@
       "rival": "SAN JUAN BAUTISTA",
       "gf": 1,
       "gc": 0,
-      "fecha": "2026-09-12"
+      "fecha": "2026-09-12",
+      "goleadores": [
+        "IGNACIO SERE (56')"
+      ]
     },
     {
       "deporte": "hockey",
@@ -2586,6 +2588,28 @@
       "fecha": "2026-09-12"
     },
     {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "SAN JUAN BAUTISTA",
+      "gf": 3,
+      "gc": 1,
+      "fecha": "2026-09-13",
+      "goleadores": [
+        "JUAN DIEGO TORRES NEGREIRA (3')",
+        "SANTIAGO PONS (27')",
+        "RAFAEL MARIANO BERAMENDI (29')"
+      ]
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "PLAYA HONDA UNIVERSITARIO",
+      "gf": 2,
+      "gc": 0,
+      "fecha": "2026-09-13",
+      "fase": "Segunda rueda · Serie 5"
+    },
+    {
       "deporte": "hockey",
       "categoria": "Intermedia C",
       "rival": "C.t.m.",
@@ -2596,7 +2620,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-14T12:58:13.529Z",
+  "actualizadoEn": "2026-09-14T21:55:12.537Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2700,28 +2724,28 @@
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
-        "registros": 13,
+        "registros": 14,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/partidos/F21B.html",
-        "registros": 2,
+        "registros": 1,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
-        "registros": 4,
+        "registros": 5,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
-        "registros": 3,
+        "registros": 2,
         "estado": "ok"
       },
       {

@@ -5,8 +5,8 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-09-14 6:00",
-  "actualizado": "2026-09-14T12:55:38.133Z",
+  "publicado": "2026-09-14 18:00",
+  "actualizado": "2026-09-14T21:52:40.176Z",
   "pronosticos": [
     {
       "fecha": "2026-09-14",
@@ -30,7 +30,7 @@
           "descripcion": "Nuboso, períodos de algo nuboso.",
           "evolucion": "Bajas temperaturas.",
           "detalle": "Neblinas.",
-          "viento": "Sector W 10-20 km/h periodos de variables 0-10 km/h."
+          "viento": "Variables 0-10 km/h al NW 10-20 km/h."
         }
       ]
     },
@@ -54,7 +54,7 @@
           "orden": 2,
           "nombre": "Tarde/Noche",
           "descripcion": "Algo nuboso y nuboso, períodos de cubierto.",
-          "evolucion": "Bajas temperaturas.",
+          "evolucion": "",
           "detalle": "",
           "viento": "SW al SE 10-30 km/h. Rachas de hasta 40 km/h."
         }
@@ -64,8 +64,8 @@
       "fecha": "2026-09-16",
       "diaMasN": 2,
       "etiqueta": "Miércoles 16",
-      "temperaturaMin": 4,
-      "temperaturaMax": 14,
+      "temperaturaMin": 5,
+      "temperaturaMax": 12,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -82,7 +82,7 @@
           "descripcion": "Claro y algo nuboso.",
           "evolucion": "",
           "detalle": "",
-          "viento": "NE 10-30 km/h."
+          "viento": "E al NE 10-30 km/h."
         }
       ]
     },
@@ -100,7 +100,7 @@
       "diaMasN": 4,
       "etiqueta": "Viernes 18",
       "temperaturaMin": 8,
-      "temperaturaMax": 21,
+      "temperaturaMax": 19,
       "probabilidadLluvia": "Nula",
       "periodos": []
     },
@@ -109,7 +109,7 @@
       "diaMasN": 5,
       "etiqueta": "Sábado 19",
       "temperaturaMin": 10,
-      "temperaturaMax": 22,
+      "temperaturaMax": 21,
       "probabilidadLluvia": "Nula",
       "periodos": []
     },
@@ -118,7 +118,7 @@
       "diaMasN": 6,
       "etiqueta": "Domingo 20",
       "temperaturaMin": 14,
-      "temperaturaMax": 24,
+      "temperaturaMax": 21,
       "probabilidadLluvia": "Nula",
       "periodos": []
     }
