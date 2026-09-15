@@ -6,10 +6,6 @@ on:
         description: Verificar la cuenta lectora sin leer pagos
         type: boolean
         default: false
-      enable_sheets_api:
-        description: Habilitar Google Sheets API en el proyecto del club
-        type: boolean
-        default: false
   schedule:
     - cron: '*/10 * * * *'
 permissions:
@@ -34,7 +30,6 @@ jobs:
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           GYM_IDENTITY_ONLY: ${{ inputs.identity_only }}
-          GYM_ENABLE_SHEETS_API: ${{ inputs.enable_sheets_api }}
       - name: Guardar únicamente los datos públicos del Gym
         if: ${{ !inputs.identity_only }}
         run: |
@@ -54,4 +49,8 @@ jobs:
         if: ${{ !inputs.identity_only }}
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh api --method POST 'repos/${{ github.repository }}/pages/builds' --silent
+        run: |
+          if curl --fail --silent --show-error --max-time 20 "https://ceibosclub.com/data/gym-campaign.json?v=$(date +%s)" -o /tmp/gym-published.json; then
+            if cmp --silent data/gym-campaign.json /tmp/gym-published.json; then exit 0; fi
+          fi
+          gh api --method POST 'repos/${{ github.repository }}/pages/builds' --silent

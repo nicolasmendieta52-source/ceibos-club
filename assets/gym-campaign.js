@@ -178,7 +178,7 @@ export function initCampaign(root) {
     if (pending || disposed || document.hidden) return;
     pending = true;
     try {
-      const config = await readJson('/data/gym-campaign.json');
+      const config = await readJson(`/data/gym-campaign.json?v=${Math.floor(Date.now() / 60000)}`);
       let data = config;
       let sourceFailed = false;
       if (config.sourceUrl) {
