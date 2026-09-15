@@ -86,17 +86,17 @@
     {
       "deporte": "rugby",
       "categoria": "Intermedia",
-      "rival": "PSG",
+      "rival": "Pucaru Stade Gaulois",
       "fecha": "2026-09-19",
-      "hora": "12:00",
+      "hora": "14:00",
       "local": false
     },
     {
       "deporte": "rugby",
       "categoria": "Primera",
-      "rival": "PSG",
+      "rival": "Pucaru Stade Gaulois",
       "fecha": "2026-09-19",
-      "hora": "12:00",
+      "hora": "15:45",
       "local": false
     },
     {
@@ -193,6 +193,14 @@
       "rival": "Lobos",
       "fecha": "2026-10-24",
       "hora": "12:00",
+      "local": true
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Lions",
+      "fecha": "2026-10-24",
+      "hora": "15:00",
       "local": true
     },
     {
@@ -2603,7 +2611,11 @@
       "gf": 2,
       "gc": 0,
       "fecha": "2026-09-13",
-      "fase": "Segunda rueda · Serie 5"
+      "fase": "Segunda rueda · Serie 5",
+      "goleadores": [
+        "LEANDRO CAMBÒN (17')",
+        "APARICIO VOSS (90')"
+      ]
     },
     {
       "deporte": "hockey",
@@ -2620,17 +2632,21 @@
       "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
       "gf": 2,
       "gc": 0,
-      "fecha": "2026-09-14"
+      "fecha": "2026-09-14",
+      "goleadores": [
+        "ALEJANDRO MARIA GONZALEZ (49')",
+        "ALEJANDRO MARIA GONZALEZ (65')"
+      ]
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-15T17:06:23.898Z",
+  "actualizadoEn": "2026-09-15T21:27:49.183Z",
   "diagnostico": {
     "fuentes": [
       {
         "deporte": "rugby",
         "url": "https://50-22.base44.app/functions/getPublicContent",
-        "registros": 65,
+        "registros": 66,
         "estado": "ok"
       },
       {
