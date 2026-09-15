@@ -38,6 +38,13 @@
 .gym-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
 .gym-brick.has-contributor::after{display:none}
 .gym-brick.has-unfilled-label .gym-brick-label{color:#183b2f;text-shadow:0 0 3px white,0 0 5px white,0 0 7px white}
+.gym-brick{grid-row:var(--row);grid-column:var(--column)}
+.gym-brick.is-sponsor{background:linear-gradient(145deg,#f3d47b,#dfb84e);border-color:#c7a13d}
+.gym-brick.is-sponsor .gym-brick-fill{background:linear-gradient(115deg,#ecc352,#d4a62f)}
+.gym-brick.is-sponsor .gym-brick-label{color:#183b2f;text-shadow:none;font-weight:600}
+.gym-legend{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 22px;width:100%;margin-bottom:8px;font-size:12px;line-height:1.5}
+.gym-legend span::before{content:'';display:inline-block;width:13px;height:9px;margin-right:7px;border-radius:2px;background:#25473c}
+.gym-legend .gym-legend-sponsor::before{background:#dfb84e}
 .gym-brick.is-placing .gym-brick-label{animation:gym-place .65s var(--ease) both;animation-delay:var(--delay,0ms)}
 .gym-brick.is-placing .gym-brick-fill{animation:gym-place .65s var(--ease) both;animation-delay:var(--delay,0ms)}
 @keyframes gym-place{0%{opacity:0;transform:translateY(-16px) rotate(-3deg)}65%{opacity:1;transform:translateY(2px) rotate(0)}100%{opacity:1;transform:translateY(0)}}
@@ -75,6 +82,7 @@
 @media(max-width:700px){
  .gym-wall{grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(12,48px)}
  .gym-brick-label{font-size:11px}
+ .gym-brick{grid-row:var(--mobile-row);grid-column:var(--mobile-column)}
 }
 @media(max-width:480px){
  .gym-brand-name{font-size:21px}.gym-copy{font-size:12px;max-width:285px}

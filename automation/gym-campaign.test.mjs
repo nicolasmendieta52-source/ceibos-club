@@ -1,6 +1,28 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { campaignModel, contributionLink, campaignFromCsv, BRICK_COUNT } from '../assets/gym-campaign.js';
+import { campaignModel, contributionLink, campaignFromCsv, BRICK_COUNT, brickPosition } from '../assets/gym-campaign.js';
+
+test('los sponsors pendientes conservan importe cero y el avance individual cambia con cada pago', () => {
+  const data={goal:200000,raised:500,brickProgress:Array(60).fill(0),brickSponsors:Array(60).fill(false)};
+  data.brickSponsors[30]=true;
+  data.brickProgress[0]=.5;
+  assert.equal(campaignModel(data).fills[30],0);
+  assert.equal(campaignModel(data).fills[0],.5);
+  assert.equal(campaignModel(data).percent,.25);
+  data.brickProgress[0]=1;
+  assert.equal(campaignModel({...data,raised:1000}).fills[0],1);
+  for (const bad of [[0],Array(60).fill(NaN),Array(60).fill(-1),Array(60).fill(2)]) assert.throws(()=>campaignModel({...data,brickProgress:bad}));
+  assert.throws(()=>campaignModel({...data,brickSponsors:Array(60).fill('Sponsor')}));
+});
+
+test('los 60 ladrillos suben desde la base de izquierda a derecha en desktop y móvil', () => {
+  for(const columns of [10,5]) {
+    assert.deepEqual(brickPosition(0,columns),{row:60/columns,column:1});
+    assert.deepEqual(brickPosition(columns,columns),{row:60/columns-1,column:1});
+    assert.deepEqual(brickPosition(59,columns),{row:1,column:columns});
+    assert.equal(new Set(Array.from({length:60},(_,i)=>JSON.stringify(brickPosition(i,columns)))).size,60);
+  }
+});
 
 test('el monto real llena 26 de 60 ladrillos y el 23,5% del siguiente', () => {
   const model = campaignModel({ goal: 200000, raised: 87450 });

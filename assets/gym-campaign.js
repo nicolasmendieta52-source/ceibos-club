@@ -7,11 +7,19 @@ export function campaignModel(data) {
     throw new TypeError('La campaña requiere goal > 0 y raised >= 0, como números finitos.');
   }
   const progress = Math.min(data.raised / data.goal, 1);
+  if (data.brickProgress !== undefined && (!Array.isArray(data.brickProgress) || data.brickProgress.length !== BRICK_COUNT ||
+      data.brickProgress.some(n => typeof n !== 'number' || !Number.isFinite(n) || n < 0 || n > 1))) throw new TypeError('Avance por ladrillo inválido.');
+  if (data.brickSponsors !== undefined && (!Array.isArray(data.brickSponsors) || data.brickSponsors.length !== BRICK_COUNT ||
+      data.brickSponsors.some(n => typeof n !== 'boolean'))) throw new TypeError('Tipos de ladrillo inválidos.');
   return {
     ...data, progress, percent: progress * 100,
     remaining: Math.max(0, data.goal - data.raised), brickValue: data.goal / BRICK_COUNT,
-    fills: Array.from({ length: BRICK_COUNT }, (_, i) => Math.max(0, Math.min(1, progress * BRICK_COUNT - i)))
+    fills: data.brickProgress || Array.from({ length: BRICK_COUNT }, (_, i) => Math.max(0, Math.min(1, progress * BRICK_COUNT - i)))
   };
+}
+
+export function brickPosition(index, columns) {
+  return { row: BRICK_COUNT / columns - Math.floor(index / columns), column: index % columns + 1 };
 }
 
 export function contributionLink(value) {
@@ -75,6 +83,11 @@ export function initCampaign(root) {
   const bricks = Array.from({ length: BRICK_COUNT }, (_, i) => {
     const brick = document.createElement('span');
     brick.className = 'gym-brick';
+    for (const [prefix, columns] of [['', 10], ['mobile-', 5]]) {
+      const position = brickPosition(i, columns);
+      brick.style.setProperty(`--${prefix}row`, position.row);
+      brick.style.setProperty(`--${prefix}column`, position.column);
+    }
     const fill = document.createElement('span');
     fill.className = 'gym-brick-fill';
     brick.append(fill);
@@ -107,23 +120,27 @@ export function initCampaign(root) {
       brick.classList.toggle('is-partial', next.fills[i] > 0 && next.fills[i] < 1);
       brick.classList.remove('is-placing');
       const label = Array.isArray(next.brickLabels) ? next.brickLabels[i] : '';
+      const sponsor = Boolean(next.brickSponsors?.[i]);
+      brick.classList.toggle('is-sponsor', sponsor);
       brick.querySelector('.gym-brick-label').textContent = typeof label === 'string' ? label : '';
       brick.classList.toggle('has-contributor', Boolean(label));
       brick.classList.toggle('has-unfilled-label', Boolean(label) && next.fills[i] < 1);
-      brick.title = `Ladrillo ${i + 1}${label ? ` · ${label.replace(/\s+/g, ' ')}` : ''}`;
-      if (previous && (next.fills[i] > previous.fills[i] || (label && label !== previous.brickLabels?.[i]))) changed.push(i);
+      brick.title = `Ladrillo ${i + 1}${label ? ` · ${label.replace(/\s+/g, ' ')}` : ''}${sponsor ? ` · Sponsor${next.fills[i] === 0 ? ' · Pago pendiente' : ''}` : ''}`;
+      if (previous && (next.fills[i] > previous.fills[i] || (label && label !== previous.brickLabels?.[i]) || sponsor !== Boolean(previous.brickSponsors?.[i]))) changed.push(i);
     });
     const names = Array.isArray(next.brickLabels)
-      ? next.brickLabels.filter(name => typeof name === 'string' && name.trim()).map(name => name.replace(/\s+/g, ' ')) : [];
-    select('contributors').textContent = names.length ? `Aportaron: ${names.join('; ')}.` : '';
+      ? next.brickLabels.map((name, i) => typeof name === 'string' && name.trim() ? `${name.replace(/\s+/g, ' ')}${next.brickSponsors?.[i] ? ` (sponsor${next.fills[i] === 0 ? ', pago pendiente' : ''})` : ''}` : '').filter(Boolean) : [];
+    select('contributors').textContent = names.length ? `Nos acompañan: ${names.join('; ')}.` : '';
     select('raised').textContent = money(next.raised);
     select('goal').textContent = money(next.goal);
     select('remaining').textContent = money(next.remaining);
     select('percent').textContent = `${percentage(next.percent)}%`;
     select('progress').value = next.percent;
     select('progress').setAttribute('aria-valuetext', `${percentage(next.percent)}% de la meta. ${money(next.raised)} recaudados de ${money(next.goal)}.`);
-    select('unit').textContent = money(next.brickValue);
-    select('wall-summary').textContent = `${Math.floor(next.progress * BRICK_COUNT)} de ${BRICK_COUNT} ladrillos completos`;
+    select('unit').textContent = next.brickProgress ? 'un aporte al gimnasio' : money(next.brickValue);
+    select('wall-summary').textContent = next.brickProgress
+      ? `${next.fills.filter(fill => fill > 0).length} de ${BRICK_COUNT} ladrillos con pagos confirmados`
+      : `${Math.floor(next.progress * BRICK_COUNT)} de ${BRICK_COUNT} ladrillos completos`;
     const cta = select('cta');
     cta.href = contributionLink(next.contributionUrl);
     const external = cta.href.startsWith('https:');
@@ -175,10 +192,10 @@ export function initCampaign(root) {
             live = campaignFromCsv(await response.text());
           } else live = await readJson(url.href);
           campaignModel(live);
-          data = { ...config, goal: live.goal, raised: live.raised, updatedAt: live.updatedAt || '', brickLabels: live.brickLabels || config.brickLabels || [] };
+          data = { ...config, goal: live.goal, raised: live.raised, updatedAt: live.updatedAt || '', brickLabels: live.brickLabels || config.brickLabels || [], brickProgress: live.brickProgress, brickSponsors: live.brickSponsors };
         } catch {
           // Preserve the last verified live amounts instead of reverting to an old local snapshot.
-          if (current) data = { ...config, goal: current.goal, raised: current.raised, updatedAt: current.updatedAt, brickLabels: current.brickLabels };
+          if (current) data = { ...config, goal: current.goal, raised: current.raised, updatedAt: current.updatedAt, brickLabels: current.brickLabels, brickProgress: current.brickProgress, brickSponsors: current.brickSponsors };
           sourceFailed = true;
         }
       }
