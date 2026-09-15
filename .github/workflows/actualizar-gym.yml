@@ -6,6 +6,10 @@ on:
         description: Verificar la cuenta lectora sin leer pagos
         type: boolean
         default: false
+      enable_sheets_api:
+        description: Habilitar Google Sheets API en el proyecto del club
+        type: boolean
+        default: false
   schedule:
     - cron: '*/10 * * * *'
 permissions:
@@ -30,6 +34,7 @@ jobs:
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           GYM_IDENTITY_ONLY: ${{ inputs.identity_only }}
+          GYM_ENABLE_SHEETS_API: ${{ inputs.enable_sheets_api }}
       - name: Guardar únicamente los datos públicos del Gym
         if: ${{ !inputs.identity_only }}
         run: |
