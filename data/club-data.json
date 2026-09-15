@@ -2514,7 +2514,12 @@
       "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
       "gf": 3,
       "gc": 0,
-      "fecha": "2026-09-12"
+      "fecha": "2026-09-12",
+      "goleadores": [
+        "AGUSTIN MATEO MACHADO (28')",
+        "SANTIAGO MARIA FIGUEREDO (68')",
+        "SANTIAGO MARIA FIGUEREDO (83')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -2619,7 +2624,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-15T13:43:35.024Z",
+  "actualizadoEn": "2026-09-15T17:06:23.898Z",
   "diagnostico": {
     "fuentes": [
       {
