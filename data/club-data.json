@@ -30,15 +30,6 @@
       "cancha": "San isdro de lomas"
     },
     {
-      "deporte": "futbol",
-      "categoria": "PreSenior",
-      "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
-      "fecha": "2026-09-14",
-      "hora": "21:00",
-      "local": false,
-      "cancha": "MONTE VI \"LOS CEIBOS\""
-    },
-    {
       "deporte": "basketball",
       "categoria": "Basketball",
       "rival": "YOUNG UNIVERSITARIO",
@@ -2617,10 +2608,18 @@
       "gc": 3,
       "fecha": "2026-09-13",
       "fase": "COPA DE ORO (Intermedia C)"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
+      "gf": 2,
+      "gc": 0,
+      "fecha": "2026-09-14"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-14T21:55:12.537Z",
+  "actualizadoEn": "2026-09-15T05:01:48.588Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2752,14 +2751,14 @@
         "deporte": "futbol",
         "categoria": "PreSenior",
         "url": "https://ligauniversitaria.org.uy/resultados/F3232PSC.html",
-        "registros": 13,
+        "registros": 14,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "PreSenior",
         "url": "https://ligauniversitaria.org.uy/partidos/F3232PSC.html",
-        "registros": 2,
+        "registros": 1,
         "estado": "ok"
       },
       {
