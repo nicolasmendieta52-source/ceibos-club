@@ -1,0 +1,52 @@
+name: Actualizar aportes del gimnasio
+on:
+  workflow_dispatch:
+    inputs:
+      identity_only:
+        description: Verificar la cuenta lectora sin leer pagos
+        type: boolean
+        default: false
+  schedule:
+    - cron: '*/10 * * * *'
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: actualizar-gym
+  cancel-in-progress: false
+jobs:
+  sincronizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --ignore-scripts
+      - run: node --test automation/gym-ledger.test.mjs automation/gym-campaign.test.mjs
+      - name: Leer aportes confirmados
+        run: node automation/sync-gym.mjs
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          GYM_IDENTITY_ONLY: ${{ inputs.identity_only }}
+      - name: Guardar únicamente los datos públicos del Gym
+        if: ${{ !inputs.identity_only }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/gym-campaign.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'chore: actualizar aportes del gimnasio'
+          for intento in 1 2 3; do
+            git fetch origin main
+            # A conflict in campaign data must be reviewed, never silently overwritten.
+            git merge --no-edit origin/main
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1
+      - name: Actualizar publicación de la web
+        if: ${{ !inputs.identity_only }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST 'repos/${{ github.repository }}/pages/builds' --silent
