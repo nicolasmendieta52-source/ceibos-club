@@ -5,15 +5,15 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-09-16 12:00",
-  "actualizado": "2026-09-16T17:03:53.426Z",
+  "publicado": "2026-09-16 18:00",
+  "actualizado": "2026-09-16T21:22:08.616Z",
   "pronosticos": [
     {
       "fecha": "2026-09-16",
       "diaMasN": 0,
       "etiqueta": "Miércoles 16",
       "temperaturaMin": 6,
-      "temperaturaMax": 14,
+      "temperaturaMax": 13,
       "probabilidadLluvia": "",
       "periodos": [
         {
