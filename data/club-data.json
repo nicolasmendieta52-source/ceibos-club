@@ -43,9 +43,9 @@
       "categoria": "Basketball",
       "rival": "ORT BLANCO",
       "fecha": "2026-09-19",
-      "hora": "A confirmar",
+      "hora": "19:15",
       "local": true,
-      "cancha": "CANCHA A FIJAR"
+      "cancha": "G.WASTON"
     },
     {
       "deporte": "futbol",
@@ -2640,7 +2640,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-15T21:27:49.183Z",
+  "actualizadoEn": "2026-09-16T04:57:30.148Z",
   "diagnostico": {
     "fuentes": [
       {
