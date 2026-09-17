@@ -1,60 +1,6 @@
 {
   "partidos": [
     {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "Bella Unión U.",
-      "fecha": "2026-09-05",
-      "hora": "17:30",
-      "local": false,
-      "cancha": "Trouville Hay Que ster O) pepsi a ZuierTa mmm BUM AOMINON FED"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "erde vs. La Blanqueada",
-      "fecha": "2026-09-05",
-      "hora": "11:15",
-      "local": false,
-      "cancha": "Juan XXIII"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "erde VS La Blangueada",
-      "fecha": "2026-09-05",
-      "hora": "11:15",
-      "local": false,
-      "cancha": "Juan XXIII"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "San Isidro Lomas BN",
-      "fecha": "2026-09-06",
-      "hora": "11:15",
-      "local": true,
-      "cancha": "Los Ceibos"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "San Isidro Lomas E",
-      "fecha": "2026-09-06",
-      "hora": "11:15",
-      "local": true,
-      "cancha": "Los Ceibos"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "L & C Inglés",
-      "fecha": "2026-09-06",
-      "hora": "15:30",
-      "local": false,
-      "cancha": "inglés utr 8) pepsi a ZILLERTAL Zero BUM AOMINON FED KASD"
-    },
-    {
       "deporte": "futbol",
       "categoria": "PreSenior",
       "rival": "San lsidro de Lomas",
@@ -71,51 +17,6 @@
       "hora": "11:15",
       "local": false,
       "cancha": "San isdro de lomas"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "erde vs. San Isidro de Lomas",
-      "fecha": "2026-09-12",
-      "hora": "11:15",
-      "local": true,
-      "cancha": "Los Ceibos"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "San Juan Bautista BN",
-      "fecha": "2026-09-13",
-      "hora": "09:00",
-      "local": false,
-      "cancha": "Las Casuarinas"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "Playa Honda",
-      "fecha": "2026-09-13",
-      "hora": "15:30",
-      "local": false,
-      "cancha": "Cupra Univerisitario _ utr 8) pepsi a ZILLERTAL Zero BUM AOMINON FED"
-    },
-    {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "YOUNG UNIVERSITARIO",
-      "fecha": "2026-09-16",
-      "hora": "22:00",
-      "local": false,
-      "cancha": "G. 25 DE AGOSTO"
-    },
-    {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "Young Univerisitario",
-      "fecha": "2026-09-16",
-      "hora": "22:00",
-      "local": false,
-      "cancha": "25 de agosto Hay Que ster e) pepsi a ZuierTa mmm BUM AOMINON FED"
     },
     {
       "deporte": "basketball",
@@ -160,7 +61,7 @@
       "fecha": "2026-09-19",
       "hora": "15:30",
       "local": false,
-      "cancha": "COMP. DEVOTO (NAUT. PICHINCHA)"
+      "cancha": "LOS HORNEROS"
     },
     {
       "deporte": "rugby",
@@ -2727,10 +2628,18 @@
         "ALEJANDRO MARIA GONZALEZ (49')",
         "ALEJANDRO MARIA GONZALEZ (65')"
       ]
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "YOUNG UNIVERSITARIO",
+      "gf": 54,
+      "gc": 60,
+      "fecha": "2026-09-16"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-17T17:13:00.689Z",
+  "actualizadoEn": "2026-09-17T21:28:56.877Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2778,25 +2687,22 @@
         "deporte": "basketball",
         "categoria": "Basketball",
         "url": "https://ligauniversitaria.org.uy/resultados/B221B3.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://ligauniversitaria.org.uy/resultados/B221B3.html\nCall log:\n  - navigating to \"https://ligauniversitaria.org.uy/resultados/B221B3.html\", waiting until \"domcontentloaded\"\n"
+        "registros": 6,
+        "estado": "ok"
       },
       {
         "deporte": "basketball",
         "categoria": "Basketball",
         "url": "https://ligauniversitaria.org.uy/partidos/B221B3.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://ligauniversitaria.org.uy/partidos/B221B3.html\", waiting until \"domcontentloaded\"\n"
+        "registros": 1,
+        "estado": "ok"
       },
       {
         "deporte": "basketball",
         "categoria": "Basketball",
         "url": "https://ligauniversitaria.org.uy/resultados/B221B.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://ligauniversitaria.org.uy/resultados/B221B.html\", waiting until \"domcontentloaded\"\n"
+        "registros": 15,
+        "estado": "ok"
       },
       {
         "deporte": "basketball",
@@ -2809,55 +2715,50 @@
         "deporte": "futbol",
         "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS31.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "fetch failed"
+        "registros": 14,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS31.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://ligauniversitaria.org.uy/partidos/F2B2RS31.html\", waiting until \"domcontentloaded\"\n"
+        "registros": 1,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS1.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "fetch failed"
+        "registros": 14,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS1.html",
-        "registros": 0,
-        "estado": "sin-coincidencias"
+        "registros": 1,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "HTTP 500 al consultar la Liga Universitaria"
+        "registros": 14,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/partidos/F21B.html",
-        "registros": 0,
-        "estado": "sin-coincidencias"
+        "registros": 1,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "fetch failed"
+        "registros": 5,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
@@ -2870,9 +2771,8 @@
         "deporte": "futbol",
         "categoria": "PreSenior",
         "url": "https://ligauniversitaria.org.uy/resultados/F3232PSC.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "fetch failed"
+        "registros": 14,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
@@ -2899,9 +2799,8 @@
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/resultados/F181818-5-.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "This operation was aborted"
+        "registros": 7,
+        "estado": "ok"
       }
     ],
     "instagram": {
