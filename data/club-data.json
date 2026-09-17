@@ -2640,7 +2640,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-17T05:00:37.535Z",
+  "actualizadoEn": "2026-09-17T11:50:30.008Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2779,8 +2779,8 @@
         "deporte": "futbol",
         "categoria": "PreSenior",
         "url": "https://ligauniversitaria.org.uy/partidos/F3232PSC.html",
-        "registros": 0,
-        "estado": "sin-coincidencias"
+        "registros": 1,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
