@@ -2639,7 +2639,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-17T21:28:56.877Z",
+  "actualizadoEn": "2026-09-18T04:52:13.933Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2805,11 +2805,11 @@
     ],
     "instagram": {
       "estado": "ok",
-      "registros": 45,
-      "imagenes": 17,
-      "publicacionesApify": 4,
+      "registros": 23,
+      "imagenes": 10,
+      "publicacionesApify": 3,
       "historiasMencionadas": 0,
-      "cache": 17,
+      "cache": 10,
       "nuevas": 0
     }
   }
