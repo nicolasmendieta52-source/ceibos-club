@@ -5,8 +5,8 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-09-18 12:00",
-  "actualizado": "2026-09-18T16:28:41.814Z",
+  "publicado": "2026-09-18 18:00",
+  "actualizado": "2026-09-18T20:57:21.003Z",
   "pronosticos": [
     {
       "fecha": "2026-09-18",
@@ -27,7 +27,7 @@
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Algo nuboso y nuboso.",
+          "descripcion": "Nuboso y cubierto.",
           "evolucion": "",
           "detalle": "",
           "viento": "NE 10-40 km/h."
@@ -39,7 +39,7 @@
       "diaMasN": 1,
       "etiqueta": "Sábado 19",
       "temperaturaMin": 12,
-      "temperaturaMax": 21,
+      "temperaturaMax": 23,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -64,8 +64,8 @@
       "fecha": "2026-09-20",
       "diaMasN": 2,
       "etiqueta": "Domingo 20",
-      "temperaturaMin": 14,
-      "temperaturaMax": 21,
+      "temperaturaMin": 15,
+      "temperaturaMax": 22,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -74,7 +74,7 @@
           "descripcion": "Nuboso y cubierto.",
           "evolucion": "Probables precipitaciones.",
           "detalle": "Neblinas y bancos de niebla.",
-          "viento": "Sector N 10-30 km/h."
+          "viento": "NE al NW 10-30 km/h."
         },
         {
           "orden": 2,
@@ -82,7 +82,7 @@
           "descripcion": "Nuboso y cubierto.",
           "evolucion": "Precipitaciones y tormentas.",
           "detalle": "",
-          "viento": "Sector W 10-40 km/h, rachas de hasta 50 km/h. Rachas fuertes asociadas a tormentas."
+          "viento": "NW al SW 10-40 km/h, rachas de hasta 50 km/h. Rachas fuertes asociadas a tormentas."
         }
       ]
     },
@@ -110,7 +110,7 @@
       "etiqueta": "Miércoles 23",
       "temperaturaMin": 9,
       "temperaturaMax": 20,
-      "probabilidadLluvia": "Baja",
+      "probabilidadLluvia": "Nula",
       "periodos": []
     },
     {
