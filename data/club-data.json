@@ -20,15 +20,6 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
-      "fecha": "2026-09-19",
-      "hora": "09:00",
-      "local": false,
-      "cancha": "COMP. DEVOTO (NAUT. PICHINCHA)"
-    },
-    {
-      "deporte": "futbol",
       "categoria": "Sub 20",
       "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
       "fecha": "2026-09-19",
@@ -2629,6 +2620,14 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
+      "gf": 0,
+      "gc": 0,
+      "fecha": "2026-09-19"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva Verde",
       "rival": "PEÑAROL UNIVERSITARIO",
       "gf": 1,
@@ -2637,7 +2636,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-19T15:58:27.251Z",
+  "actualizadoEn": "2026-09-19T20:48:02.117Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2727,15 +2726,15 @@
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS1.html",
-        "registros": 14,
+        "registros": 15,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS1.html",
-        "registros": 1,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "sin-coincidencias"
       },
       {
         "deporte": "futbol",

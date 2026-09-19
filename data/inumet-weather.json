@@ -5,15 +5,15 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-09-19 12:00",
-  "actualizado": "2026-09-19T15:55:57.652Z",
+  "publicado": "2026-09-19 18:00",
+  "actualizado": "2026-09-19T20:45:33.060Z",
   "pronosticos": [
     {
       "fecha": "2026-09-19",
       "diaMasN": 0,
       "etiqueta": "Sábado 19",
       "temperaturaMin": 12,
-      "temperaturaMax": 24,
+      "temperaturaMax": 25,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -27,7 +27,7 @@
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Nuboso, períodos de algo nuboso.",
+          "descripcion": "Nuboso y cubierto.",
           "evolucion": "",
           "detalle": "",
           "viento": "Sector E 10-30 km/h."
@@ -39,14 +39,14 @@
       "diaMasN": 1,
       "etiqueta": "Domingo 20",
       "temperaturaMin": 15,
-      "temperaturaMax": 22,
+      "temperaturaMax": 23,
       "probabilidadLluvia": "",
       "periodos": [
         {
           "orden": 1,
           "nombre": "Mañana",
           "descripcion": "Nuboso y cubierto.",
-          "evolucion": "Probables precipitaciones.",
+          "evolucion": "Baja probabilidad de precipitaciones escasas.",
           "detalle": "Neblinas y bancos de niebla.",
           "viento": "NE al NW 10-30 km/h."
         },
@@ -56,7 +56,7 @@
           "descripcion": "Nuboso y cubierto.",
           "evolucion": "Precipitaciones y tormentas.",
           "detalle": "",
-          "viento": "NW al SW 10-40 km/h, rachas de hasta 50 km/h. Rachas fuertes asociadas a tormentas."
+          "viento": "NW 10-30 km/h al SW 10-40 km/h, rachas de 50-60 km/h. Rachas fuertes asociadas a tormentas."
         }
       ]
     },
@@ -64,7 +64,7 @@
       "fecha": "2026-09-21",
       "diaMasN": 2,
       "etiqueta": "Lunes 21",
-      "temperaturaMin": 11,
+      "temperaturaMin": 12,
       "temperaturaMax": 18,
       "probabilidadLluvia": "",
       "periodos": [
@@ -74,15 +74,15 @@
           "descripcion": "Algo nuboso y nuboso, períodos de cubierto.",
           "evolucion": "Precipitaciones y probables tormentas.",
           "detalle": "Ventoso.",
-          "viento": "SW y W 30-40 km/h, rachas de 50-60 km/h. Probables rachas fuertes asociadas a tormentas."
+          "viento": "SW y W 30-40 km/h, rachas de 50-60 km/h."
         },
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
           "descripcion": "Nuboso y cubierto, períodos de algo nuboso.",
-          "evolucion": "Temperatura en descenso.",
-          "detalle": "Ventoso.",
-          "viento": "W al SW 30-40 km/h, rachas de hasta 70 km/h."
+          "evolucion": "Probables precipitaciones aisladas.",
+          "detalle": "Temperatura en descenso. Ventoso.",
+          "viento": "W al SW 30-40 km/h, rachas de 50-70 km/h y ocasionalmente superiores."
         }
       ]
     },
@@ -91,7 +91,7 @@
       "diaMasN": 3,
       "etiqueta": "Martes 22",
       "temperaturaMin": 9,
-      "temperaturaMax": 12,
+      "temperaturaMax": 13,
       "probabilidadLluvia": "Nula",
       "periodos": []
     },
@@ -108,7 +108,7 @@
       "fecha": "2026-09-24",
       "diaMasN": 5,
       "etiqueta": "Jueves 24",
-      "temperaturaMin": 8,
+      "temperaturaMin": 10,
       "temperaturaMax": 21,
       "probabilidadLluvia": "Nula",
       "periodos": []
@@ -117,8 +117,8 @@
       "fecha": "2026-09-25",
       "diaMasN": 6,
       "etiqueta": "Viernes 25",
-      "temperaturaMin": 11,
-      "temperaturaMax": 25,
+      "temperaturaMin": 13,
+      "temperaturaMax": 23,
       "probabilidadLluvia": "Nula",
       "periodos": []
     }
