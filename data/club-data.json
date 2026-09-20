@@ -20,31 +20,6 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Sub 20",
-      "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
-      "fecha": "2026-09-19",
-      "hora": "15:30",
-      "local": false,
-      "cancha": "LOS HORNEROS"
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Intermedia",
-      "rival": "Pucaru Stade Gaulois",
-      "fecha": "2026-09-19",
-      "hora": "14:00",
-      "local": false
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Primera",
-      "rival": "Pucaru Stade Gaulois",
-      "fecha": "2026-09-19",
-      "hora": "15:45",
-      "local": false
-    },
-    {
-      "deporte": "futbol",
       "categoria": "Primera",
       "rival": "CIRCULO DE TENIS MONTEVIDEO",
       "fecha": "2026-09-20",
@@ -2633,10 +2608,34 @@
       "gf": 1,
       "gc": 1,
       "fecha": "2026-09-19"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
+      "gf": 3,
+      "gc": 1,
+      "fecha": "2026-09-19"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Pucaru Stade Gaulois",
+      "gf": 62,
+      "gc": 12,
+      "fecha": "2026-09-19"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Pucaru Stade Gaulois",
+      "gf": 42,
+      "gc": 26,
+      "fecha": "2026-09-19"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-19T20:48:02.117Z",
+  "actualizadoEn": "2026-09-20T05:00:58.826Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2782,15 +2781,15 @@
         "deporte": "futbol",
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/resultados/F202020A.html",
-        "registros": 14,
+        "registros": 15,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/partidos/F202020A.html",
-        "registros": 1,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "sin-coincidencias"
       },
       {
         "deporte": "futbol",
