@@ -19,15 +19,6 @@
       "cancha": "San isdro de lomas"
     },
     {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "CIRCULO DE TENIS MONTEVIDEO",
-      "fecha": "2026-09-20",
-      "hora": "11:15",
-      "local": true,
-      "cancha": "MONTE VI \"LOS CEIBOS\""
-    },
-    {
       "deporte": "basketball",
       "categoria": "Basketball",
       "rival": "ORT BLANCO",
@@ -2591,7 +2582,12 @@
       "rival": "OLIMAR",
       "gf": 3,
       "gc": 1,
-      "fecha": "2026-09-19"
+      "fecha": "2026-09-19",
+      "goleadores": [
+        "JUAN MARTIN DIAZ (14')",
+        "FRANCISCO CARRIQUIRY (32')",
+        "VARTAN AGHASI SANTURIAN (95')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -2615,7 +2611,12 @@
       "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
       "gf": 3,
       "gc": 1,
-      "fecha": "2026-09-19"
+      "fecha": "2026-09-19",
+      "goleadores": [
+        "SANTIAGO PONS (43')",
+        "IGNACIO SERE (72')",
+        "IGNACIO SERE (88')"
+      ]
     },
     {
       "deporte": "rugby",
@@ -2632,10 +2633,24 @@
       "gf": 42,
       "gc": 26,
       "fecha": "2026-09-19"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "CIRCULO DE TENIS MONTEVIDEO",
+      "gf": 4,
+      "gc": 2,
+      "fecha": "2026-09-20",
+      "goleadores": [
+        "FERNANDO INTHAMOUSSU (7')",
+        "RAFAEL MARIANO BERAMENDI (16')",
+        "RAFAEL MARIANO BERAMENDI (22')",
+        "JUAN DIEGO TORRES NEGREIRA (62')"
+      ]
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-21T13:36:45.686Z",
+  "actualizadoEn": "2026-09-21T22:04:16.500Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -2739,15 +2754,15 @@
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
-        "registros": 14,
+        "registros": 15,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/partidos/F21B.html",
-        "registros": 1,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "sin-coincidencias"
       },
       {
         "deporte": "futbol",
