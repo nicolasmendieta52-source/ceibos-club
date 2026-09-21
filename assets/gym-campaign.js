@@ -30,9 +30,7 @@ export function brickLayout(data, columns) {
     else if (data.brickLabels?.[i]?.trim() || data.fills?.[i] > 0) contributors.push(i);
     else empty.push(i);
   }
-  // Separate the groups into rows when there are free places available.
-  const padding = Math.min((columns - sponsors.length % columns) % columns, empty.length);
-  const order = [...sponsors, ...empty.slice(0, padding), ...contributors, ...empty.slice(padding)];
+  const order = [...sponsors, ...contributors, ...empty];
   const positions = [];
   order.forEach((id, index) => { positions[id] = brickPosition(index, columns); });
   return positions;
@@ -142,11 +140,11 @@ export function initCampaign(root) {
       brick.querySelector('.gym-brick-label').textContent = typeof label === 'string' ? label : '';
       brick.classList.toggle('has-contributor', Boolean(label));
       brick.classList.toggle('has-unfilled-label', Boolean(label) && next.fills[i] < 1);
-      brick.title = `Ladrillo ${i + 1}${label ? ` · ${label.replace(/\s+/g, ' ')}` : ''}${sponsor ? ` · Sponsor${next.fills[i] === 0 ? ' · Pago pendiente' : ''}` : ''}`;
+      brick.title = `Ladrillo ${i + 1}${label ? ` · ${label.replace(/\s+/g, ' ')}` : ''}${sponsor ? ' · Sponsor' : ''}`;
       if (previous && (next.fills[i] > previous.fills[i] || (label && label !== previous.brickLabels?.[i]) || sponsor !== Boolean(previous.brickSponsors?.[i]))) changed.push(i);
     });
     const names = Array.isArray(next.brickLabels)
-      ? next.brickLabels.map((name, i) => typeof name === 'string' && name.trim() ? `${name.replace(/\s+/g, ' ')}${next.brickSponsors?.[i] ? ` (sponsor${next.fills[i] === 0 ? ', pago pendiente' : ''})` : ''}` : '').filter(Boolean) : [];
+      ? next.brickLabels.map((name, i) => typeof name === 'string' && name.trim() ? `${name.replace(/\s+/g, ' ')}${next.brickSponsors?.[i] ? ' (sponsor)' : ''}` : '').filter(Boolean) : [];
     select('contributors').textContent = names.length ? `Nos acompañan: ${names.join('; ')}.` : '';
     select('raised').textContent = money(next.raised);
     select('goal').textContent = money(next.goal);
@@ -156,7 +154,7 @@ export function initCampaign(root) {
     select('progress').setAttribute('aria-valuetext', `${percentage(next.percent)}% de la meta. ${money(next.raised)} recaudados de ${money(next.goal)}.`);
     select('unit').textContent = next.brickProgress ? 'un aporte al gimnasio' : money(next.brickValue);
     select('wall-summary').textContent = next.brickProgress
-      ? `${next.fills.filter(fill => fill > 0).length} de ${BRICK_COUNT} ladrillos con pagos confirmados`
+      ? `${names.length} de ${BRICK_COUNT} ladrillos ocupados`
       : `${Math.floor(next.progress * BRICK_COUNT)} de ${BRICK_COUNT} ladrillos completos`;
     const cta = select('cta');
     cta.href = contributionLink(next.contributionUrl);

@@ -16,12 +16,10 @@ export function campaignFromLedger(summary, rows, sponsors = []) {
     if (!Number.isInteger(id)||id<1||id>COUNT||seen.has(id)) throw new Error('Numeración inválida o duplicada');
     seen.add(id);
     if (typeof name!=='string'||name.length>160||/^#(REF!|VALUE!|ERROR!|N\/A)/.test(name)) throw new Error(`Nombre inválido en ladrillo ${id}`);
-    if (!['Pendiente','Confirmado'].includes(state)||!['Sí','No'].includes(included)||!['Aportante','Sponsor'].includes(type)) throw new Error(`Clasificación inválida en ladrillo ${id}`);
+    if (!['Sí','No'].includes(included)||!['Aportante','Sponsor'].includes(type)) throw new Error(`Clasificación inválida en ladrillo ${id}`);
     if (paid!==''&&!validAmount(paid)) throw new Error(`Pago inválido en ladrillo ${id}`);
-    const confirmed=state==='Confirmado';
-    if (confirmed&&included==='No'&&paid==='') throw new Error(`Falta importe confirmado en ladrillo ${id}`);
-    if (confirmed&&included==='No') total+=cents(paid);
-    const hasPayment=confirmed&&(included==='Sí'||paid>0);
+    if (included==='No'&&paid!=='') total+=cents(paid);
+    const hasPayment=included==='Sí'||paid>0;
     const sponsor=type==='Sponsor'&&Boolean(name.trim());
     brickLabels[id-1]=(hasPayment||sponsor)?name.trim().replace(/ y flia$/, '\ny flia'):'';
     brickSponsors[id-1]=sponsor;
@@ -31,10 +29,10 @@ export function campaignFromLedger(summary, rows, sponsors = []) {
     }
   }
   if (total!==cents(reported)) throw new Error('El total calculado no coincide con el resumen');
-  // The club keeps pending companies in its separate Sponsors tab. Use only
+  // The club keeps companies in its separate Sponsors tab. Use only
   // unnamed, unpaid slots; never overwrite an existing person's ledger entry.
   const normalize = name => name.trim().toLocaleLowerCase('es-UY');
-  const available = rows.slice(1).filter(r => !(r[1] || '').trim() && !r[3] && r[4] === 'Pendiente').map(r => r[0] - 1).sort((a,b)=>a-b);
+  const available = rows.slice(1).filter(r => !(r[1] || '').trim() && !r[3] && r[5] !== 'Sí').map(r => r[0] - 1).sort((a,b)=>a-b);
   const seenSponsors = new Set();
   for (const entry of sponsors) {
     const name = entry?.[0] ?? '';

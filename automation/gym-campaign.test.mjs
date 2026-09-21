@@ -10,7 +10,10 @@ test('sponsors abajo y aportantes arriba sin cambiar los IDs ni perder lugares',
     const layout=brickLayout(campaignModel(data),columns);
     assert.equal(new Set(layout.map(p=>`${p.row}/${p.column}`)).size,60);
     assert.deepEqual(layout[29],{row:60/columns,column:1});
-    assert.ok(Math.min(...layout.slice(29,41).map(p=>p.row))>Math.max(...layout.slice(0,29).map(p=>p.row)));
+    assert.ok(Math.min(...layout.slice(29,41).map(p=>p.row))>=Math.max(...layout.slice(0,29).map(p=>p.row)));
+    const slot=p=>(60/columns-p.row)*columns+p.column-1;
+    assert.deepEqual(layout.slice(29,41).map(slot),Array.from({length:12},(_,i)=>i));
+    assert.deepEqual(layout.slice(0,29).map(slot),Array.from({length:29},(_,i)=>i+12));
     // A new sponsor is moved into the lower group without changing its identity.
     const changed={...data,brickSponsors:data.brickSponsors.map((s,i)=>s||i===0)};
     assert.deepEqual(brickLayout(campaignModel(changed),columns)[0],{row:60/columns,column:1});

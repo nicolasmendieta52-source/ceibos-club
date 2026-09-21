@@ -12,9 +12,21 @@ test('sponsors pendientes se muestran sin sumar y las cuotas se actualizan sin d
  assert.deepEqual(campaignFromLedger(summary,[rows[0],...rows.slice(1).reverse()]),campaignFromLedger(summary,rows));
 });
 test('rechaza datos incompletos, duplicados y diferencias de totales',()=>{
- for(const mutate of [r=>r.pop(),r=>r[2][0]=1,r=>r[1][3]=-1,r=>r[1][4]='Pagado',r=>{r[1][4]='Confirmado';r[1][3]=10;},r=>{r[1][4]='Confirmado';}]){
+ for(const mutate of [r=>r.pop(),r=>r[2][0]=1,r=>r[1][3]=-1,r=>r[1][8]='Inválido',r=>{r[1][4]='Confirmado';r[1][3]=10;}]){
  const {summary,rows}=fixture();mutate(rows);assert.throws(()=>campaignFromLedger(summary,rows));
  }
+});
+
+test('todo importe anotado cuenta independientemente del estado, sin duplicar saldo inicial',()=>{
+ const {summary,rows}=fixture();
+ rows[1]=[1,'Ana',1000,500,'Pendiente','No','','','Aportante'];
+ summary[0][1]=87950;
+ const paid=campaignFromLedger(summary,rows);
+ assert.equal(paid.raised,87950);assert.equal(paid.brickLabels[0],'Ana');assert.equal(paid.brickProgress[0],.5);
+ for(const state of ['Confirmado','','Pagado']){rows[1][4]=state;assert.deepEqual(campaignFromLedger(summary,rows),paid);}
+ rows[1][5]='Sí';summary[0][1]=87450;assert.equal(campaignFromLedger(summary,rows).raised,87450);
+ rows[1][5]='No';rows[1][3]='';assert.equal(campaignFromLedger(summary,rows).brickLabels[0],'');
+ rows[1][3]=0;assert.equal(campaignFromLedger(summary,rows).raised,87450);
 });
 
 test('integra Sponsors sin sumar pendientes, duplicar empresas ni ocupar filas con personas',()=>{
