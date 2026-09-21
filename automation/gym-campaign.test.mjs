@@ -1,6 +1,31 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { campaignModel, contributionLink, campaignFromCsv, BRICK_COUNT, brickPosition } from '../assets/gym-campaign.js';
+import { campaignModel, contributionLink, campaignFromCsv, BRICK_COUNT, brickPosition, brickLayout } from '../assets/gym-campaign.js';
+
+test('sponsors abajo y aportantes arriba sin cambiar los IDs ni perder lugares', () => {
+  const data={goal:200000,raised:57260,brickSponsors:Array(60).fill(false),brickLabels:Array(60).fill(''),brickProgress:Array(60).fill(0)};
+  for(let i=0;i<29;i++){data.brickLabels[i]=`Persona ${i}`;data.brickProgress[i]=1;}
+  for(let i=29;i<41;i++){data.brickLabels[i]=`Sponsor ${i}`;data.brickSponsors[i]=true;}
+  for(const columns of [10,5]){
+    const layout=brickLayout(campaignModel(data),columns);
+    assert.equal(new Set(layout.map(p=>`${p.row}/${p.column}`)).size,60);
+    assert.deepEqual(layout[29],{row:60/columns,column:1});
+    assert.ok(Math.min(...layout.slice(29,41).map(p=>p.row))>Math.max(...layout.slice(0,29).map(p=>p.row)));
+    // A new sponsor is moved into the lower group without changing its identity.
+    const changed={...data,brickSponsors:data.brickSponsors.map((s,i)=>s||i===0)};
+    assert.deepEqual(brickLayout(campaignModel(changed),columns)[0],{row:60/columns,column:1});
+  }
+  assert.equal(data.brickLabels[0],'Persona 0');
+});
+
+test('pared vacía o llena conserva 60 posiciones incluso si no hay espacio entre grupos', () => {
+  for(const columns of [10,5])for(const count of [0,12,59,60]){
+    const data={brickSponsors:Array.from({length:60},(_,i)=>i<count),brickLabels:Array(60).fill('Nombre')};
+    const positions=brickLayout(data,columns);
+    assert.equal(new Set(positions.map(p=>`${p.row}/${p.column}`)).size,60);
+    assert.ok(positions.every(p=>p.row>=1&&p.row<=60/columns&&p.column>=1&&p.column<=columns));
+  }
+});
 
 test('los sponsors pendientes conservan importe cero y el avance individual cambia con cada pago', () => {
   const data={goal:200000,raised:500,brickProgress:Array(60).fill(0),brickSponsors:Array(60).fill(false)};

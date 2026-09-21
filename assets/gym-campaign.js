@@ -22,6 +22,22 @@ export function brickPosition(index, columns) {
   return { row: BRICK_COUNT / columns - Math.floor(index / columns), column: index % columns + 1 };
 }
 
+// Keep each ledger ID attached to its data; only its visual position changes.
+export function brickLayout(data, columns) {
+  const sponsors = [], contributors = [], empty = [];
+  for (let i = 0; i < BRICK_COUNT; i++) {
+    if (data.brickSponsors?.[i]) sponsors.push(i);
+    else if (data.brickLabels?.[i]?.trim() || data.fills?.[i] > 0) contributors.push(i);
+    else empty.push(i);
+  }
+  // Separate the groups into rows when there are free places available.
+  const padding = Math.min((columns - sponsors.length % columns) % columns, empty.length);
+  const order = [...sponsors, ...empty.slice(0, padding), ...contributors, ...empty.slice(padding)];
+  const positions = [];
+  order.forEach((id, index) => { positions[id] = brickPosition(index, columns); });
+  return positions;
+}
+
 export function contributionLink(value) {
   try {
     const url = new URL(value);
@@ -83,11 +99,6 @@ export function initCampaign(root) {
   const bricks = Array.from({ length: BRICK_COUNT }, (_, i) => {
     const brick = document.createElement('span');
     brick.className = 'gym-brick';
-    for (const [prefix, columns] of [['', 10], ['mobile-', 5]]) {
-      const position = brickPosition(i, columns);
-      brick.style.setProperty(`--${prefix}row`, position.row);
-      brick.style.setProperty(`--${prefix}column`, position.column);
-    }
     const fill = document.createElement('span');
     fill.className = 'gym-brick-fill';
     brick.append(fill);
@@ -115,7 +126,13 @@ export function initCampaign(root) {
     const next = campaignModel(data);
     const previous = current;
     const changed = [];
+    const desktopLayout = brickLayout(next, 10);
+    const mobileLayout = brickLayout(next, 5);
     bricks.forEach((brick, i) => {
+      for (const [prefix, position] of [['', desktopLayout[i]], ['mobile-', mobileLayout[i]]]) {
+        brick.style.setProperty(`--${prefix}row`, position.row);
+        brick.style.setProperty(`--${prefix}column`, position.column);
+      }
       brick.style.setProperty('--fill', `${next.fills[i] * 100}%`);
       brick.classList.toggle('is-partial', next.fills[i] > 0 && next.fills[i] < 1);
       brick.classList.remove('is-placing');
