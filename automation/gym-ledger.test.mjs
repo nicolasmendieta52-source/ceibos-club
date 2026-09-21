@@ -16,3 +16,23 @@ test('rechaza datos incompletos, duplicados y diferencias de totales',()=>{
  const {summary,rows}=fixture();mutate(rows);assert.throws(()=>campaignFromLedger(summary,rows));
  }
 });
+
+test('integra Sponsors sin sumar pendientes, duplicar empresas ni ocupar filas con personas',()=>{
+ const {summary,rows}=fixture();
+ rows[1][1]='Persona pendiente';
+ rows[2]=[2,'FNC',5000,1000,'Confirmado','No','','nota privada','Sponsor'];
+ summary[0][1]=88450;
+ const m=campaignFromLedger(summary,rows,[['FNC'],['CATIVELLI'],[' fnc '],[],['FIXED']]);
+ assert.equal(m.raised,88450);
+ assert.equal(m.brickLabels[0],'');
+ assert.equal(m.brickLabels[1],'FNC');
+ assert.equal(m.brickProgress[1],.2);
+ assert.equal(m.brickLabels[2],'CATIVELLI');
+ assert.equal(m.brickProgress[2],0);
+ assert.equal(m.brickLabels[3],'FIXED');
+ assert.equal(m.brickSponsors.filter(Boolean).length,3);
+ assert.deepEqual(campaignFromLedger(summary,[rows[0],...rows.slice(1).reverse()],[['FNC'],['CATIVELLI'],['FIXED']]),m);
+ assert.throws(()=>campaignFromLedger(summary,rows,[['#REF!']]));
+ for(const row of rows.slice(1)) row[1] ||= 'Nombre reservado';
+ assert.throws(()=>campaignFromLedger(summary,rows,[['Empresa nueva']]),/lugares libres/);
+});
