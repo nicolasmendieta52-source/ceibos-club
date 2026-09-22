@@ -5,21 +5,21 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-09-22 12:00",
-  "actualizado": "2026-09-22T17:00:49.244Z",
+  "publicado": "2026-09-22 18:00",
+  "actualizado": "2026-09-22T21:23:18.282Z",
   "pronosticos": [
     {
       "fecha": "2026-09-22",
       "diaMasN": 0,
       "etiqueta": "Martes 22",
       "temperaturaMin": 6,
-      "temperaturaMax": 11,
+      "temperaturaMax": 12,
       "probabilidadLluvia": "",
       "periodos": [
         {
           "orden": 1,
           "nombre": "Mañana",
-          "descripcion": "Nuboso y cubierto.",
+          "descripcion": "Disminución de nubosidad.",
           "evolucion": "Chaparrones.",
           "detalle": "Ventoso, bajas sensaciones térmicas.",
           "viento": "SW 20-40 km/h, rachas de hasta 60 km/h. Amainando."
@@ -27,10 +27,10 @@
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Nuboso y cubierto.",
+          "descripcion": "Disminución de nubosidad.",
           "evolucion": "Bajas temperaturas.",
           "detalle": "Neblinas.",
-          "viento": "SW 10-30 km/h a variables 0-20 km/h."
+          "viento": "SW 10-30 km/h a variables 0-10 km/h."
         }
       ]
     },
@@ -38,7 +38,7 @@
       "fecha": "2026-09-23",
       "diaMasN": 1,
       "etiqueta": "Miércoles 23",
-      "temperaturaMin": 4,
+      "temperaturaMin": 3,
       "temperaturaMax": 17,
       "probabilidadLluvia": "",
       "periodos": [
@@ -46,9 +46,9 @@
           "orden": 1,
           "nombre": "Mañana",
           "descripcion": "Algo nuboso a nuboso.",
-          "evolucion": "Probables heladas agrometeorológicas.",
-          "detalle": "",
-          "viento": "Variables 0-20 km/h al N y NW 10-30 km/h."
+          "evolucion": "Heladas agrometeorológicas.",
+          "detalle": "Neblinas.",
+          "viento": "Variables 0-10 km/h al N y NW 10-30 km/h."
         },
         {
           "orden": 2,
@@ -56,7 +56,7 @@
           "descripcion": "Nuboso, períodos de cubierto.",
           "evolucion": "",
           "detalle": "",
-          "viento": "Sector N 10-30 km/h, rachas de 40 km/h."
+          "viento": "Sector N 10-30 km/h, rachas de hasta 40 km/h."
         }
       ]
     },
@@ -74,15 +74,15 @@
           "descripcion": "Nuboso, períodos de algo nuboso.",
           "evolucion": "",
           "detalle": "",
-          "viento": "Sector N 10-30 km/h, rachas de 40 km/h."
+          "viento": "N NW 10-30 km/h, rachas de hasta 40 km/h."
         },
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Algo nuboso a nuboso.",
+          "descripcion": "Algo nuboso y nuboso.",
           "evolucion": "",
           "detalle": "",
-          "viento": "Sector N 10-30 km/h, rachas de 40 km/h."
+          "viento": "N y NW 10-30 km/h, rachas de hasta 40 km/h."
         }
       ]
     },
@@ -91,7 +91,7 @@
       "diaMasN": 3,
       "etiqueta": "Viernes 25",
       "temperaturaMin": 12,
-      "temperaturaMax": 22,
+      "temperaturaMax": 24,
       "probabilidadLluvia": "Nula",
       "periodos": []
     },
@@ -100,7 +100,7 @@
       "diaMasN": 4,
       "etiqueta": "Sábado 26",
       "temperaturaMin": 13,
-      "temperaturaMax": 22,
+      "temperaturaMax": 24,
       "probabilidadLluvia": "Nula",
       "periodos": []
     },
@@ -109,7 +109,7 @@
       "diaMasN": 5,
       "etiqueta": "Domingo 27",
       "temperaturaMin": 11,
-      "temperaturaMax": 20,
+      "temperaturaMax": 22,
       "probabilidadLluvia": "Media",
       "periodos": []
     },
@@ -119,7 +119,7 @@
       "etiqueta": "Lunes 28",
       "temperaturaMin": 15,
       "temperaturaMax": 20,
-      "probabilidadLluvia": "Baja",
+      "probabilidadLluvia": "Alta",
       "periodos": []
     }
   ]
