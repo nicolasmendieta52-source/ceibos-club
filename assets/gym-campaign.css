@@ -58,6 +58,14 @@
 .gym-tagline{position:absolute;top:91.2%;left:29.3%;right:29.3%;display:flex;align-items:center;justify-content:center;gap:1.5cqw;white-space:nowrap;font:500 1.2cqw/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase}
 .gym-tagline::before,.gym-tagline::after{content:'';height:1px;background:var(--dorado);flex:1;min-width:5cqw}
 .gym-participate{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;column-gap:26px;row-gap:12px;padding:0 6% 35px;background:#faf9f6}
+.gym-sponsors-band{background:#fff;border-top:3px solid var(--dorado);padding:22px 4% 30px;margin-bottom:28px}
+#gym-campaign .gym-sponsors-band h3{text-align:center;font:500 11px/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase;color:#315447;margin:0 0 22px}
+.gym-sponsors{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:22px 28px;list-style:none;margin:0;padding:0;align-items:center}
+.gym-sponsor{height:60px;min-width:0;display:flex;align-items:center;justify-content:center;padding:5px;font:600 16px/1.2 var(--body);color:#234c3b;text-align:center}
+.gym-sponsor img,.gym-sponsor svg{display:block;width:100%;height:100%;object-fit:contain}
+.gym-sponsor-monochrome{filter:brightness(0);opacity:.85}
+.gym-sponsor-dark{background:#183b2f;border-radius:2px;padding:9px}
+@media(max-width:700px){.gym-sponsors-band{padding:22px 5% 26px}.gym-sponsors{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 14px}.gym-sponsor{height:44px;padding:2px;font-size:13px}.gym-sponsor-dark{padding:6px}}
 #gym-campaign .gym-cta{display:inline-flex;align-items:center;gap:28px;min-height:48px;padding:14px 24px;background:linear-gradient(115deg,#2d5044,#25473c);color:white;border:1px solid #315447;border-radius:5px;font:600 .78rem/1.3 var(--body);letter-spacing:.06em;text-decoration:none;transition:transform .2s,background .2s}
 #gym-campaign .gym-cta:hover{background:#1e3a30;transform:translateY(-2px)}
 #gym-campaign a:focus-visible{outline:3px solid var(--dorado);outline-offset:5px}

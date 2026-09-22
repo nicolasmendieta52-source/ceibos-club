@@ -1,14 +1,22 @@
 export const BRICK_COUNT = 60;
 const SPONSOR_LOGOS = {
-  FNC: ['fnc.png', true], FIXED: ['fixed.png', true], PQUICK: ['pquick.svg'],
+  FNC: ['fnc.png'], FIXED: ['fixed.png', true], PQUICK: ['pquick.svg'],
   CATIVELLI: ['cattivelli.jpg'], CATTIVELLI: ['cattivelli.jpg'],
   MEGAAGRO: ['megaagro.svg'], BLUECROSS: ['bluecross.png'], ACSA: ['acsa.webp', true],
   SUBARU: ['subaru.png'], EUROPCAR: ['europcar.svg']
 };
 
 export function sponsorLogo(name) {
-  const entry = SPONSOR_LOGOS[String(name).trim().toUpperCase()];
-  return entry ? { src: `/assets/sponsors/${entry[0]}`, dark: Boolean(entry[1]) } : null;
+  const normalized = String(name).trim().toUpperCase();
+  const referenceLogos = {
+    CATIVELLI: '605 206 114 54', CATTIVELLI: '605 206 114 54',
+    FIXED: '1057 201 115 61', ACSA: '774 304 99 45'
+  };
+  if (referenceLogos[normalized]) return { viewBox: referenceLogos[normalized] };
+  if (normalized === 'DEDISEÑO') return { viewBox: '161 295 145 57' };
+  if (normalized === 'DOMINION') return { viewBox: '878 210 160 45' };
+  const entry = SPONSOR_LOGOS[normalized];
+  return entry ? { src: `/assets/sponsors/${entry[0]}`, dark: Boolean(entry[1]), monochrome: normalized === 'FNC' } : null;
 }
 const FALLBACK_CONTACT = 'mailto:info@ceibosclub.com?subject=Quiero%20colaborar%20con%20el%20Gimnasio%20de%20Ceibos';
 
@@ -22,10 +30,15 @@ export function campaignModel(data) {
       data.brickProgress.some(n => typeof n !== 'number' || !Number.isFinite(n) || n < 0 || n > 1))) throw new TypeError('Avance por ladrillo inválido.');
   if (data.brickSponsors !== undefined && (!Array.isArray(data.brickSponsors) || data.brickSponsors.length !== BRICK_COUNT ||
       data.brickSponsors.some(n => typeof n !== 'boolean'))) throw new TypeError('Tipos de ladrillo inválidos.');
+  // Migrate older cached snapshots as well: companies never consume wall slots.
+  const sponsors = [...new Set([...(data.sponsors || []), ...(data.brickLabels || []).filter((_, i) => data.brickSponsors?.[i])])];
+  const brickLabels = data.brickLabels?.map((name, i) => data.brickSponsors?.[i] ? '' : name);
+  const fills = (data.brickProgress || Array.from({ length: BRICK_COUNT }, (_, i) => Math.max(0, Math.min(1, progress * BRICK_COUNT - i))))
+    .map((fill, i) => data.brickSponsors?.[i] ? 0 : fill);
   return {
-    ...data, progress, percent: progress * 100,
+    ...data, sponsors, brickLabels, brickSponsors: Array(BRICK_COUNT).fill(false), brickProgress: data.brickProgress ? fills : undefined, progress, percent: progress * 100,
     remaining: Math.max(0, data.goal - data.raised), brickValue: data.goal / BRICK_COUNT,
-    fills: data.brickProgress || Array.from({ length: BRICK_COUNT }, (_, i) => Math.max(0, Math.min(1, progress * BRICK_COUNT - i)))
+    fills
   };
 }
 
@@ -35,13 +48,12 @@ export function brickPosition(index, columns) {
 
 // Keep each ledger ID attached to its data; only its visual position changes.
 export function brickLayout(data, columns) {
-  const sponsors = [], contributors = [], empty = [];
+  const contributors = [], empty = [];
   for (let i = 0; i < BRICK_COUNT; i++) {
-    if (data.brickSponsors?.[i]) sponsors.push(i);
-    else if (data.brickLabels?.[i]?.trim() || data.fills?.[i] > 0) contributors.push(i);
+    if (data.brickLabels?.[i]?.trim() || data.fills?.[i] > 0) contributors.push(i);
     else empty.push(i);
   }
-  const order = [...sponsors, ...contributors, ...empty];
+  const order = [...contributors, ...empty];
   const positions = [];
   order.forEach((id, index) => { positions[id] = brickPosition(index, columns); });
   return positions;
@@ -131,6 +143,45 @@ export function initCampaign(root) {
     });
   }
 
+  let lastSponsors = '';
+  function renderSponsors(names) {
+    const list = select('sponsors');
+    if (!list || JSON.stringify(names) === lastSponsors) return;
+    lastSponsors = JSON.stringify(names);
+    list.replaceChildren();
+    for (const name of names) {
+      const item = document.createElement('li');
+      item.className = 'gym-sponsor';
+      const logo = sponsorLogo(name);
+      if (logo?.viewBox) {
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.setAttribute('viewBox', logo.viewBox);
+        svg.setAttribute('role', 'img');
+        svg.setAttribute('aria-label', name);
+        const clip = document.createElementNS('http://www.w3.org/2000/svg', 'clipPath');
+        const clipId = `gym-sponsor-crop-${list.children.length}`;
+        clip.setAttribute('id', clipId);
+        const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+        const bounds = logo.viewBox.split(' ');
+        ['x', 'y', 'width', 'height'].forEach((key, index) => rect.setAttribute(key, bounds[index]));
+        clip.append(rect); svg.append(clip);
+        const image = document.createElementNS('http://www.w3.org/2000/svg', 'image');
+        image.setAttribute('clip-path', `url(#${clipId})`);
+        image.setAttribute('href', '/assets/sponsors/club-sponsors-reference.png');
+        image.setAttribute('width', '1179'); image.setAttribute('height', '456');
+        svg.append(image); item.append(svg);
+      } else if (logo) {
+        const img = document.createElement('img');
+        img.src = logo.src; img.alt = name; img.decoding = 'async';
+        if (logo.monochrome) img.classList.add('gym-sponsor-monochrome');
+        if (logo.dark) item.classList.add('gym-sponsor-dark');
+        img.addEventListener('error', () => { item.textContent = name; item.classList.remove('gym-sponsor-dark'); });
+        item.append(img);
+      } else item.textContent = name;
+      list.append(item);
+    }
+  }
+
   function render(data) {
     const next = campaignModel(data);
     const previous = current;
@@ -149,29 +200,12 @@ export function initCampaign(root) {
       const sponsor = Boolean(next.brickSponsors?.[i]);
       brick.classList.toggle('is-sponsor', sponsor);
       brick.querySelector('.gym-brick-label').textContent = typeof label === 'string' ? label : '';
-      const logo = sponsor ? sponsorLogo(label) : null;
-      const oldLogo = brick.querySelector('.gym-brick-logo');
-      if (!logo || oldLogo?.getAttribute('src') !== logo.src) {
-        oldLogo?.remove();
-        brick.classList.remove('has-logo', 'has-dark-logo');
-        if (logo) {
-          const img = document.createElement('img');
-          img.className = 'gym-brick-logo';
-          img.alt = label;
-          img.decoding = 'async';
-          img.addEventListener('load', () => {
-            if (img.isConnected) { brick.classList.add('has-logo'); brick.classList.toggle('has-dark-logo', logo.dark); }
-          });
-          img.addEventListener('error', () => { img.remove(); brick.classList.remove('has-logo', 'has-dark-logo'); });
-          img.src = logo.src;
-          brick.append(img);
-        }
-      }
       brick.classList.toggle('has-contributor', Boolean(label));
       brick.classList.toggle('has-unfilled-label', Boolean(label) && next.fills[i] < 1);
       brick.title = `Ladrillo ${i + 1}${label ? ` · ${label.replace(/\s+/g, ' ')}` : ''}${sponsor ? ' · Sponsor' : ''}`;
       if (previous && (next.fills[i] > previous.fills[i] || (label && label !== previous.brickLabels?.[i]) || sponsor !== Boolean(previous.brickSponsors?.[i]))) changed.push(i);
     });
+    renderSponsors(next.sponsors);
     const names = Array.isArray(next.brickLabels)
       ? next.brickLabels.map((name, i) => typeof name === 'string' && name.trim() ? `${name.replace(/\s+/g, ' ')}${next.brickSponsors?.[i] ? ' (sponsor)' : ''}` : '').filter(Boolean) : [];
     select('contributors').textContent = names.length ? `Nos acompañan: ${names.join('; ')}.` : '';
@@ -236,10 +270,10 @@ export function initCampaign(root) {
             live = campaignFromCsv(await response.text());
           } else live = await readJson(url.href);
           campaignModel(live);
-          data = { ...config, goal: live.goal, raised: live.raised, updatedAt: live.updatedAt || '', brickLabels: live.brickLabels || config.brickLabels || [], brickProgress: live.brickProgress, brickSponsors: live.brickSponsors };
+          data = { ...config, goal: live.goal, raised: live.raised, updatedAt: live.updatedAt || '', brickLabels: live.brickLabels || config.brickLabels || [], brickProgress: live.brickProgress, brickSponsors: live.brickSponsors, sponsors: live.sponsors };
         } catch {
           // Preserve the last verified live amounts instead of reverting to an old local snapshot.
-          if (current) data = { ...config, goal: current.goal, raised: current.raised, updatedAt: current.updatedAt, brickLabels: current.brickLabels, brickProgress: current.brickProgress, brickSponsors: current.brickSponsors };
+          if (current) data = { ...config, goal: current.goal, raised: current.raised, updatedAt: current.updatedAt, brickLabels: current.brickLabels, brickProgress: current.brickProgress, brickSponsors: current.brickSponsors, sponsors: current.sponsors };
           sourceFailed = true;
         }
       }

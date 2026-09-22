@@ -5,8 +5,8 @@ const fixture=()=>({summary:[['Recaudado (USD)',87450],['Meta (USD)',200000],['A
 test('pago global de sponsors suma una vez y las empresas ocupan sus lugares',()=>{
  const {summary,rows}=fixture();rows[1]=[1,'Sponsors',30000,30000,'Pendiente','No','','','Sponsor'];summary[0][1]+=30000;
  const m=campaignFromLedger(summary,rows,[['FNC'],['ACSA']]);
- assert.equal(m.raised,117450);assert.equal(m.brickSponsors.filter(Boolean).length,2);
- assert.deepEqual(m.brickLabels.slice(0,2),['FNC','ACSA']);assert.ok(!m.brickLabels.includes('Sponsors'));
+ assert.equal(m.raised,117450);assert.equal(m.brickSponsors.filter(Boolean).length,0);
+ assert.deepEqual(m.sponsors,['FNC','ACSA']);assert.ok(m.brickLabels.every(n=>!n));assert.ok(!m.brickLabels.includes('Sponsors'));
 });
 test('no publica planes ni precios cuando reemplazan accidentalmente un nombre',()=>{
  const {summary,rows}=fixture();rows[1]=[1,'Individual (2 años) = USD 1.080',1080,1080,'Pendiente','No','','','Aportante'];summary[0][1]+=1080;
@@ -14,7 +14,7 @@ test('no publica planes ni precios cuando reemplazan accidentalmente un nombre',
 });
 test('sponsors pendientes se muestran sin sumar y las cuotas se actualizan sin duplicarse',()=>{
  const {summary,rows}=fixture(); rows[1]=[1,'Sponsor',5000,'','Pendiente','No','','privado','Sponsor'];
- let m=campaignFromLedger(summary,rows);assert.equal(m.raised,87450);assert.equal(m.brickLabels[0],'Sponsor');assert.equal(m.brickSponsors[0],true);assert.equal(m.brickProgress[0],0);
+ let m=campaignFromLedger(summary,rows);assert.equal(m.raised,87450);assert.equal(m.brickLabels[0],'');assert.deepEqual(m.sponsors,['Sponsor']);assert.equal(m.brickSponsors[0],false);assert.equal(m.brickProgress[0],0);
  rows[2]=[2,'Ana',1000,250,'Confirmado','No','','secreto','Aportante'];summary[0][1]=87700;
  m=campaignFromLedger(summary,rows);assert.equal(m.brickProgress[1],.25);assert.equal(m.raised,87700);assert.ok(!JSON.stringify(m).includes('secreto'));
  rows[2][3]=1000;summary[0][1]=88450;assert.equal(campaignFromLedger(summary,rows).raised,88450);
@@ -47,14 +47,14 @@ test('integra Sponsors sin sumar pendientes, duplicar empresas ni ocupar filas c
  const m=campaignFromLedger(summary,rows,[['FNC'],['CATIVELLI'],[' fnc '],[],['FIXED']]);
  assert.equal(m.raised,88450);
  assert.equal(m.brickLabels[0],'');
- assert.equal(m.brickLabels[1],'FNC');
- assert.equal(m.brickProgress[1],.2);
- assert.equal(m.brickLabels[2],'CATIVELLI');
+ assert.equal(m.brickLabels[1],'');
+ assert.equal(m.brickProgress[1],0);
+ assert.equal(m.brickLabels[2],'');
  assert.equal(m.brickProgress[2],0);
- assert.equal(m.brickLabels[3],'FIXED');
- assert.equal(m.brickSponsors.filter(Boolean).length,3);
+ assert.equal(m.brickLabels[3],'');assert.deepEqual(m.sponsors,['FNC','CATIVELLI','FIXED']);
+ assert.equal(m.brickSponsors.filter(Boolean).length,0);
  assert.deepEqual(campaignFromLedger(summary,[rows[0],...rows.slice(1).reverse()],[['FNC'],['CATIVELLI'],['FIXED']]),m);
  assert.throws(()=>campaignFromLedger(summary,rows,[['#REF!']]));
  for(const row of rows.slice(1)) row[1] ||= 'Nombre reservado';
- assert.throws(()=>campaignFromLedger(summary,rows,[['Empresa nueva']]),/lugares libres/);
+ assert.ok(campaignFromLedger(summary,rows,[['Empresa nueva']]).sponsors.includes('Empresa nueva'));
 });

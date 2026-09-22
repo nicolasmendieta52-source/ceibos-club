@@ -2,23 +2,20 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { campaignModel, contributionLink, campaignFromCsv, BRICK_COUNT, brickPosition, brickLayout } from '../assets/gym-campaign.js';
 
-test('sponsors abajo y aportantes arriba sin cambiar los IDs ni perder lugares', () => {
+test('separa sponsors de snapshots anteriores y reserva los 60 ladrillos para aportantes', () => {
   const data={goal:200000,raised:57260,brickSponsors:Array(60).fill(false),brickLabels:Array(60).fill(''),brickProgress:Array(60).fill(0)};
-  for(let i=0;i<29;i++){data.brickLabels[i]=`Persona ${i}`;data.brickProgress[i]=1;}
-  for(let i=29;i<41;i++){data.brickLabels[i]=`Sponsor ${i}`;data.brickSponsors[i]=true;}
-  for(const columns of [10,5]){
-    const layout=brickLayout(campaignModel(data),columns);
-    assert.equal(new Set(layout.map(p=>`${p.row}/${p.column}`)).size,60);
-    assert.deepEqual(layout[29],{row:60/columns,column:1});
-    assert.ok(Math.min(...layout.slice(29,41).map(p=>p.row))>=Math.max(...layout.slice(0,29).map(p=>p.row)));
-    const slot=p=>(60/columns-p.row)*columns+p.column-1;
-    assert.deepEqual(layout.slice(29,41).map(slot),Array.from({length:12},(_,i)=>i));
-    assert.deepEqual(layout.slice(0,29).map(slot),Array.from({length:29},(_,i)=>i+12));
-    // A new sponsor is moved into the lower group without changing its identity.
-    const changed={...data,brickSponsors:data.brickSponsors.map((s,i)=>s||i===0)};
-    assert.deepEqual(brickLayout(campaignModel(changed),columns)[0],{row:60/columns,column:1});
+  for(let i=0;i<40;i++){data.brickLabels[i]='Persona '+i;data.brickProgress[i]=1;}
+  for(let i=40;i<52;i++){data.brickLabels[i]='Sponsor '+i;data.brickSponsors[i]=true;data.brickProgress[i]=1;}
+  const model=campaignModel(data);
+  assert.equal(model.sponsors.length,12);assert.equal(model.brickLabels.filter(Boolean).length,40);
+  assert.equal(model.fills.filter(n=>n>0).length,40);assert.equal(model.raised,57260);
+  for(const columns of [10,5]) {
+    const layout=brickLayout(model,columns);
+    assert.equal(new Set(layout.map(p=>p.row+'/'+p.column)).size,60);
+    assert.deepEqual(layout[0],{row:60/columns,column:1});
+    assert.deepEqual(layout[39],{row:60/columns-Math.floor(39/columns),column:39%columns+1});
   }
-  assert.equal(data.brickLabels[0],'Persona 0');
+  assert.equal(data.brickLabels[40],'Sponsor 40');
 });
 
 test('pared vacía o llena conserva 60 posiciones incluso si no hay espacio entre grupos', () => {
