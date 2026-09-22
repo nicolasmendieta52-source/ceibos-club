@@ -10,6 +10,7 @@ export function campaignFromLedger(summary, rows, sponsors = []) {
   const headers = ['Ladrillo','Nombre público','Objetivo USD','Pagado USD','Estado','Incluido en saldo inicial','Fecha del pago','Notas privadas','Tipo'];
   if (!headers.every((h,i)=>rows?.[0]?.[i]===h) || rows.length !== COUNT+1) throw new Error('La planilla debe tener 60 ladrillos y las columnas esperadas');
   const brickLabels=Array(COUNT).fill(''), brickSponsors=Array(COUNT).fill(false), brickProgress=Array(COUNT).fill(0);
+  const brickSizes=Array(COUNT).fill(1);
   const seen=new Set(); let total=cents(opening);
   const sponsorNames = [];
   const addSponsor = name => {
@@ -34,10 +35,12 @@ export function campaignFromLedger(summary, rows, sponsors = []) {
     const publicName = /^(?:Individual|Plan Familiar)\s*\(/i.test(name) ? 'Aportante' : name.trim();
     brickLabels[id-1]=hasPayment?publicName.replace(/ y flia$/, '\ny flia'):'';
     if (hasPayment) {
+      // Publish only a visual tier, never individual payments or private notes.
+      brickSizes[id-1]=paid>=2000?3:paid>=1000?2:1;
       if (!validAmount(target)||!target) throw new Error(`Falta objetivo en ladrillo ${id}`);
       brickProgress[id-1]=included==='Sí'&&paid===''?1:Math.min(paid/target,1);
     }
   }
   if (total!==cents(reported)) throw new Error('El total calculado no coincide con el resumen');
-  return {goal,raised:total/100,brickLabels,brickSponsors,brickProgress,sponsors:sponsorNames};
+  return {goal,raised:total/100,brickLabels,brickSponsors,brickProgress,brickSizes,sponsors:sponsorNames};
 }

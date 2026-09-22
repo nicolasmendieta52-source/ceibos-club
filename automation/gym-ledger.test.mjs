@@ -58,3 +58,13 @@ test('integra Sponsors sin sumar pendientes, duplicar empresas ni ocupar filas c
  for(const row of rows.slice(1)) row[1] ||= 'Nombre reservado';
  assert.ok(campaignFromLedger(summary,rows,[['Empresa nueva']]).sponsors.includes('Empresa nueva'));
 });
+
+test('los tamaños dependen del pago acumulado y no del objetivo ni del estado',()=>{
+ const {summary,rows}=fixture();
+ const amounts=[500,999,1000,1999,2000,5000];
+ amounts.forEach((paid,i)=>{rows[i+1]=[i+1,'Persona '+i,10000,paid,'Pendiente','No','','privado','Aportante'];summary[0][1]+=paid;});
+ const result=campaignFromLedger(summary,rows);
+ assert.deepEqual(result.brickSizes.slice(0,6),[1,1,2,2,3,3]);
+ assert.equal(result.brickSizes.length,60);
+ assert.ok(!('payments' in result));
+});

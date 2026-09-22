@@ -1,0 +1,2 @@
+
+El tamaño del ladrillo se calcula con Pagado USD: menos de USD 1.000 = 1 módulo; de USD 1.000 a 1.999,99 = 2; desde USD 2.000 = 3. Son franjas visuales, no una escala monetaria exacta. Un pago histórico sin importe usa el tamaño mínimo. Solo se publica el tamaño, no el monto individual. Los 60 identificadores se mantienen y el muro se acomoda desde abajo, agrupando anchos para aprovechar cada fila.
