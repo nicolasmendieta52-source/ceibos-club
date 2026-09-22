@@ -8,6 +8,10 @@ const SPONSOR_LOGOS = {
 
 export function sponsorLogo(name) {
   const normalized = String(name).trim().toUpperCase();
+  if (['KAZ', 'KAS', 'KAS INSURANCE BROKERS'].includes(normalized)) return {
+    viewBox: '230 785 510 198', src: '/assets/sponsors/kas-reference.jpeg',
+    width: 945, height: 2048, label: 'KAS Insurance Brokers'
+  };
   const referenceLogos = {
     CATIVELLI: '605 206 114 54', CATTIVELLI: '605 206 114 54',
     FIXED: '1057 201 115 61', ACSA: '774 304 99 45'
@@ -157,7 +161,7 @@ export function initCampaign(root) {
         const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         svg.setAttribute('viewBox', logo.viewBox);
         svg.setAttribute('role', 'img');
-        svg.setAttribute('aria-label', name);
+        svg.setAttribute('aria-label', logo.label || name);
         const clip = document.createElementNS('http://www.w3.org/2000/svg', 'clipPath');
         const clipId = `gym-sponsor-crop-${list.children.length}`;
         clip.setAttribute('id', clipId);
@@ -167,8 +171,8 @@ export function initCampaign(root) {
         clip.append(rect); svg.append(clip);
         const image = document.createElementNS('http://www.w3.org/2000/svg', 'image');
         image.setAttribute('clip-path', `url(#${clipId})`);
-        image.setAttribute('href', '/assets/sponsors/club-sponsors-reference.png');
-        image.setAttribute('width', '1179'); image.setAttribute('height', '456');
+        image.setAttribute('href', logo.src || '/assets/sponsors/club-sponsors-reference.png');
+        image.setAttribute('width', String(logo.width || 1179)); image.setAttribute('height', String(logo.height || 456));
         svg.append(image); item.append(svg);
       } else if (logo) {
         const img = document.createElement('img');
