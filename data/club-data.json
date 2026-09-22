@@ -2603,7 +2603,10 @@
       "rival": "PEÑAROL UNIVERSITARIO",
       "gf": 1,
       "gc": 1,
-      "fecha": "2026-09-19"
+      "fecha": "2026-09-19",
+      "goleadores": [
+        "JUAN ANDRES BRATSCHI (76')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -2650,7 +2653,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-21T22:04:16.500Z",
+  "actualizadoEn": "2026-09-22T05:06:56.882Z",
   "diagnostico": {
     "fuentes": [
       {
