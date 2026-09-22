@@ -11,6 +11,7 @@ export function campaignFromLedger(summary, rows, sponsors = []) {
   if (!headers.every((h,i)=>rows?.[0]?.[i]===h) || rows.length !== COUNT+1) throw new Error('La planilla debe tener 60 ladrillos y las columnas esperadas');
   const brickLabels=Array(COUNT).fill(''), brickSponsors=Array(COUNT).fill(false), brickProgress=Array(COUNT).fill(0);
   const seen=new Set(); let total=cents(opening);
+  const aggregate = row => row[8] === 'Sponsor' && /^sponsors$/i.test((row[1] || '').trim()) && sponsors.some(entry => entry?.[0]?.trim());
   for (const row of rows.slice(1)) {
     const [id,name='',target,paid='',state,included,,,type]=row;
     if (!Number.isInteger(id)||id<1||id>COUNT||seen.has(id)) throw new Error('Numeración inválida o duplicada');
@@ -19,9 +20,12 @@ export function campaignFromLedger(summary, rows, sponsors = []) {
     if (!['Sí','No'].includes(included)||!['Aportante','Sponsor'].includes(type)) throw new Error(`Clasificación inválida en ladrillo ${id}`);
     if (paid!==''&&!validAmount(paid)) throw new Error(`Pago inválido en ladrillo ${id}`);
     if (included==='No'&&paid!=='') total+=cents(paid);
+    // A collective sponsor payment counts once; the Sponsors tab supplies company identities.
+    if (aggregate(row)) continue;
     const hasPayment=included==='Sí'||paid>0;
     const sponsor=type==='Sponsor'&&Boolean(name.trim());
-    brickLabels[id-1]=(hasPayment||sponsor)?name.trim().replace(/ y flia$/, '\ny flia'):'';
+    const publicName = /^(?:Individual|Plan Familiar)\s*\(/i.test(name) ? 'Aportante' : name.trim();
+    brickLabels[id-1]=(hasPayment||sponsor)?publicName.replace(/ y flia$/, '\ny flia'):'';
     brickSponsors[id-1]=sponsor;
     if (hasPayment) {
       if (!validAmount(target)||!target) throw new Error(`Falta objetivo en ladrillo ${id}`);
@@ -32,7 +36,7 @@ export function campaignFromLedger(summary, rows, sponsors = []) {
   // The club keeps companies in its separate Sponsors tab. Use only
   // unnamed, unpaid slots; never overwrite an existing person's ledger entry.
   const normalize = name => name.trim().toLocaleLowerCase('es-UY');
-  const available = rows.slice(1).filter(r => !(r[1] || '').trim() && !r[3] && r[5] !== 'Sí').map(r => r[0] - 1).sort((a,b)=>a-b);
+  const available = rows.slice(1).filter(r => aggregate(r) || (!(r[1] || '').trim() && !r[3] && r[5] !== 'Sí')).map(r => r[0] - 1).sort((a,b)=>a-b);
   const seenSponsors = new Set();
   for (const entry of sponsors) {
     const name = entry?.[0] ?? '';

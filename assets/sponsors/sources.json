@@ -1,0 +1,14 @@
+{
+  "fnc": "https://fnc.com.uy/files/layouts/logoFNCblanco.png",
+  "fixed": "https://fixed.uy/images/logo/FIXED_logo-blanco_fondo-transparente.png",
+  "pquick": "https://www.pquick.com.uy/themes/web/img/logo_header1.svg",
+  "megaagro": "https://cdn.prod.website-files.com/67b77c248c4656e87b078e9e/67c8465bdfe49bef503e8b16_Logo-mg.svg",
+  "bluecross": "https://www1.bcbsu.com.uy/wp-content/uploads/2020/03/Logo-BCBSU-vertical-300x140-1.png",
+  "acsa": "https://www.acsa.com.uy/dev/assets/img/logo-acsa-web.webp",
+  "subaru": "https://landing.subaru.com.uy/forester/assets/images/logo06.png",
+  "europcar": "https://static.europcar.com/_nuxt/img/main-logo.569c225.svg",
+  "cattivelli": {
+    "asset": "https://pbs.twimg.com/media/C44RAGGUMAIjIB5.jpg",
+    "source": "https://x.com/cattivelliextra"
+  }
+}

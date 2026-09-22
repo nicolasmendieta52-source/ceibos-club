@@ -1,4 +1,15 @@
 export const BRICK_COUNT = 60;
+const SPONSOR_LOGOS = {
+  FNC: ['fnc.png', true], FIXED: ['fixed.png', true], PQUICK: ['pquick.svg'],
+  CATIVELLI: ['cattivelli.jpg'], CATTIVELLI: ['cattivelli.jpg'],
+  MEGAAGRO: ['megaagro.svg'], BLUECROSS: ['bluecross.png'], ACSA: ['acsa.webp', true],
+  SUBARU: ['subaru.png'], EUROPCAR: ['europcar.svg']
+};
+
+export function sponsorLogo(name) {
+  const entry = SPONSOR_LOGOS[String(name).trim().toUpperCase()];
+  return entry ? { src: `/assets/sponsors/${entry[0]}`, dark: Boolean(entry[1]) } : null;
+}
 const FALLBACK_CONTACT = 'mailto:info@ceibosclub.com?subject=Quiero%20colaborar%20con%20el%20Gimnasio%20de%20Ceibos';
 
 export function campaignModel(data) {
@@ -138,6 +149,24 @@ export function initCampaign(root) {
       const sponsor = Boolean(next.brickSponsors?.[i]);
       brick.classList.toggle('is-sponsor', sponsor);
       brick.querySelector('.gym-brick-label').textContent = typeof label === 'string' ? label : '';
+      const logo = sponsor ? sponsorLogo(label) : null;
+      const oldLogo = brick.querySelector('.gym-brick-logo');
+      if (!logo || oldLogo?.getAttribute('src') !== logo.src) {
+        oldLogo?.remove();
+        brick.classList.remove('has-logo', 'has-dark-logo');
+        if (logo) {
+          const img = document.createElement('img');
+          img.className = 'gym-brick-logo';
+          img.alt = label;
+          img.decoding = 'async';
+          img.addEventListener('load', () => {
+            if (img.isConnected) { brick.classList.add('has-logo'); brick.classList.toggle('has-dark-logo', logo.dark); }
+          });
+          img.addEventListener('error', () => { img.remove(); brick.classList.remove('has-logo', 'has-dark-logo'); });
+          img.src = logo.src;
+          brick.append(img);
+        }
+      }
       brick.classList.toggle('has-contributor', Boolean(label));
       brick.classList.toggle('has-unfilled-label', Boolean(label) && next.fills[i] < 1);
       brick.title = `Ladrillo ${i + 1}${label ? ` · ${label.replace(/\s+/g, ' ')}` : ''}${sponsor ? ' · Sponsor' : ''}`;

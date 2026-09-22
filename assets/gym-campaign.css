@@ -42,6 +42,11 @@
 .gym-brick.is-sponsor{background:linear-gradient(145deg,#f3d47b,#dfb84e);border-color:#c7a13d}
 .gym-brick.is-sponsor .gym-brick-fill{background:linear-gradient(115deg,#ecc352,#d4a62f)}
 .gym-brick.is-sponsor .gym-brick-label{color:#183b2f;text-shadow:none;font-weight:600}
+.gym-brick-logo{position:absolute;inset:5px;width:calc(100% - 10px);height:calc(100% - 10px);object-fit:contain;padding:3px;background:#fff;border-radius:2px;opacity:0}
+.gym-brick.has-logo .gym-brick-logo{opacity:1}
+.gym-brick.has-logo .gym-brick-label{visibility:hidden}
+.gym-brick.has-dark-logo .gym-brick-logo{background:#183b2f}
+.gym-brick.is-placing .gym-brick-logo{animation:gym-place .65s var(--ease) both;animation-delay:var(--delay,0ms)}
 .gym-legend{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 22px;width:100%;margin-bottom:8px;font-size:12px;line-height:1.5}
 .gym-legend span::before{content:'';display:inline-block;width:13px;height:9px;margin-right:7px;border-radius:2px;background:#25473c}
 .gym-legend .gym-legend-sponsor::before{background:#dfb84e}

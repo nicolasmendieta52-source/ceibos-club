@@ -2,6 +2,16 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {campaignFromLedger} from './gym-ledger.mjs';
 const fixture=()=>({summary:[['Recaudado (USD)',87450],['Meta (USD)',200000],['Avance',0],['Faltan (USD)',0],['Ladrillos',60],['Saldo inicial (USD)',87450],['Pagos nuevos confirmados (USD)',0]],rows:[['Ladrillo','Nombre público','Objetivo USD','Pagado USD','Estado','Incluido en saldo inicial','Fecha del pago','Notas privadas','Tipo'],...Array.from({length:60},(_,i)=>[i+1,'',1000,'','Pendiente','No','','','Aportante'])]});
+test('pago global de sponsors suma una vez y las empresas ocupan sus lugares',()=>{
+ const {summary,rows}=fixture();rows[1]=[1,'Sponsors',30000,30000,'Pendiente','No','','','Sponsor'];summary[0][1]+=30000;
+ const m=campaignFromLedger(summary,rows,[['FNC'],['ACSA']]);
+ assert.equal(m.raised,117450);assert.equal(m.brickSponsors.filter(Boolean).length,2);
+ assert.deepEqual(m.brickLabels.slice(0,2),['FNC','ACSA']);assert.ok(!m.brickLabels.includes('Sponsors'));
+});
+test('no publica planes ni precios cuando reemplazan accidentalmente un nombre',()=>{
+ const {summary,rows}=fixture();rows[1]=[1,'Individual (2 años) = USD 1.080',1080,1080,'Pendiente','No','','','Aportante'];summary[0][1]+=1080;
+ const m=campaignFromLedger(summary,rows);assert.equal(m.raised,88530);assert.equal(m.brickLabels[0],'Aportante');
+});
 test('sponsors pendientes se muestran sin sumar y las cuotas se actualizan sin duplicarse',()=>{
  const {summary,rows}=fixture(); rows[1]=[1,'Sponsor',5000,'','Pendiente','No','','privado','Sponsor'];
  let m=campaignFromLedger(summary,rows);assert.equal(m.raised,87450);assert.equal(m.brickLabels[0],'Sponsor');assert.equal(m.brickSponsors[0],true);assert.equal(m.brickProgress[0],0);
