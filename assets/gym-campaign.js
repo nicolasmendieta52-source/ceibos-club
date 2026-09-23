@@ -3,7 +3,7 @@ const SPONSOR_LOGOS = {
   FNC: ['fnc.png'], FIXED: ['fixed.png', true], PQUICK: ['pquick.svg'],
   CATIVELLI: ['cattivelli.jpg'], CATTIVELLI: ['cattivelli.jpg'],
   MEGAAGRO: ['megaagro.svg'], BLUECROSS: ['bluecross.png'], ACSA: ['acsa.webp', true],
-  SUBARU: ['subaru.png'], EUROPCAR: ['europcar.svg']
+  SUBARU: ['subaru.png']
 };
 
 export function sponsorLogo(name) {
@@ -30,13 +30,12 @@ export function campaignModel(data) {
     throw new TypeError('La campaña requiere goal > 0 y raised >= 0, como números finitos.');
   }
   const progress = Math.min(data.raised / data.goal, 1);
-  if (data.brickSizes !== undefined && (!Array.isArray(data.brickSizes) || data.brickSizes.length !== BRICK_COUNT || data.brickSizes.some(n => ![1,2,3].includes(n)))) throw new TypeError('Tamaños de ladrillo inválidos.');
   if (data.brickProgress !== undefined && (!Array.isArray(data.brickProgress) || data.brickProgress.length !== BRICK_COUNT ||
       data.brickProgress.some(n => typeof n !== 'number' || !Number.isFinite(n) || n < 0 || n > 1))) throw new TypeError('Avance por ladrillo inválido.');
   if (data.brickSponsors !== undefined && (!Array.isArray(data.brickSponsors) || data.brickSponsors.length !== BRICK_COUNT ||
       data.brickSponsors.some(n => typeof n !== 'boolean'))) throw new TypeError('Tipos de ladrillo inválidos.');
   // Migrate older cached snapshots as well: companies never consume wall slots.
-  const sponsors = [...new Set([...(data.sponsors || []), ...(data.brickLabels || []).filter((_, i) => data.brickSponsors?.[i])])];
+  const sponsors = [...new Set([...(data.sponsors || []).filter(name => String(name).trim().toUpperCase() !== 'EUROPCAR'), ...(data.brickLabels || []).filter((_, i) => data.brickSponsors?.[i] && String(data.brickLabels[i]).trim().toUpperCase() !== 'EUROPCAR')])];
   const brickLabels = data.brickLabels?.map((name, i) => data.brickSponsors?.[i] ? '' : name);
   const fills = (data.brickProgress || Array.from({ length: BRICK_COUNT }, (_, i) => Math.max(0, Math.min(1, progress * BRICK_COUNT - i))))
     .map((fill, i) => data.brickSponsors?.[i] ? 0 : fill);
@@ -60,20 +59,7 @@ export function brickLayout(data, columns) {
   }
   const order = [...contributors, ...empty];
   const positions = [];
-  let row = 0, column = 1;
-  while (order.length) {
-    const active = order.filter(id => contributors.includes(id));
-    const candidates = active.length ? active : order;
-    const fitting = candidates.find(id => column + (data.brickSizes?.[id] && contributors.includes(id) ? data.brickSizes[id] : 1) - 1 <= columns);
-    if (fitting === undefined) { row++; column = 1; continue; }
-    const id = fitting;
-    order.splice(order.indexOf(id), 1);
-    const span = contributors.includes(id) ? (data.brickSizes?.[id] || 1) : 1;
-    positions[id] = {row, column, span};
-    column += span;
-  }
-  const rows = row + 1;
-  positions.forEach(position => { position.row = rows - position.row; });
+  order.forEach((id, index) => { positions[id] = brickPosition(index, columns); });
   return positions;
 }
 
@@ -204,15 +190,12 @@ export function initCampaign(root) {
     const next = campaignModel(data);
     const previous = current;
     const changed = [];
-    const desktopLayout = brickLayout(next, 12);
-    const mobileLayout = brickLayout(next, 6);
-    wall.style.setProperty('--rows', Math.max(...desktopLayout.map(p => p.row)));
-    wall.style.setProperty('--mobile-rows', Math.max(...mobileLayout.map(p => p.row)));
+    const desktopLayout = brickLayout(next, 10);
+    const mobileLayout = brickLayout(next, 5);
     bricks.forEach((brick, i) => {
       for (const [prefix, position] of [['', desktopLayout[i]], ['mobile-', mobileLayout[i]]]) {
         brick.style.setProperty(`--${prefix}row`, position.row);
         brick.style.setProperty(`--${prefix}column`, position.column);
-        brick.style.setProperty(`--${prefix}span`, position.span);
       }
       brick.style.setProperty('--fill', `${next.fills[i] * 100}%`);
       brick.classList.toggle('is-partial', next.fills[i] > 0 && next.fills[i] < 1);
@@ -224,7 +207,7 @@ export function initCampaign(root) {
       brick.classList.toggle('has-contributor', Boolean(label));
       brick.classList.toggle('has-unfilled-label', Boolean(label) && next.fills[i] < 1);
       brick.title = `Ladrillo ${i + 1}${label ? ` · ${label.replace(/\s+/g, ' ')}` : ''}${sponsor ? ' · Sponsor' : ''}`;
-      if (previous && (next.fills[i] > previous.fills[i] || next.brickSizes?.[i] !== previous.brickSizes?.[i] || (label && label !== previous.brickLabels?.[i]) || sponsor !== Boolean(previous.brickSponsors?.[i]))) changed.push(i);
+      if (previous && (next.fills[i] > previous.fills[i] || (label && label !== previous.brickLabels?.[i]) || sponsor !== Boolean(previous.brickSponsors?.[i]))) changed.push(i);
     });
     renderSponsors(next.sponsors);
     const names = Array.isArray(next.brickLabels)
@@ -291,10 +274,10 @@ export function initCampaign(root) {
             live = campaignFromCsv(await response.text());
           } else live = await readJson(url.href);
           campaignModel(live);
-          data = { ...config, goal: live.goal, raised: live.raised, updatedAt: live.updatedAt || '', brickLabels: live.brickLabels || config.brickLabels || [], brickProgress: live.brickProgress, brickSponsors: live.brickSponsors, sponsors: live.sponsors, brickSizes: live.brickSizes };
+          data = { ...config, goal: live.goal, raised: live.raised, updatedAt: live.updatedAt || '', brickLabels: live.brickLabels || config.brickLabels || [], brickProgress: live.brickProgress, brickSponsors: live.brickSponsors, sponsors: live.sponsors };
         } catch {
           // Preserve the last verified live amounts instead of reverting to an old local snapshot.
-          if (current) data = { ...config, goal: current.goal, raised: current.raised, updatedAt: current.updatedAt, brickLabels: current.brickLabels, brickProgress: current.brickProgress, brickSponsors: current.brickSponsors, sponsors: current.sponsors, brickSizes: current.brickSizes };
+          if (current) data = { ...config, goal: current.goal, raised: current.raised, updatedAt: current.updatedAt, brickLabels: current.brickLabels, brickProgress: current.brickProgress, brickSponsors: current.brickSponsors, sponsors: current.sponsors };
           sourceFailed = true;
         }
       }

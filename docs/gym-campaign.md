@@ -1,2 +1,3 @@
+# Muro del gimnasio
 
-El tamaño del ladrillo se calcula con Pagado USD: menos de USD 1.000 = 1 módulo; de USD 1.000 a 1.999,99 = 2; desde USD 2.000 = 3. Son franjas visuales, no una escala monetaria exacta. Un pago histórico sin importe usa el tamaño mínimo. Solo se publica el tamaño, no el monto individual. Los 60 identificadores se mantienen y el muro se acomoda desde abajo, agrupando anchos para aprovechar cada fila.
+Los 60 ladrillos tienen el mismo tamaño, independientemente del monto aportado. Se ocupan desde abajo hacia arriba: 10 columnas en escritorio y 5 en móvil. Los sponsors se muestran separados del muro. Europcar está excluido de la lista pública y de la sincronización, sin alterar los importes ni los registros de pagos.

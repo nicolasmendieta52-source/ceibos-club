@@ -12,8 +12,8 @@ test('separa sponsors de snapshots anteriores y reserva los 60 ladrillos para ap
   for(const columns of [10,5]) {
     const layout=brickLayout(model,columns);
     assert.equal(new Set(layout.map(p=>p.row+'/'+p.column)).size,60);
-    assert.deepEqual(layout[0],{row:60/columns,column:1,span:1});
-    assert.deepEqual(layout[39],{row:60/columns-Math.floor(39/columns),column:39%columns+1,span:1});
+    assert.deepEqual(layout[0],{row:60/columns,column:1});
+    assert.deepEqual(layout[39],{row:60/columns-Math.floor(39/columns),column:39%columns+1});
   }
   assert.equal(data.brickLabels[40],'Sponsor 40');
 });
@@ -112,19 +112,4 @@ test('el formulario usa HTTPS o el contacto del club', () => {
   for (const link of ['', undefined, 'javascript:alert(1)', 'http://example.com']) {
     assert.ok(contributionLink(link).startsWith('mailto:info@ceibosclub.com?'));
   }
-});
-
-test('ladrillos de distinto ancho mantienen identidad y no se superponen',()=>{
- const model=campaignModel({goal:200000,raised:80000,brickLabels:Array.from({length:60},(_,i)=>i<40?'Persona '+i:''),brickProgress:Array.from({length:60},(_,i)=>i<40?1:0),brickSizes:Array.from({length:60},(_,i)=>i%3+1)});
- for(const columns of [5,10]){
-  const positions=brickLayout(model,columns),cells=new Set();
-  positions.forEach((p,i)=>{
-   assert.equal(p.span,i<40?model.brickSizes[i]:1);
-   assert.ok(p.column+p.span-1<=columns);
-   for(let c=p.column;c<p.column+p.span;c++){const key=p.row+'/'+c;assert.ok(!cells.has(key));cells.add(key);}
-  });
-  assert.ok(positions[0].row>=positions[39].row);
-  assert.ok(positions[39].row>=positions[40].row);
- }
- assert.throws(()=>campaignModel({...model,brickSizes:[1]}));
 });
