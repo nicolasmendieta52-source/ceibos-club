@@ -58,4 +58,3 @@ test('integra Sponsors sin sumar pendientes, duplicar empresas ni ocupar filas c
  for(const row of rows.slice(1)) row[1] ||= 'Nombre reservado';
  assert.ok(campaignFromLedger(summary,rows,[['Empresa nueva']]).sponsors.includes('Empresa nueva'));
 });
-
