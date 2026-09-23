@@ -1,7 +1,7 @@
 {
   "goal": 200000,
   "raised": 111800,
-  "updatedAt": "2026-09-23T06:01:11.073Z",
+  "updatedAt": "2026-09-23T11:50:19.711Z",
   "contributionUrl": "https://docs.google.com/forms/d/e/1FAIpQLSekX5hNlA_TM9PIgjxudmWgsASzGTtNUZN11m-nYFCjfpnSew/viewform",
   "sourceUrl": "",
   "brickLabels": [
@@ -45,7 +45,7 @@
     "Francisco G",
     "Bruno P",
     "Mateo G",
-    "",
+    "Luis F",
     "",
     "",
     "",
@@ -169,7 +169,7 @@
     1,
     1,
     1,
-    0,
+    1,
     0,
     0,
     0,
@@ -202,7 +202,6 @@
     "ACSA",
     "SUBARU",
     "DEDISEÑO",
-    "DOMINION",
-    "Luis F"
+    "DOMINION"
   ]
 }
