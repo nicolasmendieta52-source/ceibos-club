@@ -73,7 +73,7 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Papi Fútbol Amarillo",
+      "categoria": "Papi Fútbol +35",
       "rival": "Valdocco FC (Salesianos)",
       "fecha": "2026-09-29",
       "hora": "21:00",
@@ -409,7 +409,7 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Papi Fútbol Amarillo",
+      "categoria": "Papi Fútbol +35",
       "rival": "Erik Erikson",
       "fecha": "2026-11-15",
       "hora": "09:00",
@@ -472,7 +472,7 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Papi Fútbol Amarillo",
+      "categoria": "Papi Fútbol +35",
       "rival": "Stella Maris 40",
       "gf": 4,
       "gc": 2,
@@ -583,7 +583,7 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Papi Fútbol Amarillo",
+      "categoria": "Papi Fútbol +35",
       "rival": "Areteia blanco",
       "gf": 0,
       "gc": 2,
@@ -648,7 +648,7 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Papi Fútbol Amarillo",
+      "categoria": "Papi Fútbol +35",
       "rival": "Anglo black",
       "gf": 4,
       "gc": 0,
@@ -831,7 +831,7 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Papi Fútbol Amarillo",
+      "categoria": "Papi Fútbol +35",
       "rival": "Ceibos Club senior 40",
       "gf": 1,
       "gc": 1,
@@ -1019,7 +1019,7 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Papi Fútbol Amarillo",
+      "categoria": "Papi Fútbol +35",
       "rival": "Maristas Deportivo 40",
       "gf": 2,
       "gc": 5,
@@ -1213,7 +1213,7 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Papi Fútbol Amarillo",
+      "categoria": "Papi Fútbol +35",
       "rival": "Sto Domingo senior",
       "gf": 0,
       "gc": 1,
@@ -1537,7 +1537,7 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Papi Fútbol Amarillo",
+      "categoria": "Papi Fútbol +35",
       "rival": "San Juan Amarillo",
       "gf": 3,
       "gc": 5,
@@ -1754,7 +1754,7 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Papi Fútbol Amarillo",
+      "categoria": "Papi Fútbol +35",
       "rival": "Aleman Schwarz",
       "gf": 0,
       "gc": 1,
@@ -1924,7 +1924,7 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Papi Fútbol Amarillo",
+      "categoria": "Papi Fútbol +35",
       "rival": "La Bendita Salesianos",
       "gf": 2,
       "gc": 2,
@@ -2140,7 +2140,7 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Papi Fútbol Amarillo",
+      "categoria": "Papi Fútbol +35",
       "rival": "Crandogs",
       "gf": 3,
       "gc": 0,
@@ -2338,7 +2338,7 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Papi Fútbol Amarillo",
+      "categoria": "Papi Fútbol +35",
       "rival": "Frances ELF",
       "gf": 2,
       "gc": 1,
@@ -2529,7 +2529,7 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Papi Fútbol Amarillo",
+      "categoria": "Papi Fútbol +35",
       "rival": "Old Brendans negro",
       "gf": 1,
       "gc": 5,
@@ -2747,7 +2747,7 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Papi Fútbol Amarillo",
+      "categoria": "Papi Fútbol +35",
       "rival": "San Pablo",
       "gf": 1,
       "gc": 2,
@@ -3053,7 +3053,7 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Papi Fútbol Amarillo",
+      "categoria": "Papi Fútbol +35",
       "rival": "HCA +40",
       "gf": 1,
       "gc": 0,
@@ -3309,7 +3309,7 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Papi Fútbol Amarillo",
+      "categoria": "Papi Fútbol +35",
       "rival": "Pio 40",
       "gf": 3,
       "gc": 1,
@@ -3470,7 +3470,7 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Papi Fútbol Amarillo",
+      "categoria": "Papi Fútbol +35",
       "rival": "Orange Trouville",
       "gf": 0,
       "gc": 1,
@@ -3526,7 +3526,7 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Papi Fútbol Amarillo",
+      "categoria": "Papi Fútbol +35",
       "rival": "Old Clifton",
       "gf": 1,
       "gc": 1,
@@ -3648,7 +3648,7 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Papi Fútbol Amarillo",
+      "categoria": "Papi Fútbol +35",
       "rival": "Saint George rojo",
       "gf": 3,
       "gc": 2,
@@ -4006,7 +4006,7 @@
       {
         "id": 719,
         "name": "Ceibos Club amarillo",
-        "category": "Papi Fútbol Amarillo"
+        "category": "Papi Fútbol +35"
       },
       {
         "id": 709,

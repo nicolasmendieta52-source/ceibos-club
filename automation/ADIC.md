@@ -9,10 +9,10 @@ every six hours, alongside the other sports. No authentication is needed.
 the official team names, tournament URLs, last successful fetch time, standings
 for the series containing Ceibos and sporting records for Ceibos matches.
 
-Team 719 remains **Papi Fútbol Amarillo** until the club confirms whether it is
-the +35 team. Team 739 (+50) was found in the 2026 qualifying tournament only.
-When confirming a mapping, update `adic.json`, home categories and the archive
-together, and remove the previous category's normalized records during migration.
+Team 719 is **Papi Fútbol +35**, confirmed by the club. ADIC retains the official
+name **Ceibos Club amarillo** in Master 40. The original source name and team ID
+are preserved to keep synchronization accurate. Team 739 (+50) was found in the
+2026 qualifying tournament only.
 
 ADIC's timezone-less timestamps are UTC, as used by its own portal. We convert to
 America/Montevideo, including changes of calendar day. Only finished matches

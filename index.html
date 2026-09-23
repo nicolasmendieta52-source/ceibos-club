@@ -1589,7 +1589,7 @@ const DEPORTES = [
   {
     slug:"futbol", nombre:"Fútbol", ico:"⚽", instagram:"ceibosfutbol",
     desc:"La temporada 2026 de la Liga Universitaria tiene registros oficiales desde abril. Ceibos compite en la Liga Universitaria con Primera, Reserva A, Reserva Verde, PreSenior, Sub 20 y Sub 18, y en ADIC con los planteles de Papi Fútbol. Elegí una categoría para ver sus partidos e historial.",
-    categorias:["Primera","Reserva A","Reserva Verde","PreSenior","Sub 20","Sub 18","Papi Fútbol +35","Papi Fútbol +40","Papi Fútbol +45","Papi Fútbol +50","Papi Fútbol Amarillo"],
+    categorias:["Primera","Reserva A","Reserva Verde","PreSenior","Sub 20","Sub 18","Papi Fútbol +35","Papi Fútbol +40","Papi Fútbol +45","Papi Fútbol +50"],
     foto:"assets/deporte-futbol.webp"
   },
   {
@@ -1728,7 +1728,7 @@ function renderTicker(){
     mapa.set(`${slugDeporte(resultado.deporte)}|${resultado.categoria}`, resultado);
     return mapa;
   }, new Map());
-  const ordenFutbol = ["Primera", "Reserva A", "Reserva Verde", "PreSenior", "Sub 20", "Sub 18", "Papi Fútbol +35", "Papi Fútbol +40", "Papi Fútbol +45", "Papi Fútbol +50", "Papi Fútbol Amarillo"];
+  const ordenFutbol = ["Primera", "Reserva A", "Reserva Verde", "PreSenior", "Sub 20", "Sub 18", "Papi Fútbol +35", "Papi Fútbol +40", "Papi Fútbol +45", "Papi Fútbol +50"];
   const items = [...ultimosPorCategoria.values()].sort((a,b) => {
     const aFutbol = slugDeporte(a.deporte) === "futbol", bFutbol = slugDeporte(b.deporte) === "futbol";
     if (aFutbol && bFutbol) return ordenFutbol.indexOf(a.categoria) - ordenFutbol.indexOf(b.categoria);
@@ -2059,7 +2059,7 @@ function renderArchivoHistorico(){
   if (ruta[0] !== "archivo" || !ruta[1]) { renderIndiceArchivo(contenedor); revObserve(); return; }
   const deporte = ARCHIVO_HISTORICO.sports.find(item => item.slug === ruta[1]);
   if (!deporte) { renderIndiceArchivo(contenedor); return; }
-  const categoria = ruta[2] ? deporte.categories.find(item => item.slug === ruta[2]) : null;
+  const categoria = ruta[2] ? deporte.categories.find(item => item.slug === (ruta[2] === "papi-futbol-amarillo" ? "papi-futbol-35" : ruta[2])) : null;
   if (ruta[2] && !categoria) { renderDeporteArchivo(contenedor, deporte); return; }
   categoria ? renderCategoriaArchivo(contenedor, deporte, categoria) : renderDeporteArchivo(contenedor, deporte);
   if (categoria) {
