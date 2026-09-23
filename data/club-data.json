@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-23T12:49:16.132Z",
+        "updatedAt": "2026-09-23T12:53:16.519Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-23T12:49:16.379Z",
+        "updatedAt": "2026-09-23T12:53:16.722Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-23T12:49:16.466Z",
+        "updatedAt": "2026-09-23T12:53:16.800Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-23T12:49:16.565Z",
+        "updatedAt": "2026-09-23T12:53:16.903Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-23T12:49:16.658Z",
+        "updatedAt": "2026-09-23T12:53:17.002Z",
         "tables": [
           {
             "id": 2239,
@@ -2919,6 +2919,20 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "Erik Erikson",
+      "fecha": "2026-11-15",
+      "hora": "09:00",
+      "local": true,
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134939,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "estado": "Programado",
+      "cancha": "A confirmar"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Papi Fútbol +40",
       "rival": "Aleman Schwarz",
       "fecha": "2026-11-15",
@@ -2944,20 +2958,6 @@
       "equipoAdic": "Ceibos 45 Master",
       "estado": "Programado",
       "cancha": "A confirmar"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +35",
-      "rival": "Erik Erikson",
-      "fecha": "2026-11-15",
-      "hora": "09:00",
-      "local": true,
-      "fase": "ADIC · Clausura Copas",
-      "adicId": 134939,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club amarillo",
-      "estado": "Programado",
-      "cancha": "A confirmar"
     }
   ],
   "resultados": [
@@ -2968,6 +2968,19 @@
       "gf": 12,
       "gc": 22,
       "fecha": "2025-03-14"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "Stella Maris 40",
+      "gf": 4,
+      "gc": 2,
+      "fecha": "2026-03-08",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67273,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": false
     },
     {
       "deporte": "futbol",
@@ -3007,19 +3020,6 @@
       "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
       "equipoAdic": "Ceibos +50",
       "local": true
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +35",
-      "rival": "Stella Maris 40",
-      "gf": 4,
-      "gc": 2,
-      "fecha": "2026-03-08",
-      "fase": "ADIC · T. Clasificatorio Master 40",
-      "adicId": 67273,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club amarillo",
-      "local": false
     },
     {
       "deporte": "rugby",
@@ -3082,6 +3082,19 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "Areteia blanco",
+      "gf": 0,
+      "gc": 2,
+      "fecha": "2026-03-15",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67283,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Papi Fútbol +40",
       "rival": "Sto Domingo senior",
       "gf": 1,
@@ -3120,19 +3133,6 @@
       "local": true
     },
     {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +35",
-      "rival": "Areteia blanco",
-      "gf": 0,
-      "gc": 2,
-      "fecha": "2026-03-15",
-      "fase": "ADIC · T. Clasificatorio Master 40",
-      "adicId": 67283,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club amarillo",
-      "local": true
-    },
-    {
       "deporte": "hockey",
       "categoria": "Intermedia B",
       "rival": "Nautilus",
@@ -3160,6 +3160,19 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "Anglo black",
+      "gf": 4,
+      "gc": 0,
+      "fecha": "2026-03-22",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67287,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Papi Fútbol +40",
       "rival": "Areteia blanco",
       "gf": 4,
@@ -3183,19 +3196,6 @@
       "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
       "equipoAdic": "Ceibos +50",
       "local": false
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +35",
-      "rival": "Anglo black",
-      "gf": 4,
-      "gc": 0,
-      "fecha": "2026-03-22",
-      "fase": "ADIC · T. Clasificatorio Master 40",
-      "adicId": 67287,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club amarillo",
-      "local": true
     },
     {
       "deporte": "hockey",
@@ -3330,6 +3330,19 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "Ceibos Club senior 40",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-04-12",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67295,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Papi Fútbol +40",
       "rival": "Ceibos Club amarillo",
       "gf": 1,
@@ -3365,19 +3378,6 @@
       "adicId": 68444,
       "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
       "equipoAdic": "Ceibos +50",
-      "local": false
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +35",
-      "rival": "Ceibos Club senior 40",
-      "gf": 1,
-      "gc": 1,
-      "fecha": "2026-04-12",
-      "fase": "ADIC · T. Clasificatorio Master 40",
-      "adicId": 67295,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club amarillo",
       "local": false
     },
     {
@@ -3518,6 +3518,19 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "Maristas Deportivo 40",
+      "gf": 2,
+      "gc": 5,
+      "fecha": "2026-04-19",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67304,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Papi Fútbol +40",
       "rival": "Old Brendans negro",
       "gf": 3,
@@ -3553,19 +3566,6 @@
       "adicId": 68449,
       "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
       "equipoAdic": "Ceibos +50",
-      "local": true
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +35",
-      "rival": "Maristas Deportivo 40",
-      "gf": 2,
-      "gc": 5,
-      "fecha": "2026-04-19",
-      "fase": "ADIC · T. Clasificatorio Master 40",
-      "adicId": 67304,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club amarillo",
       "local": true
     },
     {
@@ -3712,6 +3712,19 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "Sto Domingo senior",
+      "gf": 0,
+      "gc": 1,
+      "fecha": "2026-04-26",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67309,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Papi Fútbol +40",
       "rival": "Maristas Deportivo 40",
       "gf": 4,
@@ -3748,19 +3761,6 @@
       "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
       "equipoAdic": "Ceibos +50",
       "local": false
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +35",
-      "rival": "Sto Domingo senior",
-      "gf": 0,
-      "gc": 1,
-      "fecha": "2026-04-26",
-      "fase": "ADIC · T. Clasificatorio Master 40",
-      "adicId": 67309,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club amarillo",
-      "local": true
     },
     {
       "deporte": "futbol",
@@ -4049,6 +4049,19 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "San Juan Amarillo",
+      "gf": 3,
+      "gc": 5,
+      "fecha": "2026-05-17",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67324,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Papi Fútbol +40",
       "rival": "Frances ELF",
       "gf": 4,
@@ -4071,19 +4084,6 @@
       "adicId": 68488,
       "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
       "equipoAdic": "Ceibos +50",
-      "local": true
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +35",
-      "rival": "San Juan Amarillo",
-      "gf": 3,
-      "gc": 5,
-      "fecha": "2026-05-17",
-      "fase": "ADIC · T. Clasificatorio Master 40",
-      "adicId": 67324,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club amarillo",
       "local": true
     },
     {
@@ -4240,6 +4240,19 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "Aleman Schwarz",
+      "gf": 0,
+      "gc": 1,
+      "fecha": "2026-05-24",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67330,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Papi Fútbol +40",
       "rival": "Crandogs",
       "gf": 3,
@@ -4289,19 +4302,6 @@
       "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
       "equipoAdic": "Ceibos +50",
       "local": false
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +35",
-      "rival": "Aleman Schwarz",
-      "gf": 0,
-      "gc": 1,
-      "fecha": "2026-05-24",
-      "fase": "ADIC · T. Clasificatorio Master 40",
-      "adicId": 67330,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club amarillo",
-      "local": true
     },
     {
       "deporte": "futbol",
@@ -4423,6 +4423,19 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "La Bendita Salesianos",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-05-31",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67336,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Papi Fútbol +40",
       "rival": "Stella Maris 40",
       "gf": 4,
@@ -4458,19 +4471,6 @@
       "adicId": 68507,
       "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
       "equipoAdic": "Ceibos +50",
-      "local": false
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +35",
-      "rival": "La Bendita Salesianos",
-      "gf": 2,
-      "gc": 2,
-      "fecha": "2026-05-31",
-      "fase": "ADIC · T. Clasificatorio Master 40",
-      "adicId": 67336,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club amarillo",
       "local": false
     },
     {
@@ -4639,6 +4639,19 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "Crandogs",
+      "gf": 3,
+      "gc": 0,
+      "fecha": "2026-06-07",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67344,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Papi Fútbol +40",
       "rival": "San Juan Amarillo",
       "gf": 4,
@@ -4674,19 +4687,6 @@
       "adicId": 68514,
       "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
       "equipoAdic": "Ceibos +50",
-      "local": true
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +35",
-      "rival": "Crandogs",
-      "gf": 3,
-      "gc": 0,
-      "fecha": "2026-06-07",
-      "fase": "ADIC · T. Clasificatorio Master 40",
-      "adicId": 67344,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club amarillo",
       "local": true
     },
     {
@@ -4850,6 +4850,19 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "Frances ELF",
+      "gf": 2,
+      "gc": 1,
+      "fecha": "2026-06-14",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67351,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Papi Fútbol +40",
       "rival": "Anglo black",
       "gf": 4,
@@ -4873,19 +4886,6 @@
       "fuente": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
       "equipoAdic": "Ceibos 45 Master",
       "local": true
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +35",
-      "rival": "Frances ELF",
-      "gf": 2,
-      "gc": 1,
-      "fecha": "2026-06-14",
-      "fase": "ADIC · T. Clasificatorio Master 40",
-      "adicId": 67351,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club amarillo",
-      "local": false
     },
     {
       "deporte": "futbol",
@@ -5028,6 +5028,19 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "Old Brendans negro",
+      "gf": 1,
+      "gc": 5,
+      "fecha": "2026-06-21",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67361,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Papi Fútbol +40",
       "rival": "San Pablo",
       "gf": 2,
@@ -5064,19 +5077,6 @@
       "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
       "equipoAdic": "Ceibos +50",
       "local": true
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +35",
-      "rival": "Old Brendans negro",
-      "gf": 1,
-      "gc": 5,
-      "fecha": "2026-06-21",
-      "fase": "ADIC · T. Clasificatorio Master 40",
-      "adicId": 67361,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club amarillo",
-      "local": false
     },
     {
       "deporte": "futbol",
@@ -5259,6 +5259,19 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "San Pablo",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-07-25",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67315,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Papi Fútbol +40",
       "rival": "Aleman Schwarz",
       "gf": 3,
@@ -5282,19 +5295,6 @@
       "fuente": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
       "equipoAdic": "Ceibos 45 Master",
       "local": true
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +35",
-      "rival": "San Pablo",
-      "gf": 1,
-      "gc": 2,
-      "fecha": "2026-07-25",
-      "fase": "ADIC · T. Clasificatorio Master 40",
-      "adicId": 67315,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club amarillo",
-      "local": false
     },
     {
       "deporte": "hockey",
@@ -5565,6 +5565,19 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "HCA +40",
+      "gf": 1,
+      "gc": 0,
+      "fecha": "2026-08-16",
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134949,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Papi Fútbol +40",
       "rival": "San Pablo",
       "gf": 1,
@@ -5588,19 +5601,6 @@
       "fuente": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
       "equipoAdic": "Ceibos 45 Master",
       "local": true
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +35",
-      "rival": "HCA +40",
-      "gf": 1,
-      "gc": 0,
-      "fecha": "2026-08-16",
-      "fase": "ADIC · Clausura Copas",
-      "adicId": 134949,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club amarillo",
-      "local": false
     },
     {
       "deporte": "futbol",
@@ -5821,6 +5821,19 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "Pio 40",
+      "gf": 3,
+      "gc": 1,
+      "fecha": "2026-08-30",
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134962,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Papi Fútbol +40",
       "rival": "Club J.Maria",
       "gf": 0,
@@ -5843,19 +5856,6 @@
       "adicId": 135050,
       "fuente": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
       "equipoAdic": "Ceibos 45 Master",
-      "local": false
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +35",
-      "rival": "Pio 40",
-      "gf": 3,
-      "gc": 1,
-      "fecha": "2026-08-30",
-      "fase": "ADIC · Clausura Copas",
-      "adicId": 134962,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club amarillo",
       "local": false
     },
     {
@@ -5982,6 +5982,19 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "Orange Trouville",
+      "gf": 0,
+      "gc": 1,
+      "fecha": "2026-09-06",
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134970,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Papi Fútbol +40",
       "rival": "Areteia blanco",
       "gf": 1,
@@ -6005,19 +6018,6 @@
       "fuente": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
       "equipoAdic": "Ceibos 45 Master",
       "local": false
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +35",
-      "rival": "Orange Trouville",
-      "gf": 0,
-      "gc": 1,
-      "fecha": "2026-09-06",
-      "fase": "ADIC · Clausura Copas",
-      "adicId": 134970,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club amarillo",
-      "local": true
     },
     {
       "deporte": "futbol",
@@ -6051,19 +6051,6 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Papi Fútbol +40",
-      "rival": "Ivy Thomas 40",
-      "gf": 1,
-      "gc": 4,
-      "fecha": "2026-09-09",
-      "fase": "ADIC · Clausura Copas",
-      "adicId": 134774,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club senior 40",
-      "local": false
-    },
-    {
-      "deporte": "futbol",
       "categoria": "Papi Fútbol +35",
       "rival": "Old Clifton",
       "gf": 1,
@@ -6074,6 +6061,19 @@
       "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
       "equipoAdic": "Ceibos Club amarillo",
       "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "Ivy Thomas 40",
+      "gf": 1,
+      "gc": 4,
+      "fecha": "2026-09-09",
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134774,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": false
     },
     {
       "deporte": "futbol",
@@ -6160,6 +6160,19 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "Saint George rojo",
+      "gf": 3,
+      "gc": 2,
+      "fecha": "2026-09-13",
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134977,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Papi Fútbol +40",
       "rival": "Scuola Italiana 1886",
       "gf": 1,
@@ -6183,19 +6196,6 @@
       "fuente": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
       "equipoAdic": "Ceibos 45 Master",
       "local": true
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +35",
-      "rival": "Saint George rojo",
-      "gf": 3,
-      "gc": 2,
-      "fecha": "2026-09-13",
-      "fase": "ADIC · Clausura Copas",
-      "adicId": 134977,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club amarillo",
-      "local": false
     },
     {
       "deporte": "futbol",
@@ -6329,7 +6329,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-23T12:52:04.547Z",
+  "actualizadoEn": "2026-09-23T12:56:11.602Z",
   "diagnostico": {
     "fuentes": [
       {
