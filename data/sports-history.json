@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-11",
+  "updatedAt": "2026-09-23",
   "methodology": {
     "title": "Archivo histórico verificado",
     "summary": "Los hitos históricos se publican únicamente cuando existe una fuente institucional identificable. Las estadísticas 2026 se calculan en el navegador con los resultados actuales de data/club-data.json y se distinguen de los datos históricos.",
@@ -151,10 +151,10 @@
       "slug": "futbol",
       "name": "Fútbol",
       "photo": "assets/deporte-futbol.webp",
-      "description": "El archivo reúne la participación de los planteles de fútbol de Ceibos en la Liga Universitaria y separa los logros históricos de la estadística viva de la temporada actual.",
+      "description": "El archivo reúne los planteles de fútbol de Ceibos en la Liga Universitaria y las categorías de Papi Fútbol +35, +40 y +45 de ADIC. Los logros históricos se distinguen de las estadísticas de la temporada actual.",
       "startLabel": "Afiliación institucional registrada desde 1998",
       "startDetail": "La Liga registra la afiliación de Ceibos Club el 18/03/1998. Esa fecha no se presenta como comienzo de cada categoría y convive con 2014, año de inicio que comunica el club en su identidad actual.",
-      "league": "Liga Universitaria de Deportes",
+      "league": "Liga Universitaria de Deportes · ADIC (Papi Fútbol)",
       "sourceIds": ["liga-affiliation", "club-current-site", "liga-football-2026"],
       "milestones": [
         {"year": 1998, "title": "Afiliación institucional", "detail": "Ceibos Club figura afiliado a la Liga Universitaria desde el 18 de marzo de 1998.", "sourceIds": ["liga-affiliation"]},
@@ -167,7 +167,10 @@
         {"slug":"reserva-verde","name":"Reserva Verde","competition":"Liga Universitaria — Reserva C","description":"Segundo plantel de Reserva de Ceibos, identificado en la web como Reserva Verde.","sourceIds":["liga-football-2026"],"achievements":[],"documentedSeasons":[2026]},
         {"slug":"presenior","name":"PreSenior","competition":"Liga Universitaria — Pre Senior C","description":"Categoría Pre Senior de Ceibos.","sourceIds":["liga-football-2026"],"achievements":[],"documentedSeasons":[2026]},
         {"slug":"sub-20","name":"Sub 20","competition":"Liga Universitaria — Sub 20 A","description":"Categoría formativa con un título oficial confirmado en 2022.","sourceIds":["liga-sub20-2022","liga-football-2026","liga-goleros-2023"],"achievements":[{"year":2022,"title":"Campeón Divisional A","detail":"Ceibos fue el primer equipo que aseguró un título de la Liga en la temporada 2022.","sourceIds":["liga-sub20-2022"]},{"year":2022,"title":"Finalista Copa de Campeones","detail":"Náutico ganó la final 1-0 ante Ceibos.","sourceIds":["liga-sub20-2022"]},{"year":2023,"title":"Alfonso Giménez, golero menos vencido de Sub 20 B","detail":"Reconocimiento individual de la Liga Universitaria, con promedio de 1,11 goles recibidos.","sourceIds":["liga-goleros-2023"]}],"notableMatches":[{"date":"2022-11-12","label":"Final Copa de Campeones","opponent":"Náutico","score":"0-1","sourceIds":["liga-sub20-2022"]}],"documentedSeasons":[2022,2026,2023]},
-        {"slug":"sub-18","name":"Sub 18","competition":"Liga Universitaria — Sub 18","description":"Categoría juvenil de fútbol de Ceibos. El archivo 2026 reúne la primera y la segunda rueda de la Serie 5.","sourceIds":["liga-football-2026","liga-sub18-rueda1"],"achievements":[],"documentedSeasons":[2026],"seasonSnapshots":[{"season":2026,"phase":"Primera rueda · Serie 5","asOf":"2026-09-11","sourceId":"liga-sub18-rueda1","pj":7,"pg":5,"pe":2,"pp":0,"gf":39,"gc":7,"points":17,"note":""}]}
+        {"slug":"sub-18","name":"Sub 18","competition":"Liga Universitaria — Sub 18","description":"Categoría juvenil de fútbol de Ceibos. El archivo 2026 reúne la primera y la segunda rueda de la Serie 5.","sourceIds":["liga-football-2026","liga-sub18-rueda1"],"achievements":[],"documentedSeasons":[2026],"seasonSnapshots":[{"season":2026,"phase":"Primera rueda · Serie 5","asOf":"2026-09-11","sourceId":"liga-sub18-rueda1","pj":7,"pg":5,"pe":2,"pp":0,"gf":39,"gc":7,"points":17,"note":""}]},
+        {"slug":"papi-futbol-35","name":"Papi Fútbol +35","competition":"ADIC — Papi Fútbol","description":"Plantel de Papi Fútbol +35 de Ceibos Club. Fixture y resultados de ADIC pendientes de carga.","sourceIds":[],"achievements":[],"documentedSeasons":[]},
+        {"slug":"papi-futbol-40","name":"Papi Fútbol +40","competition":"ADIC — Papi Fútbol","description":"Plantel de Papi Fútbol +40 de Ceibos Club. Fixture y resultados de ADIC pendientes de carga.","sourceIds":[],"achievements":[],"documentedSeasons":[]},
+        {"slug":"papi-futbol-45","name":"Papi Fútbol +45","competition":"ADIC — Papi Fútbol","description":"Plantel de Papi Fútbol +45 de Ceibos Club. Fixture y resultados de ADIC pendientes de carga.","sourceIds":[],"achievements":[],"documentedSeasons":[]}
       ]
     },
     {

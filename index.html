@@ -1584,8 +1584,8 @@ const DEPORTES = [
   },
   {
     slug:"futbol", nombre:"Fútbol", ico:"⚽", instagram:"ceibosfutbol",
-    desc:"La temporada 2026 de la Liga Universitaria tiene registros oficiales desde abril. Ceibos compite con Primera, Reserva A, Reserva Verde, PreSenior, Sub 20 y Sub 18: elegí una categoría para ver su fixture e historial del año.",
-    categorias:["Primera","Reserva A","Reserva Verde","PreSenior","Sub 20","Sub 18"],
+    desc:"La temporada 2026 de la Liga Universitaria tiene registros oficiales desde abril. Ceibos compite en la Liga Universitaria con Primera, Reserva A, Reserva Verde, PreSenior, Sub 20 y Sub 18, y en ADIC con Papi Fútbol +35, +40 y +45. Elegí una categoría para ver sus partidos e historial.",
+    categorias:["Primera","Reserva A","Reserva Verde","PreSenior","Sub 20","Sub 18","Papi Fútbol +35","Papi Fútbol +40","Papi Fútbol +45"],
     foto:"assets/deporte-futbol.webp"
   },
   {
@@ -1723,7 +1723,7 @@ function renderTicker(){
     mapa.set(`${slugDeporte(resultado.deporte)}|${resultado.categoria}`, resultado);
     return mapa;
   }, new Map());
-  const ordenFutbol = ["Primera", "Reserva A", "Reserva Verde", "PreSenior", "Sub 20", "Sub 18"];
+  const ordenFutbol = ["Primera", "Reserva A", "Reserva Verde", "PreSenior", "Sub 20", "Sub 18", "Papi Fútbol +35", "Papi Fútbol +40", "Papi Fútbol +45"];
   const items = [...ultimosPorCategoria.values()].sort((a,b) => {
     const aFutbol = slugDeporte(a.deporte) === "futbol", bFutbol = slugDeporte(b.deporte) === "futbol";
     if (aFutbol && bFutbol) return ordenFutbol.indexOf(a.categoria) - ordenFutbol.indexOf(b.categoria);
@@ -1867,6 +1867,7 @@ function renderDeportePanel(){
   const categorias = [...new Set([...d.categorias, ...fixture.map(p=>p.categoria), ...resultados.map(r=>r.categoria)].filter(Boolean))];
   const seleccionada = categorias.includes(categoriaActiva.get(d.slug)) ? categoriaActiva.get(d.slug) : categorias[0];
   categoriaActiva.set(d.slug, seleccionada);
+  const esPapiFutbol = d.slug === "futbol" && seleccionada.startsWith("Papi Fútbol +");
   const partidosCategoria = fixture.filter(p => p.categoria === seleccionada && fechaValida(p.fecha) && p.fecha >= hoyISO()).sort(porFecha);
   const resultadosCategoria = resultados.filter(r => r.categoria === seleccionada).sort(porFecha).reverse();
   const [proximo, ...futuros] = partidosCategoria;
@@ -1890,8 +1891,9 @@ function renderDeportePanel(){
       <h4>Partidos y resultados</h4>
       <div class="dep-categoria activo" data-categoria-panel="${textoSeguro(seleccionada)}">
         <h4>${etiquetaCategoria(seleccionada)}</h4>
+        ${esPapiFutbol ? `<a class="dep-archivo-link" href="https://www.adic.org.uy/noticias/futbol" target="_blank" rel="noopener">ADIC · Papi Fútbol &nearr;</a>` : ""}
         <h5>Pr\u00f3ximo partido</h5>
-        ${proximo ? partidoMini(proximo) : `<p class="sin-datos">Sin pr\u00f3ximos partidos publicados.</p>`}
+        ${proximo ? partidoMini(proximo) : `<p class="sin-datos">${esPapiFutbol ? "Fixture de ADIC pendiente de carga." : "Sin pr\u00f3ximos partidos publicados."}</p>`}
         ${futuros.length ? `<details class="dep-vermas"><summary>Ver ${futuros.length} partido${futuros.length===1?'':'s'} futuro${futuros.length===1?'':'s'}</summary>${futuros.map(partidoMini).join("")}</details>` : ""}
         <h5>\u00daltimo resultado</h5>
         ${ultimoResultado ? resultadoMini(ultimoResultado) : `<p class="sin-datos">Sin resultados cargados.</p>`}
