@@ -756,6 +756,10 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 .archivo-top-goleadores li::before{content:counter(archivo-goleador);display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--dorado);color:var(--verde-night);font-family:var(--display);font-size:.95rem}
 .archivo-top-goleadores span{color:var(--blanco);font-size:.78rem;font-weight:800;line-height:1.35}
 .archivo-top-goleadores b{font-family:var(--display);font-size:1.3rem;color:var(--dorado)}
+.adic-equipo{background:rgba(222,185,74,.14);font-weight:700}
+.archivo-tabla .adic-equipo th,.archivo-tabla .adic-equipo td{color:var(--dorado)}
+.archivo-tabla th[scope="row"]{padding:11px 10px;text-align:left;font-size:.75rem;letter-spacing:0;text-transform:none;color:rgba(246,241,228,.85);border-top:1px solid rgba(246,241,228,.08)}
+.archivo-tabla caption.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .archivo-tabla-wrap{overflow-x:auto;border-radius:12px}
 .archivo-tabla{width:100%;min-width:520px;border-collapse:collapse;font-size:.73rem}
 .archivo-tabla th{padding:0 10px 10px;color:rgba(246,241,228,.48);font-size:.59rem;letter-spacing:.11em;text-align:center;text-transform:uppercase}
@@ -1584,8 +1588,8 @@ const DEPORTES = [
   },
   {
     slug:"futbol", nombre:"Fútbol", ico:"⚽", instagram:"ceibosfutbol",
-    desc:"La temporada 2026 de la Liga Universitaria tiene registros oficiales desde abril. Ceibos compite en la Liga Universitaria con Primera, Reserva A, Reserva Verde, PreSenior, Sub 20 y Sub 18, y en ADIC con Papi Fútbol +35, +40 y +45. Elegí una categoría para ver sus partidos e historial.",
-    categorias:["Primera","Reserva A","Reserva Verde","PreSenior","Sub 20","Sub 18","Papi Fútbol +35","Papi Fútbol +40","Papi Fútbol +45"],
+    desc:"La temporada 2026 de la Liga Universitaria tiene registros oficiales desde abril. Ceibos compite en la Liga Universitaria con Primera, Reserva A, Reserva Verde, PreSenior, Sub 20 y Sub 18, y en ADIC con los planteles de Papi Fútbol. Elegí una categoría para ver sus partidos e historial.",
+    categorias:["Primera","Reserva A","Reserva Verde","PreSenior","Sub 20","Sub 18","Papi Fútbol +35","Papi Fútbol +40","Papi Fútbol +45","Papi Fútbol +50","Papi Fútbol Amarillo"],
     foto:"assets/deporte-futbol.webp"
   },
   {
@@ -1596,6 +1600,7 @@ const DEPORTES = [
   }
 ];
 let ARCHIVO_HISTORICO = null;
+let ADIC_TEMPORADA = null;
 
 let PARTIDOS = [
   { deporte:"basketball", categoria:"Divisional B", rival:"Maristas",        fecha:"2026-06-12", hora:"19:15", local:false },
@@ -1705,7 +1710,7 @@ const goleadoresResultado = resultado => {
     ? nombres.map(textoSeguro).join(" &middot; ")
     : Number(resultado?.gf) === 0
       ? "Ceibos no convirtió"
-      : "Goleadores aún no informados por la Liga";
+      : (String(resultado?.categoria).startsWith("Papi Fútbol ") ? "ADIC no publica goleadores en esta fuente" : "Goleadores aún no informados por la Liga");
   return `<div class="resultado-goleadores"><span class="resultado-goleadores-etiqueta">Goles</span>${detalle}</div>`;
 };
 const slugDeporte = valor => String(valor ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
@@ -1723,7 +1728,7 @@ function renderTicker(){
     mapa.set(`${slugDeporte(resultado.deporte)}|${resultado.categoria}`, resultado);
     return mapa;
   }, new Map());
-  const ordenFutbol = ["Primera", "Reserva A", "Reserva Verde", "PreSenior", "Sub 20", "Sub 18", "Papi Fútbol +35", "Papi Fútbol +40", "Papi Fútbol +45"];
+  const ordenFutbol = ["Primera", "Reserva A", "Reserva Verde", "PreSenior", "Sub 20", "Sub 18", "Papi Fútbol +35", "Papi Fútbol +40", "Papi Fútbol +45", "Papi Fútbol +50", "Papi Fútbol Amarillo"];
   const items = [...ultimosPorCategoria.values()].sort((a,b) => {
     const aFutbol = slugDeporte(a.deporte) === "futbol", bFutbol = slugDeporte(b.deporte) === "futbol";
     if (aFutbol && bFutbol) return ordenFutbol.indexOf(a.categoria) - ordenFutbol.indexOf(b.categoria);
@@ -1825,7 +1830,7 @@ const hoyISO = () => {
   }).formatToParts(new Date()).filter(parte => parte.type !== "literal").map(parte => [parte.type, parte.value]));
   return `${partes.year}-${partes.month}-${partes.day}`;
 };
-const horaPartidoVisible = partido => horaVisible(partido.hora) + (partido.estado ? " · FUH: " + textoSeguro(partido.estado) : "");
+const horaPartidoVisible = partido => horaVisible(partido.hora) + (partido.estado ? (String(partido.categoria).startsWith("Papi Fútbol ") ? " · ADIC: " : " · FUH: ") + textoSeguro(partido.estado) : "");
 const ubicacionVisible = partido => textoPlano(partido.cancha) || (partido.local ? "Cancha Los Ceibos" : "Visitante");
 const nombreDeporte = valor => DEPORTES.find(deporte => deporte.slug === slugDeporte(valor))?.nombre || textoPlano(valor) || "Ceibos";
 const horaConfirmada = partido => /^\d{1,2}:\d{2}$/.test(textoPlano(partido?.hora));
@@ -1859,6 +1864,18 @@ function cuentaRegresivaPartido(partido){
   return dias ? `Faltan ${dias} d · ${horas} h` : `Faltan ${horas} h · ${minutos} min`;
 }
 
+function tablasAdicCategoria(categoria){
+  const equipo = ADIC_TEMPORADA?.teams?.find(t => t.category === categoria);
+  if (!equipo) return "";
+  const torneos = ADIC_TEMPORADA.tournaments.filter(t => t.tables.some(tabla => tabla.rows.some(r => r.teamId === equipo.id))).sort((a,b) => b.id-a.id);
+  if (!torneos.length) return "";
+  const otrosAnios = torneos.some(t => t.matches.some(m => (m.home_team.id === equipo.id || m.away_team.id === equipo.id) && m.scheduled_at && !m.scheduled_at.startsWith("2026-")));
+  return '<h5>Tablas ADIC · 2026</h5><p class="sin-datos">Equipo en ADIC: '+textoSeguro(equipo.name)+'.</p>'+torneos.map(t => {
+    const tabla = t.tables.find(s => s.rows.some(r => r.teamId === equipo.id));
+    return '<details class="dep-vermas"><summary>'+textoSeguro(t.name)+' · '+textoSeguro(tabla.name)+'</summary><div class="archivo-tabla-wrap"><table class="archivo-tabla"><caption class="sr-only">'+textoSeguro(t.name)+' · '+textoSeguro(tabla.name)+'</caption><thead><tr><th scope="col">Pos.</th><th scope="col">Equipo</th>'+['PJ','V','E','D','GF','GC','Pts.'].map(c=>'<th scope="col">'+c+'</th>').join('')+'</tr></thead><tbody>'+tabla.rows.map(r=>'<tr'+(r.teamId===equipo.id?' class="adic-equipo"':'')+'><td>'+textoSeguro(r.position)+'</td><th scope="row">'+textoSeguro(r.name)+'</th>'+['pj','pg','pe','pp','gf','gc','points'].map(c=>'<td>'+textoSeguro(r[c])+'</td>').join('')+'</tr>').join('')+'</tbody></table></div><a class="dep-archivo-link" href="'+textoSeguro(t.url)+'" target="_blank" rel="noopener">Ver torneo en ADIC ↗</a><p class="sin-datos">Actualizado: '+textoSeguro(t.updatedAt.slice(0,10).split('-').reverse().join('/'))+'.</p></details>';
+  }).join('')+(otrosAnios?'<p class="sin-datos">ADIC también registra partidos de estos torneos con fechas de 2027. El fixture y las estadísticas de esta sección corresponden a 2026.</p>':'');
+}
+
 function renderDeportePanel(){
   const d = DEPORTES.find(deporte => deporte.slug === deporteActivo) ?? DEPORTES[0];
   const panels = document.getElementById("depPanels");
@@ -1867,7 +1884,7 @@ function renderDeportePanel(){
   const categorias = [...new Set([...d.categorias, ...fixture.map(p=>p.categoria), ...resultados.map(r=>r.categoria)].filter(Boolean))];
   const seleccionada = categorias.includes(categoriaActiva.get(d.slug)) ? categoriaActiva.get(d.slug) : categorias[0];
   categoriaActiva.set(d.slug, seleccionada);
-  const esPapiFutbol = d.slug === "futbol" && seleccionada.startsWith("Papi Fútbol +");
+  const esPapiFutbol = d.slug === "futbol" && seleccionada.startsWith("Papi Fútbol ");
   const partidosCategoria = fixture.filter(p => p.categoria === seleccionada && fechaValida(p.fecha) && p.fecha >= hoyISO()).sort(porFecha);
   const resultadosCategoria = resultados.filter(r => r.categoria === seleccionada).sort(porFecha).reverse();
   const [proximo, ...futuros] = partidosCategoria;
@@ -1877,7 +1894,7 @@ function renderDeportePanel(){
     const indicePartido = PARTIDOS.indexOf(p);
     return `<div class="partido-mini"><div><div class="vs">vs ${textoSeguro(p.rival)}</div><div class="meta">${f.semana} ${f.dia} ${f.mes} &middot; ${horaPartidoVisible(p)} &middot; ${textoSeguro(ubicacionVisible(p))}</div></div><div class="partido-mini-acciones"><span class="pill ${p.local?'local':'visita'}">${p.local?'Local':'Visitante'}</span><button class="partido-postal" type="button" data-postal-partido-indice="${indicePartido}" aria-label="Crear postal del partido contra ${textoSeguro(p.rival)}">Compartir postal</button></div></div>`;
   };
-  const resultadoMini = r => `<div class="resultado-mini"><div><span>vs ${textoSeguro(r.rival)}</span>${fechaBreve(r.fecha)?`<small>${fechaBreve(r.fecha)}</small>`:""}${goleadoresResultado(r)}</div><strong>${r.gf} &mdash; ${r.gc}</strong></div>`;
+  const resultadoMini = r => `<div class="resultado-mini"><div><span>vs ${textoSeguro(r.rival)}</span>${fechaBreve(r.fecha)?`<small>${fechaBreve(r.fecha)}</small>`:""}${String(r.categoria).startsWith("Papi Fútbol ") ? `<small>${r.local ? "Local" : "Visitante"} · ${textoSeguro(r.fase)}</small>` : ""}${goleadoresResultado(r)}</div><strong>${r.gf} &mdash; ${r.gc}</strong></div>`;
   panels.innerHTML = `<div class="dep-panel activo" id="${d.slug}" role="tabpanel" aria-labelledby="tab-${d.slug}">
     <div class="dep-info">
       <h3>${textoSeguro(d.nombre)} ${textoSeguro(d.ico)}</h3>
@@ -1891,13 +1908,14 @@ function renderDeportePanel(){
       <h4>Partidos y resultados</h4>
       <div class="dep-categoria activo" data-categoria-panel="${textoSeguro(seleccionada)}">
         <h4>${etiquetaCategoria(seleccionada)}</h4>
-        ${esPapiFutbol ? `<a class="dep-archivo-link" href="https://www.adic.org.uy/noticias/futbol" target="_blank" rel="noopener">ADIC · Papi Fútbol &nearr;</a>` : ""}
+        ${esPapiFutbol ? `<a class="dep-archivo-link" href="https://portal.adic.org.uy/tournaments" target="_blank" rel="noopener">ADIC · Papi Fútbol &nearr;</a>` : ""}
         <h5>Pr\u00f3ximo partido</h5>
-        ${proximo ? partidoMini(proximo) : `<p class="sin-datos">${esPapiFutbol ? "Fixture de ADIC pendiente de carga." : "Sin pr\u00f3ximos partidos publicados."}</p>`}
+        ${proximo ? partidoMini(proximo) : `<p class="sin-datos">${esPapiFutbol ? (ADIC_TEMPORADA?.teams?.some(t => t.category === seleccionada) ? "Sin próximos partidos fechados en 2026 por ADIC." : "Fixture de ADIC pendiente de identificar.") : "Sin pr\u00f3ximos partidos publicados."}</p>`}
         ${futuros.length ? `<details class="dep-vermas"><summary>Ver ${futuros.length} partido${futuros.length===1?'':'s'} futuro${futuros.length===1?'':'s'}</summary>${futuros.map(partidoMini).join("")}</details>` : ""}
         <h5>\u00daltimo resultado</h5>
         ${ultimoResultado ? resultadoMini(ultimoResultado) : `<p class="sin-datos">Sin resultados cargados.</p>`}
         ${historial.length ? `<details class="dep-vermas"><summary>Ver historial ${new Date().getFullYear()} (${historial.length})</summary>${historial.map(resultadoMini).join("")}</details>` : ""}
+        ${esPapiFutbol ? tablasAdicCategoria(seleccionada) : ""}
       </div>
     </div>
   </div>`;
@@ -2000,7 +2018,7 @@ function fuentesCompletasArchivo(deporte, categoria){
 }
 function tablasOficialesArchivo(categoria){
   const tablas = categoria.seasonSnapshots || [];
-  if (!tablas.length) return "";
+  if (!tablas.length) return tablasAdicCategoria(categoria.name);
   return '<h3 class="archivo-subtitulo">Registro de tablas oficiales</h3>' + tablas.map(tabla => `<div class="archivo-bloque"><strong>${textoSeguro(tabla.phase)} · ${tabla.season}</strong><p class="archivo-actualidad-nota">Consulta: ${textoSeguro(tabla.asOf.split('-').reverse().join('/'))}. Este registro conserva la tabla de esa fecha.</p><div class="archivo-tabla-wrap"><table class="archivo-tabla"><caption class="sr-only">Ceibos · ${textoSeguro(tabla.phase)}</caption><thead><tr><th scope="col">Equipo</th><th scope="col">PJ</th><th scope="col">V</th><th scope="col">E</th><th scope="col">D</th><th scope="col">F</th><th scope="col">C</th><th scope="col">Pts.</th></tr></thead><tbody><tr><td>Ceibos</td>${['pj','pg','pe','pp','gf','gc','points'].map(campo => '<td>'+textoSeguro(String(tabla[campo]).replace('.',','))+'</td>').join('')}</tr></tbody></table></div>${tabla.note ? '<p class="archivo-actualidad-nota">'+textoSeguro(tabla.note)+'</p>' : ''}${enlacesFuentesArchivo([tabla.sourceId])}</div>`).join('');
 }
 function hitoArchivo(hito){
@@ -2987,6 +3005,7 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
   .then(r => (r.ok ? r.json() : null))
   .then(d => {
     if (!d) return;
+    ADIC_TEMPORADA = d.adic && Array.isArray(d.adic.tournaments) && Array.isArray(d.adic.teams) ? d.adic : null;
     if (Array.isArray(d.partidos)) PARTIDOS = d.partidos
       .filter(p => DEPORTES.some(dep => dep.slug === p.deporte) && fechaValida(p.fecha))
       .map(p => ({ deporte:p.deporte, categoria:textoPlano(p.categoria), rival:textoPlano(p.rival), fecha:p.fecha, hora:textoPlano(p.hora), local:Boolean(p.local), cancha:textoPlano(p.cancha), estado:textoPlano(p.estado), fase:textoPlano(p.fase), predioZona:textoPlano(p.predioZona || p.zonaPredio) }));
@@ -2997,6 +3016,7 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
         rival:textoPlano(r.rival),
         fecha:fechaValida(r.fecha) ? r.fecha : "",
         fase:textoPlano(r.fase),
+        ...(typeof r.local === "boolean" ? { local:r.local } : {}),
         gf:Number(r.gf) || 0,
         gc:Number(r.gc) || 0,
         goleadores:(Array.isArray(r.goleadores) ? r.goleadores : r.goleadores ? [r.goleadores] : [])

@@ -19,6 +19,20 @@
       "cancha": "San isdro de lomas"
     },
     {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "Punta Carretas",
+      "fecha": "2026-09-20",
+      "hora": "09:00",
+      "local": false,
+      "fase": "ADIC · Clasura Copas Master 45",
+      "adicId": 135024,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "estado": "Confirmado",
+      "cancha": "A confirmar"
+    },
+    {
       "deporte": "basketball",
       "categoria": "Basketball",
       "rival": "ORT BLANCO",
@@ -58,6 +72,20 @@
       "cancha": "A confirmar"
     },
     {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol Amarillo",
+      "rival": "Valdocco FC (Salesianos)",
+      "fecha": "2026-09-29",
+      "hora": "21:00",
+      "local": false,
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134935,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "estado": "Confirmado",
+      "cancha": "A confirmar"
+    },
+    {
       "deporte": "hockey",
       "categoria": "Intermedia B",
       "rival": "Palo Y Pico",
@@ -67,22 +95,6 @@
       "fase": "APERTURA 2026 (Intermedia B)",
       "estado": "A Designar",
       "cancha": "Pilares"
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Intermedia",
-      "rival": "OBC",
-      "fecha": "2026-10-03",
-      "hora": "12:00",
-      "local": true
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Primera",
-      "rival": "OBC",
-      "fecha": "2026-10-03",
-      "hora": "12:00",
-      "local": true
     },
     {
       "deporte": "futbol",
@@ -105,15 +117,20 @@
       "cancha": "A confirmar"
     },
     {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Cgu – Los Cuervos",
-      "fecha": "2026-10-04",
-      "hora": "17:00",
-      "local": false,
-      "fase": "APERTURA 2026 (Intermedia B)",
-      "estado": "A Designar",
-      "cancha": "Carrasco Polo Club"
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "OBC",
+      "fecha": "2026-10-03",
+      "hora": "12:00",
+      "local": true
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "OBC",
+      "fecha": "2026-10-03",
+      "hora": "12:00",
+      "local": true
     },
     {
       "deporte": "futbol",
@@ -136,20 +153,15 @@
       "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
-      "deporte": "rugby",
-      "categoria": "Intermedia",
-      "rival": "Cuervos",
-      "fecha": "2026-10-10",
-      "hora": "12:00",
-      "local": false
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Primera",
-      "rival": "Cuervos",
-      "fecha": "2026-10-10",
-      "hora": "12:00",
-      "local": false
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Cgu – Los Cuervos",
+      "fecha": "2026-10-04",
+      "hora": "17:00",
+      "local": false,
+      "fase": "APERTURA 2026 (Intermedia B)",
+      "estado": "A Designar",
+      "cancha": "Carrasco Polo Club"
     },
     {
       "deporte": "futbol",
@@ -172,6 +184,22 @@
       "cancha": "A confirmar"
     },
     {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Cuervos",
+      "fecha": "2026-10-10",
+      "hora": "12:00",
+      "local": false
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Cuervos",
+      "fecha": "2026-10-10",
+      "hora": "12:00",
+      "local": false
+    },
+    {
       "deporte": "futbol",
       "categoria": "Primera",
       "rival": "Sagrada Familia Universitario",
@@ -190,22 +218,6 @@
       "local": false,
       "fase": "Segunda rueda · Serie 5",
       "cancha": "COMPLEJO NORTHFIELD"
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Intermedia",
-      "rival": "Trebol",
-      "fecha": "2026-10-17",
-      "hora": "12:00",
-      "local": true
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Primera",
-      "rival": "Trebol",
-      "fecha": "2026-10-17",
-      "hora": "12:00",
-      "local": true
     },
     {
       "deporte": "futbol",
@@ -228,6 +240,22 @@
       "cancha": "A confirmar"
     },
     {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Trebol",
+      "fecha": "2026-10-17",
+      "hora": "12:00",
+      "local": true
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Trebol",
+      "fecha": "2026-10-17",
+      "hora": "12:00",
+      "local": true
+    },
+    {
       "deporte": "futbol",
       "categoria": "Primera",
       "rival": "J.M.L.M.",
@@ -235,6 +263,26 @@
       "hora": "A confirmar",
       "local": true,
       "fase": "Segunda rueda · Divisional B · Título y ascenso",
+      "cancha": "A confirmar"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "Club Seminario",
+      "fecha": "2026-10-24",
+      "hora": "A confirmar",
+      "local": false,
+      "fase": "Segunda rueda · Divisional A · Permanencia y descenso",
+      "cancha": "A confirmar"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "Juan XXIII Blanco",
+      "fecha": "2026-10-24",
+      "hora": "A confirmar",
+      "local": false,
+      "fase": "Segunda rueda · Divisional C · Título y ascenso",
       "cancha": "A confirmar"
     },
     {
@@ -260,26 +308,6 @@
       "fecha": "2026-10-24",
       "hora": "12:00",
       "local": true
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "Club Seminario",
-      "fecha": "2026-10-24",
-      "hora": "A confirmar",
-      "local": false,
-      "fase": "Segunda rueda · Divisional A · Permanencia y descenso",
-      "cancha": "A confirmar"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "Juan XXIII Blanco",
-      "fecha": "2026-10-24",
-      "hora": "A confirmar",
-      "local": false,
-      "fase": "Segunda rueda · Divisional C · Título y ascenso",
-      "cancha": "A confirmar"
     },
     {
       "deporte": "futbol",
@@ -350,6 +378,48 @@
       "local": false,
       "fase": "Segunda rueda · Divisional B · Título y ascenso",
       "cancha": "A confirmar"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "Aleman Schwarz",
+      "fecha": "2026-11-15",
+      "hora": "09:00",
+      "local": true,
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134758,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "estado": "Programado",
+      "cancha": "A confirmar"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "Colegio Ingles",
+      "fecha": "2026-11-15",
+      "hora": "09:00",
+      "local": false,
+      "fase": "ADIC · Clasura Copas Master 45",
+      "adicId": 135030,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "estado": "Programado",
+      "cancha": "A confirmar"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol Amarillo",
+      "rival": "Erik Erikson",
+      "fecha": "2026-11-15",
+      "hora": "09:00",
+      "local": true,
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134939,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "estado": "Programado",
+      "cancha": "A confirmar"
     }
   ],
   "resultados": [
@@ -360,6 +430,58 @@
       "gf": 12,
       "gc": 22,
       "fecha": "2025-03-14"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "La Bendita Salesianos",
+      "gf": 4,
+      "gc": 1,
+      "fecha": "2026-03-08",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67271,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "Old Sampa 2015",
+      "gf": 2,
+      "gc": 1,
+      "fecha": "2026-03-08",
+      "fase": "ADIC · T. Clasificatorio Master 45",
+      "adicId": 67567,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +50",
+      "rival": "Crandon amarillo",
+      "gf": 3,
+      "gc": 4,
+      "fecha": "2026-03-08",
+      "fase": "ADIC · T. Clasificatorio Master 50",
+      "adicId": 68422,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos +50",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol Amarillo",
+      "rival": "Stella Maris 40",
+      "gf": 4,
+      "gc": 2,
+      "fecha": "2026-03-08",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67273,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": false
     },
     {
       "deporte": "rugby",
@@ -421,6 +543,58 @@
       "fecha": "2026-03-14"
     },
     {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "Sto Domingo senior",
+      "gf": 1,
+      "gc": 0,
+      "fecha": "2026-03-15",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67279,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "Aleman master",
+      "gf": 2,
+      "gc": 4,
+      "fecha": "2026-03-15",
+      "fase": "ADIC · T. Clasificatorio Master 45",
+      "adicId": 67570,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +50",
+      "rival": "San Juan city",
+      "gf": 1,
+      "gc": 6,
+      "fecha": "2026-03-15",
+      "fase": "ADIC · T. Clasificatorio Master 50",
+      "adicId": 68430,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos +50",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol Amarillo",
+      "rival": "Areteia blanco",
+      "gf": 0,
+      "gc": 2,
+      "fecha": "2026-03-15",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67283,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": true
+    },
+    {
       "deporte": "hockey",
       "categoria": "Intermedia B",
       "rival": "Nautilus",
@@ -445,6 +619,45 @@
       "gf": 57,
       "gc": 69,
       "fecha": "2026-03-21"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "Areteia blanco",
+      "gf": 4,
+      "gc": 3,
+      "fecha": "2026-03-22",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67286,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +50",
+      "rival": "Matu 07",
+      "gf": 2,
+      "gc": 0,
+      "fecha": "2026-03-22",
+      "fase": "ADIC · T. Clasificatorio Master 50",
+      "adicId": 68435,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos +50",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol Amarillo",
+      "rival": "Anglo black",
+      "gf": 4,
+      "gc": 0,
+      "fecha": "2026-03-22",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67287,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": true
     },
     {
       "deporte": "hockey",
@@ -576,6 +789,58 @@
       "gf": 7,
       "gc": 60,
       "fecha": "2026-04-11"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "Ceibos Club amarillo",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-04-12",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67295,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "Salesiano Padre Mario",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-04-12",
+      "fase": "ADIC · T. Clasificatorio Master 45",
+      "adicId": 67582,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +50",
+      "rival": "Gabriela Mistral 2019",
+      "gf": 2,
+      "gc": 3,
+      "fecha": "2026-04-12",
+      "fase": "ADIC · T. Clasificatorio Master 50",
+      "adicId": 68444,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos +50",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol Amarillo",
+      "rival": "Ceibos Club senior 40",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-04-12",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67295,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": false
     },
     {
       "deporte": "futbol",
@@ -712,6 +977,58 @@
       "gf": 8,
       "gc": 39,
       "fecha": "2026-04-18"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "Old Brendans negro",
+      "gf": 3,
+      "gc": 0,
+      "fecha": "2026-04-19",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67305,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "Old Woodlands strong",
+      "gf": 0,
+      "gc": 3,
+      "fecha": "2026-04-19",
+      "fase": "ADIC · T. Clasificatorio Master 45",
+      "adicId": 67708,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +50",
+      "rival": "Pallotti",
+      "gf": 3,
+      "gc": 2,
+      "fecha": "2026-04-19",
+      "fase": "ADIC · T. Clasificatorio Master 50",
+      "adicId": 68449,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos +50",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol Amarillo",
+      "rival": "Maristas Deportivo 40",
+      "gf": 2,
+      "gc": 5,
+      "fecha": "2026-04-19",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67304,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": true
     },
     {
       "deporte": "futbol",
@@ -854,6 +1171,58 @@
       "gf": 29,
       "gc": 26,
       "fecha": "2026-04-25"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "Maristas Deportivo 40",
+      "gf": 4,
+      "gc": 2,
+      "fecha": "2026-04-26",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67307,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "Harwood",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-04-26",
+      "fase": "ADIC · T. Clasificatorio Master 45",
+      "adicId": 67716,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +50",
+      "rival": "San Juan fiesta",
+      "gf": 4,
+      "gc": 7,
+      "fecha": "2026-04-26",
+      "fase": "ADIC · T. Clasificatorio Master 50",
+      "adicId": 68459,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos +50",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol Amarillo",
+      "rival": "Sto Domingo senior",
+      "gf": 0,
+      "gc": 1,
+      "fecha": "2026-04-26",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67309,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": true
     },
     {
       "deporte": "futbol",
@@ -1017,6 +1386,19 @@
       "fecha": "2026-05-09"
     },
     {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +50",
+      "rival": "Aleman 2013",
+      "gf": 0,
+      "gc": 3,
+      "fecha": "2026-05-10",
+      "fase": "ADIC · T. Clasificatorio Master 50",
+      "adicId": 68464,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos +50",
+      "local": false
+    },
+    {
       "deporte": "hockey",
       "categoria": "Intermedia B",
       "rival": "Club Seminario",
@@ -1126,6 +1508,45 @@
       "gc": 2,
       "fecha": "2026-05-16",
       "fase": "APERTURA 2026 (Sub 18)"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "Frances ELF",
+      "gf": 4,
+      "gc": 1,
+      "fecha": "2026-05-17",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67321,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +50",
+      "rival": "Maristas",
+      "gf": 3,
+      "gc": 0,
+      "fecha": "2026-05-17",
+      "fase": "ADIC · T. Clasificatorio Master 50",
+      "adicId": 68488,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos +50",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol Amarillo",
+      "rival": "San Juan Amarillo",
+      "gf": 3,
+      "gc": 5,
+      "fecha": "2026-05-17",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67324,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": true
     },
     {
       "deporte": "futbol",
@@ -1281,6 +1702,71 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "Crandogs",
+      "gf": 3,
+      "gc": 0,
+      "fecha": "2026-05-24",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67328,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "Santo Domingo",
+      "gf": 5,
+      "gc": 4,
+      "fecha": "2026-05-24",
+      "fase": "ADIC · T. Clasificatorio Master 45",
+      "adicId": 67735,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +50",
+      "rival": "IEP",
+      "gf": 0,
+      "gc": 3,
+      "fecha": "2026-05-24",
+      "fase": "ADIC · T. Clasificatorio Master 50",
+      "adicId": 68494,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos +50",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +50",
+      "rival": "Anglo Centro Z",
+      "gf": 0,
+      "gc": 3,
+      "fecha": "2026-05-24",
+      "fase": "ADIC · T. Clasificatorio Master 50",
+      "adicId": 68516,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos +50",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol Amarillo",
+      "rival": "Aleman Schwarz",
+      "gf": 0,
+      "gc": 1,
+      "fecha": "2026-05-24",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67330,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Primera",
       "rival": "SAGRADA FAMILIA UNIVERSITARIO",
       "gf": 2,
@@ -1396,6 +1882,58 @@
       "gf": 0,
       "gc": 43,
       "fecha": "2026-05-30"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "Stella Maris 40",
+      "gf": 4,
+      "gc": 1,
+      "fecha": "2026-05-31",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67337,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "Gabriela Mistral",
+      "gf": 2,
+      "gc": 0,
+      "fecha": "2026-05-31",
+      "fase": "ADIC · T. Clasificatorio Master 45",
+      "adicId": 67738,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +50",
+      "rival": "Isasa",
+      "gf": 0,
+      "gc": 6,
+      "fecha": "2026-05-31",
+      "fase": "ADIC · T. Clasificatorio Master 50",
+      "adicId": 68507,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos +50",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol Amarillo",
+      "rival": "La Bendita Salesianos",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-05-31",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67336,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": false
     },
     {
       "deporte": "futbol",
@@ -1563,6 +2101,58 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "San Juan Amarillo",
+      "gf": 4,
+      "gc": 2,
+      "fecha": "2026-06-07",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67342,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "Clara Master 2019",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-06-07",
+      "fase": "ADIC · T. Clasificatorio Master 45",
+      "adicId": 67748,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +50",
+      "rival": "JM blanco",
+      "gf": 0,
+      "gc": 3,
+      "fecha": "2026-06-07",
+      "fase": "ADIC · T. Clasificatorio Master 50",
+      "adicId": 68514,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos +50",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol Amarillo",
+      "rival": "Crandogs",
+      "gf": 3,
+      "gc": 0,
+      "fecha": "2026-06-07",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67344,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Primera",
       "rival": "J.M.L.M",
       "gf": 2,
@@ -1606,6 +2196,19 @@
       "gc": 2,
       "fecha": "2026-06-07",
       "fase": "APERTURA 2026 (Intermedia C)"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "La Mennais Blanco",
+      "gf": 4,
+      "gc": 2,
+      "fecha": "2026-06-11",
+      "fase": "ADIC · T. Clasificatorio Master 45",
+      "adicId": 67725,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "local": false
     },
     {
       "deporte": "rugby",
@@ -1706,6 +2309,45 @@
       "gf": 5,
       "gc": 45,
       "fecha": "2026-06-13"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "Anglo black",
+      "gf": 4,
+      "gc": 0,
+      "fecha": "2026-06-14",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67348,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "Old Brendans 45",
+      "gf": 2,
+      "gc": 1,
+      "fecha": "2026-06-14",
+      "fase": "ADIC · T. Clasificatorio Master 45",
+      "adicId": 67751,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol Amarillo",
+      "rival": "Frances ELF",
+      "gf": 2,
+      "gc": 1,
+      "fecha": "2026-06-14",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67351,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": false
     },
     {
       "deporte": "futbol",
@@ -1845,6 +2487,58 @@
       "gf": 28,
       "gc": 42,
       "fecha": "2026-06-20"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "San Pablo",
+      "gf": 2,
+      "gc": 0,
+      "fecha": "2026-06-21",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67356,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "Jesus Maria 2019",
+      "gf": 0,
+      "gc": 2,
+      "fecha": "2026-06-21",
+      "fase": "ADIC · T. Clasificatorio Master 45",
+      "adicId": 67757,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +50",
+      "rival": "La Mennais azul",
+      "gf": 0,
+      "gc": 3,
+      "fecha": "2026-06-21",
+      "fase": "ADIC · T. Clasificatorio Master 50",
+      "adicId": 68528,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos +50",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol Amarillo",
+      "rival": "Old Brendans negro",
+      "gf": 1,
+      "gc": 5,
+      "fecha": "2026-06-21",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67361,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": false
     },
     {
       "deporte": "futbol",
@@ -2024,6 +2718,45 @@
       "gf": 51,
       "gc": 62,
       "fecha": "2026-07-25"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "Aleman Schwarz",
+      "gf": 3,
+      "gc": 1,
+      "fecha": "2026-07-25",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67314,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "Punta Carretas",
+      "gf": 3,
+      "gc": 0,
+      "fecha": "2026-07-25",
+      "fase": "ADIC · T. Clasificatorio Master 45",
+      "adicId": 67724,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol Amarillo",
+      "rival": "San Pablo",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-07-25",
+      "fase": "ADIC · T. Clasificatorio Master 40",
+      "adicId": 67315,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": false
     },
     {
       "deporte": "hockey",
@@ -2294,6 +3027,45 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "San Pablo",
+      "gf": 1,
+      "gc": 0,
+      "fecha": "2026-08-16",
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134762,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "Aleman master",
+      "gf": 1,
+      "gc": 0,
+      "fecha": "2026-08-16",
+      "fase": "ADIC · Clasura Copas Master 45",
+      "adicId": 135038,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol Amarillo",
+      "rival": "HCA +40",
+      "gf": 1,
+      "gc": 0,
+      "fecha": "2026-08-16",
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134949,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Primera",
       "rival": "ALEMAN UNIVERSITARIO",
       "gf": 1,
@@ -2377,6 +3149,19 @@
       "gc": 2,
       "fecha": "2026-08-23",
       "fase": "APERTURA 2026 (Intermedia B)"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "La Mennais Blanco",
+      "gf": 1,
+      "gc": 3,
+      "fecha": "2026-08-27",
+      "fase": "ADIC · Clasura Copas Master 45",
+      "adicId": 135047,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "local": true
     },
     {
       "deporte": "hockey",
@@ -2495,6 +3280,45 @@
       "gf": 10,
       "gc": 27,
       "fecha": "2026-08-29"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "Club J.Maria",
+      "gf": 0,
+      "gc": 2,
+      "fecha": "2026-08-30",
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134780,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "Col San Miguel",
+      "gf": 2,
+      "gc": 0,
+      "fecha": "2026-08-30",
+      "fase": "ADIC · Clasura Copas Master 45",
+      "adicId": 135050,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol Amarillo",
+      "rival": "Pio 40",
+      "gf": 3,
+      "gc": 1,
+      "fecha": "2026-08-30",
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134962,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": false
     },
     {
       "deporte": "futbol",
@@ -2620,6 +3444,45 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "Areteia blanco",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-09-06",
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134785,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "Frances PSG",
+      "gf": 5,
+      "gc": 1,
+      "fecha": "2026-09-06",
+      "fase": "ADIC · Clasura Copas Master 45",
+      "adicId": 135060,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol Amarillo",
+      "rival": "Orange Trouville",
+      "gf": 0,
+      "gc": 1,
+      "fecha": "2026-09-06",
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134970,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Primera",
       "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
       "gf": 0,
@@ -2647,6 +3510,32 @@
       "gc": 1,
       "fecha": "2026-09-06",
       "fase": "COPA DE ORO (Intermedia C)"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "Ivy Thomas 40",
+      "gf": 1,
+      "gc": 4,
+      "fecha": "2026-09-09",
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134774,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol Amarillo",
+      "rival": "Old Clifton",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-09-09",
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134957,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": true
     },
     {
       "deporte": "futbol",
@@ -2730,6 +3619,45 @@
       "gf": 12,
       "gc": 22,
       "fecha": "2026-09-12"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "Scuola Italiana 1886",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-09-13",
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134791,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "Jesus Maria 2019",
+      "gf": 1,
+      "gc": 0,
+      "fecha": "2026-09-13",
+      "fase": "ADIC · Clasura Copas Master 45",
+      "adicId": 135065,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol Amarillo",
+      "rival": "Saint George rojo",
+      "gf": 3,
+      "gc": 2,
+      "fecha": "2026-09-13",
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134977,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": false
     },
     {
       "deporte": "futbol",
@@ -2863,7 +3791,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-23T12:15:10.239Z",
+  "actualizadoEn": "2026-09-23T12:46:33.061Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -3025,6 +3953,36 @@
         "url": "https://ligauniversitaria.org.uy/resultados/F181818-5-.html",
         "registros": 7,
         "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+        "registros": 26,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+        "registros": 25,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+        "registros": 12,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+        "registros": 13,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
+        "registros": 13,
+        "estado": "ok"
       }
     ],
     "instagram": {
@@ -3036,5 +3994,2543 @@
       "cache": 10,
       "nuevas": 0
     }
+  },
+  "adic": {
+    "season": 2026,
+    "teams": [
+      {
+        "id": 653,
+        "name": "Ceibos Club senior 40",
+        "category": "Papi Fútbol +40"
+      },
+      {
+        "id": 719,
+        "name": "Ceibos Club amarillo",
+        "category": "Papi Fútbol Amarillo"
+      },
+      {
+        "id": 709,
+        "name": "Ceibos 45 Master",
+        "category": "Papi Fútbol +45"
+      },
+      {
+        "id": 739,
+        "name": "Ceibos +50",
+        "category": "Papi Fútbol +50"
+      }
+    ],
+    "tournaments": [
+      {
+        "id": 1501,
+        "name": "Clausura Copas",
+        "category": "Padres Master 40",
+        "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+        "updatedAt": "2026-09-23T12:46:31.815Z",
+        "tables": [
+          {
+            "id": 2291,
+            "name": "Serie A",
+            "rows": [
+              {
+                "position": 1,
+                "teamId": 658,
+                "name": "Aleman Schwarz",
+                "pj": 5,
+                "pg": 4,
+                "pe": 0,
+                "pp": 1,
+                "gf": 10,
+                "gc": 5,
+                "points": 12
+              },
+              {
+                "position": 2,
+                "teamId": 483,
+                "name": "Scuola Italiana 1886",
+                "pj": 5,
+                "pg": 3,
+                "pe": 1,
+                "pp": 1,
+                "gf": 8,
+                "gc": 3,
+                "points": 10
+              },
+              {
+                "position": 3,
+                "teamId": 107,
+                "name": "Santa Rita Rojo",
+                "pj": 5,
+                "pg": 3,
+                "pe": 1,
+                "pp": 1,
+                "gf": 9,
+                "gc": 5,
+                "points": 10
+              },
+              {
+                "position": 4,
+                "teamId": 730,
+                "name": "Club J.Maria",
+                "pj": 4,
+                "pg": 3,
+                "pe": 0,
+                "pp": 1,
+                "gf": 7,
+                "gc": 4,
+                "points": 9
+              },
+              {
+                "position": 5,
+                "teamId": 525,
+                "name": "Old Sampa",
+                "pj": 5,
+                "pg": 2,
+                "pe": 2,
+                "pp": 1,
+                "gf": 8,
+                "gc": 7,
+                "points": 8
+              },
+              {
+                "position": 6,
+                "teamId": 697,
+                "name": "Areteia blanco",
+                "pj": 5,
+                "pg": 2,
+                "pe": 2,
+                "pp": 1,
+                "gf": 6,
+                "gc": 7,
+                "points": 8
+              },
+              {
+                "position": 7,
+                "teamId": 655,
+                "name": "Sta Elena Lagomar 40",
+                "pj": 4,
+                "pg": 2,
+                "pe": 0,
+                "pp": 2,
+                "gf": 8,
+                "gc": 7,
+                "points": 6
+              },
+              {
+                "position": 8,
+                "teamId": 55,
+                "name": "San Pablo",
+                "pj": 5,
+                "pg": 2,
+                "pe": 0,
+                "pp": 3,
+                "gf": 6,
+                "gc": 6,
+                "points": 6
+              },
+              {
+                "position": 9,
+                "teamId": 17,
+                "name": "San Juan Amarillo",
+                "pj": 5,
+                "pg": 2,
+                "pe": 0,
+                "pp": 3,
+                "gf": 6,
+                "gc": 9,
+                "points": 6
+              },
+              {
+                "position": 10,
+                "teamId": 388,
+                "name": "San Juan Sushi",
+                "pj": 5,
+                "pg": 1,
+                "pe": 2,
+                "pp": 2,
+                "gf": 3,
+                "gc": 4,
+                "points": 5
+              },
+              {
+                "position": 11,
+                "teamId": 544,
+                "name": "Ivy Thomas 40",
+                "pj": 5,
+                "pg": 1,
+                "pe": 1,
+                "pp": 3,
+                "gf": 7,
+                "gc": 8,
+                "points": 4
+              },
+              {
+                "position": 12,
+                "teamId": 73,
+                "name": "La Mennais Celeste",
+                "pj": 4,
+                "pg": 1,
+                "pe": 1,
+                "pp": 2,
+                "gf": 4,
+                "gc": 8,
+                "points": 4
+              },
+              {
+                "position": 13,
+                "teamId": 653,
+                "name": "Ceibos Club senior 40",
+                "pj": 5,
+                "pg": 1,
+                "pe": 1,
+                "pp": 3,
+                "gf": 4,
+                "gc": 9,
+                "points": 4
+              },
+              {
+                "position": 14,
+                "teamId": 510,
+                "name": "Old Woodlands master",
+                "pj": 4,
+                "pg": 0,
+                "pe": 1,
+                "pp": 3,
+                "gf": 4,
+                "gc": 8,
+                "points": 1
+              }
+            ]
+          },
+          {
+            "id": 2293,
+            "name": "Serie C",
+            "rows": [
+              {
+                "position": 1,
+                "teamId": 729,
+                "name": "Espacio Ludico",
+                "pj": 6,
+                "pg": 5,
+                "pe": 1,
+                "pp": 0,
+                "gf": 13,
+                "gc": 6,
+                "points": 16
+              },
+              {
+                "position": 2,
+                "teamId": 584,
+                "name": "Frances ELF",
+                "pj": 5,
+                "pg": 4,
+                "pe": 0,
+                "pp": 1,
+                "gf": 12,
+                "gc": 5,
+                "points": 12
+              },
+              {
+                "position": 3,
+                "teamId": 746,
+                "name": "Orange Trouville",
+                "pj": 5,
+                "pg": 3,
+                "pe": 2,
+                "pp": 0,
+                "gf": 14,
+                "gc": 3,
+                "points": 11
+              },
+              {
+                "position": 4,
+                "teamId": 474,
+                "name": "Crandogs",
+                "pj": 5,
+                "pg": 3,
+                "pe": 1,
+                "pp": 1,
+                "gf": 12,
+                "gc": 4,
+                "points": 10
+              },
+              {
+                "position": 5,
+                "teamId": 447,
+                "name": "Saint George rojo",
+                "pj": 5,
+                "pg": 3,
+                "pe": 1,
+                "pp": 1,
+                "gf": 16,
+                "gc": 9,
+                "points": 10
+              },
+              {
+                "position": 6,
+                "teamId": 719,
+                "name": "Ceibos Club amarillo",
+                "pj": 5,
+                "pg": 3,
+                "pe": 1,
+                "pp": 1,
+                "gf": 8,
+                "gc": 5,
+                "points": 10
+              },
+              {
+                "position": 7,
+                "teamId": 732,
+                "name": "HCA +40",
+                "pj": 5,
+                "pg": 3,
+                "pe": 0,
+                "pp": 2,
+                "gf": 13,
+                "gc": 8,
+                "points": 9
+              },
+              {
+                "position": 8,
+                "teamId": 194,
+                "name": "Old Clifton",
+                "pj": 5,
+                "pg": 2,
+                "pe": 2,
+                "pp": 1,
+                "gf": 7,
+                "gc": 7,
+                "points": 8
+              },
+              {
+                "position": 9,
+                "teamId": 647,
+                "name": "Erik Erikson",
+                "pj": 5,
+                "pg": 2,
+                "pe": 0,
+                "pp": 3,
+                "gf": 10,
+                "gc": 13,
+                "points": 6
+              },
+              {
+                "position": 10,
+                "teamId": 704,
+                "name": "Pio 40",
+                "pj": 5,
+                "pg": 1,
+                "pe": 0,
+                "pp": 4,
+                "gf": 6,
+                "gc": 10,
+                "points": 3
+              },
+              {
+                "position": 11,
+                "teamId": 431,
+                "name": "Tacuru Salesianos",
+                "pj": 5,
+                "pg": 1,
+                "pe": 0,
+                "pp": 4,
+                "gf": 7,
+                "gc": 13,
+                "points": 3
+              },
+              {
+                "position": 12,
+                "teamId": 703,
+                "name": "North School 40",
+                "pj": 5,
+                "pg": 1,
+                "pe": 0,
+                "pp": 4,
+                "gf": 4,
+                "gc": 14,
+                "points": 3
+              },
+              {
+                "position": 13,
+                "teamId": 20,
+                "name": "Pallotti",
+                "pj": 6,
+                "pg": 1,
+                "pe": 0,
+                "pp": 5,
+                "gf": 10,
+                "gc": 24,
+                "points": 3
+              },
+              {
+                "position": 14,
+                "teamId": 731,
+                "name": "Valdocco FC (Salesianos)",
+                "pj": 5,
+                "pg": 0,
+                "pe": 0,
+                "pp": 5,
+                "gf": 5,
+                "gc": 16,
+                "points": 0
+              }
+            ]
+          }
+        ],
+        "matches": [
+          {
+            "id": 134762,
+            "matchday": 3,
+            "status": "finished",
+            "scheduled_at": "2026-08-16T12:00:00",
+            "home_goals": 0,
+            "away_goals": 1,
+            "home_team": {
+              "id": 55,
+              "name": "San Pablo"
+            },
+            "away_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            }
+          },
+          {
+            "id": 134949,
+            "matchday": 3,
+            "status": "finished",
+            "scheduled_at": "2026-08-16T12:00:00",
+            "home_goals": 0,
+            "away_goals": 1,
+            "home_team": {
+              "id": 732,
+              "name": "HCA +40"
+            },
+            "away_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            }
+          },
+          {
+            "id": 134774,
+            "matchday": 4,
+            "status": "finished",
+            "scheduled_at": "2026-09-10T00:00:00",
+            "home_goals": 4,
+            "away_goals": 1,
+            "home_team": {
+              "id": 544,
+              "name": "Ivy Thomas 40"
+            },
+            "away_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            }
+          },
+          {
+            "id": 134957,
+            "matchday": 4,
+            "status": "finished",
+            "scheduled_at": "2026-09-10T00:00:00",
+            "home_goals": 1,
+            "away_goals": 1,
+            "home_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            },
+            "away_team": {
+              "id": 194,
+              "name": "Old Clifton"
+            }
+          },
+          {
+            "id": 134780,
+            "matchday": 5,
+            "status": "finished",
+            "scheduled_at": "2026-08-30T12:00:00",
+            "home_goals": 0,
+            "away_goals": 2,
+            "home_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            },
+            "away_team": {
+              "id": 730,
+              "name": "Club J.Maria"
+            }
+          },
+          {
+            "id": 134962,
+            "matchday": 5,
+            "status": "finished",
+            "scheduled_at": "2026-08-30T12:00:00",
+            "home_goals": 1,
+            "away_goals": 3,
+            "home_team": {
+              "id": 704,
+              "name": "Pio 40"
+            },
+            "away_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            }
+          },
+          {
+            "id": 134785,
+            "matchday": 6,
+            "status": "finished",
+            "scheduled_at": "2026-09-06T12:00:00",
+            "home_goals": 1,
+            "away_goals": 1,
+            "home_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            },
+            "away_team": {
+              "id": 697,
+              "name": "Areteia blanco"
+            }
+          },
+          {
+            "id": 134970,
+            "matchday": 6,
+            "status": "finished",
+            "scheduled_at": "2026-09-06T12:00:00",
+            "home_goals": 0,
+            "away_goals": 1,
+            "home_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            },
+            "away_team": {
+              "id": 746,
+              "name": "Orange Trouville"
+            }
+          },
+          {
+            "id": 134791,
+            "matchday": 7,
+            "status": "finished",
+            "scheduled_at": "2026-09-13T12:00:00",
+            "home_goals": 2,
+            "away_goals": 1,
+            "home_team": {
+              "id": 483,
+              "name": "Scuola Italiana 1886"
+            },
+            "away_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            }
+          },
+          {
+            "id": 134977,
+            "matchday": 7,
+            "status": "finished",
+            "scheduled_at": "2026-09-13T12:00:00",
+            "home_goals": 2,
+            "away_goals": 3,
+            "home_team": {
+              "id": 447,
+              "name": "Saint George rojo"
+            },
+            "away_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            }
+          },
+          {
+            "id": 134749,
+            "matchday": 1,
+            "status": "pending",
+            "scheduled_at": "2027-02-21T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            },
+            "away_team": {
+              "id": 655,
+              "name": "Sta Elena Lagomar 40"
+            }
+          },
+          {
+            "id": 134935,
+            "matchday": 1,
+            "status": "confirmed",
+            "scheduled_at": "2026-09-30T00:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 731,
+              "name": "Valdocco FC (Salesianos)"
+            },
+            "away_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            }
+          },
+          {
+            "id": 134939,
+            "matchday": 2,
+            "status": "pending",
+            "scheduled_at": "2026-11-15T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            },
+            "away_team": {
+              "id": 647,
+              "name": "Erik Erikson"
+            }
+          },
+          {
+            "id": 134758,
+            "matchday": 2,
+            "status": "pending",
+            "scheduled_at": "2026-11-15T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            },
+            "away_team": {
+              "id": 658,
+              "name": "Aleman Schwarz"
+            }
+          },
+          {
+            "id": 134980,
+            "matchday": 8,
+            "status": "pending",
+            "scheduled_at": "2027-01-03T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 431,
+              "name": "Tacuru Salesianos"
+            },
+            "away_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            }
+          },
+          {
+            "id": 134800,
+            "matchday": 8,
+            "status": "pending",
+            "scheduled_at": "2027-01-03T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            },
+            "away_team": {
+              "id": 107,
+              "name": "Santa Rita Rojo"
+            }
+          },
+          {
+            "id": 134986,
+            "matchday": 9,
+            "status": "pending",
+            "scheduled_at": "2027-01-10T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            },
+            "away_team": {
+              "id": 474,
+              "name": "Crandogs"
+            }
+          },
+          {
+            "id": 134807,
+            "matchday": 9,
+            "status": "pending",
+            "scheduled_at": "2027-01-10T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 525,
+              "name": "Old Sampa"
+            },
+            "away_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            }
+          },
+          {
+            "id": 134993,
+            "matchday": 10,
+            "status": "pending",
+            "scheduled_at": "2027-01-17T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            },
+            "away_team": {
+              "id": 584,
+              "name": "Frances ELF"
+            }
+          },
+          {
+            "id": 134816,
+            "matchday": 10,
+            "status": "pending",
+            "scheduled_at": "2027-01-17T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            },
+            "away_team": {
+              "id": 510,
+              "name": "Old Woodlands master"
+            }
+          },
+          {
+            "id": 135002,
+            "matchday": 11,
+            "status": "pending",
+            "scheduled_at": "2027-01-24T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 703,
+              "name": "North School 40"
+            },
+            "away_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            }
+          },
+          {
+            "id": 134824,
+            "matchday": 11,
+            "status": "pending",
+            "scheduled_at": "2027-01-24T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            },
+            "away_team": {
+              "id": 73,
+              "name": "La Mennais Celeste"
+            }
+          },
+          {
+            "id": 134827,
+            "matchday": 12,
+            "status": "pending",
+            "scheduled_at": "2027-01-31T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 17,
+              "name": "San Juan Amarillo"
+            },
+            "away_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            }
+          },
+          {
+            "id": 135010,
+            "matchday": 12,
+            "status": "pending",
+            "scheduled_at": "2027-01-31T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            },
+            "away_team": {
+              "id": 20,
+              "name": "Pallotti"
+            }
+          },
+          {
+            "id": 134835,
+            "matchday": 13,
+            "status": "pending",
+            "scheduled_at": "2027-02-07T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 388,
+              "name": "San Juan Sushi"
+            },
+            "away_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            }
+          },
+          {
+            "id": 135018,
+            "matchday": 13,
+            "status": "pending",
+            "scheduled_at": "2027-02-07T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            },
+            "away_team": {
+              "id": 729,
+              "name": "Espacio Ludico"
+            }
+          }
+        ]
+      },
+      {
+        "id": 1467,
+        "name": "T. Clasificatorio Master 40",
+        "category": "Padres Master 40",
+        "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+        "updatedAt": "2026-09-23T12:46:32.340Z",
+        "tables": [
+          {
+            "id": 2233,
+            "name": "Serie B",
+            "rows": [
+              {
+                "position": 1,
+                "teamId": 653,
+                "name": "Ceibos Club senior 40",
+                "pj": 13,
+                "pg": 12,
+                "pe": 1,
+                "pp": 0,
+                "gf": 41,
+                "gc": 12,
+                "points": 37
+              },
+              {
+                "position": 2,
+                "teamId": 697,
+                "name": "Areteia blanco",
+                "pj": 13,
+                "pg": 9,
+                "pe": 2,
+                "pp": 2,
+                "gf": 24,
+                "gc": 13,
+                "points": 29
+              },
+              {
+                "position": 3,
+                "teamId": 658,
+                "name": "Aleman Schwarz",
+                "pj": 13,
+                "pg": 7,
+                "pe": 4,
+                "pp": 2,
+                "gf": 22,
+                "gc": 16,
+                "points": 25
+              },
+              {
+                "position": 4,
+                "teamId": 17,
+                "name": "San Juan Amarillo",
+                "pj": 13,
+                "pg": 6,
+                "pe": 3,
+                "pp": 4,
+                "gf": 33,
+                "gc": 23,
+                "points": 21
+              },
+              {
+                "position": 5,
+                "teamId": 55,
+                "name": "San Pablo",
+                "pj": 13,
+                "pg": 5,
+                "pe": 4,
+                "pp": 4,
+                "gf": 20,
+                "gc": 14,
+                "points": 19
+              },
+              {
+                "position": 6,
+                "teamId": 699,
+                "name": "Sto Domingo senior",
+                "pj": 13,
+                "pg": 5,
+                "pe": 3,
+                "pp": 5,
+                "gf": 18,
+                "gc": 13,
+                "points": 18
+              },
+              {
+                "position": 7,
+                "teamId": 562,
+                "name": "Stella Maris 40",
+                "pj": 13,
+                "pg": 5,
+                "pe": 3,
+                "pp": 5,
+                "gf": 20,
+                "gc": 23,
+                "points": 18
+              },
+              {
+                "position": 8,
+                "teamId": 657,
+                "name": "Old Brendans negro",
+                "pj": 13,
+                "pg": 5,
+                "pe": 2,
+                "pp": 6,
+                "gf": 23,
+                "gc": 25,
+                "points": 17
+              },
+              {
+                "position": 9,
+                "teamId": 718,
+                "name": "Maristas Deportivo 40",
+                "pj": 13,
+                "pg": 4,
+                "pe": 3,
+                "pp": 6,
+                "gf": 25,
+                "gc": 31,
+                "points": 15
+              },
+              {
+                "position": 10,
+                "teamId": 719,
+                "name": "Ceibos Club amarillo",
+                "pj": 13,
+                "pg": 4,
+                "pe": 2,
+                "pp": 7,
+                "gf": 23,
+                "gc": 27,
+                "points": 14
+              },
+              {
+                "position": 11,
+                "teamId": 584,
+                "name": "Frances ELF",
+                "pj": 13,
+                "pg": 4,
+                "pe": 2,
+                "pp": 7,
+                "gf": 15,
+                "gc": 23,
+                "points": 14
+              },
+              {
+                "position": 12,
+                "teamId": 569,
+                "name": "La Bendita Salesianos",
+                "pj": 13,
+                "pg": 3,
+                "pe": 4,
+                "pp": 6,
+                "gf": 25,
+                "gc": 30,
+                "points": 13
+              },
+              {
+                "position": 13,
+                "teamId": 600,
+                "name": "Anglo black",
+                "pj": 13,
+                "pg": 3,
+                "pe": 1,
+                "pp": 9,
+                "gf": 13,
+                "gc": 35,
+                "points": 10
+              },
+              {
+                "position": 14,
+                "teamId": 474,
+                "name": "Crandogs",
+                "pj": 13,
+                "pg": 0,
+                "pe": 4,
+                "pp": 9,
+                "gf": 8,
+                "gc": 25,
+                "points": 4
+              }
+            ]
+          }
+        ],
+        "matches": [
+          {
+            "id": 67271,
+            "matchday": 1,
+            "status": "finished",
+            "scheduled_at": "2026-03-08T12:00:00",
+            "home_goals": 4,
+            "away_goals": 1,
+            "home_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            },
+            "away_team": {
+              "id": 569,
+              "name": "La Bendita Salesianos"
+            }
+          },
+          {
+            "id": 67273,
+            "matchday": 1,
+            "status": "finished",
+            "scheduled_at": "2026-03-08T12:00:00",
+            "home_goals": 2,
+            "away_goals": 4,
+            "home_team": {
+              "id": 562,
+              "name": "Stella Maris 40"
+            },
+            "away_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            }
+          },
+          {
+            "id": 67279,
+            "matchday": 2,
+            "status": "finished",
+            "scheduled_at": "2026-03-15T12:00:00",
+            "home_goals": 0,
+            "away_goals": 1,
+            "home_team": {
+              "id": 699,
+              "name": "Sto Domingo senior"
+            },
+            "away_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            }
+          },
+          {
+            "id": 67283,
+            "matchday": 2,
+            "status": "finished",
+            "scheduled_at": "2026-03-15T12:00:00",
+            "home_goals": 0,
+            "away_goals": 2,
+            "home_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            },
+            "away_team": {
+              "id": 697,
+              "name": "Areteia blanco"
+            }
+          },
+          {
+            "id": 67286,
+            "matchday": 3,
+            "status": "finished",
+            "scheduled_at": "2026-03-22T12:00:00",
+            "home_goals": 3,
+            "away_goals": 4,
+            "home_team": {
+              "id": 697,
+              "name": "Areteia blanco"
+            },
+            "away_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            }
+          },
+          {
+            "id": 67287,
+            "matchday": 3,
+            "status": "finished",
+            "scheduled_at": "2026-03-22T12:00:00",
+            "home_goals": 4,
+            "away_goals": 0,
+            "home_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            },
+            "away_team": {
+              "id": 600,
+              "name": "Anglo black"
+            }
+          },
+          {
+            "id": 67295,
+            "matchday": 4,
+            "status": "finished",
+            "scheduled_at": "2026-04-12T12:00:00",
+            "home_goals": 1,
+            "away_goals": 1,
+            "home_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            },
+            "away_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            }
+          },
+          {
+            "id": 67304,
+            "matchday": 5,
+            "status": "finished",
+            "scheduled_at": "2026-04-19T13:45:00",
+            "home_goals": 2,
+            "away_goals": 5,
+            "home_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            },
+            "away_team": {
+              "id": 718,
+              "name": "Maristas Deportivo 40"
+            }
+          },
+          {
+            "id": 67305,
+            "matchday": 5,
+            "status": "finished",
+            "scheduled_at": "2026-04-19T12:00:00",
+            "home_goals": 0,
+            "away_goals": 3,
+            "home_team": {
+              "id": 657,
+              "name": "Old Brendans negro"
+            },
+            "away_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            }
+          },
+          {
+            "id": 67307,
+            "matchday": 6,
+            "status": "finished",
+            "scheduled_at": "2026-04-26T12:00:00",
+            "home_goals": 2,
+            "away_goals": 4,
+            "home_team": {
+              "id": 718,
+              "name": "Maristas Deportivo 40"
+            },
+            "away_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            }
+          },
+          {
+            "id": 67309,
+            "matchday": 6,
+            "status": "finished",
+            "scheduled_at": "2026-04-26T12:00:00",
+            "home_goals": 0,
+            "away_goals": 1,
+            "home_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            },
+            "away_team": {
+              "id": 699,
+              "name": "Sto Domingo senior"
+            }
+          },
+          {
+            "id": 67314,
+            "matchday": 7,
+            "status": "finished",
+            "scheduled_at": "2026-07-25T12:00:00",
+            "home_goals": 3,
+            "away_goals": 1,
+            "home_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            },
+            "away_team": {
+              "id": 658,
+              "name": "Aleman Schwarz"
+            }
+          },
+          {
+            "id": 67315,
+            "matchday": 7,
+            "status": "finished",
+            "scheduled_at": "2026-07-25T12:00:00",
+            "home_goals": 2,
+            "away_goals": 1,
+            "home_team": {
+              "id": 55,
+              "name": "San Pablo"
+            },
+            "away_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            }
+          },
+          {
+            "id": 67321,
+            "matchday": 8,
+            "status": "finished",
+            "scheduled_at": "2026-05-17T12:00:00",
+            "home_goals": 4,
+            "away_goals": 1,
+            "home_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            },
+            "away_team": {
+              "id": 584,
+              "name": "Frances ELF"
+            }
+          },
+          {
+            "id": 67324,
+            "matchday": 8,
+            "status": "finished",
+            "scheduled_at": "2026-05-17T12:00:00",
+            "home_goals": 3,
+            "away_goals": 5,
+            "home_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            },
+            "away_team": {
+              "id": 17,
+              "name": "San Juan Amarillo"
+            }
+          },
+          {
+            "id": 67328,
+            "matchday": 9,
+            "status": "finished",
+            "scheduled_at": "2026-05-24T12:00:00",
+            "home_goals": 0,
+            "away_goals": 3,
+            "home_team": {
+              "id": 474,
+              "name": "Crandogs"
+            },
+            "away_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            }
+          },
+          {
+            "id": 67330,
+            "matchday": 9,
+            "status": "finished",
+            "scheduled_at": "2026-05-24T12:00:00",
+            "home_goals": 0,
+            "away_goals": 1,
+            "home_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            },
+            "away_team": {
+              "id": 658,
+              "name": "Aleman Schwarz"
+            }
+          },
+          {
+            "id": 67336,
+            "matchday": 10,
+            "status": "finished",
+            "scheduled_at": "2026-05-31T12:00:00",
+            "home_goals": 2,
+            "away_goals": 2,
+            "home_team": {
+              "id": 569,
+              "name": "La Bendita Salesianos"
+            },
+            "away_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            }
+          },
+          {
+            "id": 67337,
+            "matchday": 10,
+            "status": "finished",
+            "scheduled_at": "2026-05-31T12:00:00",
+            "home_goals": 1,
+            "away_goals": 4,
+            "home_team": {
+              "id": 562,
+              "name": "Stella Maris 40"
+            },
+            "away_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            }
+          },
+          {
+            "id": 67342,
+            "matchday": 11,
+            "status": "finished",
+            "scheduled_at": "2026-06-07T12:00:00",
+            "home_goals": 4,
+            "away_goals": 2,
+            "home_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            },
+            "away_team": {
+              "id": 17,
+              "name": "San Juan Amarillo"
+            }
+          },
+          {
+            "id": 67344,
+            "matchday": 11,
+            "status": "finished",
+            "scheduled_at": "2026-06-07T12:00:00",
+            "home_goals": 3,
+            "away_goals": 0,
+            "home_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            },
+            "away_team": {
+              "id": 474,
+              "name": "Crandogs"
+            }
+          },
+          {
+            "id": 67348,
+            "matchday": 12,
+            "status": "finished",
+            "scheduled_at": "2026-06-14T12:00:00",
+            "home_goals": 4,
+            "away_goals": 0,
+            "home_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            },
+            "away_team": {
+              "id": 600,
+              "name": "Anglo black"
+            }
+          },
+          {
+            "id": 67351,
+            "matchday": 12,
+            "status": "finished",
+            "scheduled_at": "2026-06-14T12:00:00",
+            "home_goals": 1,
+            "away_goals": 2,
+            "home_team": {
+              "id": 584,
+              "name": "Frances ELF"
+            },
+            "away_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            }
+          },
+          {
+            "id": 67356,
+            "matchday": 13,
+            "status": "finished",
+            "scheduled_at": "2026-06-21T12:00:00",
+            "home_goals": 0,
+            "away_goals": 2,
+            "home_team": {
+              "id": 55,
+              "name": "San Pablo"
+            },
+            "away_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            }
+          },
+          {
+            "id": 67361,
+            "matchday": 13,
+            "status": "finished",
+            "scheduled_at": "2026-06-21T13:45:00",
+            "home_goals": 5,
+            "away_goals": 1,
+            "home_team": {
+              "id": 657,
+              "name": "Old Brendans negro"
+            },
+            "away_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            }
+          }
+        ]
+      },
+      {
+        "id": 1468,
+        "name": "T. Clasificatorio Master 45",
+        "category": "Padres Master 45",
+        "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+        "updatedAt": "2026-09-23T12:46:32.558Z",
+        "tables": [
+          {
+            "id": 2235,
+            "name": "Serie A",
+            "rows": [
+              {
+                "position": 1,
+                "teamId": 547,
+                "name": "Clara Master 2019",
+                "pj": 12,
+                "pg": 9,
+                "pe": 2,
+                "pp": 1,
+                "gf": 34,
+                "gc": 17,
+                "points": 29
+              },
+              {
+                "position": 2,
+                "teamId": 489,
+                "name": "Harwood",
+                "pj": 12,
+                "pg": 8,
+                "pe": 2,
+                "pp": 2,
+                "gf": 24,
+                "gc": 13,
+                "points": 26
+              },
+              {
+                "position": 3,
+                "teamId": 706,
+                "name": "Old Brendans 45",
+                "pj": 12,
+                "pg": 7,
+                "pe": 2,
+                "pp": 3,
+                "gf": 29,
+                "gc": 12,
+                "points": 23
+              },
+              {
+                "position": 4,
+                "teamId": 81,
+                "name": "La Mennais Blanco",
+                "pj": 12,
+                "pg": 7,
+                "pe": 1,
+                "pp": 4,
+                "gf": 24,
+                "gc": 17,
+                "points": 22
+              },
+              {
+                "position": 5,
+                "teamId": 545,
+                "name": "Jesus Maria 2019",
+                "pj": 12,
+                "pg": 7,
+                "pe": 1,
+                "pp": 4,
+                "gf": 21,
+                "gc": 14,
+                "points": 22
+              },
+              {
+                "position": 6,
+                "teamId": 418,
+                "name": "Aleman master",
+                "pj": 12,
+                "pg": 6,
+                "pe": 3,
+                "pp": 3,
+                "gf": 19,
+                "gc": 14,
+                "points": 21
+              },
+              {
+                "position": 7,
+                "teamId": 709,
+                "name": "Ceibos 45 Master",
+                "pj": 12,
+                "pg": 6,
+                "pe": 3,
+                "pp": 3,
+                "gf": 26,
+                "gc": 23,
+                "points": 21
+              },
+              {
+                "position": 8,
+                "teamId": 403,
+                "name": "Punta Carretas",
+                "pj": 12,
+                "pg": 5,
+                "pe": 1,
+                "pp": 6,
+                "gf": 16,
+                "gc": 24,
+                "points": 16
+              },
+              {
+                "position": 9,
+                "teamId": 507,
+                "name": "Old Woodlands strong",
+                "pj": 12,
+                "pg": 4,
+                "pe": 2,
+                "pp": 6,
+                "gf": 26,
+                "gc": 18,
+                "points": 14
+              },
+              {
+                "position": 10,
+                "teamId": 540,
+                "name": "Old Sampa 2015",
+                "pj": 12,
+                "pg": 2,
+                "pe": 3,
+                "pp": 7,
+                "gf": 15,
+                "gc": 27,
+                "points": 9
+              },
+              {
+                "position": 11,
+                "teamId": 310,
+                "name": "Gabriela Mistral",
+                "pj": 12,
+                "pg": 2,
+                "pe": 1,
+                "pp": 9,
+                "gf": 13,
+                "gc": 28,
+                "points": 7
+              },
+              {
+                "position": 12,
+                "teamId": 94,
+                "name": "Santo Domingo",
+                "pj": 12,
+                "pg": 2,
+                "pe": 1,
+                "pp": 9,
+                "gf": 22,
+                "gc": 42,
+                "points": 7
+              },
+              {
+                "position": 13,
+                "teamId": 548,
+                "name": "Salesiano Padre Mario",
+                "pj": 12,
+                "pg": 0,
+                "pe": 4,
+                "pp": 8,
+                "gf": 9,
+                "gc": 29,
+                "points": 4
+              }
+            ]
+          }
+        ],
+        "matches": [
+          {
+            "id": 67567,
+            "matchday": 1,
+            "status": "finished",
+            "scheduled_at": "2026-03-08T12:00:00",
+            "home_goals": 1,
+            "away_goals": 2,
+            "home_team": {
+              "id": 540,
+              "name": "Old Sampa 2015"
+            },
+            "away_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            }
+          },
+          {
+            "id": 67570,
+            "matchday": 2,
+            "status": "finished",
+            "scheduled_at": "2026-03-15T12:00:00",
+            "home_goals": 2,
+            "away_goals": 4,
+            "home_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            },
+            "away_team": {
+              "id": 418,
+              "name": "Aleman master"
+            }
+          },
+          {
+            "id": 67582,
+            "matchday": 4,
+            "status": "finished",
+            "scheduled_at": "2026-04-12T12:00:00",
+            "home_goals": 2,
+            "away_goals": 2,
+            "home_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            },
+            "away_team": {
+              "id": 548,
+              "name": "Salesiano Padre Mario"
+            }
+          },
+          {
+            "id": 67708,
+            "matchday": 5,
+            "status": "finished",
+            "scheduled_at": "2026-04-19T12:00:00",
+            "home_goals": 0,
+            "away_goals": 3,
+            "home_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            },
+            "away_team": {
+              "id": 507,
+              "name": "Old Woodlands strong"
+            }
+          },
+          {
+            "id": 67716,
+            "matchday": 6,
+            "status": "finished",
+            "scheduled_at": "2026-04-26T12:00:00",
+            "home_goals": 2,
+            "away_goals": 2,
+            "home_team": {
+              "id": 489,
+              "name": "Harwood"
+            },
+            "away_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            }
+          },
+          {
+            "id": 67724,
+            "matchday": 7,
+            "status": "finished",
+            "scheduled_at": "2026-07-25T12:00:00",
+            "home_goals": 3,
+            "away_goals": 0,
+            "home_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            },
+            "away_team": {
+              "id": 403,
+              "name": "Punta Carretas"
+            }
+          },
+          {
+            "id": 67725,
+            "matchday": 8,
+            "status": "finished",
+            "scheduled_at": "2026-06-11T23:30:00",
+            "home_goals": 2,
+            "away_goals": 4,
+            "home_team": {
+              "id": 81,
+              "name": "La Mennais Blanco"
+            },
+            "away_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            }
+          },
+          {
+            "id": 67735,
+            "matchday": 9,
+            "status": "finished",
+            "scheduled_at": "2026-05-24T12:00:00",
+            "home_goals": 5,
+            "away_goals": 4,
+            "home_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            },
+            "away_team": {
+              "id": 94,
+              "name": "Santo Domingo"
+            }
+          },
+          {
+            "id": 67738,
+            "matchday": 10,
+            "status": "finished",
+            "scheduled_at": "2026-05-31T12:00:00",
+            "home_goals": 0,
+            "away_goals": 2,
+            "home_team": {
+              "id": 310,
+              "name": "Gabriela Mistral"
+            },
+            "away_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            }
+          },
+          {
+            "id": 67748,
+            "matchday": 11,
+            "status": "finished",
+            "scheduled_at": "2026-06-07T12:00:00",
+            "home_goals": 2,
+            "away_goals": 2,
+            "home_team": {
+              "id": 547,
+              "name": "Clara Master 2019"
+            },
+            "away_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            }
+          },
+          {
+            "id": 67751,
+            "matchday": 12,
+            "status": "finished",
+            "scheduled_at": "2026-06-14T12:00:00",
+            "home_goals": 2,
+            "away_goals": 1,
+            "home_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            },
+            "away_team": {
+              "id": 706,
+              "name": "Old Brendans 45"
+            }
+          },
+          {
+            "id": 67757,
+            "matchday": 13,
+            "status": "finished",
+            "scheduled_at": "2026-06-21T13:45:00",
+            "home_goals": 2,
+            "away_goals": 0,
+            "home_team": {
+              "id": 545,
+              "name": "Jesus Maria 2019"
+            },
+            "away_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            }
+          }
+        ]
+      },
+      {
+        "id": 1502,
+        "name": "Clasura Copas Master 45",
+        "category": "Padres Master 45",
+        "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+        "updatedAt": "2026-09-23T12:46:32.777Z",
+        "tables": [
+          {
+            "id": 2296,
+            "name": "Serie A",
+            "rows": [
+              {
+                "position": 1,
+                "teamId": 489,
+                "name": "Harwood",
+                "pj": 5,
+                "pg": 4,
+                "pe": 1,
+                "pp": 0,
+                "gf": 16,
+                "gc": 6,
+                "points": 13
+              },
+              {
+                "position": 2,
+                "teamId": 736,
+                "name": "Col San Miguel",
+                "pj": 5,
+                "pg": 4,
+                "pe": 0,
+                "pp": 1,
+                "gf": 13,
+                "gc": 6,
+                "points": 12
+              },
+              {
+                "position": 3,
+                "teamId": 709,
+                "name": "Ceibos 45 Master",
+                "pj": 5,
+                "pg": 4,
+                "pe": 0,
+                "pp": 1,
+                "gf": 10,
+                "gc": 4,
+                "points": 12
+              },
+              {
+                "position": 4,
+                "teamId": 514,
+                "name": "Colegio Ingles",
+                "pj": 4,
+                "pg": 3,
+                "pe": 0,
+                "pp": 1,
+                "gf": 9,
+                "gc": 6,
+                "points": 9
+              },
+              {
+                "position": 5,
+                "teamId": 547,
+                "name": "Clara Master 2019",
+                "pj": 5,
+                "pg": 3,
+                "pe": 0,
+                "pp": 2,
+                "gf": 10,
+                "gc": 11,
+                "points": 9
+              },
+              {
+                "position": 6,
+                "teamId": 418,
+                "name": "Aleman master",
+                "pj": 5,
+                "pg": 2,
+                "pe": 2,
+                "pp": 1,
+                "gf": 10,
+                "gc": 5,
+                "points": 8
+              },
+              {
+                "position": 7,
+                "teamId": 81,
+                "name": "La Mennais Blanco",
+                "pj": 5,
+                "pg": 2,
+                "pe": 2,
+                "pp": 1,
+                "gf": 9,
+                "gc": 6,
+                "points": 8
+              },
+              {
+                "position": 8,
+                "teamId": 375,
+                "name": "Frances PSG",
+                "pj": 5,
+                "pg": 2,
+                "pe": 2,
+                "pp": 1,
+                "gf": 9,
+                "gc": 8,
+                "points": 8
+              },
+              {
+                "position": 9,
+                "teamId": 735,
+                "name": "Stella Maris 45",
+                "pj": 5,
+                "pg": 1,
+                "pe": 2,
+                "pp": 2,
+                "gf": 3,
+                "gc": 7,
+                "points": 5
+              },
+              {
+                "position": 10,
+                "teamId": 545,
+                "name": "Jesus Maria 2019",
+                "pj": 4,
+                "pg": 1,
+                "pe": 0,
+                "pp": 3,
+                "gf": 4,
+                "gc": 8,
+                "points": 3
+              },
+              {
+                "position": 11,
+                "teamId": 733,
+                "name": "St. Andrews",
+                "pj": 4,
+                "pg": 0,
+                "pe": 1,
+                "pp": 3,
+                "gf": 1,
+                "gc": 9,
+                "points": 1
+              },
+              {
+                "position": 12,
+                "teamId": 706,
+                "name": "Old Brendans 45",
+                "pj": 3,
+                "pg": 0,
+                "pe": 0,
+                "pp": 3,
+                "gf": 5,
+                "gc": 8,
+                "points": 0
+              },
+              {
+                "position": 13,
+                "teamId": 507,
+                "name": "Old Woodlands strong",
+                "pj": 3,
+                "pg": 0,
+                "pe": 0,
+                "pp": 3,
+                "gf": 3,
+                "gc": 9,
+                "points": 0
+              },
+              {
+                "position": 14,
+                "teamId": 403,
+                "name": "Punta Carretas",
+                "pj": 4,
+                "pg": 0,
+                "pe": 0,
+                "pp": 4,
+                "gf": 3,
+                "gc": 12,
+                "points": 0
+              }
+            ]
+          }
+        ],
+        "matches": [
+          {
+            "id": 135038,
+            "matchday": 3,
+            "status": "finished",
+            "scheduled_at": "2026-08-16T12:00:00",
+            "home_goals": 1,
+            "away_goals": 0,
+            "home_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            },
+            "away_team": {
+              "id": 418,
+              "name": "Aleman master"
+            }
+          },
+          {
+            "id": 135047,
+            "matchday": 4,
+            "status": "finished",
+            "scheduled_at": "2026-08-27T23:00:00",
+            "home_goals": 1,
+            "away_goals": 3,
+            "home_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            },
+            "away_team": {
+              "id": 81,
+              "name": "La Mennais Blanco"
+            }
+          },
+          {
+            "id": 135050,
+            "matchday": 5,
+            "status": "finished",
+            "scheduled_at": "2026-08-30T12:00:00",
+            "home_goals": 0,
+            "away_goals": 2,
+            "home_team": {
+              "id": 736,
+              "name": "Col San Miguel"
+            },
+            "away_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            }
+          },
+          {
+            "id": 135060,
+            "matchday": 6,
+            "status": "finished",
+            "scheduled_at": "2026-09-06T13:45:00",
+            "home_goals": 1,
+            "away_goals": 5,
+            "home_team": {
+              "id": 375,
+              "name": "Frances PSG"
+            },
+            "away_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            }
+          },
+          {
+            "id": 135065,
+            "matchday": 7,
+            "status": "finished",
+            "scheduled_at": "2026-09-13T12:00:00",
+            "home_goals": 1,
+            "away_goals": 0,
+            "home_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            },
+            "away_team": {
+              "id": 545,
+              "name": "Jesus Maria 2019"
+            }
+          },
+          {
+            "id": 135024,
+            "matchday": 1,
+            "status": "confirmed",
+            "scheduled_at": "2026-09-20T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 403,
+              "name": "Punta Carretas"
+            },
+            "away_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            }
+          },
+          {
+            "id": 135030,
+            "matchday": 2,
+            "status": "pending",
+            "scheduled_at": "2026-11-15T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 514,
+              "name": "Colegio Ingles"
+            },
+            "away_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            }
+          },
+          {
+            "id": 135072,
+            "matchday": 8,
+            "status": "pending",
+            "scheduled_at": "2027-01-24T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            },
+            "away_team": {
+              "id": 735,
+              "name": "Stella Maris 45"
+            }
+          },
+          {
+            "id": 135083,
+            "matchday": 9,
+            "status": "pending",
+            "scheduled_at": "2027-01-31T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 507,
+              "name": "Old Woodlands strong"
+            },
+            "away_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            }
+          },
+          {
+            "id": 135088,
+            "matchday": 10,
+            "status": "pending",
+            "scheduled_at": "2027-02-07T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            },
+            "away_team": {
+              "id": 706,
+              "name": "Old Brendans 45"
+            }
+          },
+          {
+            "id": 135091,
+            "matchday": 11,
+            "status": "pending",
+            "scheduled_at": "2027-02-14T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            },
+            "away_team": {
+              "id": 547,
+              "name": "Clara Master 2019"
+            }
+          },
+          {
+            "id": 135103,
+            "matchday": 12,
+            "status": "pending",
+            "scheduled_at": "2027-02-21T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 733,
+              "name": "St. Andrews"
+            },
+            "away_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            }
+          },
+          {
+            "id": 135106,
+            "matchday": 13,
+            "status": "pending",
+            "scheduled_at": "2027-02-28T12:00:00",
+            "home_goals": null,
+            "away_goals": null,
+            "home_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            },
+            "away_team": {
+              "id": 489,
+              "name": "Harwood"
+            }
+          }
+        ]
+      },
+      {
+        "id": 1470,
+        "name": "T. Clasificatorio Master 50",
+        "category": "Padres Master 50",
+        "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
+        "updatedAt": "2026-09-23T12:46:32.995Z",
+        "tables": [
+          {
+            "id": 2239,
+            "name": "Serie B",
+            "rows": [
+              {
+                "position": 1,
+                "teamId": 425,
+                "name": "La Mennais azul",
+                "pj": 13,
+                "pg": 11,
+                "pe": 1,
+                "pp": 1,
+                "gf": 44,
+                "gc": 12,
+                "points": 34
+              },
+              {
+                "position": 2,
+                "teamId": 614,
+                "name": "San Juan city",
+                "pj": 13,
+                "pg": 10,
+                "pe": 2,
+                "pp": 1,
+                "gf": 35,
+                "gc": 13,
+                "points": 32
+              },
+              {
+                "position": 3,
+                "teamId": 295,
+                "name": "IEP",
+                "pj": 13,
+                "pg": 9,
+                "pe": 2,
+                "pp": 2,
+                "gf": 40,
+                "gc": 13,
+                "points": 29
+              },
+              {
+                "position": 4,
+                "teamId": 607,
+                "name": "Anglo Centro Z",
+                "pj": 13,
+                "pg": 8,
+                "pe": 3,
+                "pp": 2,
+                "gf": 39,
+                "gc": 27,
+                "points": 27
+              },
+              {
+                "position": 5,
+                "teamId": 613,
+                "name": "JM blanco",
+                "pj": 13,
+                "pg": 7,
+                "pe": 3,
+                "pp": 3,
+                "gf": 37,
+                "gc": 19,
+                "points": 24
+              },
+              {
+                "position": 6,
+                "teamId": 333,
+                "name": "Aleman 2013",
+                "pj": 13,
+                "pg": 5,
+                "pe": 3,
+                "pp": 5,
+                "gf": 16,
+                "gc": 16,
+                "points": 18
+              },
+              {
+                "position": 7,
+                "teamId": 398,
+                "name": "Matu 07",
+                "pj": 13,
+                "pg": 5,
+                "pe": 2,
+                "pp": 6,
+                "gf": 12,
+                "gc": 15,
+                "points": 17
+              },
+              {
+                "position": 8,
+                "teamId": 139,
+                "name": "San Juan fiesta",
+                "pj": 13,
+                "pg": 5,
+                "pe": 0,
+                "pp": 8,
+                "gf": 26,
+                "gc": 37,
+                "points": 15
+              },
+              {
+                "position": 9,
+                "teamId": 561,
+                "name": "Gabriela Mistral 2019",
+                "pj": 13,
+                "pg": 5,
+                "pe": 0,
+                "pp": 8,
+                "gf": 16,
+                "gc": 32,
+                "points": 15
+              },
+              {
+                "position": 10,
+                "teamId": 442,
+                "name": "Isasa",
+                "pj": 13,
+                "pg": 4,
+                "pe": 2,
+                "pp": 7,
+                "gf": 25,
+                "gc": 24,
+                "points": 14
+              },
+              {
+                "position": 11,
+                "teamId": 696,
+                "name": "Maristas",
+                "pj": 13,
+                "pg": 3,
+                "pe": 3,
+                "pp": 7,
+                "gf": 12,
+                "gc": 26,
+                "points": 12
+              },
+              {
+                "position": 12,
+                "teamId": 357,
+                "name": "Crandon amarillo",
+                "pj": 13,
+                "pg": 3,
+                "pe": 2,
+                "pp": 8,
+                "gf": 20,
+                "gc": 33,
+                "points": 11
+              },
+              {
+                "position": 13,
+                "teamId": 739,
+                "name": "Ceibos +50",
+                "pj": 13,
+                "pg": 3,
+                "pe": 0,
+                "pp": 10,
+                "gf": 18,
+                "gc": 43,
+                "points": 9
+              },
+              {
+                "position": 14,
+                "teamId": 20,
+                "name": "Pallotti",
+                "pj": 13,
+                "pg": 1,
+                "pe": 1,
+                "pp": 11,
+                "gf": 16,
+                "gc": 46,
+                "points": 4
+              }
+            ]
+          }
+        ],
+        "matches": [
+          {
+            "id": 68422,
+            "matchday": 1,
+            "status": "finished",
+            "scheduled_at": "2026-03-08T12:00:00",
+            "home_goals": 3,
+            "away_goals": 4,
+            "home_team": {
+              "id": 739,
+              "name": "Ceibos +50"
+            },
+            "away_team": {
+              "id": 357,
+              "name": "Crandon amarillo"
+            }
+          },
+          {
+            "id": 68430,
+            "matchday": 2,
+            "status": "finished",
+            "scheduled_at": "2026-03-15T12:00:00",
+            "home_goals": 1,
+            "away_goals": 6,
+            "home_team": {
+              "id": 739,
+              "name": "Ceibos +50"
+            },
+            "away_team": {
+              "id": 614,
+              "name": "San Juan city"
+            }
+          },
+          {
+            "id": 68435,
+            "matchday": 3,
+            "status": "finished",
+            "scheduled_at": "2026-03-22T12:00:00",
+            "home_goals": 0,
+            "away_goals": 2,
+            "home_team": {
+              "id": 398,
+              "name": "Matu 07"
+            },
+            "away_team": {
+              "id": 739,
+              "name": "Ceibos +50"
+            }
+          },
+          {
+            "id": 68444,
+            "matchday": 4,
+            "status": "finished",
+            "scheduled_at": "2026-04-12T13:45:00",
+            "home_goals": 3,
+            "away_goals": 2,
+            "home_team": {
+              "id": 561,
+              "name": "Gabriela Mistral 2019"
+            },
+            "away_team": {
+              "id": 739,
+              "name": "Ceibos +50"
+            }
+          },
+          {
+            "id": 68449,
+            "matchday": 5,
+            "status": "finished",
+            "scheduled_at": "2026-04-19T12:00:00",
+            "home_goals": 3,
+            "away_goals": 2,
+            "home_team": {
+              "id": 739,
+              "name": "Ceibos +50"
+            },
+            "away_team": {
+              "id": 20,
+              "name": "Pallotti"
+            }
+          },
+          {
+            "id": 68459,
+            "matchday": 6,
+            "status": "finished",
+            "scheduled_at": "2026-04-26T12:00:00",
+            "home_goals": 7,
+            "away_goals": 4,
+            "home_team": {
+              "id": 139,
+              "name": "San Juan fiesta"
+            },
+            "away_team": {
+              "id": 739,
+              "name": "Ceibos +50"
+            }
+          },
+          {
+            "id": 68464,
+            "matchday": 7,
+            "status": "finished",
+            "scheduled_at": "2026-05-10T12:00:00",
+            "home_goals": 3,
+            "away_goals": 0,
+            "home_team": {
+              "id": 333,
+              "name": "Aleman 2013"
+            },
+            "away_team": {
+              "id": 739,
+              "name": "Ceibos +50"
+            }
+          },
+          {
+            "id": 68488,
+            "matchday": 8,
+            "status": "finished",
+            "scheduled_at": "2026-05-17T12:00:00",
+            "home_goals": 3,
+            "away_goals": 0,
+            "home_team": {
+              "id": 739,
+              "name": "Ceibos +50"
+            },
+            "away_team": {
+              "id": 696,
+              "name": "Maristas"
+            }
+          },
+          {
+            "id": 68494,
+            "matchday": 9,
+            "status": "finished",
+            "scheduled_at": "2026-05-24T12:00:00",
+            "home_goals": 3,
+            "away_goals": 0,
+            "home_team": {
+              "id": 295,
+              "name": "IEP"
+            },
+            "away_team": {
+              "id": 739,
+              "name": "Ceibos +50"
+            }
+          },
+          {
+            "id": 68507,
+            "matchday": 10,
+            "status": "finished",
+            "scheduled_at": "2026-05-31T12:00:00",
+            "home_goals": 6,
+            "away_goals": 0,
+            "home_team": {
+              "id": 442,
+              "name": "Isasa"
+            },
+            "away_team": {
+              "id": 739,
+              "name": "Ceibos +50"
+            }
+          },
+          {
+            "id": 68514,
+            "matchday": 11,
+            "status": "finished",
+            "scheduled_at": "2026-06-07T12:00:00",
+            "home_goals": 0,
+            "away_goals": 3,
+            "home_team": {
+              "id": 739,
+              "name": "Ceibos +50"
+            },
+            "away_team": {
+              "id": 613,
+              "name": "JM blanco"
+            }
+          },
+          {
+            "id": 68516,
+            "matchday": 12,
+            "status": "finished",
+            "scheduled_at": "2026-05-24T12:00:00",
+            "home_goals": 3,
+            "away_goals": 0,
+            "home_team": {
+              "id": 607,
+              "name": "Anglo Centro Z"
+            },
+            "away_team": {
+              "id": 739,
+              "name": "Ceibos +50"
+            }
+          },
+          {
+            "id": 68528,
+            "matchday": 13,
+            "status": "finished",
+            "scheduled_at": "2026-06-21T12:00:00",
+            "home_goals": 0,
+            "away_goals": 3,
+            "home_team": {
+              "id": 739,
+              "name": "Ceibos +50"
+            },
+            "away_team": {
+              "id": 425,
+              "name": "La Mennais azul"
+            }
+          }
+        ]
+      }
+    ]
   }
 }

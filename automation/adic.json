@@ -1,0 +1,57 @@
+{
+  "season": 2026,
+  "teams": [
+    {
+      "id": 653,
+      "name": "Ceibos Club senior 40",
+      "category": "Papi Fútbol +40"
+    },
+    {
+      "id": 719,
+      "name": "Ceibos Club amarillo",
+      "category": "Papi Fútbol Amarillo"
+    },
+    {
+      "id": 709,
+      "name": "Ceibos 45 Master",
+      "category": "Papi Fútbol +45"
+    },
+    {
+      "id": 739,
+      "name": "Ceibos +50",
+      "category": "Papi Fútbol +50"
+    }
+  ],
+  "tournaments": [
+    {
+      "id": 1501,
+      "name": "Clausura Copas",
+      "category": "Padres Master 40",
+      "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026"
+    },
+    {
+      "id": 1467,
+      "name": "T. Clasificatorio Master 40",
+      "category": "Padres Master 40",
+      "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026"
+    },
+    {
+      "id": 1468,
+      "name": "T. Clasificatorio Master 45",
+      "category": "Padres Master 45",
+      "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026"
+    },
+    {
+      "id": 1502,
+      "name": "Clasura Copas Master 45",
+      "category": "Padres Master 45",
+      "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026"
+    },
+    {
+      "id": 1470,
+      "name": "T. Clasificatorio Master 50",
+      "category": "Padres Master 50",
+      "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026"
+    }
+  ]
+}

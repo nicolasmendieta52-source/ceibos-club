@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { applyProvisionalFixtures } from './fixture-provisional.mjs';
+import { syncAdic, replaceAdicData } from './adic.mjs';
 
 const directory = path.dirname(fileURLToPath(import.meta.url));
 const dataPath = path.resolve(directory, "../data/club-data.json");
@@ -917,6 +918,7 @@ function normalizeRecord(record, kind, priority = 0) {
   const categoria = repairText(record.categoria);
   const rival = repairText(record.rival);
   const fecha = clean(record.fecha);
+  const adic = Number.isInteger(record.adicId) ? { adicId: record.adicId, fuente: clean(record.fuente), equipoAdic: clean(record.equipoAdic), local: Boolean(record.local) } : {};
   const fase = clean(record.fase) ? { fase: repairText(record.fase) } : {};
   if (!deporte || !categoria || !rival || !/^\d{4}-\d{2}-\d{2}$/.test(fecha)) return null;
   if (kind === "resultado") {
@@ -926,7 +928,7 @@ function normalizeRecord(record, kind, priority = 0) {
     const goleadores = Array.isArray(record.goleadores)
       ? record.goleadores.map(repairText).filter(Boolean)
       : clean(record.goleadores) ? [repairText(record.goleadores)] : [];
-    return { deporte, categoria, rival, gf, gc, fecha, ...fase, ...(goleadores.length ? { goleadores } : {}), _priority: priority };
+    return { deporte, categoria, rival, gf, gc, fecha, ...fase, ...adic, ...(goleadores.length ? { goleadores } : {}), _priority: priority };
   }
   const hora = /^\d{2}:\d{2}$/.test(clean(record.hora)) ? clean(record.hora) : "A confirmar";
   return {
@@ -937,6 +939,7 @@ function normalizeRecord(record, kind, priority = 0) {
     hora,
     local: Boolean(record.local),
     ...fase,
+    ...adic,
     ...(clean(record.estado) ? { estado: repairText(record.estado) } : {}),
     ...(clean(record.cancha) ? { cancha: repairText(record.cancha) } : {}),
     _priority: priority
@@ -1032,8 +1035,10 @@ function mergeClubData(previous, officialRecords, instagramRecords) {
 async function main() {
   const config = JSON.parse(await fs.readFile(configPath, "utf8"));
   const previous = JSON.parse(await fs.readFile(dataPath, "utf8").catch(() => "{}"));
-  const officialRecords = [];
-  const sourceStatus = [];
+  const adicConfig = JSON.parse(await fs.readFile(path.join(directory, "adic.json"), "utf8"));
+  const adic = await syncAdic(adicConfig, previous.adic);
+  const officialRecords = [...adic.records];
+  const sourceStatus = [...adic.diagnostics];
   for (const source of config.sources) {
     try {
       // G22 ofrece los datos de Rugby en JSON. Las demás federaciones todavía
@@ -1089,9 +1094,10 @@ async function main() {
   const rugbyFallback = verifiedRugbyResults2026.filter(record => !directResultSlots.has(recordSlotIdentity(record)));
   const provisional = JSON.parse(await fs.readFile(path.join(directory, 'fixture-provisional.json'), 'utf8'));
   const { partidos, resultados } = applyProvisionalFixtures(
-    mergeClubData(previous, [...officialRecords, ...rugbyFallback], instagramRecords),
+    mergeClubData(replaceAdicData(previous, adic.snapshot), [...officialRecords, ...rugbyFallback], instagramRecords),
     provisional.partidos, officialRecords);
   const output = {
+    adic: adic.snapshot,
     partidos,
     resultados,
     eventos: previous.eventos ?? [],

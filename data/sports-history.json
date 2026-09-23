@@ -7,6 +7,7 @@
     "missingLabel": "No se encontró una fuente oficial suficiente para completar este dato."
   },
   "sources": {
+    "adic-2026": {"title":"ADIC — Campeonatos 2026","url":"https://portal.adic.org.uy/tournaments","authority":"ADIC","scope":"Equipos, partidos y tablas oficiales de los torneos 2026; enlaces a cada torneo en las tablas de la ficha."},
     "fuh-inter-c": {"title":"FUH — Intermedia C 2026","url":"https://admin.hockey.com.uy/posiciones?category_id=79","authority":"Federación Uruguaya de Hockey","scope":"Apertura y Copa de Oro de Intermedia C: fixture, resultados y posiciones."},
     "liga-sub18-rueda1": {"title":"Sub 18 — Primera rueda, Serie 5","url":"https://ligauniversitaria.org.uy/posiciones/F181818-5-.html","authority":"Liga Universitaria de Deportes","scope":"Tabla oficial de la primera rueda de 2026."},
     "liga-goleros-2023": {"title":"Goleadores y goleros menos vencidos 2023","url":"https://ligauniversitaria.org.uy/goleadores-y-goleros-menos-vencidos-2023/","authority":"Liga Universitaria de Deportes","scope":"Distinción de Alfonso Giménez como golero menos vencido de Sub 20 B."},
@@ -151,7 +152,7 @@
       "slug": "futbol",
       "name": "Fútbol",
       "photo": "assets/deporte-futbol.webp",
-      "description": "El archivo reúne los planteles de fútbol de Ceibos en la Liga Universitaria y las categorías de Papi Fútbol +35, +40 y +45 de ADIC. Los logros históricos se distinguen de las estadísticas de la temporada actual.",
+      "description": "El archivo reúne los planteles de fútbol de Ceibos en la Liga Universitaria y Papi Fútbol en ADIC. Los resultados y las tablas de 2026 se actualizan desde las fuentes oficiales.",
       "startLabel": "Afiliación institucional registrada desde 1998",
       "startDetail": "La Liga registra la afiliación de Ceibos Club el 18/03/1998. Esa fecha no se presenta como comienzo de cada categoría y convive con 2014, año de inicio que comunica el club en su identidad actual.",
       "league": "Liga Universitaria de Deportes · ADIC (Papi Fútbol)",
@@ -169,8 +170,10 @@
         {"slug":"sub-20","name":"Sub 20","competition":"Liga Universitaria — Sub 20 A","description":"Categoría formativa con un título oficial confirmado en 2022.","sourceIds":["liga-sub20-2022","liga-football-2026","liga-goleros-2023"],"achievements":[{"year":2022,"title":"Campeón Divisional A","detail":"Ceibos fue el primer equipo que aseguró un título de la Liga en la temporada 2022.","sourceIds":["liga-sub20-2022"]},{"year":2022,"title":"Finalista Copa de Campeones","detail":"Náutico ganó la final 1-0 ante Ceibos.","sourceIds":["liga-sub20-2022"]},{"year":2023,"title":"Alfonso Giménez, golero menos vencido de Sub 20 B","detail":"Reconocimiento individual de la Liga Universitaria, con promedio de 1,11 goles recibidos.","sourceIds":["liga-goleros-2023"]}],"notableMatches":[{"date":"2022-11-12","label":"Final Copa de Campeones","opponent":"Náutico","score":"0-1","sourceIds":["liga-sub20-2022"]}],"documentedSeasons":[2022,2026,2023]},
         {"slug":"sub-18","name":"Sub 18","competition":"Liga Universitaria — Sub 18","description":"Categoría juvenil de fútbol de Ceibos. El archivo 2026 reúne la primera y la segunda rueda de la Serie 5.","sourceIds":["liga-football-2026","liga-sub18-rueda1"],"achievements":[],"documentedSeasons":[2026],"seasonSnapshots":[{"season":2026,"phase":"Primera rueda · Serie 5","asOf":"2026-09-11","sourceId":"liga-sub18-rueda1","pj":7,"pg":5,"pe":2,"pp":0,"gf":39,"gc":7,"points":17,"note":""}]},
         {"slug":"papi-futbol-35","name":"Papi Fútbol +35","competition":"ADIC — Papi Fútbol","description":"Plantel de Papi Fútbol +35 de Ceibos Club. Fixture y resultados de ADIC pendientes de carga.","sourceIds":[],"achievements":[],"documentedSeasons":[]},
-        {"slug":"papi-futbol-40","name":"Papi Fútbol +40","competition":"ADIC — Papi Fútbol","description":"Plantel de Papi Fútbol +40 de Ceibos Club. Fixture y resultados de ADIC pendientes de carga.","sourceIds":[],"achievements":[],"documentedSeasons":[]},
-        {"slug":"papi-futbol-45","name":"Papi Fútbol +45","competition":"ADIC — Papi Fútbol","description":"Plantel de Papi Fútbol +45 de Ceibos Club. Fixture y resultados de ADIC pendientes de carga.","sourceIds":[],"achievements":[],"documentedSeasons":[]}
+        {"slug":"papi-futbol-40","name":"Papi Fútbol +40","competition":"ADIC — Papi Fútbol","description":"Plantel de Papi Fútbol +40 de Ceibos Club en ADIC. Resultados, fixture y tablas oficiales de la temporada 2026, con clasificatorio y copas.","sourceIds":["adic-2026"],"achievements":[],"documentedSeasons":[2026]},
+        {"slug":"papi-futbol-45","name":"Papi Fútbol +45","competition":"ADIC — Papi Fútbol","description":"Plantel de Papi Fútbol +45 de Ceibos Club en ADIC. Resultados, fixture y tablas oficiales de la temporada 2026, con clasificatorio y copas.","sourceIds":["adic-2026"],"achievements":[],"documentedSeasons":[2026]},
+        {"slug":"papi-futbol-50","name":"Papi Fútbol +50","competition":"ADIC — Padres Master 50","description":"Ceibos +50: participación y resultados del Torneo Clasificatorio Master 50 de 2026.","sourceIds":["adic-2026"],"achievements":[],"documentedSeasons":[2026]},
+        {"slug":"papi-futbol-amarillo","name":"Papi Fútbol Amarillo","competition":"ADIC — Padres Master 40","description":"Ceibos Club amarillo, identificado con su nombre oficial de ADIC. Clasificatorio y copas de la temporada 2026.","sourceIds":["adic-2026"],"achievements":[],"documentedSeasons":[2026]}
       ]
     },
     {
