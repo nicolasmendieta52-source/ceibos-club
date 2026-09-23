@@ -28,6 +28,36 @@
       "cancha": "G.WASTON"
     },
     {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "TAPE",
+      "local": true,
+      "fecha": "2026-09-26",
+      "hora": "A confirmar",
+      "cancha": "A confirmar",
+      "fase": "Segunda rueda · Divisional A · Permanencia y descenso"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "San Eugenio",
+      "local": true,
+      "fecha": "2026-09-26",
+      "hora": "A confirmar",
+      "cancha": "A confirmar",
+      "fase": "Segunda rueda · Divisional C · Título y ascenso"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "San Isidro Lomas Universitario",
+      "local": true,
+      "fecha": "2026-09-27",
+      "hora": "A confirmar",
+      "cancha": "A confirmar",
+      "fase": "Segunda rueda · Divisional B · Título y ascenso"
+    },
+    {
       "deporte": "hockey",
       "categoria": "Intermedia B",
       "rival": "Palo Y Pico",
@@ -56,13 +86,23 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "ANGLO SCHOOL UNIVERSITARIO",
-      "fecha": "2026-10-04",
-      "hora": "15:30",
-      "local": true,
-      "fase": "Segunda rueda · Serie 5",
-      "cancha": "MONTE VI \"LOS CEIBOS\""
+      "categoria": "Reserva A",
+      "rival": "Tenis El Pinar",
+      "local": false,
+      "fecha": "2026-10-03",
+      "hora": "A confirmar",
+      "cancha": "A confirmar",
+      "fase": "Segunda rueda · Divisional A · Permanencia y descenso"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "E.L.F.",
+      "local": false,
+      "fecha": "2026-10-03",
+      "hora": "A confirmar",
+      "cancha": "A confirmar",
+      "fase": "Segunda rueda · Divisional C · Título y ascenso"
     },
     {
       "deporte": "hockey",
@@ -74,6 +114,26 @@
       "fase": "APERTURA 2026 (Intermedia B)",
       "estado": "A Designar",
       "cancha": "Carrasco Polo Club"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "Náutico Carrasco y Punta Gorda",
+      "local": false,
+      "fecha": "2026-10-04",
+      "hora": "A confirmar",
+      "cancha": "A confirmar",
+      "fase": "Segunda rueda · Divisional B · Título y ascenso"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "ANGLO SCHOOL UNIVERSITARIO",
+      "fecha": "2026-10-04",
+      "hora": "15:30",
+      "local": true,
+      "fase": "Segunda rueda · Serie 5",
+      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "rugby",
@@ -90,6 +150,36 @@
       "fecha": "2026-10-10",
       "hora": "12:00",
       "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "Alemán Universitario",
+      "local": true,
+      "fecha": "2026-10-10",
+      "hora": "A confirmar",
+      "cancha": "A confirmar",
+      "fase": "Segunda rueda · Divisional A · Permanencia y descenso"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "Seminario Universitario",
+      "local": true,
+      "fecha": "2026-10-10",
+      "hora": "A confirmar",
+      "cancha": "A confirmar",
+      "fase": "Segunda rueda · Divisional C · Título y ascenso"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "Sagrada Familia Universitario",
+      "local": false,
+      "fecha": "2026-10-11",
+      "hora": "A confirmar",
+      "cancha": "A confirmar",
+      "fase": "Segunda rueda · Divisional B · Título y ascenso"
     },
     {
       "deporte": "futbol",
@@ -118,6 +208,36 @@
       "local": true
     },
     {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "Sagrada Familia Universitario",
+      "local": false,
+      "fecha": "2026-10-17",
+      "hora": "A confirmar",
+      "cancha": "A confirmar",
+      "fase": "Segunda rueda · Divisional A · Permanencia y descenso"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "Danubio Fútbol Club",
+      "local": false,
+      "fecha": "2026-10-17",
+      "hora": "A confirmar",
+      "cancha": "A confirmar",
+      "fase": "Segunda rueda · Divisional C · Título y ascenso"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "J.M.L.M.",
+      "local": true,
+      "fecha": "2026-10-18",
+      "hora": "A confirmar",
+      "cancha": "A confirmar",
+      "fase": "Segunda rueda · Divisional B · Título y ascenso"
+    },
+    {
       "deporte": "rugby",
       "categoria": "Intermedia",
       "rival": "Lobos",
@@ -140,6 +260,96 @@
       "fecha": "2026-10-24",
       "hora": "12:00",
       "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "Club Seminario",
+      "local": false,
+      "fecha": "2026-10-24",
+      "hora": "A confirmar",
+      "cancha": "A confirmar",
+      "fase": "Segunda rueda · Divisional A · Permanencia y descenso"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "Juan XXIII Blanco",
+      "local": false,
+      "fecha": "2026-10-24",
+      "hora": "A confirmar",
+      "cancha": "A confirmar",
+      "fase": "Segunda rueda · Divisional C · Título y ascenso"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "Old Brendans Club",
+      "local": false,
+      "fecha": "2026-10-25",
+      "hora": "A confirmar",
+      "cancha": "A confirmar",
+      "fase": "Segunda rueda · Divisional B · Título y ascenso"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "OBC Azulgrana",
+      "local": true,
+      "fecha": "2026-10-31",
+      "hora": "A confirmar",
+      "cancha": "A confirmar",
+      "fase": "Segunda rueda · Divisional A · Permanencia y descenso"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "San Pablo Universitario",
+      "local": true,
+      "fecha": "2026-10-31",
+      "hora": "A confirmar",
+      "cancha": "A confirmar",
+      "fase": "Segunda rueda · Divisional C · Título y ascenso"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "Elbio Fernández",
+      "local": true,
+      "fecha": "2026-11-01",
+      "hora": "A confirmar",
+      "cancha": "A confirmar",
+      "fase": "Segunda rueda · Divisional B · Título y ascenso"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "Nacional Universitario",
+      "local": false,
+      "fecha": "2026-11-07",
+      "hora": "A confirmar",
+      "cancha": "A confirmar",
+      "fase": "Segunda rueda · Divisional A · Permanencia y descenso"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "Centro Cristóbal Colón",
+      "local": false,
+      "fecha": "2026-11-07",
+      "hora": "A confirmar",
+      "cancha": "A confirmar",
+      "fase": "Segunda rueda · Divisional C · Título y ascenso"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "Alemán Universitario",
+      "local": false,
+      "fecha": "2026-11-08",
+      "hora": "A confirmar",
+      "cancha": "A confirmar",
+      "fase": "Segunda rueda · Divisional B · Título y ascenso"
     }
   ],
   "resultados": [
@@ -2653,7 +2863,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-23T11:46:36.029Z",
+  "actualizadoEn": "2026-09-23T12:10:46.443Z",
   "diagnostico": {
     "fuentes": [
       {

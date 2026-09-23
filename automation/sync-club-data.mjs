@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { applyProvisionalFixtures } from './fixture-provisional.mjs';
 
 const directory = path.dirname(fileURLToPath(import.meta.url));
 const dataPath = path.resolve(directory, "../data/club-data.json");
@@ -1086,7 +1087,10 @@ async function main() {
   // directo prevalece y no se duplica.
   const directResultSlots = new Set(officialRecords.filter(record => record.kind === "resultado").map(recordSlotIdentity));
   const rugbyFallback = verifiedRugbyResults2026.filter(record => !directResultSlots.has(recordSlotIdentity(record)));
-  const { partidos, resultados } = mergeClubData(previous, [...officialRecords, ...rugbyFallback], instagramRecords);
+  const provisional = JSON.parse(await fs.readFile(path.join(directory, 'fixture-provisional.json'), 'utf8'));
+  const { partidos, resultados } = applyProvisionalFixtures(
+    mergeClubData(previous, [...officialRecords, ...rugbyFallback], instagramRecords),
+    provisional.partidos, officialRecords);
   const output = {
     partidos,
     resultados,
