@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-24T04:57:52.123Z",
+        "updatedAt": "2026-09-24T11:53:06.906Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-24T04:57:52.210Z",
+        "updatedAt": "2026-09-24T11:53:07.233Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-24T04:57:52.263Z",
+        "updatedAt": "2026-09-24T11:53:07.361Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-24T04:57:52.336Z",
+        "updatedAt": "2026-09-24T11:53:07.507Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-24T04:57:52.398Z",
+        "updatedAt": "2026-09-24T11:53:07.653Z",
         "tables": [
           {
             "id": 2239,
@@ -2578,6 +2578,14 @@
       "hora": "22:00",
       "local": true,
       "cancha": "G.WASTON"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "PGC Trébol",
+      "fecha": "2026-09-26",
+      "hora": "12:30",
+      "local": true
     },
     {
       "deporte": "futbol",
@@ -6329,7 +6337,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-24T05:00:29.691Z",
+  "actualizadoEn": "2026-09-24T11:55:43.272Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -6365,7 +6373,7 @@
       {
         "deporte": "rugby",
         "url": "https://50-22.base44.app/functions/getPublicContent",
-        "registros": 66,
+        "registros": 67,
         "estado": "ok"
       },
       {
