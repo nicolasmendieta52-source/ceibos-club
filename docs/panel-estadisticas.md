@@ -2,9 +2,9 @@
 
 URL: https://ceibosclub.com/panel/
 
-Acceso con Google: nicolasmendieta52@gmail.com, correo verificado y proveedor google.com. La autorización efectiva está en las reglas de Firestore, no en el código del panel. No hay enlaces al panel en la navegación pública ni estadísticas exportadas a GitHub.
+Acceso con Google: nicolasmendieta52@gmail.com, ceibosfutbol@gmail.com, jdtorresn@gmail.com, correo verificado y proveedor google.com. La autorización efectiva está en las reglas de Firestore, no en el código del panel. No hay enlaces al panel en la navegación pública ni estadísticas exportadas a GitHub.
 
-La colección `analyticsVisits` conserva registros anónimos con consentimiento previo. Se usa una instancia Firebase separada de notificaciones para no cambiar sus sesiones. Los clientes pueden crear y actualizar solo sus propios registros con un esquema acotado; no pueden leer ni borrar registros. Solo el propietario puede leerlos. Las reglas existentes de `notificationSubscriptions` se conservan.
+La colección `analyticsVisits` conserva registros anónimos con consentimiento previo. Se usa una instancia Firebase separada de notificaciones para no cambiar sus sesiones. Los clientes pueden crear y actualizar solo sus propios registros con un esquema acotado; no pueden leer ni borrar registros. Solo las tres cuentas autorizadas pueden leerlos. Las reglas existentes de `notificationSubscriptions` se conservan.
 
 Una visita es una carga de la home. Los visitantes son UID anónimos persistidos por navegador con consentimiento, no personas identificadas. El panel muestra hasta las 2.000 visitas más recientes del período y avisa si alcanza el límite. La tabla muestra 50; la exportación incluye todos los registros cargados. El período usa una ventana móvil y los días se agrupan en horario de Uruguay. No registra texto libre, formularios, IP, geolocalización ni grabación de pantalla. Rechazo, DNT y GPC evitan iniciar la medición. Al aceptar hay como máximo 190 escrituras por visita y no más de tres horas de tiempo activo.
 

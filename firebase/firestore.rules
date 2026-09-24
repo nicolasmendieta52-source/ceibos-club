@@ -5,7 +5,7 @@ service cloud.firestore {
  allow read, delete: if request.auth != null && request.auth.uid == userId;
  allow create, update: if request.auth != null && request.auth.uid == userId && request.resource.data.keys().hasOnly(['enabled','endpoint','keys','deportes','userAgent','updatedAt']) && request.resource.data.enabled == true && request.resource.data.endpoint is string && request.resource.data.keys is map && request.resource.data.deportes is map;
  }
- function panelOwner() { return request.auth != null && request.auth.token.email == 'nicolasmendieta52@gmail.com' && request.auth.token.email_verified == true && request.auth.token.firebase.sign_in_provider == 'google.com'; }
+ function panelAuthorized() { return request.auth != null && request.auth.token.email.lower() in ["nicolasmendieta52@gmail.com","ceibosfutbol@gmail.com","jdtorresn@gmail.com"] && request.auth.token.email_verified == true && request.auth.token.firebase.sign_in_provider == 'google.com'; }
  function bounded(n, max) { return n is int && n >= 0 && n <= max; }
  function validSections(s) { return s is map && s.keys().hasOnly(["inicio","gym-campaign","partido-destacado","noticias","deportes","archivo","resultados","fixture","vida","shop","solidario","club","predio","socios","contacto"]) && bounded(s['inicio'],1) && bounded(s['gym-campaign'],1) && bounded(s['partido-destacado'],1) && bounded(s['noticias'],1) && bounded(s['deportes'],1) && bounded(s['archivo'],1) && bounded(s['resultados'],1) && bounded(s['fixture'],1) && bounded(s['vida'],1) && bounded(s['shop'],1) && bounded(s['solidario'],1) && bounded(s['club'],1) && bounded(s['predio'],1) && bounded(s['socios'],1) && bounded(s['contacto'],1); }
  function validActions(a) { return a is map && a.keys().hasOnly(["gym_form","whatsapp","email","phone","instagram","external","navigation","sport_futbol","sport_rugby","sport_hockey","sport_basketball","category","notifications_open","notifications_enable","notifications_disable","match","share","shop"]) && bounded(a['gym_form'],500) && bounded(a['whatsapp'],500) && bounded(a['email'],500) && bounded(a['phone'],500) && bounded(a['instagram'],500) && bounded(a['external'],500) && bounded(a['navigation'],500) && bounded(a['sport_futbol'],500) && bounded(a['sport_rugby'],500) && bounded(a['sport_hockey'],500) && bounded(a['sport_basketball'],500) && bounded(a['category'],500) && bounded(a['notifications_open'],500) && bounded(a['notifications_enable'],500) && bounded(a['notifications_disable'],500) && bounded(a['match'],500) && bounded(a['share'],500) && bounded(a['shop'],500); }
@@ -18,7 +18,7 @@ service cloud.firestore {
  && validSections(d.sections) && validActions(d.actions);
  }
  match /analyticsVisits/{visitId} {
- allow read: if panelOwner();
+ allow read: if panelAuthorized();
  allow create: if validVisit() && request.resource.data.createdAt >= request.time - duration.value(5,'m') && request.resource.data.createdAt <= request.time + duration.value(5,'m');
  allow update: if validVisit() && resource.data.ownerUid == request.auth.uid && request.resource.data.createdAt == resource.data.createdAt && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['lastSeen','activeSeconds','scrollDepth','interactions','sections','actions']);
  allow delete: if false;
