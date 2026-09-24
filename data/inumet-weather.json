@@ -5,15 +5,15 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-09-24 12:00",
-  "actualizado": "2026-09-24T17:15:43.123Z",
+  "publicado": "2026-09-24 18:00",
+  "actualizado": "2026-09-24T21:34:16.684Z",
   "pronosticos": [
     {
       "fecha": "2026-09-24",
       "diaMasN": 0,
       "etiqueta": "Jueves 24",
       "temperaturaMin": 6,
-      "temperaturaMax": 23,
+      "temperaturaMax": 25,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -39,7 +39,7 @@
       "diaMasN": 1,
       "etiqueta": "Viernes 25",
       "temperaturaMin": 13,
-      "temperaturaMax": 23,
+      "temperaturaMax": 24,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -64,8 +64,8 @@
       "fecha": "2026-09-26",
       "diaMasN": 2,
       "etiqueta": "Sábado 26",
-      "temperaturaMin": 10,
-      "temperaturaMax": 22,
+      "temperaturaMin": 11,
+      "temperaturaMax": 19,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -74,7 +74,7 @@
           "descripcion": "Nuboso, períodos de algo nuboso.",
           "evolucion": "Neblinas.",
           "detalle": "",
-          "viento": "Variables 0-10 km/h al SE 10-20 km/h."
+          "viento": "Variables 0-10 km/h al SE 10-30 km/h."
         },
         {
           "orden": 2,
@@ -99,8 +99,8 @@
       "fecha": "2026-09-28",
       "diaMasN": 4,
       "etiqueta": "Lunes 28",
-      "temperaturaMin": 14,
-      "temperaturaMax": 20,
+      "temperaturaMin": 15,
+      "temperaturaMax": 21,
       "probabilidadLluvia": "Alta",
       "periodos": []
     },
@@ -109,7 +109,7 @@
       "diaMasN": 5,
       "etiqueta": "Martes 29",
       "temperaturaMin": 14,
-      "temperaturaMax": 18,
+      "temperaturaMax": 19,
       "probabilidadLluvia": "Alta",
       "periodos": []
     },
@@ -117,8 +117,8 @@
       "fecha": "2026-09-30",
       "diaMasN": 6,
       "etiqueta": "Miércoles 30",
-      "temperaturaMin": 8,
-      "temperaturaMax": 14,
+      "temperaturaMin": 11,
+      "temperaturaMax": 16,
       "probabilidadLluvia": "Nula",
       "periodos": []
     }
