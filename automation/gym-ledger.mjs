@@ -1,4 +1,4 @@
-const COUNT = 60;
+const COUNT = 80;
 const cents = n => Math.round(n * 100);
 const validAmount = n => typeof n === 'number' && Number.isFinite(n) && n >= 0;
 
@@ -8,7 +8,7 @@ export function campaignFromLedger(summary, rows, sponsors = []) {
   const goal = summary[1][1], opening = summary[5][1], reported = summary[0][1];
   if (!validAmount(goal) || !goal || !validAmount(opening) || !validAmount(reported) || summary[4]?.[1] !== COUNT) throw new Error('Totales inválidos');
   const headers = ['Ladrillo','Nombre público','Objetivo USD','Pagado USD','Estado','Incluido en saldo inicial','Fecha del pago','Notas privadas','Tipo'];
-  if (!headers.every((h,i)=>rows?.[0]?.[i]===h) || rows.length !== COUNT+1) throw new Error('La planilla debe tener 60 ladrillos y las columnas esperadas');
+  if (!headers.every((h,i)=>rows?.[0]?.[i]===h) || rows.length !== COUNT+1) throw new Error('La planilla debe tener 80 ladrillos y las columnas esperadas');
   const brickLabels=Array(COUNT).fill(''), brickSponsors=Array(COUNT).fill(false), brickProgress=Array(COUNT).fill(0);
   const seen=new Set(); let total=cents(opening);
   const sponsorNames = [];

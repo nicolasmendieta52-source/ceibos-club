@@ -1,4 +1,4 @@
-export const BRICK_COUNT = 60;
+export const BRICK_COUNT = 80;
 const SPONSOR_LOGOS = {
   FNC: ['fnc.png'], FIXED: ['fixed.png', true], PQUICK: ['pquick.svg'],
   CATIVELLI: ['cattivelli.jpg'], CATTIVELLI: ['cattivelli.jpg'],
@@ -99,7 +99,7 @@ export function campaignFromCsv(text) {
     if (!/^\d+(?:[.,]\d+)?$/.test(value || '')) throw new TypeError(`Valor inválido: ${key}`);
     return Number(value.replace(',', '.'));
   };
-  if (numeric('brickCount') !== BRICK_COUNT) throw new TypeError('Se esperan 60 ladrillos.');
+  if (numeric('brickCount') !== BRICK_COUNT) throw new TypeError('Se esperan 80 ladrillos.');
   const brickLabels = Array.from({ length: BRICK_COUNT }, (_, i) => {
     const key = `brick${i + 1}`;
     if (!values.has(key)) throw new TypeError('Faltan ladrillos en la fuente.');
