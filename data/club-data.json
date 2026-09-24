@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-24T11:53:06.906Z",
+        "updatedAt": "2026-09-24T17:15:43.715Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-24T11:53:07.233Z",
+        "updatedAt": "2026-09-24T17:15:43.938Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-24T11:53:07.361Z",
+        "updatedAt": "2026-09-24T17:15:44.022Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-24T11:53:07.507Z",
+        "updatedAt": "2026-09-24T17:15:44.130Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-24T11:53:07.653Z",
+        "updatedAt": "2026-09-24T17:15:44.220Z",
         "tables": [
           {
             "id": 2239,
@@ -6337,7 +6337,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-24T11:55:43.272Z",
+  "actualizadoEn": "2026-09-24T17:18:30.500Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -6534,11 +6534,11 @@
     "instagram": {
       "estado": "ok",
       "registros": 23,
-      "imagenes": 10,
-      "publicacionesApify": 3,
+      "imagenes": 14,
+      "publicacionesApify": 4,
       "historiasMencionadas": 0,
       "cache": 10,
-      "nuevas": 0
+      "nuevas": 4
     }
   }
 }
