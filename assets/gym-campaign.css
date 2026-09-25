@@ -30,7 +30,7 @@
 .gym-copy strong{display:block;margin-top:.45cqw;font:bold 1.45cqw/1.2 Georgia,'Times New Roman',serif;white-space:nowrap;letter-spacing:-.035em}
 .gym-mobile-scene{display:none}
 .gym-build{position:absolute;top:47.7%;left:3.9%;right:3.7%;margin:0}
-.gym-wall{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));grid-template-rows:repeat(8,3.45cqw);gap:.28cqw}
+.gym-wall{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));grid-template-rows:repeat(10,2.7cqw);gap:.28cqw}
 .gym-brick{position:relative;min-width:0;border:1px solid #d2d0ca;background:linear-gradient(145deg,#e9e7e2,#d9d7d1);border-radius:4px;isolation:isolate;box-shadow:inset 0 1px 3px #ffffffa0}
 .gym-brick::after{content:'+';position:absolute;inset:0;display:grid;place-items:center;color:#858982;font-size:1.35cqw;font-weight:300;z-index:-1}
 .gym-brick-fill{position:absolute;inset:-1px auto -1px -1px;width:var(--fill,0%);background:linear-gradient(115deg,#2d5044,#25473c);border-radius:4px;box-shadow:inset 0 1px 4px #ffffff30,inset 0 -2px 4px #00000010}
@@ -80,14 +80,14 @@
  .gym-copy{position:static;width:min(88%,440px);margin:24px auto 0;text-align:center;font-size:13px;line-height:1.5}.gym-copy::before{display:none}.gym-copy strong{font-size:21px;margin-top:6px}
  .gym-mobile-scene{display:block;height:32vw;margin-top:2px;background:url('/assets/gym-campaign-scene-20260912.png') center -14.3vw/132% auto no-repeat}
  .gym-build{position:relative;top:auto;left:auto;right:auto;margin:-2px 4% 0}
- .gym-wall{grid-template-columns:repeat(10,minmax(0,1fr));grid-template-rows:repeat(8,48px);gap:3px}
+ .gym-wall{grid-template-columns:repeat(10,minmax(0,1fr));grid-template-rows:repeat(10,48px);gap:3px}
  .gym-brick::after{font-size:14px}.gym-brick-label{font-size:9px;padding:2px}
  .gym-wall-caption{max-width:none;font-size:10px;margin-top:9px;flex-wrap:wrap;gap:3px 12px}
  .gym-tagline{position:static;margin:26px 7% 30px;font-size:11px;letter-spacing:.15em;gap:12px}.gym-tagline::before,.gym-tagline::after{min-width:16px}
  .gym-participate{padding-bottom:28px;column-gap:20px}.gym-contact-note,.gym-status,.gym-updated{font-size:11px}
 }
 @media(max-width:700px){
- .gym-wall{grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(16,48px)}
+ .gym-wall{grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(20,48px)}
  .gym-brick-label{font-size:11px}
  .gym-brick{grid-row:var(--mobile-row);grid-column:var(--mobile-column)}
 }

@@ -10,7 +10,7 @@ async function main(){
  const auth=new JWT({email:key.client_email,key:key.private_key,scopes:['https://www.googleapis.com/auth/spreadsheets.readonly']});
  const spreadsheet='1jzX_XhiafqddsVbZIn1qii0HCGWxIUnPdvIs_8mdyFE';
  const url=new URL(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheet}/values:batchGet`);
- for(const range of ["'Resumen'!A4:B10","'Ladrillos'!A1:I81","'Sponsors'!A1:A1000"]) url.searchParams.append('ranges',range);
+ for(const range of ["'Resumen'!A4:B10","'Ladrillos'!A1:I101","'Sponsors'!A1:A1000"]) url.searchParams.append('ranges',range);
  url.searchParams.set('valueRenderOption','UNFORMATTED_VALUE');
  const result=await auth.request({url:url.href,timeout:20000});
  const values=result.data.valueRanges;

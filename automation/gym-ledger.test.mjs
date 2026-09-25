@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {campaignFromLedger} from './gym-ledger.mjs';
-const fixture=()=>({summary:[['Recaudado (USD)',87450],['Meta (USD)',200000],['Avance',0],['Faltan (USD)',0],['Ladrillos',80],['Saldo inicial (USD)',87450],['Pagos nuevos confirmados (USD)',0]],rows:[['Ladrillo','Nombre público','Objetivo USD','Pagado USD','Estado','Incluido en saldo inicial','Fecha del pago','Notas privadas','Tipo'],...Array.from({length:80},(_,i)=>[i+1,'',1000,'','Pendiente','No','','','Aportante'])]});
+const fixture=()=>({summary:[['Recaudado (USD)',87450],['Meta (USD)',200000],['Avance',0],['Faltan (USD)',0],['Ladrillos',100],['Saldo inicial (USD)',87450],['Pagos nuevos confirmados (USD)',0]],rows:[['Ladrillo','Nombre público','Objetivo USD','Pagado USD','Estado','Incluido en saldo inicial','Fecha del pago','Notas privadas','Tipo'],...Array.from({length:100},(_,i)=>[i+1,'',1000,'','Pendiente','No','','','Aportante'])]});
 test('pago global de sponsors suma una vez y las empresas ocupan sus lugares',()=>{
  const {summary,rows}=fixture();rows[1]=[1,'Sponsors',30000,30000,'Pendiente','No','','','Sponsor'];summary[0][1]+=30000;
  const m=campaignFromLedger(summary,rows,[['FNC'],['ACSA']]);
