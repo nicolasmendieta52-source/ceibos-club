@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-25T13:07:06.885Z",
+        "updatedAt": "2026-09-25T17:16:25.076Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-25T13:07:07.004Z",
+        "updatedAt": "2026-09-25T17:16:25.407Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-25T13:07:07.080Z",
+        "updatedAt": "2026-09-25T17:16:25.523Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-25T13:07:07.172Z",
+        "updatedAt": "2026-09-25T17:16:25.662Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-25T13:07:07.253Z",
+        "updatedAt": "2026-09-25T17:16:25.788Z",
         "tables": [
           {
             "id": 2239,
@@ -2569,16 +2569,6 @@
       "equipoAdic": "Ceibos 45 Master",
       "estado": "Confirmado",
       "cancha": "A confirmar"
-    },
-    {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "ORT BLANCO",
-      "fecha": "2026-09-24",
-      "hora": "22:00",
-      "local": true,
-      "fuente": "https://ligauniversitaria.org.uy/partidos/B221B3.html",
-      "cancha": "G.WASTON"
     },
     {
       "deporte": "futbol",
@@ -6477,10 +6467,18 @@
         "RAFAEL MARIANO BERAMENDI (22')",
         "JUAN DIEGO TORRES NEGREIRA (62')"
       ]
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "ORT BLANCO",
+      "gf": 52,
+      "gc": 56,
+      "fecha": "2026-09-24"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-25T13:09:38.673Z",
+  "actualizadoEn": "2026-09-25T17:19:16.440Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -6558,15 +6556,15 @@
         "deporte": "basketball",
         "categoria": "Basketball",
         "url": "https://ligauniversitaria.org.uy/resultados/B221B3.html",
-        "registros": 6,
+        "registros": 7,
         "estado": "ok"
       },
       {
         "deporte": "basketball",
         "categoria": "Basketball",
         "url": "https://ligauniversitaria.org.uy/partidos/B221B3.html",
-        "registros": 1,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "sin-coincidencias"
       },
       {
         "deporte": "basketball",
