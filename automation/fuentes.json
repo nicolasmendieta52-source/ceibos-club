@@ -156,6 +156,46 @@
       "modo": "browser",
       "temporada": "2026",
       "fase": "Primera rueda · Serie 5"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-mayores-a-2/",
+      "modo": "direct",
+      "formato": "liga-fixture-index",
+      "temporada": "2026"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-reserva-a/",
+      "modo": "direct",
+      "formato": "liga-fixture-index",
+      "temporada": "2026"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-reserva-c/",
+      "modo": "direct",
+      "formato": "liga-fixture-index",
+      "temporada": "2026"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "PreSenior",
+      "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-pre-senior-c/",
+      "modo": "direct",
+      "formato": "liga-fixture-index",
+      "temporada": "2026"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-sub-20-a/",
+      "modo": "direct",
+      "formato": "liga-fixture-index",
+      "temporada": "2026"
     }
   ]
 }

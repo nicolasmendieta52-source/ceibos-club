@@ -213,10 +213,10 @@ async function mapWithConcurrency(items, limit, mapper) {
   return output;
 }
 
-async function fetchLigaResultsWithScorers(source, aliases) {
+async function fetchLigaRows(source) {
   const pageResponse = await fetch(source.url, {
     headers: { "user-agent": "CeibosClubFixtureBot/1.0 (contacto: info@ceibosclub.com)", "cache-control": "no-cache" },
-    cache: "no-store"
+    cache: "no-store", signal: AbortSignal.timeout(30000)
   });
   if (!pageResponse.ok) throw new Error(`HTTP ${pageResponse.status} al abrir resultados de la Liga Universitaria`);
   const page = await pageResponse.text();
@@ -241,6 +241,11 @@ async function fetchLigaResultsWithScorers(source, aliases) {
   const rows = await fetchLigaJson(apiUrl);
   if (!Array.isArray(rows)) throw new Error("La Liga Universitaria no devolvio los resultados esperados");
 
+  return rows;
+}
+
+async function fetchLigaResultsWithScorers(source, aliases) {
+  const rows = await fetchLigaRows(source);
   const ceibosRows = rows.filter(row => isTeam(row.Locatario, aliases) !== isTeam(row.Visitante, aliases));
   const scorerEntries = await mapWithConcurrency(ceibosRows, 4, async row => {
     const action = isTeam(row.Locatario, aliases) ? "GolesLocatario" : "GolesVisitante";
@@ -250,6 +255,43 @@ async function fetchLigaResultsWithScorers(source, aliases) {
     return [String(row.ID), Array.isArray(goals) ? goals : []];
   });
   return parseLigaResultsApi(rows, source, aliases, new Map(scorerEntries));
+}
+
+
+// Read the same JSON used by the League page, including phases added during the year.
+function ligaFixtureLinks(html, pageUrl) {
+  const origin = new URL(pageUrl).origin;
+  return [...new Set([...html.matchAll(/<iframe\b[^>]*\bsrc=["']([^"']+)["']/gi)].flatMap(match => {
+    try { const url = new URL(match[1], pageUrl);
+      return url.origin === origin && /^\/partidos\/[^/]+\.html$/.test(url.pathname) ? [url.href] : [];
+    } catch { return []; }
+  }))];
+}
+
+function parseLigaFixturesApi(rows, source, aliases) {
+  if (!Array.isArray(rows)) throw new Error('La Liga no devolvió una lista de próximos partidos');
+  return rows.flatMap(row => {
+    const home = repairText(row.Locatario), away = repairText(row.Visitante);
+    const local = isTeam(home, aliases), visitor = isTeam(away, aliases);
+    const date = ligaDateTime(row.Fecha);
+    if (local === visitor || !home || !away || !date || date.fecha.slice(0,4) !== String(source.temporada || now.getFullYear())) return [];
+    const hora = /^(?:[01]\d|2[0-3]):[0-5]\d$/.test(date.hora) && date.hora !== '00:00' ? date.hora : 'A confirmar';
+    return [{kind:'partido',deporte:source.deporte,categoria:source.categoria,rival:local?away:home,fecha:date.fecha,hora,local,cancha:repairText(row.Cancha),fuente:source.url}];
+  });
+}
+
+async function fetchLigaFixtures(source, aliases) {
+  return parseLigaFixturesApi(await fetchLigaRows(source), source, aliases);
+}
+
+async function fetchLigaFixtureIndex(source, aliases) {
+  const response = await fetch(source.url, {cache:'no-store',headers:{'cache-control':'no-cache'},signal:AbortSignal.timeout(30000)});
+  if (!response.ok) throw new Error('HTTP '+response.status+' al consultar las fases de la Liga');
+  const links = ligaFixtureLinks(await response.text(), source.url);
+  if (!links.length) throw new Error('La página de la Liga no contiene fuentes de partidos');
+  // Fail this category as a unit rather than replacing its schedule with a partial phase.
+  const records = await mapWithConcurrency(links, 3, url => fetchLigaFixtures({...source,url}, aliases));
+  return records.flat();
 }
 
 function uruguayDateTime(timestamp) {
@@ -940,6 +982,7 @@ function normalizeRecord(record, kind, priority = 0) {
     local: Boolean(record.local),
     ...fase,
     ...adic,
+    ...(record.fuente && !record.adicId ? { fuente: clean(record.fuente) } : {}),
     ...(clean(record.estado) ? { estado: repairText(record.estado) } : {}),
     ...(clean(record.cancha) ? { cancha: repairText(record.cancha) } : {}),
     _priority: priority
@@ -1044,7 +1087,11 @@ async function main() {
       // G22 ofrece los datos de Rugby en JSON. Las demás federaciones todavía
       // requieren Chromium porque construyen sus tablas con JavaScript.
       let matches;
-      if (source.deporte === "futbol" && source.url.includes("/resultados/")) {
+      if (source.formato === "liga-fixture-index") {
+        matches = await fetchLigaFixtureIndex(source, config.teamAliases);
+      } else if (new URL(source.url).hostname === "ligauniversitaria.org.uy" && source.url.includes("/partidos/")) {
+        matches = await fetchLigaFixtures(source, config.teamAliases);
+      } else if (source.deporte === "futbol" && source.url.includes("/resultados/")) {
         matches = await fetchLigaResultsWithScorers(source, config.teamAliases);
       } else {
         const text = source.modo === "direct" ? await fetchDirectSource(source) : await renderPage(source);
@@ -1113,7 +1160,7 @@ async function main() {
   }
 }
 
-export { categoriaDesdePlaca, expandApifyInstagramImages, extractInstagramStoryMentionImages, fetchLigaResultsWithScorers, mergeClubData, parse5022PublicContent, parseG22TeamApi, parseHockeyLine, parseInstagramImage, parseInstagramResultsBoard, parseLigaResultsApi, repairText, verifiedRugbyResults2026 };
+export { ligaFixtureLinks, parseLigaFixturesApi, fetchLigaFixtures, fetchLigaFixtureIndex, categoriaDesdePlaca, expandApifyInstagramImages, extractInstagramStoryMentionImages, fetchLigaResultsWithScorers, mergeClubData, parse5022PublicContent, parseG22TeamApi, parseHockeyLine, parseInstagramImage, parseInstagramResultsBoard, parseLigaResultsApi, repairText, verifiedRugbyResults2026 };
 
 const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 if (isMain) main().catch(error => { console.error(error); process.exitCode = 1; });

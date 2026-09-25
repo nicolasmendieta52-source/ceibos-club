@@ -2540,24 +2540,6 @@
   "partidos": [
     {
       "deporte": "futbol",
-      "categoria": "PreSenior",
-      "rival": "San lsidro de Lomas",
-      "fecha": "2026-09-12",
-      "hora": "11:15",
-      "local": false,
-      "cancha": "San isdro de lomas"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "PreSenior",
-      "rival": "San Isidro de Lomas",
-      "fecha": "2026-09-12",
-      "hora": "11:15",
-      "local": false,
-      "cancha": "San isdro de lomas"
-    },
-    {
-      "deporte": "futbol",
       "categoria": "Papi Fútbol +45",
       "rival": "Punta Carretas",
       "fecha": "2026-09-20",
@@ -2577,7 +2559,18 @@
       "fecha": "2026-09-24",
       "hora": "22:00",
       "local": true,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/B221B3.html",
       "cancha": "G.WASTON"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "NACIONAL UNIVERSITARIO",
+      "fecha": "2026-09-25",
+      "hora": "19:00",
+      "local": false,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F202020AT.html",
+      "cancha": "COMPLEJO LOS NOGALES"
     },
     {
       "deporte": "rugby",
@@ -2589,33 +2582,43 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "LA ESCAPADA UNIVERSITARIO",
+      "fecha": "2026-09-26",
+      "hora": "09:00",
+      "local": false,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F3232PSCTA.html",
+      "cancha": "COMPLEJO LAS CASUARINAS"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "TAPE",
       "fecha": "2026-09-26",
-      "hora": "A confirmar",
+      "hora": "09:00",
       "local": true,
-      "fase": "Segunda rueda · Divisional A · Permanencia y descenso",
-      "cancha": "A confirmar"
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSAPD.html",
+      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "futbol",
       "categoria": "Reserva Verde",
-      "rival": "San Eugenio",
+      "rival": "SAN EUGENIO",
       "fecha": "2026-09-26",
-      "hora": "A confirmar",
+      "hora": "11:15",
       "local": true,
-      "fase": "Segunda rueda · Divisional C · Título y ascenso",
-      "cancha": "A confirmar"
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSCTA.html",
+      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "futbol",
       "categoria": "Primera",
-      "rival": "San Isidro Lomas Universitario",
+      "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
       "fecha": "2026-09-27",
-      "hora": "A confirmar",
+      "hora": "11:15",
       "local": true,
-      "fase": "Segunda rueda · Divisional B · Título y ascenso",
-      "cancha": "A confirmar"
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F21BTA.html",
+      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "futbol",
@@ -2651,6 +2654,16 @@
       "local": true
     },
     {
+      "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "OLD WOODLANDS CLUB",
+      "fecha": "2026-10-03",
+      "hora": "09:00",
+      "local": true,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F3232PSCTA.html",
+      "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
       "deporte": "rugby",
       "categoria": "Primera",
       "rival": "OBC",
@@ -2661,22 +2674,32 @@
     {
       "deporte": "futbol",
       "categoria": "Reserva A",
-      "rival": "Tenis El Pinar",
+      "rival": "TENIS EL PINAR",
       "fecha": "2026-10-03",
-      "hora": "A confirmar",
+      "hora": "11:15",
       "local": false,
-      "fase": "Segunda rueda · Divisional A · Permanencia y descenso",
-      "cancha": "A confirmar"
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSAPD.html",
+      "cancha": "TENIS EL PINAR"
     },
     {
       "deporte": "futbol",
       "categoria": "Reserva Verde",
       "rival": "E.L.F.",
       "fecha": "2026-10-03",
-      "hora": "A confirmar",
+      "hora": "11:15",
       "local": false,
-      "fase": "Segunda rueda · Divisional C · Título y ascenso",
-      "cancha": "A confirmar"
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSCTA.html",
+      "cancha": "ELF (LICEO FRANCES)"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "OLD WOODLANDS CLUB",
+      "fecha": "2026-10-03",
+      "hora": "A confirmar",
+      "local": true,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F202020AT.html",
+      "cancha": "CANCHA A FIJAR"
     },
     {
       "deporte": "hockey",
@@ -2692,12 +2715,12 @@
     {
       "deporte": "futbol",
       "categoria": "Primera",
-      "rival": "Náutico Carrasco y Punta Gorda",
+      "rival": "NAUTICO CARRASCO Y PUNTA GORDA",
       "fecha": "2026-10-04",
-      "hora": "A confirmar",
+      "hora": "11:15",
       "local": false,
-      "fase": "Segunda rueda · Divisional B · Título y ascenso",
-      "cancha": "A confirmar"
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F21BTA.html",
+      "cancha": "COMP. DEVOTO (NAUT. PICHINCHA)"
     },
     {
       "deporte": "futbol",
@@ -2706,7 +2729,7 @@
       "fecha": "2026-10-04",
       "hora": "15:30",
       "local": true,
-      "fase": "Segunda rueda · Serie 5",
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
       "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
@@ -2718,6 +2741,16 @@
       "local": false
     },
     {
+      "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "OLIMAR",
+      "fecha": "2026-10-10",
+      "hora": "11:15",
+      "local": false,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F3232PSCTA.html",
+      "cancha": "COLEGIO PIO"
+    },
+    {
       "deporte": "rugby",
       "categoria": "Primera",
       "rival": "Cuervos",
@@ -2728,32 +2761,42 @@
     {
       "deporte": "futbol",
       "categoria": "Reserva A",
-      "rival": "Alemán Universitario",
+      "rival": "ALEMAN UNIVERSITARIO",
       "fecha": "2026-10-10",
-      "hora": "A confirmar",
+      "hora": "09:00",
       "local": true,
-      "fase": "Segunda rueda · Divisional A · Permanencia y descenso",
-      "cancha": "A confirmar"
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSAPD.html",
+      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "futbol",
       "categoria": "Reserva Verde",
-      "rival": "Seminario Universitario",
+      "rival": "SEMINARIO UNIVERSITARIO",
       "fecha": "2026-10-10",
-      "hora": "A confirmar",
+      "hora": "11:15",
       "local": true,
-      "fase": "Segunda rueda · Divisional C · Título y ascenso",
-      "cancha": "A confirmar"
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSCTA.html",
+      "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "OLD BRENDANS CLUB",
+      "fecha": "2026-10-10",
+      "hora": "15:30",
+      "local": false,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F202020AT.html",
+      "cancha": "ST. BRENDANS"
     },
     {
       "deporte": "futbol",
       "categoria": "Primera",
-      "rival": "Sagrada Familia Universitario",
+      "rival": "SAGRADA FAMILIA UNIVERSITARIO",
       "fecha": "2026-10-11",
-      "hora": "A confirmar",
+      "hora": "11:15",
       "local": false,
-      "fase": "Segunda rueda · Divisional B · Título y ascenso",
-      "cancha": "A confirmar"
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F21BTA.html",
+      "cancha": "COMPLEJO LAS CASUARINAS"
     },
     {
       "deporte": "futbol",
@@ -2762,7 +2805,7 @@
       "fecha": "2026-10-11",
       "hora": "15:30",
       "local": false,
-      "fase": "Segunda rueda · Serie 5",
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
       "cancha": "COMPLEJO NORTHFIELD"
     },
     {
@@ -2774,6 +2817,16 @@
       "local": true
     },
     {
+      "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "SAN JUAN BAUTISTA",
+      "fecha": "2026-10-17",
+      "hora": "09:00",
+      "local": true,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F3232PSCTA.html",
+      "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
       "deporte": "rugby",
       "categoria": "Primera",
       "rival": "Trebol",
@@ -2784,32 +2837,42 @@
     {
       "deporte": "futbol",
       "categoria": "Reserva A",
-      "rival": "Sagrada Familia Universitario",
+      "rival": "SAGRADA FAMILIA UNIVERSITARIO",
       "fecha": "2026-10-17",
-      "hora": "A confirmar",
+      "hora": "11:15",
       "local": false,
-      "fase": "Segunda rueda · Divisional A · Permanencia y descenso",
-      "cancha": "A confirmar"
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSAPD.html",
+      "cancha": "COMPLEJO LAS CASUARINAS"
     },
     {
       "deporte": "futbol",
       "categoria": "Reserva Verde",
-      "rival": "Danubio Fútbol Club",
+      "rival": "DANUBIO FUTBOL CLUB",
+      "fecha": "2026-10-17",
+      "hora": "11:15",
+      "local": false,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSCTA.html",
+      "cancha": "COLEGIO PIO"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "J.M.L.M",
       "fecha": "2026-10-17",
       "hora": "A confirmar",
-      "local": false,
-      "fase": "Segunda rueda · Divisional C · Título y ascenso",
-      "cancha": "A confirmar"
+      "local": true,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F202020AT.html",
+      "cancha": "CANCHA A FIJAR"
     },
     {
       "deporte": "futbol",
       "categoria": "Primera",
-      "rival": "J.M.L.M.",
+      "rival": "J.M.L.M",
       "fecha": "2026-10-18",
-      "hora": "A confirmar",
+      "hora": "11:15",
       "local": true,
-      "fase": "Segunda rueda · Divisional B · Título y ascenso",
-      "cancha": "A confirmar"
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F21BTA.html",
+      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "rugby",
@@ -2828,6 +2891,16 @@
       "local": true
     },
     {
+      "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "ODONTOLOGIA UNIVERSITARIO",
+      "fecha": "2026-10-24",
+      "hora": "09:00",
+      "local": true,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F3232PSCTA.html",
+      "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
       "deporte": "rugby",
       "categoria": "Primera",
       "rival": "Lobos",
@@ -2838,92 +2911,142 @@
     {
       "deporte": "futbol",
       "categoria": "Reserva A",
-      "rival": "Club Seminario",
+      "rival": "CLUB SEMINARIO",
       "fecha": "2026-10-24",
-      "hora": "A confirmar",
+      "hora": "11:15",
       "local": false,
-      "fase": "Segunda rueda · Divisional A · Permanencia y descenso",
-      "cancha": "A confirmar"
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSAPD.html",
+      "cancha": "PARQUE CUPRA - CLUB SEMINARIO"
     },
     {
       "deporte": "futbol",
       "categoria": "Reserva Verde",
-      "rival": "Juan XXIII Blanco",
+      "rival": "JUAN XXIII BLANCO",
+      "fecha": "2026-10-24",
+      "hora": "11:15",
+      "local": false,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSCTA.html",
+      "cancha": "COMPLEJO JUAN XXIII"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "E.L.F.",
       "fecha": "2026-10-24",
       "hora": "A confirmar",
-      "local": false,
-      "fase": "Segunda rueda · Divisional C · Título y ascenso",
-      "cancha": "A confirmar"
+      "local": true,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F202020AT.html",
+      "cancha": "CANCHA A FIJAR"
     },
     {
       "deporte": "futbol",
       "categoria": "Primera",
-      "rival": "Old Brendans Club",
+      "rival": "OLD BRENDANS CLUB",
       "fecha": "2026-10-25",
-      "hora": "A confirmar",
+      "hora": "11:15",
       "local": false,
-      "fase": "Segunda rueda · Divisional B · Título y ascenso",
-      "cancha": "A confirmar"
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F21BTA.html",
+      "cancha": "ST. BRENDANS"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "ALEMAN UNIVERSITARIO",
+      "fecha": "2026-10-31",
+      "hora": "09:00",
+      "local": false,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F3232PSCTA.html",
+      "cancha": "CLUB ALEMAN"
     },
     {
       "deporte": "futbol",
       "categoria": "Reserva A",
-      "rival": "OBC Azulgrana",
+      "rival": "OBC AZULGRANA",
       "fecha": "2026-10-31",
-      "hora": "A confirmar",
+      "hora": "09:00",
       "local": true,
-      "fase": "Segunda rueda · Divisional A · Permanencia y descenso",
-      "cancha": "A confirmar"
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSAPD.html",
+      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "futbol",
       "categoria": "Reserva Verde",
-      "rival": "San Pablo Universitario",
+      "rival": "SAN PABLO UNIVERSITARIO",
       "fecha": "2026-10-31",
-      "hora": "A confirmar",
+      "hora": "11:15",
       "local": true,
-      "fase": "Segunda rueda · Divisional C · Título y ascenso",
-      "cancha": "A confirmar"
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSCTA.html",
+      "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "CLUB SEMINARIO",
+      "fecha": "2026-10-31",
+      "hora": "15:30",
+      "local": false,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F202020AT.html",
+      "cancha": "PARQUE CUPRA - CLUB SEMINARIO"
     },
     {
       "deporte": "futbol",
       "categoria": "Primera",
-      "rival": "Elbio Fernández",
+      "rival": "ELBIO FERNANDEZ",
       "fecha": "2026-11-01",
-      "hora": "A confirmar",
+      "hora": "11:15",
       "local": true,
-      "fase": "Segunda rueda · Divisional B · Título y ascenso",
-      "cancha": "A confirmar"
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F21BTA.html",
+      "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "EL CHORRO FUTBOL CLUB",
+      "fecha": "2026-11-07",
+      "hora": "09:00",
+      "local": true,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F3232PSCTA.html",
+      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "futbol",
       "categoria": "Reserva A",
-      "rival": "Nacional Universitario",
+      "rival": "NACIONAL UNIVERSITARIO",
       "fecha": "2026-11-07",
-      "hora": "A confirmar",
+      "hora": "09:00",
       "local": false,
-      "fase": "Segunda rueda · Divisional A · Permanencia y descenso",
-      "cancha": "A confirmar"
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSAPD.html",
+      "cancha": "COM. DEP. CLUB TROUVILLE"
     },
     {
       "deporte": "futbol",
       "categoria": "Reserva Verde",
-      "rival": "Centro Cristóbal Colón",
+      "rival": "CENTRO CRISTOBAL COLON",
+      "fecha": "2026-11-07",
+      "hora": "11:15",
+      "local": false,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSCTA.html",
+      "cancha": "COLEGIO PIO"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "OLD CHRISTIANS CLUB",
       "fecha": "2026-11-07",
       "hora": "A confirmar",
-      "local": false,
-      "fase": "Segunda rueda · Divisional C · Título y ascenso",
-      "cancha": "A confirmar"
+      "local": true,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F202020AT.html",
+      "cancha": "CANCHA A FIJAR"
     },
     {
       "deporte": "futbol",
       "categoria": "Primera",
-      "rival": "Alemán Universitario",
+      "rival": "ALEMAN UNIVERSITARIO",
       "fecha": "2026-11-08",
-      "hora": "A confirmar",
+      "hora": "11:15",
       "local": false,
-      "fase": "Segunda rueda · Divisional B · Título y ascenso",
-      "cancha": "A confirmar"
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F21BTA.html",
+      "cancha": "CLUB ALEMAN"
     },
     {
       "deporte": "futbol",
@@ -6337,7 +6460,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-25T12:09:29.732Z",
+  "actualizadoEn": "2026-09-25T13:05:40.657Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -6421,15 +6544,64 @@
       {
         "deporte": "basketball",
         "categoria": "Basketball",
-        "url": "https://ligauniversitaria.org.uy/partidos/B221B3.html",
-        "registros": 1,
+        "url": "https://ligauniversitaria.org.uy/resultados/B221B.html",
+        "registros": 15,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Reserva Verde",
+        "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS31.html",
+        "registros": 15,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Reserva A",
+        "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS1.html",
+        "registros": 15,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Primera",
+        "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
+        "registros": 15,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Sub 18",
+        "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
+        "registros": 5,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "PreSenior",
+        "url": "https://ligauniversitaria.org.uy/resultados/F3232PSC.html",
+        "registros": 15,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Sub 20",
+        "url": "https://ligauniversitaria.org.uy/resultados/F202020A.html",
+        "registros": 15,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Sub 18",
+        "url": "https://ligauniversitaria.org.uy/resultados/F181818-5-.html",
+        "registros": 7,
         "estado": "ok"
       },
       {
         "deporte": "basketball",
         "categoria": "Basketball",
-        "url": "https://ligauniversitaria.org.uy/resultados/B221B.html",
-        "registros": 15,
+        "url": "https://ligauniversitaria.org.uy/partidos/B221B3.html",
+        "registros": 1,
         "estado": "ok"
       },
       {
@@ -6442,23 +6614,9 @@
       {
         "deporte": "futbol",
         "categoria": "Reserva Verde",
-        "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS31.html",
-        "registros": 15,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
-        "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS31.html",
         "registros": 0,
         "estado": "sin-coincidencias"
-      },
-      {
-        "deporte": "futbol",
-        "categoria": "Reserva A",
-        "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS1.html",
-        "registros": 15,
-        "estado": "ok"
       },
       {
         "deporte": "futbol",
@@ -6470,13 +6628,6 @@
       {
         "deporte": "futbol",
         "categoria": "Primera",
-        "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
-        "registros": 15,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
-        "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/partidos/F21B.html",
         "registros": 0,
         "estado": "sin-coincidencias"
@@ -6484,22 +6635,8 @@
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
-        "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
-        "registros": 5,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
-        "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
         "registros": 2,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
-        "categoria": "PreSenior",
-        "url": "https://ligauniversitaria.org.uy/resultados/F3232PSC.html",
-        "registros": 15,
         "estado": "ok"
       },
       {
@@ -6512,21 +6649,42 @@
       {
         "deporte": "futbol",
         "categoria": "Sub 20",
-        "url": "https://ligauniversitaria.org.uy/resultados/F202020A.html",
-        "registros": 15,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
-        "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/partidos/F202020A.html",
         "registros": 0,
         "estado": "sin-coincidencias"
       },
       {
         "deporte": "futbol",
-        "categoria": "Sub 18",
-        "url": "https://ligauniversitaria.org.uy/resultados/F181818-5-.html",
+        "categoria": "Primera",
+        "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-mayores-a-2/",
+        "registros": 7,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Reserva A",
+        "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-reserva-a/",
+        "registros": 7,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Reserva Verde",
+        "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-reserva-c/",
+        "registros": 7,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "PreSenior",
+        "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-pre-senior-c/",
+        "registros": 7,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Sub 20",
+        "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-sub-20-a/",
         "registros": 7,
         "estado": "ok"
       }
