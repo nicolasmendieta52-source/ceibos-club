@@ -2122,7 +2122,7 @@ function renderScore(){
 function renderFixture(){
   const hoy = new Date(); hoy.setHours(0,0,0,0);
   const lista = document.getElementById("fixLista");
-  const proximos = PARTIDOS.filter(p => fechaValida(p.fecha) && new Date(p.fecha+"T00:00:00") >= hoy && DEPORTES.some(d => d.slug === slugDeporte(p.deporte))).sort(porFecha);
+  const proximos = PARTIDOS.filter(p => fechaValida(p.fecha) && new Date(p.fecha+"T00:00:00") >= hoy && DEPORTES.some(d => d.slug === slugDeporte(p.deporte))).sort(porFechaHora);
   const ordenAgenda = ["futbol", "hockey", "rugby", "basketball"];
   const deportes = DEPORTES.slice().sort((a,b) => ordenAgenda.indexOf(a.slug) - ordenAgenda.indexOf(b.slug));
   lista.innerHTML = `<div class="resumen-deportivo-grid">${deportes.map(deporte => {
@@ -2130,7 +2130,7 @@ function renderFixture(){
     const primeros = deporte.categorias.map(categoria => {
       const partidosCategoria = partidosDeporte.filter(p => p.categoria === categoria);
       return { partido: partidosCategoria[0], restantes: Math.max(0, partidosCategoria.length - 1) };
-    }).filter(item => item.partido);
+    }).filter(item => item.partido).sort((a,b) => porFechaHora(a.partido,b.partido));
     const filas = primeros.length ? primeros.map(({partido:p, restantes}) => {
       const f = fmtFecha(p.fecha);
       const dias = Math.round((new Date(p.fecha+"T00:00:00") - hoy)/86400000);
@@ -2151,7 +2151,7 @@ function renderHomeDeportiva(){
   if (!destacado || !lista) return;
   const hoy = new Date(); hoy.setHours(0,0,0,0);
   const proximos = PARTIDOS.filter(p => fechaValida(p.fecha) && new Date(p.fecha + "T00:00:00") >= hoy)
-    .sort(porFecha).slice(0, 4);
+    .sort(porFechaHora).slice(0, 4);
   const primero = proximos[0];
   partidoDestacadoActual = primero || null;
   if (!primero) {
