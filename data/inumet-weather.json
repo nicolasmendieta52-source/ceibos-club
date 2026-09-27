@@ -5,38 +5,12 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-09-26 12:00",
-  "actualizado": "2026-09-26T21:14:20.765Z",
+  "publicado": "2026-09-26 00:00",
+  "actualizado": "2026-09-27T05:23:23.775Z",
   "pronosticos": [
     {
-      "fecha": "2026-09-26",
-      "diaMasN": 0,
-      "etiqueta": "Sábado 26",
-      "temperaturaMin": 12,
-      "temperaturaMax": 21,
-      "probabilidadLluvia": "",
-      "periodos": [
-        {
-          "orden": 1,
-          "nombre": "Mañana",
-          "descripcion": "Algo nuboso y nuboso.",
-          "evolucion": "",
-          "detalle": "",
-          "viento": "sector E 10-30 km/h."
-        },
-        {
-          "orden": 2,
-          "nombre": "Tarde/Noche",
-          "descripcion": "Algo nuboso y nuboso.",
-          "evolucion": "",
-          "detalle": "",
-          "viento": "SE al E 20-40 km/h, rachas de 50 km/h."
-        }
-      ]
-    },
-    {
       "fecha": "2026-09-27",
-      "diaMasN": 1,
+      "diaMasN": 0,
       "etiqueta": "Domingo 27",
       "temperaturaMin": 10,
       "temperaturaMax": 22,
@@ -45,8 +19,8 @@
         {
           "orden": 1,
           "nombre": "Mañana",
-          "descripcion": "Nuboso.",
-          "evolucion": "",
+          "descripcion": "Nuboso y cubierto.",
+          "evolucion": "Probable formación de tormentas aisladas.",
           "detalle": "",
           "viento": "E y NE 20-40 km/h, rachas de 50 km/h."
         },
@@ -56,13 +30,13 @@
           "descripcion": "Nuboso y cubierto.",
           "evolucion": "Probables precipitaciones y tormentas hacia la noche.",
           "detalle": "",
-          "viento": "E y NE 20-40 km/h."
+          "viento": "E y NE 20-40 km/h, rachas de 50 km/h."
         }
       ]
     },
     {
       "fecha": "2026-09-28",
-      "diaMasN": 2,
+      "diaMasN": 1,
       "etiqueta": "Lunes 28",
       "temperaturaMin": 15,
       "temperaturaMax": 21,
@@ -82,22 +56,39 @@
           "descripcion": "Nuboso y cubierto.",
           "evolucion": "Chaparrones.",
           "detalle": "",
-          "viento": "Sector E 20-30 km/h."
+          "viento": "Sector E 20-30 km/h, rachas de hasta 40 km/h."
         }
       ]
     },
     {
       "fecha": "2026-09-29",
-      "diaMasN": 3,
+      "diaMasN": 2,
       "etiqueta": "Martes 29",
       "temperaturaMin": 14,
       "temperaturaMax": 19,
-      "probabilidadLluvia": "Alta",
-      "periodos": []
+      "probabilidadLluvia": "",
+      "periodos": [
+        {
+          "orden": 1,
+          "nombre": "Mañana",
+          "descripcion": "Cubierto.",
+          "evolucion": "Precipitaciones y tormentas.",
+          "detalle": "",
+          "viento": "Sector E al NW 10-30 km/h. Periodos de variables 0-10 km/h."
+        },
+        {
+          "orden": 2,
+          "nombre": "Tarde/Noche",
+          "descripcion": "Cubierto a nuboso.",
+          "evolucion": "Precipitaciones y tormentas aisladas.",
+          "detalle": "Ventoso.",
+          "viento": "NW al SW 20-40 km/h, rachas de 50-60 km/h y ocasionalmente superiores."
+        }
+      ]
     },
     {
       "fecha": "2026-09-30",
-      "diaMasN": 4,
+      "diaMasN": 3,
       "etiqueta": "Miércoles 30",
       "temperaturaMin": 11,
       "temperaturaMax": 16,
@@ -106,7 +97,7 @@
     },
     {
       "fecha": "2026-10-01",
-      "diaMasN": 5,
+      "diaMasN": 4,
       "etiqueta": "Jueves 01",
       "temperaturaMin": 8,
       "temperaturaMax": 16,
@@ -115,11 +106,20 @@
     },
     {
       "fecha": "2026-10-02",
-      "diaMasN": 6,
+      "diaMasN": 5,
       "etiqueta": "Viernes 02",
       "temperaturaMin": 6,
-      "temperaturaMax": 21,
+      "temperaturaMax": 20,
       "probabilidadLluvia": "Nula",
+      "periodos": []
+    },
+    {
+      "fecha": "2026-10-03",
+      "diaMasN": 6,
+      "etiqueta": "Sábado 03",
+      "temperaturaMin": 9,
+      "temperaturaMax": 15,
+      "probabilidadLluvia": "Alta",
       "periodos": []
     }
   ]
