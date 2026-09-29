@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-29T12:59:20.157Z",
+        "updatedAt": "2026-09-29T22:20:01.145Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-29T12:59:20.362Z",
+        "updatedAt": "2026-09-29T22:20:01.643Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-29T12:59:20.447Z",
+        "updatedAt": "2026-09-29T22:20:02.271Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-29T12:59:20.547Z",
+        "updatedAt": "2026-09-29T22:20:02.751Z",
         "tables": [
           {
             "id": 2296,
@@ -2047,8 +2047,8 @@
           {
             "id": 135072,
             "matchday": 8,
-            "status": "pending",
-            "scheduled_at": "2027-01-24T12:00:00",
+            "status": "confirmed",
+            "scheduled_at": "2026-10-04T12:00:00",
             "home_goals": null,
             "away_goals": null,
             "home_team": {
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-29T12:59:20.650Z",
+        "updatedAt": "2026-09-29T22:20:03.192Z",
         "tables": [
           {
             "id": 2239,
@@ -2644,7 +2644,7 @@
       "categoria": "Intermedia B",
       "rival": "Palo Y Pico",
       "fecha": "2026-09-30",
-      "hora": "20:00",
+      "hora": "20:30",
       "local": false,
       "fase": "APERTURA 2026 (Intermedia B)",
       "estado": "A Designar",
@@ -2760,6 +2760,20 @@
       "fase": "COPA DE ORO (Intermedia C)",
       "estado": "A Designar",
       "cancha": "Pilares"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "Stella Maris 45",
+      "fecha": "2026-10-04",
+      "hora": "09:00",
+      "local": true,
+      "fase": "ADIC · Clasura Copas Master 45",
+      "adicId": 135072,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "estado": "Confirmado",
+      "cancha": "A confirmar"
     },
     {
       "deporte": "futbol",
@@ -6527,7 +6541,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-29T13:02:21.831Z",
+  "actualizadoEn": "2026-09-29T22:22:49.869Z",
   "diagnostico": {
     "fuentes": [
       {

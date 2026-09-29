@@ -5,15 +5,15 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-09-29 6:00",
-  "actualizado": "2026-09-29T12:59:19.579Z",
+  "publicado": "2026-09-29 18:00",
+  "actualizado": "2026-09-29T22:20:00.520Z",
   "pronosticos": [
     {
       "fecha": "2026-09-29",
       "diaMasN": 0,
       "etiqueta": "Martes 29",
       "temperaturaMin": 14,
-      "temperaturaMax": 19,
+      "temperaturaMax": 21,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -28,9 +28,9 @@
           "orden": 2,
           "nombre": "Tarde/Noche",
           "descripcion": "Cubierto a nuboso.",
-          "evolucion": "Precipitaciones y tormentas aisladas.",
+          "evolucion": "Precipitaciones aisladas.",
           "detalle": "Ventoso.",
-          "viento": "NW al SW 20-40 km/h, rachas de 50-60 km/h y ocasionalmente superiores."
+          "viento": "SW 40-60 km/h, rachas de 60-80 km/h."
         }
       ]
     },
@@ -45,7 +45,7 @@
         {
           "orden": 1,
           "nombre": "Mañana",
-          "descripcion": "Algo nuboso y nuboso.",
+          "descripcion": "Algo nuboso y nuboso, períodos de cubierto.",
           "evolucion": "",
           "detalle": "",
           "viento": "SW 20-40 km/h, rachas de hasta 50 km/h. Amainando."
@@ -65,15 +65,15 @@
       "diaMasN": 2,
       "etiqueta": "Jueves 01",
       "temperaturaMin": 8,
-      "temperaturaMax": 16,
+      "temperaturaMax": 15,
       "probabilidadLluvia": "",
       "periodos": [
         {
           "orden": 1,
           "nombre": "Mañana",
           "descripcion": "Nuboso y cubierto.",
-          "evolucion": "Probables precipitaciones.",
-          "detalle": "Neblinas.",
+          "evolucion": "Probables precipitaciones escasas.",
+          "detalle": "",
           "viento": "SW 10-30 km/h, rachas de hasta 40 km/h."
         },
         {
@@ -90,8 +90,8 @@
       "fecha": "2026-10-02",
       "diaMasN": 3,
       "etiqueta": "Viernes 02",
-      "temperaturaMin": 6,
-      "temperaturaMax": 20,
+      "temperaturaMin": 7,
+      "temperaturaMax": 16,
       "probabilidadLluvia": "Nula",
       "periodos": []
     },
@@ -100,7 +100,7 @@
       "diaMasN": 4,
       "etiqueta": "Sábado 03",
       "temperaturaMin": 9,
-      "temperaturaMax": 15,
+      "temperaturaMax": 17,
       "probabilidadLluvia": "Alta",
       "periodos": []
     },
@@ -109,7 +109,7 @@
       "diaMasN": 5,
       "etiqueta": "Domingo 04",
       "temperaturaMin": 11,
-      "temperaturaMax": 16,
+      "temperaturaMax": 17,
       "probabilidadLluvia": "Baja",
       "periodos": []
     },
@@ -118,7 +118,7 @@
       "diaMasN": 6,
       "etiqueta": "Lunes 05",
       "temperaturaMin": 10,
-      "temperaturaMax": 19,
+      "temperaturaMax": 20,
       "probabilidadLluvia": "Nula",
       "periodos": []
     }
