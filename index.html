@@ -760,6 +760,9 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 .archivo-tabla .adic-equipo th,.archivo-tabla .adic-equipo td{color:var(--dorado)}
 .archivo-tabla th[scope="row"]{padding:11px 10px;text-align:left;font-size:.75rem;letter-spacing:0;text-transform:none;color:rgba(246,241,228,.85);border-top:1px solid rgba(246,241,228,.08)}
 .archivo-tabla caption.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.dep-competition{grid-column:1/-1;min-width:0;border-top:1px solid rgba(246,241,228,.12);padding-top:24px}
+.competencia-estadisticas h5{margin:22px 0 12px;color:var(--dorado);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+.competencia-estadisticas .archivo-tabla{min-width:640px}
 .archivo-tabla-wrap{overflow-x:auto;border-radius:12px}
 .archivo-tabla{width:100%;min-width:520px;border-collapse:collapse;font-size:.73rem}
 .archivo-tabla th{padding:0 10px 10px;color:rgba(246,241,228,.48);font-size:.59rem;letter-spacing:.11em;text-align:center;text-transform:uppercase}
@@ -1601,6 +1604,7 @@ const DEPORTES = [
 ];
 let ARCHIVO_HISTORICO = null;
 let ADIC_TEMPORADA = null;
+let ESTADISTICAS_2026 = null;
 
 let PARTIDOS = [
   { deporte:"basketball", categoria:"Divisional B", rival:"Maristas",        fecha:"2026-06-12", hora:"19:15", local:false },
@@ -1875,6 +1879,21 @@ function tablasAdicCategoria(categoria){
   }).join('')+(otrosAnios?'<p class="sin-datos">ADIC también registra partidos de estos torneos con fechas de 2027. El fixture y las estadísticas de esta sección corresponden a 2026.</p>':'');
 }
 
+
+function tablasCompetencia(deporte,categoria,kind){
+ return (ESTADISTICAS_2026?.tables || []).filter(t=>t.season===2026&&t.sport===deporte&&t.category===categoria&&(!kind||t.kind===kind));
+}
+function tablaCompetenciaHTML(t){
+ const fuente=/^https:\/\//.test(t.source||'')?t.source:'';
+ const fecha=String(t.updatedAt||'').slice(0,10).split('-').reverse().join('/');
+ return '<details class="dep-vermas"><summary>'+textoSeguro(t.title)+'</summary><div class="archivo-tabla-wrap"><table class="archivo-tabla"><caption class="sr-only">'+textoSeguro(t.category+' · '+t.title+' · 2026')+'</caption><thead><tr>'+t.columns.map(c=>'<th scope="col">'+textoSeguro(c)+'</th>').join('')+'</tr></thead><tbody>'+t.rows.map(r=>'<tr'+(r.club?' class="adic-equipo"':'')+'>'+r.values.map((v,i)=>i===1?'<th scope="row">'+textoSeguro(v)+'</th>':'<td>'+textoSeguro(v)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>'+(t.rows.length?'':'<p class="sin-datos">La fuente todavía no publica registros.</p>')+'<p class="sin-datos">Consultado: '+textoSeguro(fecha)+'.'+(t.sourceDate?' Datos publicados por la fuente: '+textoSeguro(t.sourceDate.slice(0,10))+'.':'')+(t.stale?' No se pudo actualizar en el último chequeo; se conserva la última tabla disponible.':'')+'</p>'+(fuente?'<a class="dep-archivo-link" href="'+textoSeguro(fuente)+'" target="_blank" rel="noopener">Ver fuente ↗</a>':'')+'</details>';
+}
+function estadisticasCompetenciaHTML(deporte,categoria){
+ const papi=deporte==='futbol'&&categoria.startsWith('Papi Fútbol ');
+ const positions=tablasCompetencia(deporte,categoria,'standings'),scorers=tablasCompetencia(deporte,categoria,'scorers');
+ return '<section class="competencia-estadisticas" aria-label="Estadísticas 2026 de '+textoSeguro(categoria)+'"><h5>Campeonato · 2026</h5>'+(papi?tablasAdicCategoria(categoria):positions.map(tablaCompetenciaHTML).join('')||'<p class="sin-datos">Todavía no hay una tabla pública verificada para esta categoría.</p>')+'<h5>'+(deporte==='rugby'||deporte==='basketball'?'Anotadores':'Goleadores')+' · 2026</h5>'+(scorers.map(tablaCompetenciaHTML).join('')||'<p class="sin-datos">La fuente no publica un ranking individual verificable para esta categoría.</p>')+'<p class="sin-datos">Chequeo automático cada 6 horas, también los fines de semana. Cada tabla conserva la fase y el orden publicados por su competencia.</p></section>';
+}
+
 function renderDeportePanel(){
   const d = DEPORTES.find(deporte => deporte.slug === deporteActivo) ?? DEPORTES[0];
   const panels = document.getElementById("depPanels");
@@ -1914,9 +1933,9 @@ function renderDeportePanel(){
         <h5>\u00daltimo resultado</h5>
         ${ultimoResultado ? resultadoMini(ultimoResultado) : `<p class="sin-datos">Sin resultados cargados.</p>`}
         ${historial.length ? `<details class="dep-vermas"><summary>Ver historial ${new Date().getFullYear()} (${historial.length})</summary>${historial.map(resultadoMini).join("")}</details>` : ""}
-        ${esPapiFutbol ? tablasAdicCategoria(seleccionada) : ""}
       </div>
     </div>
+    <div class="dep-competition">${estadisticasCompetenciaHTML(d.slug,seleccionada)}</div>
   </div>`;
   panels.querySelectorAll(".cat-tab").forEach(boton => boton.addEventListener("click", () => activarCategoria(d.slug, boton.dataset.categoria)));
   revObserve();
@@ -2063,6 +2082,7 @@ function renderArchivoHistorico(){
   categoria ? renderCategoriaArchivo(contenedor, deporte, categoria) : renderDeporteArchivo(contenedor, deporte);
   if (categoria) {
     completarRankingRugbyCategoria(contenedor, deporte, categoria);
+    contenedor.insertAdjacentHTML("beforeend",estadisticasCompetenciaHTML(deporte.slug,categoria.name));
     contenedor.querySelector(".archivo-hero")?.insertAdjacentHTML("afterend", tablasOficialesArchivo(categoria));
   }
   revObserve();
@@ -2970,6 +2990,9 @@ addEventListener("hashchange", () => {
     realinearDestinoHash();
   }
 });
+
+fetch('data/competition-stats-2026.json?actualizado='+Date.now(),{cache:'no-store'})
+ .then(r=>r.ok?r.json():null).then(data=>{if(data?.season!==2026||!Array.isArray(data.tables))return;ESTADISTICAS_2026=data;renderDinamico();}).catch(()=>{});
 
 /* Archivo curado y separado de la automatizacion deportiva. */
 fetch(`data/sports-history.json?actualizado=${Date.now()}`, { cache: "no-store" })

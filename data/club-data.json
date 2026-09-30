@@ -2554,79 +2554,6 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "PreSenior",
-      "rival": "La Escapada",
-      "fecha": "2026-09-25",
-      "hora": "09:00",
-      "local": false,
-      "cancha": "Casuarinas BN"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "Tape",
-      "fecha": "2026-09-25",
-      "hora": "09:00",
-      "local": true,
-      "cancha": "Los Ceibos"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "erde VS . San Eugenio",
-      "fecha": "2026-09-25",
-      "hora": "11:15",
-      "local": true,
-      "cancha": "Los Ceibos Blut 8) pepsi a ZILLERTAL Zero BUM AOMINON FED KASD"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 20",
-      "rival": "Nacional U.",
-      "fecha": "2026-09-25",
-      "hora": "19:00",
-      "local": false,
-      "cancha": "Nogales BR SABADO - 26/09"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "TAPE",
-      "local": true,
-      "fecha": "2026-09-26",
-      "hora": "A confirmar",
-      "cancha": "A confirmar",
-      "fase": "Segunda rueda · Divisional A · Permanencia y descenso"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "San Eugenio",
-      "local": true,
-      "fecha": "2026-09-26",
-      "hora": "A confirmar",
-      "cancha": "A confirmar",
-      "fase": "Segunda rueda · Divisional C · Título y ascenso"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "San Isidro Lomas U.",
-      "fecha": "2026-09-27",
-      "hora": "11:15",
-      "local": false
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "San lsidro Lomas U.",
-      "fecha": "2026-09-27",
-      "hora": "11:15",
-      "local": true,
-      "cancha": "Los Ceibos ltr 8) pepsi a ZILLERTAL Zero BUM AOMINON FED KASZ ño"
-    },
-    {
-      "deporte": "futbol",
       "categoria": "Papi Fútbol +35",
       "rival": "Valdocco FC (Salesianos)",
       "fecha": "2026-09-29",
@@ -2792,7 +2719,6 @@
       "fecha": "2026-10-04",
       "hora": "15:30",
       "local": true,
-      "fase": "Segunda rueda · Serie 5",
       "fuente": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
       "cancha": "MONTE VI \"LOS CEIBOS\""
     },
@@ -2869,7 +2795,6 @@
       "fecha": "2026-10-11",
       "hora": "15:30",
       "local": false,
-      "fase": "Segunda rueda · Serie 5",
       "fuente": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
       "cancha": "COMPLEJO NORTHFIELD"
     },
@@ -6532,16 +6457,77 @@
       "fecha": "2026-09-24"
     },
     {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "NACIONAL UNIVERSITARIO",
+      "gf": 3,
+      "gc": 2,
+      "fecha": "2026-09-25",
+      "goleadores": [
+        "PABLO MARTIN BARTABURU (11')",
+        "JUAN MARTIN SZELAGOWSKI (51')",
+        "SANTIAGO PONS (58')"
+      ]
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "LA ESCAPADA UNIVERSITARIO",
+      "gf": 2,
+      "gc": 0,
+      "fecha": "2026-09-26",
+      "goleadores": [
+        "SANTIAGO JORGE KIRIAKIDIS (68')",
+        "NICOLAS ORDOQUI (73')"
+      ]
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "TAPE",
+      "gf": 3,
+      "gc": 1,
+      "fecha": "2026-09-26",
+      "goleadores": [
+        "RAFAEL MONESTIER (70')",
+        "JUAN ANDRES ECHEGOYEN (75')",
+        "THIAGO TORANZA (91')"
+      ]
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "SAN EUGENIO",
+      "gf": 2,
+      "gc": 0,
+      "fecha": "2026-09-26",
+      "goleadores": [
+        "NICOLAS MENDIETA (90')",
+        "NICOLAS MENDIETA (94')"
+      ]
+    },
+    {
       "deporte": "rugby",
       "categoria": "M19",
       "rival": "PGC Trébol",
       "gf": 38,
       "gc": 17,
       "fecha": "2026-09-26"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "SAN ISIDRO LOMAS UNIVERSITARIO",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-09-27",
+      "goleadores": [
+        "JUAN MARTIN SZELAGOWSKI (93')"
+      ]
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-30T12:44:48.793Z",
+  "actualizadoEn": "2026-09-30T20:33:44.801Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -6625,16 +6611,65 @@
       {
         "deporte": "basketball",
         "categoria": "Basketball",
-        "url": "https://ligauniversitaria.org.uy/partidos/B221B3.html",
-        "registros": 0,
-        "estado": "sin-coincidencias"
+        "url": "https://ligauniversitaria.org.uy/resultados/B221B.html",
+        "registros": 15,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Reserva Verde",
+        "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS31.html",
+        "registros": 15,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Reserva A",
+        "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS1.html",
+        "registros": 15,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Primera",
+        "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
+        "registros": 15,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Sub 18",
+        "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
+        "registros": 5,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "PreSenior",
+        "url": "https://ligauniversitaria.org.uy/resultados/F3232PSC.html",
+        "registros": 15,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Sub 20",
+        "url": "https://ligauniversitaria.org.uy/resultados/F202020A.html",
+        "registros": 15,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Sub 18",
+        "url": "https://ligauniversitaria.org.uy/resultados/F181818-5-.html",
+        "registros": 7,
+        "estado": "ok"
       },
       {
         "deporte": "basketball",
         "categoria": "Basketball",
-        "url": "https://ligauniversitaria.org.uy/resultados/B221B.html",
-        "registros": 15,
-        "estado": "ok"
+        "url": "https://ligauniversitaria.org.uy/partidos/B221B3.html",
+        "registros": 0,
+        "estado": "sin-coincidencias"
       },
       {
         "deporte": "basketball",
@@ -6646,23 +6681,9 @@
       {
         "deporte": "futbol",
         "categoria": "Reserva Verde",
-        "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS31.html",
-        "registros": 15,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
-        "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS31.html",
         "registros": 0,
         "estado": "sin-coincidencias"
-      },
-      {
-        "deporte": "futbol",
-        "categoria": "Reserva A",
-        "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS1.html",
-        "registros": 15,
-        "estado": "ok"
       },
       {
         "deporte": "futbol",
@@ -6674,13 +6695,6 @@
       {
         "deporte": "futbol",
         "categoria": "Primera",
-        "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
-        "registros": 15,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
-        "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/partidos/F21B.html",
         "registros": 0,
         "estado": "sin-coincidencias"
@@ -6688,22 +6702,8 @@
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
-        "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
-        "registros": 5,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
-        "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
         "registros": 2,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
-        "categoria": "PreSenior",
-        "url": "https://ligauniversitaria.org.uy/resultados/F3232PSC.html",
-        "registros": 15,
         "estado": "ok"
       },
       {
@@ -6716,57 +6716,43 @@
       {
         "deporte": "futbol",
         "categoria": "Sub 20",
-        "url": "https://ligauniversitaria.org.uy/resultados/F202020A.html",
-        "registros": 15,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
-        "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/partidos/F202020A.html",
         "registros": 0,
         "estado": "sin-coincidencias"
       },
       {
         "deporte": "futbol",
-        "categoria": "Sub 18",
-        "url": "https://ligauniversitaria.org.uy/resultados/F181818-5-.html",
-        "registros": 7,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-mayores-a-2/",
-        "registros": 6,
+        "registros": 22,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-reserva-a/",
-        "registros": 6,
+        "registros": 22,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-reserva-c/",
-        "registros": 6,
+        "registros": 22,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "PreSenior",
         "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-pre-senior-c/",
-        "registros": 6,
+        "registros": 22,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-sub-20-a/",
-        "registros": 6,
+        "registros": 22,
         "estado": "ok"
       }
     ],

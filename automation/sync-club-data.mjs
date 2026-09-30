@@ -287,11 +287,14 @@ async function fetchLigaFixtures(source, aliases) {
 async function fetchLigaFixtureIndex(source, aliases) {
   const response = await fetch(source.url, {cache:'no-store',headers:{'cache-control':'no-cache'},signal:AbortSignal.timeout(30000)});
   if (!response.ok) throw new Error('HTTP '+response.status+' al consultar las fases de la Liga');
-  const links = ligaFixtureLinks(await response.text(), source.url);
+  const html = await response.text();
+  const links = ligaFixtureLinks(html, source.url);
   if (!links.length) throw new Error('La página de la Liga no contiene fuentes de partidos');
   // Fail this category as a unit rather than replacing its schedule with a partial phase.
   const records = await mapWithConcurrency(links, 3, url => fetchLigaFixtures({...source,url}, aliases));
-  return records.flat();
+  const resultLinks = [...new Set([...html.matchAll(/<iframe\b[^>]*\bsrc=["']([^"']+)["']/gi)].map(m=>new URL(m[1],source.url)).filter(u=>u.origin===new URL(source.url).origin&&/^\/resultados\/[^/]+\.html$/.test(u.pathname)).map(u=>u.href))];
+  const results = await mapWithConcurrency(resultLinks, 2, url=>fetchLigaResultsWithScorers({...source,url},aliases));
+  return [...records.flat(),...results.flat()].filter(r=>r.fecha.startsWith(String(source.temporada||now.getFullYear())+"-"));
 }
 
 function uruguayDateTime(timestamp) {
