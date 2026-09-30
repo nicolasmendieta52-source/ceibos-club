@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-30T12:41:59.131Z",
+        "updatedAt": "2026-09-30T20:40:33.319Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-30T12:41:59.291Z",
+        "updatedAt": "2026-09-30T20:40:33.593Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-30T12:41:59.349Z",
+        "updatedAt": "2026-09-30T20:40:33.713Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-30T12:41:59.421Z",
+        "updatedAt": "2026-09-30T20:40:33.873Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-30T12:41:59.489Z",
+        "updatedAt": "2026-09-30T20:40:34.059Z",
         "tables": [
           {
             "id": 2239,
@@ -2554,6 +2554,33 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "La Escapada",
+      "fecha": "2026-09-25",
+      "hora": "09:00",
+      "local": false,
+      "cancha": "Casuarinas BN"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "Tape",
+      "fecha": "2026-09-25",
+      "hora": "09:00",
+      "local": true,
+      "cancha": "Los Ceibos"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "erde VS . San Eugenio",
+      "fecha": "2026-09-25",
+      "hora": "11:15",
+      "local": true,
+      "cancha": "Los Ceibos Blut 8) pepsi a ZILLERTAL Zero BUM AOMINON FED KASD"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Papi Fútbol +35",
       "rival": "Valdocco FC (Salesianos)",
       "fecha": "2026-09-29",
@@ -2580,9 +2607,9 @@
     {
       "deporte": "rugby",
       "categoria": "Intermedia",
-      "rival": "OBC",
+      "rival": "Old Boys",
       "fecha": "2026-10-03",
-      "hora": "12:00",
+      "hora": "14:00",
       "local": true
     },
     {
@@ -2597,6 +2624,14 @@
       "cancha": "Saint Brendan's"
     },
     {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Lions",
+      "fecha": "2026-10-03",
+      "hora": "12:30",
+      "local": true
+    },
+    {
       "deporte": "futbol",
       "categoria": "PreSenior",
       "rival": "OLD WOODLANDS CLUB",
@@ -2609,10 +2644,11 @@
     {
       "deporte": "rugby",
       "categoria": "Primera",
-      "rival": "OBC",
+      "rival": "Old Boys",
       "fecha": "2026-10-03",
-      "hora": "12:00",
-      "local": true
+      "hora": "15:45",
+      "local": true,
+      "cancha": "Ceibos"
     },
     {
       "deporte": "hockey",
@@ -2719,6 +2755,7 @@
       "fecha": "2026-10-04",
       "hora": "15:30",
       "local": true,
+      "fase": "Segunda rueda · Serie 5",
       "fuente": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
       "cancha": "MONTE VI \"LOS CEIBOS\""
     },
@@ -2795,6 +2832,7 @@
       "fecha": "2026-10-11",
       "hora": "15:30",
       "local": false,
+      "fase": "Segunda rueda · Serie 5",
       "fuente": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
       "cancha": "COMPLEJO NORTHFIELD"
     },
@@ -6527,7 +6565,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-30T20:33:44.801Z",
+  "actualizadoEn": "2026-09-30T20:43:39.705Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -6563,7 +6601,7 @@
       {
         "deporte": "rugby",
         "url": "https://50-22.base44.app/functions/getPublicContent",
-        "registros": 67,
+        "registros": 68,
         "estado": "ok"
       },
       {
@@ -6584,7 +6622,7 @@
         "deporte": "hockey",
         "categoria": "Intermedia B",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=31",
-        "registros": 21,
+        "registros": 20,
         "estado": "ok"
       },
       {
@@ -6611,65 +6649,16 @@
       {
         "deporte": "basketball",
         "categoria": "Basketball",
-        "url": "https://ligauniversitaria.org.uy/resultados/B221B.html",
-        "registros": 15,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
-        "categoria": "Reserva Verde",
-        "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS31.html",
-        "registros": 15,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
-        "categoria": "Reserva A",
-        "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS1.html",
-        "registros": 15,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
-        "categoria": "Primera",
-        "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
-        "registros": 15,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
-        "categoria": "Sub 18",
-        "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
-        "registros": 5,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
-        "categoria": "PreSenior",
-        "url": "https://ligauniversitaria.org.uy/resultados/F3232PSC.html",
-        "registros": 15,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
-        "categoria": "Sub 20",
-        "url": "https://ligauniversitaria.org.uy/resultados/F202020A.html",
-        "registros": 15,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
-        "categoria": "Sub 18",
-        "url": "https://ligauniversitaria.org.uy/resultados/F181818-5-.html",
-        "registros": 7,
-        "estado": "ok"
+        "url": "https://ligauniversitaria.org.uy/partidos/B221B3.html",
+        "registros": 0,
+        "estado": "sin-coincidencias"
       },
       {
         "deporte": "basketball",
         "categoria": "Basketball",
-        "url": "https://ligauniversitaria.org.uy/partidos/B221B3.html",
-        "registros": 0,
-        "estado": "sin-coincidencias"
+        "url": "https://ligauniversitaria.org.uy/resultados/B221B.html",
+        "registros": 15,
+        "estado": "ok"
       },
       {
         "deporte": "basketball",
@@ -6681,9 +6670,23 @@
       {
         "deporte": "futbol",
         "categoria": "Reserva Verde",
+        "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS31.html",
+        "registros": 15,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS31.html",
         "registros": 0,
         "estado": "sin-coincidencias"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Reserva A",
+        "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS1.html",
+        "registros": 15,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
@@ -6695,6 +6698,13 @@
       {
         "deporte": "futbol",
         "categoria": "Primera",
+        "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
+        "registros": 15,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/partidos/F21B.html",
         "registros": 0,
         "estado": "sin-coincidencias"
@@ -6702,8 +6712,22 @@
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
+        "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
+        "registros": 5,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
         "registros": 2,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "PreSenior",
+        "url": "https://ligauniversitaria.org.uy/resultados/F3232PSC.html",
+        "registros": 15,
         "estado": "ok"
       },
       {
@@ -6716,9 +6740,23 @@
       {
         "deporte": "futbol",
         "categoria": "Sub 20",
+        "url": "https://ligauniversitaria.org.uy/resultados/F202020A.html",
+        "registros": 15,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/partidos/F202020A.html",
         "registros": 0,
         "estado": "sin-coincidencias"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Sub 18",
+        "url": "https://ligauniversitaria.org.uy/resultados/F181818-5-.html",
+        "registros": 7,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
