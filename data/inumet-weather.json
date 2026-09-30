@@ -5,23 +5,23 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-09-30 0:0",
-  "actualizado": "2026-09-30T05:38:18.903Z",
+  "publicado": "2026-09-30 9:00",
+  "actualizado": "2026-09-30T12:41:58.727Z",
   "pronosticos": [
     {
       "fecha": "2026-09-30",
       "diaMasN": 0,
       "etiqueta": "Miércoles 30",
-      "temperaturaMin": 10,
+      "temperaturaMin": 11,
       "temperaturaMax": 15,
       "probabilidadLluvia": "",
       "periodos": [
         {
           "orden": 1,
           "nombre": "Mañana",
-          "descripcion": "Algo nuboso y nuboso, períodos de cubierto.",
-          "evolucion": "Precipitaciones escasas y aisladas.",
-          "detalle": "Mejorando.",
+          "descripcion": "Cubierto a nuboso y algo nuboso.",
+          "evolucion": "Probables precipitaciones escasas.",
+          "detalle": "",
           "viento": "SW 20-40 km/h, rachas de hasta 50 km/h. Amainando."
         },
         {
@@ -30,7 +30,7 @@
           "descripcion": "Nuboso a cubierto.",
           "evolucion": "Neblinas.",
           "detalle": "",
-          "viento": "SW 10-30 km/h a variables 0-20 km/h."
+          "viento": "SW 10-20 km/h. Periodo de variables 0-20 km/h."
         }
       ]
     },
@@ -71,7 +71,7 @@
         {
           "orden": 1,
           "nombre": "Mañana",
-          "descripcion": "Nuboso.",
+          "descripcion": "Algo nuboso, períodos de claro.",
           "evolucion": "Neblinas.",
           "detalle": "",
           "viento": "Sector E 10-20 km/h. Periodos de variables 0-10 km/h"
@@ -79,7 +79,7 @@
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Nuboso, períodos de cubierto.",
+          "descripcion": "Nuboso.",
           "evolucion": "",
           "detalle": "",
           "viento": "E al NE 10-40 km/h"
@@ -101,7 +101,7 @@
       "etiqueta": "Domingo 04",
       "temperaturaMin": 12,
       "temperaturaMax": 18,
-      "probabilidadLluvia": "Baja",
+      "probabilidadLluvia": "Nula",
       "periodos": []
     },
     {
