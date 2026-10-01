@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-30T22:21:47.780Z",
+        "updatedAt": "2026-10-01T06:03:57.488Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-30T22:21:48.024Z",
+        "updatedAt": "2026-10-01T06:03:57.814Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-30T22:21:48.114Z",
+        "updatedAt": "2026-10-01T06:03:57.934Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-30T22:21:48.198Z",
+        "updatedAt": "2026-10-01T06:03:58.081Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-09-30T22:21:48.283Z",
+        "updatedAt": "2026-10-01T06:03:58.264Z",
         "tables": [
           {
             "id": 2239,
@@ -2592,17 +2592,6 @@
       "equipoAdic": "Ceibos Club amarillo",
       "estado": "Confirmado",
       "cancha": "A confirmar"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Palo Y Pico",
-      "fecha": "2026-09-30",
-      "hora": "20:30",
-      "local": false,
-      "fase": "APERTURA 2026 (Intermedia B)",
-      "estado": "A Designar",
-      "cancha": "Pilares"
     },
     {
       "deporte": "rugby",
@@ -6562,10 +6551,19 @@
       "goleadores": [
         "JUAN MARTIN SZELAGOWSKI (93')"
       ]
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Palo Y Pico",
+      "gf": 0,
+      "gc": 1,
+      "fecha": "2026-09-30",
+      "fase": "APERTURA 2026 (Intermedia B)"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-09-30T22:25:34.733Z",
+  "actualizadoEn": "2026-10-01T06:07:19.376Z",
   "diagnostico": {
     "fuentes": [
       {
