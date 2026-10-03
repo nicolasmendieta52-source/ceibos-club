@@ -5,15 +5,15 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-10-03 12:00",
-  "actualizado": "2026-10-03T16:28:00.785Z",
+  "publicado": "2026-10-03 18:00",
+  "actualizado": "2026-10-03T21:23:14.909Z",
   "pronosticos": [
     {
       "fecha": "2026-10-03",
       "diaMasN": 0,
       "etiqueta": "Sábado 03",
       "temperaturaMin": 10,
-      "temperaturaMax": 15,
+      "temperaturaMax": 13,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -28,9 +28,9 @@
           "orden": 2,
           "nombre": "Tarde/Noche",
           "descripcion": "Cubierto a nuboso.",
-          "evolucion": "Precipitaciones.",
+          "evolucion": "Probables precipitaciones aisladas.",
           "detalle": "Mejorando. Nieblas y neblinas.",
-          "viento": "Sector N al SW 10-30 km/h. Periodos de variables 0-10 km/h."
+          "viento": "Variables 0-10 km/h al sector S 10-30 km/h."
         }
       ]
     },
@@ -46,7 +46,7 @@
           "orden": 1,
           "nombre": "Mañana",
           "descripcion": "Algo nuboso y nuboso.",
-          "evolucion": "Neblinas y bancos de niebla.",
+          "evolucion": "Neblinas.",
           "detalle": "",
           "viento": "SW 10-30 km/h."
         },
@@ -56,7 +56,7 @@
           "descripcion": "Algo nuboso y nuboso.",
           "evolucion": "Neblinas.",
           "detalle": "",
-          "viento": "SW al NE 10-20 km/h. Periodos de variables 0-10 km/h."
+          "viento": "Sector S al sector E 10-20 km/h. Periodos de variables 0-10 km/h."
         }
       ]
     },
@@ -65,7 +65,7 @@
       "diaMasN": 2,
       "etiqueta": "Lunes 05",
       "temperaturaMin": 10,
-      "temperaturaMax": 21,
+      "temperaturaMax": 20,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -91,7 +91,7 @@
       "diaMasN": 3,
       "etiqueta": "Martes 06",
       "temperaturaMin": 10,
-      "temperaturaMax": 21,
+      "temperaturaMax": 18,
       "probabilidadLluvia": "Nula",
       "periodos": []
     },
@@ -100,7 +100,7 @@
       "diaMasN": 4,
       "etiqueta": "Miércoles 07",
       "temperaturaMin": 11,
-      "temperaturaMax": 19,
+      "temperaturaMax": 17,
       "probabilidadLluvia": "Media",
       "periodos": []
     },
@@ -109,7 +109,7 @@
       "diaMasN": 5,
       "etiqueta": "Jueves 08",
       "temperaturaMin": 12,
-      "temperaturaMax": 17,
+      "temperaturaMax": 16,
       "probabilidadLluvia": "Baja",
       "periodos": []
     },
@@ -118,7 +118,7 @@
       "diaMasN": 6,
       "etiqueta": "Viernes 09",
       "temperaturaMin": 12,
-      "temperaturaMax": 16,
+      "temperaturaMax": 15,
       "probabilidadLluvia": "Media",
       "periodos": []
     }
