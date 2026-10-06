@@ -5,15 +5,15 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-10-05 06:00",
-  "actualizado": "2026-10-05T14:50:05.419Z",
+  "publicado": "2026-10-05 18:00",
+  "actualizado": "2026-10-06T00:07:52.171Z",
   "pronosticos": [
     {
       "fecha": "2026-10-05",
       "diaMasN": 0,
       "etiqueta": "Lunes 05",
-      "temperaturaMin": 9,
-      "temperaturaMax": 20,
+      "temperaturaMin": 8,
+      "temperaturaMax": 23,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -30,7 +30,7 @@
           "descripcion": "Algo nuboso y nuboso.",
           "evolucion": "",
           "detalle": "",
-          "viento": "Sector E 10-30 km/h, rachas de hasta 40 km/h."
+          "viento": "NE y E 10-30 km/h."
         }
       ]
     },
@@ -39,7 +39,7 @@
       "diaMasN": 1,
       "etiqueta": "Martes 06",
       "temperaturaMin": 10,
-      "temperaturaMax": 19,
+      "temperaturaMax": 22,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -48,15 +48,15 @@
           "descripcion": "Algo nuboso y nuboso.",
           "evolucion": "",
           "detalle": "",
-          "viento": "Sector E 10-30 km/h."
+          "viento": "N y NE 10-30 km/h."
         },
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Nuboso y cubierto.",
+          "descripcion": "Algo nuboso y nuboso, períodos de cubierto.",
           "evolucion": "",
           "detalle": "",
-          "viento": "Sector E 10-30 km/h."
+          "viento": "Sector E 10-30 km/h. rachas de hasta 40 km/h."
         }
       ]
     },
@@ -74,7 +74,7 @@
           "descripcion": "Desmejorando con aumento de nubosidad.",
           "evolucion": "Precipitaciones escasas.",
           "detalle": "",
-          "viento": "NE 20-40 km/h."
+          "viento": "NE y E 20-40 km/h."
         },
         {
           "orden": 2,
@@ -82,7 +82,7 @@
           "descripcion": "Cubierto.",
           "evolucion": "Precipitaciones y tormentas aisladas.",
           "detalle": "Ventoso.",
-          "viento": "NE 20-40 km/h, rachas de hasta 60 km/h."
+          "viento": "NE y E  20-40 km/h, rachas de hasta 60 km/h en zonas costeras. Rachas muy fuertes asociadas a tormetas."
         }
       ]
     },
@@ -92,7 +92,7 @@
       "etiqueta": "Jueves 08",
       "temperaturaMin": 14,
       "temperaturaMax": 16,
-      "probabilidadLluvia": "Baja",
+      "probabilidadLluvia": "Alta",
       "periodos": []
     },
     {
