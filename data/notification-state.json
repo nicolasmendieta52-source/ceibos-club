@@ -90,7 +90,12 @@
     "futbol|reserva verde|san pablo universitario|2026-11-07": "2026-10-06T00:10:54.678Z",
     "futbol|presenior|el chorro futbol club|2026-11-14": "2026-10-06T00:10:54.678Z",
     "futbol|reserva a|nacional universitario|2026-11-14": "2026-10-06T00:10:54.678Z",
-    "futbol|reserva verde|centro cristobal colon|2026-11-14": "2026-10-06T00:10:54.678Z"
+    "futbol|reserva verde|centro cristobal colon|2026-11-14": "2026-10-06T00:10:54.678Z",
+    "hockey|reserva|carrasco polo club rese negro|2026-10-08": "2026-10-06T18:30:47.134Z",
+    "hockey|intermedia a|old woodlands club|2026-10-10": "2026-10-06T18:30:47.134Z",
+    "hockey|intermedia b|nautilus|2026-10-11": "2026-10-06T18:30:47.134Z",
+    "hockey|intermedia c|lobas|2026-10-11": "2026-10-06T18:30:47.134Z",
+    "hockey|sub 18|old ivy|2026-10-13": "2026-10-06T18:30:47.134Z"
   },
   "sentToday": {
     "basketball|basketball|maristas deportivo|2026-08-15": "2026-08-15T03:12:26.815Z",
@@ -191,7 +196,8 @@
     "futbol|papi futbol 40|santa rita rojo|2026-10-04": "2026-10-04T06:04:13.348Z",
     "futbol|papi futbol 45|stella maris 45|2026-10-04": "2026-10-04T06:04:13.348Z",
     "futbol|primera|nautico carrasco y punta gorda|2026-10-04": "2026-10-04T06:04:13.348Z",
-    "futbol|sub 18|anglo school universitario|2026-10-04": "2026-10-04T06:04:13.348Z"
+    "futbol|sub 18|anglo school universitario|2026-10-04": "2026-10-04T06:04:13.348Z",
+    "futbol|sub 20|old woodlands club|2026-10-06": "2026-10-06T18:30:47.444Z"
   },
   "sentStart": {
     "futbol|presenior|aleman u|2026-08-15": "2026-08-15T12:01:32.146Z",

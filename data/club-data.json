@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-06T00:07:52.633Z",
+        "updatedAt": "2026-10-06T18:27:28.176Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-06T00:07:52.832Z",
+        "updatedAt": "2026-10-06T18:27:28.445Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-06T00:07:52.912Z",
+        "updatedAt": "2026-10-06T18:27:28.545Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-06T00:07:53.007Z",
+        "updatedAt": "2026-10-06T18:27:28.695Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-06T00:07:53.102Z",
+        "updatedAt": "2026-10-06T18:27:28.815Z",
         "tables": [
           {
             "id": 2239,
@@ -2630,12 +2630,34 @@
       "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Carrasco Polo Club Rese Negro",
+      "fecha": "2026-10-08",
+      "hora": "21:30",
+      "local": false,
+      "fase": "COPA DE ORO (Reserva )",
+      "estado": "A Designar",
+      "cancha": "Carrasco Polo Club"
+    },
+    {
       "deporte": "rugby",
       "categoria": "Intermedia",
       "rival": "Cuervos",
       "fecha": "2026-10-10",
       "hora": "12:00",
       "local": false
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Old Woodlands Club",
+      "fecha": "2026-10-10",
+      "hora": "17:00",
+      "local": false,
+      "fase": "COPA DE PLATA (Intermedia A)",
+      "estado": "A Designar",
+      "cancha": "Woodlands"
     },
     {
       "deporte": "futbol",
@@ -2686,6 +2708,28 @@
       "cancha": "ST. BRENDANS"
     },
     {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Nautilus",
+      "fecha": "2026-10-11",
+      "hora": "17:00",
+      "local": true,
+      "fase": "COPA DE BRONCE (Intermedia B)",
+      "estado": "A Designar",
+      "cancha": "Pilares"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Lobas",
+      "fecha": "2026-10-11",
+      "hora": "18:30",
+      "local": false,
+      "fase": "COPA DE ORO (Intermedia C)",
+      "estado": "A Designar",
+      "cancha": "Lobos Rugby Club"
+    },
+    {
       "deporte": "futbol",
       "categoria": "Primera",
       "rival": "SAGRADA FAMILIA UNIVERSITARIO",
@@ -2705,6 +2749,17 @@
       "fase": "Segunda rueda · Serie 5",
       "fuente": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
       "cancha": "COMPLEJO NORTHFIELD"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Old Ivy",
+      "fecha": "2026-10-13",
+      "hora": "18:45",
+      "local": false,
+      "fase": "COPA DE PLATA (Sub 18)",
+      "estado": "A Designar",
+      "cancha": "Old Ivy Club"
     },
     {
       "deporte": "futbol",
@@ -6611,7 +6666,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-06T00:10:52.696Z",
+  "actualizadoEn": "2026-10-06T18:30:45.103Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -6654,35 +6709,35 @@
         "deporte": "hockey",
         "categoria": "Intermedia A",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=3",
-        "registros": 15,
+        "registros": 16,
         "estado": "ok"
       },
       {
         "deporte": "hockey",
         "categoria": "Sub 18",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=4",
-        "registros": 18,
+        "registros": 19,
         "estado": "ok"
       },
       {
         "deporte": "hockey",
         "categoria": "Intermedia B",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=31",
-        "registros": 20,
+        "registros": 21,
         "estado": "ok"
       },
       {
         "deporte": "hockey",
         "categoria": "Intermedia C",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=79",
-        "registros": 20,
+        "registros": 21,
         "estado": "ok"
       },
       {
         "deporte": "hockey",
         "categoria": "Reserva",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=2",
-        "registros": 20,
+        "registros": 21,
         "estado": "ok"
       },
       {
