@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-07T06:07:47.716Z",
+        "updatedAt": "2026-10-07T13:32:30.506Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-07T06:07:47.916Z",
+        "updatedAt": "2026-10-07T13:32:30.743Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-07T06:07:48.003Z",
+        "updatedAt": "2026-10-07T13:32:30.848Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-07T06:07:48.102Z",
+        "updatedAt": "2026-10-07T13:32:30.977Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-07T06:07:48.207Z",
+        "updatedAt": "2026-10-07T13:32:31.102Z",
         "tables": [
           {
             "id": 2239,
@@ -2618,16 +2618,6 @@
       "hora": "15:30",
       "local": true,
       "cancha": "Los Ceibos _ ltr BUM AQOMNON FRED 8) pepsi a ZILLERTAL Z merma"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 20",
-      "rival": "OLD WOODLANDS CLUB",
-      "fecha": "2026-10-06",
-      "hora": "21:30",
-      "local": true,
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F202020AT.html",
-      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "hockey",
@@ -6669,10 +6659,18 @@
       "gc": 1,
       "fecha": "2026-10-04",
       "fase": "COPA DE ORO (Intermedia C)"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "OLD WOODLANDS CLUB",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-10-06"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-07T06:10:57.818Z",
+  "actualizadoEn": "2026-10-07T13:35:36.384Z",
   "diagnostico": {
     "fuentes": [
       {
