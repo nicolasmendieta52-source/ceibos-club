@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-07T13:32:30.506Z",
+        "updatedAt": "2026-10-07T23:10:46.010Z",
         "tables": [
           {
             "id": 2291,
@@ -235,6 +235,18 @@
               },
               {
                 "position": 3,
+                "teamId": 719,
+                "name": "Ceibos Club amarillo",
+                "pj": 7,
+                "pg": 4,
+                "pe": 2,
+                "pp": 1,
+                "gf": 13,
+                "gc": 9,
+                "points": 14
+              },
+              {
+                "position": 4,
                 "teamId": 474,
                 "name": "Crandogs",
                 "pj": 6,
@@ -243,18 +255,6 @@
                 "pp": 1,
                 "gf": 15,
                 "gc": 5,
-                "points": 13
-              },
-              {
-                "position": 4,
-                "teamId": 719,
-                "name": "Ceibos Club amarillo",
-                "pj": 6,
-                "pg": 4,
-                "pe": 1,
-                "pp": 1,
-                "gf": 11,
-                "gc": 7,
                 "points": 13
               },
               {
@@ -369,18 +369,34 @@
                 "position": 14,
                 "teamId": 731,
                 "name": "Valdocco FC (Salesianos)",
-                "pj": 6,
+                "pj": 7,
                 "pg": 0,
-                "pe": 0,
+                "pe": 1,
                 "pp": 6,
-                "gf": 6,
-                "gc": 23,
-                "points": 0
+                "gf": 8,
+                "gc": 25,
+                "points": 1
               }
             ]
           }
         ],
         "matches": [
+          {
+            "id": 134935,
+            "matchday": 1,
+            "status": "finished",
+            "scheduled_at": "2026-09-30T00:00:00",
+            "home_goals": 2,
+            "away_goals": 2,
+            "home_team": {
+              "id": 731,
+              "name": "Valdocco FC (Salesianos)"
+            },
+            "away_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            }
+          },
           {
             "id": 134762,
             "matchday": 3,
@@ -590,22 +606,6 @@
             }
           },
           {
-            "id": 134935,
-            "matchday": 1,
-            "status": "confirmed",
-            "scheduled_at": "2026-09-30T00:00:00",
-            "home_goals": null,
-            "away_goals": null,
-            "home_team": {
-              "id": 731,
-              "name": "Valdocco FC (Salesianos)"
-            },
-            "away_team": {
-              "id": 719,
-              "name": "Ceibos Club amarillo"
-            }
-          },
-          {
             "id": 134939,
             "matchday": 2,
             "status": "pending",
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-07T13:32:30.743Z",
+        "updatedAt": "2026-10-07T23:10:46.287Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-07T13:32:30.848Z",
+        "updatedAt": "2026-10-07T23:10:46.395Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-07T13:32:30.977Z",
+        "updatedAt": "2026-10-07T23:10:46.532Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-07T13:32:31.102Z",
+        "updatedAt": "2026-10-07T23:10:46.690Z",
         "tables": [
           {
             "id": 2239,
@@ -2566,20 +2566,6 @@
       "cancha": "Los Ceibos Blut 8) pepsi a ZILLERTAL Zero BUM AOMINON FED KASD"
     },
     {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +35",
-      "rival": "Valdocco FC (Salesianos)",
-      "fecha": "2026-09-29",
-      "hora": "21:00",
-      "local": false,
-      "fase": "ADIC · Clausura Copas",
-      "adicId": 134935,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club amarillo",
-      "estado": "Confirmado",
-      "cancha": "A confirmar"
-    },
-    {
       "deporte": "hockey",
       "categoria": "Reserva",
       "rival": "Northfield",
@@ -2635,7 +2621,7 @@
       "categoria": "Intermedia",
       "rival": "Cuervos",
       "fecha": "2026-10-10",
-      "hora": "12:00",
+      "hora": "14:00",
       "local": false
     },
     {
@@ -2648,6 +2634,14 @@
       "fase": "COPA DE PLATA (Intermedia A)",
       "estado": "A Designar",
       "cancha": "Woodlands"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Old Christians",
+      "fecha": "2026-10-10",
+      "hora": "12:30",
+      "local": false
     },
     {
       "deporte": "futbol",
@@ -2664,7 +2658,7 @@
       "categoria": "Primera",
       "rival": "Cuervos",
       "fecha": "2026-10-10",
-      "hora": "12:00",
+      "hora": "15:45",
       "local": false
     },
     {
@@ -2770,7 +2764,7 @@
       "categoria": "Intermedia",
       "rival": "Trebol",
       "fecha": "2026-10-17",
-      "hora": "12:00",
+      "hora": "14:00",
       "local": true
     },
     {
@@ -2778,7 +2772,7 @@
       "categoria": "Primera",
       "rival": "Trebol",
       "fecha": "2026-10-17",
-      "hora": "12:00",
+      "hora": "15:45",
       "local": true
     },
     {
@@ -2816,7 +2810,7 @@
       "categoria": "Intermedia",
       "rival": "Lobos",
       "fecha": "2026-10-24",
-      "hora": "12:00",
+      "hora": "14:00",
       "local": true
     },
     {
@@ -2842,7 +2836,7 @@
       "categoria": "Primera",
       "rival": "Lobos",
       "fecha": "2026-10-24",
-      "hora": "12:00",
+      "hora": "15:45",
       "local": true
     },
     {
@@ -6516,6 +6510,19 @@
       ]
     },
     {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "Valdocco FC (Salesianos)",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-09-29",
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134935,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": false
+    },
+    {
       "deporte": "hockey",
       "categoria": "Intermedia B",
       "rival": "Palo Y Pico",
@@ -6666,11 +6673,15 @@
       "rival": "OLD WOODLANDS CLUB",
       "gf": 2,
       "gc": 2,
-      "fecha": "2026-10-06"
+      "fecha": "2026-10-06",
+      "goleadores": [
+        "FRANCISCO ROSSIGUOLO (43')",
+        "ALFONSO FERBER (65')"
+      ]
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-07T13:35:36.384Z",
+  "actualizadoEn": "2026-10-07T23:13:44.134Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -6706,7 +6717,7 @@
       {
         "deporte": "rugby",
         "url": "https://50-22.base44.app/functions/getPublicContent",
-        "registros": 68,
+        "registros": 69,
         "estado": "ok"
       },
       {
