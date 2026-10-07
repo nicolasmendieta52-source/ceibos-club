@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-06T18:27:28.176Z",
+        "updatedAt": "2026-10-07T06:07:47.716Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-06T18:27:28.445Z",
+        "updatedAt": "2026-10-07T06:07:47.916Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-06T18:27:28.545Z",
+        "updatedAt": "2026-10-07T06:07:48.003Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-06T18:27:28.695Z",
+        "updatedAt": "2026-10-07T06:07:48.102Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-06T18:27:28.815Z",
+        "updatedAt": "2026-10-07T06:07:48.207Z",
         "tables": [
           {
             "id": 2239,
@@ -6644,7 +6644,13 @@
       "gf": 4,
       "gc": 2,
       "fecha": "2026-10-04",
-      "fase": "Segunda rueda · Serie 5"
+      "fase": "Segunda rueda · Serie 5",
+      "goleadores": [
+        "ALFONSO FERBER (23')",
+        "FELIPE SOBRAL (45')",
+        "ALFONSO FERBER (70')",
+        "TIMOTEO PERRIER (89')"
+      ]
     },
     {
       "deporte": "hockey",
@@ -6666,7 +6672,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-06T18:30:45.103Z",
+  "actualizadoEn": "2026-10-07T06:10:57.818Z",
   "diagnostico": {
     "fuentes": [
       {
