@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-11T12:58:45.256Z",
+        "updatedAt": "2026-10-11T22:03:42.274Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-11T12:58:45.344Z",
+        "updatedAt": "2026-10-11T22:03:42.561Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-11T12:58:45.403Z",
+        "updatedAt": "2026-10-11T22:03:42.683Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-11T12:58:45.475Z",
+        "updatedAt": "2026-10-11T22:03:42.820Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-11T12:58:45.545Z",
+        "updatedAt": "2026-10-11T22:03:43.015Z",
         "tables": [
           {
             "id": 2239,
@@ -2580,29 +2580,11 @@
     },
     {
       "deporte": "rugby",
-      "categoria": "Intermedia",
-      "rival": "Cuervos",
-      "fecha": "2026-10-10",
-      "hora": "14:00",
-      "local": false
-    },
-    {
-      "deporte": "rugby",
       "categoria": "M19",
       "rival": "Old Christians",
       "fecha": "2026-10-10",
       "hora": "12:30",
       "local": false
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "SEMINARIO UNIVERSITARIO",
-      "fecha": "2026-10-10",
-      "hora": "11:15",
-      "local": true,
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSCTA.html",
-      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "hockey",
@@ -2667,16 +2649,6 @@
       "equipoAdic": "Ceibos 45 Master",
       "estado": "Confirmado",
       "cancha": "A confirmar"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "SAGRADA FAMILIA UNIVERSITARIO",
-      "fecha": "2026-10-11",
-      "hora": "11:15",
-      "local": false,
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F21BTA.html",
-      "cancha": "COMPLEJO LAS CASUARINAS"
     },
     {
       "deporte": "futbol",
@@ -6661,6 +6633,14 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "SEMINARIO UNIVERSITARIO",
+      "gf": 0,
+      "gc": 0,
+      "fecha": "2026-10-10"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Sub 20",
       "rival": "OLD BRENDANS CLUB",
       "gf": 2,
@@ -6678,15 +6658,31 @@
     },
     {
       "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Los Cuervos",
+      "gf": 3,
+      "gc": 19,
+      "fecha": "2026-10-10"
+    },
+    {
+      "deporte": "rugby",
       "categoria": "Primera",
       "rival": "Los Cuervos",
       "gf": 5,
       "gc": 29,
       "fecha": "2026-10-10"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "SAGRADA FAMILIA UNIVERSITARIO",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-10-11"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-11T13:02:33.869Z",
+  "actualizadoEn": "2026-10-11T22:06:42.726Z",
   "diagnostico": {
     "fuentes": [
       {
