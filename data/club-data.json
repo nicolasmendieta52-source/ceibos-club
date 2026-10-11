@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-10T21:49:47.207Z",
+        "updatedAt": "2026-10-11T05:55:00.522Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-10T21:49:47.562Z",
+        "updatedAt": "2026-10-11T05:55:00.764Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-10T21:49:47.668Z",
+        "updatedAt": "2026-10-11T05:55:00.843Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-10T21:49:48.042Z",
+        "updatedAt": "2026-10-11T05:55:00.938Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-10T21:49:48.166Z",
+        "updatedAt": "2026-10-11T05:55:01.051Z",
         "tables": [
           {
             "id": 2239,
@@ -2592,14 +2592,6 @@
       "rival": "Old Christians",
       "fecha": "2026-10-10",
       "hora": "12:30",
-      "local": false
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Primera",
-      "rival": "Cuervos",
-      "fecha": "2026-10-10",
-      "hora": "15:45",
       "local": false
     },
     {
@@ -6683,10 +6675,18 @@
       "gc": 2,
       "fecha": "2026-10-10",
       "fase": "COPA DE PLATA (Intermedia A)"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Los Cuervos",
+      "gf": 5,
+      "gc": 29,
+      "fecha": "2026-10-10"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-10T21:52:56.918Z",
+  "actualizadoEn": "2026-10-11T05:58:20.011Z",
   "diagnostico": {
     "fuentes": [
       {

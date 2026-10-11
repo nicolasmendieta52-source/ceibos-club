@@ -5,64 +5,38 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-10-10 18:00",
-  "actualizado": "2026-10-10T21:49:46.633Z",
+  "publicado": "2026-10-11 0:0",
+  "actualizado": "2026-10-11T05:54:59.820Z",
   "pronosticos": [
     {
-      "fecha": "2026-10-10",
+      "fecha": "2026-10-11",
       "diaMasN": 0,
-      "etiqueta": "Sábado 10",
-      "temperaturaMin": 12,
+      "etiqueta": "Domingo 11",
+      "temperaturaMin": 11,
       "temperaturaMax": 15,
       "probabilidadLluvia": "",
       "periodos": [
         {
           "orden": 1,
           "nombre": "Mañana",
-          "descripcion": "Cubierto.",
-          "evolucion": "Precipitaciones aisladas.",
-          "detalle": "Neblinas.",
-          "viento": "SE 10-30 km/h, rachas de hasta 40 km/h."
-        },
-        {
-          "orden": 2,
-          "nombre": "Tarde/Noche",
           "descripcion": "Nuboso y cubierto.",
           "evolucion": "Precipitaciones escasas y aisladas.",
           "detalle": "Neblinas.",
-          "viento": "SE 20-30 km/h."
-        }
-      ]
-    },
-    {
-      "fecha": "2026-10-11",
-      "diaMasN": 1,
-      "etiqueta": "Domingo 11",
-      "temperaturaMin": 11,
-      "temperaturaMax": 16,
-      "probabilidadLluvia": "",
-      "periodos": [
-        {
-          "orden": 1,
-          "nombre": "Mañana",
-          "descripcion": "Nuboso y cubierto.",
-          "evolucion": "Probables precipitaciones escasas.",
-          "detalle": "",
           "viento": "Sector S 10-30 km/h."
         },
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Nuboso, períodos de cubierto.",
+          "descripcion": "Nuboso y cubierto.",
           "evolucion": "Probables precipitaciones escasas.",
           "detalle": "",
-          "viento": "SE y S 10-30 km/h."
+          "viento": "S al SE 10-30 km/h."
         }
       ]
     },
     {
       "fecha": "2026-10-12",
-      "diaMasN": 2,
+      "diaMasN": 1,
       "etiqueta": "Lunes 12",
       "temperaturaMin": 10,
       "temperaturaMax": 17,
@@ -88,16 +62,33 @@
     },
     {
       "fecha": "2026-10-13",
-      "diaMasN": 3,
+      "diaMasN": 2,
       "etiqueta": "Martes 13",
-      "temperaturaMin": 11,
+      "temperaturaMin": 13,
       "temperaturaMax": 18,
-      "probabilidadLluvia": "Baja",
-      "periodos": []
+      "probabilidadLluvia": "",
+      "periodos": [
+        {
+          "orden": 1,
+          "nombre": "Mañana",
+          "descripcion": "Nuboso y cubierto.",
+          "evolucion": "Precipitaciones escasas y aisladas.",
+          "detalle": "Neblinas.",
+          "viento": "E y SE 10-30 km/h."
+        },
+        {
+          "orden": 2,
+          "nombre": "Tarde/Noche",
+          "descripcion": "Nuboso y cubierto.",
+          "evolucion": "Precipitaciones escasas y aisladas.",
+          "detalle": "",
+          "viento": "E y SE 10-30 km/h."
+        }
+      ]
     },
     {
       "fecha": "2026-10-14",
-      "diaMasN": 4,
+      "diaMasN": 3,
       "etiqueta": "Miércoles 14",
       "temperaturaMin": 12,
       "temperaturaMax": 19,
@@ -106,20 +97,29 @@
     },
     {
       "fecha": "2026-10-15",
-      "diaMasN": 5,
+      "diaMasN": 4,
       "etiqueta": "Jueves 15",
-      "temperaturaMin": 12,
+      "temperaturaMin": 13,
       "temperaturaMax": 18,
-      "probabilidadLluvia": "Alta",
+      "probabilidadLluvia": "Media",
       "periodos": []
     },
     {
       "fecha": "2026-10-16",
-      "diaMasN": 6,
+      "diaMasN": 5,
       "etiqueta": "Viernes 16",
+      "temperaturaMin": 12,
+      "temperaturaMax": 17,
+      "probabilidadLluvia": "Media",
+      "periodos": []
+    },
+    {
+      "fecha": "2026-10-17",
+      "diaMasN": 6,
+      "etiqueta": "Sábado 17",
       "temperaturaMin": 11,
-      "temperaturaMax": 16,
-      "probabilidadLluvia": "Alta",
+      "temperaturaMax": 17,
+      "probabilidadLluvia": "Baja",
       "periodos": []
     }
   ]
