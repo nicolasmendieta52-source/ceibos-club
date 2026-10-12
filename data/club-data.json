@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-12T06:06:22.339Z",
+        "updatedAt": "2026-10-12T15:36:29.045Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-12T06:06:22.665Z",
+        "updatedAt": "2026-10-12T15:36:29.206Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-12T06:06:22.786Z",
+        "updatedAt": "2026-10-12T15:36:29.281Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-12T06:06:22.914Z",
+        "updatedAt": "2026-10-12T15:36:29.367Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-12T06:06:23.045Z",
+        "updatedAt": "2026-10-12T15:36:29.457Z",
         "tables": [
           {
             "id": 2239,
@@ -2593,20 +2593,7 @@
       "fecha": "2026-10-11",
       "hora": "17:00",
       "local": true,
-      "fase": "COPA DE BRONCE (Intermedia B)",
-      "estado": "A Designar",
-      "cancha": "Pilares"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia C",
-      "rival": "Lobas",
-      "fecha": "2026-10-11",
-      "hora": "18:30",
-      "local": false,
-      "fase": "COPA DE ORO (Intermedia C)",
-      "estado": "A Designar",
-      "cancha": "Lobos Rugby Club"
+      "cancha": "Los Ceibos"
     },
     {
       "deporte": "futbol",
@@ -6679,10 +6666,19 @@
       "gf": 2,
       "gc": 2,
       "fecha": "2026-10-11"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Lobas",
+      "gf": 0,
+      "gc": 3,
+      "fecha": "2026-10-11",
+      "fase": "COPA DE ORO (Intermedia C)"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-12T06:09:36.223Z",
+  "actualizadoEn": "2026-10-12T15:39:51.165Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -6739,7 +6735,7 @@
         "deporte": "hockey",
         "categoria": "Intermedia B",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=31",
-        "registros": 21,
+        "registros": 20,
         "estado": "ok"
       },
       {
