@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-13T00:47:41.546Z",
+        "updatedAt": "2026-10-13T11:07:55.492Z",
         "tables": [
           {
             "id": 2291,
@@ -672,8 +672,8 @@
           {
             "id": 134993,
             "matchday": 10,
-            "status": "pending",
-            "scheduled_at": "2027-01-17T12:00:00",
+            "status": "confirmed",
+            "scheduled_at": "2026-10-18T12:00:00",
             "home_goals": null,
             "away_goals": null,
             "home_team": {
@@ -688,8 +688,8 @@
           {
             "id": 134816,
             "matchday": 10,
-            "status": "pending",
-            "scheduled_at": "2027-01-17T12:00:00",
+            "status": "confirmed",
+            "scheduled_at": "2026-10-18T12:00:00",
             "home_goals": null,
             "away_goals": null,
             "home_team": {
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-13T00:47:41.868Z",
+        "updatedAt": "2026-10-13T11:07:55.807Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-13T00:47:41.967Z",
+        "updatedAt": "2026-10-13T11:07:56.070Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-13T00:47:42.093Z",
+        "updatedAt": "2026-10-13T11:07:56.240Z",
         "tables": [
           {
             "id": 2296,
@@ -2079,8 +2079,8 @@
           {
             "id": 135088,
             "matchday": 10,
-            "status": "pending",
-            "scheduled_at": "2027-02-07T12:00:00",
+            "status": "confirmed",
+            "scheduled_at": "2026-10-18T12:00:00",
             "home_goals": null,
             "away_goals": null,
             "home_team": {
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-13T00:47:42.205Z",
+        "updatedAt": "2026-10-13T11:07:56.380Z",
         "tables": [
           {
             "id": 2239,
@@ -2541,12 +2541,10 @@
     {
       "deporte": "hockey",
       "categoria": "Reserva",
-      "rival": "Northfield",
+      "rival": "NorthField",
       "fecha": "2026-10-03",
       "hora": "16:00",
       "local": false,
-      "fase": "COPA DE ORO (Reserva )",
-      "estado": "Postergado",
       "cancha": "NorthField"
     },
     {
@@ -2575,6 +2573,15 @@
       "hora": "15:30",
       "local": true,
       "cancha": "Los Ceibos _ ltr BUM AQOMNON FRED 8) pepsi a ZILLERTAL Z merma"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "Anglo School U.",
+      "fecha": "2026-10-04",
+      "hora": "15:30",
+      "local": true,
+      "cancha": "Los Ceibos _ ltr 8) pepsi a ZILLERTAL Z merma WUM AOMINON FED y"
     },
     {
       "deporte": "rugby",
@@ -2647,6 +2654,14 @@
       "cancha": "COMPLEJO NORTHFIELD"
     },
     {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "HCA",
+      "fecha": "2026-10-11",
+      "hora": "15:30",
+      "local": false
+    },
+    {
       "deporte": "hockey",
       "categoria": "Sub 18",
       "rival": "Old Ivy",
@@ -2688,6 +2703,17 @@
       "local": true
     },
     {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Northfield",
+      "fecha": "2026-10-17",
+      "hora": "15:45",
+      "local": false,
+      "fase": "COPA DE ORO (Reserva )",
+      "estado": "A Jugar",
+      "cancha": "NorthField"
+    },
+    {
       "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "TENIS EL PINAR",
@@ -2717,6 +2743,70 @@
       "local": true,
       "fuente": "https://ligauniversitaria.org.uy/partidos/F202020AT.html",
       "cancha": "CANCHA A FIJAR"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Club Seminario",
+      "fecha": "2026-10-18",
+      "hora": "17:00",
+      "local": false,
+      "fase": "COPA DE BRONCE (Intermedia B)",
+      "estado": "A Designar",
+      "cancha": "Seminario"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Old Christians Club",
+      "fecha": "2026-10-18",
+      "hora": "18:45",
+      "local": true,
+      "fase": "COPA DE ORO (Intermedia C)",
+      "estado": "A Designar",
+      "cancha": "Pilares"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "Frances ELF",
+      "fecha": "2026-10-18",
+      "hora": "09:00",
+      "local": true,
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134993,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "estado": "Confirmado",
+      "cancha": "A confirmar"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "Old Woodlands master",
+      "fecha": "2026-10-18",
+      "hora": "09:00",
+      "local": true,
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134816,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "estado": "Confirmado",
+      "cancha": "A confirmar"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "Old Brendans 45",
+      "fecha": "2026-10-18",
+      "hora": "09:00",
+      "local": true,
+      "fase": "ADIC · Clasura Copas Master 45",
+      "adicId": 135088,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "estado": "Confirmado",
+      "cancha": "A confirmar"
     },
     {
       "deporte": "futbol",
@@ -6687,7 +6777,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-13T00:50:51.408Z",
+  "actualizadoEn": "2026-10-13T11:12:02.748Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -6744,14 +6834,14 @@
         "deporte": "hockey",
         "categoria": "Intermedia B",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=31",
-        "registros": 20,
+        "registros": 21,
         "estado": "ok"
       },
       {
         "deporte": "hockey",
         "categoria": "Intermedia C",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=79",
-        "registros": 21,
+        "registros": 22,
         "estado": "ok"
       },
       {
@@ -6821,29 +6911,33 @@
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
-        "registros": 15,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "This operation was aborted"
       },
       {
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/partidos/F21B.html",
         "registros": 0,
-        "estado": "sin-coincidencias"
+        "estado": "error",
+        "detalle": "fetch failed"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
-        "registros": 6,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "fetch failed"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
-        "registros": 1,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "fetch failed"
       },
       {
         "deporte": "futbol",
