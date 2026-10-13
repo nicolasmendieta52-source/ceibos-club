@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-13T11:07:55.492Z",
+        "updatedAt": "2026-10-13T11:26:41.254Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-13T11:07:55.807Z",
+        "updatedAt": "2026-10-13T11:26:41.423Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-13T11:07:56.070Z",
+        "updatedAt": "2026-10-13T11:26:41.481Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-13T11:07:56.240Z",
+        "updatedAt": "2026-10-13T11:26:41.552Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-13T11:07:56.380Z",
+        "updatedAt": "2026-10-13T11:26:41.620Z",
         "tables": [
           {
             "id": 2239,
@@ -2575,15 +2575,6 @@
       "cancha": "Los Ceibos _ ltr BUM AQOMNON FRED 8) pepsi a ZILLERTAL Z merma"
     },
     {
-      "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "Anglo School U.",
-      "fecha": "2026-10-04",
-      "hora": "15:30",
-      "local": true,
-      "cancha": "Los Ceibos _ ltr 8) pepsi a ZILLERTAL Z merma WUM AOMINON FED y"
-    },
-    {
       "deporte": "rugby",
       "categoria": "M19",
       "rival": "Old Christians",
@@ -2652,14 +2643,6 @@
       "fase": "Segunda rueda · Serie 5",
       "fuente": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
       "cancha": "COMPLEJO NORTHFIELD"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "HCA",
-      "fecha": "2026-10-11",
-      "hora": "15:30",
-      "local": false
     },
     {
       "deporte": "hockey",
@@ -6777,7 +6760,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-13T11:12:02.748Z",
+  "actualizadoEn": "2026-10-13T11:30:17.983Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -6911,33 +6894,29 @@
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "This operation was aborted"
+        "registros": 15,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/partidos/F21B.html",
         "registros": 0,
-        "estado": "error",
-        "detalle": "fetch failed"
+        "estado": "sin-coincidencias"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "fetch failed"
+        "registros": 6,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "fetch failed"
+        "registros": 1,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
