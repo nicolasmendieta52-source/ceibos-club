@@ -17,6 +17,16 @@ No se encontró un formulario de inscripción en las publicaciones ni en la bio 
 
 Editar `data/interno.json`: poner el enlace HTTPS del formulario oficial en `registrationUrl` y `registrationOpen: true`. El botón permanece en Soon hasta entonces. No usar el formulario del gimnasio.
 
+## Recuerdos de 2025
+
+Los tres enlaces enviados por el usuario se consultaron en el navegador y se integraron con los embeds de Instagram en `#interno-2025`:
+
+- https://www.instagram.com/reel/DSGxgHuFXE7/ : video «Final de Oro», publicado el 10/12/2025; Rapiñeros y Garrulos. Destaca a Rapiñeros como último campeón de Oro masculino, confirmado por la publicación de campeones.
+- https://www.instagram.com/p/DSNRVYolQdO/ : carrusel «LOS CAMPEONES», publicado el 13/12/2025. Masculino: Oro Rapiñeros, Plata La Favela, Bronce Tuqui, Lata Kiwis. Femenino: Oro Maradoñas, Plata Naranja Mecánica, Bronce Tanque Slay, Cobre Victas FC. +38: Oro Leganés. Finalistas de Oro: Garrulos y Levántate. Se presentan los ganadores de cada copa sin mezclarlos con los inscritos de 2026.
+- https://www.instagram.com/p/DSNaM1IlUbw/ : «La postal de la Final», publicada el 13/12/2025, con etiquetas Rapiñeros y Garrulos.
+
+Cada publicación mantiene un enlace directo visible; el contenido incrustado depende de la disponibilidad pública de Instagram. Los frames cargan al acercarse a la sección y ajustan su altura con las mediciones enviadas por su propio frame de Instagram.
+
 ## Información pendiente
 
 - Enlace del formulario vigente.
