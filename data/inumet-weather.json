@@ -5,65 +5,65 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-10-09 06:00",
-  "actualizado": "2026-10-09T13:28:28.685Z",
+  "publicado": "2026-10-12 18:00",
+  "actualizado": "2026-10-13T00:47:41.007Z",
   "pronosticos": [
     {
-      "fecha": "2026-10-09",
+      "fecha": "2026-10-12",
       "diaMasN": 0,
-      "etiqueta": "Viernes 09",
-      "temperaturaMin": 12,
+      "etiqueta": "Lunes 12",
+      "temperaturaMin": 10,
+      "temperaturaMax": 14,
+      "probabilidadLluvia": "",
+      "periodos": [
+        {
+          "orden": 1,
+          "nombre": "Mañana",
+          "descripcion": "Nuboso y cubierto.",
+          "evolucion": "Precipitaciones escasas.",
+          "detalle": "Neblinas.",
+          "viento": "SE y E 10-30 km/h."
+        },
+        {
+          "orden": 2,
+          "nombre": "Tarde/Noche",
+          "descripcion": "Nuboso y cubierto.",
+          "evolucion": "Precipitaciones escasas.",
+          "detalle": "",
+          "viento": "SE y E 10-30 km/h, rachas de hasta 40 km/h."
+        }
+      ]
+    },
+    {
+      "fecha": "2026-10-13",
+      "diaMasN": 1,
+      "etiqueta": "Martes 13",
+      "temperaturaMin": 11,
       "temperaturaMax": 16,
       "probabilidadLluvia": "",
       "periodos": [
         {
           "orden": 1,
           "nombre": "Mañana",
-          "descripcion": "Cubierto.",
-          "evolucion": "Precipitaciones escasas.",
-          "detalle": "Neblinas y bancos de niebla.",
-          "viento": "SE 20-40 km/h, rachas de 40-50 km/h km/h."
-        },
-        {
-          "orden": 2,
-          "nombre": "Tarde/Noche",
-          "descripcion": "Cubierto.",
-          "evolucion": "Probables precipitaciones escasas.",
+          "descripcion": "Nuboso y cubierto.",
+          "evolucion": "Precipitaciones escasas y aisladas.",
           "detalle": "Neblinas.",
-          "viento": "SE 20-40 km/h, rachas de hasta 50 km/h."
-        }
-      ]
-    },
-    {
-      "fecha": "2026-10-10",
-      "diaMasN": 1,
-      "etiqueta": "Sábado 10",
-      "temperaturaMin": 13,
-      "temperaturaMax": 17,
-      "probabilidadLluvia": "",
-      "periodos": [
-        {
-          "orden": 1,
-          "nombre": "Mañana",
-          "descripcion": "Cubierto.",
-          "evolucion": "Precipitaciones aisladas.",
-          "detalle": "",
-          "viento": "SE 10-30 km/h, rachas de hasta 40 km/h."
+          "viento": "E y SE 10-30 km/h."
         },
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Cubierto.",
-          "evolucion": "Precipitaciones aisladas.",
+          "descripcion": "Nuboso y cubierto.",
+          "evolucion": "Precipitaciones escasas y aisladas.",
           "detalle": "",
-          "viento": "Sector S 20-30 km/h, rachas de hasta 40 km/h."
+          "viento": "SE 10-30 km/h."
         }
       ]
     },
     {
-      "fecha": "2026-10-11",
+      "fecha": "2026-10-14",
       "diaMasN": 2,
-      "etiqueta": "Domingo 11",
+      "etiqueta": "Miércoles 14",
       "temperaturaMin": 12,
       "temperaturaMax": 16,
       "probabilidadLluvia": "",
@@ -72,53 +72,53 @@
           "orden": 1,
           "nombre": "Mañana",
           "descripcion": "Nuboso y cubierto.",
-          "evolucion": "Probables precipitaciones escasas.",
-          "detalle": "",
-          "viento": "Sector S 10-30 km/h."
+          "evolucion": "Precipitaciones aisladas.",
+          "detalle": "Neblinas.",
+          "viento": "SE 10-30 km/h, periodos de variables 0-10 km/h"
         },
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Nuboso, períodos de cubierto.",
-          "evolucion": "Probables precipitaciones escasas.",
+          "descripcion": "Nuboso y cubierto.",
+          "evolucion": "Precipitaciones aisladas.",
           "detalle": "",
-          "viento": "SE y S 10-30 km/h."
+          "viento": "SE 10-30 km/h, rachas de 40 km/h."
         }
       ]
     },
     {
-      "fecha": "2026-10-12",
-      "diaMasN": 3,
-      "etiqueta": "Lunes 12",
-      "temperaturaMin": 10,
-      "temperaturaMax": 17,
-      "probabilidadLluvia": "Baja",
-      "periodos": []
-    },
-    {
-      "fecha": "2026-10-13",
-      "diaMasN": 4,
-      "etiqueta": "Martes 13",
-      "temperaturaMin": 11,
-      "temperaturaMax": 18,
-      "probabilidadLluvia": "Baja",
-      "periodos": []
-    },
-    {
-      "fecha": "2026-10-14",
-      "diaMasN": 5,
-      "etiqueta": "Miércoles 14",
-      "temperaturaMin": 12,
-      "temperaturaMax": 19,
-      "probabilidadLluvia": "Baja",
-      "periodos": []
-    },
-    {
       "fecha": "2026-10-15",
-      "diaMasN": 6,
+      "diaMasN": 3,
       "etiqueta": "Jueves 15",
-      "temperaturaMin": 12,
+      "temperaturaMin": 13,
       "temperaturaMax": 18,
+      "probabilidadLluvia": "Media",
+      "periodos": []
+    },
+    {
+      "fecha": "2026-10-16",
+      "diaMasN": 4,
+      "etiqueta": "Viernes 16",
+      "temperaturaMin": 12,
+      "temperaturaMax": 16,
+      "probabilidadLluvia": "Media",
+      "periodos": []
+    },
+    {
+      "fecha": "2026-10-17",
+      "diaMasN": 5,
+      "etiqueta": "Sábado 17",
+      "temperaturaMin": 11,
+      "temperaturaMax": 15,
+      "probabilidadLluvia": "Baja",
+      "periodos": []
+    },
+    {
+      "fecha": "2026-10-18",
+      "diaMasN": 6,
+      "etiqueta": "Domingo 18",
+      "temperaturaMin": 9,
+      "temperaturaMax": 17,
       "probabilidadLluvia": "Baja",
       "periodos": []
     }
