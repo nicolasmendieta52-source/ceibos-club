@@ -268,6 +268,7 @@ nav.topbar.solid{
 </style>
 <link rel="stylesheet" href="/assets/analytics-consent.css?v=20260922">
 <script type="module" src="/assets/analytics.js?v=20260922"></script>
+<link rel="stylesheet" href="assets/interno.css?v=20261009">
 </head>
 <body>
 <!-- Árbol decorativo (watermark) — el escudo oficial va como imagen PNG del manual -->
@@ -321,6 +322,7 @@ nav.topbar.solid{
     <a href="#archivo">Archivo histórico</a>
     <a href="#resultados">Resultados</a>
     <a href="#fixture">Fixture</a>
+    <a href="#interno">Interno</a>
     <a href="#vida">Vida Ceibos</a>
     <a href="#shop">Shop</a>
     <a href="#solidario">Solidario</a>
@@ -337,7 +339,8 @@ nav.topbar.solid{
   <a href="#archivo">Archivo histórico</a>
   <a href="#resultados">Resultados</a>
   <a href="#fixture">Fixture</a>
-  <a href="#vida">Vida Ceibos</a>
+  <a href="#interno">Interno</a>
+    <a href="#vida">Vida Ceibos</a>
   <a href="#shop">Shop</a>
   <a href="#solidario">Solidario</a>
   <a href="#club">El Club</a>
@@ -922,6 +925,32 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 </section>
 
 <svg class="ondas" viewBox="0 0 1440 90" preserveAspectRatio="none" style="background:var(--verde-night)"><path d="M0,45 C240,90 480,0 720,45 C960,90 1200,0 1440,45 L1440,90 L0,90 Z" fill="#F6F1E4"/></svg>
+
+<!-- ======================= INTERNO CEIBOS ======================= -->
+<section id="interno" aria-labelledby="interno-titulo">
+  <div class="interno-head">
+    <div>
+      <p class="interno-kicker">Fútbol 8 · Edición 2026</p>
+      <h2 id="interno-titulo">El Interno<span>de Ceibos.</span></h2>
+      <p class="interno-intro">Vuelve el clásico de fin de año. Fútbol 8, amigos y los colores de siempre. Toda la actividad del Interno, en un solo lugar.</p>
+    </div>
+    <div class="interno-signup">
+      <span class="interno-soon" id="interno-inscripcion-estado">Soon · Próximamente</span>
+      <h3>Tu lugar en el Interno</h3>
+      <p id="interno-inscripcion-texto">Acá vas a encontrar el enlace oficial de inscripción. Próximamente, toda la información para sumarte.</p>
+      <button class="btn btn-oro" id="interno-inscripcion" type="button" disabled>Inscripciones · Soon</button>
+    </div>
+  </div>
+  <div class="interno-date"><div><span>La próxima cita</span><strong><time datetime="2026-11-16">16 de noviembre</time></strong></div><a href="https://www.instagram.com/internoceibosclub/p/DeH_uJathTB/" target="_blank" rel="noopener noreferrer">Ver anuncio oficial ↗</a><span class="interno-motto">#PlantandoLaGloria</span></div>
+  <div class="interno-board"><article class="interno-slot"><div class="interno-slot-top"><span class="interno-number" aria-hidden="true">01</span><span class="interno-soon">Soon</span></div><h3>Fixture</h3><p>Días, horarios y canchas para seguir cada partido.</p></article>
+<article class="interno-slot"><div class="interno-slot-top"><span class="interno-number" aria-hidden="true">02</span><span class="interno-soon">Soon</span></div><h3>Equipos</h3><p>Los planteles y protagonistas del Interno.</p></article>
+<article class="interno-slot"><div class="interno-slot-top"><span class="interno-number" aria-hidden="true">03</span><span class="interno-soon">Soon</span></div><h3>Resultados</h3><p>Todos los marcadores, fecha a fecha.</p></article>
+<article class="interno-slot"><div class="interno-slot-top"><span class="interno-number" aria-hidden="true">04</span><span class="interno-soon">Soon</span></div><h3>Posiciones</h3><p>La tabla para seguir el camino de cada equipo.</p></article>
+<article class="interno-slot"><div class="interno-slot-top"><span class="interno-number" aria-hidden="true">05</span><span class="interno-soon">Soon</span></div><h3>Goleadores</h3><p>Los nombres que hacen la diferencia.</p></article>
+<article class="interno-slot"><div class="interno-slot-top"><span class="interno-number" aria-hidden="true">06</span><span class="interno-soon">Soon</span></div><h3>Reglamento</h3><p>El formato y las reglas del torneo.</p></article></div>
+  <div class="interno-history"><div><p class="interno-kicker">La historia también juega</p><h3>Campeones presentes</h3><p>El palmarés compartido por el Interno: La Favela (4), Kiwis’ (2), Rapiñeros, Paso Cuello, Jirafa y Tuqui (1 cada uno).</p></div><a href="https://www.instagram.com/internoceibosclub/p/DeZdcIalQ1I/" target="_blank" rel="noopener noreferrer">Ver publicación de campeones ↗</a></div>
+  <p class="interno-footer">Seguí los anuncios en <a href="https://www.instagram.com/internoceibosclub/" target="_blank" rel="noopener noreferrer">@internoceibosclub ↗</a>. Los equipos de esta edición, el fixture y los resultados se publicarán próximamente.</p>
+</section>
 
 <!-- ======================= VIDA CEIBOS ======================= -->
 <section id="vida">
@@ -3053,5 +3082,6 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
   .catch(() => {});
 </script>
 <script type="module" src="/notifications.js?v=20260814"></script>
+<script src="assets/interno.js?v=20261009" defer></script>
 </body>
 </html>
