@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-12T15:36:29.045Z",
+        "updatedAt": "2026-10-13T00:47:41.546Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-12T15:36:29.206Z",
+        "updatedAt": "2026-10-13T00:47:41.868Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-12T15:36:29.281Z",
+        "updatedAt": "2026-10-13T00:47:41.967Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-12T15:36:29.367Z",
+        "updatedAt": "2026-10-13T00:47:42.093Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-12T15:36:29.457Z",
+        "updatedAt": "2026-10-13T00:47:42.205Z",
         "tables": [
           {
             "id": 2239,
@@ -2561,13 +2561,11 @@
     {
       "deporte": "hockey",
       "categoria": "Sub 18",
-      "rival": "Old Brendan's Club",
+      "rival": "Old Brendan's",
       "fecha": "2026-10-03",
       "hora": "14:00",
       "local": true,
-      "fase": "COPA DE PLATA (Sub 18)",
-      "estado": "Postergado",
-      "cancha": "Pilares"
+      "cancha": "Los Ceibos"
     },
     {
       "deporte": "futbol",
@@ -2698,6 +2696,17 @@
       "local": false,
       "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSAPD.html",
       "cancha": "TENIS EL PINAR"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Old Brendan's Club",
+      "fecha": "2026-10-17",
+      "hora": "14:00",
+      "local": true,
+      "fase": "COPA DE PLATA (Sub 18)",
+      "estado": "A Jugar",
+      "cancha": "Pilares"
     },
     {
       "deporte": "futbol",
@@ -6678,7 +6687,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-12T15:39:51.165Z",
+  "actualizadoEn": "2026-10-13T00:50:51.408Z",
   "diagnostico": {
     "fuentes": [
       {
