@@ -4273,7 +4273,7 @@
           ]
         },
         {
-          "club": false,
+          "club": true,
           "values": [
             11,
             "Francisca Etcheverry",
@@ -4908,24 +4908,6 @@
           "club": false,
           "values": [
             9,
-            "Josefina Ortiz",
-            "CLUB NORTHFIELD",
-            3
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            10,
-            "Paulina Mesa",
-            "Colegio Los Pilares / Club Los Ceibos",
-            3
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            11,
             "Inés María Bremermann",
             "Ivy Thomas Memorial School / Old Ivy Club",
             3
@@ -4934,7 +4916,7 @@
         {
           "club": false,
           "values": [
-            12,
+            10,
             "Belen Vairo",
             "Woodlands School - Old Woodlands Club",
             3
@@ -4943,9 +4925,27 @@
         {
           "club": false,
           "values": [
-            13,
+            11,
             "Agustina Mieres",
             "CLUB NORTHFIELD",
+            3
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            12,
+            "Josefina Ortiz",
+            "CLUB NORTHFIELD",
+            3
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            13,
+            "Paulina Mesa",
+            "Colegio Los Pilares / Club Los Ceibos",
             3
           ]
         },
@@ -6412,6 +6412,15 @@
         {
           "club": false,
           "values": [
+            9,
+            "Lucila Marini",
+            "CLUB NORTHFIELD",
+            9
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             10,
             "Sol Potrie",
             "Carrasco Polo Club",
@@ -6622,8 +6631,8 @@
           "club": false,
           "values": [
             1,
-            "Josefina Mantero",
-            "Club Náutico",
+            "Josefina Chahnazaroff",
+            "The British Schools / Old Girls Club",
             5
           ]
         },
@@ -6631,8 +6640,8 @@
           "club": false,
           "values": [
             2,
-            "Josefina Chahnazaroff",
-            "The British Schools / Old Girls Club",
+            "Josefina Mantero",
+            "Club Náutico",
             5
           ]
         },
