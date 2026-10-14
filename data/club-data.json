@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-14T17:18:05.179Z",
+        "updatedAt": "2026-10-14T21:46:42.426Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-14T17:18:05.288Z",
+        "updatedAt": "2026-10-14T21:46:42.654Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-14T17:18:05.353Z",
+        "updatedAt": "2026-10-14T21:46:42.753Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-14T17:18:05.445Z",
+        "updatedAt": "2026-10-14T21:46:42.873Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-14T17:18:05.566Z",
+        "updatedAt": "2026-10-14T21:46:43.023Z",
         "tables": [
           {
             "id": 2239,
@@ -2593,17 +2593,6 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "HCA UNIVERSITARIO",
-      "fecha": "2026-10-11",
-      "hora": "15:30",
-      "local": false,
-      "fase": "Segunda rueda · Serie 5",
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
-      "cancha": "COMPLEJO NORTHFIELD"
-    },
-    {
-      "deporte": "futbol",
       "categoria": "Papi Fútbol +40",
       "rival": "Sta Elena Lagomar 40",
       "fecha": "2026-10-14",
@@ -2643,6 +2632,14 @@
       "rival": "Trebol",
       "fecha": "2026-10-17",
       "hora": "14:00",
+      "local": true
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Champagnat",
+      "fecha": "2026-10-17",
+      "hora": "12:30",
       "local": true
     },
     {
@@ -6783,6 +6780,22 @@
       ]
     },
     {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "HCA UNIVERSITARIO",
+      "gf": 5,
+      "gc": 5,
+      "fecha": "2026-10-11",
+      "fase": "Segunda rueda · Serie 5",
+      "goleadores": [
+        "FELIPE SOBRAL (39')",
+        "FELIPE SOBRAL (42')",
+        "JUAN BAUTISTA RODRIGUEZ (64')",
+        "JUAN BAUTISTA RODRIGUEZ (67')",
+        "AGUSTIN ALVEZ (83')"
+      ]
+    },
+    {
       "deporte": "hockey",
       "categoria": "Intermedia C",
       "rival": "Lobas",
@@ -6802,7 +6815,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-14T17:21:20.873Z",
+  "actualizadoEn": "2026-10-14T21:49:39.131Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -6838,7 +6851,7 @@
       {
         "deporte": "rugby",
         "url": "https://50-22.base44.app/functions/getPublicContent",
-        "registros": 69,
+        "registros": 70,
         "estado": "ok"
       },
       {
@@ -6929,15 +6942,15 @@
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
-        "registros": 6,
+        "registros": 7,
         "estado": "ok"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
-        "registros": 1,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "sin-coincidencias"
       },
       {
         "deporte": "futbol",

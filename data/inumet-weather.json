@@ -5,15 +5,15 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-10-14 12:00",
-  "actualizado": "2026-10-14T17:18:04.661Z",
+  "publicado": "2026-10-14 18:00",
+  "actualizado": "2026-10-14T21:46:41.494Z",
   "pronosticos": [
     {
       "fecha": "2026-10-14",
       "diaMasN": 0,
       "etiqueta": "Miércoles 14",
       "temperaturaMin": 14,
-      "temperaturaMax": 20,
+      "temperaturaMax": 19,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -30,7 +30,7 @@
           "descripcion": "Nuboso y cubierto.",
           "evolucion": "Precipitaciones aisladas.",
           "detalle": "Neblinas.",
-          "viento": "SE 10-30 km/h."
+          "viento": "SE y S 10-30 km/h."
         }
       ]
     },
@@ -47,7 +47,7 @@
           "nombre": "Mañana",
           "descripcion": "Nuboso y cubierto.",
           "evolucion": "Precipitaciones aisladas.",
-          "detalle": "Neblinas.",
+          "detalle": "Neblinas y bancos de niebla.",
           "viento": "SE 10-30 km/h."
         },
         {
@@ -56,7 +56,7 @@
           "descripcion": "Nuboso y cubierto.",
           "evolucion": "Precipitaciones aisladas.",
           "detalle": "",
-          "viento": "SE 20-40 km/h, rachas de hasta 50 km/h."
+          "viento": "SE 10-30 km/h, rachas de hasta 50 km/h."
         }
       ]
     },
@@ -65,7 +65,7 @@
       "diaMasN": 2,
       "etiqueta": "Viernes 16",
       "temperaturaMin": 12,
-      "temperaturaMax": 16,
+      "temperaturaMax": 15,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -82,7 +82,7 @@
           "descripcion": "Nuboso y cubierto.",
           "evolucion": "Precipitaciones aisladas.",
           "detalle": "",
-          "viento": "SE 20-40 km/h, rachas de 50 km/h."
+          "viento": "SE 20-40 km/h, rachas de hasta 50 km/h."
         }
       ]
     },
@@ -91,7 +91,7 @@
       "diaMasN": 3,
       "etiqueta": "Sábado 17",
       "temperaturaMin": 11,
-      "temperaturaMax": 15,
+      "temperaturaMax": 14,
       "probabilidadLluvia": "Baja",
       "periodos": []
     },
@@ -100,7 +100,7 @@
       "diaMasN": 4,
       "etiqueta": "Domingo 18",
       "temperaturaMin": 9,
-      "temperaturaMax": 17,
+      "temperaturaMax": 15,
       "probabilidadLluvia": "Baja",
       "periodos": []
     },
@@ -117,8 +117,8 @@
       "fecha": "2026-10-20",
       "diaMasN": 6,
       "etiqueta": "Martes 20",
-      "temperaturaMin": 9,
-      "temperaturaMax": 19,
+      "temperaturaMin": 8,
+      "temperaturaMax": 20,
       "probabilidadLluvia": "Nula",
       "periodos": []
     }
