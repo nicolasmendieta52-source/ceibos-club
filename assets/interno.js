@@ -1,4 +1,4 @@
-// Only activate registration once the club confirms the current event's form.
+// Keep the WhatsApp contact available unless an official registration form is configured.
 fetch('data/interno.json?actualizado=' + Date.now(), {cache:'no-store'})
   .then(response => response.ok ? response.json() : null)
   .then(data => {
@@ -17,7 +17,7 @@ fetch('data/interno.json?actualizado=' + Date.now(), {cache:'no-store'})
     button.replaceWith(link);
     document.getElementById('interno-inscripcion-estado').textContent = 'Inscripciones abiertas';
     document.getElementById('interno-inscripcion-texto').textContent = 'Completá el formulario oficial para anotarte al Interno.';
-  }).catch(() => {}); // Keep the honest Soon state if the configuration is unavailable.
+  }).catch(() => {}); // Preserve the WhatsApp contact if the form configuration is unavailable.
 
 // Instagram reports the embed's height as its media and controls finish loading.
 // Accept measurements only from an Instagram frame actually rendered in this section.

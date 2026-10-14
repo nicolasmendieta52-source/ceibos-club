@@ -10,6 +10,12 @@
 .interno-soon{display:inline-block;font-size:.65rem;letter-spacing:.17em;font-weight:900;text-transform:uppercase;border:1px solid currentColor;padding:5px 9px;color:var(--dorado)}
 .interno-signup .interno-soon{color:var(--verde)}
 .interno-signup .btn{max-width:100%;white-space:normal;text-align:center;justify-content:center}
+.interno-signup .interno-contact{margin:18px 0 0;font-size:.85rem}
+.interno-contact a{color:var(--verde-night);font-weight:800;text-underline-offset:4px}
+.interno-reglamento-link{display:inline-flex;align-items:center;min-height:44px;margin-top:12px;color:var(--dorado);font-size:.82rem;line-height:1.4;font-weight:700;text-underline-offset:4px}
+.interno-signup .interno-reglamento-link{color:var(--verde-night)}
+.interno-reglamento-link:hover{text-decoration-thickness:2px}
+.interno-reglamento-link:focus-visible,.interno-contact a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
 .interno-signup button:disabled{cursor:default;box-shadow:none;opacity:.75;transform:none}
 .interno-board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:60px;border-top:1px solid rgba(246,241,228,.2)}
 .interno-slot{padding:30px 26px 30px 0;border-bottom:1px solid rgba(246,241,228,.2);min-width:0}
