@@ -277,7 +277,7 @@ nav.topbar.solid{
 <link rel="stylesheet" href="/assets/analytics-consent.css?v=20260922">
 <script type="module" src="/assets/analytics.js?v=20260922"></script>
 <link rel="stylesheet" href="assets/interno.css?v=20261013menu">
-<link rel="stylesheet" href="assets/navigation.css?v=20261013doble">
+<link rel="stylesheet" href="assets/navigation.css?v=20261014compacta">
 </head>
 <body>
 <!-- Árbol decorativo (watermark) — el escudo oficial va como imagen PNG del manual -->
@@ -313,16 +313,14 @@ nav.topbar.solid{
 
 <!-- ======================= NAV ======================= -->
 <header class="topbar" id="nav">
-  <div class="nav-utility"><span>Totus Tuus · Desde 2014</span><a href="https://socios.ceibosclub.com" target="_blank" rel="noopener noreferrer">Zona socios ↗</a></div>
   <div class="nav-brand-row">
     <a class="brand" href="#inicio"><img class="escudo-img" data-escudo alt="Escudo Ceibos Club"><span class="brand-name">CEIBOS <em>CLUB</em></span></a>
     <nav class="nav-links" id="navLinks" aria-label="Vida del club"><a href="#noticias" data-nav-section="noticias">Noticias</a>
 <a href="#club" data-nav-section="club">El Club</a>
 <a href="#vida" data-nav-section="vida">Vida Ceibos</a>
-<a href="#predio" data-nav-section="predio">Predio</a>
 <a href="#shop" data-nav-section="shop">Shop</a>
-<a href="#solidario" data-nav-section="solidario">Solidario</a>
-<a href="#contacto" data-nav-section="contacto">Sumate</a></nav>
+</nav>
+    <a class="nav-socios" href="https://socios.ceibosclub.com" target="_blank" rel="noopener noreferrer">Socios <span aria-hidden="true">↗</span></a>
     <button id="hamb" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMobile"><span class="nav-menu-label">Menú</span><svg class="nav-icon-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg><svg class="nav-icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M5 19 19 5"/></svg></button>
   </div>
   <nav class="nav-sports" aria-label="Deportes y torneo"><a href="#rugby" data-nav-section="rugby" data-deporte-link="rugby">Rugby</a>
@@ -331,7 +329,15 @@ nav.topbar.solid{
 <a href="#basketball" data-nav-section="basketball" data-deporte-link="basketball">Basketball</a><span class="nav-sports-divider" aria-hidden="true"></span><a href="#interno" data-nav-section="interno" class="nav-interno">Interno</a>
 <a href="#fixture" data-nav-section="fixture">Fixture</a>
 <a href="#resultados" data-nav-section="resultados">Resultados</a>
-<a href="#archivo" data-nav-section="archivo">Archivo histórico</a></nav>
+<details class="nav-more" id="navMore">
+  <summary>Más <svg viewBox="0 0 12 12" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></summary>
+  <div class="nav-more-links">
+    <a href="#archivo" data-nav-section="archivo">Archivo histórico</a>
+    <a href="#predio" data-nav-section="predio">Predio</a>
+    <a href="#solidario" data-nav-section="solidario">Solidario</a>
+    <a href="#contacto" data-nav-section="contacto">Contacto</a>
+  </div>
+</details></nav>
 </header>
 <nav class="nav-mobile" id="navMobile" aria-label="Menú completo" aria-hidden="true" hidden inert>
   <div class="nav-mobile-group"><h2>En la cancha</h2><div class="nav-mobile-grid"><a href="#rugby" data-nav-section="rugby" data-deporte-link="rugby">Rugby</a>
@@ -3035,6 +3041,6 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
 </script>
 <script type="module" src="/notifications.js?v=20260814"></script>
 <script src="assets/interno.js?v=20261013recuerdos" defer></script>
-<script src="assets/navigation.js?v=20261013doble" defer></script>
+<script src="assets/navigation.js?v=20261014compacta" defer></script>
 </body>
 </html>

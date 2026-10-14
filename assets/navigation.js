@@ -4,6 +4,7 @@
   const toggle = document.getElementById('hamb');
   const more = document.getElementById('mobileMore');
   const dock = document.getElementById('mobileDock');
+  const desktopMore = document.getElementById('navMore');
   const mobile = matchMedia('(max-width:900px)');
   let opener = toggle;
 
@@ -32,10 +33,22 @@
   menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
   dock.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
   header.querySelector('.brand').addEventListener('click', () => setMenu(false));
-  addEventListener('hashchange', () => setMenu(false));
-  mobile.addEventListener('change', () => setMenu(false));
+  desktopMore.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { desktopMore.open = false; }));
+  addEventListener('click', event => {
+    if (!desktopMore.contains(event.target)) desktopMore.open = false;
+  });
+  desktopMore.addEventListener('focusout', event => {
+    if (!desktopMore.contains(event.relatedTarget)) desktopMore.open = false;
+  });
+  addEventListener('hashchange', () => { setMenu(false); desktopMore.open = false; });
+  mobile.addEventListener('change', () => { setMenu(false); desktopMore.open = false; });
 
   addEventListener('keydown', event => {
+    if (event.key === 'Escape' && desktopMore.open) {
+      event.preventDefault();
+      desktopMore.open = false;
+      desktopMore.querySelector('summary').focus();
+    }
     if (menu.hidden) return;
     if (event.key === 'Escape') {
       event.preventDefault();
