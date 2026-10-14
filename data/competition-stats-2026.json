@@ -1,3361 +1,7 @@
 {
   "season": 2026,
-  "checkedAt": "2026-10-14T05:00:57.657Z",
+  "checkedAt": "2026-10-14T11:30:21.960Z",
   "tables": [
-    {
-      "sport": "futbol",
-      "category": "Primera",
-      "title": "Segunda rueda · Título y ascenso",
-      "season": 2026,
-      "updatedAt": "2026-10-14T04:59:37.389Z",
-      "id": "https://ligauniversitaria.org.uy/posiciones/F21BTA.html",
-      "kind": "standings",
-      "source": "https://ligauniversitaria.org.uy/posiciones/F21BTA.html",
-      "columns": [
-        "Pos.",
-        "Equipo",
-        "PJ",
-        "PG",
-        "PE",
-        "PP",
-        "GF",
-        "GC",
-        "Pts."
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "ELBIO FERNANDEZ",
-            18,
-            11,
-            5,
-            2,
-            33,
-            17,
-            38
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "SAN ISIDRO LOMAS UNIVERSITARIO",
-            18,
-            9,
-            5,
-            4,
-            26,
-            16,
-            32
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "ALEMAN UNIVERSITARIO",
-            18,
-            8,
-            7,
-            3,
-            28,
-            24,
-            31
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            4,
-            "CEIBOS CLUB",
-            18,
-            8,
-            6,
-            4,
-            33,
-            25,
-            30
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "OLD BRENDANS CLUB",
-            18,
-            8,
-            6,
-            4,
-            27,
-            19,
-            30
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "NAUTICO CARRASCO Y PUNTA GORDA",
-            18,
-            8,
-            5,
-            5,
-            31,
-            20,
-            29
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "J.M.L.M",
-            18,
-            7,
-            6,
-            5,
-            28,
-            18,
-            27
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "SAGRADA FAMILIA UNIVERSITARIO",
-            18,
-            7,
-            5,
-            6,
-            30,
-            24,
-            26
-          ]
-        }
-      ],
-      "sourceKey": "futbol|Primera"
-    },
-    {
-      "sport": "futbol",
-      "category": "Primera",
-      "title": "Segunda rueda · Título y ascenso",
-      "season": 2026,
-      "updatedAt": "2026-10-14T04:59:37.389Z",
-      "id": "https://ligauniversitaria.org.uy/goleadores/F21BTA.html",
-      "kind": "scorers",
-      "source": "https://ligauniversitaria.org.uy/goleadores/F21BTA.html",
-      "columns": [
-        "Pos.",
-        "Jugador",
-        "Equipo",
-        "Goles"
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "MARTIN ALEJANDRO COSTA",
-            "ELBIO FERNANDEZ",
-            11
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "SANTIAGO ARANCO",
-            "ELBIO FERNANDEZ",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "FELIPE CABRERA",
-            "NAUTICO CARRASCO Y PUNTA GORDA",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "ESTEBAN SANTIAGO LOPEZ",
-            "SAGRADA FAMILIA UNIVERSITARIO",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "IGNACIO ESTEVES",
-            "ALEMAN UNIVERSITARIO",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "JUAN PABLO SILVIO NICOLETTI",
-            "SAN ISIDRO LOMAS UNIVERSITARIO",
-            3
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            7,
-            "FERNANDO INTHAMOUSSU",
-            "CEIBOS CLUB",
-            3
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "FEDERICO PEREZ",
-            "J.M.L.M",
-            3
-          ]
-        }
-      ],
-      "sourceKey": "futbol|Primera"
-    },
-    {
-      "sport": "futbol",
-      "category": "Primera",
-      "title": "Serie B",
-      "season": 2026,
-      "updatedAt": "2026-10-14T04:59:40.060Z",
-      "id": "https://ligauniversitaria.org.uy/posiciones/F21B.html",
-      "kind": "standings",
-      "source": "https://ligauniversitaria.org.uy/posiciones/F21B.html",
-      "columns": [
-        "Pos.",
-        "Equipo",
-        "PJ",
-        "PG",
-        "PE",
-        "PP",
-        "GF",
-        "GC",
-        "Pts."
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "ELBIO FERNANDEZ",
-            15,
-            9,
-            4,
-            2,
-            29,
-            16,
-            31
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "OLD BRENDANS CLUB",
-            15,
-            8,
-            5,
-            2,
-            25,
-            14,
-            29
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "ALEMAN UNIVERSITARIO",
-            15,
-            8,
-            5,
-            2,
-            26,
-            20,
-            29
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "SAN ISIDRO LOMAS UNIVERSITARIO",
-            15,
-            8,
-            4,
-            3,
-            22,
-            13,
-            28
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            5,
-            "CEIBOS CLUB",
-            15,
-            8,
-            3,
-            4,
-            29,
-            21,
-            27
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "SAGRADA FAMILIA UNIVERSITARIO",
-            15,
-            7,
-            4,
-            4,
-            26,
-            17,
-            25
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "NAUTICO CARRASCO Y PUNTA GORDA",
-            15,
-            7,
-            3,
-            5,
-            26,
-            16,
-            24
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "J.M.L.M",
-            15,
-            5,
-            5,
-            5,
-            22,
-            15,
-            20
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "INDEPENDIENTE",
-            15,
-            5,
-            5,
-            5,
-            20,
-            27,
-            20
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            10,
-            "OLIMAR",
-            15,
-            5,
-            2,
-            8,
-            21,
-            25,
-            17
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            11,
-            "SAN JUAN BAUTISTA",
-            15,
-            4,
-            4,
-            7,
-            21,
-            23,
-            16
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            12,
-            "CIRCULO DE TENIS MONTEVIDEO",
-            15,
-            4,
-            3,
-            8,
-            17,
-            23,
-            15
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            13,
-            "CLUB JESUS MARIA",
-            15,
-            4,
-            3,
-            8,
-            15,
-            25,
-            15
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            14,
-            "CENTRO CRISTOBAL COLON",
-            15,
-            3,
-            4,
-            8,
-            20,
-            33,
-            13
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            15,
-            "CLUB UNIVERSIDAD CATOLICA",
-            15,
-            4,
-            0,
-            11,
-            20,
-            32,
-            12
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            16,
-            "CITY PARK",
-            15,
-            3,
-            2,
-            10,
-            15,
-            34,
-            11
-          ]
-        }
-      ],
-      "sourceKey": "futbol|Primera"
-    },
-    {
-      "sport": "futbol",
-      "category": "Primera",
-      "title": "Serie B",
-      "season": 2026,
-      "updatedAt": "2026-10-14T04:59:40.060Z",
-      "id": "https://ligauniversitaria.org.uy/goleadores/F21B.html",
-      "kind": "scorers",
-      "source": "https://ligauniversitaria.org.uy/goleadores/F21B.html",
-      "columns": [
-        "Pos.",
-        "Jugador",
-        "Equipo",
-        "Goles"
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "MARTIN ALEJANDRO COSTA",
-            "ELBIO FERNANDEZ",
-            10
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            2,
-            "JUAN PEDRO IRURETA-GOYENA",
-            "CEIBOS CLUB",
-            9
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "DANIEL OSCAR CABRERA",
-            "ELBIO FERNANDEZ",
-            8
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "FACUNDO MARTINEZ",
-            "CLUB UNIVERSIDAD CATOLICA",
-            8
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "GONZALO PASQUET",
-            "ALEMAN UNIVERSITARIO",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "STEFANO CERTULO",
-            "J.M.L.M",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "ALAIN ELISSALDE",
-            "CLUB JESUS MARIA",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "HECTOR AGUSTIN VEGA",
-            "SAGRADA FAMILIA UNIVERSITARIO",
-            6
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "GONZALO MARTIN MESPOLET",
-            "OLIMAR",
-            6
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            10,
-            "MATEO DAVID BONIFACIO",
-            "OLD BRENDANS CLUB",
-            6
-          ]
-        }
-      ],
-      "sourceKey": "futbol|Primera"
-    },
-    {
-      "sport": "futbol",
-      "category": "Reserva A",
-      "title": "Segunda rueda · Permanencia y descenso",
-      "season": 2026,
-      "updatedAt": "2026-10-14T04:59:43.710Z",
-      "id": "https://ligauniversitaria.org.uy/posiciones/F2B2RSAPD.html",
-      "kind": "standings",
-      "source": "https://ligauniversitaria.org.uy/posiciones/F2B2RSAPD.html",
-      "columns": [
-        "Pos.",
-        "Equipo",
-        "PJ",
-        "PG",
-        "PE",
-        "PP",
-        "GF",
-        "GC",
-        "Pts."
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "NACIONAL UNIVERSITARIO",
-            18,
-            6,
-            6,
-            6,
-            23,
-            28,
-            24
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "CLUB SEMINARIO",
-            18,
-            6,
-            3,
-            9,
-            24,
-            30,
-            21
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "TENIS EL PINAR",
-            17,
-            5,
-            5,
-            7,
-            26,
-            29,
-            20
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "SAGRADA FAMILIA UNIVERSITARIO",
-            17,
-            4,
-            8,
-            5,
-            18,
-            22,
-            20
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "TAPE",
-            17,
-            3,
-            4,
-            10,
-            22,
-            31,
-            13
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "ALEMAN UNIVERSITARIO",
-            17,
-            2,
-            7,
-            8,
-            22,
-            34,
-            13
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            7,
-            "CEIBOS CLUB",
-            17,
-            2,
-            7,
-            8,
-            20,
-            34,
-            13
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "OBC AZULGRANA.",
-            17,
-            3,
-            4,
-            10,
-            10,
-            28,
-            13
-          ]
-        }
-      ],
-      "sourceKey": "futbol|Reserva A"
-    },
-    {
-      "sport": "futbol",
-      "category": "Reserva A",
-      "title": "Segunda rueda · Permanencia y descenso",
-      "season": 2026,
-      "updatedAt": "2026-10-14T04:59:43.710Z",
-      "id": "https://ligauniversitaria.org.uy/goleadores/F2B2RSAPD.html",
-      "kind": "scorers",
-      "source": "https://ligauniversitaria.org.uy/goleadores/F2B2RSAPD.html",
-      "columns": [
-        "Pos.",
-        "Jugador",
-        "Equipo",
-        "Goles"
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "VALENTINO MUYANO",
-            "NACIONAL UNIVERSITARIO",
-            6
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "SASHA ALEXANDER ANEFF",
-            "ALEMAN UNIVERSITARIO",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "JUAN DIEGO GODOY",
-            "NACIONAL UNIVERSITARIO",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "SANTIAGO RAUL MAY",
-            "CLUB SEMINARIO",
-            4
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            5,
-            "SANTIAGO LOPEZ",
-            "CEIBOS CLUB",
-            3
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            6,
-            "RAFAEL MONESTIER",
-            "CEIBOS CLUB",
-            2
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "ENZO SEBASTIAN LAXAGUE",
-            "NACIONAL UNIVERSITARIO",
-            2
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            8,
-            "JUAN ANDRES ECHEGOYEN",
-            "CEIBOS CLUB",
-            2
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "JUAN RAMON ARBILLA",
-            "ALEMAN UNIVERSITARIO",
-            2
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            10,
-            "JOAQUIN NARANCIO",
-            "CEIBOS CLUB",
-            2
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            11,
-            "FRANCISCO JAVIER CAMPON",
-            "CLUB SEMINARIO",
-            2
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            12,
-            "ENRIQUE MARTIN BOIX",
-            "CEIBOS CLUB",
-            2
-          ]
-        }
-      ],
-      "sourceKey": "futbol|Reserva A"
-    },
-    {
-      "sport": "futbol",
-      "category": "Reserva A",
-      "title": "Serie RS1",
-      "season": 2026,
-      "updatedAt": "2026-10-14T04:59:45.552Z",
-      "id": "https://ligauniversitaria.org.uy/posiciones/F2B2RS1.html",
-      "kind": "standings",
-      "source": "https://ligauniversitaria.org.uy/posiciones/F2B2RS1.html",
-      "columns": [
-        "Pos.",
-        "Equipo",
-        "PJ",
-        "PG",
-        "PE",
-        "PP",
-        "GF",
-        "GC",
-        "Pts."
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "CARRASCO LAWN TENNIS",
-            15,
-            10,
-            4,
-            1,
-            29,
-            12,
-            34
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "OLD CHRISTIANS AZUL",
-            15,
-            9,
-            5,
-            1,
-            34,
-            15,
-            32
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "OLD BOYS CLUB",
-            15,
-            9,
-            2,
-            4,
-            27,
-            15,
-            29
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "OLD WOODLANDS CLUB",
-            15,
-            8,
-            5,
-            2,
-            22,
-            12,
-            29
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "OLD CHRISTIANS CLUB",
-            15,
-            8,
-            3,
-            4,
-            23,
-            14,
-            27
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "CARRASCO POLO CLUB",
-            15,
-            4,
-            8,
-            3,
-            23,
-            21,
-            20
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "NAUTICO CARRASCO Y PUNTA GORDA",
-            15,
-            5,
-            5,
-            5,
-            16,
-            17,
-            20
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "PLAYA HONDA UNIVERSITARIO",
-            15,
-            5,
-            4,
-            6,
-            28,
-            25,
-            19
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "SAGRADA FAMILIA UNIVERSITARIO",
-            15,
-            4,
-            7,
-            4,
-            18,
-            18,
-            19
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            10,
-            "TENIS EL PINAR",
-            15,
-            5,
-            3,
-            7,
-            26,
-            29,
-            18
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            11,
-            "NACIONAL UNIVERSITARIO",
-            15,
-            4,
-            5,
-            6,
-            16,
-            23,
-            17
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            12,
-            "CLUB SEMINARIO",
-            15,
-            5,
-            2,
-            8,
-            14,
-            23,
-            17
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            13,
-            "TAPE",
-            15,
-            3,
-            4,
-            8,
-            19,
-            25,
-            13
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            14,
-            "ALEMAN UNIVERSITARIO",
-            15,
-            2,
-            5,
-            8,
-            15,
-            27,
-            11
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            15,
-            "OBC AZULGRANA.",
-            15,
-            3,
-            2,
-            10,
-            10,
-            28,
-            11
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            16,
-            "CEIBOS CLUB",
-            15,
-            1,
-            6,
-            8,
-            13,
-            29,
-            9
-          ]
-        }
-      ],
-      "sourceKey": "futbol|Reserva A"
-    },
-    {
-      "sport": "futbol",
-      "category": "Reserva A",
-      "title": "Serie RS1",
-      "season": 2026,
-      "updatedAt": "2026-10-14T04:59:45.552Z",
-      "id": "https://ligauniversitaria.org.uy/goleadores/F2B2RS1.html",
-      "kind": "scorers",
-      "source": "https://ligauniversitaria.org.uy/goleadores/F2B2RS1.html",
-      "columns": [
-        "Pos.",
-        "Jugador",
-        "Equipo",
-        "Goles"
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "LAUTARO ELIAS CATSOURIS",
-            "PLAYA HONDA UNIVERSITARIO",
-            9
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "ALFONSO SIMETO",
-            "OLD BOYS CLUB",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "JUAN GABRIEL ALVAREZ",
-            "OLD CHRISTIANS AZUL",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "JOAQUIN RODRIGUEZ",
-            "OLD CHRISTIANS CLUB",
-            6
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "MATIAS NICOLAS RODRIGUEZ",
-            "PLAYA HONDA UNIVERSITARIO",
-            6
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "JOAQUIN CANOBBIO",
-            "CARRASCO POLO CLUB",
-            6
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "MATEO AGUSTIN ASENCIO",
-            "CARRASCO LAWN TENNIS",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "JUAN SEGUNDO MASPOLI",
-            "CARRASCO POLO CLUB",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "PEDRO ALBERTO LISTA",
-            "NACIONAL UNIVERSITARIO",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            10,
-            "JOSE IGNACIO ARBILLA",
-            "ALEMAN UNIVERSITARIO",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            11,
-            "MAXIMO RICARDO SEIZER",
-            "OLD BOYS CLUB",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            12,
-            "ALEJANDRO VICTORICA",
-            "OLD WOODLANDS CLUB",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            13,
-            "DIEGO GABRIEL HANDALIAN",
-            "NAUTICO CARRASCO Y PUNTA GORDA",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            14,
-            "JUAN IGNACIO POTRIE",
-            "CARRASCO LAWN TENNIS",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            15,
-            "SANTIAGO DANIEL TORRES",
-            "TENIS EL PINAR",
-            5
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            16,
-            "AGUSTIN CALVO",
-            "CEIBOS CLUB",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            17,
-            "JUAN MANUEL MUSETTI",
-            "OLD BOYS CLUB",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            18,
-            "BAUTISTA MARIANO RODRIGUEZ ALEMPARTE",
-            "OLD CHRISTIANS AZUL",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            19,
-            "JUAN MANUEL BOCCHI",
-            "PLAYA HONDA UNIVERSITARIO",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            20,
-            "ALVARO FACUNDO DEFAUT",
-            "OLD WOODLANDS CLUB",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            21,
-            "JOAQUIN RODRIGUEZ",
-            "TAPE",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            22,
-            "MARCOS ALVAREZ",
-            "OLD WOODLANDS CLUB",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            23,
-            "MARTIN JAVIER DIAZ",
-            "TENIS EL PINAR",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            24,
-            "JUAN IGNACIO URRISA",
-            "CARRASCO POLO CLUB",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            25,
-            "FEDERICO RUIZ",
-            "OBC AZULGRANA.",
-            4
-          ]
-        }
-      ],
-      "sourceKey": "futbol|Reserva A"
-    },
-    {
-      "sport": "futbol",
-      "category": "Reserva Verde",
-      "title": "Segunda rueda · Título y ascenso",
-      "season": 2026,
-      "updatedAt": "2026-10-14T04:59:48.206Z",
-      "id": "https://ligauniversitaria.org.uy/posiciones/F2B2RSCTA.html",
-      "kind": "standings",
-      "source": "https://ligauniversitaria.org.uy/posiciones/F2B2RSCTA.html",
-      "columns": [
-        "Pos.",
-        "Equipo",
-        "PJ",
-        "PG",
-        "PE",
-        "PP",
-        "GF",
-        "GC",
-        "Pts."
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "E.L.F.",
-            18,
-            13,
-            2,
-            3,
-            46,
-            20,
-            41
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "CENTRO CRISTOBAL COLON",
-            17,
-            12,
-            3,
-            2,
-            43,
-            11,
-            39
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "DANUBIO FUTBOL CLUB",
-            17,
-            10,
-            5,
-            2,
-            30,
-            13,
-            35
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "JUAN XXIII BLANCO",
-            17,
-            8,
-            6,
-            3,
-            22,
-            21,
-            30
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            5,
-            "CEIBOS CLUB VERDE",
-            18,
-            7,
-            6,
-            5,
-            26,
-            22,
-            27
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "SAN EUGENIO",
-            17,
-            7,
-            3,
-            7,
-            35,
-            36,
-            24
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "SEMINARIO UNIVERSITARIO",
-            17,
-            5,
-            5,
-            7,
-            21,
-            18,
-            20
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "SAN PABLO UNIVERSITARIO",
-            17,
-            6,
-            2,
-            9,
-            19,
-            29,
-            20
-          ]
-        }
-      ],
-      "sourceKey": "futbol|Reserva Verde"
-    },
-    {
-      "sport": "futbol",
-      "category": "Reserva Verde",
-      "title": "Segunda rueda · Título y ascenso",
-      "season": 2026,
-      "updatedAt": "2026-10-14T04:59:48.206Z",
-      "id": "https://ligauniversitaria.org.uy/goleadores/F2B2RSCTA.html",
-      "kind": "scorers",
-      "source": "https://ligauniversitaria.org.uy/goleadores/F2B2RSCTA.html",
-      "columns": [
-        "Pos.",
-        "Jugador",
-        "Equipo",
-        "Goles"
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "SANTIAGO RODRIGUEZ",
-            "E.L.F.",
-            9
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "GUZMAN RODRIGUEZ",
-            "E.L.F.",
-            6
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "MATEO LAUTARO FERNANDEZ",
-            "SAN PABLO UNIVERSITARIO",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "NICOLAS EZEQUIEL GUTIERREZ",
-            "CENTRO CRISTOBAL COLON",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "MATEO CORRADI",
-            "E.L.F.",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "FACUNDO PASSEGGI",
-            "JUAN XXIII BLANCO",
-            3
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "IGNACIO ANTONIO CARNEIRO",
-            "E.L.F.",
-            3
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "FRANCO VALIENTE",
-            "CENTRO CRISTOBAL COLON",
-            2
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            9,
-            "NICOLAS MENDIETA",
-            "CEIBOS CLUB VERDE",
-            2
-          ]
-        }
-      ],
-      "sourceKey": "futbol|Reserva Verde"
-    },
-    {
-      "sport": "futbol",
-      "category": "Reserva Verde",
-      "title": "Serie RS31",
-      "season": 2026,
-      "updatedAt": "2026-10-14T04:59:50.882Z",
-      "id": "https://ligauniversitaria.org.uy/posiciones/F2B2RS31.html",
-      "kind": "standings",
-      "source": "https://ligauniversitaria.org.uy/posiciones/F2B2RS31.html",
-      "columns": [
-        "Pos.",
-        "Equipo",
-        "PJ",
-        "PG",
-        "PE",
-        "PP",
-        "GF",
-        "GC",
-        "Pts."
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "E.L.F.",
-            15,
-            11,
-            1,
-            3,
-            40,
-            17,
-            34
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "CENTRO CRISTOBAL COLON",
-            15,
-            10,
-            3,
-            2,
-            39,
-            11,
-            33
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "DANUBIO FUTBOL CLUB",
-            15,
-            9,
-            5,
-            1,
-            28,
-            11,
-            32
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "JUAN XXIII BLANCO",
-            15,
-            8,
-            5,
-            2,
-            21,
-            19,
-            29
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "SAN EUGENIO",
-            15,
-            7,
-            3,
-            5,
-            35,
-            31,
-            24
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            6,
-            "CEIBOS CLUB VERDE",
-            15,
-            6,
-            5,
-            4,
-            24,
-            20,
-            23
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "SAN PABLO UNIVERSITARIO",
-            15,
-            6,
-            1,
-            8,
-            17,
-            26,
-            19
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "SEMINARIO UNIVERSITARIO",
-            15,
-            5,
-            3,
-            7,
-            20,
-            17,
-            18
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "COLEGIO Y LICEO INGLES",
-            15,
-            4,
-            6,
-            5,
-            16,
-            18,
-            18
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            10,
-            "PEÑAROL UNIVERSITARIO",
-            15,
-            5,
-            3,
-            7,
-            14,
-            24,
-            18
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            11,
-            "WANDERERS",
-            15,
-            5,
-            2,
-            8,
-            22,
-            27,
-            17
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            12,
-            "LA BLANQUEADA",
-            15,
-            4,
-            4,
-            7,
-            20,
-            32,
-            16
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            13,
-            "NUMA TURCATTI",
-            15,
-            4,
-            2,
-            9,
-            25,
-            33,
-            14
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            14,
-            "OLD CHRISTIANS NARANJA",
-            15,
-            2,
-            8,
-            5,
-            20,
-            28,
-            14
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            15,
-            "OLD BRENDANS VERDE",
-            15,
-            4,
-            1,
-            10,
-            24,
-            33,
-            13
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            16,
-            "SAN ISIDRO LOMAS UNIVERSITARIO",
-            15,
-            3,
-            2,
-            10,
-            22,
-            40,
-            11
-          ]
-        }
-      ],
-      "sourceKey": "futbol|Reserva Verde"
-    },
-    {
-      "sport": "futbol",
-      "category": "Reserva Verde",
-      "title": "Serie RS31",
-      "season": 2026,
-      "updatedAt": "2026-10-14T04:59:50.882Z",
-      "id": "https://ligauniversitaria.org.uy/goleadores/F2B2RS31.html",
-      "kind": "scorers",
-      "source": "https://ligauniversitaria.org.uy/goleadores/F2B2RS31.html",
-      "columns": [
-        "Pos.",
-        "Jugador",
-        "Equipo",
-        "Goles"
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "DIEGO MONTERO",
-            "CENTRO CRISTOBAL COLON",
-            13
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "MARTIN VIGORITO",
-            "OLD CHRISTIANS NARANJA",
-            12
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "ANTHONY YAEL BRITOS",
-            "SAN EUGENIO",
-            10
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "WILLIAMS QUINTANA",
-            "SAN EUGENIO",
-            9
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "RAMIRO GERMAN CAPELLI",
-            "DANUBIO FUTBOL CLUB",
-            9
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "BRUNO GIORDANO",
-            "E.L.F.",
-            8
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "LUCA MAXIMO AGGIO",
-            "OLD BRENDANS VERDE",
-            8
-          ]
-        }
-      ],
-      "sourceKey": "futbol|Reserva Verde"
-    },
-    {
-      "sport": "futbol",
-      "category": "PreSenior",
-      "title": "Segunda rueda · Título y ascenso",
-      "season": 2026,
-      "updatedAt": "2026-10-14T04:59:53.532Z",
-      "id": "https://ligauniversitaria.org.uy/posiciones/F3232PSCTA.html",
-      "kind": "standings",
-      "source": "https://ligauniversitaria.org.uy/posiciones/F3232PSCTA.html",
-      "columns": [
-        "Pos.",
-        "Equipo",
-        "PJ",
-        "PG",
-        "PE",
-        "PP",
-        "GF",
-        "GC",
-        "Pts."
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "SAN JUAN BAUTISTA",
-            17,
-            14,
-            2,
-            1,
-            50,
-            12,
-            44
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "OLD WOODLANDS CLUB",
-            18,
-            13,
-            3,
-            2,
-            54,
-            28,
-            42
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "ALEMAN UNIVERSITARIO",
-            18,
-            12,
-            2,
-            4,
-            47,
-            23,
-            38
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "ODONTOLOGIA UNIVERSITARIO",
-            18,
-            11,
-            2,
-            5,
-            43,
-            26,
-            35
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            5,
-            "CEIBOS CLUB",
-            18,
-            10,
-            2,
-            6,
-            47,
-            31,
-            32
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "OLIMAR",
-            17,
-            10,
-            2,
-            5,
-            45,
-            33,
-            32
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "EL CHORRO FUTBOL CLUB",
-            18,
-            10,
-            1,
-            7,
-            41,
-            31,
-            31
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "LA ESCAPADA UNIVERSITARIO",
-            18,
-            8,
-            3,
-            7,
-            27,
-            34,
-            27
-          ]
-        }
-      ],
-      "sourceKey": "futbol|PreSenior"
-    },
-    {
-      "sport": "futbol",
-      "category": "PreSenior",
-      "title": "Segunda rueda · Título y ascenso",
-      "season": 2026,
-      "updatedAt": "2026-10-14T04:59:53.532Z",
-      "id": "https://ligauniversitaria.org.uy/goleadores/F3232PSCTA.html",
-      "kind": "scorers",
-      "source": "https://ligauniversitaria.org.uy/goleadores/F3232PSCTA.html",
-      "columns": [
-        "Pos.",
-        "Jugador",
-        "Equipo",
-        "Goles"
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "NICOLAS PIROTTO",
-            "OLD WOODLANDS CLUB",
-            17
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            2,
-            "CARLOS JAVIER MORALES",
-            "CEIBOS CLUB",
-            13
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "FEDERICO NAVILIAT",
-            "OLIMAR",
-            12
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "DIEGO MARTIN GONZALEZ",
-            "ODONTOLOGIA UNIVERSITARIO",
-            12
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "JUAN MIGUEL JAUME",
-            "EL CHORRO FUTBOL CLUB",
-            11
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "JUAN PEDRO PACHECO",
-            "SAN JUAN BAUTISTA",
-            10
-          ]
-        }
-      ],
-      "sourceKey": "futbol|PreSenior"
-    },
-    {
-      "sport": "futbol",
-      "category": "PreSenior",
-      "title": "Serie PSC",
-      "season": 2026,
-      "updatedAt": "2026-10-14T04:59:56.200Z",
-      "id": "https://ligauniversitaria.org.uy/posiciones/F3232PSC.html",
-      "kind": "standings",
-      "source": "https://ligauniversitaria.org.uy/posiciones/F3232PSC.html",
-      "columns": [
-        "Pos.",
-        "Equipo",
-        "PJ",
-        "PG",
-        "PE",
-        "PP",
-        "GF",
-        "GC",
-        "Pts."
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "SAN JUAN BAUTISTA",
-            15,
-            12,
-            2,
-            1,
-            47,
-            11,
-            38
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "OLD WOODLANDS CLUB",
-            15,
-            12,
-            1,
-            2,
-            45,
-            20,
-            37
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "ALEMAN UNIVERSITARIO",
-            15,
-            10,
-            2,
-            3,
-            39,
-            21,
-            32
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "EL CHORRO FUTBOL CLUB",
-            15,
-            10,
-            1,
-            4,
-            40,
-            21,
-            31
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "ODONTOLOGIA UNIVERSITARIO",
-            15,
-            10,
-            1,
-            4,
-            36,
-            20,
-            31
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            6,
-            "CEIBOS CLUB",
-            15,
-            9,
-            2,
-            4,
-            40,
-            24,
-            29
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "OLIMAR",
-            15,
-            9,
-            1,
-            5,
-            39,
-            28,
-            28
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "LA ESCAPADA UNIVERSITARIO",
-            15,
-            7,
-            3,
-            5,
-            24,
-            29,
-            24
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "CLARA JACKSON UNIVERSITARIO",
-            15,
-            6,
-            1,
-            8,
-            23,
-            31,
-            19
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            10,
-            "FLORES UNIVERSITARIO",
-            15,
-            4,
-            4,
-            7,
-            21,
-            29,
-            16
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            11,
-            "CLUB ESTUDIANTES INGENIERIA",
-            15,
-            5,
-            0,
-            10,
-            13,
-            28,
-            15
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            12,
-            "ARQUITECTURA JRS.",
-            15,
-            4,
-            0,
-            11,
-            19,
-            40,
-            12
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            13,
-            "TACUAREMBO UNIVERSITARIO",
-            15,
-            2,
-            4,
-            9,
-            23,
-            43,
-            10
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            14,
-            "SAN ISIDRO LOMAS UNIVERSITARIO",
-            15,
-            2,
-            3,
-            10,
-            20,
-            35,
-            9
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            15,
-            "DEPORTIVO MITRE",
-            15,
-            1,
-            4,
-            10,
-            19,
-            40,
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            16,
-            "SAN EUGENIO",
-            15,
-            2,
-            1,
-            12,
-            9,
-            37,
-            7
-          ]
-        }
-      ],
-      "sourceKey": "futbol|PreSenior"
-    },
-    {
-      "sport": "futbol",
-      "category": "PreSenior",
-      "title": "Serie PSC",
-      "season": 2026,
-      "updatedAt": "2026-10-14T04:59:56.200Z",
-      "id": "https://ligauniversitaria.org.uy/goleadores/F3232PSC.html",
-      "kind": "scorers",
-      "source": "https://ligauniversitaria.org.uy/goleadores/F3232PSC.html",
-      "columns": [
-        "Pos.",
-        "Jugador",
-        "Equipo",
-        "Goles"
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "FEDERICO FARACHIO",
-            "SAN JUAN BAUTISTA",
-            17
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "NICOLAS PIROTTO",
-            "OLD WOODLANDS CLUB",
-            16
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            3,
-            "CARLOS JAVIER MORALES",
-            "CEIBOS CLUB",
-            11
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "MATHIAS DIENA",
-            "OLD WOODLANDS CLUB",
-            10
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "FEDERICO RODRIGUEZ",
-            "CLARA JACKSON UNIVERSITARIO",
-            10
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "DIEGO MARTIN GONZALEZ",
-            "ODONTOLOGIA UNIVERSITARIO",
-            10
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "JUAN MIGUEL JAUME",
-            "EL CHORRO FUTBOL CLUB",
-            10
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "GUSTAVO WELKER",
-            "OLIMAR",
-            9
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "FEDERICO NAVILIAT",
-            "OLIMAR",
-            9
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            10,
-            "ALEJANDRO BIANCO",
-            "TACUAREMBO UNIVERSITARIO",
-            9
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            11,
-            "IGNACIO FLORES",
-            "SAN ISIDRO LOMAS UNIVERSITARIO",
-            9
-          ]
-        }
-      ],
-      "sourceKey": "futbol|PreSenior"
-    },
-    {
-      "sport": "futbol",
-      "category": "Sub 20",
-      "title": "Segunda rueda · Título y ascenso",
-      "season": 2026,
-      "updatedAt": "2026-10-14T04:59:58.870Z",
-      "id": "https://ligauniversitaria.org.uy/posiciones/F202020AT.html",
-      "kind": "standings",
-      "source": "https://ligauniversitaria.org.uy/posiciones/F202020AT.html",
-      "columns": [
-        "Pos.",
-        "Equipo",
-        "PJ",
-        "PG",
-        "PE",
-        "PP",
-        "GF",
-        "GC",
-        "Pts."
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "OLD WOODLANDS CLUB",
-            18,
-            13,
-            4,
-            1,
-            40,
-            11,
-            43
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "OLD CHRISTIANS CLUB",
-            18,
-            13,
-            2,
-            3,
-            37,
-            17,
-            41
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "E.L.F.",
-            18,
-            11,
-            5,
-            2,
-            33,
-            15,
-            38
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "J.M.L.M",
-            18,
-            9,
-            6,
-            3,
-            36,
-            23,
-            33
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "OLD BRENDANS CLUB",
-            18,
-            9,
-            5,
-            4,
-            32,
-            18,
-            32
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            6,
-            "CEIBOS CLUB",
-            18,
-            8,
-            5,
-            5,
-            40,
-            30,
-            29
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "CLUB SEMINARIO",
-            18,
-            5,
-            6,
-            7,
-            20,
-            23,
-            21
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "NACIONAL UNIVERSITARIO",
-            18,
-            4,
-            6,
-            8,
-            27,
-            32,
-            18
-          ]
-        }
-      ],
-      "sourceKey": "futbol|Sub 20"
-    },
-    {
-      "sport": "futbol",
-      "category": "Sub 20",
-      "title": "Segunda rueda · Título y ascenso",
-      "season": 2026,
-      "updatedAt": "2026-10-14T04:59:58.870Z",
-      "id": "https://ligauniversitaria.org.uy/goleadores/F202020AT.html",
-      "kind": "scorers",
-      "source": "https://ligauniversitaria.org.uy/goleadores/F202020AT.html",
-      "columns": [
-        "Pos.",
-        "Jugador",
-        "Equipo",
-        "Goles"
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "FACUNDO FERNANDEZ",
-            "OLD WOODLANDS CLUB",
-            12
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "GONZALO BARTESAGHI",
-            "OLD BRENDANS CLUB",
-            12
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "THEO CORTABARRIA",
-            "OLD CHRISTIANS CLUB",
-            11
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "PEDRO ROMERO",
-            "OLD WOODLANDS CLUB",
-            8
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "IGNACIO VERANO",
-            "E.L.F.",
-            8
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "IGNACIO CATTANEO",
-            "E.L.F.",
-            7
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            7,
-            "PABLO MARTIN BARTABURU",
-            "CEIBOS CLUB",
-            6
-          ]
-        }
-      ],
-      "sourceKey": "futbol|Sub 20"
-    },
-    {
-      "sport": "futbol",
-      "category": "Sub 20",
-      "title": "Serie 20A",
-      "season": 2026,
-      "updatedAt": "2026-10-14T05:00:01.569Z",
-      "id": "https://ligauniversitaria.org.uy/posiciones/F202020A.html",
-      "kind": "standings",
-      "source": "https://ligauniversitaria.org.uy/posiciones/F202020A.html",
-      "columns": [
-        "Pos.",
-        "Equipo",
-        "PJ",
-        "PG",
-        "PE",
-        "PP",
-        "GF",
-        "GC",
-        "Pts."
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "OLD WOODLANDS CLUB",
-            15,
-            13,
-            1,
-            1,
-            36,
-            7,
-            40
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "OLD CHRISTIANS CLUB",
-            15,
-            12,
-            1,
-            2,
-            34,
-            14,
-            37
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "E.L.F.",
-            15,
-            9,
-            4,
-            2,
-            29,
-            13,
-            31
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "J.M.L.M",
-            15,
-            8,
-            5,
-            2,
-            33,
-            20,
-            29
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "OLD BRENDANS CLUB",
-            15,
-            8,
-            3,
-            4,
-            28,
-            15,
-            27
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            6,
-            "CEIBOS CLUB",
-            15,
-            7,
-            4,
-            4,
-            33,
-            23,
-            25
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "CLUB SEMINARIO",
-            15,
-            5,
-            4,
-            6,
-            18,
-            20,
-            19
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "NACIONAL UNIVERSITARIO",
-            15,
-            4,
-            5,
-            6,
-            24,
-            27,
-            17
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "MATURANA UNIVERSITARIO",
-            15,
-            4,
-            4,
-            7,
-            23,
-            33,
-            16
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            10,
-            "SAN JUAN BAUTISTA",
-            15,
-            5,
-            1,
-            9,
-            23,
-            36,
-            16
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            11,
-            "OLD BOYS CLUB",
-            15,
-            3,
-            6,
-            6,
-            17,
-            17,
-            15
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            12,
-            "CARRASCO LAWN TENNIS",
-            15,
-            4,
-            3,
-            8,
-            22,
-            28,
-            15
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            13,
-            "SAN PABLO UNIVERSITARIO",
-            15,
-            4,
-            3,
-            8,
-            20,
-            37,
-            15
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            14,
-            "PLAYA HONDA UNIVERSITARIO",
-            15,
-            3,
-            3,
-            9,
-            13,
-            26,
-            12
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            15,
-            "NAUTICO CARRASCO Y PUNTA GORDA",
-            15,
-            3,
-            2,
-            10,
-            9,
-            30,
-            11
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            16,
-            "TENIS EL PINAR",
-            15,
-            2,
-            3,
-            10,
-            19,
-            35,
-            9
-          ]
-        }
-      ],
-      "sourceKey": "futbol|Sub 20"
-    },
-    {
-      "sport": "futbol",
-      "category": "Sub 20",
-      "title": "Serie 20A",
-      "season": 2026,
-      "updatedAt": "2026-10-14T05:00:01.569Z",
-      "id": "https://ligauniversitaria.org.uy/goleadores/F202020A.html",
-      "kind": "scorers",
-      "source": "https://ligauniversitaria.org.uy/goleadores/F202020A.html",
-      "columns": [
-        "Pos.",
-        "Jugador",
-        "Equipo",
-        "Goles"
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "FACUNDO FERNANDEZ",
-            "OLD WOODLANDS CLUB",
-            11
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "GONZALO BARTESAGHI",
-            "OLD BRENDANS CLUB",
-            10
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "THEO CORTABARRIA",
-            "OLD CHRISTIANS CLUB",
-            10
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "DIEGO BIDEGAIN",
-            "SAN JUAN BAUTISTA",
-            9
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "FEDERICO GASTON DOLIVO",
-            "J.M.L.M",
-            9
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "PEDRO ROMERO",
-            "OLD WOODLANDS CLUB",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "JUAN BAUTISTA ALGORTA",
-            "CARRASCO LAWN TENNIS",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "IGNACIO VERANO",
-            "E.L.F.",
-            7
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            9,
-            "IGNACIO SERE",
-            "CEIBOS CLUB",
-            7
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            10,
-            "JUAN IGNACIO CABRERA",
-            "CEIBOS CLUB",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            11,
-            "CONSTANTINO BENTANCUR",
-            "NACIONAL UNIVERSITARIO",
-            6
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            12,
-            "FACUNDO MARQUEZ",
-            "OLD CHRISTIANS CLUB",
-            6
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            13,
-            "IGNACIO CATTANEO",
-            "E.L.F.",
-            6
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            14,
-            "MATEO AGUIRRE",
-            "OLD CHRISTIANS CLUB",
-            6
-          ]
-        }
-      ],
-      "sourceKey": "futbol|Sub 20"
-    },
-    {
-      "sport": "futbol",
-      "category": "Sub 18",
-      "title": "Serie 18-52",
-      "season": 2026,
-      "updatedAt": "2026-10-14T05:00:03.528Z",
-      "id": "https://ligauniversitaria.org.uy/posiciones/F181818-52.html",
-      "kind": "standings",
-      "source": "https://ligauniversitaria.org.uy/posiciones/F181818-52.html",
-      "columns": [
-        "Pos.",
-        "Equipo",
-        "PJ",
-        "PG",
-        "PE",
-        "PP",
-        "GF",
-        "GC",
-        "Pts."
-      ],
-      "rows": [
-        {
-          "club": true,
-          "values": [
-            1,
-            "CEIBOS CLUB",
-            13,
-            10,
-            2,
-            1,
-            60,
-            11,
-            32
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "HCA UNIVERSITARIO",
-            13,
-            8,
-            0,
-            5,
-            38,
-            20,
-            24
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "ANGLO SCHOOL UNIVERSITARIO",
-            14,
-            7,
-            2,
-            5,
-            34,
-            32,
-            23
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "JUAN XXIII",
-            14,
-            6,
-            3,
-            5,
-            26,
-            32,
-            21
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "ELBIO FERNANDEZ",
-            14,
-            6,
-            2,
-            6,
-            30,
-            26,
-            20
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "PLAYA HONDA UNIVERSITARIO",
-            13,
-            4,
-            3,
-            6,
-            14,
-            21,
-            15
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "CLUB SOCIAL PIEDRAS BLANCAS",
-            13,
-            3,
-            1,
-            9,
-            14,
-            33,
-            10
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "COLEGIO Y LICEO INGLES",
-            14,
-            3,
-            1,
-            10,
-            11,
-            52,
-            10
-          ]
-        }
-      ],
-      "sourceKey": "futbol|Sub 18"
-    },
-    {
-      "sport": "futbol",
-      "category": "Sub 18",
-      "title": "Serie 18-52",
-      "season": 2026,
-      "updatedAt": "2026-10-14T05:00:03.528Z",
-      "id": "https://ligauniversitaria.org.uy/goleadores/F181818-52.html",
-      "kind": "scorers",
-      "source": "https://ligauniversitaria.org.uy/goleadores/F181818-52.html",
-      "columns": [
-        "Pos.",
-        "Jugador",
-        "Equipo",
-        "Goles"
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "VALENTIN BALZA",
-            "JUAN XXIII",
-            18
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "JUAN MATIAS PEREIRA",
-            "HCA UNIVERSITARIO",
-            11
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            3,
-            "APARICIO VOSS",
-            "CEIBOS CLUB",
-            11
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "EMILIANO DOS SANTOS",
-            "ELBIO FERNANDEZ",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "MATEO EYHERALDE",
-            "COLEGIO Y LICEO INGLES",
-            6
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "FACUNDO ZEITOUNLIAN",
-            "HCA UNIVERSITARIO",
-            6
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "JUAN MANUEL RIVAS",
-            "PLAYA HONDA UNIVERSITARIO",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "ALEX SANTIAGO MIGUEZ",
-            "CLUB SOCIAL PIEDRAS BLANCAS",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "SANTIAGO LAPENTE",
-            "ELBIO FERNANDEZ",
-            5
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            10,
-            "JOAQUIN MARIA BARTOL",
-            "CEIBOS CLUB",
-            5
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            11,
-            "GERONIMO RODRIGO",
-            "CEIBOS CLUB",
-            5
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            12,
-            "ALFONSO FERBER",
-            "CEIBOS CLUB",
-            5
-          ]
-        }
-      ],
-      "sourceKey": "futbol|Sub 18"
-    },
     {
       "sport": "basketball",
       "category": "Basketball",
@@ -3490,7 +136,8 @@
           ]
         }
       ],
-      "sourceKey": "basketball|Basketball"
+      "sourceKey": "basketball|Basketball",
+      "stale": true
     },
     {
       "sport": "basketball",
@@ -3738,7 +385,3382 @@
           ]
         }
       ],
-      "sourceKey": "basketball|Basketball"
+      "sourceKey": "basketball|Basketball",
+      "stale": true
+    },
+    {
+      "sport": "futbol",
+      "category": "Primera",
+      "title": "Segunda rueda · Título y ascenso",
+      "season": 2026,
+      "updatedAt": "2026-10-14T04:59:37.389Z",
+      "id": "https://ligauniversitaria.org.uy/posiciones/F21BTA.html",
+      "kind": "standings",
+      "source": "https://ligauniversitaria.org.uy/posiciones/F21BTA.html",
+      "columns": [
+        "Pos.",
+        "Equipo",
+        "PJ",
+        "PG",
+        "PE",
+        "PP",
+        "GF",
+        "GC",
+        "Pts."
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "ELBIO FERNANDEZ",
+            18,
+            11,
+            5,
+            2,
+            33,
+            17,
+            38
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "SAN ISIDRO LOMAS UNIVERSITARIO",
+            18,
+            9,
+            5,
+            4,
+            26,
+            16,
+            32
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "ALEMAN UNIVERSITARIO",
+            18,
+            8,
+            7,
+            3,
+            28,
+            24,
+            31
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            4,
+            "CEIBOS CLUB",
+            18,
+            8,
+            6,
+            4,
+            33,
+            25,
+            30
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "OLD BRENDANS CLUB",
+            18,
+            8,
+            6,
+            4,
+            27,
+            19,
+            30
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "NAUTICO CARRASCO Y PUNTA GORDA",
+            18,
+            8,
+            5,
+            5,
+            31,
+            20,
+            29
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "J.M.L.M",
+            18,
+            7,
+            6,
+            5,
+            28,
+            18,
+            27
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "SAGRADA FAMILIA UNIVERSITARIO",
+            18,
+            7,
+            5,
+            6,
+            30,
+            24,
+            26
+          ]
+        }
+      ],
+      "sourceKey": "futbol|Primera",
+      "stale": true
+    },
+    {
+      "sport": "futbol",
+      "category": "Primera",
+      "title": "Segunda rueda · Título y ascenso",
+      "season": 2026,
+      "updatedAt": "2026-10-14T04:59:37.389Z",
+      "id": "https://ligauniversitaria.org.uy/goleadores/F21BTA.html",
+      "kind": "scorers",
+      "source": "https://ligauniversitaria.org.uy/goleadores/F21BTA.html",
+      "columns": [
+        "Pos.",
+        "Jugador",
+        "Equipo",
+        "Goles"
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "MARTIN ALEJANDRO COSTA",
+            "ELBIO FERNANDEZ",
+            11
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "SANTIAGO ARANCO",
+            "ELBIO FERNANDEZ",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "FELIPE CABRERA",
+            "NAUTICO CARRASCO Y PUNTA GORDA",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "ESTEBAN SANTIAGO LOPEZ",
+            "SAGRADA FAMILIA UNIVERSITARIO",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "IGNACIO ESTEVES",
+            "ALEMAN UNIVERSITARIO",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "JUAN PABLO SILVIO NICOLETTI",
+            "SAN ISIDRO LOMAS UNIVERSITARIO",
+            3
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            7,
+            "FERNANDO INTHAMOUSSU",
+            "CEIBOS CLUB",
+            3
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "FEDERICO PEREZ",
+            "J.M.L.M",
+            3
+          ]
+        }
+      ],
+      "sourceKey": "futbol|Primera",
+      "stale": true
+    },
+    {
+      "sport": "futbol",
+      "category": "Primera",
+      "title": "Serie B",
+      "season": 2026,
+      "updatedAt": "2026-10-14T04:59:40.060Z",
+      "id": "https://ligauniversitaria.org.uy/posiciones/F21B.html",
+      "kind": "standings",
+      "source": "https://ligauniversitaria.org.uy/posiciones/F21B.html",
+      "columns": [
+        "Pos.",
+        "Equipo",
+        "PJ",
+        "PG",
+        "PE",
+        "PP",
+        "GF",
+        "GC",
+        "Pts."
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "ELBIO FERNANDEZ",
+            15,
+            9,
+            4,
+            2,
+            29,
+            16,
+            31
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "OLD BRENDANS CLUB",
+            15,
+            8,
+            5,
+            2,
+            25,
+            14,
+            29
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "ALEMAN UNIVERSITARIO",
+            15,
+            8,
+            5,
+            2,
+            26,
+            20,
+            29
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "SAN ISIDRO LOMAS UNIVERSITARIO",
+            15,
+            8,
+            4,
+            3,
+            22,
+            13,
+            28
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            5,
+            "CEIBOS CLUB",
+            15,
+            8,
+            3,
+            4,
+            29,
+            21,
+            27
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "SAGRADA FAMILIA UNIVERSITARIO",
+            15,
+            7,
+            4,
+            4,
+            26,
+            17,
+            25
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "NAUTICO CARRASCO Y PUNTA GORDA",
+            15,
+            7,
+            3,
+            5,
+            26,
+            16,
+            24
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "J.M.L.M",
+            15,
+            5,
+            5,
+            5,
+            22,
+            15,
+            20
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
+            "INDEPENDIENTE",
+            15,
+            5,
+            5,
+            5,
+            20,
+            27,
+            20
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            10,
+            "OLIMAR",
+            15,
+            5,
+            2,
+            8,
+            21,
+            25,
+            17
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            11,
+            "SAN JUAN BAUTISTA",
+            15,
+            4,
+            4,
+            7,
+            21,
+            23,
+            16
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            12,
+            "CIRCULO DE TENIS MONTEVIDEO",
+            15,
+            4,
+            3,
+            8,
+            17,
+            23,
+            15
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            13,
+            "CLUB JESUS MARIA",
+            15,
+            4,
+            3,
+            8,
+            15,
+            25,
+            15
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
+            "CENTRO CRISTOBAL COLON",
+            15,
+            3,
+            4,
+            8,
+            20,
+            33,
+            13
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            15,
+            "CLUB UNIVERSIDAD CATOLICA",
+            15,
+            4,
+            0,
+            11,
+            20,
+            32,
+            12
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            16,
+            "CITY PARK",
+            15,
+            3,
+            2,
+            10,
+            15,
+            34,
+            11
+          ]
+        }
+      ],
+      "sourceKey": "futbol|Primera",
+      "stale": true
+    },
+    {
+      "sport": "futbol",
+      "category": "Primera",
+      "title": "Serie B",
+      "season": 2026,
+      "updatedAt": "2026-10-14T04:59:40.060Z",
+      "id": "https://ligauniversitaria.org.uy/goleadores/F21B.html",
+      "kind": "scorers",
+      "source": "https://ligauniversitaria.org.uy/goleadores/F21B.html",
+      "columns": [
+        "Pos.",
+        "Jugador",
+        "Equipo",
+        "Goles"
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "MARTIN ALEJANDRO COSTA",
+            "ELBIO FERNANDEZ",
+            10
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            2,
+            "JUAN PEDRO IRURETA-GOYENA",
+            "CEIBOS CLUB",
+            9
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "DANIEL OSCAR CABRERA",
+            "ELBIO FERNANDEZ",
+            8
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "FACUNDO MARTINEZ",
+            "CLUB UNIVERSIDAD CATOLICA",
+            8
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "GONZALO PASQUET",
+            "ALEMAN UNIVERSITARIO",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "STEFANO CERTULO",
+            "J.M.L.M",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "ALAIN ELISSALDE",
+            "CLUB JESUS MARIA",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "HECTOR AGUSTIN VEGA",
+            "SAGRADA FAMILIA UNIVERSITARIO",
+            6
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
+            "GONZALO MARTIN MESPOLET",
+            "OLIMAR",
+            6
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            10,
+            "MATEO DAVID BONIFACIO",
+            "OLD BRENDANS CLUB",
+            6
+          ]
+        }
+      ],
+      "sourceKey": "futbol|Primera",
+      "stale": true
+    },
+    {
+      "sport": "futbol",
+      "category": "Reserva A",
+      "title": "Segunda rueda · Permanencia y descenso",
+      "season": 2026,
+      "updatedAt": "2026-10-14T04:59:43.710Z",
+      "id": "https://ligauniversitaria.org.uy/posiciones/F2B2RSAPD.html",
+      "kind": "standings",
+      "source": "https://ligauniversitaria.org.uy/posiciones/F2B2RSAPD.html",
+      "columns": [
+        "Pos.",
+        "Equipo",
+        "PJ",
+        "PG",
+        "PE",
+        "PP",
+        "GF",
+        "GC",
+        "Pts."
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "NACIONAL UNIVERSITARIO",
+            18,
+            6,
+            6,
+            6,
+            23,
+            28,
+            24
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "CLUB SEMINARIO",
+            18,
+            6,
+            3,
+            9,
+            24,
+            30,
+            21
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "TENIS EL PINAR",
+            17,
+            5,
+            5,
+            7,
+            26,
+            29,
+            20
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "SAGRADA FAMILIA UNIVERSITARIO",
+            17,
+            4,
+            8,
+            5,
+            18,
+            22,
+            20
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "TAPE",
+            17,
+            3,
+            4,
+            10,
+            22,
+            31,
+            13
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "ALEMAN UNIVERSITARIO",
+            17,
+            2,
+            7,
+            8,
+            22,
+            34,
+            13
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            7,
+            "CEIBOS CLUB",
+            17,
+            2,
+            7,
+            8,
+            20,
+            34,
+            13
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "OBC AZULGRANA.",
+            17,
+            3,
+            4,
+            10,
+            10,
+            28,
+            13
+          ]
+        }
+      ],
+      "sourceKey": "futbol|Reserva A",
+      "stale": true
+    },
+    {
+      "sport": "futbol",
+      "category": "Reserva A",
+      "title": "Segunda rueda · Permanencia y descenso",
+      "season": 2026,
+      "updatedAt": "2026-10-14T04:59:43.710Z",
+      "id": "https://ligauniversitaria.org.uy/goleadores/F2B2RSAPD.html",
+      "kind": "scorers",
+      "source": "https://ligauniversitaria.org.uy/goleadores/F2B2RSAPD.html",
+      "columns": [
+        "Pos.",
+        "Jugador",
+        "Equipo",
+        "Goles"
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "VALENTINO MUYANO",
+            "NACIONAL UNIVERSITARIO",
+            6
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "SASHA ALEXANDER ANEFF",
+            "ALEMAN UNIVERSITARIO",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "JUAN DIEGO GODOY",
+            "NACIONAL UNIVERSITARIO",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "SANTIAGO RAUL MAY",
+            "CLUB SEMINARIO",
+            4
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            5,
+            "SANTIAGO LOPEZ",
+            "CEIBOS CLUB",
+            3
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            6,
+            "RAFAEL MONESTIER",
+            "CEIBOS CLUB",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "ENZO SEBASTIAN LAXAGUE",
+            "NACIONAL UNIVERSITARIO",
+            2
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            8,
+            "JUAN ANDRES ECHEGOYEN",
+            "CEIBOS CLUB",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
+            "JUAN RAMON ARBILLA",
+            "ALEMAN UNIVERSITARIO",
+            2
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            10,
+            "JOAQUIN NARANCIO",
+            "CEIBOS CLUB",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            11,
+            "FRANCISCO JAVIER CAMPON",
+            "CLUB SEMINARIO",
+            2
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            12,
+            "ENRIQUE MARTIN BOIX",
+            "CEIBOS CLUB",
+            2
+          ]
+        }
+      ],
+      "sourceKey": "futbol|Reserva A",
+      "stale": true
+    },
+    {
+      "sport": "futbol",
+      "category": "Reserva A",
+      "title": "Serie RS1",
+      "season": 2026,
+      "updatedAt": "2026-10-14T04:59:45.552Z",
+      "id": "https://ligauniversitaria.org.uy/posiciones/F2B2RS1.html",
+      "kind": "standings",
+      "source": "https://ligauniversitaria.org.uy/posiciones/F2B2RS1.html",
+      "columns": [
+        "Pos.",
+        "Equipo",
+        "PJ",
+        "PG",
+        "PE",
+        "PP",
+        "GF",
+        "GC",
+        "Pts."
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "CARRASCO LAWN TENNIS",
+            15,
+            10,
+            4,
+            1,
+            29,
+            12,
+            34
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "OLD CHRISTIANS AZUL",
+            15,
+            9,
+            5,
+            1,
+            34,
+            15,
+            32
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "OLD BOYS CLUB",
+            15,
+            9,
+            2,
+            4,
+            27,
+            15,
+            29
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "OLD WOODLANDS CLUB",
+            15,
+            8,
+            5,
+            2,
+            22,
+            12,
+            29
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "OLD CHRISTIANS CLUB",
+            15,
+            8,
+            3,
+            4,
+            23,
+            14,
+            27
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "CARRASCO POLO CLUB",
+            15,
+            4,
+            8,
+            3,
+            23,
+            21,
+            20
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "NAUTICO CARRASCO Y PUNTA GORDA",
+            15,
+            5,
+            5,
+            5,
+            16,
+            17,
+            20
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "PLAYA HONDA UNIVERSITARIO",
+            15,
+            5,
+            4,
+            6,
+            28,
+            25,
+            19
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
+            "SAGRADA FAMILIA UNIVERSITARIO",
+            15,
+            4,
+            7,
+            4,
+            18,
+            18,
+            19
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            10,
+            "TENIS EL PINAR",
+            15,
+            5,
+            3,
+            7,
+            26,
+            29,
+            18
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            11,
+            "NACIONAL UNIVERSITARIO",
+            15,
+            4,
+            5,
+            6,
+            16,
+            23,
+            17
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            12,
+            "CLUB SEMINARIO",
+            15,
+            5,
+            2,
+            8,
+            14,
+            23,
+            17
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            13,
+            "TAPE",
+            15,
+            3,
+            4,
+            8,
+            19,
+            25,
+            13
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
+            "ALEMAN UNIVERSITARIO",
+            15,
+            2,
+            5,
+            8,
+            15,
+            27,
+            11
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            15,
+            "OBC AZULGRANA.",
+            15,
+            3,
+            2,
+            10,
+            10,
+            28,
+            11
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            16,
+            "CEIBOS CLUB",
+            15,
+            1,
+            6,
+            8,
+            13,
+            29,
+            9
+          ]
+        }
+      ],
+      "sourceKey": "futbol|Reserva A",
+      "stale": true
+    },
+    {
+      "sport": "futbol",
+      "category": "Reserva A",
+      "title": "Serie RS1",
+      "season": 2026,
+      "updatedAt": "2026-10-14T04:59:45.552Z",
+      "id": "https://ligauniversitaria.org.uy/goleadores/F2B2RS1.html",
+      "kind": "scorers",
+      "source": "https://ligauniversitaria.org.uy/goleadores/F2B2RS1.html",
+      "columns": [
+        "Pos.",
+        "Jugador",
+        "Equipo",
+        "Goles"
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "LAUTARO ELIAS CATSOURIS",
+            "PLAYA HONDA UNIVERSITARIO",
+            9
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "ALFONSO SIMETO",
+            "OLD BOYS CLUB",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "JUAN GABRIEL ALVAREZ",
+            "OLD CHRISTIANS AZUL",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "JOAQUIN RODRIGUEZ",
+            "OLD CHRISTIANS CLUB",
+            6
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "MATIAS NICOLAS RODRIGUEZ",
+            "PLAYA HONDA UNIVERSITARIO",
+            6
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "JOAQUIN CANOBBIO",
+            "CARRASCO POLO CLUB",
+            6
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "MATEO AGUSTIN ASENCIO",
+            "CARRASCO LAWN TENNIS",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "JUAN SEGUNDO MASPOLI",
+            "CARRASCO POLO CLUB",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
+            "PEDRO ALBERTO LISTA",
+            "NACIONAL UNIVERSITARIO",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            10,
+            "JOSE IGNACIO ARBILLA",
+            "ALEMAN UNIVERSITARIO",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            11,
+            "MAXIMO RICARDO SEIZER",
+            "OLD BOYS CLUB",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            12,
+            "ALEJANDRO VICTORICA",
+            "OLD WOODLANDS CLUB",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            13,
+            "DIEGO GABRIEL HANDALIAN",
+            "NAUTICO CARRASCO Y PUNTA GORDA",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
+            "JUAN IGNACIO POTRIE",
+            "CARRASCO LAWN TENNIS",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            15,
+            "SANTIAGO DANIEL TORRES",
+            "TENIS EL PINAR",
+            5
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            16,
+            "AGUSTIN CALVO",
+            "CEIBOS CLUB",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            17,
+            "JUAN MANUEL MUSETTI",
+            "OLD BOYS CLUB",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            18,
+            "BAUTISTA MARIANO RODRIGUEZ ALEMPARTE",
+            "OLD CHRISTIANS AZUL",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            19,
+            "JUAN MANUEL BOCCHI",
+            "PLAYA HONDA UNIVERSITARIO",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            20,
+            "ALVARO FACUNDO DEFAUT",
+            "OLD WOODLANDS CLUB",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            21,
+            "JOAQUIN RODRIGUEZ",
+            "TAPE",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            22,
+            "MARCOS ALVAREZ",
+            "OLD WOODLANDS CLUB",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            23,
+            "MARTIN JAVIER DIAZ",
+            "TENIS EL PINAR",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            24,
+            "JUAN IGNACIO URRISA",
+            "CARRASCO POLO CLUB",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            25,
+            "FEDERICO RUIZ",
+            "OBC AZULGRANA.",
+            4
+          ]
+        }
+      ],
+      "sourceKey": "futbol|Reserva A",
+      "stale": true
+    },
+    {
+      "sport": "futbol",
+      "category": "Reserva Verde",
+      "title": "Segunda rueda · Título y ascenso",
+      "season": 2026,
+      "updatedAt": "2026-10-14T04:59:48.206Z",
+      "id": "https://ligauniversitaria.org.uy/posiciones/F2B2RSCTA.html",
+      "kind": "standings",
+      "source": "https://ligauniversitaria.org.uy/posiciones/F2B2RSCTA.html",
+      "columns": [
+        "Pos.",
+        "Equipo",
+        "PJ",
+        "PG",
+        "PE",
+        "PP",
+        "GF",
+        "GC",
+        "Pts."
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "E.L.F.",
+            18,
+            13,
+            2,
+            3,
+            46,
+            20,
+            41
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "CENTRO CRISTOBAL COLON",
+            17,
+            12,
+            3,
+            2,
+            43,
+            11,
+            39
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "DANUBIO FUTBOL CLUB",
+            17,
+            10,
+            5,
+            2,
+            30,
+            13,
+            35
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "JUAN XXIII BLANCO",
+            17,
+            8,
+            6,
+            3,
+            22,
+            21,
+            30
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            5,
+            "CEIBOS CLUB VERDE",
+            18,
+            7,
+            6,
+            5,
+            26,
+            22,
+            27
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "SAN EUGENIO",
+            17,
+            7,
+            3,
+            7,
+            35,
+            36,
+            24
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "SEMINARIO UNIVERSITARIO",
+            17,
+            5,
+            5,
+            7,
+            21,
+            18,
+            20
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "SAN PABLO UNIVERSITARIO",
+            17,
+            6,
+            2,
+            9,
+            19,
+            29,
+            20
+          ]
+        }
+      ],
+      "sourceKey": "futbol|Reserva Verde",
+      "stale": true
+    },
+    {
+      "sport": "futbol",
+      "category": "Reserva Verde",
+      "title": "Segunda rueda · Título y ascenso",
+      "season": 2026,
+      "updatedAt": "2026-10-14T04:59:48.206Z",
+      "id": "https://ligauniversitaria.org.uy/goleadores/F2B2RSCTA.html",
+      "kind": "scorers",
+      "source": "https://ligauniversitaria.org.uy/goleadores/F2B2RSCTA.html",
+      "columns": [
+        "Pos.",
+        "Jugador",
+        "Equipo",
+        "Goles"
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "SANTIAGO RODRIGUEZ",
+            "E.L.F.",
+            9
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "GUZMAN RODRIGUEZ",
+            "E.L.F.",
+            6
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "MATEO LAUTARO FERNANDEZ",
+            "SAN PABLO UNIVERSITARIO",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "NICOLAS EZEQUIEL GUTIERREZ",
+            "CENTRO CRISTOBAL COLON",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "MATEO CORRADI",
+            "E.L.F.",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "FACUNDO PASSEGGI",
+            "JUAN XXIII BLANCO",
+            3
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "IGNACIO ANTONIO CARNEIRO",
+            "E.L.F.",
+            3
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "FRANCO VALIENTE",
+            "CENTRO CRISTOBAL COLON",
+            2
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            9,
+            "NICOLAS MENDIETA",
+            "CEIBOS CLUB VERDE",
+            2
+          ]
+        }
+      ],
+      "sourceKey": "futbol|Reserva Verde",
+      "stale": true
+    },
+    {
+      "sport": "futbol",
+      "category": "Reserva Verde",
+      "title": "Serie RS31",
+      "season": 2026,
+      "updatedAt": "2026-10-14T04:59:50.882Z",
+      "id": "https://ligauniversitaria.org.uy/posiciones/F2B2RS31.html",
+      "kind": "standings",
+      "source": "https://ligauniversitaria.org.uy/posiciones/F2B2RS31.html",
+      "columns": [
+        "Pos.",
+        "Equipo",
+        "PJ",
+        "PG",
+        "PE",
+        "PP",
+        "GF",
+        "GC",
+        "Pts."
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "E.L.F.",
+            15,
+            11,
+            1,
+            3,
+            40,
+            17,
+            34
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "CENTRO CRISTOBAL COLON",
+            15,
+            10,
+            3,
+            2,
+            39,
+            11,
+            33
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "DANUBIO FUTBOL CLUB",
+            15,
+            9,
+            5,
+            1,
+            28,
+            11,
+            32
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "JUAN XXIII BLANCO",
+            15,
+            8,
+            5,
+            2,
+            21,
+            19,
+            29
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "SAN EUGENIO",
+            15,
+            7,
+            3,
+            5,
+            35,
+            31,
+            24
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            6,
+            "CEIBOS CLUB VERDE",
+            15,
+            6,
+            5,
+            4,
+            24,
+            20,
+            23
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "SAN PABLO UNIVERSITARIO",
+            15,
+            6,
+            1,
+            8,
+            17,
+            26,
+            19
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "SEMINARIO UNIVERSITARIO",
+            15,
+            5,
+            3,
+            7,
+            20,
+            17,
+            18
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
+            "COLEGIO Y LICEO INGLES",
+            15,
+            4,
+            6,
+            5,
+            16,
+            18,
+            18
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            10,
+            "PEÑAROL UNIVERSITARIO",
+            15,
+            5,
+            3,
+            7,
+            14,
+            24,
+            18
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            11,
+            "WANDERERS",
+            15,
+            5,
+            2,
+            8,
+            22,
+            27,
+            17
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            12,
+            "LA BLANQUEADA",
+            15,
+            4,
+            4,
+            7,
+            20,
+            32,
+            16
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            13,
+            "NUMA TURCATTI",
+            15,
+            4,
+            2,
+            9,
+            25,
+            33,
+            14
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
+            "OLD CHRISTIANS NARANJA",
+            15,
+            2,
+            8,
+            5,
+            20,
+            28,
+            14
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            15,
+            "OLD BRENDANS VERDE",
+            15,
+            4,
+            1,
+            10,
+            24,
+            33,
+            13
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            16,
+            "SAN ISIDRO LOMAS UNIVERSITARIO",
+            15,
+            3,
+            2,
+            10,
+            22,
+            40,
+            11
+          ]
+        }
+      ],
+      "sourceKey": "futbol|Reserva Verde",
+      "stale": true
+    },
+    {
+      "sport": "futbol",
+      "category": "Reserva Verde",
+      "title": "Serie RS31",
+      "season": 2026,
+      "updatedAt": "2026-10-14T04:59:50.882Z",
+      "id": "https://ligauniversitaria.org.uy/goleadores/F2B2RS31.html",
+      "kind": "scorers",
+      "source": "https://ligauniversitaria.org.uy/goleadores/F2B2RS31.html",
+      "columns": [
+        "Pos.",
+        "Jugador",
+        "Equipo",
+        "Goles"
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "DIEGO MONTERO",
+            "CENTRO CRISTOBAL COLON",
+            13
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "MARTIN VIGORITO",
+            "OLD CHRISTIANS NARANJA",
+            12
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "ANTHONY YAEL BRITOS",
+            "SAN EUGENIO",
+            10
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "WILLIAMS QUINTANA",
+            "SAN EUGENIO",
+            9
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "RAMIRO GERMAN CAPELLI",
+            "DANUBIO FUTBOL CLUB",
+            9
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "BRUNO GIORDANO",
+            "E.L.F.",
+            8
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "LUCA MAXIMO AGGIO",
+            "OLD BRENDANS VERDE",
+            8
+          ]
+        }
+      ],
+      "sourceKey": "futbol|Reserva Verde",
+      "stale": true
+    },
+    {
+      "sport": "futbol",
+      "category": "PreSenior",
+      "title": "Segunda rueda · Título y ascenso",
+      "season": 2026,
+      "updatedAt": "2026-10-14T04:59:53.532Z",
+      "id": "https://ligauniversitaria.org.uy/posiciones/F3232PSCTA.html",
+      "kind": "standings",
+      "source": "https://ligauniversitaria.org.uy/posiciones/F3232PSCTA.html",
+      "columns": [
+        "Pos.",
+        "Equipo",
+        "PJ",
+        "PG",
+        "PE",
+        "PP",
+        "GF",
+        "GC",
+        "Pts."
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "SAN JUAN BAUTISTA",
+            17,
+            14,
+            2,
+            1,
+            50,
+            12,
+            44
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "OLD WOODLANDS CLUB",
+            18,
+            13,
+            3,
+            2,
+            54,
+            28,
+            42
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "ALEMAN UNIVERSITARIO",
+            18,
+            12,
+            2,
+            4,
+            47,
+            23,
+            38
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "ODONTOLOGIA UNIVERSITARIO",
+            18,
+            11,
+            2,
+            5,
+            43,
+            26,
+            35
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            5,
+            "CEIBOS CLUB",
+            18,
+            10,
+            2,
+            6,
+            47,
+            31,
+            32
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "OLIMAR",
+            17,
+            10,
+            2,
+            5,
+            45,
+            33,
+            32
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "EL CHORRO FUTBOL CLUB",
+            18,
+            10,
+            1,
+            7,
+            41,
+            31,
+            31
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "LA ESCAPADA UNIVERSITARIO",
+            18,
+            8,
+            3,
+            7,
+            27,
+            34,
+            27
+          ]
+        }
+      ],
+      "sourceKey": "futbol|PreSenior",
+      "stale": true
+    },
+    {
+      "sport": "futbol",
+      "category": "PreSenior",
+      "title": "Segunda rueda · Título y ascenso",
+      "season": 2026,
+      "updatedAt": "2026-10-14T04:59:53.532Z",
+      "id": "https://ligauniversitaria.org.uy/goleadores/F3232PSCTA.html",
+      "kind": "scorers",
+      "source": "https://ligauniversitaria.org.uy/goleadores/F3232PSCTA.html",
+      "columns": [
+        "Pos.",
+        "Jugador",
+        "Equipo",
+        "Goles"
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "NICOLAS PIROTTO",
+            "OLD WOODLANDS CLUB",
+            17
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            2,
+            "CARLOS JAVIER MORALES",
+            "CEIBOS CLUB",
+            13
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "FEDERICO NAVILIAT",
+            "OLIMAR",
+            12
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "DIEGO MARTIN GONZALEZ",
+            "ODONTOLOGIA UNIVERSITARIO",
+            12
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "JUAN MIGUEL JAUME",
+            "EL CHORRO FUTBOL CLUB",
+            11
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "JUAN PEDRO PACHECO",
+            "SAN JUAN BAUTISTA",
+            10
+          ]
+        }
+      ],
+      "sourceKey": "futbol|PreSenior",
+      "stale": true
+    },
+    {
+      "sport": "futbol",
+      "category": "PreSenior",
+      "title": "Serie PSC",
+      "season": 2026,
+      "updatedAt": "2026-10-14T04:59:56.200Z",
+      "id": "https://ligauniversitaria.org.uy/posiciones/F3232PSC.html",
+      "kind": "standings",
+      "source": "https://ligauniversitaria.org.uy/posiciones/F3232PSC.html",
+      "columns": [
+        "Pos.",
+        "Equipo",
+        "PJ",
+        "PG",
+        "PE",
+        "PP",
+        "GF",
+        "GC",
+        "Pts."
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "SAN JUAN BAUTISTA",
+            15,
+            12,
+            2,
+            1,
+            47,
+            11,
+            38
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "OLD WOODLANDS CLUB",
+            15,
+            12,
+            1,
+            2,
+            45,
+            20,
+            37
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "ALEMAN UNIVERSITARIO",
+            15,
+            10,
+            2,
+            3,
+            39,
+            21,
+            32
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "EL CHORRO FUTBOL CLUB",
+            15,
+            10,
+            1,
+            4,
+            40,
+            21,
+            31
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "ODONTOLOGIA UNIVERSITARIO",
+            15,
+            10,
+            1,
+            4,
+            36,
+            20,
+            31
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            6,
+            "CEIBOS CLUB",
+            15,
+            9,
+            2,
+            4,
+            40,
+            24,
+            29
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "OLIMAR",
+            15,
+            9,
+            1,
+            5,
+            39,
+            28,
+            28
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "LA ESCAPADA UNIVERSITARIO",
+            15,
+            7,
+            3,
+            5,
+            24,
+            29,
+            24
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
+            "CLARA JACKSON UNIVERSITARIO",
+            15,
+            6,
+            1,
+            8,
+            23,
+            31,
+            19
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            10,
+            "FLORES UNIVERSITARIO",
+            15,
+            4,
+            4,
+            7,
+            21,
+            29,
+            16
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            11,
+            "CLUB ESTUDIANTES INGENIERIA",
+            15,
+            5,
+            0,
+            10,
+            13,
+            28,
+            15
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            12,
+            "ARQUITECTURA JRS.",
+            15,
+            4,
+            0,
+            11,
+            19,
+            40,
+            12
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            13,
+            "TACUAREMBO UNIVERSITARIO",
+            15,
+            2,
+            4,
+            9,
+            23,
+            43,
+            10
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
+            "SAN ISIDRO LOMAS UNIVERSITARIO",
+            15,
+            2,
+            3,
+            10,
+            20,
+            35,
+            9
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            15,
+            "DEPORTIVO MITRE",
+            15,
+            1,
+            4,
+            10,
+            19,
+            40,
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            16,
+            "SAN EUGENIO",
+            15,
+            2,
+            1,
+            12,
+            9,
+            37,
+            7
+          ]
+        }
+      ],
+      "sourceKey": "futbol|PreSenior",
+      "stale": true
+    },
+    {
+      "sport": "futbol",
+      "category": "PreSenior",
+      "title": "Serie PSC",
+      "season": 2026,
+      "updatedAt": "2026-10-14T04:59:56.200Z",
+      "id": "https://ligauniversitaria.org.uy/goleadores/F3232PSC.html",
+      "kind": "scorers",
+      "source": "https://ligauniversitaria.org.uy/goleadores/F3232PSC.html",
+      "columns": [
+        "Pos.",
+        "Jugador",
+        "Equipo",
+        "Goles"
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "FEDERICO FARACHIO",
+            "SAN JUAN BAUTISTA",
+            17
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "NICOLAS PIROTTO",
+            "OLD WOODLANDS CLUB",
+            16
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            3,
+            "CARLOS JAVIER MORALES",
+            "CEIBOS CLUB",
+            11
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "MATHIAS DIENA",
+            "OLD WOODLANDS CLUB",
+            10
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "FEDERICO RODRIGUEZ",
+            "CLARA JACKSON UNIVERSITARIO",
+            10
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "DIEGO MARTIN GONZALEZ",
+            "ODONTOLOGIA UNIVERSITARIO",
+            10
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "JUAN MIGUEL JAUME",
+            "EL CHORRO FUTBOL CLUB",
+            10
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "GUSTAVO WELKER",
+            "OLIMAR",
+            9
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
+            "FEDERICO NAVILIAT",
+            "OLIMAR",
+            9
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            10,
+            "ALEJANDRO BIANCO",
+            "TACUAREMBO UNIVERSITARIO",
+            9
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            11,
+            "IGNACIO FLORES",
+            "SAN ISIDRO LOMAS UNIVERSITARIO",
+            9
+          ]
+        }
+      ],
+      "sourceKey": "futbol|PreSenior",
+      "stale": true
+    },
+    {
+      "sport": "futbol",
+      "category": "Sub 20",
+      "title": "Segunda rueda · Título y ascenso",
+      "season": 2026,
+      "updatedAt": "2026-10-14T04:59:58.870Z",
+      "id": "https://ligauniversitaria.org.uy/posiciones/F202020AT.html",
+      "kind": "standings",
+      "source": "https://ligauniversitaria.org.uy/posiciones/F202020AT.html",
+      "columns": [
+        "Pos.",
+        "Equipo",
+        "PJ",
+        "PG",
+        "PE",
+        "PP",
+        "GF",
+        "GC",
+        "Pts."
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "OLD WOODLANDS CLUB",
+            18,
+            13,
+            4,
+            1,
+            40,
+            11,
+            43
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "OLD CHRISTIANS CLUB",
+            18,
+            13,
+            2,
+            3,
+            37,
+            17,
+            41
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "E.L.F.",
+            18,
+            11,
+            5,
+            2,
+            33,
+            15,
+            38
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "J.M.L.M",
+            18,
+            9,
+            6,
+            3,
+            36,
+            23,
+            33
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "OLD BRENDANS CLUB",
+            18,
+            9,
+            5,
+            4,
+            32,
+            18,
+            32
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            6,
+            "CEIBOS CLUB",
+            18,
+            8,
+            5,
+            5,
+            40,
+            30,
+            29
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "CLUB SEMINARIO",
+            18,
+            5,
+            6,
+            7,
+            20,
+            23,
+            21
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "NACIONAL UNIVERSITARIO",
+            18,
+            4,
+            6,
+            8,
+            27,
+            32,
+            18
+          ]
+        }
+      ],
+      "sourceKey": "futbol|Sub 20",
+      "stale": true
+    },
+    {
+      "sport": "futbol",
+      "category": "Sub 20",
+      "title": "Segunda rueda · Título y ascenso",
+      "season": 2026,
+      "updatedAt": "2026-10-14T04:59:58.870Z",
+      "id": "https://ligauniversitaria.org.uy/goleadores/F202020AT.html",
+      "kind": "scorers",
+      "source": "https://ligauniversitaria.org.uy/goleadores/F202020AT.html",
+      "columns": [
+        "Pos.",
+        "Jugador",
+        "Equipo",
+        "Goles"
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "FACUNDO FERNANDEZ",
+            "OLD WOODLANDS CLUB",
+            12
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "GONZALO BARTESAGHI",
+            "OLD BRENDANS CLUB",
+            12
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "THEO CORTABARRIA",
+            "OLD CHRISTIANS CLUB",
+            11
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "PEDRO ROMERO",
+            "OLD WOODLANDS CLUB",
+            8
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "IGNACIO VERANO",
+            "E.L.F.",
+            8
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "IGNACIO CATTANEO",
+            "E.L.F.",
+            7
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            7,
+            "PABLO MARTIN BARTABURU",
+            "CEIBOS CLUB",
+            6
+          ]
+        }
+      ],
+      "sourceKey": "futbol|Sub 20",
+      "stale": true
+    },
+    {
+      "sport": "futbol",
+      "category": "Sub 20",
+      "title": "Serie 20A",
+      "season": 2026,
+      "updatedAt": "2026-10-14T05:00:01.569Z",
+      "id": "https://ligauniversitaria.org.uy/posiciones/F202020A.html",
+      "kind": "standings",
+      "source": "https://ligauniversitaria.org.uy/posiciones/F202020A.html",
+      "columns": [
+        "Pos.",
+        "Equipo",
+        "PJ",
+        "PG",
+        "PE",
+        "PP",
+        "GF",
+        "GC",
+        "Pts."
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "OLD WOODLANDS CLUB",
+            15,
+            13,
+            1,
+            1,
+            36,
+            7,
+            40
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "OLD CHRISTIANS CLUB",
+            15,
+            12,
+            1,
+            2,
+            34,
+            14,
+            37
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "E.L.F.",
+            15,
+            9,
+            4,
+            2,
+            29,
+            13,
+            31
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "J.M.L.M",
+            15,
+            8,
+            5,
+            2,
+            33,
+            20,
+            29
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "OLD BRENDANS CLUB",
+            15,
+            8,
+            3,
+            4,
+            28,
+            15,
+            27
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            6,
+            "CEIBOS CLUB",
+            15,
+            7,
+            4,
+            4,
+            33,
+            23,
+            25
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "CLUB SEMINARIO",
+            15,
+            5,
+            4,
+            6,
+            18,
+            20,
+            19
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "NACIONAL UNIVERSITARIO",
+            15,
+            4,
+            5,
+            6,
+            24,
+            27,
+            17
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
+            "MATURANA UNIVERSITARIO",
+            15,
+            4,
+            4,
+            7,
+            23,
+            33,
+            16
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            10,
+            "SAN JUAN BAUTISTA",
+            15,
+            5,
+            1,
+            9,
+            23,
+            36,
+            16
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            11,
+            "OLD BOYS CLUB",
+            15,
+            3,
+            6,
+            6,
+            17,
+            17,
+            15
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            12,
+            "CARRASCO LAWN TENNIS",
+            15,
+            4,
+            3,
+            8,
+            22,
+            28,
+            15
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            13,
+            "SAN PABLO UNIVERSITARIO",
+            15,
+            4,
+            3,
+            8,
+            20,
+            37,
+            15
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
+            "PLAYA HONDA UNIVERSITARIO",
+            15,
+            3,
+            3,
+            9,
+            13,
+            26,
+            12
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            15,
+            "NAUTICO CARRASCO Y PUNTA GORDA",
+            15,
+            3,
+            2,
+            10,
+            9,
+            30,
+            11
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            16,
+            "TENIS EL PINAR",
+            15,
+            2,
+            3,
+            10,
+            19,
+            35,
+            9
+          ]
+        }
+      ],
+      "sourceKey": "futbol|Sub 20",
+      "stale": true
+    },
+    {
+      "sport": "futbol",
+      "category": "Sub 20",
+      "title": "Serie 20A",
+      "season": 2026,
+      "updatedAt": "2026-10-14T05:00:01.569Z",
+      "id": "https://ligauniversitaria.org.uy/goleadores/F202020A.html",
+      "kind": "scorers",
+      "source": "https://ligauniversitaria.org.uy/goleadores/F202020A.html",
+      "columns": [
+        "Pos.",
+        "Jugador",
+        "Equipo",
+        "Goles"
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "FACUNDO FERNANDEZ",
+            "OLD WOODLANDS CLUB",
+            11
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "GONZALO BARTESAGHI",
+            "OLD BRENDANS CLUB",
+            10
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "THEO CORTABARRIA",
+            "OLD CHRISTIANS CLUB",
+            10
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "DIEGO BIDEGAIN",
+            "SAN JUAN BAUTISTA",
+            9
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "FEDERICO GASTON DOLIVO",
+            "J.M.L.M",
+            9
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "PEDRO ROMERO",
+            "OLD WOODLANDS CLUB",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "JUAN BAUTISTA ALGORTA",
+            "CARRASCO LAWN TENNIS",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "IGNACIO VERANO",
+            "E.L.F.",
+            7
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            9,
+            "IGNACIO SERE",
+            "CEIBOS CLUB",
+            7
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            10,
+            "JUAN IGNACIO CABRERA",
+            "CEIBOS CLUB",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            11,
+            "CONSTANTINO BENTANCUR",
+            "NACIONAL UNIVERSITARIO",
+            6
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            12,
+            "FACUNDO MARQUEZ",
+            "OLD CHRISTIANS CLUB",
+            6
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            13,
+            "IGNACIO CATTANEO",
+            "E.L.F.",
+            6
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
+            "MATEO AGUIRRE",
+            "OLD CHRISTIANS CLUB",
+            6
+          ]
+        }
+      ],
+      "sourceKey": "futbol|Sub 20",
+      "stale": true
+    },
+    {
+      "sport": "futbol",
+      "category": "Sub 18",
+      "title": "Serie 18-52",
+      "season": 2026,
+      "updatedAt": "2026-10-14T11:29:13.593Z",
+      "id": "https://ligauniversitaria.org.uy/posiciones/F181818-52.html",
+      "kind": "standings",
+      "source": "https://ligauniversitaria.org.uy/posiciones/F181818-52.html",
+      "columns": [
+        "Pos.",
+        "Equipo",
+        "PJ",
+        "PG",
+        "PE",
+        "PP",
+        "GF",
+        "GC",
+        "Pts."
+      ],
+      "rows": [
+        {
+          "club": true,
+          "values": [
+            1,
+            "CEIBOS CLUB",
+            13,
+            10,
+            2,
+            1,
+            60,
+            11,
+            32
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "HCA UNIVERSITARIO",
+            13,
+            8,
+            0,
+            5,
+            38,
+            20,
+            24
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "ANGLO SCHOOL UNIVERSITARIO",
+            14,
+            7,
+            2,
+            5,
+            34,
+            32,
+            23
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "JUAN XXIII",
+            14,
+            6,
+            3,
+            5,
+            26,
+            32,
+            21
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "ELBIO FERNANDEZ",
+            14,
+            6,
+            2,
+            6,
+            30,
+            26,
+            20
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "PLAYA HONDA UNIVERSITARIO",
+            13,
+            4,
+            3,
+            6,
+            14,
+            21,
+            15
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "CLUB SOCIAL PIEDRAS BLANCAS",
+            13,
+            3,
+            1,
+            9,
+            14,
+            33,
+            10
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "COLEGIO Y LICEO INGLES",
+            14,
+            3,
+            1,
+            10,
+            11,
+            52,
+            10
+          ]
+        }
+      ],
+      "sourceKey": "futbol|Sub 18"
+    },
+    {
+      "sport": "futbol",
+      "category": "Sub 18",
+      "title": "Serie 18-52",
+      "season": 2026,
+      "updatedAt": "2026-10-14T11:29:13.593Z",
+      "id": "https://ligauniversitaria.org.uy/goleadores/F181818-52.html",
+      "kind": "scorers",
+      "source": "https://ligauniversitaria.org.uy/goleadores/F181818-52.html",
+      "columns": [
+        "Pos.",
+        "Jugador",
+        "Equipo",
+        "Goles"
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "VALENTIN BALZA",
+            "JUAN XXIII",
+            18
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "JUAN MATIAS PEREIRA",
+            "HCA UNIVERSITARIO",
+            11
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            3,
+            "APARICIO VOSS",
+            "CEIBOS CLUB",
+            11
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "EMILIANO DOS SANTOS",
+            "ELBIO FERNANDEZ",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "MATEO EYHERALDE",
+            "COLEGIO Y LICEO INGLES",
+            6
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "FACUNDO ZEITOUNLIAN",
+            "HCA UNIVERSITARIO",
+            6
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "JUAN MANUEL RIVAS",
+            "PLAYA HONDA UNIVERSITARIO",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "ALEX SANTIAGO MIGUEZ",
+            "CLUB SOCIAL PIEDRAS BLANCAS",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
+            "SANTIAGO LAPENTE",
+            "ELBIO FERNANDEZ",
+            5
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            10,
+            "JOAQUIN MARIA BARTOL",
+            "CEIBOS CLUB",
+            5
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            11,
+            "GERONIMO RODRIGO",
+            "CEIBOS CLUB",
+            5
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            12,
+            "ALFONSO FERBER",
+            "CEIBOS CLUB",
+            5
+          ]
+        }
+      ],
+      "sourceKey": "futbol|Sub 18"
     },
     {
       "sport": "hockey",
@@ -3746,7 +3768,7 @@
       "title": "APERTURA 2026 (Intermedia A)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=3",
-      "updatedAt": "2026-10-14T05:00:13.147Z",
+      "updatedAt": "2026-10-14T11:29:21.272Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=3#table-2733",
       "kind": "standings",
       "columns": [
@@ -3924,7 +3946,7 @@
       "title": "APERTURA 2026 (Intermedia A)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=3",
-      "updatedAt": "2026-10-14T05:00:13.147Z",
+      "updatedAt": "2026-10-14T11:29:21.272Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=3#scorers-2733",
       "kind": "scorers",
       "columns": [
@@ -3938,33 +3960,6 @@
           "club": false,
           "values": [
             1,
-            "Ines Etcheverry",
-            "Carrasco Polo Club",
-            6
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "María Noel Tilve",
-            "Palo y Pico",
-            6
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "Karina Bisignano",
-            "Palo y Pico",
-            6
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
             "Victoria Sola",
             "Carrasco Polo Club",
             6
@@ -3973,61 +3968,34 @@
         {
           "club": false,
           "values": [
-            5,
-            "Fiorella Caprani",
-            "Yacht Club Uruguayo",
-            5
+            2,
+            "Karina Bisignano",
+            "Palo y Pico",
+            6
           ]
         },
         {
           "club": false,
           "values": [
-            6,
-            "Milagros Barcia",
-            "The British Schools / Old Girls Club",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "VIRGINIA CASABÓ",
-            "Lobos Rugby Club",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "Ana Ines Echeverria",
-            "The British Schools / Old Girls Club",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "Sofía Peñalba",
+            3,
+            "Ines Etcheverry",
             "Carrasco Polo Club",
-            5
+            6
           ]
         },
         {
           "club": false,
           "values": [
-            10,
-            "Martina Bertolini",
-            "Club Náutico",
-            5
+            4,
+            "María Noel Tilve",
+            "Palo y Pico",
+            6
           ]
         },
         {
           "club": false,
           "values": [
-            11,
+            5,
             "Agustina Correa",
             "Lobos Rugby Club",
             5
@@ -4036,8 +4004,62 @@
         {
           "club": false,
           "values": [
+            6,
+            "Martina Bertolini",
+            "Club Náutico",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "Fiorella Caprani",
+            "Yacht Club Uruguayo",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "VIRGINIA CASABÓ",
+            "Lobos Rugby Club",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
+            "Milagros Barcia",
+            "The British Schools / Old Girls Club",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            10,
+            "Ana Ines Echeverria",
+            "The British Schools / Old Girls Club",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            11,
+            "Sofía Peñalba",
+            "Carrasco Polo Club",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             12,
-            "Federica Maria Ibarra Candau",
+            "Mariana Pino Cortes",
             "Palo y Pico",
             4
           ]
@@ -4046,26 +4068,26 @@
           "club": false,
           "values": [
             13,
-            "Maria Noel Perez Arocena",
-            "The British Schools / Old Girls Club",
-            4
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            14,
-            "Pilar Etcheverry",
-            "Colegio Los Pilares / Club Los Ceibos",
+            "Josefina Pereyra",
+            "Carrasco Polo Club",
             4
           ]
         },
         {
           "club": false,
           "values": [
+            14,
+            "Federica Maria Ibarra Candau",
+            "Palo y Pico",
+            4
+          ]
+        },
+        {
+          "club": true,
+          "values": [
             15,
-            "Ivana Paula Barrere",
-            "Woodlands School - Old Woodlands Club",
+            "Pilar Etcheverry",
+            "Colegio Los Pilares / Club Los Ceibos",
             4
           ]
         }
@@ -4078,7 +4100,7 @@
       "title": "COPA DE PLATA (Intermedia A)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=3",
-      "updatedAt": "2026-10-14T05:00:13.676Z",
+      "updatedAt": "2026-10-14T11:29:21.802Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=3#table-2762",
       "kind": "standings",
       "columns": [
@@ -4172,7 +4194,7 @@
       "title": "COPA DE PLATA (Intermedia A)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=3",
-      "updatedAt": "2026-10-14T05:00:13.676Z",
+      "updatedAt": "2026-10-14T11:29:21.802Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=3#scorers-2762",
       "kind": "scorers",
       "columns": [
@@ -4186,15 +4208,6 @@
           "club": false,
           "values": [
             1,
-            "Eugenia Pedreira",
-            "Woodlands School - Old Woodlands Club",
-            3
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
             "Sofia Raña",
             "Old Christian's Club, Stella Maris",
             3
@@ -4203,7 +4216,7 @@
         {
           "club": false,
           "values": [
-            3,
+            2,
             "SIN JUGADOR",
             "Woodlands School - Old Woodlands Club",
             3
@@ -4212,16 +4225,16 @@
         {
           "club": false,
           "values": [
-            4,
-            "Agustina Lage",
-            "Old Christian's Club, Stella Maris",
-            2
+            3,
+            "Eugenia Pedreira",
+            "Woodlands School - Old Woodlands Club",
+            3
           ]
         },
         {
           "club": false,
           "values": [
-            5,
+            4,
             "Mariana Pignatta",
             "St. Brendans School / Old Brendans Club",
             2
@@ -4230,52 +4243,16 @@
         {
           "club": false,
           "values": [
+            5,
+            "Agustina Lage",
+            "Old Christian's Club, Stella Maris",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             6,
-            "Ivana Paula Barrere",
-            "Woodlands School - Old Woodlands Club",
-            1
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "Veronica de Feo",
-            "Woodlands School - Old Woodlands Club",
-            1
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "Carolina Capurro",
-            "St. Brendans School / Old Brendans Club",
-            1
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "Fernanda Rey",
-            "Woodlands School - Old Woodlands Club",
-            1
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            10,
-            "María Clara Frontini",
-            "Colegio Los Pilares / Club Los Ceibos",
-            1
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            11,
             "María Eugenia Gamborena",
             "St. Brendans School / Old Brendans Club",
             1
@@ -4284,7 +4261,7 @@
         {
           "club": false,
           "values": [
-            12,
+            7,
             "Eugenia Curci",
             "Old Christian's Club, Stella Maris",
             1
@@ -4293,7 +4270,7 @@
         {
           "club": false,
           "values": [
-            13,
+            8,
             "Camila Guadalupe",
             "Woodlands School - Old Woodlands Club",
             1
@@ -4302,8 +4279,35 @@
         {
           "club": true,
           "values": [
-            14,
+            9,
             "María Candelaria Facello",
+            "Colegio Los Pilares / Club Los Ceibos",
+            1
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            10,
+            "María José Lenoble",
+            "Colegio Los Pilares / Club Los Ceibos",
+            1
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            11,
+            "Micaela Reyes Martínez",
+            "Colegio Los Pilares / Club Los Ceibos",
+            1
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            12,
+            "Pilar María Formento",
             "Colegio Los Pilares / Club Los Ceibos",
             1
           ]
@@ -4311,8 +4315,26 @@
         {
           "club": false,
           "values": [
-            15,
+            13,
             "Maria Valentina Rohr",
+            "Old Christian's Club, Stella Maris",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
+            "Maria Paz Alvarez",
+            "Yacht Club Uruguayo",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            15,
+            "Paz Aramendia",
             "Old Christian's Club, Stella Maris",
             1
           ]
@@ -4326,7 +4348,7 @@
       "title": "APERTURA 2026 (Sub 18)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=4",
-      "updatedAt": "2026-10-14T05:00:22.941Z",
+      "updatedAt": "2026-10-14T11:29:30.437Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=4#table-2734",
       "kind": "standings",
       "columns": [
@@ -4546,7 +4568,7 @@
       "title": "APERTURA 2026 (Sub 18)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=4",
-      "updatedAt": "2026-10-14T05:00:22.941Z",
+      "updatedAt": "2026-10-14T11:29:30.437Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=4#scorers-2734",
       "kind": "scorers",
       "columns": [
@@ -4623,33 +4645,6 @@
           "club": false,
           "values": [
             8,
-            "Milagros Bercianos",
-            "The British Schools / Old Girls Club",
-            8
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "Josefina Davies",
-            "Ivy Thomas Memorial School / Old Ivy Club",
-            8
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            10,
-            "Guillermina Risso",
-            "Colegio Los Pilares / Club Los Ceibos",
-            8
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            11,
             "Julia Sanguinetti",
             "Old Sampa Club",
             8
@@ -4658,7 +4653,7 @@
         {
           "club": false,
           "values": [
-            12,
+            9,
             "Maria Clara Macek",
             "Club Biguá de Villa Biarritz",
             8
@@ -4667,7 +4662,43 @@
         {
           "club": false,
           "values": [
+            10,
+            "Milagros Bercianos",
+            "The British Schools / Old Girls Club",
+            8
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            11,
+            "Josefina Davies",
+            "Ivy Thomas Memorial School / Old Ivy Club",
+            8
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            12,
+            "Guillermina Risso",
+            "Colegio Los Pilares / Club Los Ceibos",
+            8
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             13,
+            "Federica Vidiella",
+            "The British Schools / Old Girls Club",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
             "Agustina Mieres",
             "CLUB NORTHFIELD",
             7
@@ -4676,18 +4707,9 @@
         {
           "club": false,
           "values": [
-            14,
+            15,
             "Sofía Franco Charlone",
             "Colegio Seminario / Club Seminario",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            15,
-            "Federica Vidiella",
-            "The British Schools / Old Girls Club",
             7
           ]
         }
@@ -4700,7 +4722,7 @@
       "title": "COPA DE PLATA (Sub 18)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=4",
-      "updatedAt": "2026-10-14T05:00:23.449Z",
+      "updatedAt": "2026-10-14T11:29:30.974Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=4#table-2764",
       "kind": "standings",
       "columns": [
@@ -4762,13 +4784,13 @@
           "values": [
             4,
             "CARRASCO POLO CLUB Sub 18",
-            4,
-            2,
+            5,
+            3,
             0,
             2,
-            6,
             8,
-            6
+            8,
+            9
           ]
         },
         {
@@ -4790,12 +4812,12 @@
           "values": [
             6,
             "Lobas",
-            4,
+            5,
             0,
             1,
+            4,
             3,
-            3,
-            20,
+            22,
             1
           ]
         },
@@ -4822,7 +4844,7 @@
       "title": "COPA DE PLATA (Sub 18)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=4",
-      "updatedAt": "2026-10-14T05:00:23.449Z",
+      "updatedAt": "2026-10-14T11:29:30.974Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=4#scorers-2764",
       "kind": "scorers",
       "columns": [
@@ -4836,15 +4858,6 @@
           "club": false,
           "values": [
             1,
-            "Martina Nuñez",
-            "Woodlands School - Old Woodlands Club",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
             "JULIA GENINAZZI",
             "Woodlands School - Old Woodlands Club",
             5
@@ -4853,43 +4866,16 @@
         {
           "club": false,
           "values": [
+            2,
+            "Martina Nuñez",
+            "Woodlands School - Old Woodlands Club",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             3,
-            "Josefina Davies",
-            "Ivy Thomas Memorial School / Old Ivy Club",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "Margarita Soto Azzini",
-            "Ivy Thomas Memorial School / Old Ivy Club",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "Sofia Zagarzazu",
-            "St. Brendans School / Old Brendans Club",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "Renata Falco Amarelle",
-            "Ivy Thomas Memorial School / Old Ivy Club",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
             "Lara Mendez",
             "St. Brendans School / Old Brendans Club",
             4
@@ -4898,7 +4884,7 @@
         {
           "club": false,
           "values": [
-            8,
+            4,
             "Federica Emicuri",
             "St. Brendans School / Old Brendans Club",
             4
@@ -4907,16 +4893,43 @@
         {
           "club": false,
           "values": [
-            9,
-            "Agustina Mieres",
-            "CLUB NORTHFIELD",
-            3
+            5,
+            "Margarita Soto Azzini",
+            "Ivy Thomas Memorial School / Old Ivy Club",
+            4
           ]
         },
         {
           "club": false,
           "values": [
-            10,
+            6,
+            "Josefina Davies",
+            "Ivy Thomas Memorial School / Old Ivy Club",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "Sofia Zagarzazu",
+            "St. Brendans School / Old Brendans Club",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "Renata Falco Amarelle",
+            "Ivy Thomas Memorial School / Old Ivy Club",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
             "Josefina Ortiz",
             "CLUB NORTHFIELD",
             3
@@ -4925,7 +4938,7 @@
         {
           "club": true,
           "values": [
-            11,
+            10,
             "Paulina Mesa",
             "Colegio Los Pilares / Club Los Ceibos",
             3
@@ -4934,7 +4947,7 @@
         {
           "club": false,
           "values": [
-            12,
+            11,
             "Inés María Bremermann",
             "Ivy Thomas Memorial School / Old Ivy Club",
             3
@@ -4943,7 +4956,7 @@
         {
           "club": false,
           "values": [
-            13,
+            12,
             "Belen Vairo",
             "Woodlands School - Old Woodlands Club",
             3
@@ -4952,9 +4965,18 @@
         {
           "club": false,
           "values": [
-            14,
-            "Jennifer Baliero",
+            13,
+            "Agustina Mieres",
             "CLUB NORTHFIELD",
+            3
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
+            "Eva Silva Braña",
+            "Carrasco Polo Club",
             2
           ]
         },
@@ -4962,8 +4984,8 @@
           "club": false,
           "values": [
             15,
-            "Belén Harán",
-            "St. Brendans School / Old Brendans Club",
+            "Josefina Zunino Moreira",
+            "Lobos Rugby Club",
             2
           ]
         }
@@ -4976,7 +4998,7 @@
       "title": "APERTURA 2026 (Intermedia B)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=31",
-      "updatedAt": "2026-10-14T05:00:31.594Z",
+      "updatedAt": "2026-10-14T11:29:40.379Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=31#table-2735",
       "kind": "standings",
       "columns": [
@@ -5154,7 +5176,7 @@
       "title": "APERTURA 2026 (Intermedia B)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=31",
-      "updatedAt": "2026-10-14T05:00:31.594Z",
+      "updatedAt": "2026-10-14T11:29:40.379Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=31#scorers-2735",
       "kind": "scorers",
       "columns": [
@@ -5210,18 +5232,9 @@
           ]
         },
         {
-          "club": true,
-          "values": [
-            6,
-            "Josefina Correa",
-            "Colegio Los Pilares / Club Los Ceibos",
-            6
-          ]
-        },
-        {
           "club": false,
           "values": [
-            7,
+            6,
             "Lucía Alvarez",
             "CGU – LOS CUERVOS",
             6
@@ -5230,9 +5243,18 @@
         {
           "club": false,
           "values": [
-            8,
+            7,
             "Carolina Fernandez",
             "Old Christian's Club, Stella Maris",
+            6
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            8,
+            "Josefina Correa",
+            "Colegio Los Pilares / Club Los Ceibos",
             6
           ]
         },
@@ -5240,33 +5262,6 @@
           "club": false,
           "values": [
             9,
-            "María Agustina Arcos",
-            "Old Sampa Club",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            10,
-            "Natalia Alvarez",
-            "Nautilus Yachting Club",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            11,
-            "Matilde Affonso",
-            "CGU – LOS CUERVOS",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            12,
             "Francisca Baccino Perdomo",
             "Pucaru Stade Galulois",
             5
@@ -5275,7 +5270,7 @@
         {
           "club": false,
           "values": [
-            13,
+            10,
             "María Magdalena Narbondo",
             "Palo y Pico",
             5
@@ -5284,7 +5279,7 @@
         {
           "club": false,
           "values": [
-            14,
+            11,
             "Josefina Justo",
             "The British Schools / Old Girls Club",
             5
@@ -5293,9 +5288,36 @@
         {
           "club": false,
           "values": [
+            12,
+            "Matilde Affonso",
+            "CGU – LOS CUERVOS",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            13,
+            "María Agustina Arcos",
+            "Old Sampa Club",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
+            "Natalia Alvarez",
+            "Nautilus Yachting Club",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             15,
-            "Sofia Lopez Arriola",
-            "Club Náutico",
+            "Agostina Servidio",
+            "Nautilus Yachting Club",
             4
           ]
         }
@@ -5308,7 +5330,7 @@
       "title": "COPA DE BRONCE (Intermedia B)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=31",
-      "updatedAt": "2026-10-14T05:00:32.107Z",
+      "updatedAt": "2026-10-14T11:29:40.920Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=31#table-2775",
       "kind": "standings",
       "columns": [
@@ -5374,7 +5396,7 @@
       "title": "COPA DE BRONCE (Intermedia B)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=31",
-      "updatedAt": "2026-10-14T05:00:32.107Z",
+      "updatedAt": "2026-10-14T11:29:40.920Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=31#scorers-2775",
       "kind": "scorers",
       "columns": [
@@ -5392,7 +5414,7 @@
       "title": "APERTURA 2026 (Intermedia C)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=79",
-      "updatedAt": "2026-10-14T05:00:43.967Z",
+      "updatedAt": "2026-10-14T11:29:53.308Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=79#table-2736",
       "kind": "standings",
       "columns": [
@@ -5640,7 +5662,7 @@
       "title": "APERTURA 2026 (Intermedia C)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=79",
-      "updatedAt": "2026-10-14T05:00:43.967Z",
+      "updatedAt": "2026-10-14T11:29:53.308Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=79#scorers-2736",
       "kind": "scorers",
       "columns": [
@@ -5687,18 +5709,9 @@
           ]
         },
         {
-          "club": true,
-          "values": [
-            5,
-            "Emilia Berretta Lizasoain",
-            "Colegio Los Pilares / Club Los Ceibos",
-            9
-          ]
-        },
-        {
           "club": false,
           "values": [
-            6,
+            5,
             "Emma Cikato",
             "The British Schools / Old Girls Club",
             9
@@ -5707,9 +5720,18 @@
         {
           "club": false,
           "values": [
-            7,
+            6,
             "Milagros Albanell",
             "The British Schools / Old Girls Club",
+            9
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            7,
+            "Emilia Berretta Lizasoain",
+            "Colegio Los Pilares / Club Los Ceibos",
             9
           ]
         },
@@ -5717,15 +5739,6 @@
           "club": false,
           "values": [
             8,
-            "Isabel Cardoso",
-            "The British Schools / Old Girls Club",
-            8
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
             "Vanessa Saporta",
             "CLUB NACIONAL DE FOOTBALL",
             8
@@ -5734,7 +5747,7 @@
         {
           "club": false,
           "values": [
-            10,
+            9,
             "Matilde Pérez Vallejo",
             "Colegio Seminario / Club Seminario",
             8
@@ -5743,34 +5756,16 @@
         {
           "club": false,
           "values": [
+            10,
+            "Isabel Cardoso",
+            "The British Schools / Old Girls Club",
+            8
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             11,
-            "Margarita Etchandy",
-            "Colegio Seminario / Club Seminario",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            12,
-            "Mia Franco",
-            "Pucaru Stade Galulois",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            13,
-            "Inés Scremini",
-            "CGU – LOS CUERVOS",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            14,
             "Trinidad Fares",
             "Lobos Rugby Club",
             7
@@ -5779,9 +5774,36 @@
         {
           "club": false,
           "values": [
+            12,
+            "Inés Scremini",
+            "CGU – LOS CUERVOS",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            13,
+            "Margarita Etchandy",
+            "Colegio Seminario / Club Seminario",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
+            "Mia Franco",
+            "Pucaru Stade Galulois",
+            7
+          ]
+        },
+        {
+          "club": true,
+          "values": [
             15,
-            "María Pia Guzmán",
-            "Círculo de Tenis de Montevideo",
+            "Faustina Risso",
+            "Colegio Los Pilares / Club Los Ceibos",
             6
           ]
         }
@@ -5794,7 +5816,7 @@
       "title": "COPA DE ORO (Intermedia C)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=79",
-      "updatedAt": "2026-10-14T05:00:44.470Z",
+      "updatedAt": "2026-10-14T11:29:53.841Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=79#table-2765",
       "kind": "standings",
       "columns": [
@@ -5930,7 +5952,7 @@
       "title": "COPA DE ORO (Intermedia C)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=79",
-      "updatedAt": "2026-10-14T05:00:44.470Z",
+      "updatedAt": "2026-10-14T11:29:53.841Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=79#scorers-2765",
       "kind": "scorers",
       "columns": [
@@ -6084,7 +6106,7 @@
       "title": "APERTURA (Reserva )",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=2",
-      "updatedAt": "2026-10-14T05:00:55.030Z",
+      "updatedAt": "2026-10-14T11:30:05.429Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=2#table-2737",
       "kind": "standings",
       "columns": [
@@ -6318,7 +6340,7 @@
       "title": "APERTURA (Reserva )",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=2",
-      "updatedAt": "2026-10-14T05:00:55.030Z",
+      "updatedAt": "2026-10-14T11:30:05.429Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=2#scorers-2737",
       "kind": "scorers",
       "columns": [
@@ -6368,15 +6390,6 @@
           "club": false,
           "values": [
             5,
-            "Paz Quartara",
-            "Carrasco Polo Club",
-            10
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
             "Maria Paz Gnazzo",
             "Old Sampa Club",
             10
@@ -6385,7 +6398,25 @@
         {
           "club": false,
           "values": [
+            6,
+            "Paz Quartara",
+            "Carrasco Polo Club",
+            10
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             7,
+            "Lucila Marini",
+            "CLUB NORTHFIELD",
+            9
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
             "Micaela Domínguez",
             "Club Náutico",
             9
@@ -6394,18 +6425,9 @@
         {
           "club": false,
           "values": [
-            8,
+            9,
             "Lucia Serra",
             "Club Náutico",
-            9
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "Lucila Marini",
-            "CLUB NORTHFIELD",
             9
           ]
         },
@@ -6422,15 +6444,6 @@
           "club": false,
           "values": [
             11,
-            "Manuela Vidal",
-            "Club Náutico",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            12,
             "Manuela Iglesias",
             "Club Náutico",
             7
@@ -6439,8 +6452,17 @@
         {
           "club": false,
           "values": [
-            13,
+            12,
             "Sofia Sansalone",
+            "Club Náutico",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            13,
+            "Manuela Vidal",
             "Club Náutico",
             7
           ]
@@ -6449,7 +6471,7 @@
           "club": true,
           "values": [
             14,
-            "Pilar Etcheverry",
+            "Guillermina Risso",
             "Colegio Los Pilares / Club Los Ceibos",
             6
           ]
@@ -6458,7 +6480,7 @@
           "club": true,
           "values": [
             15,
-            "Guillermina Risso",
+            "Pilar Etcheverry",
             "Colegio Los Pilares / Club Los Ceibos",
             6
           ]
@@ -6472,7 +6494,7 @@
       "title": "COPA DE ORO (Reserva )",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=2",
-      "updatedAt": "2026-10-14T05:00:55.522Z",
+      "updatedAt": "2026-10-14T11:30:05.981Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=2#table-2759",
       "kind": "standings",
       "columns": [
@@ -6608,7 +6630,7 @@
       "title": "COPA DE ORO (Reserva )",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=2",
-      "updatedAt": "2026-10-14T05:00:55.522Z",
+      "updatedAt": "2026-10-14T11:30:05.981Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=2#scorers-2759",
       "kind": "scorers",
       "columns": [
@@ -6640,51 +6662,6 @@
           "club": false,
           "values": [
             3,
-            "Ivanna Barrios",
-            "Old Christian's Club, Stella Maris",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "Micaela Domínguez",
-            "Club Náutico",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "Sofía Mora",
-            "CLUB NORTHFIELD",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "Camila Minatta",
-            "Club Náutico",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "Lara Barrenechea",
-            "Club Náutico",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
             "Paz Quartara",
             "Carrasco Polo Club",
             4
@@ -6693,8 +6670,53 @@
         {
           "club": false,
           "values": [
-            9,
+            4,
             "Manuela Vidal",
+            "Club Náutico",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "Lara Barrenechea",
+            "Club Náutico",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "Ivanna Barrios",
+            "Old Christian's Club, Stella Maris",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "Micaela Domínguez",
+            "Club Náutico",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "Sofía Mora",
+            "CLUB NORTHFIELD",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
+            "Camila Minatta",
             "Club Náutico",
             4
           ]
@@ -6730,8 +6752,8 @@
           "club": false,
           "values": [
             13,
-            "Catalina Guichon",
-            "Carrasco Polo Club",
+            "Matilde Lourido",
+            "Club Biguá de Villa Biarritz",
             2
           ]
         },
@@ -6739,8 +6761,8 @@
           "club": false,
           "values": [
             14,
-            "Belén Laguardia",
-            "Carrasco Polo Club",
+            "Rafaela Canepa",
+            "Club Náutico",
             2
           ]
         },
@@ -6748,8 +6770,8 @@
           "club": false,
           "values": [
             15,
-            "Agustina Ripoll",
-            "St. Brendans School / Old Brendans Club",
+            "Catalina Guichon",
+            "Carrasco Polo Club",
             2
           ]
         }
@@ -6958,7 +6980,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-10-14T05:00:57.647Z",
+      "updatedAt": "2026-10-14T11:30:21.952Z",
       "sourceKey": "rugby"
     },
     {
@@ -7163,7 +7185,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-10-14T05:00:57.647Z",
+      "updatedAt": "2026-10-14T11:30:21.952Z",
       "sourceKey": "rugby"
     },
     {
@@ -7383,7 +7405,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-10-14T05:00:57.647Z",
+      "updatedAt": "2026-10-14T11:30:21.952Z",
       "sourceKey": "rugby"
     },
     {
@@ -7528,7 +7550,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-10-14T05:00:57.647Z",
+      "updatedAt": "2026-10-14T11:30:21.953Z",
       "sourceKey": "rugby"
     },
     {
@@ -7733,7 +7755,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-10-14T05:00:57.647Z",
+      "updatedAt": "2026-10-14T11:30:21.953Z",
       "sourceKey": "rugby"
     },
     {
@@ -7938,7 +7960,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-10-14T05:00:57.647Z",
+      "updatedAt": "2026-10-14T11:30:21.953Z",
       "sourceKey": "rugby"
     },
     {
@@ -8008,7 +8030,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-10-14T05:00:57.648Z",
+      "updatedAt": "2026-10-14T11:30:21.953Z",
       "sourceKey": "rugby"
     },
     {
@@ -8118,7 +8140,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-10-14T05:00:57.656Z",
+      "updatedAt": "2026-10-14T11:30:21.959Z",
       "sourceKey": "rugby"
     },
     {
@@ -8228,7 +8250,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-10-14T05:00:57.656Z",
+      "updatedAt": "2026-10-14T11:30:21.959Z",
       "sourceKey": "rugby"
     },
     {
@@ -8338,7 +8360,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-10-14T05:00:57.656Z",
+      "updatedAt": "2026-10-14T11:30:21.959Z",
       "sourceKey": "rugby"
     },
     {
@@ -8448,43 +8470,43 @@
           ]
         }
       ],
-      "updatedAt": "2026-10-14T05:00:57.656Z",
+      "updatedAt": "2026-10-14T11:30:21.959Z",
       "sourceKey": "rugby"
     }
   ],
   "diagnostics": [
     {
+      "source": "basketball|Basketball",
+      "status": "error",
+      "message": "The operation was aborted due to timeout"
+    },
+    {
       "source": "futbol|Primera",
-      "status": "ok",
-      "tables": 4
+      "status": "error",
+      "message": "The operation was aborted due to timeout"
     },
     {
       "source": "futbol|Reserva A",
-      "status": "ok",
-      "tables": 4
+      "status": "error",
+      "message": "The operation was aborted due to timeout"
     },
     {
       "source": "futbol|Reserva Verde",
-      "status": "ok",
-      "tables": 4
+      "status": "error",
+      "message": "The operation was aborted due to timeout"
     },
     {
       "source": "futbol|PreSenior",
-      "status": "ok",
-      "tables": 4
+      "status": "error",
+      "message": "The operation was aborted due to timeout"
     },
     {
       "source": "futbol|Sub 20",
-      "status": "ok",
-      "tables": 4
+      "status": "error",
+      "message": "The operation was aborted due to timeout"
     },
     {
       "source": "futbol|Sub 18",
-      "status": "ok",
-      "tables": 2
-    },
-    {
-      "source": "basketball|Basketball",
       "status": "ok",
       "tables": 2
     },
