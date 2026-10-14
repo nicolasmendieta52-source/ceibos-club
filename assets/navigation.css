@@ -1,32 +1,26 @@
-:root{--nav-height:80px;--nav-dock-height:56px}
+:root{--nav-height:56px;--nav-dock-height:56px}
 html{scroll-padding-top:var(--nav-height)}
 section[id],header[id],#archivo,.archivo-shell{scroll-margin-top:12px}
 #nav.topbar{position:fixed;inset:0 0 auto;z-index:930;display:block;padding:0;background:var(--verde-night);box-shadow:0 4px 24px rgba(0,0,0,.12)}
-#nav .nav-brand-row{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:0 4vw;height:50px}
+#nav .nav-brand-row{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 4vw;height:56px}
 #nav .brand{gap:9px}
 #nav .brand-name{font-size:1.06rem;letter-spacing:.09em}
 #nav .brand .escudo-img{width:34px;height:34px}
-#navLinks{display:flex;align-items:center;gap:clamp(16px,2vw,30px);margin-left:auto;white-space:nowrap}
-#navLinks a{font-size:.78rem;letter-spacing:.01em;font-weight:650;text-transform:none;text-decoration:none;padding:7px 2px;border-radius:0;color:var(--crema);border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
-#navLinks a:hover,#navLinks a.activo{color:var(--dorado);background:none;border-color:var(--dorado)}
+#navLinks{display:flex;align-items:center;gap:clamp(14px,1.7vw,26px);margin-left:auto;white-space:nowrap}
+#navLinks>a,#navLinks summary{display:flex;align-items:center;gap:6px;min-height:40px;font-size:.78rem;line-height:1.2;letter-spacing:.01em;font-weight:650;text-transform:none;text-decoration:none;padding:7px 2px;border-radius:0;color:var(--crema);border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+#navLinks>a:hover,#navLinks>a.activo,#navLinks summary:hover,#navLinks .nav-group[open]>summary,#navLinks .nav-group.activo>summary{color:var(--dorado);background:none;border-color:var(--dorado)}
 #nav .nav-socios{display:flex;align-items:center;justify-content:center;gap:10px;min-height:30px;padding:5px 13px;border:1px solid var(--dorado);border-radius:3px;color:var(--dorado);font-size:.72rem;line-height:1.2;font-weight:750;text-decoration:none;white-space:nowrap;transition:background .2s,color .2s}
 #nav .nav-socios:hover{background:var(--dorado);color:var(--verde-night)}
-#nav .nav-sports{display:flex;align-items:center;gap:clamp(16px,2.3vw,34px);padding:0 4vw;height:30px;background:var(--crema);color:var(--verde-night)}
-#nav .nav-sports a{font-size:.73rem;line-height:1.2;font-weight:700;letter-spacing:.025em;min-height:30px;display:flex;align-items:center;gap:8px;text-decoration:none;border-bottom:2px solid transparent;padding:5px 0 3px}
-#nav .nav-sports a:hover,#nav .nav-sports a.activo{border-color:var(--verde);color:var(--verde)}
-#nav .nav-sports .nav-interno{color:var(--verde-night);border-color:var(--dorado)}
-#nav .nav-sports .nav-sports-divider{width:1px;height:13px;background:rgba(45,72,56,.3);margin-inline:4px}
-#nav .nav-more{position:relative;margin-left:auto;height:30px}
-#nav .nav-more summary{display:flex;align-items:center;gap:6px;height:30px;padding:0 4px;color:var(--verde-night);font-size:.73rem;line-height:1.2;font-weight:700;cursor:pointer;list-style:none}
-#nav .nav-more summary::-webkit-details-marker{display:none}
-#nav .nav-more summary svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:1.5;transition:transform .2s}
-#nav .nav-more[open] summary svg{transform:rotate(180deg)}
-#nav .nav-more summary:hover,#nav .nav-more[open] summary{color:var(--verde)}
-#nav .nav-more-links{position:absolute;right:0;top:100%;width:190px;padding:8px 16px;background:var(--crema);border-top:2px solid var(--dorado);box-shadow:0 12px 24px rgba(0,0,0,.16)}
-#nav .nav-more-links a{min-height:38px;padding:10px 0;border:0;font-weight:600;letter-spacing:0}
-#nav .nav-more-links a:hover,#nav .nav-more-links a.activo{color:var(--verde);text-decoration:underline;text-underline-offset:4px}
+#navLinks .nav-group{position:relative}
+#navLinks summary{cursor:pointer;list-style:none}
+#navLinks summary::-webkit-details-marker{display:none}
+#navLinks summary svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:1.5;transition:transform .2s}
+#navLinks .nav-group[open]>summary svg{transform:rotate(180deg)}
+#navLinks .nav-group-links{position:absolute;left:-16px;top:calc(100% + 8px);width:220px;padding:8px 16px;background:var(--crema);border-top:2px solid var(--dorado);box-shadow:0 12px 24px rgba(0,0,0,.16)}
+#navLinks .nav-group-links a{display:flex;align-items:center;min-height:40px;padding:10px 0;border:0;border-radius:0;background:none;color:var(--verde-night);font-size:.78rem;line-height:1.3;font-weight:600;text-transform:none;text-decoration:none;letter-spacing:0}
+#navLinks .nav-group-links a:hover,#navLinks .nav-group-links a.activo{background:none;color:var(--verde);text-decoration:underline;text-underline-offset:4px}
 #nav a:focus-visible,#nav summary:focus-visible,#nav button:focus-visible{outline:2px solid var(--dorado);outline-offset:3px}
-#nav .nav-sports a:focus-visible,#nav summary:focus-visible{outline-color:var(--verde);outline-offset:1px}
+#navLinks .nav-group-links a:focus-visible{outline-color:var(--verde);outline-offset:1px}
 #nav #hamb{display:none;align-items:center;gap:10px;padding:8px 0;min-height:44px;background:none;border:0;color:var(--crema);cursor:pointer}
 #nav #hamb .nav-menu-label,#nav #hamb.open .nav-menu-label{width:auto;height:auto;background:none;margin:0;display:block;transform:none;opacity:1;font-size:.78rem;letter-spacing:.02em;font-weight:750}
 #hamb svg{width:24px;height:24px;fill:none;stroke:var(--dorado);stroke-width:2;stroke-linecap:round}
@@ -45,12 +39,12 @@ section[id],header[id],#archivo,.archivo-shell{scroll-margin-top:12px}
 #mobileDock{display:none}
 #mobileSectionRail{display:none!important}
 .hero-inner{padding-top:max(120px,calc(var(--nav-height) + 40px))}
-@media(min-width:901px) and (max-width:1100px){#nav .nav-brand-row{padding-inline:3vw;gap:24px}#navLinks{gap:22px}#nav .nav-sports{padding-inline:3vw;gap:24px}}
+@media(min-width:901px) and (max-width:1100px){#nav .nav-brand-row{padding-inline:2.5vw;gap:16px}#navLinks{gap:14px}#navLinks>a,#navLinks summary{font-size:.74rem}}
 @media(max-width:900px){
   :root{--nav-height:56px}
   body{padding-bottom:calc(var(--nav-dock-height) + env(safe-area-inset-bottom,0px))}
   body.nav-menu-open{overflow:hidden}
-  #navLinks,#nav .nav-sports,#nav .nav-socios{display:none}
+  #navLinks,#nav .nav-socios{display:none}
   #nav .nav-brand-row{padding:0 18px;height:56px;gap:12px}
   #nav .brand-name{font-size:1.03rem;letter-spacing:.07em}
   #nav .brand .escudo-img{width:34px;height:34px}

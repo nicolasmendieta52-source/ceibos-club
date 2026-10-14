@@ -4,7 +4,7 @@
   const toggle = document.getElementById('hamb');
   const more = document.getElementById('mobileMore');
   const dock = document.getElementById('mobileDock');
-  const desktopMore = document.getElementById('navMore');
+  const desktopGroups = [...header.querySelectorAll('[data-nav-group]')];
   const mobile = matchMedia('(max-width:900px)');
   let opener = toggle;
 
@@ -33,21 +33,30 @@
   menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
   dock.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
   header.querySelector('.brand').addEventListener('click', () => setMenu(false));
-  desktopMore.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { desktopMore.open = false; }));
+  function closeDesktopGroups() {
+    desktopGroups.forEach(group => { group.open = false; });
+  }
+  desktopGroups.forEach(group => {
+    group.addEventListener('toggle', () => {
+      if (group.open) desktopGroups.filter(other => other !== group).forEach(other => { other.open = false; });
+    });
+    group.querySelectorAll('a').forEach(link => link.addEventListener('click', closeDesktopGroups));
+    group.addEventListener('focusout', event => {
+      if (!group.contains(event.relatedTarget)) group.open = false;
+    });
+  });
   addEventListener('click', event => {
-    if (!desktopMore.contains(event.target)) desktopMore.open = false;
+    if (!desktopGroups.some(group => group.contains(event.target))) closeDesktopGroups();
   });
-  desktopMore.addEventListener('focusout', event => {
-    if (!desktopMore.contains(event.relatedTarget)) desktopMore.open = false;
-  });
-  addEventListener('hashchange', () => { setMenu(false); desktopMore.open = false; });
-  mobile.addEventListener('change', () => { setMenu(false); desktopMore.open = false; });
+  addEventListener('hashchange', () => { setMenu(false); closeDesktopGroups(); });
+  mobile.addEventListener('change', () => { setMenu(false); closeDesktopGroups(); });
 
   addEventListener('keydown', event => {
-    if (event.key === 'Escape' && desktopMore.open) {
+    const openGroup = desktopGroups.find(group => group.open);
+    if (event.key === 'Escape' && openGroup) {
       event.preventDefault();
-      desktopMore.open = false;
-      desktopMore.querySelector('summary').focus();
+      closeDesktopGroups();
+      openGroup.querySelector('summary').focus();
     }
     if (menu.hidden) return;
     if (event.key === 'Escape') {
@@ -87,6 +96,7 @@
       if (active) link.setAttribute('aria-current', 'location');
       else link.removeAttribute('aria-current');
     });
+    desktopGroups.forEach(group => group.classList.toggle('activo', Boolean(group.querySelector('a.activo'))));
     dock.querySelectorAll('a').forEach(link => {
       const target = link.getAttribute('href').slice(1);
       const active = current === target || (target === 'deportes' && ['rugby','hockey','futbol','basketball','archivo','resultados','fixture'].includes(current));
