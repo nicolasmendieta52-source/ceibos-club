@@ -153,7 +153,10 @@ function parseLigaResultsApi(rows, source, aliases, goalsByMatchId = new Map()) 
     const dateTime = ligaDateTime(row.Fecha_Hora);
     const homeScore = Number(row.GL);
     const awayScore = Number(row.GV);
-    if (!dateTime || !Number.isFinite(homeScore) || !Number.isFinite(awayScore)) continue;
+    if (!dateTime || dateTime.fecha.slice(0,4) !== String(source.temporada || now.getFullYear())
+      || row.GL == null || row.GV == null || clean(row.GL) === '' || clean(row.GV) === ''
+      || !Number.isFinite(homeScore) || !Number.isFinite(awayScore)
+      || (source.deporte === 'basketball' && homeScore === 0 && awayScore === 0)) continue;
 
     const goalEvents = goalsByMatchId.get(String(row.ID)) ?? [];
     const goleadores = [...goalEvents]
@@ -246,6 +249,8 @@ async function fetchLigaRows(source) {
 
 async function fetchLigaResultsWithScorers(source, aliases) {
   const rows = await fetchLigaRows(source);
+  // Basketball shares the results API, but does not expose football goal events.
+  if (source.deporte !== 'futbol') return parseLigaResultsApi(rows, source, aliases);
   const ceibosRows = rows.filter(row => isTeam(row.Locatario, aliases) !== isTeam(row.Visitante, aliases));
   const scorerEntries = await mapWithConcurrency(ceibosRows, 4, async row => {
     const action = isTeam(row.Locatario, aliases) ? "GolesLocatario" : "GolesVisitante";
@@ -1094,7 +1099,7 @@ async function main() {
         matches = await fetchLigaFixtureIndex(source, config.teamAliases);
       } else if (new URL(source.url).hostname === "ligauniversitaria.org.uy" && source.url.includes("/partidos/")) {
         matches = await fetchLigaFixtures(source, config.teamAliases);
-      } else if (source.deporte === "futbol" && source.url.includes("/resultados/")) {
+      } else if (new URL(source.url).hostname === "ligauniversitaria.org.uy" && source.url.includes("/resultados/")) {
         matches = await fetchLigaResultsWithScorers(source, config.teamAliases);
       } else {
         const text = source.modo === "direct" ? await fetchDirectSource(source) : await renderPage(source);

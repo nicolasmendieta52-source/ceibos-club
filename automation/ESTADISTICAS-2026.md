@@ -9,3 +9,6 @@ Cada tabla mantiene el orden y los puntos de su fuente: no se reconstruyen sanci
 Se exportan únicamente nombres deportivos y cifras, no objetos completos de las APIs, usuarios administradores ni correos. Ante un fallo se conserva la última tabla con su fecha original y una advertencia. La ejecución informa el fallo después de guardar las fuentes que sí respondieron. Una categoría sin tabla o ranking público muestra esa limitación en lugar de inventar datos (por ejemplo, Pre Intermedia de rugby o goleadores ADIC).
 
 Validación: `node --test automation/*.test.mjs`. Sincronización: `node automation/sync-competition-stats.mjs`.
+
+## Básquet: fases nuevas y playoffs
+La fuente es la página oficial de la Divisional B: https://ligauniversitaria.org.uy/estadisticas-basquetbol-b/ . La sincronización descubre sus iframes de partidos, resultados y posiciones cada vez, incluyendo las fases agregadas durante el año. Los resultados de básquet se leen por JSON y no consultan los endpoints de goleadores de fútbol. Se rechazan marcadores vacíos, 0–0 sin jugar y temporadas distintas de 2026. El 14/10 se verificó el 73–64 de Ceibos ante Universidad de Montevideo del 10/10 y los próximos cruces del 17/10 (19:45) y 19/10 (22:00).

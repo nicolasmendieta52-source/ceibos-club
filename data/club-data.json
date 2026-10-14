@@ -2539,15 +2539,6 @@
   },
   "partidos": [
     {
-      "deporte": "hockey",
-      "categoria": "Reserva",
-      "rival": "NorthField",
-      "fecha": "2026-10-03",
-      "hora": "16:00",
-      "local": false,
-      "cancha": "NorthField"
-    },
-    {
       "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "Tenis El Pinar",
@@ -2555,15 +2546,6 @@
       "hora": "11:15",
       "local": false,
       "cancha": "Tenis pinar"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Sub 18",
-      "rival": "Old Brendan's",
-      "fecha": "2026-10-03",
-      "hora": "14:00",
-      "local": true,
-      "cancha": "Los Ceibos"
     },
     {
       "deporte": "futbol",
@@ -2575,21 +2557,30 @@
       "cancha": "Los Ceibos _ ltr BUM AQOMNON FRED 8) pepsi a ZILLERTAL Z merma"
     },
     {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "NorthField",
+      "fecha": "2026-10-03",
+      "hora": "16:00",
+      "local": false,
+      "cancha": "NorthField"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Old Brendan's",
+      "fecha": "2026-10-03",
+      "hora": "14:00",
+      "local": true,
+      "cancha": "Los Ceibos"
+    },
+    {
       "deporte": "rugby",
       "categoria": "M19",
       "rival": "Old Christians",
       "fecha": "2026-10-10",
       "hora": "12:30",
       "local": false
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Nautilus",
-      "fecha": "2026-10-11",
-      "hora": "17:00",
-      "local": true,
-      "cancha": "Los Ceibos"
     },
     {
       "deporte": "futbol",
@@ -2646,6 +2637,15 @@
     },
     {
       "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Nautilus",
+      "fecha": "2026-10-11",
+      "hora": "17:00",
+      "local": true,
+      "cancha": "Los Ceibos"
+    },
+    {
+      "deporte": "hockey",
       "categoria": "Sub 18",
       "rival": "Old Ivy",
       "fecha": "2026-10-13",
@@ -2670,6 +2670,58 @@
       "cancha": "A confirmar"
     },
     {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "UNIVERSIDAD DE MONTEVIDEO",
+      "fecha": "2026-10-17",
+      "hora": "19:45",
+      "local": false,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/B221B4B.html",
+      "cancha": "G.WASTON"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "TENIS EL PINAR",
+      "fecha": "2026-10-17",
+      "hora": "11:15",
+      "local": false,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSAPD.html",
+      "cancha": "TENIS EL PINAR"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "J.M.L.M",
+      "fecha": "2026-10-17",
+      "hora": "A confirmar",
+      "local": true,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F202020AT.html",
+      "cancha": "CANCHA A FIJAR"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Northfield",
+      "fecha": "2026-10-17",
+      "hora": "15:45",
+      "local": false,
+      "fase": "COPA DE ORO (Reserva )",
+      "estado": "A Jugar",
+      "cancha": "NorthField"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Old Brendan's Club",
+      "fecha": "2026-10-17",
+      "hora": "14:00",
+      "local": true,
+      "fase": "COPA DE PLATA (Sub 18)",
+      "estado": "A Jugar",
+      "cancha": "Pilares"
+    },
+    {
       "deporte": "rugby",
       "categoria": "Intermedia",
       "rival": "Trebol",
@@ -2684,70 +2736,6 @@
       "fecha": "2026-10-17",
       "hora": "15:45",
       "local": true
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Reserva",
-      "rival": "Northfield",
-      "fecha": "2026-10-17",
-      "hora": "15:45",
-      "local": false,
-      "fase": "COPA DE ORO (Reserva )",
-      "estado": "A Jugar",
-      "cancha": "NorthField"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "TENIS EL PINAR",
-      "fecha": "2026-10-17",
-      "hora": "11:15",
-      "local": false,
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSAPD.html",
-      "cancha": "TENIS EL PINAR"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Sub 18",
-      "rival": "Old Brendan's Club",
-      "fecha": "2026-10-17",
-      "hora": "14:00",
-      "local": true,
-      "fase": "COPA DE PLATA (Sub 18)",
-      "estado": "A Jugar",
-      "cancha": "Pilares"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 20",
-      "rival": "J.M.L.M",
-      "fecha": "2026-10-17",
-      "hora": "A confirmar",
-      "local": true,
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F202020AT.html",
-      "cancha": "CANCHA A FIJAR"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Club Seminario",
-      "fecha": "2026-10-18",
-      "hora": "17:00",
-      "local": false,
-      "fase": "COPA DE BRONCE (Intermedia B)",
-      "estado": "A Designar",
-      "cancha": "Seminario"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia C",
-      "rival": "Old Christians Club",
-      "fecha": "2026-10-18",
-      "hora": "18:45",
-      "local": true,
-      "fase": "COPA DE ORO (Intermedia C)",
-      "estado": "A Designar",
-      "cancha": "Pilares"
     },
     {
       "deporte": "futbol",
@@ -2802,20 +2790,36 @@
       "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
-      "deporte": "rugby",
-      "categoria": "Intermedia",
-      "rival": "Lobos",
-      "fecha": "2026-10-24",
-      "hora": "14:00",
-      "local": true
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Club Seminario",
+      "fecha": "2026-10-18",
+      "hora": "17:00",
+      "local": false,
+      "fase": "COPA DE BRONCE (Intermedia B)",
+      "estado": "A Designar",
+      "cancha": "Seminario"
     },
     {
-      "deporte": "rugby",
-      "categoria": "M19",
-      "rival": "Lions",
-      "fecha": "2026-10-24",
-      "hora": "15:00",
-      "local": true
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Old Christians Club",
+      "fecha": "2026-10-18",
+      "hora": "18:45",
+      "local": true,
+      "fase": "COPA DE ORO (Intermedia C)",
+      "estado": "A Designar",
+      "cancha": "Pilares"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "UNIVERSIDAD DE MONTEVIDEO",
+      "fecha": "2026-10-19",
+      "hora": "22:00",
+      "local": false,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/B221B4B.html",
+      "cancha": "G.WASTON"
     },
     {
       "deporte": "futbol",
@@ -2826,14 +2830,6 @@
       "local": true,
       "fuente": "https://ligauniversitaria.org.uy/partidos/F3232PSCTA.html",
       "cancha": "MONTE VI \"LOS CEIBOS\""
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Primera",
-      "rival": "Lobos",
-      "fecha": "2026-10-24",
-      "hora": "15:45",
-      "local": true
     },
     {
       "deporte": "futbol",
@@ -2864,6 +2860,30 @@
       "local": true,
       "fuente": "https://ligauniversitaria.org.uy/partidos/F202020AT.html",
       "cancha": "CANCHA A FIJAR"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Lobos",
+      "fecha": "2026-10-24",
+      "hora": "14:00",
+      "local": true
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Lions",
+      "fecha": "2026-10-24",
+      "hora": "15:00",
+      "local": true
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Lobos",
+      "fecha": "2026-10-24",
+      "hora": "15:45",
+      "local": true
     },
     {
       "deporte": "futbol",
@@ -6685,6 +6705,14 @@
       "fase": "COPA DE ORO (Reserva )"
     },
     {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "UNIVERSIDAD DE MONTEVIDEO",
+      "gf": 73,
+      "gc": 64,
+      "fecha": "2026-10-10"
+    },
+    {
       "deporte": "futbol",
       "categoria": "PreSenior",
       "rival": "OLIMAR",
@@ -6760,7 +6788,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-13T11:30:17.983Z",
+  "actualizadoEn": "2026-10-14T11:18:11.299Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -6833,34 +6861,6 @@
         "url": "https://admin.hockey.com.uy/posiciones?category_id=2",
         "registros": 21,
         "estado": "ok"
-      },
-      {
-        "deporte": "basketball",
-        "categoria": "Basketball",
-        "url": "https://ligauniversitaria.org.uy/resultados/B221B3.html",
-        "registros": 7,
-        "estado": "ok"
-      },
-      {
-        "deporte": "basketball",
-        "categoria": "Basketball",
-        "url": "https://ligauniversitaria.org.uy/partidos/B221B3.html",
-        "registros": 0,
-        "estado": "sin-coincidencias"
-      },
-      {
-        "deporte": "basketball",
-        "categoria": "Basketball",
-        "url": "https://ligauniversitaria.org.uy/resultados/B221B.html",
-        "registros": 15,
-        "estado": "ok"
-      },
-      {
-        "deporte": "basketball",
-        "categoria": "Basketball",
-        "url": "https://ligauniversitaria.org.uy/partidos/B221B.html",
-        "registros": 0,
-        "estado": "sin-coincidencias"
       },
       {
         "deporte": "futbol",
@@ -6986,6 +6986,13 @@
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-sub-20-a/",
         "registros": 22,
+        "estado": "ok"
+      },
+      {
+        "deporte": "basketball",
+        "categoria": "Basketball",
+        "url": "https://ligauniversitaria.org.uy/estadisticas-basquetbol-b/",
+        "registros": 25,
         "estado": "ok"
       }
     ],

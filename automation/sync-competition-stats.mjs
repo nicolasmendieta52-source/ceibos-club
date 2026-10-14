@@ -85,7 +85,7 @@ export async function syncStats(){
  const jobs=[];
  const indexes=config.sources.filter(s=>s.formato==='liga-fixture-index');
  for(const s of indexes)jobs.push({key:s.deporte+'|'+s.categoria,run:()=>liga(config,[s])});
- for(const cat of ['Sub 18','Basketball']){const defs=config.sources.filter(s=>s.categoria===cat&&s.url.includes('ligauniversitaria.org.uy/partidos/'));jobs.push({key:defs[0].deporte+'|'+cat,run:()=>liga(config,defs)});}
+ for(const cat of ['Sub 18']){const defs=config.sources.filter(s=>s.categoria===cat&&s.url.includes('ligauniversitaria.org.uy/partidos/'));jobs.push({key:defs[0].deporte+'|'+cat,run:()=>liga(config,defs)});}
  for(const s of config.sources.filter(s=>s.formato==='hockey-admin'))jobs.push({key:'hockey|'+s.categoria,run:()=>hockey(s)});
  jobs.push({key:'rugby',run:async()=>rugbyTables(await(await get('https://50-22.base44.app/functions/getPublicContent',{method:'POST',headers:{'content-type':'application/json'},body:'{}'})).json())});
  for(const job of jobs){try{const rows=await job.run();if(!rows.length)throw Error('Sin tablas de Ceibos para 2026');tables.push(...rows.map(t=>({...t,sourceKey:job.key})));diagnostics.push({source:job.key,status:'ok',tables:rows.length});console.log(job.key,rows.length,'tablas');}catch(e){tables.push(...(previous.tables||[]).filter(t=>t.sourceKey===job.key).map(t=>({...t,stale:true})));diagnostics.push({source:job.key,status:'error',message:e.message});console.error(job.key,e.message);}}
