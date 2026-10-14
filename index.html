@@ -276,7 +276,7 @@ nav.topbar.solid{
 </style>
 <link rel="stylesheet" href="/assets/analytics-consent.css?v=20260922">
 <script type="module" src="/assets/analytics.js?v=20260922"></script>
-<link rel="stylesheet" href="assets/interno.css?v=20261013menu">
+<link rel="stylesheet" href="assets/interno.css?v=20261014inscripcion">
 <link rel="stylesheet" href="assets/navigation.css?v=20261014grupos">
 </head>
 <body>
@@ -949,10 +949,12 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
       <p class="interno-intro">Vuelve el clásico de fin de año. Fútbol 8, amigos y los colores de siempre. Toda la actividad del Interno, en un solo lugar.</p>
     </div>
     <div class="interno-signup">
-      <span class="interno-soon" id="interno-inscripcion-estado">Soon · Próximamente</span>
+      <span class="interno-soon" id="interno-inscripcion-estado">Contacto de inscripción</span>
       <h3>Tu lugar en el Interno</h3>
-      <p id="interno-inscripcion-texto">Acá vas a encontrar el enlace oficial de inscripción. Próximamente, toda la información para sumarte.</p>
-      <button class="btn btn-oro" id="interno-inscripcion" type="button" disabled>Inscripciones · Soon</button>
+      <p id="interno-inscripcion-texto">Para inscribir a tu equipo o consultar por el torneo, escribinos por WhatsApp.</p>
+      <a class="btn btn-oro" id="interno-inscripcion" href="https://wa.me/59891393252?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20inscribir%20a%20mi%20equipo%20al%20Interno%20Ceibos%202026." target="_blank" rel="noopener noreferrer">Inscripción por WhatsApp ↗</a>
+      <p class="interno-contact">Contacto: <a href="tel:+59891393252">091 393 252</a></p>
+      <a class="interno-reglamento-link" href="assets/reglamento-interno-f8-ceibos-2026.pdf" target="_blank" rel="noopener noreferrer">Ver reglamento 2026 (PDF) ↗</a>
     </div>
   </div>
   <div class="interno-date"><div><span>La próxima cita</span><strong><time datetime="2026-11-16">16 de noviembre</time></strong></div><a href="https://www.instagram.com/internoceibosclub/p/DeH_uJathTB/" target="_blank" rel="noopener noreferrer">Ver anuncio oficial ↗</a><span class="interno-motto">#PlantandoLaGloria</span></div>
@@ -961,7 +963,7 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 <article class="interno-slot"><div class="interno-slot-top"><span class="interno-number" aria-hidden="true">03</span><span class="interno-soon">Soon</span></div><h3>Resultados</h3><p>Todos los marcadores, fecha a fecha.</p></article>
 <article class="interno-slot"><div class="interno-slot-top"><span class="interno-number" aria-hidden="true">04</span><span class="interno-soon">Soon</span></div><h3>Posiciones</h3><p>La tabla para seguir el camino de cada equipo.</p></article>
 <article class="interno-slot"><div class="interno-slot-top"><span class="interno-number" aria-hidden="true">05</span><span class="interno-soon">Soon</span></div><h3>Goleadores</h3><p>Los nombres que hacen la diferencia.</p></article>
-<article class="interno-slot"><div class="interno-slot-top"><span class="interno-number" aria-hidden="true">06</span><span class="interno-soon">Soon</span></div><h3>Reglamento</h3><p>El formato y las reglas del torneo.</p></article></div>
+<article class="interno-slot"><div class="interno-slot-top"><span class="interno-number" aria-hidden="true">06</span><span class="interno-soon">Disponible</span></div><h3>Reglamento</h3><p>Consultá el reglamento del Interno Fútbol 8 de Ceibos Club 2026.</p><a class="interno-reglamento-link" href="assets/reglamento-interno-f8-ceibos-2026.pdf" target="_blank" rel="noopener noreferrer">Ver reglamento (PDF) ↗</a></article></div>
   <div class="interno-recuerdos" id="interno-2025" aria-labelledby="interno-2025-titulo">
     <p class="interno-kicker">La edición que nos dejó con ganas de más</p>
     <h3 class="interno-recuerdos-titulo" id="interno-2025-titulo">Así se vivió <span>2025.</span></h3>
@@ -3057,7 +3059,7 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
   .catch(() => {});
 </script>
 <script type="module" src="/notifications.js?v=20260814"></script>
-<script src="assets/interno.js?v=20261013recuerdos" defer></script>
+<script src="assets/interno.js?v=20261014inscripcion" defer></script>
 <script src="assets/navigation.js?v=20261014grupos" defer></script>
 </body>
 </html>

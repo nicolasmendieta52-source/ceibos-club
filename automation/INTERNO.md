@@ -1,6 +1,6 @@
 # Interno Ceibos
 
-## Estado al 13 de octubre de 2026
+## Estado al 14 de octubre de 2026
 
 Sección de la home: `#interno`. El usuario confirmó que es un evento grande del club.
 Perfil correcto aportado por el usuario: https://www.instagram.com/internoceibosclub/ . La bio lo identifica como la página oficial del Fútbol 8 de Ceibos.
@@ -11,11 +11,17 @@ Fuentes consultadas en el navegador:
 - https://www.instagram.com/internoceibosclub/p/DeZdcIalQ1I/ (12/10/2026): primera placa «Campeones presentes»: La Favela 4, Kiwis’ 2, Rapiñeros 1, Paso Cuello 1, Jirafa 1, Tuqui 1. No se los identifica como equipos inscritos en 2026.
 - Destacadas visibles: Mundial de IG, 8 ideal, Octavos Oro; sirven como ideas de contenido, no confirman el formato 2026.
 
-No se encontró un formulario de inscripción en las publicaciones ni en la bio visibles. Inscripción queda Soon y configurable; no se publicaron precios, horarios ni condiciones supuestas.
+No se encontró un formulario de inscripción en las publicaciones ni en la bio visibles. El usuario aportó el contacto de inscripción y el reglamento 2026 el 14/10/2026. Fixture, equipos, resultados, posiciones y goleadores siguen en Soon.
 
 ## Inscripción
 
-Editar `data/interno.json`: poner el enlace HTTPS del formulario oficial en `registrationUrl` y `registrationOpen: true`. El botón permanece en Soon hasta entonces. No usar el formulario del gimnasio.
+El contacto confirmado por el usuario es **091 393 252**. El botón abre WhatsApp en `https://wa.me/59891393252`; el teléfono también tiene enlace de llamada. La web no afirma que haya un formulario disponible.
+
+Si se aporta un formulario oficial, editar `data/interno.json`: poner su enlace HTTPS en `registrationUrl` y `registrationOpen: true`. Mientras no esté configurado, se conserva el contacto por WhatsApp. No usar el formulario del gimnasio.
+
+## Reglamento 2026
+
+El PDF original aportado por el usuario se publica sin modificaciones en `assets/reglamento-interno-f8-ceibos-2026.pdf`. Tiene 7 páginas y se puede abrir desde la tarjeta de inscripción y desde el apartado Reglamento. Ambos enlaces abren el PDF en una pestaña nueva.
 
 ## Recuerdos de 2025
 
@@ -31,10 +37,9 @@ Cada publicación mantiene un enlace directo visible; el contenido incrustado de
 
 - Enlace del formulario vigente.
 - Horarios, sede/canchas definitivas y cronograma completo (anuncio: 16/11/2026, Fútbol 8).
-- Quiénes pueden jugar, edades/categorías, cupos, precio, cierre de inscripción y contacto de organización.
+- Confirmaciones de la organización sobre cupos, precio y cierre de inscripción.
 - Formato: sorteo o inscripción por equipos, planteles, capitanes, grupos y desempates.
 - Fixture con cancha, fecha y hora; resultados validados por organización.
-- Reglamento, duración de partidos, cambios y sanciones.
 - Criterios para posiciones y goleadores.
 - Fotos, identidad visual del Interno y permisos de publicación.
 
