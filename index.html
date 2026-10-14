@@ -277,6 +277,7 @@ nav.topbar.solid{
 <link rel="stylesheet" href="/assets/analytics-consent.css?v=20260922">
 <script type="module" src="/assets/analytics.js?v=20260922"></script>
 <link rel="stylesheet" href="assets/interno.css?v=20261013menu">
+<link rel="stylesheet" href="assets/navigation.css?v=20261013doble">
 </head>
 <body>
 <!-- Árbol decorativo (watermark) — el escudo oficial va como imagen PNG del manual -->
@@ -311,69 +312,51 @@ nav.topbar.solid{
 <div id="progreso"></div>
 
 <!-- ======================= NAV ======================= -->
-<nav class="topbar" id="nav">
-  <a class="brand" href="#inicio">
-    <img class="escudo-img" data-escudo alt="Escudo Ceibos Club">
-    <span class="brand-name">CEIBOS <em>CLUB</em></span>
-  </a>
-  <div class="nav-links" id="navLinks">
-    <a href="#noticias">Noticias</a>
-    <div class="nav-deportes">
-      <a href="#deportes">Deportes</a>
-      <div class="deportes-menu" aria-label="Ir a un deporte">
-        <a href="#rugby" data-deporte-link="rugby">Rugby</a>
-        <a href="#hockey" data-deporte-link="hockey">Hockey</a>
-        <a href="#futbol" data-deporte-link="futbol">Fútbol</a>
-        <a href="#basketball" data-deporte-link="basketball">Basketball</a>
-      </div>
-    </div>
-    <a href="#archivo">Archivo histórico</a>
-    <a href="#resultados">Resultados</a>
-    <a href="#fixture">Fixture</a>
-    <a href="#interno">Interno</a>
-    <a href="#vida">Vida Ceibos</a>
-    <a href="#shop">Shop</a>
-    <a href="#solidario">Solidario</a>
-    <a href="#club">El Club</a>
-    <a href="#predio">Predio</a>
-    <a href="https://socios.ceibosclub.com" target="_blank" rel="noopener noreferrer">Socios</a>
-    <a href="#contacto" class="nav-cta">Sumate</a>
+<header class="topbar" id="nav">
+  <div class="nav-utility"><span>Totus Tuus · Desde 2014</span><a href="https://socios.ceibosclub.com" target="_blank" rel="noopener noreferrer">Zona socios ↗</a></div>
+  <div class="nav-brand-row">
+    <a class="brand" href="#inicio"><img class="escudo-img" data-escudo alt="Escudo Ceibos Club"><span class="brand-name">CEIBOS <em>CLUB</em></span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Vida del club"><a href="#noticias" data-nav-section="noticias">Noticias</a>
+<a href="#club" data-nav-section="club">El Club</a>
+<a href="#vida" data-nav-section="vida">Vida Ceibos</a>
+<a href="#predio" data-nav-section="predio">Predio</a>
+<a href="#shop" data-nav-section="shop">Shop</a>
+<a href="#solidario" data-nav-section="solidario">Solidario</a>
+<a href="#contacto" data-nav-section="contacto">Sumate</a></nav>
+    <button id="hamb" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMobile"><span class="nav-menu-label">Menú</span><svg class="nav-icon-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg><svg class="nav-icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M5 19 19 5"/></svg></button>
   </div>
-  <button id="hamb" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMobile"><span></span><span></span><span></span></button>
+  <nav class="nav-sports" aria-label="Deportes y torneo"><a href="#rugby" data-nav-section="rugby" data-deporte-link="rugby">Rugby</a>
+<a href="#hockey" data-nav-section="hockey" data-deporte-link="hockey">Hockey</a>
+<a href="#futbol" data-nav-section="futbol" data-deporte-link="futbol">Fútbol</a>
+<a href="#basketball" data-nav-section="basketball" data-deporte-link="basketball">Basketball</a><span class="nav-sports-divider" aria-hidden="true"></span><a href="#interno" data-nav-section="interno" class="nav-interno">Interno</a>
+<a href="#fixture" data-nav-section="fixture">Fixture</a>
+<a href="#resultados" data-nav-section="resultados">Resultados</a>
+<a href="#archivo" data-nav-section="archivo">Archivo histórico</a></nav>
+</header>
+<nav class="nav-mobile" id="navMobile" aria-label="Menú completo" aria-hidden="true" hidden inert>
+  <div class="nav-mobile-group"><h2>En la cancha</h2><div class="nav-mobile-grid"><a href="#rugby" data-nav-section="rugby" data-deporte-link="rugby">Rugby</a>
+<a href="#hockey" data-nav-section="hockey" data-deporte-link="hockey">Hockey</a>
+<a href="#futbol" data-nav-section="futbol" data-deporte-link="futbol">Fútbol</a>
+<a href="#basketball" data-nav-section="basketball" data-deporte-link="basketball">Basketball</a>
+<a href="#fixture" data-nav-section="fixture">Fixture</a>
+<a href="#resultados" data-nav-section="resultados">Resultados</a>
+<a href="#archivo" data-nav-section="archivo">Archivo histórico</a>
+<a href="#interno" data-nav-section="interno" class="nav-interno">Interno</a></div></div>
+  <div class="nav-mobile-group"><h2>En el club</h2><div class="nav-mobile-grid"><a href="#noticias" data-nav-section="noticias">Noticias</a>
+<a href="#club" data-nav-section="club">El Club</a>
+<a href="#vida" data-nav-section="vida">Vida Ceibos</a>
+<a href="#predio" data-nav-section="predio">Predio</a>
+<a href="#shop" data-nav-section="shop">Shop</a>
+<a href="#solidario" data-nav-section="solidario">Solidario</a>
+<a href="#gym-campaign" data-nav-section="gym-campaign">Gimnasio</a>
+<a href="#contacto" data-nav-section="contacto">Sumate</a></div></div>
+  <a class="nav-mobile-socios" href="https://socios.ceibosclub.com" target="_blank" rel="noopener noreferrer">Zona socios ↗</a>
 </nav>
-<div class="nav-mobile" id="navMobile" aria-label="Navegación principal" aria-hidden="true">
-  <a href="#noticias">Noticias</a>
-  <a href="#deportes">Deportes</a>
-  <a href="#archivo">Archivo histórico</a>
-  <a href="#resultados">Resultados</a>
-  <a href="#fixture">Fixture</a>
-  <a href="#interno">Interno</a>
-    <a href="#vida">Vida Ceibos</a>
-  <a href="#shop">Shop</a>
-  <a href="#solidario">Solidario</a>
-  <a href="#club">El Club</a>
-  <a href="#predio">Predio</a>
-  <a href="https://socios.ceibosclub.com" target="_blank" rel="noopener noreferrer">Socios</a>
-  <a href="#contacto">Sumate</a>
-</div>
-<nav class="mobile-section-rail" id="mobileSectionRail" aria-label="Secciones de la página">
-  <div class="mobile-section-rail-track" id="mobileSectionRailTrack">
-    <a href="#inicio" data-rail-section="inicio">Inicio</a>
-    <a href="#gym-campaign" data-rail-section="gym-campaign">Gimnasio</a>
-    <a href="#partido-destacado" data-rail-section="partido-destacado">Próximo</a>
-    <a href="#noticias" data-rail-section="noticias">Noticias</a>
-    <a href="#deportes" data-rail-section="deportes">Deportes</a>
-    <a href="#archivo" data-rail-section="archivo">Archivo</a>
-    <a href="#resultados" data-rail-section="resultados">Resultados</a>
-    <a href="#fixture" data-rail-section="fixture">Fixture</a>
-    <a href="#vida" data-rail-section="vida">Vida</a>
-    <a href="#shop" data-rail-section="shop">Shop</a>
-    <a href="#solidario" data-rail-section="solidario">Solidario</a>
-    <a href="#club" data-rail-section="club">El club</a>
-    <a href="#predio" data-rail-section="predio">Predio</a>
-    <a href="#socios" data-rail-section="socios">Socios</a>
-    <a href="#contacto" data-rail-section="contacto">Sumate</a>
-  </div>
+<nav id="mobileDock" aria-label="Accesos rápidos">
+  <a href="#inicio" class="activo" aria-current="location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10h-6v-7H9v7H3z"/></svg><span>Inicio</span></a>
+  <a href="#deportes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v5c0 4-2 6-5 6S7 12 7 8zM7 5H3v2c0 3 2 5 5 5M17 5h4v2c0 3-2 5-5 5M12 14v6M8 21h8"/></svg><span>Deportes</span></a>
+  <a href="#interno" class="dock-interno"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V3c5-3 9 3 14 0v11c-5 3-9-3-14 0"/></svg><span>Interno</span></a>
+  <button id="mobileMore" type="button" aria-controls="navMobile" aria-expanded="false" aria-label="Abrir menú completo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>Más</span></button>
 </nav>
 
 <!-- ======================= HERO ======================= -->
@@ -2911,21 +2894,7 @@ addEventListener("scroll", () => {
 }, {passive:true});
 volver.onclick = () => scrollTo({top:0, behavior:"smooth"});
 
-/* menú mobile */
-const hamb = document.getElementById("hamb");
-const navMobile = document.getElementById("navMobile");
-function cerrarMenu(){
-  hamb.classList.remove("open"); navMobile.classList.remove("open");
-  hamb.setAttribute("aria-expanded", "false"); navMobile.setAttribute("aria-hidden", "true");
-}
-hamb.onclick = () => {
-  const abierto = hamb.classList.toggle("open"); navMobile.classList.toggle("open", abierto);
-  hamb.setAttribute("aria-expanded", String(abierto)); navMobile.setAttribute("aria-hidden", String(!abierto));
-  if (abierto) navMobile.querySelector("a")?.focus();
-};
-navMobile.querySelectorAll("a").forEach(a => a.onclick = cerrarMenu);
 document.querySelectorAll("[data-deporte-link]").forEach(a => a.addEventListener("click", () => activarDeporte(a.dataset.deporteLink)));
-addEventListener("keydown", e => { if (e.key === "Escape" && hamb.classList.contains("open")) { cerrarMenu(); hamb.focus(); } });
 
 /* Modo partido + postal social. Los botones son dinamicos porque cambian junto
    con la agenda, por eso se resuelven mediante delegacion de eventos. */
@@ -2981,65 +2950,6 @@ const ioNum = new IntersectionObserver(entries => {
   });
 }, {threshold:.6});
 document.querySelectorAll("[data-contar]").forEach(el => ioNum.observe(el));
-
-/* scroll-spy en nav */
-const secciones = [...document.querySelectorAll("section[id], header[id]")];
-const links = [...document.querySelectorAll(".nav-links a")];
-const ioSpy = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (!e.isIntersecting) return;
-    links.forEach(l => l.classList.toggle("activo", l.getAttribute("href") === "#"+e.target.id && !l.classList.contains("nav-cta")));
-  });
-}, {rootMargin:"-40% 0px -55% 0px"});
-secciones.forEach(s => ioSpy.observe(s));
-
-/* navegador lateral móvil: acompaña el scroll y destaca la sección actual */
-const mobileSectionRail = document.getElementById("mobileSectionRail");
-const mobileSectionRailTrack = document.getElementById("mobileSectionRailTrack");
-const mobileSectionRailLinks = [...document.querySelectorAll("[data-rail-section]")];
-let mobileSectionRailFrame = 0;
-let mobileSectionRailIdleTimer = 0;
-function actualizarMobileSectionRail(){
-  mobileSectionRailFrame = 0;
-  if (!mobileSectionRail || !mobileSectionRailTrack || !mobileSectionRailLinks.length || innerWidth > 820) return;
-  const foco = scrollY + innerHeight * .42;
-  let indiceActivo = 0;
-  mobileSectionRailLinks.forEach((link, indice) => {
-    const destino = document.getElementById(link.dataset.railSection);
-    if (destino && destino.offsetTop <= foco) indiceActivo = indice;
-  });
-  mobileSectionRailLinks.forEach((link, indice) => {
-    const distancia = Math.abs(indice - indiceActivo);
-    link.classList.toggle("rail-activo", distancia === 0);
-    link.classList.toggle("rail-cerca", distancia === 1);
-    link.classList.toggle("rail-media", distancia === 2);
-    if (distancia === 0) link.setAttribute("aria-current", "location");
-    else link.removeAttribute("aria-current");
-  });
-  const paso = mobileSectionRailLinks[0].offsetHeight || 38;
-  const desplazamiento = mobileSectionRail.clientHeight / 2 - paso / 2 - indiceActivo * paso;
-  mobileSectionRailTrack.style.transform = `translate3d(0,${Math.round(desplazamiento)}px,0)`;
-}
-function solicitarMobileSectionRail(){
-  if (mobileSectionRailFrame) return;
-  mobileSectionRailFrame = requestAnimationFrame(actualizarMobileSectionRail);
-}
-function mostrarMobileSectionRail(){
-  if (!mobileSectionRail || innerWidth > 820) return;
-  mobileSectionRail.classList.add("rail-visible");
-  clearTimeout(mobileSectionRailIdleTimer);
-  mobileSectionRailIdleTimer = setTimeout(() => {
-    mobileSectionRail.classList.remove("rail-visible");
-  }, 950);
-  solicitarMobileSectionRail();
-}
-addEventListener("scroll", mostrarMobileSectionRail, {passive:true});
-addEventListener("resize", () => {
-  if (innerWidth > 820) mobileSectionRail?.classList.remove("rail-visible");
-  solicitarMobileSectionRail();
-}, {passive:true});
-addEventListener("load", actualizarMobileSectionRail, {once:true});
-actualizarMobileSectionRail();
 
 /* primer render con los datos embebidos */
 renderDinamico();
@@ -3125,5 +3035,6 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
 </script>
 <script type="module" src="/notifications.js?v=20260814"></script>
 <script src="assets/interno.js?v=20261013recuerdos" defer></script>
+<script src="assets/navigation.js?v=20261013doble" defer></script>
 </body>
 </html>
