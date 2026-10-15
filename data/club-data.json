@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-15T11:37:45.587Z",
+        "updatedAt": "2026-10-15T17:06:57.073Z",
         "tables": [
           {
             "id": 2291,
@@ -39,12 +39,12 @@
                 "position": 1,
                 "teamId": 483,
                 "name": "Scuola Italiana 1886",
-                "pj": 7,
+                "pj": 8,
                 "pg": 5,
                 "pe": 1,
-                "pp": 1,
-                "gf": 11,
-                "gc": 4,
+                "pp": 2,
+                "gf": 14,
+                "gc": 8,
                 "points": 16
               },
               {
@@ -73,6 +73,30 @@
               },
               {
                 "position": 4,
+                "teamId": 544,
+                "name": "Ivy Thomas 40",
+                "pj": 8,
+                "pg": 4,
+                "pe": 1,
+                "pp": 3,
+                "gf": 16,
+                "gc": 13,
+                "points": 13
+              },
+              {
+                "position": 5,
+                "teamId": 655,
+                "name": "Sta Elena Lagomar 40",
+                "pj": 8,
+                "pg": 4,
+                "pe": 1,
+                "pp": 3,
+                "gf": 15,
+                "gc": 15,
+                "points": 13
+              },
+              {
+                "position": 6,
                 "teamId": 730,
                 "name": "Club J.Maria",
                 "pj": 6,
@@ -84,7 +108,7 @@
                 "points": 12
               },
               {
-                "position": 5,
+                "position": 7,
                 "teamId": 658,
                 "name": "Aleman Schwarz",
                 "pj": 7,
@@ -96,40 +120,16 @@
                 "points": 12
               },
               {
-                "position": 6,
-                "teamId": 655,
-                "name": "Sta Elena Lagomar 40",
-                "pj": 7,
-                "pg": 4,
-                "pe": 0,
-                "pp": 3,
-                "gf": 13,
-                "gc": 13,
-                "points": 12
-              },
-              {
-                "position": 7,
-                "teamId": 544,
-                "name": "Ivy Thomas 40",
-                "pj": 7,
-                "pg": 3,
-                "pe": 1,
-                "pp": 3,
-                "gf": 13,
-                "gc": 11,
-                "points": 10
-              },
-              {
                 "position": 8,
                 "teamId": 653,
                 "name": "Ceibos Club senior 40",
-                "pj": 7,
+                "pj": 8,
                 "pg": 3,
-                "pe": 1,
+                "pe": 2,
                 "pp": 3,
-                "gf": 10,
-                "gc": 12,
-                "points": 10
+                "gf": 12,
+                "gc": 14,
+                "points": 11
               },
               {
                 "position": 9,
@@ -145,6 +145,18 @@
               },
               {
                 "position": 10,
+                "teamId": 55,
+                "name": "San Pablo",
+                "pj": 8,
+                "pg": 3,
+                "pe": 0,
+                "pp": 5,
+                "gf": 13,
+                "gc": 14,
+                "points": 9
+              },
+              {
+                "position": 11,
                 "teamId": 525,
                 "name": "Old Sampa",
                 "pj": 7,
@@ -156,7 +168,7 @@
                 "points": 8
               },
               {
-                "position": 11,
+                "position": 12,
                 "teamId": 73,
                 "name": "La Mennais Celeste",
                 "pj": 7,
@@ -168,7 +180,7 @@
                 "points": 7
               },
               {
-                "position": 12,
+                "position": 13,
                 "teamId": 388,
                 "name": "San Juan Sushi",
                 "pj": 6,
@@ -180,27 +192,15 @@
                 "points": 6
               },
               {
-                "position": 13,
-                "teamId": 55,
-                "name": "San Pablo",
-                "pj": 7,
-                "pg": 2,
-                "pe": 0,
-                "pp": 5,
-                "gf": 9,
-                "gc": 11,
-                "points": 6
-              },
-              {
                 "position": 14,
                 "teamId": 510,
                 "name": "Old Woodlands master",
-                "pj": 5,
+                "pj": 6,
                 "pg": 0,
                 "pe": 1,
-                "pp": 4,
-                "gf": 5,
-                "gc": 10,
+                "pp": 5,
+                "gf": 7,
+                "gc": 13,
                 "points": 1
               }
             ]
@@ -247,6 +247,18 @@
               },
               {
                 "position": 4,
+                "teamId": 732,
+                "name": "HCA +40",
+                "pj": 8,
+                "pg": 5,
+                "pe": 0,
+                "pp": 3,
+                "gf": 19,
+                "gc": 11,
+                "points": 15
+              },
+              {
+                "position": 5,
                 "teamId": 647,
                 "name": "Erik Erikson",
                 "pj": 8,
@@ -258,7 +270,7 @@
                 "points": 15
               },
               {
-                "position": 5,
+                "position": 6,
                 "teamId": 719,
                 "name": "Ceibos Club amarillo",
                 "pj": 8,
@@ -270,7 +282,7 @@
                 "points": 14
               },
               {
-                "position": 6,
+                "position": 7,
                 "teamId": 746,
                 "name": "Orange Trouville",
                 "pj": 8,
@@ -282,7 +294,7 @@
                 "points": 13
               },
               {
-                "position": 7,
+                "position": 8,
                 "teamId": 447,
                 "name": "Saint George rojo",
                 "pj": 7,
@@ -294,31 +306,7 @@
                 "points": 13
               },
               {
-                "position": 8,
-                "teamId": 732,
-                "name": "HCA +40",
-                "pj": 7,
-                "pg": 4,
-                "pe": 0,
-                "pp": 3,
-                "gf": 16,
-                "gc": 11,
-                "points": 12
-              },
-              {
                 "position": 9,
-                "teamId": 194,
-                "name": "Old Clifton",
-                "pj": 7,
-                "pg": 2,
-                "pe": 3,
-                "pp": 2,
-                "gf": 12,
-                "gc": 14,
-                "points": 9
-              },
-              {
-                "position": 10,
                 "teamId": 704,
                 "name": "Pio 40",
                 "pj": 7,
@@ -327,6 +315,18 @@
                 "pp": 4,
                 "gf": 10,
                 "gc": 12,
+                "points": 9
+              },
+              {
+                "position": 10,
+                "teamId": 194,
+                "name": "Old Clifton",
+                "pj": 8,
+                "pg": 2,
+                "pe": 3,
+                "pp": 3,
+                "gf": 12,
+                "gc": 17,
                 "points": 9
               },
               {
@@ -381,6 +381,22 @@
           }
         ],
         "matches": [
+          {
+            "id": 134749,
+            "matchday": 1,
+            "status": "finished",
+            "scheduled_at": "2026-10-15T00:00:00",
+            "home_goals": 2,
+            "away_goals": 2,
+            "home_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            },
+            "away_team": {
+              "id": 655,
+              "name": "Sta Elena Lagomar 40"
+            }
+          },
           {
             "id": 134935,
             "matchday": 1,
@@ -622,22 +638,6 @@
             }
           },
           {
-            "id": 134749,
-            "matchday": 1,
-            "status": "confirmed",
-            "scheduled_at": "2026-10-15T00:00:00",
-            "home_goals": null,
-            "away_goals": null,
-            "home_team": {
-              "id": 653,
-              "name": "Ceibos Club senior 40"
-            },
-            "away_team": {
-              "id": 655,
-              "name": "Sta Elena Lagomar 40"
-            }
-          },
-          {
             "id": 134939,
             "matchday": 2,
             "status": "pending",
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-15T11:37:45.722Z",
+        "updatedAt": "2026-10-15T17:06:57.351Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-15T11:37:45.779Z",
+        "updatedAt": "2026-10-15T17:06:57.461Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-15T11:37:45.856Z",
+        "updatedAt": "2026-10-15T17:06:57.580Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-15T11:37:45.927Z",
+        "updatedAt": "2026-10-15T17:06:57.729Z",
         "tables": [
           {
             "id": 2239,
@@ -2590,20 +2590,6 @@
       "hora": "17:00",
       "local": true,
       "cancha": "Los Ceibos"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +40",
-      "rival": "Sta Elena Lagomar 40",
-      "fecha": "2026-10-14",
-      "hora": "21:00",
-      "local": true,
-      "fase": "ADIC · Clausura Copas",
-      "adicId": 134749,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club senior 40",
-      "estado": "Confirmado",
-      "cancha": "A confirmar"
     },
     {
       "deporte": "hockey",
@@ -6812,10 +6798,23 @@
       "gc": 4,
       "fecha": "2026-10-13",
       "fase": "COPA DE PLATA (Sub 18)"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "Sta Elena Lagomar 40",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-10-14",
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134749,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": true
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-15T11:41:06.799Z",
+  "actualizadoEn": "2026-10-15T17:10:01.968Z",
   "diagnostico": {
     "fuentes": [
       {
