@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-15T17:06:57.073Z",
+        "updatedAt": "2026-10-15T21:29:18.074Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-15T17:06:57.351Z",
+        "updatedAt": "2026-10-15T21:29:18.381Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-15T17:06:57.461Z",
+        "updatedAt": "2026-10-15T21:29:18.504Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-15T17:06:57.580Z",
+        "updatedAt": "2026-10-15T21:29:18.654Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-15T17:06:57.729Z",
+        "updatedAt": "2026-10-15T21:29:18.797Z",
         "tables": [
           {
             "id": 2239,
@@ -2603,6 +2603,16 @@
       "cancha": "Pilares"
     },
     {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "J.M.L.M",
+      "fecha": "2026-10-16",
+      "hora": "20:00",
+      "local": true,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F202020AT.html",
+      "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
       "deporte": "basketball",
       "categoria": "Basketball",
       "rival": "UNIVERSIDAD DE MONTEVIDEO",
@@ -2656,16 +2666,6 @@
       "local": false,
       "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSAPD.html",
       "cancha": "TENIS EL PINAR"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 20",
-      "rival": "J.M.L.M",
-      "fecha": "2026-10-17",
-      "hora": "15:30",
-      "local": true,
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F202020AT.html",
-      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "hockey",
@@ -6814,7 +6814,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-15T17:10:01.968Z",
+  "actualizadoEn": "2026-10-15T21:32:26.404Z",
   "diagnostico": {
     "fuentes": [
       {
