@@ -5,6 +5,7 @@ El código ya incluye:
 - selección de Fútbol, Rugby, Hockey y Basketball;
 - aviso cuando la automatización encuentra un partido nuevo;
 - recordatorio el mismo día del partido;
+- preparación del aviso 5 minutos antes del fixture y envío mediante temporizador a la hora de inicio;
 - funcionamiento con la web cerrada mediante Web Push;
 - eliminación automática de suscripciones vencidas;
 - control para evitar avisos duplicados.
@@ -109,3 +110,18 @@ Para probar desde un teléfono:
 - **Android o PC:** abrir la web, tocar la campana y aceptar el permiso del navegador.
 
 La notificación de confirmación aparece inmediatamente. Las deportivas se envían cuando la automatización detecta novedades o partidos correspondientes a ese día.
+
+## Avisos a la hora del fixture
+
+`Avisar inicio de partidos` despierta el vigilante cada 5 minutos y después de cada actualización del club. Si hay partidos próximos, permanece activo hasta 3 horas: no se cancela cuando llega otra ejecución.
+
+- Lee la fecha y hora de cada partido con la zona `America/Montevideo`.
+- Cinco minutos antes vuelve a leer el fixture y prepara los suscriptores de ese deporte.
+- Un temporizador independiente dispara el envío a la hora pactada. Las lecturas periódicas del fixture no bloquean ese temporizador.
+- Comprueba cambios cada minuto; elimina o reprograma los temporizadores si el fixture cambia o se suspende un partido.
+- La colección privada `notificationStartDispatches` de Firestore reserva los envíos y conserva los ya enviados, incluso si se reinicia el workflow o se actualiza el archivo público de auditoría.
+- El workflow general conserva los avisos de partidos nuevos y del día; los inicios quedan a cargo del vigilante para evitar dos emisores compitiendo.
+
+Los logs distinguen `Aviso preparado` y `Envío de inicio`, con la hora prevista y la real en UTC. `workflow_dispatch` permite activar `dry_run` para verificar la planificación sin enviar mensajes. Prueba local: `node automation/watch-match-starts.mjs --dry-run`.
+
+GitHub no garantiza que su cron arranque a una hora exacta. La vigilancia anticipada reduce esa dependencia, pero una caída o demora que impida arrancar al proceso antes del partido aún puede retrasar un aviso. La recepción final también depende del servicio push, de la conexión y del dispositivo. Para un SLA de puntualidad habría que usar un servicio de programación dedicado fuera de GitHub Actions.

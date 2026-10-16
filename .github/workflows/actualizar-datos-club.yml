@@ -49,7 +49,7 @@ jobs:
           APIFY_INSTAGRAM_RESULTS_LIMIT: "5"
       - name: Enviar notificaciones de partidos
         continue-on-error: true
-        run: npm run notify:club -- --previous "$RUNNER_TEMP/club-data-before.json"
+        run: npm run notify:club -- --skip-starts --previous "$RUNNER_TEMP/club-data-before.json"
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}

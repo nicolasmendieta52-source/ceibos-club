@@ -1,5 +1,6 @@
 const DEPORTES = new Set(["futbol", "rugby", "hockey", "basketball"]);
 export const VENTANA_INICIO_MINUTOS = 4 * 60;
+export const PREPARACION_INICIO_MINUTOS = 5;
 
 export function normalizar(valor) {
   return String(valor ?? "")
@@ -58,6 +59,39 @@ export function minutosDesdeInicio(partido, ahora = new Date(), hoy = fechaMonte
   if (partido?.fecha === hoy) return horaMontevideo(ahora) - minutoPartido;
   if (partido?.fecha === fechaAnteriorISO(hoy)) return horaMontevideo(ahora) + 24 * 60 - minutoPartido;
   return null;
+}
+
+// Resolve the fixture's local wall clock through the IANA timezone, including midnight.
+export function instanteInicio(partido) {
+  const fecha = String(partido?.fecha || '');
+  const hora = String(partido?.hora || '').match(/^(\d{1,2}):(\d{2})$/);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(fecha) || !hora || Number(hora[1]) > 23 || Number(hora[2]) > 59) return null;
+  const local = `${fecha}T${hora[1].padStart(2, '0')}:${hora[2]}:00.000Z`;
+  const naive = Date.parse(local);
+  if (!Number.isFinite(naive) || new Date(naive).toISOString() !== local) return null;
+  const formatter = new Intl.DateTimeFormat('en', {
+    timeZone: 'America/Montevideo', year:'numeric', month:'2-digit', day:'2-digit',
+    hour:'2-digit', minute:'2-digit', second:'2-digit', hourCycle:'h23'
+  });
+  const parts = Object.fromEntries(formatter.formatToParts(naive).map(p => [p.type, p.value]));
+  const rendered = Date.UTC(Number(parts.year), Number(parts.month) - 1, Number(parts.day), Number(parts.hour), Number(parts.minute), Number(parts.second));
+  return naive + (naive - rendered);
+}
+
+export function planificarInicios(datos, estado = {}, ahora = Date.now(), hasta = ahora + 180 * 60_000) {
+  const groups = new Map();
+  for (const partido of datos?.partidos || []) {
+    const deporte = deporteValido(partido.deporte);
+    const inicio = instanteInicio(partido);
+    const clave = clavePartido(partido);
+    if (!deporte || inicio === null || inicio > hasta || ahora - inicio >= VENTANA_INICIO_MINUTOS * 60_000 || estado.sentStart?.[clave]) continue;
+    if (/cancelad|suspendid|postergad|aplazad/.test(normalizar(partido.estado))) continue;
+    const id = `${deporte}|${inicio}`;
+    if (!groups.has(id)) groups.set(id, {id, deporte, inicio, preparar:inicio - PREPARACION_INICIO_MINUTOS * 60_000, partidos:[]});
+    const group = groups.get(id);
+    if (!group.partidos.some(p => clavePartido(p) === clave)) group.partidos.push(partido);
+  }
+  return [...groups.values()].sort((a,b) => a.inicio - b.inicio);
 }
 
 export function detectarEventos(datosAnteriores, datosActuales, estado = {}, hoy = fechaMontevideo(), ahora = new Date(), ventanaInicio = VENTANA_INICIO_MINUTOS) {

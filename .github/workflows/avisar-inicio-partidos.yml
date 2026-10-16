@@ -2,22 +2,30 @@ name: Avisar inicio de partidos
 
 on:
   schedule:
-    # GitHub ejecuta cron en UTC y puede demorar tareas programadas. El programa
-    # compara con Montevideo y recupera avisos demorados sin repetirlos.
+    # Despierta el vigilante con anticipación. Una vez activo, los envíos usan
+    # temporizadores por partido; no esperan a la siguiente revisión de cron.
     - cron: "*/5 * * * *"
+  workflow_run:
+    workflows: ["Actualizar datos del club"]
+    types: [completed]
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Comprobar horarios sin enviar notificaciones"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
 
 concurrency:
   group: avisar-inicio-partidos
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   avisar:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 195
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -25,12 +33,14 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: Avisar partidos que comienzan ahora
-        run: npm run notify:club -- --start-only
+      - name: Preparar cinco minutos antes y enviar a la hora del fixture
+        run: node automation/watch-match-starts.mjs
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
           VAPID_SUBJECT: ${{ secrets.VAPID_SUBJECT }}
+          GITHUB_TOKEN: ${{ github.token }}
+          NOTIFICATIONS_DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
       - name: Guardar avisos enviados
         run: |
           git config user.name "github-actions[bot]"

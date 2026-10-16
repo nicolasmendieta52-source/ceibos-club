@@ -1,6 +1,9 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
+import {pathToFileURL} from "node:url";
+import {randomUUID} from 'node:crypto';
+import {reserveStarts, completeStarts, releaseStarts} from './notification-start-store.mjs';
 import { agruparPorDeporte, detectarEventos, fechaMontevideo, marcarEnviados, minutosDesdeInicio, podarEstado } from "./notification-utils.mjs";
 
 const raiz = path.resolve(import.meta.dirname, "..");
@@ -11,6 +14,7 @@ const indiceAnterior = process.argv.indexOf("--previous");
 const anteriorPath = indiceAnterior >= 0 ? path.resolve(process.argv[indiceAnterior + 1]) : datosPath;
 const modoPrueba = process.argv.includes("--test");
 const soloInicios = process.argv.includes("--start-only");
+const omitirInicios = process.argv.includes("--skip-starts");
 
 const NOMBRES = { futbol: "Fútbol", rugby: "Rugby", hockey: "Hockey", basketball: "Basketball" };
 let webpush;
@@ -50,17 +54,16 @@ function demoraHumana(minutos) {
   return `Comenzó hace ${horas} h${resto ? ` ${resto} min` : ""}. `;
 }
 
-function crearMensaje(tipo, deporte, partidos) {
+export function crearMensaje(tipo, deporte, partidos, ahora = new Date()) {
   const ordenados = [...partidos].sort((a, b) => String(a.fecha).localeCompare(String(b.fecha)) || String(a.hora || "").localeCompare(String(b.hora || "")));
   const primero = ordenados[0];
   if (tipo === "start") {
-    const ahora = new Date();
     const conDemora = ordenados
       .map(partido => ({ partido, minutos: minutosDesdeInicio(partido, ahora) }))
       .filter(item => Number.isFinite(item.minutos) && item.minutos >= 0)
       .sort((a, b) => a.minutos - b.minutos);
     const reciente = conDemora[0] || { partido: primero, minutos: 0 };
-    const inmediato = reciente.minutos <= 15;
+    const inmediato = reciente.minutos < 1;
     return {
       title: `${inmediato ? "Arranca ahora" : ordenados.length === 1 ? "Inicio de partido" : "Partidos iniciados"} · Ceibos ${NOMBRES[deporte]}`,
       body: ordenados.length === 1
@@ -90,17 +93,20 @@ function crearMensaje(tipo, deporte, partidos) {
   };
 }
 
-async function enviarGrupo(snapshot, deporte, mensaje) {
+export async function enviarGrupo(snapshot, deporte, mensaje, send = (...args) => webpush.sendNotification(...args)) {
   let enviados = 0;
   let eliminados = 0;
-  for (const documento of snapshot.docs) {
+  let fallidos = 0;
+  let siguiente = 0;
+  const enviarUno = async documento => {
     const suscriptor = documento.data();
-    if (!suscriptor.enabled || suscriptor.deportes?.[deporte] !== true || !suscriptor.endpoint || !suscriptor.keys?.p256dh || !suscriptor.keys?.auth) continue;
+    if (!suscriptor.enabled || suscriptor.deportes?.[deporte] !== true || !suscriptor.endpoint || !suscriptor.keys?.p256dh || !suscriptor.keys?.auth) return;
     try {
       const { ttl, ...contenido } = mensaje;
-      await webpush.sendNotification({ endpoint: suscriptor.endpoint, keys: suscriptor.keys }, JSON.stringify(contenido), {
+      await send({ endpoint: suscriptor.endpoint, keys: suscriptor.keys }, JSON.stringify(contenido), {
         TTL: ttl || 24 * 60 * 60,
-        urgency: mensaje.renotify ? "high" : "normal"
+        urgency: mensaje.renotify ? "high" : "normal",
+        timeout: 20_000
       });
       enviados += 1;
     } catch (error) {
@@ -108,11 +114,48 @@ async function enviarGrupo(snapshot, deporte, mensaje) {
         await documento.ref.delete();
         eliminados += 1;
       } else {
+        fallidos += 1;
         console.warn(`notificaciones: no se pudo enviar a una suscripción (${error?.statusCode || error?.message || "error"})`);
       }
     }
-  }
+  };
+  // Dispatch in small concurrent batches instead of queuing every subscriber serially.
+  await Promise.all(Array.from({length:Math.min(16, snapshot.docs.length)}, async () => {
+    while (siguiente < snapshot.docs.length) await enviarUno(snapshot.docs[siguiente++]);
+  }));
   console.log(`notificaciones: ${NOMBRES[deporte]} · ${enviados} enviadas${eliminados ? ` · ${eliminados} suscripciones vencidas eliminadas` : ""}`);
+  return {enviados, eliminados, fallidos};
+}
+
+export async function inicializarNotificaciones(config) {
+  config ||= await leerJson(configPath);
+  const servicio = cuentaServicio(process.env.FIREBASE_SERVICE_ACCOUNT);
+  const clavePrivada = process.env.VAPID_PRIVATE_KEY?.trim();
+  if (!config.enabled || !config.vapidPublicKey || !servicio || !clavePrivada) return null;
+  const [{cert, getApps, initializeApp}, {getFirestore}, webpushModule] = await Promise.all([
+    import('firebase-admin/app'), import('firebase-admin/firestore'), import('web-push')
+  ]);
+  webpush = webpushModule.default;
+  if (!getApps().length) initializeApp({credential:cert(servicio)});
+  webpush.setVapidDetails(process.env.VAPID_SUBJECT || 'mailto:administracion@ceibosclub.com', config.vapidPublicKey, clavePrivada);
+  return {db:getFirestore()};
+}
+
+export async function enviarInicioProgramado(db, snapshot, deporte, partidos, owner) {
+  const {entries, alreadySent, busy} = await reserveStarts(db, partidos, owner);
+  const completed = [...alreadySent];
+  if (entries.length) {
+    try {
+      const result = await enviarGrupo(snapshot, deporte, crearMensaje('start', deporte, entries.map(entry => entry.partido)));
+      if (!result.enviados && result.fallidos) throw new Error('Falló el transporte de todos los avisos; se reintentará.');
+      await completeStarts(db, entries, owner, result);
+      completed.push(...entries.map(entry => entry.partido));
+    } catch(error) {
+      await releaseStarts(db, entries, owner);
+      throw error;
+    }
+  }
+  return {completed, busy};
 }
 
 async function enviarPrueba(snapshot) {
@@ -181,6 +224,7 @@ async function main() {
 
   const estado = podarEstado({ version: 1, ...estadoInicial });
   const eventos = detectarEventos(anteriores, actuales, estado, fechaMontevideo());
+  if (omitirInicios) eventos.inician = [];
   const eventosPendientes = soloInicios ? eventos.inician : [...eventos.nuevos, ...eventos.delDia, ...eventos.inician];
   if (!modoPrueba && !eventosPendientes.length) {
     console.log("notificaciones: no hay avisos nuevos para enviar");
@@ -188,16 +232,8 @@ async function main() {
     return;
   }
 
-  const [{ cert, getApps, initializeApp }, { getFirestore }, webpushModule] = await Promise.all([
-    import("firebase-admin/app"),
-    import("firebase-admin/firestore"),
-    import("web-push")
-  ]);
-  webpush = webpushModule.default;
-  if (!getApps().length) initializeApp({ credential: cert(servicio) });
-  const db = getFirestore();
+  const {db} = await inicializarNotificaciones(config);
   const snapshot = await db.collection("notificationSubscriptions").where("enabled", "==", true).get();
-  webpush.setVapidDetails(process.env.VAPID_SUBJECT || "mailto:administracion@ceibosclub.com", config.vapidPublicKey, clavePrivada);
 
   if (modoPrueba) {
     await enviarPrueba(snapshot);
@@ -208,16 +244,21 @@ async function main() {
     ? [["start", eventos.inician]]
     : [["new", eventos.nuevos], ["today", eventos.delDia], ["start", eventos.inician]];
   for (const [tipo, partidos] of gruposDeEnvio) {
+    const completed = [];
     for (const [deporte, grupo] of agruparPorDeporte(partidos)) {
-      await enviarGrupo(snapshot, deporte, crearMensaje(tipo, deporte, grupo));
+      if (tipo === 'start') completed.push(...(await enviarInicioProgramado(db, snapshot, deporte, grupo, process.env.GITHUB_RUN_ID || randomUUID())).completed);
+      else {
+        await enviarGrupo(snapshot, deporte, crearMensaje(tipo, deporte, grupo));
+        completed.push(...grupo);
+      }
     }
-    marcarEnviados(estado, tipo, partidos);
+    marcarEnviados(estado, tipo, completed);
   }
   await fs.writeFile(estadoPath, `${JSON.stringify(podarEstado(estado), null, 2)}\n`);
   console.log(`notificaciones: proceso terminado (${eventos.nuevos.length} partidos nuevos, ${eventos.delDia.length} recordatorios del día, ${eventos.inician.length} avisos de inicio)`);
 }
 
-main().catch(error => {
+if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) main().catch(error => {
   console.error(`notificaciones: error de envío: ${error?.message || error}`);
   process.exitCode = 1;
 });
