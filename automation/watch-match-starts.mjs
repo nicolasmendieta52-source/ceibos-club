@@ -38,7 +38,19 @@ export async function main() {
   const plans = planificarInicios(fixture, state, started, dryRun ? started + 7 * 24 * 60 * 60_000 : until);
   console.log(`Inicio programado: ${plans.length} horarios${dryRun ? ' · SIMULACIÓN SIN ENVÍOS' : ' · vigilancia anticipada hasta 3 horas'}.`);
   for (const plan of plans) console.log(JSON.stringify({deporte:plan.deporte, categorias:plan.partidos.map(p=>p.categoria), preparar:new Date(plan.preparar).toISOString(), enviar:new Date(plan.inicio).toISOString()}));
-  if (dryRun || !plans.length) return;
+  if (dryRun) {
+    if (process.env.GITHUB_ACTIONS === 'true') {
+      const backend = await inicializarNotificaciones();
+      if (!backend) throw new Error('Falta la configuración privada de Firebase o Web Push.');
+      try {
+        await backend.db.collection('notificationSubscriptions').where('enabled', '==', true).limit(1).get();
+        await backend.db.collection('notificationStartDispatches').limit(1).get();
+        console.log('Firebase y Web Push verificados en GitHub; no se enviaron notificaciones.');
+      } finally { await backend.db.terminate(); }
+    }
+    return;
+  }
+  if (!plans.length) return;
 
   const backend = await inicializarNotificaciones();
   if (!backend) throw new Error('Falta la configuración privada para programar notificaciones.');
