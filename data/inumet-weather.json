@@ -5,8 +5,8 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-10-16 12:00",
-  "actualizado": "2026-10-16T16:44:58.610Z",
+  "publicado": "2026-10-16 18:00",
+  "actualizado": "2026-10-16T21:17:26.156Z",
   "pronosticos": [
     {
       "fecha": "2026-10-16",
@@ -53,7 +53,7 @@
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Nuboso y cubierto, períodos de algo nuboso.",
+          "descripcion": "Nuboso y cubierto.",
           "evolucion": "Precipitaciones escasas.",
           "detalle": "",
           "viento": "Sector S 10-30 km/h, rachas de hasta 40 km/h."
@@ -64,7 +64,7 @@
       "fecha": "2026-10-18",
       "diaMasN": 2,
       "etiqueta": "Domingo 18",
-      "temperaturaMin": 9,
+      "temperaturaMin": 10,
       "temperaturaMax": 15,
       "probabilidadLluvia": "",
       "periodos": [
@@ -79,7 +79,7 @@
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Algo nuboso, períodos de nuboso.",
+          "descripcion": "Nuboso.",
           "evolucion": "Probables precipitaciones escasas.",
           "detalle": "",
           "viento": "S al SE 10-30 km/h"
@@ -90,7 +90,7 @@
       "fecha": "2026-10-19",
       "diaMasN": 3,
       "etiqueta": "Lunes 19",
-      "temperaturaMin": 7,
+      "temperaturaMin": 8,
       "temperaturaMax": 17,
       "probabilidadLluvia": "Nula",
       "periodos": []
@@ -100,7 +100,7 @@
       "diaMasN": 4,
       "etiqueta": "Martes 20",
       "temperaturaMin": 8,
-      "temperaturaMax": 20,
+      "temperaturaMax": 19,
       "probabilidadLluvia": "Nula",
       "periodos": []
     },
@@ -109,7 +109,7 @@
       "diaMasN": 5,
       "etiqueta": "Miércoles 21",
       "temperaturaMin": 10,
-      "temperaturaMax": 23,
+      "temperaturaMax": 22,
       "probabilidadLluvia": "Baja",
       "periodos": []
     },
@@ -117,8 +117,8 @@
       "fecha": "2026-10-22",
       "diaMasN": 6,
       "etiqueta": "Jueves 22",
-      "temperaturaMin": 11,
-      "temperaturaMax": 22,
+      "temperaturaMin": 12,
+      "temperaturaMax": 23,
       "probabilidadLluvia": "Baja",
       "periodos": []
     }
