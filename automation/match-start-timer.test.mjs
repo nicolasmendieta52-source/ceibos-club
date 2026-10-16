@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import {MatchStartTimer} from './match-start-timer.mjs';
 import {instanteInicio, planificarInicios} from './notification-utils.mjs';
 import {enviarGrupo, crearMensaje} from './send-notifications.mjs';
-import {reserveStarts, completeStarts, releaseStarts} from './notification-start-store.mjs';
+import {reserveStarts, completeStarts, releaseStarts, reserveWatcher, releaseWatcher} from './notification-start-store.mjs';
+import {solicitarRelevo} from './watch-match-starts.mjs';
 
 const match = {deporte:'futbol', categoria:'Primera', rival:'Rival', fecha:'2026-10-17', hora:'15:00'};
 const kickoff = Date.parse('2026-10-17T18:00:00.000Z');
@@ -117,4 +118,28 @@ test('persistent claims prevent duplicate workers and expired claims can be reco
   await releaseStarts(db,retry.entries,'retry');
   const duplicate=await reserveStarts(db,[match],'third',kickoff+200_000);
   assert.equal(duplicate.entries.length,0);assert.deepEqual(duplicate.alreadySent,[match]);
+});
+
+test('one watcher leads; handoff releases its lease without cancelling existing match timers',async()=>{
+  const db=new Store();
+  assert.equal(await reserveWatcher(db,'first',kickoff),true);
+  assert.equal(await reserveWatcher(db,'other',kickoff),false);
+  await releaseWatcher(db,'other');assert.equal(await reserveWatcher(db,'other',kickoff),false);
+  await releaseWatcher(db,'first');assert.equal(await reserveWatcher(db,'next',kickoff),true);
+  assert.equal(await reserveWatcher(db,'recovered',kickoff+180_001),true);
+});
+
+test('handoff dispatch uses an explicit event and a simulation never starts a live sender',async()=>{
+  const previous=process.env.GITHUB_TOKEN;process.env.GITHUB_TOKEN='test-only';
+  try {
+    let payload;
+    await solicitarRelevo({dryRun:true,fetchImpl:async(url,options)=>{
+      assert.match(url,/avisar-inicio-partidos.yml\/dispatches$/);
+      assert.equal(options.method,'POST');payload=JSON.parse(options.body);
+      return {ok:true};
+    }});
+    assert.deepEqual(payload,{ref:'main',inputs:{dry_run:true}});
+  } finally {
+    if(previous===undefined)delete process.env.GITHUB_TOKEN;else process.env.GITHUB_TOKEN=previous;
+  }
 });
