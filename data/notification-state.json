@@ -107,7 +107,9 @@
     "futbol|papi futbol 35|frances elf|2026-10-18": "2026-10-13T11:12:05.803Z",
     "futbol|papi futbol 40|old woodlands master|2026-10-18": "2026-10-13T11:12:05.803Z",
     "futbol|papi futbol 45|old brendans 45|2026-10-18": "2026-10-13T11:12:05.803Z",
-    "hockey|sub 18|old brendan s club|2026-10-15": "2026-10-14T05:04:19.352Z"
+    "hockey|sub 18|old brendan s club|2026-10-15": "2026-10-14T05:04:19.352Z",
+    "rugby|m19|champagnat|2026-10-17": "2026-10-14T21:49:41.232Z",
+    "futbol|sub 20|j m l m|2026-10-16": "2026-10-15T21:32:28.306Z"
   },
   "sentToday": {
     "basketball|basketball|maristas deportivo|2026-08-15": "2026-08-15T03:12:26.815Z",
@@ -227,7 +229,9 @@
     "futbol|primera|sagrada familia universitario|2026-10-11": "2026-10-11T05:58:22.919Z",
     "futbol|sub 18|hca universitario|2026-10-11": "2026-10-11T05:58:22.919Z",
     "hockey|sub 18|old ivy|2026-10-13": "2026-10-13T11:12:06.279Z",
-    "futbol|papi futbol 40|sta elena lagomar 40|2026-10-14": "2026-10-14T05:04:19.689Z"
+    "futbol|papi futbol 40|sta elena lagomar 40|2026-10-14": "2026-10-14T05:04:19.689Z",
+    "hockey|sub 18|old brendan s club|2026-10-15": "2026-10-15T04:52:21.704Z",
+    "futbol|sub 20|j m l m|2026-10-16": "2026-10-16T04:42:05.678Z"
   },
   "sentStart": {
     "futbol|presenior|aleman u|2026-08-15": "2026-08-15T12:01:32.146Z",
@@ -329,6 +333,8 @@
     "hockey|intermedia b|nautilus|2026-10-11": "2026-10-11T21:52:34.266Z",
     "hockey|intermedia c|lobas|2026-10-11": "2026-10-11T21:52:34.266Z",
     "futbol|sub 18|hca universitario|2026-10-11": "2026-10-11T21:52:34.266Z",
-    "hockey|sub 18|old ivy|2026-10-13": "2026-10-13T23:03:46.087Z"
+    "hockey|sub 18|old ivy|2026-10-13": "2026-10-13T23:03:46.087Z",
+    "futbol|papi futbol 40|sta elena lagomar 40|2026-10-14": "2026-10-15T01:48:49.656Z",
+    "hockey|sub 18|old brendan s club|2026-10-15": "2026-10-15T21:32:28.397Z"
   }
 }
