@@ -113,7 +113,9 @@ La notificación de confirmación aparece inmediatamente. Las deportivas se env�
 
 ## Avisos a la hora del fixture
 
-`Avisar inicio de partidos` despierta el vigilante cada 5 minutos y después de cada actualización del club. Si hay partidos próximos, permanece activo hasta 3 horas: no se cancela cuando llega otra ejecución.
+`Avisar inicio de partidos` despierta el vigilante cada 5 minutos y después de cada actualización del club. Si hay partidos en las próximas 24 horas, mantiene vigilancia en ventanas de hasta 3 horas. Un lease privado en `notificationSchedulerControl` evita que las revisiones creen vigilantes simultáneos innecesarios.
+
+Quince minutos antes de terminar una ventana, el vigilante solicita explícitamente la siguiente ejecución con `workflow_dispatch`, libera su lease y conserva sus temporizadores durante el relevo. El sucesor puede precargar los próximos avisos mientras terminan los anteriores. Esto evita depender del cron para cada relevo; `actions: write` permite ese disparo con el token temporal del propio repositorio. Si no quedan partidos próximos, la cadena se detiene y queda el cron de respaldo.
 
 - Lee la fecha y hora de cada partido con la zona `America/Montevideo`.
 - Cinco minutos antes vuelve a leer el fixture y prepara los suscriptores de ese deporte.
@@ -122,6 +124,6 @@ La notificación de confirmación aparece inmediatamente. Las deportivas se env�
 - La colección privada `notificationStartDispatches` de Firestore reserva los envíos y conserva los ya enviados, incluso si se reinicia el workflow o se actualiza el archivo público de auditoría.
 - El workflow general conserva los avisos de partidos nuevos y del día; los inicios quedan a cargo del vigilante para evitar dos emisores compitiendo.
 
-Los logs distinguen `Aviso preparado` y `Envío de inicio`, con la hora prevista y la real en UTC. `workflow_dispatch` permite activar `dry_run` para verificar la planificación sin enviar mensajes. Prueba local: `node automation/watch-match-starts.mjs --dry-run`.
+Los logs distinguen `Aviso preparado` y `Envío de inicio`, con la hora prevista y la real en UTC. `workflow_dispatch` permite activar `dry_run` para verificar la planificación sin enviar mensajes; `check_handoff` también prueba un relevo a otra simulación, sin iniciar avisos reales. Prueba local: `node automation/watch-match-starts.mjs --dry-run`.
 
 GitHub no garantiza que su cron arranque a una hora exacta. La vigilancia anticipada reduce esa dependencia, pero una caída o demora que impida arrancar al proceso antes del partido aún puede retrasar un aviso. La recepción final también depende del servicio push, de la conexión y del dispositivo. Para un SLA de puntualidad habría que usar un servicio de programación dedicado fuera de GitHub Actions.

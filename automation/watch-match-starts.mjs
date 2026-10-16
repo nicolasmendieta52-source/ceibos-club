@@ -6,12 +6,24 @@ import {setTimeout as sleep} from 'node:timers/promises';
 import {MatchStartTimer} from './match-start-timer.mjs';
 import {planificarInicios, marcarEnviados, podarEstado} from './notification-utils.mjs';
 import {inicializarNotificaciones, enviarInicioProgramado} from './send-notifications.mjs';
+import {reserveWatcher, releaseWatcher} from './notification-start-store.mjs';
 
 const root = path.resolve(import.meta.dirname, '..');
 const statePath = path.join(root, 'data/notification-state.json');
 const fixturePath = path.join(root, 'data/club-data.json');
 export const WATCH_MINUTES = 180;
 const REFRESH_MS = 60_000;
+
+export async function solicitarRelevo({dryRun = false, fetchImpl = fetch} = {}) {
+  const repository = process.env.GITHUB_REPOSITORY || 'nicolasmendieta52-source/ceibos-club';
+  if (!process.env.GITHUB_TOKEN) throw new Error('El relevo requiere el token temporal del workflow.');
+  const response = await fetchImpl(`https://api.github.com/repos/${repository}/actions/workflows/avisar-inicio-partidos.yml/dispatches`, {
+    method:'POST', headers:{Authorization:`Bearer ${process.env.GITHUB_TOKEN}`,Accept:'application/vnd.github+json','Content-Type':'application/json'},
+    body:JSON.stringify({ref:'main',inputs:{dry_run:dryRun}}),signal:AbortSignal.timeout(15_000)
+  });
+  if (!response.ok) throw new Error(`Relevo del vigilante: HTTP ${response.status}`);
+  console.log(`Relevo solicitado${dryRun ? ' · SIMULACIÓN SIN ENVÍOS' : ''}.`);
+}
 
 export async function leerFixtureVigente() {
   const repository = process.env.GITHUB_REPOSITORY || 'nicolasmendieta52-source/ceibos-club';
@@ -36,6 +48,7 @@ export async function main() {
   const started = Date.now();
   const until = started + WATCH_MINUTES * 60_000;
   const plans = planificarInicios(fixture, state, started, dryRun ? started + 7 * 24 * 60 * 60_000 : until);
+  const upcoming = () => planificarInicios(fixture, state, Date.now(), Date.now() + 24 * 60 * 60_000).some(plan => plan.inicio >= Date.now());
   console.log(`Inicio programado: ${plans.length} horarios${dryRun ? ' · SIMULACIÓN SIN ENVÍOS' : ' · vigilancia anticipada hasta 3 horas'}.`);
   for (const plan of plans) console.log(JSON.stringify({deporte:plan.deporte, categorias:plan.partidos.map(p=>p.categoria), preparar:new Date(plan.preparar).toISOString(), enviar:new Date(plan.inicio).toISOString()}));
   if (dryRun) {
@@ -46,16 +59,24 @@ export async function main() {
         await backend.db.collection('notificationSubscriptions').where('enabled', '==', true).limit(1).get();
         await backend.db.collection('notificationStartDispatches').limit(1).get();
         console.log('Firebase y Web Push verificados en GitHub; no se enviaron notificaciones.');
+        if (process.env.NOTIFICATIONS_CHECK_HANDOFF === 'true') await solicitarRelevo({dryRun:true});
       } finally { await backend.db.terminate(); }
     }
     return;
   }
-  if (!plans.length) return;
+  if (!plans.length && !upcoming()) return;
 
   const backend = await inicializarNotificaciones();
   if (!backend) throw new Error('Falta la configuración privada para programar notificaciones.');
   const {db} = backend;
   const owner = process.env.GITHUB_RUN_ID || randomUUID();
+  if (!await reserveWatcher(db, owner)) {
+    console.log('Inicio programado: ya hay un vigilante activo; esta revisión no duplica el proceso.');
+    await db.terminate();
+    return;
+  }
+  let leader = true;
+  let followUpRequested = false;
   let write = Promise.resolve();
   const saveState = () => write = write.then(() => fs.writeFile(statePath, JSON.stringify(podarEstado(state), null, 2) + '\n'));
   let timer;
@@ -90,16 +111,31 @@ export async function main() {
     onError:error => console.error(`Inicio programado: ${error?.message || error}`)
   });
   reconcile();
+  console.log('Vigilante activo; relevo anticipado habilitado si siguen existiendo partidos próximos.');
   try {
-    while (timer.jobs.size && Date.now() < until + 5 * 60_000) {
-      await sleep(Math.min(REFRESH_MS, Math.max(1, until + 5 * 60_000 - Date.now())));
+    while ((timer.jobs.size || (leader && upcoming())) && Date.now() < until) {
+      await sleep(Math.min(REFRESH_MS, Math.max(1, until - Date.now())));
       await refresh();
+      if (leader) {
+        leader = await reserveWatcher(db, owner);
+        if (leader && !followUpRequested && upcoming() && Date.now() >= until - 15 * 60_000) {
+          try {
+            await solicitarRelevo();
+            await releaseWatcher(db, owner);
+            followUpRequested = true;
+            leader = false;
+            // Existing timers continue for fifteen minutes while the successor warms up.
+            console.log('Relevo liberado; los temporizadores actuales continúan hasta finalizar su ventana.');
+          } catch(error) { console.error(error.message + '; se reintentará el relevo en la próxima lectura.'); }
+        }
+      }
     }
     // Allow a send already in progress to finish before the workflow saves its audit file.
     for (let attempt = 0; attempt < 120 && [...timer.jobs.values()].some(job => job.sending || job.dispatching); attempt++) await sleep(1000);
     await saveState();
   } finally {
     timer.stop();
+    await releaseWatcher(db, owner);
     await db.terminate();
   }
 }

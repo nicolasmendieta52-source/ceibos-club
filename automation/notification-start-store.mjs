@@ -3,6 +3,23 @@ import {clavePartido} from './notification-utils.mjs';
 
 const COLLECTION = 'notificationStartDispatches';
 
+export async function reserveWatcher(db, owner, now = Date.now()) {
+  const ref = db.collection('notificationSchedulerControl').doc('watcher');
+  return db.runTransaction(async transaction => {
+    const record = (await transaction.get(ref)).data();
+    if (record?.owner !== owner && record?.leaseUntil > now) return false;
+    transaction.set(ref, {owner, leaseUntil:now + 180_000});
+    return true;
+  });
+}
+
+export async function releaseWatcher(db, owner) {
+  const ref = db.collection('notificationSchedulerControl').doc('watcher');
+  await db.runTransaction(async transaction => {
+    if ((await transaction.get(ref)).data()?.owner === owner) transaction.set(ref, {owner:'',leaseUntil:0});
+  });
+}
+
 // Server-only collection: existing Firestore rules deny client access by default.
 export async function reserveStarts(db, partidos, owner, now = Date.now()) {
   return db.runTransaction(async transaction => {
