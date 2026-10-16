@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-16T11:31:57.732Z",
+        "updatedAt": "2026-10-16T15:31:04.602Z",
         "tables": [
           {
             "id": 2291,
@@ -49,6 +49,18 @@
               },
               {
                 "position": 2,
+                "teamId": 730,
+                "name": "Club J.Maria",
+                "pj": 7,
+                "pg": 5,
+                "pe": 0,
+                "pp": 2,
+                "gf": 11,
+                "gc": 7,
+                "points": 15
+              },
+              {
+                "position": 3,
                 "teamId": 697,
                 "name": "Areteia blanco",
                 "pj": 8,
@@ -60,7 +72,7 @@
                 "points": 14
               },
               {
-                "position": 3,
+                "position": 4,
                 "teamId": 107,
                 "name": "Santa Rita Rojo",
                 "pj": 7,
@@ -72,7 +84,7 @@
                 "points": 13
               },
               {
-                "position": 4,
+                "position": 5,
                 "teamId": 544,
                 "name": "Ivy Thomas 40",
                 "pj": 8,
@@ -84,7 +96,7 @@
                 "points": 13
               },
               {
-                "position": 5,
+                "position": 6,
                 "teamId": 655,
                 "name": "Sta Elena Lagomar 40",
                 "pj": 8,
@@ -96,27 +108,15 @@
                 "points": 13
               },
               {
-                "position": 6,
-                "teamId": 730,
-                "name": "Club J.Maria",
-                "pj": 6,
-                "pg": 4,
-                "pe": 0,
-                "pp": 2,
-                "gf": 10,
-                "gc": 7,
-                "points": 12
-              },
-              {
                 "position": 7,
                 "teamId": 658,
                 "name": "Aleman Schwarz",
-                "pj": 7,
+                "pj": 8,
                 "pg": 4,
                 "pe": 0,
-                "pp": 3,
+                "pp": 4,
                 "gf": 12,
-                "gc": 10,
+                "gc": 11,
                 "points": 12
               },
               {
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-16T11:31:58.025Z",
+        "updatedAt": "2026-10-16T15:31:04.869Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-16T11:31:58.124Z",
+        "updatedAt": "2026-10-16T15:31:04.997Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-16T11:31:58.242Z",
+        "updatedAt": "2026-10-16T15:31:05.121Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-16T11:31:58.356Z",
+        "updatedAt": "2026-10-16T15:31:05.251Z",
         "tables": [
           {
             "id": 2239,
@@ -2557,6 +2557,24 @@
       "cancha": "Tenis pinar"
     },
     {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "erde vs. E.L.F",
+      "fecha": "2026-10-03",
+      "hora": "09:00",
+      "local": false,
+      "cancha": "liceo francés"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "erde VS ENE",
+      "fecha": "2026-10-03",
+      "hora": "09:00",
+      "local": false,
+      "cancha": "liceo francés"
+    },
+    {
       "deporte": "hockey",
       "categoria": "Sub 18",
       "rival": "Old Brendan's",
@@ -2575,12 +2593,65 @@
       "cancha": "Los Ceibos _ ltr BUM AQOMNON FRED 8) pepsi a ZILLERTAL Z merma"
     },
     {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "Club Nautico “",
+      "fecha": "2026-10-04",
+      "hora": "11:15",
+      "local": false,
+      "cancha": "Nautico"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "Anglo School U.",
+      "fecha": "2026-10-04",
+      "hora": "15:30",
+      "local": true,
+      "cancha": "Los Ceibos _ ltr 8) pepsi a ZILLERTAL Z merma WUM AOMINON FED y"
+    },
+    {
       "deporte": "rugby",
       "categoria": "M19",
       "rival": "Old Christians",
       "fecha": "2026-10-10",
       "hora": "12:30",
       "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "Alemán U.",
+      "fecha": "2026-10-10",
+      "hora": "09:00",
+      "local": true,
+      "cancha": "Los Ceibos"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "erde vs. Seminario",
+      "fecha": "2026-10-10",
+      "hora": "11:15",
+      "local": true,
+      "cancha": "Los Ceibos"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "Old Brendan's Club BN",
+      "fecha": "2026-10-10",
+      "hora": "13:30",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "Old Brendan's Club E",
+      "fecha": "2026-10-10",
+      "hora": "13:30",
+      "local": false,
+      "cancha": "Brendans _ Blut 8) pepsi a ZILLERTAL Zero BUM AOMINON FED"
     },
     {
       "deporte": "hockey",
@@ -2590,6 +2661,23 @@
       "hora": "17:00",
       "local": true,
       "cancha": "Los Ceibos"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "Sagrada Familia U. BN",
+      "fecha": "2026-10-11",
+      "hora": "11:15",
+      "local": false,
+      "cancha": "SAFA"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "HCA",
+      "fecha": "2026-10-11",
+      "hora": "15:30",
+      "local": false
     },
     {
       "deporte": "futbol",
@@ -6812,7 +6900,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-16T11:34:58.990Z",
+  "actualizadoEn": "2026-10-16T15:36:16.647Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -6890,134 +6978,153 @@
         "deporte": "basketball",
         "categoria": "Basketball",
         "url": "https://ligauniversitaria.org.uy/estadisticas-basquetbol-b/",
-        "registros": 25,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "HTTP 500 al consultar la Liga Universitaria"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS31.html",
-        "registros": 15,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "HTTP 500 al consultar la Liga Universitaria"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS31.html",
         "registros": 0,
-        "estado": "sin-coincidencias"
+        "estado": "error",
+        "detalle": "HTTP 500 al consultar la Liga Universitaria"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/resultados/F2B2RS1.html",
-        "registros": 15,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "This operation was aborted"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/partidos/F2B2RS1.html",
         "registros": 0,
-        "estado": "sin-coincidencias"
+        "estado": "error",
+        "detalle": "This operation was aborted"
       },
       {
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/resultados/F21B.html",
-        "registros": 15,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "HTTP 500 al consultar la Liga Universitaria"
       },
       {
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/partidos/F21B.html",
         "registros": 0,
-        "estado": "sin-coincidencias"
+        "estado": "error",
+        "detalle": "HTTP 500 al consultar la Liga Universitaria"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
-        "registros": 7,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "HTTP 500 al consultar la Liga Universitaria"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/partidos/F181818-52.html",
         "registros": 0,
-        "estado": "sin-coincidencias"
+        "estado": "error",
+        "detalle": "HTTP 500 al consultar la Liga Universitaria"
       },
       {
         "deporte": "futbol",
         "categoria": "PreSenior",
         "url": "https://ligauniversitaria.org.uy/resultados/F3232PSC.html",
-        "registros": 15,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "HTTP 500 al consultar la Liga Universitaria"
       },
       {
         "deporte": "futbol",
         "categoria": "PreSenior",
         "url": "https://ligauniversitaria.org.uy/partidos/F3232PSC.html",
         "registros": 0,
-        "estado": "sin-coincidencias"
+        "estado": "error",
+        "detalle": "This operation was aborted"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/resultados/F202020A.html",
-        "registros": 15,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "HTTP 500 al consultar la Liga Universitaria"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/partidos/F202020A.html",
         "registros": 0,
-        "estado": "sin-coincidencias"
+        "estado": "error",
+        "detalle": "HTTP 500 al consultar la Liga Universitaria"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/resultados/F181818-5-.html",
-        "registros": 7,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "HTTP 500 al consultar la Liga Universitaria"
       },
       {
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-mayores-a-2/",
-        "registros": 22,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "HTTP 500 al consultar la Liga Universitaria"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva A",
         "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-reserva-a/",
-        "registros": 22,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "HTTP 500 al consultar la Liga Universitaria"
       },
       {
         "deporte": "futbol",
         "categoria": "Reserva Verde",
         "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-reserva-c/",
-        "registros": 22,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "HTTP 500 al consultar la Liga Universitaria"
       },
       {
         "deporte": "futbol",
         "categoria": "PreSenior",
         "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-pre-senior-c/",
-        "registros": 22,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "HTTP 500 al consultar la Liga Universitaria"
       },
       {
         "deporte": "futbol",
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-sub-20-a/",
-        "registros": 22,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "error",
+        "detalle": "HTTP 500 al consultar la Liga Universitaria"
       }
     ],
     "instagram": {
