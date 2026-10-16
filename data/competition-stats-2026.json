@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "checkedAt": "2026-10-16T11:31:56.644Z",
+  "checkedAt": "2026-10-16T15:18:10.921Z",
   "tables": [
     {
       "sport": "basketball",
@@ -136,7 +136,8 @@
           ]
         }
       ],
-      "sourceKey": "basketball|Basketball"
+      "sourceKey": "basketball|Basketball",
+      "stale": true
     },
     {
       "sport": "basketball",
@@ -384,7 +385,8 @@
           ]
         }
       ],
-      "sourceKey": "basketball|Basketball"
+      "sourceKey": "basketball|Basketball",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -520,7 +522,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|Primera"
+      "sourceKey": "futbol|Primera",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -629,7 +632,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|Primera"
+      "sourceKey": "futbol|Primera",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -877,7 +881,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|Primera"
+      "sourceKey": "futbol|Primera",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -986,7 +991,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|Primera"
+      "sourceKey": "futbol|Primera",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -1122,7 +1128,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|Reserva A"
+      "sourceKey": "futbol|Reserva A",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -1249,7 +1256,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|Reserva A"
+      "sourceKey": "futbol|Reserva A",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -1497,7 +1505,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|Reserva A"
+      "sourceKey": "futbol|Reserva A",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -1741,7 +1750,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|Reserva A"
+      "sourceKey": "futbol|Reserva A",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -1877,7 +1887,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|Reserva Verde"
+      "sourceKey": "futbol|Reserva Verde",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -1977,7 +1988,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|Reserva Verde"
+      "sourceKey": "futbol|Reserva Verde",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -2225,7 +2237,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|Reserva Verde"
+      "sourceKey": "futbol|Reserva Verde",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -2307,7 +2320,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|Reserva Verde"
+      "sourceKey": "futbol|Reserva Verde",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -2443,7 +2457,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|PreSenior"
+      "sourceKey": "futbol|PreSenior",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -2516,7 +2531,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|PreSenior"
+      "sourceKey": "futbol|PreSenior",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -2764,7 +2780,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|PreSenior"
+      "sourceKey": "futbol|PreSenior",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -2882,7 +2899,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|PreSenior"
+      "sourceKey": "futbol|PreSenior",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -3018,7 +3036,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|Sub 20"
+      "sourceKey": "futbol|Sub 20",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -3100,7 +3119,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|Sub 20"
+      "sourceKey": "futbol|Sub 20",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -3348,7 +3368,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|Sub 20"
+      "sourceKey": "futbol|Sub 20",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -3493,7 +3514,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|Sub 20"
+      "sourceKey": "futbol|Sub 20",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -3629,7 +3651,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|Sub 18"
+      "sourceKey": "futbol|Sub 18",
+      "stale": true
     },
     {
       "sport": "futbol",
@@ -3774,7 +3797,8 @@
           ]
         }
       ],
-      "sourceKey": "futbol|Sub 18"
+      "sourceKey": "futbol|Sub 18",
+      "stale": true
     },
     {
       "sport": "hockey",
@@ -3782,7 +3806,7 @@
       "title": "APERTURA 2026 (Intermedia A)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=3",
-      "updatedAt": "2026-10-16T11:31:07.686Z",
+      "updatedAt": "2026-10-16T15:17:24.697Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=3#table-2733",
       "kind": "standings",
       "columns": [
@@ -3960,7 +3984,7 @@
       "title": "APERTURA 2026 (Intermedia A)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=3",
-      "updatedAt": "2026-10-16T11:31:07.686Z",
+      "updatedAt": "2026-10-16T15:17:24.697Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=3#scorers-2733",
       "kind": "scorers",
       "columns": [
@@ -3974,8 +3998,8 @@
           "club": false,
           "values": [
             1,
-            "Victoria Sola",
-            "Carrasco Polo Club",
+            "Karina Bisignano",
+            "Palo y Pico",
             6
           ]
         },
@@ -3983,8 +4007,8 @@
           "club": false,
           "values": [
             2,
-            "Karina Bisignano",
-            "Palo y Pico",
+            "Victoria Sola",
+            "Carrasco Polo Club",
             6
           ]
         },
@@ -4010,51 +4034,6 @@
           "club": false,
           "values": [
             5,
-            "Agustina Correa",
-            "Lobos Rugby Club",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "Martina Bertolini",
-            "Club Náutico",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "Fiorella Caprani",
-            "Yacht Club Uruguayo",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "VIRGINIA CASABÓ",
-            "Lobos Rugby Club",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "Milagros Barcia",
-            "The British Schools / Old Girls Club",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            10,
             "Ana Ines Echeverria",
             "The British Schools / Old Girls Club",
             5
@@ -4063,7 +4042,7 @@
         {
           "club": false,
           "values": [
-            11,
+            6,
             "Sofía Peñalba",
             "Carrasco Polo Club",
             5
@@ -4072,7 +4051,61 @@
         {
           "club": false,
           "values": [
+            7,
+            "Martina Bertolini",
+            "Club Náutico",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "Agustina Correa",
+            "Lobos Rugby Club",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
+            "Fiorella Caprani",
+            "Yacht Club Uruguayo",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            10,
+            "Milagros Barcia",
+            "The British Schools / Old Girls Club",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            11,
+            "VIRGINIA CASABÓ",
+            "Lobos Rugby Club",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             12,
+            "Josefina Muñoz",
+            "The British Schools / Old Girls Club",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            13,
             "Mariana Pino Cortes",
             "Palo y Pico",
             4
@@ -4081,7 +4114,7 @@
         {
           "club": false,
           "values": [
-            13,
+            14,
             "Josefina Pereyra",
             "Carrasco Polo Club",
             4
@@ -4090,18 +4123,9 @@
         {
           "club": false,
           "values": [
-            14,
+            15,
             "Federica Maria Ibarra Candau",
             "Palo y Pico",
-            4
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            15,
-            "Pilar Etcheverry",
-            "Colegio Los Pilares / Club Los Ceibos",
             4
           ]
         }
@@ -4114,7 +4138,7 @@
       "title": "COPA DE PLATA (Intermedia A)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=3",
-      "updatedAt": "2026-10-16T11:31:08.239Z",
+      "updatedAt": "2026-10-16T15:17:25.242Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=3#table-2762",
       "kind": "standings",
       "columns": [
@@ -4208,7 +4232,7 @@
       "title": "COPA DE PLATA (Intermedia A)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=3",
-      "updatedAt": "2026-10-16T11:31:08.239Z",
+      "updatedAt": "2026-10-16T15:17:25.242Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=3#scorers-2762",
       "kind": "scorers",
       "columns": [
@@ -4222,24 +4246,6 @@
           "club": false,
           "values": [
             1,
-            "Agustina Lage",
-            "Old Christian's Club, Stella Maris",
-            3
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "Eugenia Pedreira",
-            "Woodlands School - Old Woodlands Club",
-            3
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
             "Sofia Raña",
             "Old Christian's Club, Stella Maris",
             3
@@ -4248,7 +4254,7 @@
         {
           "club": false,
           "values": [
-            4,
+            2,
             "SIN JUGADOR",
             "Woodlands School - Old Woodlands Club",
             3
@@ -4257,16 +4263,25 @@
         {
           "club": false,
           "values": [
-            5,
-            "Francisca Etcheverry",
+            3,
+            "Agustina Lage",
             "Old Christian's Club, Stella Maris",
-            2
+            3
           ]
         },
         {
           "club": false,
           "values": [
-            6,
+            4,
+            "Eugenia Pedreira",
+            "Woodlands School - Old Woodlands Club",
+            3
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
             "Mariana Pignatta",
             "St. Brendans School / Old Brendans Club",
             2
@@ -4275,8 +4290,17 @@
         {
           "club": false,
           "values": [
-            7,
+            6,
             "Maria Valentina Rohr",
+            "Old Christian's Club, Stella Maris",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "Francisca Etcheverry",
             "Old Christian's Club, Stella Maris",
             2
           ]
@@ -4285,7 +4309,7 @@
           "club": true,
           "values": [
             8,
-            "Pilar Etcheverry",
+            "María Candelaria Facello",
             "Colegio Los Pilares / Club Los Ceibos",
             1
           ]
@@ -4294,7 +4318,7 @@
           "club": false,
           "values": [
             9,
-            "Cecilia Carriquiry",
+            "María Eugenia Gamborena",
             "St. Brendans School / Old Brendans Club",
             1
           ]
@@ -4303,8 +4327,8 @@
           "club": false,
           "values": [
             10,
-            "Paula Brugnini",
-            "St. Brendans School / Old Brendans Club",
+            "Eugenia Curci",
+            "Old Christian's Club, Stella Maris",
             1
           ]
         },
@@ -4312,8 +4336,8 @@
           "club": false,
           "values": [
             11,
-            "Paz Aramendia",
-            "Old Christian's Club, Stella Maris",
+            "Camila Guadalupe",
+            "Woodlands School - Old Woodlands Club",
             1
           ]
         },
@@ -4321,7 +4345,7 @@
           "club": true,
           "values": [
             12,
-            "Valentina Maria Suaya",
+            "Pilar María Formento",
             "Colegio Los Pilares / Club Los Ceibos",
             1
           ]
@@ -4330,8 +4354,8 @@
           "club": false,
           "values": [
             13,
-            "Florencia Ham",
-            "Old Christian's Club, Stella Maris",
+            "Maria Paz Alvarez",
+            "Yacht Club Uruguayo",
             1
           ]
         },
@@ -4339,17 +4363,17 @@
           "club": true,
           "values": [
             14,
-            "María Clara Frontini",
+            "María José Lenoble",
             "Colegio Los Pilares / Club Los Ceibos",
             1
           ]
         },
         {
-          "club": false,
+          "club": true,
           "values": [
             15,
-            "Ivana Paula Barrere",
-            "Woodlands School - Old Woodlands Club",
+            "Micaela Reyes Martínez",
+            "Colegio Los Pilares / Club Los Ceibos",
             1
           ]
         }
@@ -4362,7 +4386,7 @@
       "title": "APERTURA 2026 (Sub 18)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=4",
-      "updatedAt": "2026-10-16T11:31:17.112Z",
+      "updatedAt": "2026-10-16T15:17:35.070Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=4#table-2734",
       "kind": "standings",
       "columns": [
@@ -4582,7 +4606,7 @@
       "title": "APERTURA 2026 (Sub 18)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=4",
-      "updatedAt": "2026-10-16T11:31:17.112Z",
+      "updatedAt": "2026-10-16T15:17:35.070Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=4#scorers-2734",
       "kind": "scorers",
       "columns": [
@@ -4656,11 +4680,11 @@
           ]
         },
         {
-          "club": false,
+          "club": true,
           "values": [
             8,
-            "Josefina Davies",
-            "Ivy Thomas Memorial School / Old Ivy Club",
+            "Guillermina Risso",
+            "Colegio Los Pilares / Club Los Ceibos",
             8
           ]
         },
@@ -4686,17 +4710,17 @@
           "club": false,
           "values": [
             11,
-            "Milagros Bercianos",
-            "The British Schools / Old Girls Club",
+            "Josefina Davies",
+            "Ivy Thomas Memorial School / Old Ivy Club",
             8
           ]
         },
         {
-          "club": true,
+          "club": false,
           "values": [
             12,
-            "Guillermina Risso",
-            "Colegio Los Pilares / Club Los Ceibos",
+            "Milagros Bercianos",
+            "The British Schools / Old Girls Club",
             8
           ]
         },
@@ -4704,6 +4728,15 @@
           "club": false,
           "values": [
             13,
+            "Sofía Franco Charlone",
+            "Colegio Seminario / Club Seminario",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
             "Federica Vidiella",
             "The British Schools / Old Girls Club",
             7
@@ -4712,18 +4745,9 @@
         {
           "club": false,
           "values": [
-            14,
+            15,
             "Agustina Mieres",
             "CLUB NORTHFIELD",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            15,
-            "Sofía Franco Charlone",
-            "Colegio Seminario / Club Seminario",
             7
           ]
         }
@@ -4736,7 +4760,7 @@
       "title": "COPA DE PLATA (Sub 18)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=4",
-      "updatedAt": "2026-10-16T11:31:17.654Z",
+      "updatedAt": "2026-10-16T15:17:35.619Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=4#table-2764",
       "kind": "standings",
       "columns": [
@@ -4858,7 +4882,7 @@
       "title": "COPA DE PLATA (Sub 18)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=4",
-      "updatedAt": "2026-10-16T11:31:17.654Z",
+      "updatedAt": "2026-10-16T15:17:35.619Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=4#scorers-2764",
       "kind": "scorers",
       "columns": [
@@ -4872,15 +4896,6 @@
           "club": false,
           "values": [
             1,
-            "Martina Nuñez",
-            "Woodlands School - Old Woodlands Club",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
             "JULIA GENINAZZI",
             "Woodlands School - Old Woodlands Club",
             5
@@ -4889,43 +4904,16 @@
         {
           "club": false,
           "values": [
+            2,
+            "Martina Nuñez",
+            "Woodlands School - Old Woodlands Club",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             3,
-            "Margarita Soto Azzini",
-            "Ivy Thomas Memorial School / Old Ivy Club",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "Josefina Davies",
-            "Ivy Thomas Memorial School / Old Ivy Club",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "Renata Falco Amarelle",
-            "Ivy Thomas Memorial School / Old Ivy Club",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "Sofia Zagarzazu",
-            "St. Brendans School / Old Brendans Club",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
             "Federica Emicuri",
             "St. Brendans School / Old Brendans Club",
             4
@@ -4934,7 +4922,7 @@
         {
           "club": false,
           "values": [
-            8,
+            4,
             "Lara Mendez",
             "St. Brendans School / Old Brendans Club",
             4
@@ -4943,34 +4931,43 @@
         {
           "club": false,
           "values": [
+            5,
+            "Margarita Soto Azzini",
+            "Ivy Thomas Memorial School / Old Ivy Club",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "Josefina Davies",
+            "Ivy Thomas Memorial School / Old Ivy Club",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "Renata Falco Amarelle",
+            "Ivy Thomas Memorial School / Old Ivy Club",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "Sofia Zagarzazu",
+            "St. Brendans School / Old Brendans Club",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             9,
-            "Agustina Mieres",
-            "CLUB NORTHFIELD",
-            3
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            10,
-            "Belén Harán",
-            "St. Brendans School / Old Brendans Club",
-            3
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            11,
-            "María Belén Galante",
-            "St. Brendans School / Old Brendans Club",
-            3
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            12,
             "Josefina Ortiz",
             "CLUB NORTHFIELD",
             3
@@ -4979,7 +4976,7 @@
         {
           "club": true,
           "values": [
-            13,
+            10,
             "Paulina Mesa",
             "Colegio Los Pilares / Club Los Ceibos",
             3
@@ -4988,7 +4985,7 @@
         {
           "club": false,
           "values": [
-            14,
+            11,
             "Inés María Bremermann",
             "Ivy Thomas Memorial School / Old Ivy Club",
             3
@@ -4997,9 +4994,36 @@
         {
           "club": false,
           "values": [
-            15,
+            12,
             "Belen Vairo",
             "Woodlands School - Old Woodlands Club",
+            3
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            13,
+            "Constanza Alves",
+            "St. Brendans School / Old Brendans Club",
+            3
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
+            "Belén Harán",
+            "St. Brendans School / Old Brendans Club",
+            3
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            15,
+            "Agustina Mieres",
+            "CLUB NORTHFIELD",
             3
           ]
         }
@@ -5012,7 +5036,7 @@
       "title": "APERTURA 2026 (Intermedia B)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=31",
-      "updatedAt": "2026-10-16T11:31:28.242Z",
+      "updatedAt": "2026-10-16T15:17:44.959Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=31#table-2735",
       "kind": "standings",
       "columns": [
@@ -5190,7 +5214,7 @@
       "title": "APERTURA 2026 (Intermedia B)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=31",
-      "updatedAt": "2026-10-16T11:31:28.242Z",
+      "updatedAt": "2026-10-16T15:17:44.959Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=31#scorers-2735",
       "kind": "scorers",
       "columns": [
@@ -5276,15 +5300,6 @@
           "club": false,
           "values": [
             9,
-            "Francisca Baccino Perdomo",
-            "Pucaru Stade Galulois",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            10,
             "María Magdalena Narbondo",
             "Palo y Pico",
             5
@@ -5293,7 +5308,7 @@
         {
           "club": false,
           "values": [
-            11,
+            10,
             "Josefina Justo",
             "The British Schools / Old Girls Club",
             5
@@ -5302,7 +5317,7 @@
         {
           "club": false,
           "values": [
-            12,
+            11,
             "Matilde Affonso",
             "CGU – LOS CUERVOS",
             5
@@ -5311,7 +5326,7 @@
         {
           "club": false,
           "values": [
-            13,
+            12,
             "María Agustina Arcos",
             "Old Sampa Club",
             5
@@ -5320,7 +5335,7 @@
         {
           "club": false,
           "values": [
-            14,
+            13,
             "Natalia Alvarez",
             "Nautilus Yachting Club",
             5
@@ -5329,9 +5344,18 @@
         {
           "club": false,
           "values": [
+            14,
+            "Francisca Baccino Perdomo",
+            "Pucaru Stade Galulois",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             15,
-            "Agostina Servidio",
-            "Nautilus Yachting Club",
+            "Sophie Delger",
+            "CGU – LOS CUERVOS",
             4
           ]
         }
@@ -5344,7 +5368,7 @@
       "title": "COPA DE BRONCE (Intermedia B)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=31",
-      "updatedAt": "2026-10-16T11:31:28.783Z",
+      "updatedAt": "2026-10-16T15:17:45.557Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=31#table-2775",
       "kind": "standings",
       "columns": [
@@ -5410,7 +5434,7 @@
       "title": "COPA DE BRONCE (Intermedia B)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=31",
-      "updatedAt": "2026-10-16T11:31:28.783Z",
+      "updatedAt": "2026-10-16T15:17:45.557Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=31#scorers-2775",
       "kind": "scorers",
       "columns": [
@@ -5428,7 +5452,7 @@
       "title": "APERTURA 2026 (Intermedia C)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=79",
-      "updatedAt": "2026-10-16T11:31:40.700Z",
+      "updatedAt": "2026-10-16T15:17:57.075Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=79#table-2736",
       "kind": "standings",
       "columns": [
@@ -5676,7 +5700,7 @@
       "title": "APERTURA 2026 (Intermedia C)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=79",
-      "updatedAt": "2026-10-16T11:31:40.700Z",
+      "updatedAt": "2026-10-16T15:17:57.075Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=79#scorers-2736",
       "kind": "scorers",
       "columns": [
@@ -5723,18 +5747,9 @@
           ]
         },
         {
-          "club": true,
-          "values": [
-            5,
-            "Emilia Berretta Lizasoain",
-            "Colegio Los Pilares / Club Los Ceibos",
-            9
-          ]
-        },
-        {
           "club": false,
           "values": [
-            6,
+            5,
             "Emma Cikato",
             "The British Schools / Old Girls Club",
             9
@@ -5743,9 +5758,18 @@
         {
           "club": false,
           "values": [
-            7,
+            6,
             "Milagros Albanell",
             "The British Schools / Old Girls Club",
+            9
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            7,
+            "Emilia Berretta Lizasoain",
+            "Colegio Los Pilares / Club Los Ceibos",
             9
           ]
         },
@@ -5753,15 +5777,6 @@
           "club": false,
           "values": [
             8,
-            "Isabel Cardoso",
-            "The British Schools / Old Girls Club",
-            8
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
             "Vanessa Saporta",
             "CLUB NACIONAL DE FOOTBALL",
             8
@@ -5770,7 +5785,7 @@
         {
           "club": false,
           "values": [
-            10,
+            9,
             "Matilde Pérez Vallejo",
             "Colegio Seminario / Club Seminario",
             8
@@ -5779,9 +5794,18 @@
         {
           "club": false,
           "values": [
+            10,
+            "Isabel Cardoso",
+            "The British Schools / Old Girls Club",
+            8
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             11,
-            "Mia Franco",
-            "Pucaru Stade Galulois",
+            "Inés Scremini",
+            "CGU – LOS CUERVOS",
             7
           ]
         },
@@ -5798,15 +5822,6 @@
           "club": false,
           "values": [
             13,
-            "Inés Scremini",
-            "CGU – LOS CUERVOS",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            14,
             "Margarita Etchandy",
             "Colegio Seminario / Club Seminario",
             7
@@ -5815,9 +5830,18 @@
         {
           "club": false,
           "values": [
+            14,
+            "Mia Franco",
+            "Pucaru Stade Galulois",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             15,
-            "Joaquina Justo",
-            "The British Schools / Old Girls Club",
+            "Sofia Lopez",
+            "CGU – LOS CUERVOS",
             6
           ]
         }
@@ -5830,7 +5854,7 @@
       "title": "COPA DE ORO (Intermedia C)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=79",
-      "updatedAt": "2026-10-16T11:31:41.231Z",
+      "updatedAt": "2026-10-16T15:17:57.621Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=79#table-2765",
       "kind": "standings",
       "columns": [
@@ -5966,7 +5990,7 @@
       "title": "COPA DE ORO (Intermedia C)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=79",
-      "updatedAt": "2026-10-16T11:31:41.231Z",
+      "updatedAt": "2026-10-16T15:17:57.621Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=79#scorers-2765",
       "kind": "scorers",
       "columns": [
@@ -5989,15 +6013,6 @@
           "club": false,
           "values": [
             2,
-            "Milagros Albanell",
-            "The British Schools / Old Girls Club",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
             "Paulina Reissig",
             "CGU – LOS CUERVOS",
             4
@@ -6006,16 +6021,16 @@
         {
           "club": false,
           "values": [
-            4,
-            "Karin Bondorowsky",
-            "Círculo de Tenis de Montevideo",
-            3
+            3,
+            "Milagros Albanell",
+            "The British Schools / Old Girls Club",
+            4
           ]
         },
         {
           "club": false,
           "values": [
-            5,
+            4,
             "Agustina Delgado",
             "Old Christian's Club, Stella Maris",
             3
@@ -6024,52 +6039,16 @@
         {
           "club": false,
           "values": [
+            5,
+            "Karin Bondorowsky",
+            "Círculo de Tenis de Montevideo",
+            3
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             6,
-            "Sofía Montaño",
-            "The British Schools / Old Girls Club",
-            2
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            7,
-            "Emilia Berretta Lizasoain",
-            "Colegio Los Pilares / Club Los Ceibos",
-            2
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "Juana Tobías Cernada",
-            "Lobos Rugby Club",
-            2
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "Valentina Ortas",
-            "Círculo de Tenis de Montevideo",
-            2
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            10,
-            "María Fernanda Presno",
-            "Círculo de Tenis de Montevideo",
-            2
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            11,
             "Celina Curbelo",
             "Círculo de Tenis de Montevideo",
             2
@@ -6078,7 +6057,7 @@
         {
           "club": false,
           "values": [
-            12,
+            7,
             "María Pia Guzmán",
             "Círculo de Tenis de Montevideo",
             2
@@ -6087,7 +6066,16 @@
         {
           "club": false,
           "values": [
-            13,
+            8,
+            "Camila Filipeli",
+            "Pucaru Stade Galulois",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
             "Emma Cikato",
             "The British Schools / Old Girls Club",
             2
@@ -6096,7 +6084,7 @@
         {
           "club": false,
           "values": [
-            14,
+            10,
             "Sol Suárez",
             "Círculo de Tenis de Montevideo",
             2
@@ -6105,9 +6093,45 @@
         {
           "club": false,
           "values": [
+            11,
+            "Sofía Montaño",
+            "The British Schools / Old Girls Club",
+            2
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            12,
+            "Emilia Berretta Lizasoain",
+            "Colegio Los Pilares / Club Los Ceibos",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            13,
+            "Juana Tobías Cernada",
+            "Lobos Rugby Club",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
+            "Valentina Ortas",
+            "Círculo de Tenis de Montevideo",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             15,
-            "Camila Filipeli",
-            "Pucaru Stade Galulois",
+            "María Fernanda Presno",
+            "Círculo de Tenis de Montevideo",
             2
           ]
         }
@@ -6120,7 +6144,7 @@
       "title": "APERTURA (Reserva )",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=2",
-      "updatedAt": "2026-10-16T11:31:52.005Z",
+      "updatedAt": "2026-10-16T15:18:07.864Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=2#table-2737",
       "kind": "standings",
       "columns": [
@@ -6354,7 +6378,7 @@
       "title": "APERTURA (Reserva )",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=2",
-      "updatedAt": "2026-10-16T11:31:52.005Z",
+      "updatedAt": "2026-10-16T15:18:07.864Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=2#scorers-2737",
       "kind": "scorers",
       "columns": [
@@ -6404,15 +6428,6 @@
           "club": false,
           "values": [
             5,
-            "Paz Quartara",
-            "Carrasco Polo Club",
-            10
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
             "Maria Paz Gnazzo",
             "Old Sampa Club",
             10
@@ -6421,9 +6436,18 @@
         {
           "club": false,
           "values": [
+            6,
+            "Paz Quartara",
+            "Carrasco Polo Club",
+            10
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             7,
-            "Lucia Serra",
-            "Club Náutico",
+            "Lucila Marini",
+            "CLUB NORTHFIELD",
             9
           ]
         },
@@ -6440,8 +6464,8 @@
           "club": false,
           "values": [
             9,
-            "Lucila Marini",
-            "CLUB NORTHFIELD",
+            "Lucia Serra",
+            "Club Náutico",
             9
           ]
         },
@@ -6485,7 +6509,7 @@
           "club": true,
           "values": [
             14,
-            "Pilar Etcheverry",
+            "Guillermina Risso",
             "Colegio Los Pilares / Club Los Ceibos",
             6
           ]
@@ -6494,7 +6518,7 @@
           "club": true,
           "values": [
             15,
-            "Guillermina Risso",
+            "Pilar Etcheverry",
             "Colegio Los Pilares / Club Los Ceibos",
             6
           ]
@@ -6508,7 +6532,7 @@
       "title": "COPA DE ORO (Reserva )",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=2",
-      "updatedAt": "2026-10-16T11:31:52.538Z",
+      "updatedAt": "2026-10-16T15:18:08.412Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=2#table-2759",
       "kind": "standings",
       "columns": [
@@ -6644,7 +6668,7 @@
       "title": "COPA DE ORO (Reserva )",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=2",
-      "updatedAt": "2026-10-16T11:31:52.538Z",
+      "updatedAt": "2026-10-16T15:18:08.412Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=2#scorers-2759",
       "kind": "scorers",
       "columns": [
@@ -6658,15 +6682,6 @@
           "club": false,
           "values": [
             1,
-            "Josefina Chahnazaroff",
-            "The British Schools / Old Girls Club",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
             "Josefina Mantero",
             "Club Náutico",
             5
@@ -6675,52 +6690,16 @@
         {
           "club": false,
           "values": [
+            2,
+            "Josefina Chahnazaroff",
+            "The British Schools / Old Girls Club",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             3,
-            "Micaela Domínguez",
-            "Club Náutico",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "Sofía Mora",
-            "CLUB NORTHFIELD",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "Camila Minatta",
-            "Club Náutico",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "Manuela Vidal",
-            "Club Náutico",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "Lara Barrenechea",
-            "Club Náutico",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
             "Paz Quartara",
             "Carrasco Polo Club",
             4
@@ -6729,7 +6708,25 @@
         {
           "club": false,
           "values": [
-            9,
+            4,
+            "Manuela Vidal",
+            "Club Náutico",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "Lara Barrenechea",
+            "Club Náutico",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
             "Ivanna Barrios",
             "Old Christian's Club, Stella Maris",
             4
@@ -6738,25 +6735,34 @@
         {
           "club": false,
           "values": [
-            10,
-            "Manuela López",
+            7,
+            "Micaela Domínguez",
             "Club Náutico",
-            3
+            4
           ]
         },
         {
           "club": false,
           "values": [
-            11,
-            "Ana Terra",
-            "Carrasco Polo Club",
-            3
+            8,
+            "Sofía Mora",
+            "CLUB NORTHFIELD",
+            4
           ]
         },
         {
           "club": false,
           "values": [
-            12,
+            9,
+            "Camila Minatta",
+            "Club Náutico",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            10,
             "Lucila Marini",
             "CLUB NORTHFIELD",
             3
@@ -6765,9 +6771,27 @@
         {
           "club": false,
           "values": [
+            11,
+            "Manuela López",
+            "Club Náutico",
+            3
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            12,
+            "Ana Terra",
+            "Carrasco Polo Club",
+            3
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             13,
-            "Agustina Ripoll",
-            "St. Brendans School / Old Brendans Club",
+            "Matilde Lourido",
+            "Club Biguá de Villa Biarritz",
             2
           ]
         },
@@ -6775,8 +6799,8 @@
           "club": false,
           "values": [
             14,
-            "Catalina Guichon",
-            "Carrasco Polo Club",
+            "Rafaela Canepa",
+            "Club Náutico",
             2
           ]
         },
@@ -6784,7 +6808,7 @@
           "club": false,
           "values": [
             15,
-            "Belén Laguardia",
+            "Catalina Guichon",
             "Carrasco Polo Club",
             2
           ]
@@ -6793,12 +6817,82 @@
       "sourceKey": "hockey|Reserva"
     },
     {
-      "id": "rugby-69c2d502286addcc854cb131-",
+      "id": "rugby-6aa9a752c3582a820da54dd0-Serie D",
       "sport": "rugby",
-      "category": "Primera",
+      "category": "M19",
       "season": 2026,
       "kind": "standings",
-      "title": "Apertura 2026 - Top 12",
+      "title": "Copa Uruguay 2026 - M19 · Serie D",
+      "source": "https://50-22.base44.app",
+      "columns": [
+        "Pos.",
+        "Equipo",
+        "PJ",
+        "PG",
+        "PE",
+        "PP",
+        "PF",
+        "PC",
+        "Bonus",
+        "Pts."
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "Lions",
+            2,
+            2,
+            0,
+            0,
+            0,
+            0,
+            1,
+            9
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "PGC Trébol",
+            2,
+            1,
+            0,
+            1,
+            0,
+            0,
+            2,
+            6
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            3,
+            "Ceibos",
+            2,
+            0,
+            0,
+            2,
+            0,
+            0,
+            2,
+            2
+          ]
+        }
+      ],
+      "updatedAt": "2026-10-16T15:18:10.911Z",
+      "sourceKey": "rugby"
+    },
+    {
+      "id": "rugby-6a4c6fc5fc4c09a364c14861-",
+      "sport": "rugby",
+      "category": "Intermedia",
+      "season": 2026,
+      "kind": "standings",
+      "title": "Clausura 2026 - Intermedia",
       "source": "https://50-22.base44.app",
       "columns": [
         "Pos.",
@@ -6818,14 +6912,14 @@
           "values": [
             1,
             "Old Christians",
-            11,
-            11,
+            6,
+            6,
             0,
             0,
-            464,
-            105,
-            9,
-            53
+            0,
+            0,
+            6,
+            30
           ]
         },
         {
@@ -6833,59 +6927,264 @@
           "values": [
             2,
             "Old Boys",
-            11,
-            10,
+            6,
+            5,
             0,
             1,
-            408,
-            51,
-            10,
-            50
+            0,
+            0,
+            6,
+            26
           ]
         },
         {
           "club": false,
           "values": [
             3,
-            "Carrasco Polo",
-            11,
-            9,
+            "Lions",
+            6,
+            4,
             0,
             2,
-            220,
-            145,
-            5,
-            42
+            0,
+            0,
+            6,
+            22
           ]
         },
         {
           "club": false,
           "values": [
             4,
-            "PGC Trébol",
-            11,
+            "Carrasco Polo",
             6,
-            1,
             4,
-            265,
-            200,
-            9,
-            35
+            0,
+            2,
+            0,
+            0,
+            4,
+            20
           ]
         },
         {
           "club": false,
           "values": [
             5,
-            "Los Cuervos CGU",
-            11,
+            "Trebol",
             6,
-            1,
             4,
-            227,
-            213,
+            0,
+            2,
+            0,
+            0,
+            4,
+            20
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "Montevideo Cricket",
+            6,
+            4,
+            0,
+            2,
+            0,
+            0,
+            2,
+            18
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             7,
-            34
+            "Los Cuervos",
+            6,
+            3,
+            0,
+            3,
+            0,
+            0,
+            4,
+            16
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "Lobos",
+            6,
+            2,
+            0,
+            4,
+            0,
+            0,
+            5,
+            13
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
+            "Club Seminario",
+            6,
+            2,
+            0,
+            4,
+            0,
+            0,
+            0,
+            8
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            10,
+            "Ceibos",
+            6,
+            1,
+            0,
+            5,
+            0,
+            0,
+            2,
+            6
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            11,
+            "Champagnat",
+            6,
+            1,
+            0,
+            5,
+            0,
+            0,
+            2,
+            6
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            12,
+            "Pucaru Stade Gaulois",
+            6,
+            0,
+            0,
+            6,
+            0,
+            0,
+            2,
+            2
+          ]
+        }
+      ],
+      "updatedAt": "2026-10-16T15:18:10.911Z",
+      "sourceKey": "rugby"
+    },
+    {
+      "id": "rugby-6a4c6d4b200e7a68eb52ca52-",
+      "sport": "rugby",
+      "category": "Primera",
+      "season": 2026,
+      "kind": "standings",
+      "title": "Clausura 2026 - Top 12",
+      "source": "https://50-22.base44.app",
+      "columns": [
+        "Pos.",
+        "Equipo",
+        "PJ",
+        "PG",
+        "PE",
+        "PP",
+        "PF",
+        "PC",
+        "Bonus",
+        "Pts."
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "Old Boys",
+            8,
+            8,
+            0,
+            0,
+            0,
+            0,
+            6,
+            38
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "Champagnat",
+            8,
+            7,
+            0,
+            1,
+            0,
+            0,
+            4,
+            32
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "Old Christians",
+            8,
+            6,
+            0,
+            2,
+            0,
+            0,
+            7,
+            31
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "Los Cuervos",
+            8,
+            6,
+            0,
+            2,
+            0,
+            0,
+            5,
+            29
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "Carrasco Polo",
+            8,
+            5,
+            1,
+            2,
+            0,
+            0,
+            4,
+            26
           ]
         },
         {
@@ -6893,58 +7192,58 @@
           "values": [
             6,
             "Lobos",
-            11,
-            6,
+            8,
+            4,
+            1,
+            3,
             0,
-            5,
-            221,
-            161,
-            6,
-            31
+            0,
+            7,
+            25
           ]
         },
         {
           "club": false,
           "values": [
             7,
-            "MVD Cricket",
-            11,
-            5,
+            "Montevideo Cricket",
+            8,
+            4,
+            0,
+            4,
+            0,
             0,
             6,
-            158,
-            246,
-            8,
-            28
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            8,
-            "Ceibos",
-            11,
-            4,
-            1,
-            6,
-            161,
-            226,
-            4,
-            23
+            22
           ]
         },
         {
           "club": false,
           "values": [
-            9,
-            "Seminario",
-            11,
+            8,
+            "PGC Trébol",
+            8,
             2,
             0,
+            6,
+            0,
+            0,
+            7,
+            15
+          ]
+        },
+        {
+          "club": true,
+          "values": [
             9,
-            186,
-            358,
-            4,
+            "Ceibos",
+            8,
+            2,
+            1,
+            5,
+            0,
+            0,
+            3,
             13
           ]
         },
@@ -6952,49 +7251,194 @@
           "club": false,
           "values": [
             10,
-            "Champagnat",
-            11,
-            2,
+            "Club Seminario",
+            8,
+            1,
+            1,
+            6,
             0,
-            9,
-            157,
-            310,
+            0,
             2,
-            11
+            8
           ]
         },
         {
           "club": false,
           "values": [
             11,
-            "Círculo de Tenis",
-            11,
-            2,
-            0,
-            9,
-            108,
-            334,
+            "Pucaru Stade Gaulois",
+            8,
             1,
-            9
+            0,
+            7,
+            0,
+            0,
+            3,
+            7
           ]
         },
         {
           "club": false,
           "values": [
             12,
-            "PSG",
-            11,
-            1,
-            1,
-            9,
-            107,
-            333,
-            1,
-            8
+            "Circulo de Tenis",
+            8,
+            0,
+            0,
+            8,
+            0,
+            0,
+            2,
+            2
           ]
         }
       ],
-      "updatedAt": "2026-10-16T11:31:56.637Z",
+      "updatedAt": "2026-10-16T15:18:10.912Z",
+      "sourceKey": "rugby"
+    },
+    {
+      "id": "rugby-6a4c5a0800602404735be6af-",
+      "sport": "rugby",
+      "category": "M19",
+      "season": 2026,
+      "kind": "standings",
+      "title": "Clausura 2026 - M19 Copa Oro",
+      "source": "https://50-22.base44.app",
+      "columns": [
+        "Pos.",
+        "Equipo",
+        "PJ",
+        "PG",
+        "PE",
+        "PP",
+        "PF",
+        "PC",
+        "Bonus",
+        "Pts."
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "Old Christians",
+            19,
+            19,
+            0,
+            0,
+            0,
+            0,
+            16,
+            92
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "Old Boys",
+            19,
+            16,
+            0,
+            3,
+            0,
+            0,
+            19,
+            83
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "Carrasco Polo",
+            19,
+            15,
+            0,
+            4,
+            0,
+            0,
+            15,
+            75
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            4,
+            "Ceibos",
+            19,
+            12,
+            1,
+            6,
+            0,
+            0,
+            10,
+            60
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "Lions",
+            19,
+            10,
+            0,
+            9,
+            0,
+            0,
+            12,
+            52
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "Montevideo Cricket",
+            18,
+            7,
+            0,
+            11,
+            0,
+            0,
+            9,
+            37
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "Club Seminario",
+            19,
+            6,
+            1,
+            12,
+            0,
+            0,
+            10,
+            36
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "Lobos",
+            18,
+            5,
+            1,
+            12,
+            0,
+            0,
+            9,
+            31
+          ]
+        }
+      ],
+      "updatedAt": "2026-10-16T15:18:10.912Z",
       "sourceKey": "rugby"
     },
     {
@@ -7199,7 +7643,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-10-16T11:31:56.637Z",
+      "updatedAt": "2026-10-16T15:18:10.912Z",
       "sourceKey": "rugby"
     },
     {
@@ -7419,161 +7863,16 @@
           ]
         }
       ],
-      "updatedAt": "2026-10-16T11:31:56.637Z",
+      "updatedAt": "2026-10-16T15:18:10.912Z",
       "sourceKey": "rugby"
     },
     {
-      "id": "rugby-6a4c5a0800602404735be6af-",
-      "sport": "rugby",
-      "category": "M19",
-      "season": 2026,
-      "kind": "standings",
-      "title": "Clausura 2026 - M19 Copa Oro",
-      "source": "https://50-22.base44.app",
-      "columns": [
-        "Pos.",
-        "Equipo",
-        "PJ",
-        "PG",
-        "PE",
-        "PP",
-        "PF",
-        "PC",
-        "Bonus",
-        "Pts."
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "Old Christians",
-            19,
-            19,
-            0,
-            0,
-            0,
-            0,
-            16,
-            92
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "Old Boys",
-            19,
-            16,
-            0,
-            3,
-            0,
-            0,
-            19,
-            83
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "Carrasco Polo",
-            19,
-            15,
-            0,
-            4,
-            0,
-            0,
-            15,
-            75
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            4,
-            "Ceibos",
-            19,
-            12,
-            1,
-            6,
-            0,
-            0,
-            10,
-            60
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "Lions",
-            19,
-            10,
-            0,
-            9,
-            0,
-            0,
-            12,
-            52
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "Montevideo Cricket",
-            18,
-            7,
-            0,
-            11,
-            0,
-            0,
-            9,
-            37
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "Club Seminario",
-            19,
-            6,
-            1,
-            12,
-            0,
-            0,
-            10,
-            36
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "Lobos",
-            18,
-            5,
-            1,
-            12,
-            0,
-            0,
-            9,
-            31
-          ]
-        }
-      ],
-      "updatedAt": "2026-10-16T11:31:56.637Z",
-      "sourceKey": "rugby"
-    },
-    {
-      "id": "rugby-6a4c6d4b200e7a68eb52ca52-",
+      "id": "rugby-69c2d502286addcc854cb131-",
       "sport": "rugby",
       "category": "Primera",
       "season": 2026,
       "kind": "standings",
-      "title": "Clausura 2026 - Top 12",
+      "title": "Apertura 2026 - Top 12",
       "source": "https://50-22.base44.app",
       "columns": [
         "Pos.",
@@ -7592,134 +7891,134 @@
           "club": false,
           "values": [
             1,
-            "Old Boys",
-            8,
-            8,
+            "Old Christians",
+            11,
+            11,
             0,
             0,
-            0,
-            0,
-            6,
-            38
+            464,
+            105,
+            9,
+            53
           ]
         },
         {
           "club": false,
           "values": [
             2,
-            "Champagnat",
-            8,
-            7,
+            "Old Boys",
+            11,
+            10,
             0,
             1,
-            0,
-            0,
-            4,
-            32
+            408,
+            51,
+            10,
+            50
           ]
         },
         {
           "club": false,
           "values": [
             3,
-            "Old Christians",
-            8,
-            6,
+            "Carrasco Polo",
+            11,
+            9,
             0,
             2,
-            0,
-            0,
+            220,
+            145,
+            5,
+            42
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "PGC Trébol",
+            11,
+            6,
+            1,
+            4,
+            265,
+            200,
+            9,
+            35
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "Los Cuervos CGU",
+            11,
+            6,
+            1,
+            4,
+            227,
+            213,
             7,
+            34
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "Lobos",
+            11,
+            6,
+            0,
+            5,
+            221,
+            161,
+            6,
             31
           ]
         },
         {
           "club": false,
           "values": [
-            4,
-            "Los Cuervos",
-            8,
-            6,
-            0,
-            2,
-            0,
-            0,
-            5,
-            29
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "Carrasco Polo",
-            8,
-            5,
-            1,
-            2,
-            0,
-            0,
-            4,
-            26
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "Lobos",
-            8,
-            4,
-            1,
-            3,
-            0,
-            0,
             7,
-            25
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "Montevideo Cricket",
-            8,
-            4,
-            0,
-            4,
-            0,
+            "MVD Cricket",
+            11,
+            5,
             0,
             6,
-            22
-          ]
-        },
-        {
-          "club": false,
-          "values": [
+            158,
+            246,
             8,
-            "PGC Trébol",
-            8,
-            2,
-            0,
-            6,
-            0,
-            0,
-            7,
-            15
+            28
           ]
         },
         {
           "club": true,
           "values": [
-            9,
-            "Ceibos",
             8,
-            2,
+            "Ceibos",
+            11,
+            4,
             1,
-            5,
+            6,
+            161,
+            226,
+            4,
+            23
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
+            "Seminario",
+            11,
+            2,
             0,
-            0,
-            3,
+            9,
+            186,
+            358,
+            4,
             13
           ]
         },
@@ -7727,288 +8026,28 @@
           "club": false,
           "values": [
             10,
-            "Club Seminario",
-            8,
-            1,
-            1,
-            6,
-            0,
-            0,
-            2,
-            8
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            11,
-            "Pucaru Stade Gaulois",
-            8,
-            1,
-            0,
-            7,
-            0,
-            0,
-            3,
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            12,
-            "Circulo de Tenis",
-            8,
-            0,
-            0,
-            8,
-            0,
-            0,
-            2,
-            2
-          ]
-        }
-      ],
-      "updatedAt": "2026-10-16T11:31:56.638Z",
-      "sourceKey": "rugby"
-    },
-    {
-      "id": "rugby-6a4c6fc5fc4c09a364c14861-",
-      "sport": "rugby",
-      "category": "Intermedia",
-      "season": 2026,
-      "kind": "standings",
-      "title": "Clausura 2026 - Intermedia",
-      "source": "https://50-22.base44.app",
-      "columns": [
-        "Pos.",
-        "Equipo",
-        "PJ",
-        "PG",
-        "PE",
-        "PP",
-        "PF",
-        "PC",
-        "Bonus",
-        "Pts."
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "Old Christians",
-            6,
-            6,
-            0,
-            0,
-            0,
-            0,
-            6,
-            30
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "Old Boys",
-            6,
-            5,
-            0,
-            1,
-            0,
-            0,
-            6,
-            26
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "Lions",
-            6,
-            4,
-            0,
-            2,
-            0,
-            0,
-            6,
-            22
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "Carrasco Polo",
-            6,
-            4,
-            0,
-            2,
-            0,
-            0,
-            4,
-            20
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "Trebol",
-            6,
-            4,
-            0,
-            2,
-            0,
-            0,
-            4,
-            20
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "Montevideo Cricket",
-            6,
-            4,
-            0,
-            2,
-            0,
-            0,
-            2,
-            18
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "Los Cuervos",
-            6,
-            3,
-            0,
-            3,
-            0,
-            0,
-            4,
-            16
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "Lobos",
-            6,
-            2,
-            0,
-            4,
-            0,
-            0,
-            5,
-            13
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "Club Seminario",
-            6,
-            2,
-            0,
-            4,
-            0,
-            0,
-            0,
-            8
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            10,
-            "Ceibos",
-            6,
-            1,
-            0,
-            5,
-            0,
-            0,
-            2,
-            6
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            11,
             "Champagnat",
-            6,
-            1,
-            0,
-            5,
-            0,
-            0,
+            11,
             2,
-            6
+            0,
+            9,
+            157,
+            310,
+            2,
+            11
           ]
         },
         {
           "club": false,
           "values": [
-            12,
-            "Pucaru Stade Gaulois",
-            6,
-            0,
-            0,
-            6,
-            0,
-            0,
-            2,
-            2
-          ]
-        }
-      ],
-      "updatedAt": "2026-10-16T11:31:56.638Z",
-      "sourceKey": "rugby"
-    },
-    {
-      "id": "rugby-6aa9a752c3582a820da54dd0-Serie D",
-      "sport": "rugby",
-      "category": "M19",
-      "season": 2026,
-      "kind": "standings",
-      "title": "Copa Uruguay 2026 - M19 · Serie D",
-      "source": "https://50-22.base44.app",
-      "columns": [
-        "Pos.",
-        "Equipo",
-        "PJ",
-        "PG",
-        "PE",
-        "PP",
-        "PF",
-        "PC",
-        "Bonus",
-        "Pts."
-      ],
-      "rows": [
-        {
-          "club": false,
-          "values": [
-            1,
-            "Lions",
-            2,
+            11,
+            "Círculo de Tenis",
+            11,
             2,
             0,
-            0,
-            0,
-            0,
+            9,
+            108,
+            334,
             1,
             9
           ]
@@ -8016,35 +8055,20 @@
         {
           "club": false,
           "values": [
-            2,
-            "PGC Trébol",
-            2,
+            12,
+            "PSG",
+            11,
             1,
-            0,
             1,
-            0,
-            0,
-            2,
-            6
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            3,
-            "Ceibos",
-            2,
-            0,
-            0,
-            2,
-            0,
-            0,
-            2,
-            2
+            9,
+            107,
+            333,
+            1,
+            8
           ]
         }
       ],
-      "updatedAt": "2026-10-16T11:31:56.638Z",
+      "updatedAt": "2026-10-16T15:18:10.913Z",
       "sourceKey": "rugby"
     },
     {
@@ -8154,7 +8178,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-10-16T11:31:56.644Z",
+      "updatedAt": "2026-10-16T15:18:10.920Z",
       "sourceKey": "rugby"
     },
     {
@@ -8264,7 +8288,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-10-16T11:31:56.644Z",
+      "updatedAt": "2026-10-16T15:18:10.920Z",
       "sourceKey": "rugby"
     },
     {
@@ -8374,7 +8398,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-10-16T11:31:56.644Z",
+      "updatedAt": "2026-10-16T15:18:10.921Z",
       "sourceKey": "rugby"
     },
     {
@@ -8484,45 +8508,45 @@
           ]
         }
       ],
-      "updatedAt": "2026-10-16T11:31:56.644Z",
+      "updatedAt": "2026-10-16T15:18:10.921Z",
       "sourceKey": "rugby"
     }
   ],
   "diagnostics": [
     {
       "source": "basketball|Basketball",
-      "status": "ok",
-      "tables": 2
+      "status": "error",
+      "message": "The operation was aborted due to timeout"
     },
     {
       "source": "futbol|Primera",
-      "status": "ok",
-      "tables": 4
+      "status": "error",
+      "message": "The operation was aborted due to timeout"
     },
     {
       "source": "futbol|Reserva A",
-      "status": "ok",
-      "tables": 4
+      "status": "error",
+      "message": "The operation was aborted due to timeout"
     },
     {
       "source": "futbol|Reserva Verde",
-      "status": "ok",
-      "tables": 4
+      "status": "error",
+      "message": "The operation was aborted due to timeout"
     },
     {
       "source": "futbol|PreSenior",
-      "status": "ok",
-      "tables": 4
+      "status": "error",
+      "message": "The operation was aborted due to timeout"
     },
     {
       "source": "futbol|Sub 20",
-      "status": "ok",
-      "tables": 4
+      "status": "error",
+      "message": "The operation was aborted due to timeout"
     },
     {
       "source": "futbol|Sub 18",
-      "status": "ok",
-      "tables": 2
+      "status": "error",
+      "message": "The operation was aborted due to timeout"
     },
     {
       "source": "hockey|Intermedia A",
