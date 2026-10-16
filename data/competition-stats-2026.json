@@ -4728,6 +4728,15 @@
           "club": false,
           "values": [
             13,
+            "Sofía Franco Charlone",
+            "Colegio Seminario / Club Seminario",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
             "Federica Vidiella",
             "The British Schools / Old Girls Club",
             7
@@ -4736,18 +4745,9 @@
         {
           "club": false,
           "values": [
-            14,
+            15,
             "Agustina Mieres",
             "CLUB NORTHFIELD",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            15,
-            "Sofía Franco Charlone",
-            "Colegio Seminario / Club Seminario",
             7
           ]
         }
@@ -5833,6 +5833,15 @@
             14,
             "Trinidad Fares",
             "Lobos Rugby Club",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
+            "Mia Franco",
+            "Pucaru Stade Galulois",
             7
           ]
         },
