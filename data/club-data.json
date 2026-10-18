@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-17T20:41:31.013Z",
+        "updatedAt": "2026-10-18T04:41:37.074Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-17T20:41:31.243Z",
+        "updatedAt": "2026-10-18T04:41:37.399Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-17T20:41:31.327Z",
+        "updatedAt": "2026-10-18T04:41:37.517Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-17T20:41:31.426Z",
+        "updatedAt": "2026-10-18T04:41:37.649Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-17T20:41:31.772Z",
+        "updatedAt": "2026-10-18T04:41:37.814Z",
         "tables": [
           {
             "id": 2239,
@@ -2592,30 +2592,6 @@
       "local": false,
       "fuente": "https://ligauniversitaria.org.uy/partidos/B221B4B.html",
       "cancha": "G.WASTON"
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Intermedia",
-      "rival": "Trebol",
-      "fecha": "2026-10-17",
-      "hora": "14:00",
-      "local": true
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "M19",
-      "rival": "Champagnat",
-      "fecha": "2026-10-17",
-      "hora": "12:30",
-      "local": true
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Primera",
-      "rival": "Trebol",
-      "fecha": "2026-10-17",
-      "hora": "15:45",
-      "local": true
     },
     {
       "deporte": "futbol",
@@ -6797,10 +6773,34 @@
       "gc": 6,
       "fecha": "2026-10-17",
       "fase": "COPA DE ORO (Reserva )"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Trebol",
+      "gf": 12,
+      "gc": 31,
+      "fecha": "2026-10-17"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Champagnat",
+      "gf": 14,
+      "gc": 0,
+      "fecha": "2026-10-17"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Trebol",
+      "gf": 12,
+      "gc": 48,
+      "fecha": "2026-10-17"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-17T20:44:46.495Z",
+  "actualizadoEn": "2026-10-18T04:44:47.971Z",
   "diagnostico": {
     "fuentes": [
       {
