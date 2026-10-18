@@ -5,8 +5,8 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-10-18 12:00",
-  "actualizado": "2026-10-18T15:57:04.752Z",
+  "publicado": "2026-10-18 18:00",
+  "actualizado": "2026-10-18T20:51:05.343Z",
   "pronosticos": [
     {
       "fecha": "2026-10-18",
@@ -27,7 +27,7 @@
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Nuboso.",
+          "descripcion": "Nuboso y cubierto.",
           "evolucion": "Probables precipitaciones escasas.",
           "detalle": "Neblinas.",
           "viento": "S al SE 10-30 km/h"
@@ -39,7 +39,7 @@
       "diaMasN": 1,
       "etiqueta": "Lunes 19",
       "temperaturaMin": 8,
-      "temperaturaMax": 17,
+      "temperaturaMax": 16,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -53,7 +53,7 @@
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Nuboso, períodos de algo nuboso.",
+          "descripcion": "Nuboso, períodos de cubierto.",
           "evolucion": "",
           "detalle": "",
           "viento": "SE al NE 10-20 km/h."
@@ -64,7 +64,7 @@
       "fecha": "2026-10-20",
       "diaMasN": 2,
       "etiqueta": "Martes 20",
-      "temperaturaMin": 8,
+      "temperaturaMin": 7,
       "temperaturaMax": 19,
       "probabilidadLluvia": "",
       "periodos": [
@@ -79,7 +79,7 @@
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Nuboso, períodos de cubierto.",
+          "descripcion": "Algo nuboso y nuboso.",
           "evolucion": "",
           "detalle": "",
           "viento": "E al NE 20-30 km/h, rachas de 40-50 km/h."
@@ -92,7 +92,7 @@
       "etiqueta": "Miércoles 21",
       "temperaturaMin": 10,
       "temperaturaMax": 22,
-      "probabilidadLluvia": "Media",
+      "probabilidadLluvia": "Baja",
       "periodos": []
     },
     {
@@ -100,7 +100,7 @@
       "diaMasN": 4,
       "etiqueta": "Jueves 22",
       "temperaturaMin": 11,
-      "temperaturaMax": 23,
+      "temperaturaMax": 22,
       "probabilidadLluvia": "Baja",
       "periodos": []
     },
@@ -118,7 +118,7 @@
       "diaMasN": 6,
       "etiqueta": "Sábado 24",
       "temperaturaMin": 13,
-      "temperaturaMax": 18,
+      "temperaturaMax": 19,
       "probabilidadLluvia": "Baja",
       "periodos": []
     }
