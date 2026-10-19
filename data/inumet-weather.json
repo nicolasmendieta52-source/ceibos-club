@@ -5,8 +5,8 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-10-19 6:00",
-  "actualizado": "2026-10-19T13:27:38.736Z",
+  "publicado": "2026-10-19 18:00",
+  "actualizado": "2026-10-19T22:25:53.094Z",
   "pronosticos": [
     {
       "fecha": "2026-10-19",
@@ -39,7 +39,7 @@
       "diaMasN": 1,
       "etiqueta": "Martes 20",
       "temperaturaMin": 7,
-      "temperaturaMax": 19,
+      "temperaturaMax": 18,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -56,7 +56,7 @@
           "descripcion": "Nuboso, períodos de cubierto.",
           "evolucion": "",
           "detalle": "",
-          "viento": "E al NE 20-30 km/h, rachas de 40-50 km/h."
+          "viento": "Sector E 20-30 km/h, rachas de 40-50 km/h."
         }
       ]
     },
@@ -64,8 +64,8 @@
       "fecha": "2026-10-21",
       "diaMasN": 2,
       "etiqueta": "Miércoles 21",
-      "temperaturaMin": 10,
-      "temperaturaMax": 22,
+      "temperaturaMin": 9,
+      "temperaturaMax": 21,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -90,7 +90,7 @@
       "fecha": "2026-10-22",
       "diaMasN": 3,
       "etiqueta": "Jueves 22",
-      "temperaturaMin": 12,
+      "temperaturaMin": 10,
       "temperaturaMax": 22,
       "probabilidadLluvia": "Baja",
       "periodos": []
@@ -99,9 +99,9 @@
       "fecha": "2026-10-23",
       "diaMasN": 4,
       "etiqueta": "Viernes 23",
-      "temperaturaMin": 14,
+      "temperaturaMin": 13,
       "temperaturaMax": 20,
-      "probabilidadLluvia": "Nula",
+      "probabilidadLluvia": "Baja",
       "periodos": []
     },
     {
@@ -109,8 +109,8 @@
       "diaMasN": 5,
       "etiqueta": "Sábado 24",
       "temperaturaMin": 13,
-      "temperaturaMax": 19,
-      "probabilidadLluvia": "Baja",
+      "temperaturaMax": 18,
+      "probabilidadLluvia": "Media",
       "periodos": []
     },
     {
@@ -118,8 +118,8 @@
       "diaMasN": 6,
       "etiqueta": "Domingo 25",
       "temperaturaMin": 12,
-      "temperaturaMax": 15,
-      "probabilidadLluvia": "Baja",
+      "temperaturaMax": 16,
+      "probabilidadLluvia": "Media",
       "periodos": []
     }
   ]
