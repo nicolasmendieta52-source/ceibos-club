@@ -2,6 +2,12 @@
 
 La sección `#noticias` reúne las noticias de Comunidad y se abre desde el menú de PC y el acceso Noticias del menú móvil. El proyecto del gimnasio conserva su video, texto y ampliación en `#proyecto-gimnasio`; el enlace de la campaña se actualizó a ese destino.
 
+## M19 campeona de la Copa Uruguay
+
+El 19/10/2026 el usuario solicitó sumar la felicitación a la **M19 de Ceibos Rugby**, campeona de la **Copa Uruguay**. La publicación pública conjunta de `rugbyclubesuru` y `ceibosrugbyclub` confirma el título: https://www.instagram.com/p/DemwTYop6q3/ .
+
+La noticia se agregó antes de la felicitación de Hockey y enlaza a esa publicación. Usa su foto del equipo con la copa, guardada sin modificaciones en `assets/noticia-m19-copa-uruguay-2026.jpg` (1600 × 1200), con crédito a las dos cuentas. La imagen se muestra completa para no recortar integrantes del plantel. No se agregó un marcador ni rival que la publicación no confirma.
+
 ## Copa de Bronce de Inter B
 
 El 19/10/2026 el usuario solicitó publicar una felicitación por la Copa de Bronce y confirmó que corresponde a **Inter B de Hockey**.
