@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-18T20:51:05.761Z",
+        "updatedAt": "2026-10-19T04:49:28.894Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-18T20:51:05.997Z",
+        "updatedAt": "2026-10-19T04:49:29.083Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-18T20:51:06.069Z",
+        "updatedAt": "2026-10-19T04:49:29.179Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-18T20:51:06.152Z",
+        "updatedAt": "2026-10-19T04:49:29.281Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-18T20:51:06.224Z",
+        "updatedAt": "2026-10-19T04:49:29.412Z",
         "tables": [
           {
             "id": 2239,
@@ -2592,28 +2592,6 @@
       "local": false,
       "fuente": "https://ligauniversitaria.org.uy/partidos/B221B4B.html",
       "cancha": "G.WASTON"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia B",
-      "rival": "Club Seminario",
-      "fecha": "2026-10-18",
-      "hora": "17:00",
-      "local": false,
-      "fase": "COPA DE BRONCE (Intermedia B)",
-      "estado": "En Juego",
-      "cancha": "Seminario"
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia C",
-      "rival": "Old Christians Club",
-      "fecha": "2026-10-18",
-      "hora": "18:45",
-      "local": true,
-      "fase": "COPA DE ORO (Intermedia C)",
-      "estado": "A Designar",
-      "cancha": "Pilares"
     },
     {
       "deporte": "futbol",
@@ -6793,10 +6771,28 @@
       "gf": 0,
       "gc": 2,
       "fecha": "2026-10-18"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia B",
+      "rival": "Club Seminario",
+      "gf": 1,
+      "gc": 0,
+      "fecha": "2026-10-18",
+      "fase": "COPA DE BRONCE (Intermedia B)"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Intermedia C",
+      "rival": "Old Christians Club",
+      "gf": 2,
+      "gc": 1,
+      "fecha": "2026-10-18",
+      "fase": "COPA DE ORO (Intermedia C)"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-18T20:54:18.086Z",
+  "actualizadoEn": "2026-10-19T04:52:51.927Z",
   "diagnostico": {
     "fuentes": [
       {
