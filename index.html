@@ -278,6 +278,7 @@ nav.topbar.solid{
 <script type="module" src="/assets/analytics.js?v=20260922"></script>
 <link rel="stylesheet" href="assets/interno.css?v=20261014inscripcion">
 <link rel="stylesheet" href="assets/navigation.css?v=20261014grupos">
+<link rel="stylesheet" href="assets/news.css?v=20261019bronce">
 </head>
 <body>
 <!-- Árbol decorativo (watermark) — el escudo oficial va como imagen PNG del manual -->
@@ -337,7 +338,6 @@ nav.topbar.solid{
       <details class="nav-group" data-nav-group>
         <summary>El Club <svg viewBox="0 0 12 12" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></summary>
         <div class="nav-group-links">
-          <a href="#noticias" data-nav-section="noticias">Noticias</a>
           <a href="#club" data-nav-section="club">Nuestra historia</a>
           <a href="#predio" data-nav-section="predio">Predio</a>
           <a href="#solidario" data-nav-section="solidario">Ceibos solidario</a>
@@ -347,6 +347,7 @@ nav.topbar.solid{
       <details class="nav-group" data-nav-group>
         <summary>Comunidad <svg viewBox="0 0 12 12" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></summary>
         <div class="nav-group-links">
+          <a href="#noticias" data-nav-section="noticias">Noticias</a>
           <a href="#vida" data-nav-section="vida">Vida Ceibos</a>
         </div>
       </details>
@@ -465,7 +466,7 @@ nav.topbar.solid{
     </div>
     <div class="gym-participate">
       <a class="gym-cta" data-gym-cta href="https://docs.google.com/forms/d/e/1FAIpQLSekX5hNlA_TM9PIgjxudmWgsASzGTtNUZN11m-nYFCjfpnSew/viewform" target="_blank" rel="noopener noreferrer">Sumá tu ladrillo <span aria-hidden="true">↗</span></a>
-      <a class="gym-project-link" href="#noticias">Conocé el proyecto</a>
+      <a class="gym-project-link" href="#proyecto-gimnasio">Conocé el proyecto</a>
       <p class="gym-contact-note" data-gym-contact-note>Completá tus datos para registrar tu colaboración.</p>
       <p class="gym-status" data-gym-status role="status" aria-live="polite" aria-atomic="true"></p>
       <p class="gym-updated" data-gym-updated></p>
@@ -611,7 +612,7 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 #archivo .archivo-shell{margin-top:0;padding-top:0;border-top:0}
 
 /* ---------- NOTICIAS ---------- */
-#noticias{background:linear-gradient(180deg,var(--verde-night),#1d392f)}
+#noticias,#proyecto-gimnasio{background:linear-gradient(180deg,var(--verde-night),#1d392f)}
 .noticia-destacada{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:clamp(24px,5vw,64px);align-items:center;margin-top:42px;padding:clamp(18px,3vw,32px);border:1px solid rgba(229,187,82,.28);border-radius:28px;background:rgba(246,241,228,.045);overflow:hidden}
 .noticia-video{display:block;width:min(100%,420px);aspect-ratio:9/16;object-fit:contain;margin-inline:auto;border-radius:18px;background:#10251f;box-shadow:0 18px 40px rgba(0,0,0,.3)}
 .noticia-fecha{font-size:.7rem;font-weight:800;letter-spacing:.25em;text-transform:uppercase;color:var(--dorado);margin-bottom:12px}
@@ -879,8 +880,8 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
 
 <!-- ======================= DEPORTES ======================= -->
 <main id="contenido">
-<section id="noticias">
-  <div class="tag-sec rev">Noticias Ceibos</div>
+<section id="proyecto-gimnasio">
+  <div class="tag-sec rev">Proyecto gimnasio</div>
   <h2 class="titulo rev rev-d1">Conocé el <em>Gimnasio</em> de Ceibos</h2>
   <div class="noticia-destacada rev rev-d2">
     <video class="noticia-video" controls preload="metadata" playsinline aria-label="Video del Gimnasio de Ceibos">
@@ -1000,6 +1001,28 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
   </div>
   <div class="interno-history"><div><p class="interno-kicker">La historia también juega</p><h3>Campeones presentes</h3><p>El palmarés compartido por el Interno: La Favela (4), Kiwis’ (2), Rapiñeros, Paso Cuello, Jirafa y Tuqui (1 cada uno).</p></div><a href="https://www.instagram.com/internoceibosclub/p/DeZdcIalQ1I/" target="_blank" rel="noopener noreferrer">Ver publicación de campeones ↗</a></div>
   <p class="interno-footer">Seguí los anuncios en <a href="https://www.instagram.com/internoceibosclub/" target="_blank" rel="noopener noreferrer">@internoceibosclub ↗</a>. Los equipos de esta edición, el fixture y los resultados se publicarán próximamente.</p>
+</section>
+
+<!-- ======================= NOTICIAS DEL CLUB ======================= -->
+<section id="noticias" aria-labelledby="noticias-titulo">
+  <div class="club-news-head">
+    <div><div class="tag-sec">Comunidad</div><h2 class="titulo" id="noticias-titulo">Noticias del <em>club</em></h2></div>
+    <p>Los logros y las novedades que compartimos como comunidad.</p>
+  </div>
+  <article class="club-news-feature" aria-labelledby="noticia-inter-b-bronce">
+    <figure class="club-news-photo">
+      <img src="assets/deporte-hockey.webp" alt="Jugadoras de Ceibos Hockey reunidas en ronda" width="1400" height="1120" loading="lazy" decoding="async">
+      <figcaption>Ceibos Hockey · Imagen del club</figcaption>
+    </figure>
+    <div class="club-news-copy">
+      <p class="club-news-category">Hockey · Inter B</p>
+      <h3 id="noticia-inter-b-bronce">¡Felicitaciones,<br><em>Inter B!</em></h3>
+      <p class="club-news-award">Copa de Bronce</p>
+      <p class="club-news-body">Felicitamos a la Inter B de Ceibos Hockey por la Copa de Bronce. Un logro para celebrar con las jugadoras, el cuerpo técnico y quienes acompañan al equipo. ¡Arriba Ceibos!</p>
+      <a class="club-news-link" href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDk2NjQyNjMxNzg5NDI2?story_media_id=4011326655917253565&amp;vrfl=aWVlbnNlbzlndXB5" target="_blank" rel="noopener noreferrer">Ver historia en Instagram <span aria-hidden="true">↗</span></a>
+      <p class="club-news-source">@ceiboshockeyclub</p>
+    </div>
+  </article>
 </section>
 
 <!-- ======================= VIDA CEIBOS ======================= -->
