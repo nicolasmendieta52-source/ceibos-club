@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "checkedAt": "2026-10-20T11:52:08.877Z",
+  "checkedAt": "2026-10-20T12:01:39.693Z",
   "tables": [
     {
       "sport": "basketball",
@@ -391,7 +391,7 @@
       "category": "Sub 18",
       "title": "Copa de Oro",
       "season": 2026,
-      "updatedAt": "2026-10-20T11:50:45.125Z",
+      "updatedAt": "2026-10-20T12:01:30.576Z",
       "id": "https://ligauniversitaria.org.uy/posiciones/F181818O.html",
       "kind": "standings",
       "source": "https://ligauniversitaria.org.uy/posiciones/F181818O.html",
@@ -527,7 +527,7 @@
       "category": "Sub 18",
       "title": "Copa de Oro",
       "season": 2026,
-      "updatedAt": "2026-10-20T11:50:45.125Z",
+      "updatedAt": "2026-10-20T12:01:30.576Z",
       "id": "https://ligauniversitaria.org.uy/goleadores/F181818O.html",
       "kind": "scorers",
       "source": "https://ligauniversitaria.org.uy/goleadores/F181818O.html",
@@ -636,7 +636,7 @@
       "category": "Sub 18",
       "title": "Segunda rueda · Serie 5",
       "season": 2026,
-      "updatedAt": "2026-10-20T11:50:50.767Z",
+      "updatedAt": "2026-10-20T12:01:38.661Z",
       "id": "https://ligauniversitaria.org.uy/posiciones/F181818-52.html",
       "kind": "standings",
       "source": "https://ligauniversitaria.org.uy/posiciones/F181818-52.html",
@@ -772,7 +772,7 @@
       "category": "Sub 18",
       "title": "Segunda rueda · Serie 5",
       "season": 2026,
-      "updatedAt": "2026-10-20T11:50:50.767Z",
+      "updatedAt": "2026-10-20T12:01:38.661Z",
       "id": "https://ligauniversitaria.org.uy/goleadores/F181818-52.html",
       "kind": "scorers",
       "source": "https://ligauniversitaria.org.uy/goleadores/F181818-52.html",
@@ -9004,11 +9004,6 @@
       "tables": 2
     },
     {
-      "source": "futbol|Sub 18",
-      "status": "ok",
-      "tables": 4
-    },
-    {
       "source": "futbol|Primera",
       "status": "ok",
       "tables": 4
@@ -9062,6 +9057,11 @@
       "source": "rugby",
       "status": "ok",
       "tables": 11
+    },
+    {
+      "source": "futbol|Sub 18",
+      "status": "ok",
+      "tables": 4
     }
   ]
 }

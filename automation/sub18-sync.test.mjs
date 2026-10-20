@@ -10,10 +10,12 @@ const aliases=['CEIBOS CLUB'];
 
 test('Sub 18 discovers the cup, replaces its played fixture and preserves earlier rounds',async t=>{
  assert.ok(source,'Sub 18 must follow the public Copas page');
- const paths=[];
+ const paths=[];let firstFixture=true;
  t.mock.method(globalThis,'fetch',async input=>{
   const url=new URL(input);paths.push(url.pathname);
-  if(url.href===source.url)return new Response('<iframe src="/partidos/F181818O.html"></iframe><iframe src="/resultados/F181818O.html"></iframe>');
+  if(url.href===source.url)return new Response('<h2>Copa de Oro</h2><iframe src="/partidos/F181818O.html"></iframe><iframe src="/resultados/F181818O.html"></iframe><h2>Copa de Plata</h2><iframe src="/partidos/F181818P.html"></iframe>');
+  assert.ok(!url.pathname.includes('18P'),'does not query a cup where Ceibos does not compete');
+  if(url.pathname==='/partidos/F181818O.html'&&firstFixture){firstFixture=false;throw new DOMException('Temporary timeout','TimeoutError');}
   if(url.pathname.endsWith('.html'))return new Response('<meta name="config-id" content="74">');
   if(url.pathname==='/config/config.json')return Response.json([{ID:'74',Temporada:'113',Deporte:'F',Torneo:'18',Categoria:'18',Serie:'18O'}]);
   if(url.pathname==='/partidos/api.php')return Response.json([{Fecha:'2026-10-25 00:00:00',Locatario:'CEIBOS CLUB',Visitante:'OLD CHRISTIANS CLUB',Cancha:'CANCHA A FIJAR'}]);
@@ -33,6 +35,12 @@ test('Sub 18 discovers the cup, replaces its played fixture and preserves earlie
  assert.equal(latest.fase,'Copa de Oro');assert.equal(latest.gf,2);assert.equal(latest.gc,4);
  assert.deepEqual(latest.goleadores,["FRANCISCO ROSSIGUOLO (45')","BENJAMIN FERNANDEZ (60')"]);
  assert.ok(paths.includes('/resultados/api.php'));
+ assert.equal(paths.filter(p=>p==='/partidos/F181818O.html').length,2,'retries a temporary timeout');
+});
+
+test('missing Copa de Oro heading does not silently import or relabel another cup',async t=>{
+ t.mock.method(globalThis,'fetch',async()=>new Response('<h2>Copa de Plata</h2><iframe src="/partidos/F181818P.html"></iframe>'));
+ await assert.rejects(fetchLigaFixtureIndex(source,aliases),/no publica la fase Copa de Oro/);
 });
 
 test('Sub 18 keeps series standings and adds cup standings and scorers without mixing totals',async t=>{

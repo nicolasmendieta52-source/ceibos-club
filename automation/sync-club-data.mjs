@@ -289,16 +289,36 @@ async function fetchLigaFixtures(source, aliases) {
   return parseLigaFixturesApi(await fetchLigaRows(source), source, aliases);
 }
 
+function ligaPhaseHtml(html, phase) {
+  if (!phase) return html;
+  const headings = [...html.matchAll(/<(h[1-6])\b[^>]*>([\s\S]*?)<\/\1>/gi)];
+  const index = headings.findIndex(match => comparable(match[2].replace(/<[^>]*>/g, ' ')) === comparable(phase));
+  if (index < 0) throw new Error(`La Liga no publica la fase ${phase} en esta página`);
+  const heading = headings[index];
+  const next = headings.slice(index + 1).find(match => Number(match[1].slice(1)) <= Number(heading[1].slice(1)));
+  return html.slice(heading.index, next?.index ?? html.length);
+}
+
+async function retryLigaRead(read) {
+  try { return await read(); }
+  catch (error) {
+    if (!['AbortError', 'TimeoutError'].includes(error.name) && !/HTTP 5\d\d/.test(error.message)) throw error;
+    return await read();
+  }
+}
+
 async function fetchLigaFixtureIndex(source, aliases) {
-  const response = await fetch(source.url, {cache:'no-store',headers:{'cache-control':'no-cache'},signal:AbortSignal.timeout(30000)});
-  if (!response.ok) throw new Error('HTTP '+response.status+' al consultar las fases de la Liga');
-  const html = await response.text();
+  const html = ligaPhaseHtml(await retryLigaRead(async () => {
+    const response = await fetch(source.url, {cache:'no-store',headers:{'cache-control':'no-cache'},signal:AbortSignal.timeout(30000)});
+    if (!response.ok) throw new Error('HTTP '+response.status+' al consultar las fases de la Liga');
+    return await response.text();
+  }), source.fase);
   const links = ligaFixtureLinks(html, source.url);
   if (!links.length) throw new Error('La página de la Liga no contiene fuentes de partidos');
   // Fail this category as a unit rather than replacing its schedule with a partial phase.
-  const records = await mapWithConcurrency(links, 3, url => fetchLigaFixtures({...source,url}, aliases));
+  const records = await mapWithConcurrency(links, 3, url => retryLigaRead(() => fetchLigaFixtures({...source,url}, aliases)));
   const resultLinks = [...new Set([...html.matchAll(/<iframe\b[^>]*\bsrc=["']([^"']+)["']/gi)].map(m=>new URL(m[1],source.url)).filter(u=>u.origin===new URL(source.url).origin&&/^\/resultados\/[^/]+\.html$/.test(u.pathname)).map(u=>u.href))];
-  const results = await mapWithConcurrency(resultLinks, 2, url=>fetchLigaResultsWithScorers({...source,url},aliases));
+  const results = await mapWithConcurrency(resultLinks, 2, url=>retryLigaRead(() => fetchLigaResultsWithScorers({...source,url},aliases)));
   return [...records.flat(),...results.flat()].filter(r=>r.fecha.startsWith(String(source.temporada||now.getFullYear())+"-"));
 }
 

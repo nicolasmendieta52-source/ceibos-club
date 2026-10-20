@@ -2557,14 +2557,6 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "HCA",
-      "fecha": "2026-10-11",
-      "hora": "15:30",
-      "local": false
-    },
-    {
-      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "Tenis El Pinar",
       "fecha": "2026-10-16",
@@ -6902,7 +6894,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-20T11:58:38.802Z",
+  "actualizadoEn": "2026-10-20T12:01:39.693Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -7029,14 +7021,6 @@
       {
         "deporte": "futbol",
         "categoria": "Sub 18",
-        "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-sub-18-copas/",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "This operation was aborted"
-      },
-      {
-        "deporte": "futbol",
-        "categoria": "Sub 18",
         "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
         "registros": 0,
         "estado": "error",
@@ -7121,6 +7105,13 @@
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-sub-20-a/",
         "registros": 22,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Sub 18",
+        "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-sub-18-copas/",
+        "registros": 7,
         "estado": "ok"
       }
     ],
