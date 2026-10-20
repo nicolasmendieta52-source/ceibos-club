@@ -5,8 +5,8 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-10-20 13:44",
-  "actualizado": "2026-10-20T17:16:02.605Z",
+  "publicado": "2026-10-20 18:00",
+  "actualizado": "2026-10-20T21:42:47.910Z",
   "pronosticos": [
     {
       "fecha": "2026-10-20",
@@ -27,7 +27,7 @@
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Nuboso, períodos de cubierto.",
+          "descripcion": "Algo nuboso y nuboso.",
           "evolucion": "",
           "detalle": "",
           "viento": "Sector E 20-30 km/h, rachas de 40-50 km/h."
@@ -38,7 +38,7 @@
       "fecha": "2026-10-21",
       "diaMasN": 1,
       "etiqueta": "Miércoles 21",
-      "temperaturaMin": 9,
+      "temperaturaMin": 10,
       "temperaturaMax": 21,
       "probabilidadLluvia": "",
       "periodos": [
@@ -53,7 +53,7 @@
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Nuboso, períodos de algo nuboso.",
+          "descripcion": "Algo nuboso y nuboso.",
           "evolucion": "Baja probabilidad de precipitaciones.",
           "detalle": "",
           "viento": "Sector E 20-30 km/h, rachas de hasta 50 km/h."
@@ -64,7 +64,7 @@
       "fecha": "2026-10-22",
       "diaMasN": 2,
       "etiqueta": "Jueves 22",
-      "temperaturaMin": 10,
+      "temperaturaMin": 11,
       "temperaturaMax": 22,
       "probabilidadLluvia": "",
       "periodos": [
@@ -80,7 +80,7 @@
           "orden": 2,
           "nombre": "Tarde/Noche",
           "descripcion": "Nuboso y cubierto.",
-          "evolucion": "",
+          "evolucion": "Precipitaciones aisladas.",
           "detalle": "",
           "viento": "SE al NE 20-40 km/h."
         }
@@ -90,7 +90,7 @@
       "fecha": "2026-10-23",
       "diaMasN": 3,
       "etiqueta": "Viernes 23",
-      "temperaturaMin": 13,
+      "temperaturaMin": 14,
       "temperaturaMax": 20,
       "probabilidadLluvia": "Baja",
       "periodos": []
@@ -99,7 +99,7 @@
       "fecha": "2026-10-24",
       "diaMasN": 4,
       "etiqueta": "Sábado 24",
-      "temperaturaMin": 13,
+      "temperaturaMin": 14,
       "temperaturaMax": 18,
       "probabilidadLluvia": "Media",
       "periodos": []
