@@ -14,7 +14,7 @@ export function ligaTable(rows,kind){
 }
 export function sourceLinks(html,base,kind){return [...new Set([...html.matchAll(/<iframe\b[^>]*\bsrc=["']([^"']+)/gi)].flatMap(m=>{try{const u=new URL(m[1],base);return u.origin===new URL(base).origin&&u.pathname.startsWith('/'+kind+'/')?[u.href]:[];}catch{return [];}}))];}
 const phase=serie=>/PD$/.test(serie)?'Segunda rueda · Permanencia y descenso':/(?:TA|AT|CT)$/.test(serie)?'Segunda rueda · Título y ascenso':/(?:RS|PS)[A-Z]*T$/.test(serie)?'Segunda rueda · Título':'Serie '+serie;
-async function liga(config,definitions){
+export async function liga(config,definitions){
  const configurations=await(await get('https://ligauniversitaria.org.uy/config/config.json')).json();
  // The public League config identifies its 2026 season as 113. Never silently roll into 2027.
  const tables=[];
@@ -28,7 +28,7 @@ async function liga(config,definitions){
    const query={temporada:c.Temporada,deporte:c.Deporte,torneo:c.Torneo,categoria:c.Categoria,serie:c.Serie};
    const api=new URL('api.php',url);api.search=new URLSearchParams({action:'cargarPosiciones',...query});
    const rows=ligaTable(await(await get(api)).json(),'standings');if(!rows.some(r=>r.club))continue;
-   const base={sport:def.deporte,category:def.categoria,title:phase(c.Serie),season:SEASON,updatedAt:new Date().toISOString()};
+   const base={sport:def.deporte,category:def.categoria,title:def.fase||phase(c.Serie),season:SEASON,updatedAt:new Date().toISOString()};
    tables.push({...base,id:url,kind:'standings',source:url,columns:standingsColumns,rows});
    if(def.deporte==='futbol'){
     const src=url.replace('/posiciones/','/goleadores/');const api=new URL('api.php',src);api.search=new URLSearchParams({action:'cargarPartidos',...query});
@@ -83,9 +83,13 @@ export async function syncStats(){
  const config=JSON.parse(await fs.readFile(new URL('./fuentes.json',import.meta.url),'utf8'));
  const previous=JSON.parse(await fs.readFile(file,'utf8').catch(()=>'{}'));const tables=[],diagnostics=[];
  const jobs=[];
- const indexes=config.sources.filter(s=>s.formato==='liga-fixture-index');
- for(const s of indexes)jobs.push({key:s.deporte+'|'+s.categoria,run:()=>liga(config,[s])});
- for(const cat of ['Sub 18']){const defs=config.sources.filter(s=>s.categoria===cat&&s.url.includes('ligauniversitaria.org.uy/partidos/'));jobs.push({key:defs[0].deporte+'|'+cat,run:()=>liga(config,defs)});}
+ const leagueGroups=new Map();
+ for(const s of config.sources.filter(s=>s.formato==='liga-fixture-index'||(s.deporte==='futbol'&&s.categoria==='Sub 18'&&s.url.includes('ligauniversitaria.org.uy/partidos/')))){
+  const key=s.deporte+'|'+s.categoria;
+  if(!leagueGroups.has(key))leagueGroups.set(key,[]);
+  leagueGroups.get(key).push(s);
+ }
+ for(const [key,defs] of leagueGroups)jobs.push({key,run:()=>liga(config,defs)});
  for(const s of config.sources.filter(s=>s.formato==='hockey-admin'))jobs.push({key:'hockey|'+s.categoria,run:()=>hockey(s)});
  jobs.push({key:'rugby',run:async()=>rugbyTables(await(await get('https://50-22.base44.app/functions/getPublicContent',{method:'POST',headers:{'content-type':'application/json'},body:'{}'})).json())});
  for(const job of jobs){try{const rows=await job.run();if(!rows.length)throw Error('Sin tablas de Ceibos para 2026');tables.push(...rows.map(t=>({...t,sourceKey:job.key})));diagnostics.push({source:job.key,status:'ok',tables:rows.length});console.log(job.key,rows.length,'tablas');}catch(e){tables.push(...(previous.tables||[]).filter(t=>t.sourceKey===job.key).map(t=>({...t,stale:true})));diagnostics.push({source:job.key,status:'error',message:e.message});console.error(job.key,e.message);}}

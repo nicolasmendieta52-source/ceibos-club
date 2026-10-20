@@ -98,6 +98,15 @@
     {
       "deporte": "futbol",
       "categoria": "Sub 18",
+      "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-sub-18-copas/",
+      "modo": "direct",
+      "formato": "liga-fixture-index",
+      "temporada": "2026",
+      "fase": "Copa de Oro"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
       "url": "https://ligauniversitaria.org.uy/resultados/F181818-52.html",
       "modo": "browser",
       "fase": "Segunda rueda · Serie 5"

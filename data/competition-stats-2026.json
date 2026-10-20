@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "checkedAt": "2026-10-20T04:58:20.593Z",
+  "checkedAt": "2026-10-20T11:45:26.113Z",
   "tables": [
     {
       "sport": "basketball",
@@ -3534,9 +3534,254 @@
     {
       "sport": "futbol",
       "category": "Sub 18",
-      "title": "Serie 18-52",
+      "title": "Copa de Oro",
       "season": 2026,
-      "updatedAt": "2026-10-20T04:57:24.222Z",
+      "updatedAt": "2026-10-20T11:45:17.253Z",
+      "id": "https://ligauniversitaria.org.uy/posiciones/F181818O.html",
+      "kind": "standings",
+      "source": "https://ligauniversitaria.org.uy/posiciones/F181818O.html",
+      "columns": [
+        "Pos.",
+        "Equipo",
+        "PJ",
+        "PG",
+        "PE",
+        "PP",
+        "GF",
+        "GC",
+        "Pts."
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "OLD CHRISTIANS CLUB",
+            1,
+            1,
+            0,
+            0,
+            3,
+            0,
+            3
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "MARISTAS DEPORTIVO",
+            1,
+            1,
+            0,
+            0,
+            4,
+            2,
+            3
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            3,
+            "CARRASCO LAWN TENNIS",
+            1,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
+            "CLUB SEMINARIO",
+            1,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "SAN JUAN BAUTISTA",
+            1,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "OLD BRENDANS CLUB",
+            1,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            7,
+            "CEIBOS CLUB",
+            1,
+            0,
+            0,
+            1,
+            2,
+            4,
+            0
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "PELOTA AL MEDIO UNIVERSITARIO",
+            1,
+            0,
+            0,
+            1,
+            0,
+            3,
+            0
+          ]
+        }
+      ],
+      "sourceKey": "futbol|Sub 18"
+    },
+    {
+      "sport": "futbol",
+      "category": "Sub 18",
+      "title": "Copa de Oro",
+      "season": 2026,
+      "updatedAt": "2026-10-20T11:45:17.253Z",
+      "id": "https://ligauniversitaria.org.uy/goleadores/F181818O.html",
+      "kind": "scorers",
+      "source": "https://ligauniversitaria.org.uy/goleadores/F181818O.html",
+      "columns": [
+        "Pos.",
+        "Jugador",
+        "Equipo",
+        "Goles"
+      ],
+      "rows": [
+        {
+          "club": false,
+          "values": [
+            1,
+            "FACUNDO DANIEL ESNAL",
+            "MARISTAS DEPORTIVO",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            2,
+            "IGNACIO CAILLABET",
+            "MARISTAS DEPORTIVO",
+            1
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            3,
+            "FRANCISCO ROSSIGUOLO",
+            "CEIBOS CLUB",
+            1
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            4,
+            "BENJAMIN FERNANDEZ",
+            "CEIBOS CLUB",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "EMILIANO MAGLIONE",
+            "OLD CHRISTIANS CLUB",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "FELIPE DIAZ",
+            "MARISTAS DEPORTIVO",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "LORENZO HUGHES",
+            "OLD CHRISTIANS CLUB",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "JUAN FRANCISCO JUTGLA",
+            "OLD CHRISTIANS CLUB",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
+            "MATIAS GOSSWEILER",
+            "CLUB SEMINARIO",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            10,
+            "TOMAS ASTIAZARAN",
+            "OLD BRENDANS CLUB",
+            1
+          ]
+        }
+      ],
+      "sourceKey": "futbol|Sub 18"
+    },
+    {
+      "sport": "futbol",
+      "category": "Sub 18",
+      "title": "Segunda rueda · Serie 5",
+      "season": 2026,
+      "updatedAt": "2026-10-20T11:45:25.098Z",
       "id": "https://ligauniversitaria.org.uy/posiciones/F181818-52.html",
       "kind": "standings",
       "source": "https://ligauniversitaria.org.uy/posiciones/F181818-52.html",
@@ -3670,9 +3915,9 @@
     {
       "sport": "futbol",
       "category": "Sub 18",
-      "title": "Serie 18-52",
+      "title": "Segunda rueda · Serie 5",
       "season": 2026,
-      "updatedAt": "2026-10-20T04:57:24.222Z",
+      "updatedAt": "2026-10-20T11:45:25.098Z",
       "id": "https://ligauniversitaria.org.uy/goleadores/F181818-52.html",
       "kind": "scorers",
       "source": "https://ligauniversitaria.org.uy/goleadores/F181818-52.html",
@@ -8748,11 +8993,6 @@
       "tables": 4
     },
     {
-      "source": "futbol|Sub 18",
-      "status": "ok",
-      "tables": 2
-    },
-    {
       "source": "hockey|Intermedia A",
       "status": "ok",
       "tables": 4
@@ -8781,6 +9021,11 @@
       "source": "rugby",
       "status": "ok",
       "tables": 11
+    },
+    {
+      "source": "futbol|Sub 18",
+      "status": "ok",
+      "tables": 4
     }
   ]
 }
