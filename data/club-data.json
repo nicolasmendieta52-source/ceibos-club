@@ -2710,6 +2710,17 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "OLD CHRISTIANS CLUB",
+      "fecha": "2026-10-25",
+      "hora": "A confirmar",
+      "local": true,
+      "fase": "Copa de Oro",
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F181818O.html",
+      "cancha": "CANCHA A FIJAR"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "PreSenior",
       "rival": "ODONTOLOGIA UNIVERSITARIO",
       "fecha": "2026-10-31",
@@ -2760,6 +2771,17 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "CLUB SEMINARIO",
+      "fecha": "2026-11-01",
+      "hora": "A confirmar",
+      "local": true,
+      "fase": "Copa de Oro",
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F181818O.html",
+      "cancha": "CANCHA A FIJAR"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "PreSenior",
       "rival": "ALEMAN UNIVERSITARIO",
       "fecha": "2026-11-07",
@@ -2807,6 +2829,17 @@
       "local": false,
       "fuente": "https://ligauniversitaria.org.uy/partidos/F21BTA.html",
       "cancha": "CLUB ALEMAN"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "CARRASCO LAWN TENNIS",
+      "fecha": "2026-11-08",
+      "hora": "15:30",
+      "local": false,
+      "fase": "Copa de Oro",
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F181818O.html",
+      "cancha": "CARRASCO LAWN TENIS (KM 23)"
     },
     {
       "deporte": "futbol",
@@ -2879,6 +2912,39 @@
       "equipoAdic": "Ceibos 45 Master",
       "estado": "Programado",
       "cancha": "A confirmar"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "PELOTA AL MEDIO UNIVERSITARIO",
+      "fecha": "2026-11-15",
+      "hora": "A confirmar",
+      "local": true,
+      "fase": "Copa de Oro",
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F181818O.html",
+      "cancha": "CANCHA A FIJAR"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "SAN JUAN BAUTISTA",
+      "fecha": "2026-11-22",
+      "hora": "15:30",
+      "local": false,
+      "fase": "Copa de Oro",
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F181818O.html",
+      "cancha": "CAMPO DEP. SAN JUAN BAUTISTA"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "OLD BRENDANS CLUB",
+      "fecha": "2026-11-29",
+      "hora": "A confirmar",
+      "local": true,
+      "fase": "Copa de Oro",
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F181818O.html",
+      "cancha": "CANCHA A FIJAR"
     }
   ],
   "resultados": [
@@ -6820,6 +6886,19 @@
       "gc": 1,
       "fecha": "2026-10-18",
       "fase": "COPA DE ORO (Intermedia C)"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "MARISTAS DEPORTIVO",
+      "gf": 2,
+      "gc": 4,
+      "fecha": "2026-10-18",
+      "fase": "Copa de Oro",
+      "goleadores": [
+        "FRANCISCO ROSSIGUOLO (77')",
+        "BENJAMIN FERNANDEZ (88')"
+      ]
     }
   ],
   "eventos": [],
@@ -7029,6 +7108,13 @@
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-sub-20-a/",
         "registros": 22,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Sub 18",
+        "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-sub-18-copas/",
+        "registros": 7,
         "estado": "ok"
       }
     ],
