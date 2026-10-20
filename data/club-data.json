@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-20T12:05:43.098Z",
+        "updatedAt": "2026-10-20T17:16:03.351Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-20T12:05:43.288Z",
+        "updatedAt": "2026-10-20T17:16:03.660Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-20T12:05:43.372Z",
+        "updatedAt": "2026-10-20T17:16:04.037Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-20T12:05:43.464Z",
+        "updatedAt": "2026-10-20T17:16:04.185Z",
         "tables": [
           {
             "id": 2296,
@@ -1800,13 +1800,13 @@
                 "position": 4,
                 "teamId": 375,
                 "name": "Frances PSG",
-                "pj": 7,
-                "pg": 4,
+                "pj": 8,
+                "pg": 5,
                 "pe": 2,
                 "pp": 1,
-                "gf": 15,
+                "gf": 18,
                 "gc": 9,
-                "points": 14
+                "points": 17
               },
               {
                 "position": 5,
@@ -1908,12 +1908,12 @@
                 "position": 13,
                 "teamId": 403,
                 "name": "Punta Carretas",
-                "pj": 8,
+                "pj": 9,
                 "pg": 0,
                 "pe": 2,
-                "pp": 6,
+                "pp": 7,
                 "gf": 9,
-                "gc": 23,
+                "gc": 26,
                 "points": 2
               },
               {
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-20T12:05:43.565Z",
+        "updatedAt": "2026-10-20T17:16:04.300Z",
         "tables": [
           {
             "id": 2239,
@@ -2594,6 +2594,16 @@
       "cancha": "G.WASTON"
     },
     {
+      "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "DANUBIO FUTBOL CLUB",
+      "fecha": "2026-10-22",
+      "hora": "22:00",
+      "local": false,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSCTA.html",
+      "cancha": "COMPLEJO INGENIERO DEL CAMPO"
+    },
+    {
       "deporte": "rugby",
       "categoria": "Intermedia",
       "rival": "Lobos",
@@ -2658,16 +2668,6 @@
       "local": false,
       "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSAPD.html",
       "cancha": "COMPLEJO LAS CASUARINAS"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "DANUBIO FUTBOL CLUB",
-      "fecha": "2026-10-24",
-      "hora": "11:15",
-      "local": false,
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSCTA.html",
-      "cancha": "COLEGIO PIO"
     },
     {
       "deporte": "hockey",
@@ -6894,7 +6894,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-20T12:09:26.899Z",
+  "actualizadoEn": "2026-10-20T17:19:30.435Z",
   "diagnostico": {
     "fuentes": [
       {
