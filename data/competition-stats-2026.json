@@ -4581,6 +4581,33 @@
           ]
         },
         {
+          "club": false,
+          "values": [
+            7,
+            "Mariana Pignatta",
+            "St. Brendans School / Old Brendans Club",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "Eugenia Curci",
+            "Old Christian's Club, Stella Maris",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
+            "Maria Valentina Rohr",
+            "Old Christian's Club, Stella Maris",
+            2
+          ]
+        },
+        {
           "club": true,
           "values": [
             10,
@@ -5260,7 +5287,7 @@
         {
           "club": false,
           "values": [
-            13,
+            12,
             "Josefina Ortiz",
             "CLUB NORTHFIELD",
             3
@@ -5281,6 +5308,15 @@
             15,
             "Constanza Alves",
             "St. Brendans School / Old Brendans Club",
+            3
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            15,
+            "Belen Vairo",
+            "Woodlands School - Old Woodlands Club",
             3
           ]
         }
@@ -5695,8 +5731,8 @@
           "club": false,
           "values": [
             15,
-            "Paulina Reissig",
-            "CGU – LOS CUERVOS",
+            "Agostina Servidio",
+            "Nautilus Yachting Club",
             4
           ]
         }
@@ -6098,27 +6134,9 @@
           ]
         },
         {
-          "club": false,
-          "values": [
-            5,
-            "Emma Cikato",
-            "The British Schools / Old Girls Club",
-            9
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "Milagros Albanell",
-            "The British Schools / Old Girls Club",
-            9
-          ]
-        },
-        {
           "club": true,
           "values": [
-            7,
+            5,
             "Emilia Berretta Lizasoain",
             "Colegio Los Pilares / Club Los Ceibos",
             9
@@ -6127,25 +6145,25 @@
         {
           "club": false,
           "values": [
+            6,
+            "Emma Cikato",
+            "The British Schools / Old Girls Club",
+            9
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "Milagros Albanell",
+            "The British Schools / Old Girls Club",
+            9
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             8,
-            "Vanessa Saporta",
-            "CLUB NACIONAL DE FOOTBALL",
-            8
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "Matilde Pérez Vallejo",
-            "Colegio Seminario / Club Seminario",
-            8
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            10,
             "Isabel Cardoso",
             "The British Schools / Old Girls Club",
             8
@@ -6154,16 +6172,25 @@
         {
           "club": false,
           "values": [
-            11,
-            "Mia Franco",
-            "Pucaru Stade Galulois",
-            7
+            9,
+            "Vanessa Saporta",
+            "CLUB NACIONAL DE FOOTBALL",
+            8
           ]
         },
         {
           "club": false,
           "values": [
-            12,
+            10,
+            "Matilde Pérez Vallejo",
+            "Colegio Seminario / Club Seminario",
+            8
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            11,
             "Trinidad Fares",
             "Lobos Rugby Club",
             7
@@ -6172,16 +6199,7 @@
         {
           "club": false,
           "values": [
-            13,
-            "Inés Scremini",
-            "CGU – LOS CUERVOS",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            14,
+            12,
             "Margarita Etchandy",
             "Colegio Seminario / Club Seminario",
             7
@@ -6190,9 +6208,27 @@
         {
           "club": false,
           "values": [
+            13,
+            "Mia Franco",
+            "Pucaru Stade Galulois",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
+            "Inés Scremini",
+            "CGU – LOS CUERVOS",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             15,
-            "María Guillermina Grondona",
-            "Lobos Rugby Club",
+            "María Pia Guzmán",
+            "Círculo de Tenis de Montevideo",
             6
           ]
         }
@@ -6400,8 +6436,8 @@
           "club": false,
           "values": [
             6,
-            "Karin Bondorowsky",
-            "Círculo de Tenis de Montevideo",
+            "Agustina Delgado",
+            "Old Christian's Club, Stella Maris",
             3
           ]
         },
@@ -6409,8 +6445,8 @@
           "club": false,
           "values": [
             7,
-            "Agustina Delgado",
-            "Old Christian's Club, Stella Maris",
+            "Karin Bondorowsky",
+            "Círculo de Tenis de Montevideo",
             3
           ]
         },
@@ -6761,15 +6797,6 @@
           "club": false,
           "values": [
             3,
-            "Ana Terra",
-            "Carrasco Polo Club",
-            11
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
             "Maria Arancibia",
             "The British Schools / Old Girls Club",
             11
@@ -6778,9 +6805,18 @@
         {
           "club": false,
           "values": [
-            5,
-            "Paz Quartara",
+            4,
+            "Ana Terra",
             "Carrasco Polo Club",
+            11
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            5,
+            "Maria Paz Gnazzo",
+            "Old Sampa Club",
             10
           ]
         },
@@ -6788,8 +6824,8 @@
           "club": false,
           "values": [
             6,
-            "Maria Paz Gnazzo",
-            "Old Sampa Club",
+            "Paz Quartara",
+            "Carrasco Polo Club",
             10
           ]
         },
