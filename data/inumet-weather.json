@@ -5,40 +5,14 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-10-20 18:00",
-  "actualizado": "2026-10-20T21:42:47.910Z",
+  "publicado": "2026-10-21 0:00",
+  "actualizado": "2026-10-21T04:57:23.040Z",
   "pronosticos": [
     {
-      "fecha": "2026-10-20",
-      "diaMasN": 0,
-      "etiqueta": "Martes 20",
-      "temperaturaMin": 6,
-      "temperaturaMax": 19,
-      "probabilidadLluvia": "",
-      "periodos": [
-        {
-          "orden": 1,
-          "nombre": "Mañana",
-          "descripcion": "Claro y algo nuboso.",
-          "evolucion": "Neblinas.",
-          "detalle": "",
-          "viento": "Sector E 10-20 km/h."
-        },
-        {
-          "orden": 2,
-          "nombre": "Tarde/Noche",
-          "descripcion": "Algo nuboso y nuboso.",
-          "evolucion": "",
-          "detalle": "",
-          "viento": "Sector E 20-30 km/h, rachas de 40-50 km/h."
-        }
-      ]
-    },
-    {
       "fecha": "2026-10-21",
-      "diaMasN": 1,
+      "diaMasN": 0,
       "etiqueta": "Miércoles 21",
-      "temperaturaMin": 10,
+      "temperaturaMin": 9,
       "temperaturaMax": 21,
       "probabilidadLluvia": "",
       "periodos": [
@@ -48,21 +22,21 @@
           "descripcion": "Nuboso, períodos de algo nuboso.",
           "evolucion": "",
           "detalle": "",
-          "viento": "NE y E 20-30 km/h, rachas de hasta 50 km/h."
+          "viento": "NE  20-30 km/h, rachas de hasta 50 km/h."
         },
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Algo nuboso y nuboso.",
+          "descripcion": "Nuboso, períodos de algo nuboso.",
           "evolucion": "Baja probabilidad de precipitaciones.",
           "detalle": "",
-          "viento": "Sector E 20-30 km/h, rachas de hasta 50 km/h."
+          "viento": "NE 20-30 km/h, rachas de hasta 40 km/h."
         }
       ]
     },
     {
       "fecha": "2026-10-22",
-      "diaMasN": 2,
+      "diaMasN": 1,
       "etiqueta": "Jueves 22",
       "temperaturaMin": 11,
       "temperaturaMax": 22,
@@ -74,7 +48,33 @@
           "descripcion": "Nuboso a cubierto.",
           "evolucion": "",
           "detalle": "",
+          "viento": "NE 20-30 km/h, rachas de hasta 40 km/h."
+        },
+        {
+          "orden": 2,
+          "nombre": "Tarde/Noche",
+          "descripcion": "Nuboso y cubierto.",
+          "evolucion": "Precipitaciones en la noche",
+          "detalle": "",
           "viento": "Sector E 20-40 km/h."
+        }
+      ]
+    },
+    {
+      "fecha": "2026-10-23",
+      "diaMasN": 2,
+      "etiqueta": "Viernes 23",
+      "temperaturaMin": 14,
+      "temperaturaMax": 21,
+      "probabilidadLluvia": "",
+      "periodos": [
+        {
+          "orden": 1,
+          "nombre": "Mañana",
+          "descripcion": "Cubierto.",
+          "evolucion": "Precipitaciones aisladas.",
+          "detalle": "",
+          "viento": "Sector E 10-30 km/h."
         },
         {
           "orden": 2,
@@ -82,44 +82,44 @@
           "descripcion": "Nuboso y cubierto.",
           "evolucion": "Precipitaciones aisladas.",
           "detalle": "",
-          "viento": "SE al NE 20-40 km/h."
+          "viento": "SE 10-20 km/h."
         }
       ]
     },
     {
-      "fecha": "2026-10-23",
-      "diaMasN": 3,
-      "etiqueta": "Viernes 23",
-      "temperaturaMin": 14,
-      "temperaturaMax": 20,
-      "probabilidadLluvia": "Baja",
-      "periodos": []
-    },
-    {
       "fecha": "2026-10-24",
-      "diaMasN": 4,
+      "diaMasN": 3,
       "etiqueta": "Sábado 24",
-      "temperaturaMin": 14,
+      "temperaturaMin": 13,
       "temperaturaMax": 18,
       "probabilidadLluvia": "Media",
       "periodos": []
     },
     {
       "fecha": "2026-10-25",
-      "diaMasN": 5,
+      "diaMasN": 4,
       "etiqueta": "Domingo 25",
-      "temperaturaMin": 12,
+      "temperaturaMin": 10,
       "temperaturaMax": 16,
       "probabilidadLluvia": "Media",
       "periodos": []
     },
     {
       "fecha": "2026-10-26",
-      "diaMasN": 6,
+      "diaMasN": 5,
       "etiqueta": "Lunes 26",
       "temperaturaMin": 9,
       "temperaturaMax": 17,
-      "probabilidadLluvia": "Media",
+      "probabilidadLluvia": "Baja",
+      "periodos": []
+    },
+    {
+      "fecha": "2026-10-27",
+      "diaMasN": 6,
+      "etiqueta": "Martes 27",
+      "temperaturaMin": 9,
+      "temperaturaMax": 20,
+      "probabilidadLluvia": "Nula",
       "periodos": []
     }
   ]
