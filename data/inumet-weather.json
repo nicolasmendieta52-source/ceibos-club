@@ -5,38 +5,12 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-10-21 18:00",
-  "actualizado": "2026-10-21T21:48:11.720Z",
+  "publicado": "2026-10-22 0:0",
+  "actualizado": "2026-10-22T04:57:32.674Z",
   "pronosticos": [
     {
-      "fecha": "2026-10-21",
-      "diaMasN": 0,
-      "etiqueta": "Miércoles 21",
-      "temperaturaMin": 10,
-      "temperaturaMax": 22,
-      "probabilidadLluvia": "",
-      "periodos": [
-        {
-          "orden": 1,
-          "nombre": "Mañana",
-          "descripcion": "Nuboso, períodos de algo nuboso.",
-          "evolucion": "",
-          "detalle": "",
-          "viento": "NE  20-30 km/h, rachas de hasta 50 km/h."
-        },
-        {
-          "orden": 2,
-          "nombre": "Tarde/Noche",
-          "descripcion": "Nuboso, períodos de cubierto.",
-          "evolucion": "Precipitaciones y tormentas aisladas.",
-          "detalle": "",
-          "viento": "NE 20-30 km/h, rachas de hasta 40 km/h."
-        }
-      ]
-    },
-    {
       "fecha": "2026-10-22",
-      "diaMasN": 1,
+      "diaMasN": 0,
       "etiqueta": "Jueves 22",
       "temperaturaMin": 11,
       "temperaturaMax": 23,
@@ -62,7 +36,7 @@
     },
     {
       "fecha": "2026-10-23",
-      "diaMasN": 2,
+      "diaMasN": 1,
       "etiqueta": "Viernes 23",
       "temperaturaMin": 14,
       "temperaturaMax": 21,
@@ -72,7 +46,7 @@
           "orden": 1,
           "nombre": "Mañana",
           "descripcion": "Cubierto.",
-          "evolucion": "Precipitaciones aisladas.",
+          "evolucion": "Precipitaciones.",
           "detalle": "",
           "viento": "Sector E 20-40 km/h al sector W 10-20 km/h, periodo de variable 0-10 km/h"
         },
@@ -88,16 +62,33 @@
     },
     {
       "fecha": "2026-10-24",
-      "diaMasN": 3,
+      "diaMasN": 2,
       "etiqueta": "Sábado 24",
       "temperaturaMin": 13,
       "temperaturaMax": 18,
-      "probabilidadLluvia": "Media",
-      "periodos": []
+      "probabilidadLluvia": "",
+      "periodos": [
+        {
+          "orden": 1,
+          "nombre": "Mañana",
+          "descripcion": "Cubierto.",
+          "evolucion": "Precipitaciones.",
+          "detalle": "Neblinas.",
+          "viento": "Sector S 20-30 km/h, rachas de 50 km/h."
+        },
+        {
+          "orden": 2,
+          "nombre": "Tarde/Noche",
+          "descripcion": "Nuboso y cubierto.",
+          "evolucion": "Baja probabilidad de precipitaciones.",
+          "detalle": "",
+          "viento": "Sector S 20-30 km/h, rachas de 40 km/h."
+        }
+      ]
     },
     {
       "fecha": "2026-10-25",
-      "diaMasN": 4,
+      "diaMasN": 3,
       "etiqueta": "Domingo 25",
       "temperaturaMin": 10,
       "temperaturaMax": 16,
@@ -106,7 +97,7 @@
     },
     {
       "fecha": "2026-10-26",
-      "diaMasN": 5,
+      "diaMasN": 4,
       "etiqueta": "Lunes 26",
       "temperaturaMin": 9,
       "temperaturaMax": 17,
@@ -115,11 +106,20 @@
     },
     {
       "fecha": "2026-10-27",
-      "diaMasN": 6,
+      "diaMasN": 5,
       "etiqueta": "Martes 27",
       "temperaturaMin": 9,
       "temperaturaMax": 20,
       "probabilidadLluvia": "Nula",
+      "periodos": []
+    },
+    {
+      "fecha": "2026-10-28",
+      "diaMasN": 6,
+      "etiqueta": "Miércoles 28",
+      "temperaturaMin": 12,
+      "temperaturaMax": 23,
+      "probabilidadLluvia": "Baja",
       "periodos": []
     }
   ]
