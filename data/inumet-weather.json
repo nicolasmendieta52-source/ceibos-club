@@ -5,15 +5,15 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-10-22 12:00",
-  "actualizado": "2026-10-22T17:16:49.949Z",
+  "publicado": "2026-10-22 18:00",
+  "actualizado": "2026-10-22T21:42:40.284Z",
   "pronosticos": [
     {
       "fecha": "2026-10-22",
       "diaMasN": 0,
       "etiqueta": "Jueves 22",
       "temperaturaMin": 12,
-      "temperaturaMax": 23,
+      "temperaturaMax": 22,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -28,7 +28,7 @@
           "orden": 2,
           "nombre": "Tarde/Noche",
           "descripcion": "Nuboso y cubierto.",
-          "evolucion": "Precipitaciones en la noche",
+          "evolucion": "Precipitaciones y probables tormentas.",
           "detalle": "",
           "viento": "E y NE 20-40 km/h."
         }
@@ -46,8 +46,8 @@
           "orden": 1,
           "nombre": "Mañana",
           "descripcion": "Cubierto.",
-          "evolucion": "Precipitaciones.",
-          "detalle": "",
+          "evolucion": "Precipitaciones y probables tormentas.",
+          "detalle": "Neblinas.",
           "viento": "Sector E 20-40 km/h al sector W 10-20 km/h, periodo de variable 0-10 km/h"
         },
         {
@@ -72,7 +72,7 @@
           "orden": 1,
           "nombre": "Mañana",
           "descripcion": "Cubierto.",
-          "evolucion": "Precipitaciones.",
+          "evolucion": "Precipitaciones aisladas.",
           "detalle": "Neblinas.",
           "viento": "Sector S 20-30 km/h, rachas de 50 km/h."
         },
@@ -80,9 +80,9 @@
           "orden": 2,
           "nombre": "Tarde/Noche",
           "descripcion": "Nuboso y cubierto.",
-          "evolucion": "Baja probabilidad de precipitaciones.",
+          "evolucion": "Precipitaciones aisladas.",
           "detalle": "",
-          "viento": "Sector S 20-30 km/h, rachas de 40 km/h."
+          "viento": "SW al SE 20-30 km/h, rachas de 40 km/h."
         }
       ]
     },
