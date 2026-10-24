@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-24T16:03:18.370Z",
+        "updatedAt": "2026-10-24T20:56:18.105Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-24T16:03:18.678Z",
+        "updatedAt": "2026-10-24T20:56:18.270Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-24T16:03:18.755Z",
+        "updatedAt": "2026-10-24T20:56:18.335Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-24T16:03:18.844Z",
+        "updatedAt": "2026-10-24T20:56:18.418Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-24T16:03:18.934Z",
+        "updatedAt": "2026-10-24T20:56:18.503Z",
         "tables": [
           {
             "id": 2239,
@@ -2627,27 +2627,6 @@
       "fecha": "2026-10-24",
       "hora": "15:45",
       "local": true
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Reserva",
-      "rival": "Bigua Reserva",
-      "fecha": "2026-10-24",
-      "hora": "15:45",
-      "local": true,
-      "fase": "COPA DE PLATA (Reserva )",
-      "estado": "A Designar",
-      "cancha": "Pilares"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "SAGRADA FAMILIA UNIVERSITARIO",
-      "fecha": "2026-10-24",
-      "hora": "11:15",
-      "local": false,
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSAPD.html",
-      "cancha": "COMPLEJO LAS CASUARINAS"
     },
     {
       "deporte": "hockey",
@@ -6915,10 +6894,27 @@
       "gf": 5,
       "gc": 1,
       "fecha": "2026-10-24"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "SAGRADA FAMILIA UNIVERSITARIO",
+      "gf": 1,
+      "gc": 0,
+      "fecha": "2026-10-24"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Bigua Reserva",
+      "gf": 3,
+      "gc": 2,
+      "fecha": "2026-10-24",
+      "fase": "COPA DE PLATA (Reserva )"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-24T16:06:43.730Z",
+  "actualizadoEn": "2026-10-24T20:59:23.446Z",
   "diagnostico": {
     "fuentes": [
       {
