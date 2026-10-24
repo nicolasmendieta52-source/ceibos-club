@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-23T21:33:23.620Z",
+        "updatedAt": "2026-10-24T04:44:39.715Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-23T21:33:23.885Z",
+        "updatedAt": "2026-10-24T04:44:40.078Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-23T21:33:24.007Z",
+        "updatedAt": "2026-10-24T04:44:40.197Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-23T21:33:24.140Z",
+        "updatedAt": "2026-10-24T04:44:40.328Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-23T21:33:24.318Z",
+        "updatedAt": "2026-10-24T04:44:40.458Z",
         "tables": [
           {
             "id": 2239,
@@ -2606,7 +2606,7 @@
       "categoria": "Intermedia A",
       "rival": "Yacht Intermedia",
       "fecha": "2026-10-24",
-      "hora": "19:15",
+      "hora": "18:00",
       "local": true,
       "fase": "COPA DE PLATA (Intermedia A)",
       "estado": "A Designar",
@@ -6920,7 +6920,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-23T21:36:32.003Z",
+  "actualizadoEn": "2026-10-24T04:47:56.450Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -7138,11 +7138,11 @@
     ],
     "instagram": {
       "estado": "ok",
-      "registros": 35,
-      "imagenes": 14,
-      "publicacionesApify": 2,
+      "registros": 18,
+      "imagenes": 7,
+      "publicacionesApify": 1,
       "historiasMencionadas": 0,
-      "cache": 14,
+      "cache": 7,
       "nuevas": 0
     }
   }

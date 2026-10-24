@@ -5,38 +5,12 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-10-23 18:00",
-  "actualizado": "2026-10-23T21:33:22.878Z",
+  "publicado": "2026-10-24 0:0",
+  "actualizado": "2026-10-24T04:44:39.039Z",
   "pronosticos": [
     {
-      "fecha": "2026-10-23",
-      "diaMasN": 0,
-      "etiqueta": "Viernes 23",
-      "temperaturaMin": 16,
-      "temperaturaMax": 24,
-      "probabilidadLluvia": "",
-      "periodos": [
-        {
-          "orden": 1,
-          "nombre": "Mañana",
-          "descripcion": "Nuboso y cubierto.",
-          "evolucion": "Precipitaciones aisladas.",
-          "detalle": "Neblinas.",
-          "viento": "Sector E 20-40 km/h al sector W 10-20 km/h, periodos de variable 0-10 km/h"
-        },
-        {
-          "orden": 2,
-          "nombre": "Tarde/Noche",
-          "descripcion": "Algo nuboso y nuboso.",
-          "evolucion": "",
-          "detalle": "",
-          "viento": "SW y S 10-30 km/h."
-        }
-      ]
-    },
-    {
       "fecha": "2026-10-24",
-      "diaMasN": 1,
+      "diaMasN": 0,
       "etiqueta": "Sábado 24",
       "temperaturaMin": 13,
       "temperaturaMax": 18,
@@ -45,9 +19,9 @@
         {
           "orden": 1,
           "nombre": "Mañana",
-          "descripcion": "Cubierto.",
+          "descripcion": "Nuboso y cubierto.",
           "evolucion": "Precipitaciones aisladas.",
-          "detalle": "Neblinas.",
+          "detalle": "",
           "viento": "Sector S 20-30 km/h, rachas de 50 km/h."
         },
         {
@@ -56,13 +30,13 @@
           "descripcion": "Nuboso y cubierto.",
           "evolucion": "Precipitaciones aisladas.",
           "detalle": "",
-          "viento": "SW al SE 20-30 km/h, rachas de 40 km/h."
+          "viento": "SE 20-30 km/h, rachas de 50 km/h."
         }
       ]
     },
     {
       "fecha": "2026-10-25",
-      "diaMasN": 2,
+      "diaMasN": 1,
       "etiqueta": "Domingo 25",
       "temperaturaMin": 10,
       "temperaturaMax": 16,
@@ -79,8 +53,8 @@
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Nuboso, períodos de algo nuboso.",
-          "evolucion": "Probables precipitaciones.",
+          "descripcion": "Nuboso y cubierto.",
+          "evolucion": "Precipitaciones escasas.",
           "detalle": "",
           "viento": "SE y S 20-30 km/h."
         }
@@ -88,16 +62,33 @@
     },
     {
       "fecha": "2026-10-26",
-      "diaMasN": 3,
+      "diaMasN": 2,
       "etiqueta": "Lunes 26",
-      "temperaturaMin": 9,
+      "temperaturaMin": 8,
       "temperaturaMax": 17,
-      "probabilidadLluvia": "Baja",
-      "periodos": []
+      "probabilidadLluvia": "",
+      "periodos": [
+        {
+          "orden": 1,
+          "nombre": "Mañana",
+          "descripcion": "Nuboso, períodos de cubierto.",
+          "evolucion": "Precipitaciones escasas.",
+          "detalle": "Mejorando.",
+          "viento": "SE 10-20 km/h."
+        },
+        {
+          "orden": 2,
+          "nombre": "Tarde/Noche",
+          "descripcion": "Nuboso y cubierto.",
+          "evolucion": "",
+          "detalle": "",
+          "viento": "SE 10-20 km/h."
+        }
+      ]
     },
     {
       "fecha": "2026-10-27",
-      "diaMasN": 4,
+      "diaMasN": 3,
       "etiqueta": "Martes 27",
       "temperaturaMin": 9,
       "temperaturaMax": 20,
@@ -106,19 +97,28 @@
     },
     {
       "fecha": "2026-10-28",
-      "diaMasN": 5,
+      "diaMasN": 4,
       "etiqueta": "Miércoles 28",
       "temperaturaMin": 12,
       "temperaturaMax": 23,
-      "probabilidadLluvia": "Baja",
+      "probabilidadLluvia": "Media",
       "periodos": []
     },
     {
       "fecha": "2026-10-29",
-      "diaMasN": 6,
+      "diaMasN": 5,
       "etiqueta": "Jueves 29",
       "temperaturaMin": 12,
       "temperaturaMax": 20,
+      "probabilidadLluvia": "Media",
+      "periodos": []
+    },
+    {
+      "fecha": "2026-10-30",
+      "diaMasN": 6,
+      "etiqueta": "Viernes 30",
+      "temperaturaMin": 11,
+      "temperaturaMax": 21,
       "probabilidadLluvia": "Baja",
       "periodos": []
     }
