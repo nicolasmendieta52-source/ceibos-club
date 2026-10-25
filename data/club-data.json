@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-25T11:40:15.308Z",
+        "updatedAt": "2026-10-25T16:30:15.497Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-25T11:40:15.528Z",
+        "updatedAt": "2026-10-25T16:30:15.718Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-25T11:40:15.612Z",
+        "updatedAt": "2026-10-25T16:30:15.773Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-25T11:40:15.712Z",
+        "updatedAt": "2026-10-25T16:30:15.843Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-25T11:40:15.808Z",
+        "updatedAt": "2026-10-25T16:30:15.907Z",
         "tables": [
           {
             "id": 2239,
@@ -2592,30 +2592,6 @@
       "local": false,
       "fuente": "https://ligauniversitaria.org.uy/partidos/B221B4B.html",
       "cancha": "G.WASTON"
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Intermedia",
-      "rival": "Lobos",
-      "fecha": "2026-10-24",
-      "hora": "14:00",
-      "local": true
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "M19",
-      "rival": "Lions",
-      "fecha": "2026-10-24",
-      "hora": "12:30",
-      "local": true
-    },
-    {
-      "deporte": "rugby",
-      "categoria": "Primera",
-      "rival": "Lobos",
-      "fecha": "2026-10-24",
-      "hora": "15:45",
-      "local": true
     },
     {
       "deporte": "hockey",
@@ -6909,10 +6885,34 @@
       "gc": 2,
       "fecha": "2026-10-24",
       "fase": "COPA DE PLATA (Reserva )"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Intermedia",
+      "rival": "Lobos",
+      "gf": 26,
+      "gc": 28,
+      "fecha": "2026-10-24"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "M19",
+      "rival": "Lions",
+      "gf": 10,
+      "gc": 20,
+      "fecha": "2026-10-24"
+    },
+    {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Lobos",
+      "gf": 26,
+      "gc": 42,
+      "fecha": "2026-10-24"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-25T11:43:26.397Z",
+  "actualizadoEn": "2026-10-25T16:33:38.176Z",
   "diagnostico": {
     "fuentes": [
       {
