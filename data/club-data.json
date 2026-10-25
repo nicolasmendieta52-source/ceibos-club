@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-24T20:56:18.105Z",
+        "updatedAt": "2026-10-25T04:50:40.702Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-24T20:56:18.270Z",
+        "updatedAt": "2026-10-25T04:50:41.168Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-24T20:56:18.335Z",
+        "updatedAt": "2026-10-25T04:50:41.290Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-24T20:56:18.418Z",
+        "updatedAt": "2026-10-25T04:50:41.422Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-24T20:56:18.503Z",
+        "updatedAt": "2026-10-25T04:50:41.553Z",
         "tables": [
           {
             "id": 2239,
@@ -2600,17 +2600,6 @@
       "fecha": "2026-10-24",
       "hora": "14:00",
       "local": true
-    },
-    {
-      "deporte": "hockey",
-      "categoria": "Intermedia A",
-      "rival": "Yacht Intermedia",
-      "fecha": "2026-10-24",
-      "hora": "18:00",
-      "local": true,
-      "fase": "COPA DE PLATA (Intermedia A)",
-      "estado": "A Designar",
-      "cancha": "Pilares"
     },
     {
       "deporte": "rugby",
@@ -6905,6 +6894,15 @@
     },
     {
       "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Yacht Intermedia",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-10-24",
+      "fase": "COPA DE PLATA (Intermedia A)"
+    },
+    {
+      "deporte": "hockey",
       "categoria": "Reserva",
       "rival": "Bigua Reserva",
       "gf": 3,
@@ -6914,7 +6912,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-24T20:59:23.446Z",
+  "actualizadoEn": "2026-10-25T04:53:44.124Z",
   "diagnostico": {
     "fuentes": [
       {
