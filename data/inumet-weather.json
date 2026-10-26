@@ -5,15 +5,15 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-10-26 06:00",
-  "actualizado": "2026-10-26T13:22:28.728Z",
+  "publicado": "2026-10-26 18:00",
+  "actualizado": "2026-10-26T22:45:06.916Z",
   "pronosticos": [
     {
       "fecha": "2026-10-26",
       "diaMasN": 0,
       "etiqueta": "Lunes 26",
       "temperaturaMin": 9,
-      "temperaturaMax": 16,
+      "temperaturaMax": 15,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -28,9 +28,9 @@
           "orden": 2,
           "nombre": "Tarde/Noche",
           "descripcion": "Nuboso y cubierto.",
-          "evolucion": "Baja probabilidad de precipitaciones escasas.",
+          "evolucion": "",
           "detalle": "",
-          "viento": "SE al NE 10-20 km/h."
+          "viento": "SW y SE al NE 10-20 km/h."
         }
       ]
     },
@@ -56,7 +56,7 @@
           "descripcion": "Nuboso y cubierto.",
           "evolucion": "",
           "detalle": "",
-          "viento": "Sector E 10-30 km/h, periodo de variables 0-10 km/h"
+          "viento": "Sector E 10-30 km/h a variables 0-10 km/h"
         }
       ]
     },
@@ -71,18 +71,18 @@
         {
           "orden": 1,
           "nombre": "Mañana",
-          "descripcion": "Nuboso y cubierto.",
-          "evolucion": "",
+          "descripcion": "Cubierto a nuboso.",
+          "evolucion": "Neblinas y bancos de niebla.",
           "detalle": "",
           "viento": "Variables 0-10 km/h."
         },
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Nuboso.",
+          "descripcion": "Nuboso a algo nuboso.",
           "evolucion": "",
           "detalle": "",
-          "viento": "Variables 0-10 km/h."
+          "viento": "Variables 0-10 km/h al sector 10-30 km/h."
         }
       ]
     },
