@@ -3,7 +3,7 @@
   "raised": 145440,
   "updatedAt": "2026-10-20T00:23:34.679Z",
   "contributionUrl": "https://docs.google.com/forms/d/e/1FAIpQLSekX5hNlA_TM9PIgjxudmWgsASzGTtNUZN11m-nYFCjfpnSew/viewform",
-  "sourceUrl": "",
+  "sourceUrl": "https://docs.google.com/spreadsheets/d/1jzX_XhiafqddsVbZIn1qii0HCGWxIUnPdvIs_8mdyFE/export?format=csv&gid=2075887409",
   "brickLabels": [
     "Santiago Q",
     "Federico F",
@@ -323,5 +323,6 @@
     "SUBARU",
     "DEDISEÑO",
     "DOMINION"
-  ]
+  ],
+  "sourceFormat": "sheets-csv-v2"
 }

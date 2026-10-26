@@ -34,3 +34,21 @@ test('basket ignores empty, unplayed 0-0 and other seasons; it accepts a 20-0 fo
  const records=parseLigaResultsApi(rows,source,aliases);
  assert.equal(records.length,1);assert.equal(records[0].gf,20);assert.equal(records[0].gc,0);
 });
+
+test('un 404 de una llave ajena no bloquea la Copa de Ceibos; un 404 en su propia llave sí falla', async t=>{
+  let ceibosInMissing=false;
+  t.mock.method(globalThis,'fetch',async input=>{
+    const url=new URL(input);
+    if(url.pathname==='/estadisticas-basquetbol-b/')return new Response(`<h2>Play Off · Título</h2><p>${ceibosInMissing?'Ceibos':'Reducto'}</p><iframe src="https://ligauniversitaria.org.uy/partidos/B221B5A.html"></iframe><h2>Copa de Plata</h2><p>Ceibos</p><iframe src="https://ligauniversitaria.org.uy/resultados/B221B4B.html"></iframe><iframe src="https://ligauniversitaria.org.uy/partidos/B221B4B.html"></iframe>`);
+    if(url.pathname.endsWith('B221B5A.html'))return new Response('',{status:404});
+    if(url.pathname.endsWith('.html'))return new Response('<meta name="config-id" content="162">');
+    if(url.pathname==='/config/config.json')return Response.json([{ID:'162',Temporada:'113',Deporte:'B',Torneo:'22',Categoria:'1',Serie:'B4B'}]);
+    if(url.pathname==='/resultados/api.php')return Response.json([{ID:'20',Fecha_Hora:'2026-10-19 20:00:00',Locatario:'CEIBOS CLUB',Visitante:'UNIVERSIDAD DE MONTEVIDEO',GL:'62',GV:'36'}]);
+    if(url.pathname==='/partidos/api.php')return Response.json([]);
+    throw Error('Unexpected '+url);
+  });
+  const records=await fetchLigaFixtureIndex(source,aliases);
+  assert.equal(records.length,1);assert.equal(records[0].gf,62);
+  ceibosInMissing=true;
+  await assert.rejects(fetchLigaFixtureIndex(source,aliases),/HTTP 404/);
+});

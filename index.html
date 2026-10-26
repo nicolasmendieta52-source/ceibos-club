@@ -55,7 +55,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="/assets/gym-campaign.css?v=20260925wall100">
-<script type="module" src="/assets/gym-campaign.js?v=20260925wall100"></script>
+<script type="module" src="/assets/gym-campaign.js?v=20261026"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,300..900;1,9..40,300..900&display=swap" rel="stylesheet">
 <style>
@@ -275,7 +275,7 @@ nav.topbar.solid{
 .ticker-item .gano{color:var(--verde)}
 </style>
 <link rel="stylesheet" href="/assets/analytics-consent.css?v=20260922">
-<script type="module" src="/assets/analytics.js?v=20260922"></script>
+<script type="module" src="/assets/analytics.js?v=20261026"></script>
 <link rel="stylesheet" href="assets/interno.css?v=20261014inscripcion">
 <link rel="stylesheet" href="assets/navigation.css?v=20261014grupos">
 <link rel="stylesheet" href="assets/news.css?v=20261020archivo">
@@ -2751,9 +2751,17 @@ async function crearPostalPartido(partido){
   ctx.font = '700 25px "DM Sans", Arial, sans-serif';
   ctx.fillText(hora,490,657);
 
+  let fuenteLugar = 16;
+  let lineasLugar;
+  do {
+    ctx.font = `500 ${fuenteLugar}px "DM Sans", Arial, sans-serif`;
+    lineasLugar = lineasCanvas(ctx,lugar.toUpperCase(),175);
+    if (lineasLugar.length <= 3 || fuenteLugar <= 10) break;
+    fuenteLugar--;
+  } while (true);
+  const pasoLugar = Math.min(22,52 / lineasLugar.length);
+  lineasLugar.forEach((linea,indice)=>ctx.fillText(linea,700,652-(lineasLugar.length-1)*pasoLugar/2+indice*pasoLugar,175));
   ctx.font = '500 16px "DM Sans", Arial, sans-serif';
-  const lineasLugar = lineasCanvas(ctx,lugar.toUpperCase(),165).slice(0,2);
-  lineasLugar.forEach((linea,indice)=>ctx.fillText(linea,700,644+indice*24));
   ctx.fillText(condicion,928,657);
   ctx.fillStyle = "rgba(245,241,232,.75)";
   ctx.fillRect(400,622,1,62);
@@ -2867,10 +2875,9 @@ function renderPredioVivo(){
   const deporte = DEPORTES.find(d => d.slug === deportePredioActivo) ?? DEPORTES[0];
   const hoy = new Date(); hoy.setHours(0,0,0,0);
   const locales = PARTIDOS
-    .filter(p => slugDeporte(p.deporte) === deporte.slug && p.local === true && fechaValida(p.fecha) && new Date(`${p.fecha}T00:00:00`) >= hoy)
+    .filter(p => slugDeporte(p.deporte) === deporte.slug && p.local === true && /\b(?:los\s+)?ceibos\b/i.test(textoPlano(p.cancha)) && fechaValida(p.fecha) && new Date(`${p.fecha}T00:00:00`) >= hoy)
     .sort(porFechaHora);
-  const hayCanchasAsignadas = locales.some(p => p.predioZona);
-  const candidatos = hayCanchasAsignadas ? locales.filter(p => p.predioZona === zonaPredioActiva) : locales;
+  const candidatos = locales.filter(p => p.predioZona === zonaPredioActiva);
   const fechaJornada = candidatos[0]?.fecha ?? "";
   const jornada = fechaJornada ? candidatos.filter(p => p.fecha === fechaJornada).sort(porFechaHora) : [];
   const cancha = NOMBRES_ZONAS_PREDIO[zonaPredioActiva] ?? "Espacio Ceibos";
@@ -2879,7 +2886,8 @@ function renderPredioVivo(){
     const partidos = jornada.map(partido => `<div class="predio-partido-local"><time datetime="${textoSeguro(partido.fecha)}T${textoSeguro(partido.hora || "00:00")}">${horaPartidoVisible(partido)}</time><div><strong>${etiquetaCategoria(partido.categoria)}</strong><span>Ceibos vs ${textoSeguro(partido.rival)} · ${textoSeguro(ubicacionVisible(partido))}</span></div></div>`).join("");
     contenedor.innerHTML = `<span class="predio-vivo-etiqueta">Cancha seleccionada · ${textoSeguro(deporte.nombre)}</span><h4>${textoSeguro(cancha)}</h4><div class="predio-jornada"><div class="predio-jornada-fecha">Próxima jornada de local · ${fecha.semana} ${fecha.dia} ${fecha.mes}</div>${partidos}</div><a href="#${deporte.slug}" data-abrir-deporte="${deporte.slug}">Ver la agenda de ${textoSeguro(deporte.nombre)} →</a>`;
   } else {
-    contenedor.innerHTML = `<span class="predio-vivo-etiqueta">Cancha seleccionada · ${textoSeguro(deporte.nombre)}</span><h4>${textoSeguro(cancha)}</h4><p>No hay partidos de local publicados para esta cancha. Volvé pronto para ver la agenda actualizada.</p><a href="#fixture">Ver fixture completo →</a>`;
+    const sinAsignar = locales.some(p => !p.predioZona);
+    contenedor.innerHTML = `<span class="predio-vivo-etiqueta">Cancha seleccionada · ${textoSeguro(deporte.nombre)}</span><h4>${textoSeguro(cancha)}</h4><p>${sinAsignar ? 'Hay partidos publicados en el predio, pero todavía no tienen una cancha asignada.' : 'No hay partidos publicados para esta cancha.'}</p><a href="#fixture">Ver fixture completo →</a>`;
   }
   contenedor.querySelector("[data-abrir-deporte]")?.addEventListener("click", () => activarDeporte(deporte.slug));
   document.querySelectorAll("[data-predio-deporte]").forEach(boton => {

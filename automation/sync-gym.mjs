@@ -18,7 +18,7 @@ async function main(){
  const previous=JSON.parse(await fs.readFile(file,'utf8'));
  const changed=previous.dataSource!=='google-sheets'||Object.keys(live).some(k=>JSON.stringify(live[k])!==JSON.stringify(previous[k]));
  if(!changed){console.log('Gym: sin cambios');return;}
- const output={...previous,...live,sourceUrl:'',dataSource:'google-sheets',updatedAt:new Date().toISOString()};
+ const output={...previous,...live,dataSource:'google-sheets',updatedAt:new Date().toISOString()};
  await fs.writeFile(file,JSON.stringify(output,null,2)+'\n');
  console.log(`Gym: datos públicos actualizados. ${live.brickProgress.filter(n=>n>0).length} aportes confirmados.`);
 }

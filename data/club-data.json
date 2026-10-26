@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-26T04:55:50.347Z",
+        "updatedAt": "2026-10-26T13:09:37.692Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-26T04:55:50.569Z",
+        "updatedAt": "2026-10-26T13:09:38.816Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-26T04:55:50.649Z",
+        "updatedAt": "2026-10-26T13:09:39.142Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-26T04:55:50.747Z",
+        "updatedAt": "2026-10-26T13:09:40.955Z",
         "tables": [
           {
             "id": 2296,
@@ -1846,6 +1846,18 @@
               },
               {
                 "position": 8,
+                "teamId": 545,
+                "name": "Jesus Maria 2019",
+                "pj": 10,
+                "pg": 3,
+                "pe": 1,
+                "pp": 6,
+                "gf": 13,
+                "gc": 20,
+                "points": 10
+              },
+              {
+                "position": 9,
                 "teamId": 547,
                 "name": "Clara Master 2019",
                 "pj": 9,
@@ -1855,18 +1867,6 @@
                 "gf": 16,
                 "gc": 26,
                 "points": 9
-              },
-              {
-                "position": 9,
-                "teamId": 545,
-                "name": "Jesus Maria 2019",
-                "pj": 10,
-                "pg": 2,
-                "pe": 2,
-                "pp": 6,
-                "gf": 13,
-                "gc": 21,
-                "points": 8
               },
               {
                 "position": 10,
@@ -1882,18 +1882,6 @@
               },
               {
                 "position": 11,
-                "teamId": 735,
-                "name": "Stella Maris 45",
-                "pj": 10,
-                "pg": 1,
-                "pe": 4,
-                "pp": 5,
-                "gf": 8,
-                "gc": 19,
-                "points": 7
-              },
-              {
-                "position": 12,
                 "teamId": 706,
                 "name": "Old Brendans 45",
                 "pj": 8,
@@ -1902,6 +1890,18 @@
                 "pp": 4,
                 "gf": 14,
                 "gc": 16,
+                "points": 6
+              },
+              {
+                "position": 12,
+                "teamId": 735,
+                "name": "Stella Maris 45",
+                "pj": 10,
+                "pg": 1,
+                "pe": 3,
+                "pp": 6,
+                "gf": 7,
+                "gc": 19,
                 "points": 6
               },
               {
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-26T04:55:50.838Z",
+        "updatedAt": "2026-10-26T13:09:41.646Z",
         "tables": [
           {
             "id": 2239,
@@ -2565,33 +2565,14 @@
       "cancha": "Pinar _ _ utr BUM AOMINON FED 8) pepsi a ZILLERTAL Zero"
     },
     {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "UNIVERSIDAD DE MONTEVIDEO",
-      "fecha": "2026-10-17",
-      "hora": "19:45",
-      "local": false,
-      "fuente": "https://ligauniversitaria.org.uy/partidos/B221B4B.html",
-      "cancha": "G.WASTON"
-    },
-    {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "UM",
-      "fecha": "2026-10-17",
-      "hora": "19:45",
-      "local": false,
-      "cancha": "Watson Hay Que ster O) pepsi a ZuierTa mmm BUM AOMINON FED"
-    },
-    {
-      "deporte": "basketball",
-      "categoria": "Basketball",
-      "rival": "UNIVERSIDAD DE MONTEVIDEO",
-      "fecha": "2026-10-19",
-      "hora": "22:00",
-      "local": false,
-      "fuente": "https://ligauniversitaria.org.uy/partidos/B221B4B.html",
-      "cancha": "G.WASTON"
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "E.L.F.",
+      "fecha": "2026-10-24",
+      "hora": "15:30",
+      "local": true,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F202020AT.html",
+      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "hockey",
@@ -2603,16 +2584,6 @@
       "fase": "COPA DE PLATA (Sub 18)",
       "estado": "A Designar",
       "cancha": "Pilares"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 20",
-      "rival": "E.L.F.",
-      "fecha": "2026-10-24",
-      "hora": "15:30",
-      "local": true,
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F202020AT.html",
-      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "futbol",
@@ -6719,6 +6690,14 @@
       ]
     },
     {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "UNIVERSIDAD DE MONTEVIDEO",
+      "gf": 51,
+      "gc": 66,
+      "fecha": "2026-10-17"
+    },
+    {
       "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "TENIS EL PINAR",
@@ -6838,6 +6817,14 @@
       "fase": "COPA DE ORO (Intermedia C)"
     },
     {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "UNIVERSIDAD DE MONTEVIDEO",
+      "gf": 62,
+      "gc": 36,
+      "fecha": "2026-10-19"
+    },
+    {
       "deporte": "futbol",
       "categoria": "Reserva Verde",
       "rival": "DANUBIO FUTBOL CLUB",
@@ -6948,39 +6935,9 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-26T04:59:02.827Z",
+  "actualizadoEn": "2026-10-26T13:09:46.370Z",
   "diagnostico": {
     "fuentes": [
-      {
-        "deporte": "futbol",
-        "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "registros": 26,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
-        "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "registros": 25,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
-        "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "registros": 12,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
-        "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "registros": 13,
-        "estado": "ok"
-      },
-      {
-        "deporte": "futbol",
-        "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "registros": 13,
-        "estado": "ok"
-      },
       {
         "deporte": "rugby",
         "url": "https://50-22.base44.app/functions/getPublicContent",
@@ -7021,14 +6978,6 @@
         "url": "https://admin.hockey.com.uy/posiciones?category_id=2",
         "registros": 22,
         "estado": "ok"
-      },
-      {
-        "deporte": "basketball",
-        "categoria": "Basketball",
-        "url": "https://ligauniversitaria.org.uy/estadisticas-basquetbol-b/",
-        "registros": 0,
-        "estado": "error",
-        "detalle": "HTTP 404 al abrir resultados de la Liga Universitaria"
       },
       {
         "deporte": "futbol",
@@ -7161,6 +7110,42 @@
         "categoria": "Sub 20",
         "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-sub-20-a/",
         "registros": 22,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+        "registros": 26,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
+        "registros": 25,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+        "registros": 12,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+        "registros": 13,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
+        "registros": 13,
+        "estado": "ok"
+      },
+      {
+        "deporte": "basketball",
+        "url": "https://ligauniversitaria.org.uy/estadisticas-basquetbol-b/",
+        "registros": 25,
         "estado": "ok"
       }
     ],

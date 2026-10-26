@@ -107,7 +107,15 @@ export function campaignFromCsv(text) {
     if (name.length > 160 || /^#(REF!|VALUE!|ERROR!|N\/A|DIV\/0!|NAME\?)/.test(name)) throw new TypeError('Nombre inválido.');
     return name.replace(/ y flia$/, '\ny flia');
   });
-  return campaignModel({ goal: numeric('goal'), raised: numeric('raised'), brickLabels });
+  const modern = values.get('feedVersion') === '2';
+  if (values.has('feedVersion') && !modern) throw new TypeError('Versión de fuente no compatible.');
+  if (modern && (!values.has('sponsors') || !values.get('updatedAt'))) throw new TypeError('Fuente incompleta.');
+  const brickProgress = modern ? Array.from({length:BRICK_COUNT}, (_,i)=>numeric(`fill${i+1}`)) : undefined;
+  const sponsors = modern ? (values.get('sponsors') ?? '').split('\n').map(n=>n.trim()).filter(Boolean) : undefined;
+  if (sponsors?.some(n=>n.length>160 || /^#(?:REF!|VALUE!|ERROR!|N\/A)/.test(n))) throw new TypeError('Sponsors inválidos.');
+  const updatedAt = values.get('updatedAt') || '';
+  if (updatedAt && !Number.isFinite(Date.parse(updatedAt))) throw new TypeError('Fecha de actualización inválida.');
+  return campaignModel({ goal: numeric('goal'), raised: numeric('raised'), brickLabels, brickProgress, sponsors, updatedAt });
 }
 
 export function initCampaign(root) {
@@ -261,6 +269,7 @@ export function initCampaign(root) {
     pending = true;
     try {
       const config = await readJson(`/data/gym-campaign.json?v=${Math.floor(Date.now() / 60000)}`);
+      if (!current) render(config);
       let data = config;
       let sourceFailed = false;
       if (config.sourceUrl) {
@@ -268,7 +277,8 @@ export function initCampaign(root) {
           const url = new URL(config.sourceUrl, window.location.href);
           if (url.protocol !== 'https:' && url.origin !== window.location.origin) throw new Error('Fuente no válida');
           let live;
-          if (config.sourceFormat === 'sheets-csv') {
+          if (['sheets-csv','sheets-csv-v2'].includes(config.sourceFormat)) {
+            url.searchParams.set('v', String(Math.floor(Date.now() / 60000)));
             const response = await fetch(url.href, { cache: 'no-store', signal: AbortSignal.timeout(15000) });
             if (!response.ok) throw new Error(`Campaña: HTTP ${response.status}`);
             live = campaignFromCsv(await response.text());

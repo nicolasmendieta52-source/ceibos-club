@@ -1,4 +1,4 @@
-import {summarize,LABELS,csvValue} from '/assets/analytics-model.js';
+import {summarize,LABELS,csvValue} from '/assets/analytics-model.js?v=20261026';
 const $=id=>document.getElementById(id), fmt=n=>new Intl.NumberFormat('es-UY',{maximumFractionDigits:1}).format(n), duration=s=>s>=60?`${Math.floor(s/60)} min ${Math.round(s%60)} s`:`${Math.round(s)} s`;
 const PANEL_EMAILS=new Set(["nicolasmendieta52@gmail.com","ceibosfutbol@gmail.com","jdtorresn@gmail.com"]);
 const canAccessPanel=user=>Boolean(user?.emailVerified&&PANEL_EMAILS.has(user.email?.toLowerCase()));

@@ -53,7 +53,23 @@ async function getJson(url) {
 export async function syncAdic(config, previous = {}, request = getJson) {
   const tournaments = [];
   const diagnostics = [];
-  for (const tournament of config.tournaments) {
+  let sources = config.tournaments;
+  if (config.discovery) {
+    try {
+      const catalog = await request(`${api}?year=${config.season}&sport_id=${config.discovery.sportId}`);
+      if (!Array.isArray(catalog) || !catalog.length) throw new Error('ADIC: catálogo de torneos inválido');
+      const discovered = catalog.filter(t=>config.discovery.categoryIds.includes(t.category?.id)).map(t=>{
+        if (!Number.isInteger(t.id) || !t.name || !t.category?.name) throw new Error('ADIC: identificación de torneo inválida');
+        const query = new URLSearchParams({name:t.name,category:t.category.name,sport:'Futbol',year:String(config.season)});
+        return {id:t.id,name:t.name,category:t.category.name,url:`https://portal.adic.org.uy/calendar/tournaments/${t.id}?${query}`};
+      });
+      sources = [...new Map([...config.tournaments,...discovered].map(t=>[t.id,t])).values()];
+    } catch (error) {
+      diagnostics.push({deporte:'futbol',url:'https://portal.adic.org.uy/tournaments',registros:0,estado:'error',detalle:error.message});
+      sources = [...new Map([...config.tournaments,...(previous.tournaments||[])].map(t=>[t.id,t])).values()];
+    }
+  }
+  for (const tournament of sources) {
     try {
       const [matches, standings] = await Promise.all([
         request(`${api}/${tournament.id}/matches`), request(`${api}/${tournament.id}/standings`)
@@ -63,7 +79,12 @@ export async function syncAdic(config, previous = {}, request = getJson) {
       }
       const ids = new Set(config.teams.map(t => t.id));
       const games = [...matches.played, ...matches.upcoming].filter(m => ids.has(m.home_team?.id) || ids.has(m.away_team?.id));
-      if (!games.length) throw new Error('ADIC no devolvió los partidos conocidos de Ceibos');
+      if (!games.length) {
+        // Newly discovered competitions can belong to other clubs. Never add them
+        // to Ceibos, or discard a previously known phase on an empty response.
+        if (config.tournaments.some(t=>t.id===tournament.id) || previous.tournaments?.some(t=>t.id===tournament.id)) throw new Error('ADIC no devolvió los partidos conocidos de Ceibos');
+        continue;
+      }
       const tables = standings.series.filter(s => s.standings.some(row => ids.has(row.team_id)))
         .map(s => ({ id: s.series_id, name: s.series_name,
           rows: s.standings.map(row => ({ position: row.position, teamId: row.team_id, name: row.team.name,

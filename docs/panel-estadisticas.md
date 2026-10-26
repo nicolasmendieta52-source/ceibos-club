@@ -15,3 +15,5 @@ Archivos: `assets/analytics.js` (medición y consentimiento), `assets/analytics-
 No desplegar reglas sin comparar con las vigentes en Firebase: podrían existir cambios de otros administradores. El archivo versionado preserva las reglas de notificaciones leídas durante la implementación.
 
 Retención: `limpiar-estadisticas.yml` ejecuta diariamente `automation/cleanup-analytics.mjs` con la cuenta de servicio existente. Elimina únicamente visitas con expiresAt vencido (90 días desde el inicio). No depende de una política TTL habilitada en Google Cloud.
+
+Desde el 26 de octubre de 2026 se miden también `interno` y `proyecto-gimnasio`. Las reglas admiten esos contadores como opcionales para no rechazar visitas de pestañas abiertas con una versión anterior. No se reconstruyen vistas anteriores a la incorporación de esas secciones.

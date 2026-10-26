@@ -14,5 +14,11 @@ test('se guarda dominio de origen sin consultas, fragmentos ni credenciales',()=
 test('exportación evita fórmulas CSV y metadatos de dispositivo son generales',()=>{
  assert.equal(csvValue('=1+2'),'"\'=1+2"');assert.equal(csvValue('a"b'),'"a""b"');
  assert.deepEqual(deviceInfo('Mozilla iPhone Safari',390),{device:'Móvil',browser:'Safari',os:'iOS'});
- assert.equal(Object.keys(emptyCounts(SECTIONS)).length,15);assert.ok(ACTIONS.includes('gym_form'));
+ assert.equal(Object.keys(emptyCounts(SECTIONS)).length,17);assert.ok(ACTIONS.includes('gym_form'));
+});
+
+test('Interno y proyecto del gimnasio se suman sin perder visitas de clientes anteriores',()=>{
+ const base={ownerUid:'anon',createdMs:Date.now(),lastSeenMs:Date.now()};
+ const result=summarize([{...base,sections:{interno:1,'proyecto-gimnasio':1}},{...base,sections:{inicio:1}}]);
+ assert.equal(result.sections.interno,1);assert.equal(result.sections['proyecto-gimnasio'],1);assert.equal(result.sections.inicio,1);
 });

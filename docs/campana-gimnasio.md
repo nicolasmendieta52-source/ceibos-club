@@ -1,5 +1,7 @@
 # Campaña del gimnasio de Ceibos
 
+La conexión activa con la planilla, el formato CSV y el orden actual del muro están documentados en [gym-campaign.md](gym-campaign.md). Los ejemplos siguientes describen la configuración alternativa mediante JSON; la operación habitual es actualizar los pagos en la planilla.
+
 La sección está después del hero en `index.html`. Sigue la composición de la imagen enviada por el club: escudo y presentación a la izquierda, lema en cursiva al centro, objetivo y recaudación a la derecha, edificio y grilla debajo. Los cambios de tipografía están limitados a esta campaña. CSS y JavaScript independientes en `assets/gym-campaign.*`; no necesita compilación ni dependencias nuevas.
 
 ## Actualizar los montos

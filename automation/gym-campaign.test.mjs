@@ -99,6 +99,15 @@ test('rechaza feeds incompletos, errores de fórmulas y montos mal formados', ()
   }
 });
 
+test('la fuente directa conserva aportes parciales, sponsors separados y exige los 100 avances',()=>{
+ const modern=feed()+'\r\nfeedVersion,2\r\nsponsors,"FNC\nSUBARU"\r\nupdatedAt,2026-10-26T10:00:00-03:00\r\n'+Array.from({length:100},(_,i)=>`fill${i+1},${i===0?'0.5':'0'}`).join('\r\n');
+ const data=campaignFromCsv(modern);
+ assert.equal(data.brickProgress[0],0.5);assert.equal(data.brickProgress[99],0);
+ assert.deepEqual(data.sponsors,['FNC','SUBARU']);assert.equal(data.updatedAt,'2026-10-26T10:00:00-03:00');
+ assert.throws(()=>campaignFromCsv(modern.replace('fill100,0','')));
+ assert.throws(()=>campaignFromCsv(modern.replace('fill1,0.5','fill1,2')));
+});
+
 test('rechaza montos inválidos y metas que no permiten calcular progreso', () => {
   for (const data of [null, {}, { goal: 0, raised: 20 }, { goal: -1, raised: 20 },
     { goal: 200000, raised: -1 }, { goal: 200000, raised: '87450' },

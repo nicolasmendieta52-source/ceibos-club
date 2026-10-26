@@ -33,3 +33,14 @@ test('failed ADIC refresh retains previous data; successful refresh removes resc
   const cleaned = replaceAdicData({ partidos: [{ ...other, categoria: 'Papi Fútbol +40' }, other] }, result.snapshot);
   assert.deepEqual(cleaned.partidos, [other]);
 });
+
+test('descubre copas nuevas de 2026, incorpora solo las de los equipos configurados y conserva el huso horario', async () => {
+  const result = await syncAdic({season:2026,teams,tournaments:[],discovery:{sportId:1,categoryIds:[90]}}, {}, async url=>{
+    if (url.includes('?year=')) return [{id:1501,name:'Clausura',category:{id:90,name:'Padres Master 40'}},{id:1503,name:'Otra copa',category:{id:90,name:'Padres Master 40'}},{id:999,name:'Juveniles',category:{id:18,name:'Sub 18'}}];
+    if (url.endsWith('/standings')) return {series:[]};
+    return {played:url.includes('/1501/')?[match]:[{...match,away_team:{id:999,name:'Otro'}}],upcoming:[]};
+  });
+  assert.deepEqual(result.snapshot.tournaments.map(t=>t.id),[1501]);
+  assert.equal(result.records[0].fecha,'2026-03-26');
+  assert.equal(result.records[0].hora,'21:00');
+});

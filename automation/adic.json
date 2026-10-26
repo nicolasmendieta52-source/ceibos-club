@@ -1,5 +1,6 @@
 {
   "season": 2026,
+  "discovery": {"sportId": 1, "categoryIds": [90, 91, 92, 93]},
   "teams": [
     {
       "id": 653,

@@ -221,7 +221,7 @@ async function fetchLigaRows(source) {
     headers: { "user-agent": "CeibosClubFixtureBot/1.0 (contacto: info@ceibosclub.com)", "cache-control": "no-cache" },
     cache: "no-store", signal: AbortSignal.timeout(30000)
   });
-  if (!pageResponse.ok) throw new Error(`HTTP ${pageResponse.status} al abrir resultados de la Liga Universitaria`);
+  if (!pageResponse.ok) throw Object.assign(new Error(`HTTP ${pageResponse.status} al abrir resultados de la Liga Universitaria`), {status:pageResponse.status});
   const page = await pageResponse.text();
   const configId = page.match(/<meta\s+name=["']config-id["']\s+content=["']([^"']+)["']/i)?.[1];
   if (!configId) throw new Error("La pagina de resultados no informa su config-id");
@@ -315,10 +315,24 @@ async function fetchLigaFixtureIndex(source, aliases) {
   }), source.fase);
   const links = ligaFixtureLinks(html, source.url);
   if (!links.length) throw new Error('La página de la Liga no contiene fuentes de partidos');
-  // Fail this category as a unit rather than replacing its schedule with a partial phase.
-  const records = await mapWithConcurrency(links, 3, url => retryLigaRead(() => fetchLigaFixtures({...source,url}, aliases)));
+  const readPhase = async (url, read) => {
+    try { return await retryLigaRead(() => read({...source,url}, aliases)); }
+    catch (error) {
+      // The basketball index also links unpublished brackets for other teams.
+      // Only ignore a missing bracket when its own published block excludes Ceibos.
+      const index = html.indexOf(url);
+      const headings = [...html.matchAll(/<h[1-6]\b[^>]*>/gi)].map(m=>m.index);
+      const start = headings.filter(i=>i<index).at(-1) ?? 0;
+      const end = headings.find(i=>i>index) ?? html.length;
+      const block = html.slice(start,end).replace(/<[^>]*>/g,' ');
+      if (source.deporte !== 'basketball' || error.status !== 404 || !/\b(?:Serie|Play\s*Off|Copa)\b/i.test(block) || /ceibos/i.test(block)) throw error;
+      console.warn(`Liga: fase ajena aún no publicada (${new URL(url).pathname}); se leen las demás fases.`);
+      return [];
+    }
+  };
+  const records = await mapWithConcurrency(links, 3, url => readPhase(url, fetchLigaFixtures));
   const resultLinks = [...new Set([...html.matchAll(/<iframe\b[^>]*\bsrc=["']([^"']+)["']/gi)].map(m=>new URL(m[1],source.url)).filter(u=>u.origin===new URL(source.url).origin&&/^\/resultados\/[^/]+\.html$/.test(u.pathname)).map(u=>u.href))];
-  const results = await mapWithConcurrency(resultLinks, 2, url=>retryLigaRead(() => fetchLigaResultsWithScorers({...source,url},aliases)));
+  const results = await mapWithConcurrency(resultLinks, 2, url=>readPhase(url, fetchLigaResultsWithScorers));
   return [...records.flat(),...results.flat()].filter(r=>r.fecha.startsWith(String(source.temporada||now.getFullYear())+"-"));
 }
 

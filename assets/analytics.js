@@ -1,4 +1,4 @@
-import {SECTIONS,ACTIONS,emptyCounts,deviceInfo,referrerHost} from './analytics-model.js';
+import {SECTIONS,ACTIONS,emptyCounts,deviceInfo,referrerHost} from './analytics-model.js?v=20261026';
 const CHOICE='ceibos_metrics_consent_v1';
 let consent=null, stop=null, starting=false;
 try{consent=localStorage.getItem(CHOICE);}catch{}
