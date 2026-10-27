@@ -6860,6 +6860,17 @@
       ]
     },
     {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "CLUB NAUTICO",
+      "gf": 72,
+      "gc": 64,
+      "fecha": "2026-10-24",
+      "fase": "Copa de Plata · Semifinales",
+      "confirmadoPorClub": true,
+      "confirmadoEl": "2026-10-27"
+    },
+    {
       "deporte": "futbol",
       "categoria": "PreSenior",
       "rival": "SAN JUAN BAUTISTA",
@@ -6983,7 +6994,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-27T05:16:58.003Z",
+  "actualizadoEn": "2026-10-27T12:01:03.166Z",
   "diagnostico": {
     "fuentes": [
       {

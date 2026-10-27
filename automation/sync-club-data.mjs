@@ -1012,7 +1012,9 @@ function normalizeRecord(record, kind, priority = 0) {
     const goleadores = Array.isArray(record.goleadores)
       ? record.goleadores.map(repairText).filter(Boolean)
       : clean(record.goleadores) ? [repairText(record.goleadores)] : [];
-    return { deporte, categoria, rival, gf, gc, fecha, ...fase, ...adic, ...(goleadores.length ? { goleadores } : {}), _priority: priority };
+    const confirmed = record.confirmadoPorClub === true ? {confirmadoPorClub:true,
+      ...(/^\d{4}-\d{2}-\d{2}$/.test(clean(record.confirmadoEl)) ? {confirmadoEl:clean(record.confirmadoEl)} : {})} : {};
+    return { deporte, categoria, rival, gf, gc, fecha, ...fase, ...adic, ...confirmed, ...(goleadores.length ? { goleadores } : {}), _priority: priority };
   }
   const hora = /^\d{2}:\d{2}$/.test(clean(record.hora)) ? clean(record.hora) : "A confirmar";
   return {
@@ -1086,6 +1088,13 @@ function dedupeRecords(records, kind) {
 }
 
 function mergeClubData(previous, officialRecords, instagramRecords) {
+  // Explicit corrections confirmed by club administration survive an outdated
+  // federation response, even when it still lists that match as pending.
+  // Removing confirmadoPorClub restores the normal federation precedence.
+  const confirmed = (previous.resultados ?? []).filter(r=>r.confirmadoPorClub===true)
+    .map(r=>normalizeRecord(r,'resultado',3)).filter(Boolean).map(r=>({...r,kind:'resultado'}));
+  const confirmedSlots = new Set(confirmed.map(recordSlotIdentity));
+  officialRecords = [...officialRecords.filter(r=>!confirmedSlots.has(recordSlotIdentity(r))),...confirmed];
   const replaceUpcoming = new Set(officialRecords
     .filter(record => record.kind === "partido")
     .map(record => `${comparable(record.deporte)}|${comparable(record.categoria)}`));

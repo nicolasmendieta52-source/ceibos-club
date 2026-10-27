@@ -35,6 +35,20 @@ test('basket ignores empty, unplayed 0-0 and other seasons; it accepts a 20-0 fo
  assert.equal(records.length,1);assert.equal(records[0].gf,20);assert.equal(records[0].gc,0);
 });
 
+test('el 72-64 ante Náutico confirmado por el club no desaparece con una fuente atrasada',()=>{
+ const confirmed={deporte:'basketball',categoria:'Basketball',fecha:'2026-10-24',rival:'CLUB NAUTICO',gf:72,gc:64,confirmadoPorClub:true,confirmadoEl:'2026-10-27'};
+ const earlier={...confirmed,fecha:'2026-10-19',rival:'UNIVERSIDAD DE MONTEVIDEO',gf:62,gc:36,confirmadoPorClub:undefined,confirmadoEl:undefined};
+ const pending={kind:'partido',deporte:'basketball',categoria:'Basketball',fecha:'2026-10-24',rival:'NÁUTICO CARRASCO Y PUNTA GORDA',hora:'19:15',local:false};
+ const output=mergeClubData({partidos:[],resultados:[earlier,confirmed]},[pending],[{...confirmed,kind:'resultado',gf:70,confirmadoPorClub:undefined}]);
+ assert.equal(output.resultados.length,2);assert.equal(output.partidos.length,0);
+ assert.equal(output.resultados.at(-1).gf,72);assert.equal(output.resultados.at(-1).gc,64);
+ assert.equal(output.resultados.at(-1).confirmadoPorClub,true);assert.equal(output.resultados.at(-1).confirmadoEl,'2026-10-27');
+ assert.deepEqual(mergeClubData(output,[],[]),output,'las revisiones posteriores no duplican ni pierden la confirmación');
+ const released={...confirmed};delete released.confirmadoPorClub;
+ const corrected=mergeClubData({resultados:[released]},[{...confirmed,kind:'resultado',gf:73,confirmadoPorClub:undefined}],[]);
+ assert.equal(corrected.resultados[0].gf,73,'al retirar la confirmación vuelve a prevalecer la federación');
+});
+
 test('un 404 de una llave ajena no bloquea la Copa de Ceibos; un 404 en su propia llave sí falla', async t=>{
   let ceibosInMissing=false;
   t.mock.method(globalThis,'fetch',async input=>{
