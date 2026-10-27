@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-26T13:22:29.545Z",
+        "updatedAt": "2026-10-27T05:13:35.388Z",
         "tables": [
           {
             "id": 2291,
@@ -235,6 +235,18 @@
               },
               {
                 "position": 3,
+                "teamId": 474,
+                "name": "Crandogs",
+                "pj": 10,
+                "pg": 7,
+                "pe": 1,
+                "pp": 2,
+                "gf": 27,
+                "gc": 14,
+                "points": 22
+              },
+              {
+                "position": 4,
                 "teamId": 647,
                 "name": "Erik Erikson",
                 "pj": 10,
@@ -246,7 +258,7 @@
                 "points": 21
               },
               {
-                "position": 4,
+                "position": 5,
                 "teamId": 746,
                 "name": "Orange Trouville",
                 "pj": 10,
@@ -255,18 +267,6 @@
                 "pp": 1,
                 "gf": 31,
                 "gc": 17,
-                "points": 19
-              },
-              {
-                "position": 5,
-                "teamId": 474,
-                "name": "Crandogs",
-                "pj": 9,
-                "pg": 6,
-                "pe": 1,
-                "pp": 2,
-                "gf": 24,
-                "gc": 12,
                 "points": 19
               },
               {
@@ -285,12 +285,12 @@
                 "position": 7,
                 "teamId": 447,
                 "name": "Saint George rojo",
-                "pj": 9,
+                "pj": 10,
                 "pg": 4,
                 "pe": 2,
-                "pp": 3,
-                "gf": 24,
-                "gc": 20,
+                "pp": 4,
+                "gf": 26,
+                "gc": 23,
                 "points": 14
               },
               {
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-26T13:22:29.706Z",
+        "updatedAt": "2026-10-27T05:13:35.578Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-26T13:22:29.801Z",
+        "updatedAt": "2026-10-27T05:13:35.680Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-26T13:22:30.125Z",
+        "updatedAt": "2026-10-27T05:13:35.794Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-26T13:22:30.236Z",
+        "updatedAt": "2026-10-27T05:13:35.905Z",
         "tables": [
           {
             "id": 2239,
@@ -2572,18 +2572,19 @@
       "hora": "14:00",
       "local": true,
       "fase": "COPA DE PLATA (Sub 18)",
-      "estado": "A Designar",
+      "estado": "Postergado",
       "cancha": "Pilares"
     },
     {
-      "deporte": "futbol",
-      "categoria": "Sub 20",
-      "rival": "E.L.F.",
-      "fecha": "2026-10-24",
-      "hora": "15:30",
-      "local": true,
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F202020AT.html",
-      "cancha": "MONTE VI \"LOS CEIBOS\""
+      "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Old Christians Club",
+      "fecha": "2026-10-31",
+      "hora": "19:15",
+      "local": false,
+      "fase": "COPA DE PLATA (Intermedia A)",
+      "estado": "A Designar",
+      "cancha": "Old Christians"
     },
     {
       "deporte": "futbol",
@@ -2616,6 +2617,17 @@
       "cancha": "COMPLEJO JUAN XXIII"
     },
     {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Northfield",
+      "fecha": "2026-10-31",
+      "hora": "14:00",
+      "local": false,
+      "fase": "COPA DE PLATA (Sub 18)",
+      "estado": "A Designar",
+      "cancha": "NorthField"
+    },
+    {
       "deporte": "futbol",
       "categoria": "Sub 20",
       "rival": "CLUB SEMINARIO",
@@ -2640,11 +2652,22 @@
       "categoria": "Sub 18",
       "rival": "CLUB SEMINARIO",
       "fecha": "2026-11-01",
-      "hora": "A confirmar",
+      "hora": "15:30",
       "local": true,
       "fase": "Copa de Oro",
       "fuente": "https://ligauniversitaria.org.uy/partidos/F181818O.html",
-      "cancha": "CANCHA A FIJAR"
+      "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Bigua Reserva",
+      "fecha": "2026-11-03",
+      "hora": "21:00",
+      "local": false,
+      "fase": "COPA DE PLATA (Reserva )",
+      "estado": "A Designar",
+      "cancha": "Liceo Frances"
     },
     {
       "deporte": "futbol",
@@ -6830,7 +6853,11 @@
       "rival": "DANUBIO FUTBOL CLUB",
       "gf": 2,
       "gc": 4,
-      "fecha": "2026-10-22"
+      "fecha": "2026-10-22",
+      "goleadores": [
+        "GUILLERMO JOSE BARREIRO (44')",
+        "NICOLAS MARTIN LOGIURATO (85')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -6838,7 +6865,14 @@
       "rival": "SAN JUAN BAUTISTA",
       "gf": 5,
       "gc": 1,
-      "fecha": "2026-10-24"
+      "fecha": "2026-10-24",
+      "goleadores": [
+        "CARLOS JAVIER MORALES (21')",
+        "SANTIAGO JORGE KIRIAKIDIS (30')",
+        "JUAN MARTIN DIAZ (38')",
+        "SANTIAGO JORGE KIRIAKIDIS (50')",
+        "SANTIAGO JORGE KIRIAKIDIS (62')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -6846,7 +6880,21 @@
       "rival": "SAGRADA FAMILIA UNIVERSITARIO",
       "gf": 1,
       "gc": 0,
-      "fecha": "2026-10-24"
+      "fecha": "2026-10-24",
+      "goleadores": [
+        "SANTIAGO LOPEZ (50')"
+      ]
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 20",
+      "rival": "E.L.F.",
+      "gf": 1,
+      "gc": 4,
+      "fecha": "2026-10-24",
+      "goleadores": [
+        "GIANLUCA BANCHIERI (23')"
+      ]
     },
     {
       "deporte": "hockey",
@@ -6935,7 +6983,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-26T13:26:07.362Z",
+  "actualizadoEn": "2026-10-27T05:16:58.003Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -6978,14 +7026,14 @@
         "deporte": "hockey",
         "categoria": "Intermedia A",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=3",
-        "registros": 17,
+        "registros": 18,
         "estado": "ok"
       },
       {
         "deporte": "hockey",
         "categoria": "Sub 18",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=4",
-        "registros": 20,
+        "registros": 21,
         "estado": "ok"
       },
       {
@@ -7006,7 +7054,7 @@
         "deporte": "hockey",
         "categoria": "Reserva",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=2",
-        "registros": 22,
+        "registros": 23,
         "estado": "ok"
       },
       {
