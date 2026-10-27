@@ -63,6 +63,29 @@ export function brickLayout(data, columns) {
   return positions;
 }
 
+export const SEEN_BRICKS_KEY = 'ceibos_gym_seen_v1';
+
+// Functional display preference: store only progress and occupied slots, never names.
+export function campaignSnapshot(model) {
+  return {version:1, fills:[...model.fills], occupied:model.fills.map((fill,i)=>fill>0 || Boolean(model.brickLabels?.[i]?.trim()))};
+}
+
+export function readCampaignSnapshot(raw) {
+  try {
+    const data = JSON.parse(raw);
+    if (data?.version !== 1 || Object.keys(data).sort().join(',') !== 'fills,occupied,version' ||
+        !Array.isArray(data.fills) || data.fills.length !== BRICK_COUNT || data.fills.some(n=>typeof n!=='number' || !Number.isFinite(n) || n<0 || n>1) ||
+        !Array.isArray(data.occupied) || data.occupied.length !== BRICK_COUNT || data.occupied.some(n=>typeof n!=='boolean')) return null;
+    return data;
+  } catch { return null; }
+}
+
+export function newBrickIndices(previous, next) {
+  const snapshot = campaignSnapshot(next);
+  return snapshot.fills.flatMap((fill,i)=>snapshot.occupied[i] &&
+    (!previous || !previous.occupied[i] || fill>previous.fills[i]+0.00000001) ? [i] : []);
+}
+
 export function contributionLink(value) {
   try {
     const url = new URL(value);
@@ -126,7 +149,12 @@ export function initCampaign(root) {
   const status = select('status');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let current = null;
-  let visible = false;
+  let remembered = null;
+  try { remembered = readCampaignSnapshot(window.localStorage.getItem(SEEN_BRICKS_KEY)); } catch { /* Storage can be disabled. */ }
+  const returningVisit = Boolean(remembered);
+  const pendingPlacements = new Set();
+  const visibleBricks = new Set();
+  const newThisVisit = new Set();
   let pending = false;
   let disposed = false;
   const bricks = Array.from({ length: BRICK_COUNT }, (_, i) => {
@@ -138,21 +166,28 @@ export function initCampaign(root) {
     const label = document.createElement('span');
     label.className = 'gym-brick-label';
     brick.append(label);
-    brick.addEventListener('animationend', () => brick.classList.remove('is-placing'));
+    brick.addEventListener('animationend', event => { if (event.target === brick) brick.classList.remove('is-placing'); });
     wall.append(brick);
     return brick;
   });
 
   function animate(indices) {
-    if (!visible || reducedMotion.matches) return;
+    if (!indices.length || reducedMotion.matches) return;
+    indices.forEach(index => bricks[index].classList.remove('is-placing'));
+    // One layout read restarts a batch without forcing layout for every brick.
+    void wall.offsetWidth;
     indices.forEach((index, order) => {
       const brick = bricks[index];
-      brick.classList.remove('is-placing');
-      brick.style.setProperty('--delay', `${Math.min(order * 45, 500)}ms`);
-      // Restart a placement even when a second contribution reaches the same brick.
-      void brick.offsetWidth;
+      brick.style.setProperty('--delay', `${Math.min(order * 75, 750)}ms`);
       brick.classList.add('is-placing');
     });
+  }
+
+  function flushPlacements() {
+    if (disposed || !current || document.hidden) return;
+    const indices = [...pendingPlacements].filter(i=>visibleBricks.has(i)).sort((a,b)=>a-b);
+    indices.forEach(i=>pendingPlacements.delete(i));
+    animate(indices);
   }
 
   let lastSponsors = '';
@@ -194,10 +229,14 @@ export function initCampaign(root) {
     }
   }
 
-  function render(data) {
+  function render(data, {remember = false} = {}) {
     const next = campaignModel(data);
     const previous = current;
-    const changed = [];
+    const changes = remember ? newBrickIndices(remembered, next) : [];
+    changes.forEach(i=>{
+      pendingPlacements.add(i);
+      if (returningVisit && !remembered?.occupied[i]) newThisVisit.add(i);
+    });
     const desktopLayout = brickLayout(next, 10);
     const mobileLayout = brickLayout(next, 5);
     bricks.forEach((brick, i) => {
@@ -207,7 +246,6 @@ export function initCampaign(root) {
       }
       brick.style.setProperty('--fill', `${next.fills[i] * 100}%`);
       brick.classList.toggle('is-partial', next.fills[i] > 0 && next.fills[i] < 1);
-      brick.classList.remove('is-placing');
       const label = Array.isArray(next.brickLabels) ? next.brickLabels[i] : '';
       const sponsor = Boolean(next.brickSponsors?.[i]);
       brick.classList.toggle('is-sponsor', sponsor);
@@ -215,7 +253,11 @@ export function initCampaign(root) {
       brick.classList.toggle('has-contributor', Boolean(label));
       brick.classList.toggle('has-unfilled-label', Boolean(label) && next.fills[i] < 1);
       brick.title = `Ladrillo ${i + 1}${label ? ` · ${label.replace(/\s+/g, ' ')}` : ''}${sponsor ? ' · Sponsor' : ''}`;
-      if (previous && (next.fills[i] > previous.fills[i] || (label && label !== previous.brickLabels?.[i]) || sponsor !== Boolean(previous.brickSponsors?.[i]))) changed.push(i);
+      if (!label && next.fills[i] === 0) {
+        pendingPlacements.delete(i);
+        newThisVisit.delete(i);
+        brick.classList.remove('is-placing');
+      }
     });
     renderSponsors(next.sponsors);
     const names = Array.isArray(next.brickLabels)
@@ -228,9 +270,11 @@ export function initCampaign(root) {
     select('progress').value = next.percent;
     select('progress').setAttribute('aria-valuetext', `${percentage(next.percent)}% de la meta. ${money(next.raised)} recaudados de ${money(next.goal)}.`);
     select('unit').textContent = next.brickProgress ? 'un aporte al gimnasio' : money(next.brickValue);
-    select('wall-summary').textContent = next.brickProgress
+    const summary = next.brickProgress
       ? `${names.length} de ${BRICK_COUNT} ladrillos ocupados`
       : `${Math.floor(next.progress * BRICK_COUNT)} de ${BRICK_COUNT} ladrillos completos`;
+    select('wall-summary').textContent = summary + (newThisVisit.size
+      ? ` · ${newThisVisit.size === 1 ? '1 nuevo' : `${newThisVisit.size} nuevos`} desde tu última visita` : '');
     const cta = select('cta');
     cta.href = contributionLink(next.contributionUrl);
     const external = cta.href.startsWith('https:');
@@ -240,23 +284,28 @@ export function initCampaign(root) {
     const updated = next.updatedAt ? new Date(next.updatedAt) : null;
     select('updated').textContent = updated && !Number.isNaN(updated.getTime())
       ? `Datos al ${new Intl.DateTimeFormat('es-UY', { dateStyle: 'medium', timeZone: 'UTC' }).format(updated)}.` : '';
-    status.textContent = previous && next.raised > previous.raised
+    let announcement = previous && next.raised > previous.raised
       ? `¡Un paso más! Se sumaron ${money(next.raised - previous.raised)} al gimnasio.` : '';
-    if (next.progress === 1) status.textContent = '¡Meta alcanzada! Gracias por construir el gimnasio entre todos.';
+    if (!announcement && newThisVisit.size) announcement = `Hay ${newThisVisit.size === 1 ? 'un ladrillo nuevo' : `${newThisVisit.size} ladrillos nuevos`} desde tu última visita. ¡Seguimos construyendo Ceibos!`;
+    if (next.progress === 1) announcement = '¡Meta alcanzada! Gracias por construir el gimnasio entre todos.';
+    if (status.textContent !== announcement) status.textContent = announcement;
     current = next;
-    if (!previous && visible) animate([Math.max(0, next.fills.findLastIndex(fill => fill > 0))].filter(i => next.fills[i] > 0));
-    else animate(changed);
+    if (remember) {
+      remembered = campaignSnapshot(next);
+      try { window.localStorage.setItem(SEEN_BRICKS_KEY, JSON.stringify(remembered)); } catch { /* Animation still works for this visit. */ }
+    }
+    flushPlacements();
   }
 
   const observer = new IntersectionObserver(entries => {
-    const wasVisible = visible;
-    visible = entries.some(entry => entry.isIntersecting);
-    if (visible && !wasVisible && current) {
-      const last = current.fills.findLastIndex(fill => fill > 0);
-      if (last >= 0) animate([last]);
+    for (const entry of entries) {
+      const index = bricks.indexOf(entry.target);
+      if (entry.isIntersecting && entry.intersectionRatio >= .5) visibleBricks.add(index);
+      else visibleBricks.delete(index);
     }
-  }, { threshold: .15 });
-  observer.observe(wall);
+    flushPlacements();
+  }, { threshold: .5, rootMargin:'-64px 0px -64px 0px' });
+  bricks.forEach(brick=>observer.observe(brick));
 
   async function readJson(url) {
     const response = await fetch(url, { cache: 'no-store', signal: AbortSignal.timeout(10000) });
@@ -292,7 +341,8 @@ export function initCampaign(root) {
         }
       }
       if (disposed) return;
-      render(data);
+      // An old fallback must not replace the remembered state of a newer live read.
+      render(data, {remember:!sourceFailed});
       if (sourceFailed) status.textContent = 'No pudimos actualizar ahora. Mostramos el último dato disponible.';
     } catch {
       if (!disposed) {
@@ -307,12 +357,17 @@ export function initCampaign(root) {
     } finally { pending = false; }
   }
 
-  const onVisibility = () => { if (!document.hidden) refresh(); };
+  const onVisibility = () => { if (!document.hidden) { flushPlacements(); refresh(); } };
   const onUpdate = event => {
-    try { render({ ...current, ...event.detail }); }
+    try { render({ ...current, ...event.detail }, {remember:true}); }
     catch { status.textContent = 'No pudimos validar la actualización. Se conserva el último dato disponible.'; }
   };
+  const onMotionChange = () => {
+    if (reducedMotion.matches) bricks.forEach(brick=>brick.classList.remove('is-placing'));
+    flushPlacements();
+  };
   document.addEventListener('visibilitychange', onVisibility);
+  reducedMotion.addEventListener?.('change', onMotionChange);
   window.addEventListener('ceibos:gym-update', onUpdate);
   const timer = window.setInterval(refresh, 60000);
   refresh();
@@ -320,6 +375,7 @@ export function initCampaign(root) {
     disposed = true;
     window.clearInterval(timer);
     observer.disconnect();
+    reducedMotion.removeEventListener?.('change', onMotionChange);
     document.removeEventListener('visibilitychange', onVisibility);
     window.removeEventListener('ceibos:gym-update', onUpdate);
   };

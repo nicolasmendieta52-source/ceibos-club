@@ -1,6 +1,40 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { campaignModel, contributionLink, campaignFromCsv, BRICK_COUNT, brickPosition, brickLayout } from '../assets/gym-campaign.js';
+import { campaignModel, contributionLink, campaignFromCsv, BRICK_COUNT, brickPosition, brickLayout, campaignSnapshot, readCampaignSnapshot, newBrickIndices } from '../assets/gym-campaign.js';
+
+const wallModel = count => campaignModel({goal:225000,raised:count*1000,
+  brickLabels:Array.from({length:100},(_,i)=>i<count?`Aportante ${i+1}`:''),
+  brickProgress:Array.from({length:100},(_,i)=>i<count?1:0)});
+
+test('al volver, detecta solo ladrillos nuevos y no repite la entrada de los ya conocidos',()=>{
+ const previous=campaignSnapshot(wallModel(70));
+ const current=wallModel(72);
+ assert.deepEqual(newBrickIndices(previous,current),[70,71]);
+ assert.deepEqual(newBrickIndices(campaignSnapshot(current),current),[]);
+ assert.deepEqual(newBrickIndices(null,wallModel(3)),[0,1,2]);
+ assert.deepEqual(newBrickIndices(null,wallModel(0)),[]);
+ current.brickLabels[0]='Nombre corregido';
+ assert.deepEqual(newBrickIndices(campaignSnapshot(wallModel(72)),current),[]);
+});
+
+test('anima un aporte parcial nuevo, pero no una corrección a la baja ni diferencias de redondeo',()=>{
+ const current=wallModel(2);current.fills[1]=.5;
+ const previous=campaignSnapshot(current);
+ current.fills[1]=.75;
+ assert.deepEqual(newBrickIndices(previous,current),[1]);
+ current.fills[1]=.25;assert.deepEqual(newBrickIndices(previous,current),[]);
+ current.fills[1]=.5000000001;assert.deepEqual(newBrickIndices(previous,current),[]);
+ current.brickLabels[80]='Aportante registrado';
+ assert.deepEqual(newBrickIndices(previous,current),[80]);
+});
+
+test('el recuerdo local guarda solo ocupación y avance, y descarta versiones o datos inválidos',()=>{
+ const snapshot=campaignSnapshot(wallModel(70));
+ const raw=JSON.stringify(snapshot);
+ assert.ok(!raw.includes('Aportante'));assert.deepEqual(Object.keys(snapshot).sort(),['fills','occupied','version']);
+ assert.deepEqual(readCampaignSnapshot(raw),snapshot);
+ for(const value of [null,'invalid','{}',JSON.stringify({...snapshot,version:2}),JSON.stringify({...snapshot,fills:[1]}),JSON.stringify({...snapshot,fills:Array(100).fill(2)}),JSON.stringify({...snapshot,occupied:Array(100).fill('sí')})])assert.equal(readCampaignSnapshot(value),null);
+});
 
 test('separa sponsors de snapshots anteriores y reserva los 100 ladrillos para aportantes', () => {
   const data={goal:200000,raised:57260,brickSponsors:Array(100).fill(false),brickLabels:Array(100).fill(''),brickProgress:Array(100).fill(0)};
