@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-26T22:45:07.556Z",
+        "updatedAt": "2026-10-27T05:13:35.388Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-26T22:45:07.652Z",
+        "updatedAt": "2026-10-27T05:13:35.578Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-26T22:45:07.721Z",
+        "updatedAt": "2026-10-27T05:13:35.680Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-26T22:45:07.801Z",
+        "updatedAt": "2026-10-27T05:13:35.794Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-26T22:45:07.877Z",
+        "updatedAt": "2026-10-27T05:13:35.905Z",
         "tables": [
           {
             "id": 2239,
@@ -2576,6 +2576,17 @@
       "cancha": "Pilares"
     },
     {
+      "deporte": "hockey",
+      "categoria": "Intermedia A",
+      "rival": "Old Christians Club",
+      "fecha": "2026-10-31",
+      "hora": "19:15",
+      "local": false,
+      "fase": "COPA DE PLATA (Intermedia A)",
+      "estado": "A Designar",
+      "cancha": "Old Christians"
+    },
+    {
       "deporte": "futbol",
       "categoria": "PreSenior",
       "rival": "ODONTOLOGIA UNIVERSITARIO",
@@ -2604,6 +2615,17 @@
       "local": false,
       "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSCTA.html",
       "cancha": "COMPLEJO JUAN XXIII"
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Sub 18",
+      "rival": "Northfield",
+      "fecha": "2026-10-31",
+      "hora": "14:00",
+      "local": false,
+      "fase": "COPA DE PLATA (Sub 18)",
+      "estado": "A Designar",
+      "cancha": "NorthField"
     },
     {
       "deporte": "futbol",
@@ -2635,6 +2657,17 @@
       "fase": "Copa de Oro",
       "fuente": "https://ligauniversitaria.org.uy/partidos/F181818O.html",
       "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
+      "deporte": "hockey",
+      "categoria": "Reserva",
+      "rival": "Bigua Reserva",
+      "fecha": "2026-11-03",
+      "hora": "21:00",
+      "local": false,
+      "fase": "COPA DE PLATA (Reserva )",
+      "estado": "A Designar",
+      "cancha": "Liceo Frances"
     },
     {
       "deporte": "futbol",
@@ -6950,7 +6983,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-26T22:48:22.396Z",
+  "actualizadoEn": "2026-10-27T05:16:58.003Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -6993,14 +7026,14 @@
         "deporte": "hockey",
         "categoria": "Intermedia A",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=3",
-        "registros": 17,
+        "registros": 18,
         "estado": "ok"
       },
       {
         "deporte": "hockey",
         "categoria": "Sub 18",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=4",
-        "registros": 20,
+        "registros": 21,
         "estado": "ok"
       },
       {
@@ -7021,7 +7054,7 @@
         "deporte": "hockey",
         "categoria": "Reserva",
         "url": "https://admin.hockey.com.uy/posiciones?category_id=2",
-        "registros": 22,
+        "registros": 23,
         "estado": "ok"
       },
       {
