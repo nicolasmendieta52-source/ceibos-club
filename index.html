@@ -2693,7 +2693,7 @@ async function crearPostalPartido(partido){
   ctx.strokeRect(15,15,1050,1320);
 
   const deporte = nombreDeporte(partido.deporte).toUpperCase();
-  const categoria = etiquetaCategoria(partido.categoria).toUpperCase();
+  const categoria = textoPlano(partido.categoria).replace(/^Intermedia\s+([ABC])$/i,"Inter $1").toUpperCase();
   const mostrarCategoria = categoria && categoria !== deporte;
   ctx.fillStyle = crema;
   ctx.textAlign = "left";
@@ -2716,9 +2716,19 @@ async function crearPostalPartido(partido){
 
   ctx.textAlign = "center";
   ctx.fillStyle = crema;
-  ctx.font = '900 132px "Anton", Impact, sans-serif';
-  ctx.fillText("PRÓXIMO",540,342);
-  ctx.fillText("PARTIDO",540,462);
+  const juegaHoy = partido.fecha === hoyISO();
+  const titulares = juegaHoy ? ["HOY JUEGA",categoria || deporte] : ["PRÓXIMO","PARTIDO"];
+  titulares.forEach((titulo,indice) => {
+    let tamano = 132;
+    do {
+      ctx.font = `900 ${tamano}px "Anton", Impact, sans-serif`;
+      const medida = ctx.measureText(titulo);
+      const cabeAlto = !juegaHoy || indice === 0 || (medida.actualBoundingBoxAscent || 0) <= 110;
+      if ((medida.width <= 936 && cabeAlto) || tamano <= 44) break;
+      tamano -= 2;
+    } while (true);
+    ctx.fillText(titulo,540,342+indice*120,936);
+  });
   ctx.fillRect(516,495,48,2);
 
   ctx.strokeStyle = "rgba(245,241,232,.9)";
@@ -2817,7 +2827,10 @@ async function compartirPostalPartido(){
     const url = URL.createObjectURL(blob);
     postalPartidoActual = {blob,archivo,url,partido,nombre};
     const imagen = document.getElementById("postalPartidoImagen");
-    if (imagen) imagen.src = url;
+    if (imagen) {
+      imagen.src = url;
+      imagen.alt = `${partido.fecha === hoyISO() ? "Hoy juega " + (textoPlano(partido.categoria) || nombreDeporte(partido.deporte)) : "Próximo partido"}: Ceibos vs ${textoPlano(partido.rival)}`;
+    }
     const estado = document.getElementById("postalPartidoEstado");
     if (estado) estado.textContent = "";
     document.getElementById("modoPartidoDialog")?.close();
