@@ -8,6 +8,36 @@
   const mobile = matchMedia('(max-width:900px)');
   let opener = toggle;
 
+  // Safari can keep bottom:0 anchored to an old layout viewport while its
+  // browser controls expand/collapse. Anchor the dock from the visible bottom.
+  // https://bugs.webkit.org/show_bug.cgi?id=312149
+  const viewport = window.visualViewport;
+  let viewportFrame = 0;
+  function updateViewport() {
+    viewportFrame = 0;
+    const root = document.documentElement;
+    // Keep native page zoom behavior; CSS dynamic viewport units are the fallback.
+    if (!mobile.matches || !viewport || Math.abs(viewport.scale - 1) > .01) {
+      root.style.removeProperty('--nav-viewport-bottom');
+      return;
+    }
+    const bottom = viewport.height + viewport.offsetTop;
+    if (!Number.isFinite(bottom) || bottom <= 0) return;
+    const value = Math.round(bottom * 100) / 100 + 'px';
+    if (root.style.getPropertyValue('--nav-viewport-bottom') !== value) {
+      root.style.setProperty('--nav-viewport-bottom', value);
+    }
+  }
+  function requestViewport() {
+    if (!viewportFrame) viewportFrame = requestAnimationFrame(updateViewport);
+  }
+  viewport?.addEventListener('resize', requestViewport, {passive:true});
+  viewport?.addEventListener('scroll', requestViewport, {passive:true});
+  ['scroll','resize','orientationchange','pageshow'].forEach(event =>
+    addEventListener(event, requestViewport, {passive:true}));
+  mobile.addEventListener('change', requestViewport);
+  updateViewport();
+
   function setMenu(open, returnFocus = false) {
     open = open && mobile.matches;
     menu.hidden = !open;
