@@ -56,7 +56,7 @@ section[id],header[id],#archivo,.archivo-shell{scroll-margin-top:12px}
   #mobileDock a.activo,#mobileDock button[aria-expanded="true"]{background:rgba(45,72,56,.1);color:var(--verde-night)}
   #mobileDock .dock-interno svg{color:#94721e}
   #mobileDock a:hover,#mobileDock button:hover{background:rgba(45,72,56,.08)}
-  #notifFab,#volver{bottom:calc(var(--nav-dock-height) + 14px + env(safe-area-inset-bottom,0px))}
+  body #notifFab,body #volver{top:calc(var(--nav-viewport-bottom) - var(--nav-dock-height) - 14px - env(safe-area-inset-bottom,0px));bottom:auto;translate:0 -100%}
   body.nav-menu-open #notifFab,body.nav-menu-open #volver{visibility:hidden;pointer-events:none}
   .metrics-consent{bottom:calc(var(--nav-dock-height) + 12px + env(safe-area-inset-bottom,0px))!important}
   .hero-inner{padding-top:max(86px,calc(var(--nav-height) + 28px))}
