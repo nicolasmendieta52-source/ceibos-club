@@ -6,13 +6,268 @@
   "registrationUrl": null,
   "registrationOpen": false,
   "teamsSourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-  "teamsVerifiedAt": null,
+  "teamsVerifiedAt": "2026-10-28",
   "categories": [
-    {"id":"masculino","name":"Masculino","minutesPerHalf":25,"points":{"win":3,"draw":1,"loss":0}},
-    {"id":"femenino","name":"Femenino","minutesPerHalf":20,"points":{"win":3,"draw":1,"loss":0}},
-    {"id":"mas38","name":"Masculino +38","minutesPerHalf":25,"points":null}
+    {
+      "id": "masculino",
+      "name": "Masculino",
+      "minutesPerHalf": 25,
+      "points": {
+        "win": 3,
+        "draw": 1,
+        "loss": 0
+      }
+    },
+    {
+      "id": "femenino",
+      "name": "Femenino",
+      "minutesPerHalf": 20,
+      "points": {
+        "win": 3,
+        "draw": 1,
+        "loss": 0
+      }
+    },
+    {
+      "id": "mas38",
+      "name": "Masculino +38",
+      "minutesPerHalf": 25,
+      "points": null
+    }
   ],
-  "teams": [],
+  "teams": [
+    {
+      "id": "rapineros",
+      "name": "Rapiñeros",
+      "categoryId": "masculino",
+      "logoUrl": "/assets/interno/equipos/2026/rapineros.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "maradonas",
+      "name": "Maradoñas",
+      "categoryId": "femenino",
+      "logoUrl": "/assets/interno/equipos/2026/maradonas.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "paso-cuello",
+      "name": "Paso Cuello",
+      "categoryId": "masculino",
+      "logoUrl": "/assets/interno/equipos/2026/paso-cuello.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "la-naranja-mecanica",
+      "name": "La Naranja Mecánica",
+      "categoryId": "femenino",
+      "logoUrl": "/assets/interno/equipos/2026/la-naranja-mecanica.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "garrulos-fc",
+      "name": "Garrulos FC",
+      "categoryId": "masculino",
+      "logoUrl": "/assets/interno/equipos/2026/garrulos-fc.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "levantate-fc",
+      "name": "Levantate FC",
+      "categoryId": "femenino",
+      "logoUrl": "/assets/interno/equipos/2026/levantate-fc.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "la-fragancia",
+      "name": "La Fragancia",
+      "categoryId": "masculino",
+      "logoUrl": "/assets/interno/equipos/2026/la-fragancia.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "el-tanque-slay",
+      "name": "El Tanque Slay",
+      "categoryId": "femenino",
+      "logoUrl": "/assets/interno/equipos/2026/el-tanque-slay.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "tuqui-fc",
+      "name": "Tuqui FC",
+      "categoryId": "masculino",
+      "logoUrl": "/assets/interno/equipos/2026/tuqui-fc.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "fuerte-al-medio",
+      "name": "Fuerte al Medio",
+      "categoryId": "femenino",
+      "logoUrl": "/assets/interno/equipos/2026/fuerte-al-medio.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "la-desidia",
+      "name": "La Desidia",
+      "categoryId": "masculino",
+      "logoUrl": "/assets/interno/equipos/2026/la-desidia.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "cangreburgers",
+      "name": "Cangreburgers",
+      "categoryId": "femenino",
+      "logoUrl": "/assets/interno/equipos/2026/cangreburgers.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "la-tropa",
+      "name": "La Tropa",
+      "categoryId": "masculino",
+      "logoUrl": "/assets/interno/equipos/2026/la-tropa.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "pido-cambio",
+      "name": "Pido Cambio",
+      "categoryId": "femenino",
+      "logoUrl": "/assets/interno/equipos/2026/pido-cambio.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "kiwis",
+      "name": "Kiwis",
+      "categoryId": "masculino",
+      "logoUrl": "/assets/interno/equipos/2026/kiwis.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "la-jeringa",
+      "name": "La Jeringa",
+      "categoryId": "masculino",
+      "logoUrl": "/assets/interno/equipos/2026/la-jeringa.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "la-matanza",
+      "name": "La Matanza",
+      "categoryId": "femenino",
+      "logoUrl": "/assets/interno/equipos/2026/la-matanza.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "alaska",
+      "name": "Alaska",
+      "categoryId": "masculino",
+      "logoUrl": "/assets/interno/equipos/2026/alaska.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "fishermans",
+      "name": "Fishermans",
+      "categoryId": "masculino",
+      "logoUrl": "/assets/interno/equipos/2026/fishermans.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "nerea-jrs",
+      "name": "Nerea Jrs",
+      "categoryId": "femenino",
+      "logoUrl": "/assets/interno/equipos/2026/nerea-jrs.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "atletico-sin-gps",
+      "name": "Atlético Sin GPS",
+      "categoryId": "masculino",
+      "logoUrl": "/assets/interno/equipos/2026/atletico-sin-gps.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "real-alta-gama",
+      "name": "Real Alta Gama",
+      "categoryId": "masculino",
+      "logoUrl": "/assets/interno/equipos/2026/real-alta-gama.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "la-romineta",
+      "name": "La Romineta",
+      "categoryId": "femenino",
+      "logoUrl": "/assets/interno/equipos/2026/la-romineta.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "la-canuya",
+      "name": "La Canuya",
+      "categoryId": "masculino",
+      "logoUrl": "/assets/interno/equipos/2026/la-canuya.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "deportivo-panal",
+      "name": "Deportivo Panal",
+      "categoryId": "masculino",
+      "logoUrl": "/assets/interno/equipos/2026/deportivo-panal.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "rejunte-fc",
+      "name": "Rejunte FC",
+      "categoryId": "femenino",
+      "logoUrl": "/assets/interno/equipos/2026/rejunte-fc.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "la-bomb-squad",
+      "name": "La Bomb Squad",
+      "categoryId": "masculino",
+      "logoUrl": "/assets/interno/equipos/2026/la-bomb-squad.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "la-fecha",
+      "name": "La Fecha",
+      "categoryId": "masculino",
+      "logoUrl": "/assets/interno/equipos/2026/la-fecha.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "al-tranque",
+      "name": "Al Tranque",
+      "categoryId": "femenino",
+      "logoUrl": "/assets/interno/equipos/2026/al-tranque.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "la-raiz",
+      "name": "La Raíz",
+      "categoryId": "masculino",
+      "logoUrl": "/assets/interno/equipos/2026/la-raiz.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "la-favela",
+      "name": "La Favela",
+      "categoryId": "masculino",
+      "logoUrl": "/assets/interno/equipos/2026/la-favela.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "purohumo-fc",
+      "name": "Purohumo FC",
+      "categoryId": "femenino",
+      "logoUrl": "/assets/interno/equipos/2026/purohumo-fc.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    },
+    {
+      "id": "la-jirafa",
+      "name": "La Jirafa",
+      "categoryId": "masculino",
+      "logoUrl": "/assets/interno/equipos/2026/la-jirafa.webp",
+      "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/"
+    }
+  ],
   "groups": [],
   "matches": []
 }

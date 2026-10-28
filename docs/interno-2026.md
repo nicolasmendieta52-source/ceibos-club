@@ -6,6 +6,8 @@ La sección `/#interno` conserva inscripción por WhatsApp (091 393 252), reglam
 
 Los nombres de 2026 deben comprobarse en la destacada oficial: https://www.instagram.com/stories/highlights/18091351253226215/. Cada equipo lleva `sourceUrl`; `teamsVerifiedAt` indica la fecha real de comprobación. No trasladar campeones de 2025 a 2026 por suposición. Si todavía no se pueden verificar, la lista permanece vacía.
 
+El 28/10/2026 se incorporaron 33 nombres y escudos extraídos de la grabación de esa destacada aportada por el usuario. El detalle y los segundos del video están en `docs/interno-equipos-2026.md`. Los escudos se sirven desde `assets/interno/equipos/2026/`.
+
 El reglamento local `assets/reglamento-interno-f8-ceibos-2026.pdf` confirma Masculino, Femenino y Masculino +38, inicio el 16/11, cierre de inscripción el 9/11 y jornadas nocturnas de lunes/miércoles. +38 tiene reglas propias: no se calcula su tabla hasta confirmar y configurar su puntuación. No publicar información privada de las inscripciones.
 
 ## Cargar equipos, series y partidos

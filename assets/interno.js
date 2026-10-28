@@ -22,7 +22,7 @@ export function internoPanelMarkup(data,categoryId,tab){
     const cards=teams.slice().sort((a,b)=>a.name.localeCompare(b.name,'es')).map(team=>{
       const group=data.groups.find(g=>g.id===team.groupId);
       const initials=team.name.split(/\s+/).slice(0,2).map(word=>[...word][0]).join('');
-      return '<article class="interno-team"><div class="interno-team-mark" aria-hidden="true"><span>'+escape(initials)+'</span>'+(team.logoUrl?'<img src="'+escape(publicInternoUrl(team.logoUrl))+'" alt="" loading="lazy" decoding="async">':'')+'</div><div><h4>'+escape(team.name)+'</h4>'+(group?'<p>'+escape(group.name)+'</p>':'')+(team.sourceUrl?sourceLink(team.sourceUrl,'Presentación'):'')+'</div></article>';
+      return '<article class="interno-team"><div class="interno-team-mark'+(team.logoUrl?' interno-team-mark-logo':'')+'" aria-hidden="true"><span>'+escape(initials)+'</span>'+(team.logoUrl?'<img src="'+escape(publicInternoUrl(team.logoUrl))+'" alt="" loading="lazy" decoding="async">':'')+'</div><div><h4>'+escape(team.name)+'</h4>'+(group?'<p>'+escape(group.name)+'</p>':'')+(team.sourceUrl?sourceLink(team.sourceUrl,'Presentación'):'')+'</div></article>';
     }).join('');
     return '<p class="interno-panel-note">'+teams.length+' '+(teams.length===1?'equipo confirmado':'equipos confirmados')+'</p><div class="interno-team-grid">'+cards+'</div>'+sourceLink(data.teamsSourceUrl,'Ver destacada 2026');
   }
