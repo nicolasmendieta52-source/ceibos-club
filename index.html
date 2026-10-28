@@ -276,7 +276,7 @@ nav.topbar.solid{
 </style>
 <link rel="stylesheet" href="/assets/analytics-consent.css?v=20260922">
 <script type="module" src="/assets/analytics.js?v=20261026"></script>
-<link rel="stylesheet" href="assets/interno.css?v=20261014inscripcion">
+<link rel="stylesheet" href="assets/interno.css?v=20261028torneo">
 <link rel="stylesheet" href="assets/navigation.css?v=20261014grupos">
 <link rel="stylesheet" href="assets/news.css?v=20261020archivo">
 </head>
@@ -959,12 +959,24 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
     </div>
   </div>
   <div class="interno-date"><div><span>La próxima cita</span><strong><time datetime="2026-11-16">16 de noviembre</time></strong></div><a href="https://www.instagram.com/internoceibosclub/p/DeH_uJathTB/" target="_blank" rel="noopener noreferrer">Ver anuncio oficial ↗</a><span class="interno-motto">#PlantandoLaGloria</span></div>
-  <div class="interno-board"><article class="interno-slot"><div class="interno-slot-top"><span class="interno-number" aria-hidden="true">01</span><span class="interno-soon">Soon</span></div><h3>Fixture</h3><p>Días, horarios y canchas para seguir cada partido.</p></article>
-<article class="interno-slot"><div class="interno-slot-top"><span class="interno-number" aria-hidden="true">02</span><span class="interno-soon">Soon</span></div><h3>Equipos</h3><p>Los planteles y protagonistas del Interno.</p></article>
-<article class="interno-slot"><div class="interno-slot-top"><span class="interno-number" aria-hidden="true">03</span><span class="interno-soon">Soon</span></div><h3>Resultados</h3><p>Todos los marcadores, fecha a fecha.</p></article>
-<article class="interno-slot"><div class="interno-slot-top"><span class="interno-number" aria-hidden="true">04</span><span class="interno-soon">Soon</span></div><h3>Posiciones</h3><p>La tabla para seguir el camino de cada equipo.</p></article>
-<article class="interno-slot"><div class="interno-slot-top"><span class="interno-number" aria-hidden="true">05</span><span class="interno-soon">Soon</span></div><h3>Goleadores</h3><p>Los nombres que hacen la diferencia.</p></article>
-<article class="interno-slot"><div class="interno-slot-top"><span class="interno-number" aria-hidden="true">06</span><span class="interno-soon">Disponible</span></div><h3>Reglamento</h3><p>Consultá el reglamento del Interno Fútbol 8 de Ceibos Club 2026.</p><a class="interno-reglamento-link" href="assets/reglamento-interno-f8-ceibos-2026.pdf" target="_blank" rel="noopener noreferrer">Ver reglamento (PDF) ↗</a></article></div>
+  <div class="interno-torneo" aria-labelledby="interno-edicion-titulo">
+    <div class="interno-torneo-head"><div><p class="interno-kicker">El torneo, fecha a fecha</p><h3 id="interno-edicion-titulo">La edición 2026</h3></div><label class="interno-category-label" for="interno-categoria">Categoría<select id="interno-categoria"><option value="masculino">Masculino</option><option value="femenino">Femenino</option><option value="mas38">Masculino +38</option></select></label></div>
+    <div class="interno-tabs" role="tablist" aria-label="Seguir el Interno 2026">
+      <button type="button" role="tab" id="interno-tab-equipos" aria-controls="interno-panel" aria-selected="true" data-interno-tab="equipos">Equipos</button>
+      <button type="button" role="tab" id="interno-tab-fixture" aria-controls="interno-panel" aria-selected="false" tabindex="-1" data-interno-tab="fixture">Fixture</button>
+      <button type="button" role="tab" id="interno-tab-resultados" aria-controls="interno-panel" aria-selected="false" tabindex="-1" data-interno-tab="resultados">Resultados</button>
+      <button type="button" role="tab" id="interno-tab-posiciones" aria-controls="interno-panel" aria-selected="false" tabindex="-1" data-interno-tab="posiciones">Posiciones</button>
+      <button type="button" role="tab" id="interno-tab-goleadores" aria-controls="interno-panel" aria-selected="false" tabindex="-1" data-interno-tab="goleadores">Goleadores</button>
+    </div>
+    <div id="interno-panel" role="tabpanel" aria-labelledby="interno-tab-equipos" tabindex="0"><div class="interno-empty"><span class="interno-soon">Próximamente</span><h4>Los protagonistas de 2026</h4><p>Acá vas a encontrar los equipos, el fixture y los resultados de esta edición.</p><a class="interno-media-link" href="https://www.instagram.com/stories/highlights/18091351253226215/" target="_blank" rel="noopener noreferrer">Ver destacada 2026 ↗</a></div></div>
+    <p class="interno-feed-status" id="interno-feed-status" role="status" aria-live="polite"></p>
+    <noscript><p class="interno-footer">Activá JavaScript para consultar los equipos y las tablas. También podés seguir los anuncios en <a href="https://www.instagram.com/internoceibosclub/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>.</p></noscript>
+  </div>
+  <div class="interno-guide" aria-label="Información del torneo 2026">
+    <details><summary>Inscripción y fecha de inicio</summary><p>El Interno empieza el <strong>16 de noviembre</strong>. La inscripción de equipos cierra el <strong>9 de noviembre</strong>: cada equipo debe tener al menos ocho jugadores inscriptos y pagos. Consultá a Alfonso por el <a href="https://wa.me/59891393252" target="_blank" rel="noopener noreferrer">091 393 252 ↗</a>.</p></details>
+    <details><summary>Días, lugar y categorías</summary><p>Se juega de noche, los lunes y miércoles, en el complejo Los Ceibos, en las canchas de ASPROE y Ceibos. Las categorías son <strong>Masculino, Femenino y Masculino +38</strong>. Si se suspende una fecha, puede reprogramarse para martes o jueves; seguí los avisos oficiales.</p></details>
+    <details><summary>Formato y reglamento</summary><p>Fútbol 8, sin offside y con cambios ilimitados. Masculino y +38 juegan dos tiempos de 25 minutos; Femenino, de 20. El reglamento detalla las condiciones de inscripción y de competencia. La categoría +38 tiene reglas propias que comunica la organización.</p><a class="interno-reglamento-link" href="assets/reglamento-interno-f8-ceibos-2026.pdf" target="_blank" rel="noopener noreferrer">Leer reglamento completo (PDF) ↗</a></details>
+  </div>
   <div class="interno-recuerdos" id="interno-2025" aria-labelledby="interno-2025-titulo">
     <p class="interno-kicker">La edición que nos dejó con ganas de más</p>
     <h3 class="interno-recuerdos-titulo" id="interno-2025-titulo">Así se vivió <span>2025.</span></h3>
@@ -1000,7 +1012,7 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
     </div>
   </div>
   <div class="interno-history"><div><p class="interno-kicker">La historia también juega</p><h3>Campeones presentes</h3><p>El palmarés compartido por el Interno: La Favela (4), Kiwis’ (2), Rapiñeros, Paso Cuello, Jirafa y Tuqui (1 cada uno).</p></div><a href="https://www.instagram.com/internoceibosclub/p/DeZdcIalQ1I/" target="_blank" rel="noopener noreferrer">Ver publicación de campeones ↗</a></div>
-  <p class="interno-footer">Seguí los anuncios en <a href="https://www.instagram.com/internoceibosclub/" target="_blank" rel="noopener noreferrer">@internoceibosclub ↗</a>. Los equipos de esta edición, el fixture y los resultados se publicarán próximamente.</p>
+  <p class="interno-footer">Seguí los anuncios y avisos de cada fecha en <a href="https://www.instagram.com/internoceibosclub/" target="_blank" rel="noopener noreferrer">@internoceibosclub ↗</a>.</p>
 </section>
 
 <!-- ======================= NOTICIAS DEL CLUB ======================= -->
@@ -3119,7 +3131,7 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
   .catch(() => {});
 </script>
 <script type="module" src="/notifications.js?v=20260814"></script>
-<script src="assets/interno.js?v=20261014inscripcion" defer></script>
+<script type="module" src="assets/interno.js?v=20261028torneo"></script>
 <script src="assets/navigation.js?v=20261014grupos" defer></script>
 </body>
 </html>

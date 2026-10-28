@@ -1,4 +1,18 @@
 {
+  "version": 1,
+  "season": 2026,
+  "startDate": "2026-11-16",
+  "registrationDeadline": "2026-11-09",
   "registrationUrl": null,
-  "registrationOpen": false
+  "registrationOpen": false,
+  "teamsSourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
+  "teamsVerifiedAt": null,
+  "categories": [
+    {"id":"masculino","name":"Masculino","minutesPerHalf":25,"points":{"win":3,"draw":1,"loss":0}},
+    {"id":"femenino","name":"Femenino","minutesPerHalf":20,"points":{"win":3,"draw":1,"loss":0}},
+    {"id":"mas38","name":"Masculino +38","minutesPerHalf":25,"points":null}
+  ],
+  "teams": [],
+  "groups": [],
+  "matches": []
 }
