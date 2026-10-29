@@ -2714,53 +2714,57 @@ async function crearPostalPartido(partido){
   ctx.textAlign = "left";
   ctx.font = '500 22px "DM Sans", Arial, sans-serif';
   ctx.fillText(deporte,70,292);
-  if (mostrarCategoria) ctx.fillText(categoria,70,323,310);
-  ctx.fillRect(70,348,82,2);
+  if (mostrarCategoria) ctx.fillText(categoria,70,330,310);
+  ctx.fillRect(70,356,82,2);
   const anio = String(partido.fecha || "").slice(0,4) || String(new Date().getFullYear());
   ctx.textAlign = "right";
   ctx.fillText("TEMPORADA",1010,292);
-  ctx.fillText(anio,1010,323);
-  ctx.fillRect(928,348,82,2);
+  ctx.fillText(anio,1010,330);
+  ctx.fillRect(928,356,82,2);
 
-  dibujarEscudoPostalBlanco(ctx,escudo,540,252,112,140);
+  dibujarEscudoPostalBlanco(ctx,escudo,540,252,140,176);
   ctx.fillStyle = crema;
-  ctx.font = '500 24px "DM Sans", Arial, sans-serif';
-  dibujarTextoEspaciadoCanvas(ctx,"CEIBOS CLUB",540,440,7);
+  ctx.font = '500 26px "DM Sans", Arial, sans-serif';
+  dibujarTextoEspaciadoCanvas(ctx,"CEIBOS CLUB",540,486,8);
 
   ctx.textAlign = "center";
   const juegaHoy = partido.fecha === hoyISO();
   const titulares = juegaHoy ? ["HOY JUEGA",categoria || deporte] : ["PRÓXIMO","PARTIDO"];
   titulares.forEach((titulo,indice) => {
-    let tamano = 132;
+    let tamano = 154;
     do {
       ctx.font = '900 '+tamano+'px "Anton", Impact, sans-serif';
       const medida = ctx.measureText(titulo);
-      const cabeAlto = !juegaHoy || indice === 0 || (medida.actualBoundingBoxAscent || 0) <= 120;
-      if ((medida.width <= 936 && cabeAlto) || tamano <= 44) break;
+      const letras = [...titulo];
+      const anchoTitulo = letras.reduce((ancho,letra)=>ancho+ctx.measureText(letra).width,0)-2*Math.max(0,letras.length-1);
+      const cabeAlto = !juegaHoy || indice === 0 || (medida.actualBoundingBoxAscent || 0) <= 145;
+      if ((anchoTitulo <= 920 && cabeAlto) || tamano <= 44) break;
       tamano -= 2;
     } while (true);
-    ctx.fillText(titulo,540,620+indice*140,936);
+    ctx.save();
+    dibujarTextoEspaciadoCanvas(ctx,titulo,540,720+indice*160,-2);
+    ctx.restore();
   });
-  ctx.fillRect(516,804,48,2);
+  ctx.fillRect(508,960,64,2);
 
   ctx.strokeStyle = "rgba(245,241,232,.9)";
   ctx.lineWidth = 1;
-  ctx.strokeRect(80,850,405,88);
+  ctx.strokeRect(80,1020,405,106);
   ctx.fillStyle = "rgba(0,70,53,.74)";
-  ctx.fillRect(81,851,403,86);
+  ctx.fillRect(81,1021,403,104);
   ctx.fillStyle = crema;
-  ctx.font = '800 36px "DM Sans", Arial, sans-serif';
-  ctx.fillText("CEIBOS",282,907);
+  ctx.font = '800 40px "DM Sans", Arial, sans-serif';
+  ctx.fillText("CEIBOS",282,1088);
   ctx.fillStyle = "rgba(245,241,232,.95)";
-  ctx.fillRect(595,850,405,88);
+  ctx.fillRect(595,1020,405,106);
   const rival = textoPlano(partido.rival).toUpperCase();
-  const tamanoRival = ajustarTextoCanvas(ctx,rival,360,34,18,"800");
+  const tamanoRival = ajustarTextoCanvas(ctx,rival,350,38,20,"800");
   ctx.fillStyle = verde;
   ctx.font = '800 '+tamanoRival+'px "DM Sans", Arial, sans-serif';
-  ctx.fillText(rival,797,907,360);
+  ctx.fillText(rival,797,1088,350);
   ctx.fillStyle = crema;
   ctx.font = '500 32px "DM Sans", Arial, sans-serif';
-  ctx.fillText("VS",540,909);
+  ctx.fillText("VS",540,1089);
 
   const [,month,day] = String(partido.fecha).split("-").map(Number);
   const fecha = fmtFecha(partido.fecha);
@@ -2769,31 +2773,31 @@ async function crearPostalPartido(partido){
   const hora = horaPartidoVisible(partido);
   const lugar = textoPlano(partido.cancha) || (partido.local ? "PREDIO LOS CEIBOS" : "CANCHA A CONFIRMAR");
   const condicion = partido.local ? "LOCAL" : "VISITANTE";
-  dibujarIconoCalendario(ctx,104,1010);
-  dibujarIconoReloj(ctx,670,1016);
+  dibujarIconoCalendario(ctx,104,1234);
+  dibujarIconoReloj(ctx,670,1250);
   ctx.textAlign = "left";
   ctx.fillStyle = crema;
-  ctx.font = '500 26px "DM Sans", Arial, sans-serif';
+  ctx.font = '500 32px "DM Sans", Arial, sans-serif';
   const partesFecha = textoDia.split(" ");
   const corte = partesFecha.length > 3 ? 2 : 1;
-  ctx.fillText(partesFecha.slice(0,corte).join(" "),160,1034,430);
-  ctx.fillText(partesFecha.slice(corte).join(" "),160,1070,430);
-  let fuenteHora = 38;
+  ctx.fillText(partesFecha.slice(0,corte).join(" "),160,1258,430);
+  ctx.fillText(partesFecha.slice(corte).join(" "),160,1302,430);
+  let fuenteHora = 44;
   do {
     ctx.font = '700 '+fuenteHora+'px "DM Sans", Arial, sans-serif';
     if (ctx.measureText(hora).width <= 270 || fuenteHora <= 20) break;
     fuenteHora -= 2;
   } while (true);
-  ctx.fillText(hora,730,1048,280);
+  ctx.fillText(hora,730,1284,280);
   ctx.fillStyle = "rgba(245,241,232,.65)";
-  ctx.fillRect(625,1000,1,86);
-  ctx.fillRect(80,1110,920,1);
+  ctx.fillRect(625,1224,1,104);
+  ctx.fillRect(80,1360,920,1);
 
-  dibujarIconoUbicacion(ctx,104,1140);
+  dibujarIconoUbicacion(ctx,104,1410);
   ctx.fillStyle = crema;
   ctx.font = '500 22px "DM Sans", Arial, sans-serif';
-  ctx.fillText(condicion,160,1158);
-  let fuenteLugar = 32;
+  ctx.fillText(condicion,160,1428);
+  let fuenteLugar = 34;
   let lineasLugar;
   do {
     ctx.font = '600 '+fuenteLugar+'px "DM Sans", Arial, sans-serif';
@@ -2801,18 +2805,18 @@ async function crearPostalPartido(partido){
     if (lineasLugar.length <= 2 || fuenteLugar <= 20) break;
     fuenteLugar -= 2;
   } while (true);
-  lineasLugar.forEach((linea,indice)=>ctx.fillText(linea,160,1206+indice*(fuenteLugar+10),840));
+  lineasLugar.forEach((linea,indice)=>ctx.fillText(linea,160,1483+indice*(fuenteLugar+12),840));
 
-  const degradadoInferior = ctx.createLinearGradient(0,1240,0,1920);
+  const degradadoInferior = ctx.createLinearGradient(0,1320,0,1920);
   degradadoInferior.addColorStop(0,"rgba(4,35,27,0)");
   degradadoInferior.addColorStop(1,"rgba(4,30,24,.55)");
   ctx.fillStyle = degradadoInferior;
-  ctx.fillRect(0,1240,1080,680);
+  ctx.fillRect(0,1320,1080,600);
   ctx.fillStyle = crema;
-  ctx.fillRect(80,1552,300,2);
-  ctx.fillRect(700,1552,300,2);
+  ctx.fillRect(80,1752,300,2);
+  ctx.fillRect(700,1752,300,2);
   ctx.font = '500 22px "DM Sans", Arial, sans-serif';
-  dibujarTextoEspaciadoCanvas(ctx,"TOTUS TUUS",540,1560,8);
+  dibujarTextoEspaciadoCanvas(ctx,"TOTUS TUUS",540,1760,8);
 
   return new Promise((resolve,reject) => canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error("No se pudo crear la postal")),"image/png",.96));
 }
