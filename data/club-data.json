@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-29T13:11:53.848Z",
+        "updatedAt": "2026-10-29T22:50:07.821Z",
         "tables": [
           {
             "id": 2291,
@@ -39,13 +39,13 @@
                 "position": 1,
                 "teamId": 107,
                 "name": "Santa Rita Rojo",
-                "pj": 9,
+                "pj": 10,
                 "pg": 6,
-                "pe": 1,
+                "pe": 2,
                 "pp": 2,
-                "gf": 20,
-                "gc": 9,
-                "points": 19
+                "gf": 21,
+                "gc": 10,
+                "points": 20
               },
               {
                 "position": 2,
@@ -169,6 +169,18 @@
               },
               {
                 "position": 12,
+                "teamId": 73,
+                "name": "La Mennais Celeste",
+                "pj": 9,
+                "pg": 2,
+                "pe": 3,
+                "pp": 4,
+                "gf": 9,
+                "gc": 14,
+                "points": 9
+              },
+              {
+                "position": 13,
                 "teamId": 388,
                 "name": "San Juan Sushi",
                 "pj": 9,
@@ -177,18 +189,6 @@
                 "pp": 3,
                 "gf": 7,
                 "gc": 9,
-                "points": 8
-              },
-              {
-                "position": 13,
-                "teamId": 73,
-                "name": "La Mennais Celeste",
-                "pj": 8,
-                "pg": 2,
-                "pe": 2,
-                "pp": 4,
-                "gf": 8,
-                "gc": 13,
                 "points": 8
               },
               {
@@ -753,7 +753,7 @@
             "id": 135010,
             "matchday": 12,
             "status": "confirmed",
-            "scheduled_at": "2026-11-08T12:00:00",
+            "scheduled_at": "2026-11-05T00:00:00",
             "home_goals": null,
             "away_goals": null,
             "home_team": {
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-29T13:11:54.080Z",
+        "updatedAt": "2026-10-29T22:50:08.014Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-29T13:11:54.199Z",
+        "updatedAt": "2026-10-29T22:50:08.134Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-29T13:11:54.333Z",
+        "updatedAt": "2026-10-29T22:50:08.266Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-29T13:11:54.466Z",
+        "updatedAt": "2026-10-29T22:50:08.405Z",
         "tables": [
           {
             "id": 2239,
@@ -2645,6 +2645,17 @@
       "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "CLUB SEMINARIO",
+      "fecha": "2026-11-01",
+      "hora": "15:30",
+      "local": true,
+      "fase": "Copa de Oro",
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F181818O.html",
+      "cancha": "MONTE VI \"LOS CEIBOS\""
+    },
+    {
       "deporte": "hockey",
       "categoria": "Reserva",
       "rival": "Bigua Reserva",
@@ -2654,6 +2665,20 @@
       "fase": "COPA DE PLATA (Reserva )",
       "estado": "A Designar",
       "cancha": "Liceo Frances"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "Pallotti",
+      "fecha": "2026-11-04",
+      "hora": "21:00",
+      "local": true,
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 135010,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "estado": "Confirmado",
+      "cancha": "A confirmar"
     },
     {
       "deporte": "futbol",
@@ -2694,20 +2719,6 @@
       "local": true,
       "fuente": "https://ligauniversitaria.org.uy/partidos/F202020AT.html",
       "cancha": "CANCHA A FIJAR"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +35",
-      "rival": "Pallotti",
-      "fecha": "2026-11-08",
-      "hora": "09:00",
-      "local": true,
-      "fase": "ADIC · Clausura Copas",
-      "adicId": 135010,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club amarillo",
-      "estado": "Confirmado",
-      "cancha": "A confirmar"
     },
     {
       "deporte": "futbol",
@@ -2840,17 +2851,6 @@
       "fase": "Copa de Oro",
       "fuente": "https://ligauniversitaria.org.uy/partidos/F181818O.html",
       "cancha": "CANCHA A FIJAR"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "CLUB SEMINARIO",
-      "fecha": "2026-11-15",
-      "hora": "15:30",
-      "local": true,
-      "fase": "Copa de Oro",
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F181818O.html",
-      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "futbol",
@@ -7001,7 +7001,10 @@
       "rival": "CLUB SEMINARIO",
       "gf": 1,
       "gc": 1,
-      "fecha": "2026-10-28"
+      "fecha": "2026-10-28",
+      "goleadores": [
+        "JUAN DIEGO TORRES NEGREIRA (55')"
+      ]
     },
     {
       "deporte": "hockey",
@@ -7014,7 +7017,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-29T13:15:23.325Z",
+  "actualizadoEn": "2026-10-29T22:53:47.937Z",
   "diagnostico": {
     "fuentes": [
       {
