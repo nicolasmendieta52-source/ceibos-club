@@ -5,15 +5,15 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-10-30 7:15",
-  "actualizado": "2026-10-30T13:03:51.709Z",
+  "publicado": "2026-10-30 18:00",
+  "actualizado": "2026-10-30T22:27:09.009Z",
   "pronosticos": [
     {
       "fecha": "2026-10-30",
       "diaMasN": 0,
       "etiqueta": "Viernes 30",
-      "temperaturaMin": 12,
-      "temperaturaMax": 22,
+      "temperaturaMin": 13,
+      "temperaturaMax": 18,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -27,10 +27,10 @@
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Nuboso y cubierto.",
+          "descripcion": "Cubierto.",
           "evolucion": "Precipitaciones y tormentas aisladas.",
           "detalle": "",
-          "viento": "NE 10-30 km/h, rachas de hasta 40 km/h."
+          "viento": "NE 10-30 km/h, rachas de 40-50 km/h."
         }
       ]
     },
@@ -38,8 +38,8 @@
       "fecha": "2026-10-31",
       "diaMasN": 1,
       "etiqueta": "Sábado 31",
-      "temperaturaMin": 11,
-      "temperaturaMax": 22,
+      "temperaturaMin": 12,
+      "temperaturaMax": 21,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -90,9 +90,9 @@
       "fecha": "2026-11-02",
       "diaMasN": 3,
       "etiqueta": "Lunes 02",
-      "temperaturaMin": 14,
+      "temperaturaMin": 15,
       "temperaturaMax": 24,
-      "probabilidadLluvia": "Media",
+      "probabilidadLluvia": "Alta",
       "periodos": []
     },
     {
@@ -101,14 +101,14 @@
       "etiqueta": "Martes 03",
       "temperaturaMin": 14,
       "temperaturaMax": 21,
-      "probabilidadLluvia": "Alta",
+      "probabilidadLluvia": "Baja",
       "periodos": []
     },
     {
       "fecha": "2026-11-04",
       "diaMasN": 5,
       "etiqueta": "Miércoles 04",
-      "temperaturaMin": 15,
+      "temperaturaMin": 14,
       "temperaturaMax": 23,
       "probabilidadLluvia": "Nula",
       "periodos": []
@@ -117,7 +117,7 @@
       "fecha": "2026-11-05",
       "diaMasN": 6,
       "etiqueta": "Jueves 05",
-      "temperaturaMin": 10,
+      "temperaturaMin": 11,
       "temperaturaMax": 21,
       "probabilidadLluvia": "Nula",
       "periodos": []
