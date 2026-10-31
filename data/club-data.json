@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-30T22:27:09.625Z",
+        "updatedAt": "2026-10-31T05:53:05.916Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-30T22:27:09.744Z",
+        "updatedAt": "2026-10-31T05:53:06.049Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-30T22:27:09.820Z",
+        "updatedAt": "2026-10-31T05:53:06.126Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-30T22:27:09.909Z",
+        "updatedAt": "2026-10-31T05:53:06.225Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-10-30T22:27:10.017Z",
+        "updatedAt": "2026-10-31T05:53:06.342Z",
         "tables": [
           {
             "id": 2239,
@@ -2554,15 +2554,6 @@
       "hora": "17:00",
       "local": true,
       "cancha": "Los Ceibos"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva A",
-      "rival": "Tenis El Pinar",
-      "fecha": "2026-10-16",
-      "hora": "11:15",
-      "local": false,
-      "cancha": "Pinar _ _ utr BUM AOMINON FED 8) pepsi a ZILLERTAL Zero"
     },
     {
       "deporte": "rugby",
@@ -7023,7 +7014,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-10-30T22:30:26.691Z",
+  "actualizadoEn": "2026-10-31T05:56:21.920Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -7239,12 +7230,12 @@
       }
     ],
     "instagram": {
-      "estado": "ok",
-      "registros": 18,
-      "imagenes": 7,
+      "estado": "sin-coincidencias",
+      "registros": 0,
+      "imagenes": 0,
       "publicacionesApify": 1,
       "historiasMencionadas": 0,
-      "cache": 7,
+      "cache": 0,
       "nuevas": 0
     }
   }
