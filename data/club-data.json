@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-01T13:37:53.955Z",
+        "updatedAt": "2026-11-01T22:08:08.131Z",
         "tables": [
           {
             "id": 2291,
@@ -331,6 +331,18 @@
               },
               {
                 "position": 11,
+                "teamId": 431,
+                "name": "Tacuru Salesianos",
+                "pj": 9,
+                "pg": 2,
+                "pe": 0,
+                "pp": 7,
+                "gf": 14,
+                "gc": 28,
+                "points": 6
+              },
+              {
+                "position": 12,
                 "teamId": 20,
                 "name": "Pallotti",
                 "pj": 9,
@@ -340,18 +352,6 @@
                 "gf": 15,
                 "gc": 34,
                 "points": 6
-              },
-              {
-                "position": 12,
-                "teamId": 431,
-                "name": "Tacuru Salesianos",
-                "pj": 8,
-                "pg": 1,
-                "pe": 0,
-                "pp": 7,
-                "gf": 11,
-                "gc": 27,
-                "points": 3
               },
               {
                 "position": 13,
@@ -369,12 +369,12 @@
                 "position": 14,
                 "teamId": 731,
                 "name": "Valdocco FC (Salesianos)",
-                "pj": 9,
+                "pj": 10,
                 "pg": 0,
                 "pe": 2,
-                "pp": 7,
-                "gf": 11,
-                "gc": 29,
+                "pp": 8,
+                "gf": 12,
+                "gc": 32,
                 "points": 2
               }
             ]
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-01T13:37:54.029Z",
+        "updatedAt": "2026-11-01T22:08:08.200Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-01T13:37:54.084Z",
+        "updatedAt": "2026-11-01T22:08:08.257Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-01T13:37:54.155Z",
+        "updatedAt": "2026-11-01T22:08:08.329Z",
         "tables": [
           {
             "id": 2296,
@@ -1788,12 +1788,12 @@
                 "position": 3,
                 "teamId": 736,
                 "name": "Col San Miguel",
-                "pj": 8,
+                "pj": 9,
                 "pg": 7,
                 "pe": 0,
-                "pp": 1,
+                "pp": 2,
                 "gf": 25,
-                "gc": 7,
+                "gc": 9,
                 "points": 21
               },
               {
@@ -1812,16 +1812,28 @@
                 "position": 5,
                 "teamId": 418,
                 "name": "Aleman master",
-                "pj": 8,
-                "pg": 3,
+                "pj": 9,
+                "pg": 4,
                 "pe": 4,
                 "pp": 1,
-                "gf": 15,
+                "gf": 17,
                 "gc": 7,
-                "points": 13
+                "points": 16
               },
               {
                 "position": 6,
+                "teamId": 514,
+                "name": "Colegio Ingles",
+                "pj": 9,
+                "pg": 5,
+                "pe": 0,
+                "pp": 4,
+                "gf": 19,
+                "gc": 25,
+                "points": 15
+              },
+              {
+                "position": 7,
                 "teamId": 81,
                 "name": "La Mennais Blanco",
                 "pj": 8,
@@ -1831,18 +1843,6 @@
                 "gf": 15,
                 "gc": 9,
                 "points": 13
-              },
-              {
-                "position": 7,
-                "teamId": 514,
-                "name": "Colegio Ingles",
-                "pj": 8,
-                "pg": 4,
-                "pe": 0,
-                "pp": 4,
-                "gf": 16,
-                "gc": 23,
-                "points": 12
               },
               {
                 "position": 8,
@@ -1860,12 +1860,12 @@
                 "position": 9,
                 "teamId": 547,
                 "name": "Clara Master 2019",
-                "pj": 9,
+                "pj": 10,
                 "pg": 3,
                 "pe": 0,
-                "pp": 6,
-                "gf": 16,
-                "gc": 26,
+                "pp": 7,
+                "gf": 18,
+                "gc": 29,
                 "points": 9
               },
               {
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-01T13:37:54.225Z",
+        "updatedAt": "2026-11-01T22:08:08.392Z",
         "tables": [
           {
             "id": 2239,
@@ -2563,16 +2563,6 @@
       "hora": "21:00",
       "local": true,
       "cancha": "Ceibos"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "ELBIO FERNANDEZ",
-      "fecha": "2026-11-01",
-      "hora": "11:15",
-      "local": true,
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F21BTA.html",
-      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "futbol",
@@ -7004,10 +6994,18 @@
       "gc": 2,
       "fecha": "2026-10-31",
       "fase": "COPA DE PLATA (Sub 18)"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "ELBIO FERNANDEZ",
+      "gf": 2,
+      "gc": 2,
+      "fecha": "2026-11-01"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-11-01T13:41:28.905Z",
+  "actualizadoEn": "2026-11-01T22:11:28.482Z",
   "diagnostico": {
     "fuentes": [
       {
