@@ -5,38 +5,12 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-11-01 18:00",
-  "actualizado": "2026-11-01T22:08:07.599Z",
+  "publicado": "2026-11-02 0:0",
+  "actualizado": "2026-11-02T06:17:38.477Z",
   "pronosticos": [
     {
-      "fecha": "2026-11-01",
-      "diaMasN": 0,
-      "etiqueta": "Domingo 01",
-      "temperaturaMin": 15,
-      "temperaturaMax": 26,
-      "probabilidadLluvia": "",
-      "periodos": [
-        {
-          "orden": 1,
-          "nombre": "Mañana",
-          "descripcion": "Algo nuboso y nuboso.",
-          "evolucion": "",
-          "detalle": "",
-          "viento": "NE 10-30 km/h, rachas de hasta 40 km/h."
-        },
-        {
-          "orden": 2,
-          "nombre": "Tarde/Noche",
-          "descripcion": "Nuboso y cubierto.",
-          "evolucion": "Precipitaciones y tormentas.",
-          "detalle": "",
-          "viento": "Sector N al sector E 10-30 km/h, rachas de hasta 40 km/h. Periodos de variables 0-10 km/h."
-        }
-      ]
-    },
-    {
       "fecha": "2026-11-02",
-      "diaMasN": 1,
+      "diaMasN": 0,
       "etiqueta": "Lunes 02",
       "temperaturaMin": 15,
       "temperaturaMax": 24,
@@ -62,7 +36,7 @@
     },
     {
       "fecha": "2026-11-03",
-      "diaMasN": 2,
+      "diaMasN": 1,
       "etiqueta": "Martes 03",
       "temperaturaMin": 14,
       "temperaturaMax": 21,
@@ -74,7 +48,7 @@
           "descripcion": "Nuboso a cubierto.",
           "evolucion": "Neblinas y bancos de niebla.",
           "detalle": "",
-          "viento": "Sector E 10-30 km/h."
+          "viento": "Sector E 10-30 km/h, rachas de hasta 40 km/h."
         },
         {
           "orden": 2,
@@ -88,16 +62,33 @@
     },
     {
       "fecha": "2026-11-04",
-      "diaMasN": 3,
+      "diaMasN": 2,
       "etiqueta": "Miércoles 04",
       "temperaturaMin": 14,
       "temperaturaMax": 23,
-      "probabilidadLluvia": "Baja",
-      "periodos": []
+      "probabilidadLluvia": "",
+      "periodos": [
+        {
+          "orden": 1,
+          "nombre": "Mañana",
+          "descripcion": "Nuboso y cubierto.",
+          "evolucion": "Probables precipitaciones.",
+          "detalle": "",
+          "viento": "Sector E 10-30 km/h."
+        },
+        {
+          "orden": 2,
+          "nombre": "Tarde/Noche",
+          "descripcion": "Nuboso.",
+          "evolucion": "Baja probabilidad de precipitaciones.",
+          "detalle": "Neblinas.",
+          "viento": "Sector E al sector S 10-30 km/h."
+        }
+      ]
     },
     {
       "fecha": "2026-11-05",
-      "diaMasN": 4,
+      "diaMasN": 3,
       "etiqueta": "Jueves 05",
       "temperaturaMin": 11,
       "temperaturaMax": 21,
@@ -106,7 +97,7 @@
     },
     {
       "fecha": "2026-11-06",
-      "diaMasN": 5,
+      "diaMasN": 4,
       "etiqueta": "Viernes 06",
       "temperaturaMin": 12,
       "temperaturaMax": 23,
@@ -115,10 +106,19 @@
     },
     {
       "fecha": "2026-11-07",
-      "diaMasN": 6,
+      "diaMasN": 5,
       "etiqueta": "Sábado 07",
-      "temperaturaMin": 12,
+      "temperaturaMin": 11,
       "temperaturaMax": 21,
+      "probabilidadLluvia": "Baja",
+      "periodos": []
+    },
+    {
+      "fecha": "2026-11-08",
+      "diaMasN": 6,
+      "etiqueta": "Domingo 08",
+      "temperaturaMin": 10,
+      "temperaturaMax": 20,
       "probabilidadLluvia": "Baja",
       "periodos": []
     }
