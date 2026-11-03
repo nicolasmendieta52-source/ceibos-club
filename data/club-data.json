@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-03T14:25:16.822Z",
+        "updatedAt": "2026-11-03T23:28:52.367Z",
         "tables": [
           {
             "id": 2291,
@@ -720,8 +720,8 @@
           {
             "id": 134824,
             "matchday": 11,
-            "status": "pending",
-            "scheduled_at": "2027-01-24T12:00:00",
+            "status": "confirmed",
+            "scheduled_at": "2026-11-05T00:00:00",
             "home_goals": null,
             "away_goals": null,
             "home_team": {
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-03T14:25:16.890Z",
+        "updatedAt": "2026-11-03T23:28:52.431Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-03T14:25:16.943Z",
+        "updatedAt": "2026-11-03T23:28:52.483Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-03T14:25:17.015Z",
+        "updatedAt": "2026-11-03T23:28:52.557Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-03T14:25:17.082Z",
+        "updatedAt": "2026-11-03T23:28:52.627Z",
         "tables": [
           {
             "id": 2239,
@@ -2565,17 +2565,6 @@
       "cancha": "Ceibos"
     },
     {
-      "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "CLUB SEMINARIO",
-      "fecha": "2026-11-01",
-      "hora": "15:30",
-      "local": true,
-      "fase": "Copa de Oro",
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F181818O.html",
-      "cancha": "MONTE VI \"LOS CEIBOS\""
-    },
-    {
       "deporte": "hockey",
       "categoria": "Reserva",
       "rival": "Bigua Reserva",
@@ -2599,6 +2588,30 @@
       "equipoAdic": "Ceibos Club amarillo",
       "estado": "Confirmado",
       "cancha": "A confirmar"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "La Mennais Celeste",
+      "fecha": "2026-11-04",
+      "hora": "21:00",
+      "local": true,
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134824,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "estado": "Confirmado",
+      "cancha": "A confirmar"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "ALEMAN UNIVERSITARIO",
+      "fecha": "2026-11-05",
+      "hora": "22:00",
+      "local": false,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F21BTA.html",
+      "cancha": "CLUB ALEMAN"
     },
     {
       "deporte": "futbol",
@@ -2635,10 +2648,10 @@
       "categoria": "Sub 20",
       "rival": "OLD CHRISTIANS CLUB",
       "fecha": "2026-11-07",
-      "hora": "A confirmar",
+      "hora": "15:30",
       "local": true,
       "fuente": "https://ligauniversitaria.org.uy/partidos/F202020AT.html",
-      "cancha": "CANCHA A FIJAR"
+      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "futbol",
@@ -2667,16 +2680,6 @@
       "equipoAdic": "Ceibos 45 Master",
       "estado": "Confirmado",
       "cancha": "A confirmar"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "ALEMAN UNIVERSITARIO",
-      "fecha": "2026-11-08",
-      "hora": "11:15",
-      "local": false,
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F21BTA.html",
-      "cancha": "CLUB ALEMAN"
     },
     {
       "deporte": "futbol",
@@ -6976,7 +6979,13 @@
       "rival": "ODONTOLOGIA UNIVERSITARIO",
       "gf": 4,
       "gc": 3,
-      "fecha": "2026-10-31"
+      "fecha": "2026-10-31",
+      "goleadores": [
+        "SANTIAGO JORGE KIRIAKIDIS (26')",
+        "SANTIAGO JORGE KIRIAKIDIS (47')",
+        "FEDERICO ILDEFONSO GARCIA (75')",
+        "CARLOS JAVIER MORALES (81')"
+      ]
     },
     {
       "deporte": "futbol",
@@ -6984,7 +6993,10 @@
       "rival": "JUAN XXIII BLANCO",
       "gf": 1,
       "gc": 1,
-      "fecha": "2026-10-31"
+      "fecha": "2026-10-31",
+      "goleadores": [
+        "FRANCISCO SOBRAL (17')"
+      ]
     },
     {
       "deporte": "hockey",
@@ -7001,11 +7013,27 @@
       "rival": "ELBIO FERNANDEZ",
       "gf": 2,
       "gc": 2,
-      "fecha": "2026-11-01"
+      "fecha": "2026-11-01",
+      "goleadores": [
+        "JUAN PEDRO IRURETA-GOYENA (21')",
+        "JUAN PEDRO IRURETA-GOYENA (49')"
+      ]
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "CLUB SEMINARIO",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-11-01",
+      "fase": "Copa de Oro",
+      "goleadores": [
+        "CAMILO VERA (20')"
+      ]
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-11-03T14:28:44.120Z",
+  "actualizadoEn": "2026-11-03T23:32:23.287Z",
   "diagnostico": {
     "fuentes": [
       {
