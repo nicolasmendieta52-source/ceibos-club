@@ -5,8 +5,8 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-11-03 9:00",
-  "actualizado": "2026-11-03T14:25:16.342Z",
+  "publicado": "2026-11-03 18:00",
+  "actualizado": "2026-11-03T23:28:51.689Z",
   "pronosticos": [
     {
       "fecha": "2026-11-03",
@@ -47,16 +47,16 @@
           "nombre": "Mañana",
           "descripcion": "Nuboso y cubierto.",
           "evolucion": "Probables precipitaciones.",
-          "detalle": "",
-          "viento": "Sector E a variables 10-30 km/h."
+          "detalle": "Neblinas y bancos de niebla.",
+          "viento": "Sector E 10-30 km/h a variables 0-20 km/h."
         },
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
           "descripcion": "Disminución de nubosidad.",
           "evolucion": "Precipitaciones aisladas.",
-          "detalle": "Neblinas.",
-          "viento": "Variables  al SW 10-30 km/h."
+          "detalle": "Neblinas y bancos de niebla.",
+          "viento": "Variables 0-10 km/h al SW 10-30 km/h."
         }
       ]
     },
@@ -74,7 +74,7 @@
           "descripcion": "Claro y algo nuboso.",
           "evolucion": "",
           "detalle": "",
-          "viento": "SW 10-30 km/h"
+          "viento": "SW y W 10-30 km/h."
         },
         {
           "orden": 2,
@@ -82,7 +82,7 @@
           "descripcion": "Claro y algo nuboso.",
           "evolucion": "",
           "detalle": "",
-          "viento": "SW al N 10-30 km/h.."
+          "viento": "W al NW 10-30 km/h."
         }
       ]
     },
@@ -100,7 +100,7 @@
       "diaMasN": 4,
       "etiqueta": "Sábado 07",
       "temperaturaMin": 11,
-      "temperaturaMax": 17,
+      "temperaturaMax": 16,
       "probabilidadLluvia": "Media",
       "periodos": []
     },
@@ -108,7 +108,7 @@
       "fecha": "2026-11-08",
       "diaMasN": 5,
       "etiqueta": "Domingo 08",
-      "temperaturaMin": 10,
+      "temperaturaMin": 9,
       "temperaturaMax": 18,
       "probabilidadLluvia": "Nula",
       "periodos": []
@@ -118,7 +118,7 @@
       "diaMasN": 6,
       "etiqueta": "Lunes 09",
       "temperaturaMin": 8,
-      "temperaturaMax": 22,
+      "temperaturaMax": 23,
       "probabilidadLluvia": "Nula",
       "periodos": []
     }
