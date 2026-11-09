@@ -76,6 +76,22 @@
 .interno-guide p{font-size:.85rem;line-height:1.75;color:rgba(246,241,228,.75);max-width:750px;margin:0 0 22px}
 .interno-guide a{color:var(--dorado);text-underline-offset:4px}
 .interno-guide .interno-reglamento-link{margin:0 0 24px}
+.interno-delegados{margin-top:32px;border:1px solid rgba(229,187,82,.4);border-left:3px solid var(--dorado);background:rgba(246,241,228,.035);scroll-margin-top:calc(var(--nav-height,56px) + 16px)}
+.interno-delegados-head{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:24px;padding:28px}
+.interno-delegados .interno-kicker{margin:0 0 12px}
+.interno-delegados h3{font-family:var(--display);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.1;text-transform:uppercase;margin:0 0 12px}
+.interno-delegados-head p:last-child,.interno-delegados-embed p{font-size:.85rem;line-height:1.65;color:rgba(246,241,228,.75);margin:0;max-width:580px}
+.interno-delegados-head .btn{white-space:normal;text-align:center;justify-content:center}
+.interno-delegados-embed{border-top:1px solid rgba(229,187,82,.3)}
+.interno-delegados-embed summary{position:relative;padding:20px 52px 20px 28px;cursor:pointer;list-style:none;font-size:.85rem;font-weight:700;line-height:1.5;color:var(--dorado)}
+.interno-delegados-embed summary::-webkit-details-marker{display:none}
+.interno-delegados-embed summary::after{content:'+';position:absolute;right:28px;top:16px;font-size:1.4rem;font-weight:400}
+.interno-delegados-embed[open] summary::after{content:'−'}
+.interno-delegados-embed summary:focus-visible{outline:2px solid var(--dorado);outline-offset:-5px}
+.interno-delegados-embed p{padding:0 28px 20px;max-width:none}
+.interno-delegados-embed p a{color:var(--dorado);text-underline-offset:4px}
+.interno-delegados-frame{display:block;width:100%;height:clamp(560px,80svh,900px);border:0;background:#fff}
+@media(max-width:760px){.interno-delegados-head{grid-template-columns:1fr;gap:22px;padding:24px 20px}.interno-delegados-head .btn{width:100%}.interno-delegados-embed summary{padding-left:20px}.interno-delegados-embed p{padding-inline:20px}.interno-delegados-embed summary::after{right:20px}}
 @media(max-width:1000px){.interno-team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.interno-torneo{margin-top:36px}.interno-torneo-head{align-items:start;flex-direction:column;gap:22px}.interno-category-label{width:100%}.interno-tabs button{padding:15px 14px}.interno-match{padding:18px 16px}.interno-match-meta time{margin-left:0;width:100%}.interno-match-pair{gap:12px}}
 @media(max-width:480px){.interno-team-grid{grid-template-columns:1fr}.interno-team{padding:22px 18px}.interno-team-mark-logo{flex-basis:80px;height:80px}.interno-match-pair{font-size:1.2rem;gap:10px}.interno-score{font-size:1.25rem}}
