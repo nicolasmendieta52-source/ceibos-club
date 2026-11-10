@@ -1,9 +1,37 @@
-import {validateInterno,publicInternoUrl,sortedMatches,internoStandings,internoScorers} from './interno-model.js?v=20261028torneo';
+import {validateInterno,publicInternoUrl,sortedMatches,internoStandings,internoScorers} from './interno-model.js?v=20261110grupos';
 
 const escape = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const sourceLink = (url,label) => publicInternoUrl(url) ? '<a class="interno-media-link" href="'+escape(publicInternoUrl(url))+'" target="_blank" rel="noopener noreferrer">'+escape(label)+' ↗</a>' : '';
 const empty = (title,message,url) => '<div class="interno-empty"><span class="interno-soon">Próximamente</span><h4>'+escape(title)+'</h4><p>'+escape(message)+'</p>'+sourceLink(url,'Ver destacada 2026')+'</div>';
 const dateLabel = date => date ? new Intl.DateTimeFormat('es-UY',{day:'numeric',month:'long',timeZone:'UTC'}).format(new Date(date+'T12:00:00Z')) : 'Fecha a confirmar';
+
+function teamMarkMarkup(team){
+  const initials=team.name.split(/\s+/).slice(0,2).map(word=>[...word][0]).join('');
+  const logo=publicInternoUrl(team.logoUrl),crop=team.logoCrop;
+  // Show the original poster pixels through an SVG viewport; the supplied artwork stays intact.
+  const clipId='interno-escudo-'+team.id;
+  const mask=crop?.shape==='ellipse'?'<defs><clipPath id="'+clipId+'"><ellipse cx="'+(crop.x+crop.width/2)+'" cy="'+(crop.y+crop.height/2)+'" rx="'+crop.width/2+'" ry="'+crop.height/2+'"/></clipPath></defs>':'';
+  const image=logo?(crop?'<svg viewBox="'+[crop.x,crop.y,crop.width,crop.height].join(' ')+'" aria-hidden="true" focusable="false">'+mask+'<image href="'+escape(logo)+'" width="'+crop.imageWidth+'" height="'+crop.imageHeight+'"'+(mask?' clip-path="url(#'+clipId+')"':'')+'/></svg>':'<img src="'+escape(logo)+'" alt="" loading="lazy" decoding="async">'):'';
+  return '<div class="interno-team-mark'+(logo?' interno-team-mark-logo':'')+'" aria-hidden="true"><span>'+escape(initials)+'</span>'+image+'</div>';
+}
+
+function groupsMarkup(data,categoryId){
+  const groups=data.groups.filter(group=>group.categoryId===categoryId);
+  if(!groups.length)return empty('Los grupos de 2026','Los grupos de esta categoría aparecerán acá cuando los confirme la organización.');
+  const count=data.teams.filter(team=>team.categoryId===categoryId).length;
+  const cards=groups.map(group=>{
+    const teams=data.teams.filter(team=>team.categoryId===categoryId&&team.groupId===group.id);
+    return '<article class="interno-group"><header><h4>'+escape(group.name)+'</h4><span>'+teams.length+' equipos</span></header><ul>'+teams.map(team=>'<li>'+teamMarkMarkup(team)+'<span>'+escape(team.name)+'</span></li>').join('')+'</ul></article>';
+  }).join('');
+  const sources=[...new Set(groups.map(group=>group.sourceUrl).filter(Boolean))];
+  return '<p class="interno-panel-note">'+count+' equipos · '+groups.length+' grupos confirmados</p><div class="interno-group-grid">'+cards+'</div><div class="interno-group-sources">'+sources.map((url,index)=>sourceLink(url,sources.length===1?'Ver placa oficial de grupos':'Ver placa de grupos '+(index+1))).join('')+'</div>';
+}
+
+function playoffsMarkup(data,categoryId){
+  const format=data.categories.find(category=>category.id===categoryId)?.playoffs;
+  if(!format)return empty('La definición de las copas','Los cruces de esta categoría se publicarán cuando la organización confirme su formato.');
+  return '<section class="interno-bracket" aria-labelledby="interno-octavos-titulo"><p class="interno-kicker">'+escape(data.categories.find(category=>category.id===categoryId).name)+' · Eliminatorias</p><h4 id="interno-octavos-titulo">'+escape(format.name)+'</h4><p class="interno-panel-note">Los 16 equipos se ordenan del 1.º al 16.º y se cruzan así. Los nombres se incorporarán cuando se defina ese orden.</p><ol class="interno-bracket-grid" aria-label="Cruces según posición">'+format.pairs.map(([first,second])=>'<li><span class="interno-seed">'+first+'.º</span><span class="interno-seed-vs">vs.</span><span class="interno-seed interno-seed-second">'+second+'.º</span></li>').join('')+'</ol><div class="interno-bracket-destinations"><p><span>Ganadores ↓</span><strong>'+escape(format.winners)+'</strong></p><p><span>Perdedores ↓</span><strong>'+escape(format.losers)+'</strong></p></div>'+sourceLink(format.sourceUrl,'Ver formato oficial')+'</section>';
+}
 
 function matchMarkup(data,match){
   const home=data.teams.find(t=>t.id===match.homeId),away=data.teams.find(t=>t.id===match.awayId);
@@ -17,12 +45,13 @@ function matchMarkup(data,match){
 
 export function internoPanelMarkup(data,categoryId,tab){
   const teams=data.teams.filter(t=>t.categoryId===categoryId);
+  if(tab==='grupos')return groupsMarkup(data,categoryId);
+  if(tab==='cruces')return playoffsMarkup(data,categoryId);
   if(tab==='equipos'){
     if(!teams.length)return empty('Los protagonistas de 2026','La lista de equipos de esta categoría se publicará acá, con sus presentaciones oficiales.',data.teamsSourceUrl);
     const cards=teams.slice().sort((a,b)=>a.name.localeCompare(b.name,'es')).map(team=>{
       const group=data.groups.find(g=>g.id===team.groupId);
-      const initials=team.name.split(/\s+/).slice(0,2).map(word=>[...word][0]).join('');
-      return '<article class="interno-team"><div class="interno-team-mark'+(team.logoUrl?' interno-team-mark-logo':'')+'" aria-hidden="true"><span>'+escape(initials)+'</span>'+(team.logoUrl?'<img src="'+escape(publicInternoUrl(team.logoUrl))+'" alt="" loading="lazy" decoding="async">':'')+'</div><div><h4>'+escape(team.name)+'</h4>'+(group?'<p>'+escape(group.name)+'</p>':'')+(team.sourceUrl?sourceLink(team.sourceUrl,'Presentación'):'')+'</div></article>';
+      return '<article class="interno-team">'+teamMarkMarkup(team)+'<div><h4>'+escape(team.name)+'</h4>'+(group?'<p>'+escape(group.name)+'</p>':'')+(team.sourceUrl?sourceLink(team.sourceUrl,'Presentación'):'')+'</div></article>';
     }).join('');
     return '<p class="interno-panel-note">'+teams.length+' '+(teams.length===1?'equipo confirmado':'equipos confirmados')+'</p><div class="interno-team-grid">'+cards+'</div>'+sourceLink(data.teamsSourceUrl,'Ver destacada 2026');
   }
@@ -50,7 +79,7 @@ function initInterno(){
   const panel=document.getElementById('interno-panel'),select=document.getElementById('interno-categoria'),status=document.getElementById('interno-feed-status');
   if(!panel||!select||!status)return;
   const tabs=[...document.querySelectorAll('[data-interno-tab]')];
-  let currentTab='equipos',data=null,lastJson='',loading=false;
+  let currentTab='grupos',data=null,lastJson='',loading=false;
   const contact=document.getElementById('interno-inscripcion');
   const originalContact=contact?{href:contact.href,text:contact.textContent}:null;
   const originalState=document.getElementById('interno-inscripcion-estado').textContent;

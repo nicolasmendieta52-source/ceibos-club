@@ -12,14 +12,22 @@ export function validateInterno(data){
   for(const category of data.categories){
     if(!text(category.name))throw Error('Nombre de categoría inválido');
     if(category.points!==null&&(!category.points||!['win','draw','loss'].every(k=>integer(category.points[k]))))throw Error('Puntuación de categoría inválida');
+    if(category.playoffs){
+      const format=category.playoffs,seeds=format.pairs?.flat();
+      if(!text(format.name)||!text(format.winners)||!text(format.losers)||!Array.isArray(format.pairs)||format.pairs.length!==8||format.pairs.some(pair=>!Array.isArray(pair)||pair.length!==2)||seeds.some(seed=>!integer(seed)||seed<1||seed>16)||new Set(seeds).size!==16||!publicInternoUrl(format.sourceUrl))throw Error('Formato de octavos inválido');
+    }
   }
-  for(const group of data.groups)if(!categories.has(group.categoryId)||!text(group.name))throw Error('Serie inválida');
+  for(const group of data.groups)if(!categories.has(group.categoryId)||!text(group.name)||(group.sourceUrl&&!publicInternoUrl(group.sourceUrl)))throw Error('Serie inválida');
   for(const team of data.teams){
     if(!text(team.name)||!categories.has(team.categoryId)||(team.groupId&&!groups.has(team.groupId)))throw Error('Equipo inválido');
     if(team.groupId&&data.groups.find(g=>g.id===team.groupId).categoryId!==team.categoryId)throw Error('Equipo y serie de categorías distintas');
     if(team.pointsAdjustment!==undefined&&!Number.isInteger(team.pointsAdjustment))throw Error('Ajuste de puntos inválido');
     if(team.pointsAdjustment&&!text(team.adjustmentNote,300))throw Error('El ajuste de puntos requiere motivo de la organización');
     if(team.logoUrl&&!publicInternoUrl(team.logoUrl))throw Error('Logo no válido');
+    if(team.logoCrop){
+      const crop=team.logoCrop;
+      if(!team.logoUrl||!['x','y','width','height','imageWidth','imageHeight'].every(key=>integer(crop[key]))||!crop.width||!crop.height||!crop.imageWidth||!crop.imageHeight||crop.x+crop.width>crop.imageWidth||crop.y+crop.height>crop.imageHeight||(crop.shape!==undefined&&crop.shape!=='ellipse'))throw Error('Encuadre de escudo inválido');
+    }
     if(team.sourceUrl&&!publicInternoUrl(team.sourceUrl))throw Error('Fuente de equipo no válida');
   }
   for(const match of data.matches){

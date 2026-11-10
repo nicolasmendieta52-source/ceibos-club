@@ -8,6 +8,12 @@ Los nombres de 2026 deben comprobarse en la destacada oficial: https://www.insta
 
 El 28/10/2026 se incorporaron 33 nombres y escudos extraídos de la grabación de esa destacada aportada por el usuario. El detalle y los segundos del video están en `docs/interno-equipos-2026.md`. Los escudos se sirven desde `assets/interno/equipos/2026/`.
 
+El 10/11/2026 se actualizaron los equipos y grupos con las tres placas del 9/11 aportadas por el usuario: 22 masculinos (A–F) y 16 femeninos (A–D). Se agregaron Orleans, La Vuelta, Dep. Resaca, Pata de Palo y Ramillete. Las placas originales están en `assets/interno/grupos/2026/`; cada grupo conserva su `sourceUrl`. La pestaña inicial es Grupos; Equipos conserva la lista completa y Posiciones calcula una tabla por grupo. Sin partidos finalizados, las tablas muestran cero partidos y ningún puesto asignado.
+
+Los cinco escudos nuevos se muestran desde los píxeles de esas placas mediante un SVG con `viewBox`, sin recrearlos. `logoCrop` guarda `x`, `y`, `width`, `height`, `imageWidth` e `imageHeight`; `shape: "ellipse"` permite ocultar las esquinas del fondo de las placas alrededor de los escudos ovalados/circulares. La validación rechaza encuadres fuera de la imagen. Los 33 escudos anteriores, incluido Atlético Sin GPS completo, conservan sus archivos originales.
+
+La pestaña Cruces usa `categories[].playoffs`. El usuario confirmó que la cuarta placa corresponde **solo al masculino**: 1.º–16.º, 2.º–15.º, 3.º–14.º, 4.º–13.º, 5.º–12.º, 6.º–11.º, 7.º–10.º y 8.º–9.º. Ganadores a cuartos Oro/Plata; perdedores a cuartos Bronce. La placa no confirma cómo se seleccionan/ordenan los 16 entre los 22 participantes: no calcular ese ranking ni asignar nombres por suposición. No se generaron partidos, fechas ni resultados a partir de ese esquema. Femenino y +38 conservan el formato de cruces pendiente de confirmación.
+
 El reglamento local `assets/reglamento-interno-f8-ceibos-2026.pdf` confirma Masculino, Femenino y Masculino +38, inicio el 16/11, cierre de inscripción el 9/11 y jornadas nocturnas de lunes/miércoles. +38 tiene reglas propias: no se calcula su tabla hasta confirmar y configurar su puntuación. No publicar información privada de las inscripciones.
 
 ## Cargar equipos, series y partidos

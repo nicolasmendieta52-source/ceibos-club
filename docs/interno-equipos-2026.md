@@ -1,5 +1,7 @@
 # Equipos del Interno 2026 — fuente del 28/10/2026
 
+Actualización del 10/11: las placas de grupos del 9/11 aportadas por el usuario confirman 38 equipos y sus categorías. Se añadieron Orleans y La Vuelta (Masculino), Dep. Resaca, Pata de Palo y Ramillete (Femenino). Los datos actuales están en `data/interno.json`; la tabla siguiente conserva los nombres que figuraban en la grabación original. El detalle de los grupos y de los octavos masculinos está en `docs/interno-2026.md`.
+
 Origen: grabación de la destacada «2026» de @internoceibosclub, aportada por el usuario (`WhatsApp Video 2026-10-28 at 08.30.16.mp4`, 185,53 s).
 
 Enlace de la destacada: https://www.instagram.com/stories/highlights/18091351253226215/

@@ -66,3 +66,53 @@ test('presentación conserva local/visitante, hora y penales sin asignar canchas
   assert.ok(html.indexOf('Equipo B')<html.indexOf('Equipo A'));assert.match(html,/21:30 h/);assert.match(html,/Penales: 3–2/);assert.doesNotMatch(html,/confirmar|Cancha/);
   for(const category of d.categories)for(const tab of ['equipos','fixture','resultados','posiciones','goleadores'])assert.ok(internoPanelMarkup(d,category.id,tab));
 });
+
+test('grupos publicados coinciden con las placas: 22 masculinos y 16 femeninos, sin equipos repetidos',async()=>{
+  const data=validateInterno(JSON.parse(await readFile(new URL('../data/interno.json',import.meta.url),'utf8')));
+  const expected={
+    'mas-a':['la-desidia','kiwis','la-tropa','real-alta-gama'],
+    'mas-b':['paso-cuello','la-favela','deportivo-panal','la-bomb-squad'],
+    'mas-c':['rapineros','fishermans','la-jeringa','la-vuelta'],
+    'mas-d':['garrulos-fc','la-canuya','alaska','atletico-sin-gps'],
+    'mas-e':['la-fragancia','tuqui-fc','orleans'],
+    'mas-f':['la-fecha','la-jirafa','la-raiz'],
+    'fem-a':['maradonas','rejunte-fc','el-tanque-slay','deportivo-resaca'],
+    'fem-b':['al-tranque','la-naranja-mecanica','pido-cambio','purohumo-fc'],
+    'fem-c':['levantate-fc','la-romineta','nerea-jrs','pata-de-palo'],
+    'fem-d':['la-matanza','fuerte-al-medio','cangreburgers','ramillete']
+  };
+  assert.equal(data.groups.length,10);assert.equal(data.teams.length,38);
+  for(const [groupId,ids] of Object.entries(expected))assert.deepEqual(data.teams.filter(team=>team.groupId===groupId).map(team=>team.id),ids);
+  assert.equal(data.teams.filter(team=>team.categoryId==='masculino').length,22);
+  assert.equal(data.teams.filter(team=>team.categoryId==='femenino').length,16);
+  const beforePlay=structuredClone(data);beforePlay.matches=[];
+  for(const categoryId of ['masculino','femenino'])for(const group of internoStandings(beforePlay,categoryId))assert.ok(group.rows.every(row=>row.position===null&&row.played===0&&row.points===0));
+});
+
+test('grupos y escudos se presentan por categoría y conservan el orden de la placa',async()=>{
+  const data=validateInterno(JSON.parse(await readFile(new URL('../data/interno.json',import.meta.url),'utf8')));
+  const male=internoPanelMarkup(data,'masculino','grupos'),female=internoPanelMarkup(data,'femenino','grupos');
+  assert.match(male,/22 equipos · 6 grupos/);assert.match(female,/16 equipos · 4 grupos/);
+  assert.ok(male.indexOf('La Desidia')<male.indexOf('Kiwis'));assert.ok(male.indexOf('Kiwis')<male.indexOf('La Tropa'));
+  assert.match(male,/Orleans|La Vuelta/);assert.doesNotMatch(male,/Maradoñas|Pata de Palo/);
+  assert.match(female,/Dep\. Resaca/);assert.match(female,/Ramillete/);assert.doesNotMatch(female,/Orleans|La Vuelta/);
+  assert.match(female,/<svg viewBox=/);assert.match(female,/<image href="https:\/\/ceibosclub.com\/assets\/interno\/grupos\/2026\/femenino.jpeg"/);
+  assert.match(internoPanelMarkup(data,'mas38','grupos'),/cuando los confirme la organización/);
+});
+
+test('octavos masculinos respetan 1–16 a 8–9 y no asignan el formato al femenino ni inventan partidos',async()=>{
+  const data=validateInterno(JSON.parse(await readFile(new URL('../data/interno.json',import.meta.url),'utf8')));
+  assert.deepEqual(data.categories.find(category=>category.id==='masculino').playoffs.pairs,[[1,16],[2,15],[3,14],[4,13],[5,12],[6,11],[7,10],[8,9]]);
+  const matchesBefore=structuredClone(data.matches),male=internoPanelMarkup(data,'masculino','cruces');assert.deepEqual(data.matches,matchesBefore);
+  assert.match(male,/Cuartos de Oro\/Plata/);assert.match(male,/Cuartos de Bronce/);assert.match(male,/cuando se defina ese orden/);assert.doesNotMatch(male,/Rapiñeros|Orleans|Maradoñas/);
+  for(const categoryId of ['femenino','mas38'])assert.doesNotMatch(internoPanelMarkup(data,categoryId,'cruces'),/interno-seed|Oro\/Plata/);
+  const invalid=structuredClone(data);invalid.categories[0].playoffs.pairs[0]=[1,15];assert.throws(()=>validateInterno(invalid));
+});
+
+test('rechaza encuadres de escudos fuera de la placa y fuentes de grupos inseguras',async()=>{
+  const data=JSON.parse(await readFile(new URL('../data/interno.json',import.meta.url),'utf8'));
+  for(const crop of [{x:-1},{width:0},{x:1079,width:2},{y:1349,height:2},{imageWidth:'1080'}]){
+    const invalid=structuredClone(data),team=invalid.teams.find(team=>team.logoCrop);Object.assign(team.logoCrop,crop);assert.throws(()=>validateInterno(invalid));
+  }
+  data.groups[0].sourceUrl='javascript:alert(1)';assert.throws(()=>validateInterno(data));
+});

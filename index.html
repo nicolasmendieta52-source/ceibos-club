@@ -276,7 +276,7 @@ nav.topbar.solid{
 </style>
 <link rel="stylesheet" href="/assets/analytics-consent.css?v=20260922">
 <script type="module" src="/assets/analytics.js?v=20261026"></script>
-<link rel="stylesheet" href="assets/interno.css?v=20261110">
+<link rel="stylesheet" href="assets/interno.css?v=20261110grupos">
 <link rel="stylesheet" href="assets/navigation.css?v=20261028floating">
 <link rel="stylesheet" href="assets/news.css?v=20261020archivo">
 </head>
@@ -962,13 +962,15 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
   <div class="interno-torneo" aria-labelledby="interno-edicion-titulo">
     <div class="interno-torneo-head"><div><p class="interno-kicker">El torneo, fecha a fecha</p><h3 id="interno-edicion-titulo">La edición 2026</h3></div><label class="interno-category-label" for="interno-categoria">Categoría<select id="interno-categoria"><option value="masculino">Masculino</option><option value="femenino">Femenino</option><option value="mas38">Masculino +38</option></select></label></div>
     <div class="interno-tabs" role="tablist" aria-label="Seguir el Interno 2026">
-      <button type="button" role="tab" id="interno-tab-equipos" aria-controls="interno-panel" aria-selected="true" data-interno-tab="equipos">Equipos</button>
+      <button type="button" role="tab" id="interno-tab-grupos" aria-controls="interno-panel" aria-selected="true" data-interno-tab="grupos">Grupos</button>
+      <button type="button" role="tab" id="interno-tab-equipos" aria-controls="interno-panel" aria-selected="false" tabindex="-1" data-interno-tab="equipos">Equipos</button>
       <button type="button" role="tab" id="interno-tab-fixture" aria-controls="interno-panel" aria-selected="false" tabindex="-1" data-interno-tab="fixture">Fixture</button>
       <button type="button" role="tab" id="interno-tab-resultados" aria-controls="interno-panel" aria-selected="false" tabindex="-1" data-interno-tab="resultados">Resultados</button>
       <button type="button" role="tab" id="interno-tab-posiciones" aria-controls="interno-panel" aria-selected="false" tabindex="-1" data-interno-tab="posiciones">Posiciones</button>
       <button type="button" role="tab" id="interno-tab-goleadores" aria-controls="interno-panel" aria-selected="false" tabindex="-1" data-interno-tab="goleadores">Goleadores</button>
+      <button type="button" role="tab" id="interno-tab-cruces" aria-controls="interno-panel" aria-selected="false" tabindex="-1" data-interno-tab="cruces">Cruces</button>
     </div>
-    <div id="interno-panel" role="tabpanel" aria-labelledby="interno-tab-equipos" tabindex="0"><div class="interno-empty"><span class="interno-soon">Próximamente</span><h4>Los protagonistas de 2026</h4><p>Acá vas a encontrar los equipos, el fixture y los resultados de esta edición.</p><a class="interno-media-link" href="https://www.instagram.com/stories/highlights/18091351253226215/" target="_blank" rel="noopener noreferrer">Ver destacada 2026 ↗</a></div></div>
+    <div id="interno-panel" role="tabpanel" aria-labelledby="interno-tab-grupos" tabindex="0"><div class="interno-empty"><h4>Grupos del Interno 2026</h4><p>Cargando los equipos y grupos confirmados de esta edición…</p></div></div>
     <p class="interno-feed-status" id="interno-feed-status" role="status" aria-live="polite"></p>
     <noscript><p class="interno-footer">Activá JavaScript para consultar los equipos y las tablas. También podés seguir los anuncios en <a href="https://www.instagram.com/internoceibosclub/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>.</p></noscript>
   </div>
@@ -3160,7 +3162,7 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
   .catch(() => {});
 </script>
 <script type="module" src="/notifications.js?v=20260814"></script>
-<script type="module" src="assets/interno.js?v=20261028equipos"></script>
+<script type="module" src="assets/interno.js?v=20261110grupos"></script>
 <script src="assets/navigation.js?v=20261028viewport" defer></script>
 </body>
 </html>
