@@ -17,45 +17,106 @@
         "draw": 1,
         "loss": 0
       },
-      "playoffs": {
-        "name": "Octavos de final",
-        "pairs": [
-          [
-            1,
-            16
-          ],
-          [
-            2,
-            15
-          ],
-          [
-            3,
-            14
-          ],
-          [
-            4,
-            13
-          ],
-          [
-            5,
-            12
-          ],
-          [
-            6,
-            11
-          ],
-          [
-            7,
-            10
-          ],
-          [
-            8,
-            9
-          ]
+      "format": {
+        "confirmedAt": "2026-11-10",
+        "videoUrl": "/assets/interno/formatos/2026/masculino.mp4",
+        "posterUrl": "/assets/interno/formatos/2026/masculino.jpg",
+        "seconds": 36,
+        "finalNote": "Las finales se juegan en la última jornada.",
+        "teamCount": 22,
+        "matchesLabel": "4 o 5 partidos asegurados por equipo",
+        "summary": "22 equipos · 6 grupos · 4 copas",
+        "stages": [
+          {
+            "title": "Todos contra todos",
+            "text": "Cuatro grupos de cuatro equipos (A–D) y dos de tres (E–F). Cada equipo juega contra los demás de su grupo."
+          },
+          {
+            "title": "16 equipos a octavos",
+            "text": "Clasifican los tres primeros de cada grupo de cuatro y los dos primeros de cada grupo de tres. Los seis restantes juegan la Copa Lata."
+          },
+          {
+            "title": "El camino de las copas",
+            "text": "Los ganadores de octavos avanzan a cuartos Oro/Plata y los perdedores a cuartos de Bronce. En cuartos Oro/Plata, quienes ganan siguen por Oro y quienes pierden por Plata."
+          },
+          {
+            "title": "Copa Lata",
+            "text": "Los seis equipos se ordenan del 1.º al 6.º: un grupo con 1.º, 3.º y 5.º; otro con 2.º, 4.º y 6.º. Los ganadores de los grupos disputan la final."
+          }
         ],
-        "winners": "Cuartos de Oro/Plata",
-        "losers": "Cuartos de Bronce",
-        "sourceUrl": "/assets/interno/grupos/2026/octavos-masculino.jpeg"
+        "brackets": [
+          {
+            "name": "Octavos de final",
+            "description": "Se ordenan del 1.º al 16.º. Los nombres se incorporarán cuando se defina ese orden.",
+            "pairs": [
+              [
+                1,
+                16
+              ],
+              [
+                2,
+                15
+              ],
+              [
+                3,
+                14
+              ],
+              [
+                4,
+                13
+              ],
+              [
+                5,
+                12
+              ],
+              [
+                6,
+                11
+              ],
+              [
+                7,
+                10
+              ],
+              [
+                8,
+                9
+              ]
+            ],
+            "destinations": [
+              {
+                "label": "Ganadores",
+                "text": "Cuartos de Oro/Plata"
+              },
+              {
+                "label": "Perdedores",
+                "text": "Cuartos de Bronce"
+              }
+            ]
+          }
+        ],
+        "cups": [
+          {
+            "id": "oro",
+            "name": "Copa de Oro",
+            "text": "Ganadores de los cuartos Oro/Plata."
+          },
+          {
+            "id": "plata",
+            "name": "Copa de Plata",
+            "text": "Perdedores de los cuartos Oro/Plata."
+          },
+          {
+            "id": "bronce",
+            "name": "Copa de Bronce",
+            "text": "Perdedores de octavos."
+          },
+          {
+            "id": "lata",
+            "name": "Copa Lata",
+            "text": "Los seis que no pasan a octavos: dos grupos de tres y final."
+          }
+        ],
+        "schedule": []
       }
     },
     {
@@ -66,13 +127,248 @@
         "win": 3,
         "draw": 1,
         "loss": 0
+      },
+      "format": {
+        "confirmedAt": "2026-11-10",
+        "videoUrl": "/assets/interno/formatos/2026/femenino.mp4",
+        "posterUrl": "/assets/interno/formatos/2026/femenino.jpg",
+        "seconds": 30,
+        "finalNote": "Las finales se juegan en la última jornada.",
+        "teamCount": 16,
+        "matchesLabel": "5 partidos asegurados por equipo",
+        "summary": "16 equipos · 4 grupos · 4 copas",
+        "stages": [
+          {
+            "title": "Tres partidos de grupos",
+            "text": "Cuatro grupos de cuatro equipos, todos contra todos. Cada equipo juega tres partidos en esta fase."
+          },
+          {
+            "title": "Dos cuadros",
+            "text": "Las primeras y segundas de cada grupo pasan al cuadro Oro/Plata (puestos 1.º–8.º). Las terceras y cuartas, al cuadro Bronce/Lata (puestos 9.º–16.º)."
+          },
+          {
+            "title": "Cuartos sin repetir grupo",
+            "text": "Los cruces de referencia son 1.º–8.º, 2.º–7.º, 3.º–6.º y 4.º–5.º; y 9.º–16.º, 10.º–15.º, 11.º–14.º y 12.º–13.º. Se ajustan para evitar equipos del mismo grupo."
+          },
+          {
+            "title": "Cada equipo sigue por una copa",
+            "text": "En Oro/Plata, las ganadoras de cuartos juegan semifinales de Oro y las perdedoras, de Plata. En Bronce/Lata, las ganadoras juegan semifinales de Bronce y las perdedoras, de Lata. Las finalistas juegan seis partidos en total."
+          }
+        ],
+        "brackets": [
+          {
+            "name": "Cuartos · Oro/Plata",
+            "description": "Primeras y segundas de cada grupo. Cruces sujetos al ajuste para evitar rivales del mismo grupo.",
+            "pairs": [
+              [
+                1,
+                8
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                4,
+                5
+              ]
+            ],
+            "destinations": [
+              {
+                "label": "Ganadoras",
+                "text": "Semifinales de Oro"
+              },
+              {
+                "label": "Perdedoras",
+                "text": "Semifinales de Plata"
+              }
+            ]
+          },
+          {
+            "name": "Cuartos · Bronce/Lata",
+            "description": "Terceras y cuartas de cada grupo. Cruces sujetos al ajuste para evitar rivales del mismo grupo.",
+            "pairs": [
+              [
+                9,
+                16
+              ],
+              [
+                10,
+                15
+              ],
+              [
+                11,
+                14
+              ],
+              [
+                12,
+                13
+              ]
+            ],
+            "destinations": [
+              {
+                "label": "Ganadoras",
+                "text": "Semifinales de Bronce"
+              },
+              {
+                "label": "Perdedoras",
+                "text": "Semifinales de Lata"
+              }
+            ]
+          }
+        ],
+        "cups": [
+          {
+            "id": "oro",
+            "name": "Copa de Oro",
+            "text": "Ganadoras de cuartos del cuadro Oro/Plata."
+          },
+          {
+            "id": "plata",
+            "name": "Copa de Plata",
+            "text": "Perdedoras de cuartos del cuadro Oro/Plata."
+          },
+          {
+            "id": "bronce",
+            "name": "Copa de Bronce",
+            "text": "Ganadoras de cuartos del cuadro Bronce/Lata."
+          },
+          {
+            "id": "lata",
+            "name": "Copa Lata",
+            "text": "Perdedoras de cuartos del cuadro Bronce/Lata."
+          }
+        ],
+        "schedule": [
+          {
+            "label": "Jornada 1",
+            "text": "Grupos"
+          },
+          {
+            "label": "Jornada 2",
+            "text": "Grupos"
+          },
+          {
+            "label": "Jornada 3",
+            "text": "Grupos"
+          },
+          {
+            "label": "Jornada 4",
+            "text": "Descanso"
+          },
+          {
+            "label": "Jornada 5",
+            "text": "Cuartos"
+          },
+          {
+            "label": "Jornada 6",
+            "text": "Semifinales"
+          },
+          {
+            "label": "Jornada 7",
+            "text": "Finales"
+          }
+        ]
       }
     },
     {
       "id": "mas38",
-      "name": "Masculino +38",
+      "name": "Papi fútbol (+38)",
       "minutesPerHalf": 25,
-      "points": null
+      "points": null,
+      "format": {
+        "confirmedAt": "2026-11-10",
+        "videoUrl": "/assets/interno/formatos/2026/papi.mp4",
+        "posterUrl": "/assets/interno/formatos/2026/papi.jpg",
+        "seconds": 30,
+        "finalNote": "Las finales se juegan en la última jornada.",
+        "teamCount": 6,
+        "matchesLabel": "4 partidos por equipo",
+        "summary": "6 equipos · 2 zonas · 3 copas",
+        "stages": [
+          {
+            "title": "Dos zonas de tres",
+            "text": "Cada equipo juega dos partidos contra los otros equipos de su zona."
+          },
+          {
+            "title": "Un interzonal",
+            "text": "Cada equipo juega además un partido contra un equipo de la otra zona. Con esos tres partidos se ordena cada zona del 1.º al 3.º."
+          },
+          {
+            "title": "Finales por posición",
+            "text": "1.º de A contra 1.º de B por Oro; 2.º de A contra 2.º de B por Plata; 3.º de A contra 3.º de B por Bronce."
+          },
+          {
+            "title": "Todos juegan hasta el final",
+            "text": "Son cuatro jornadas y cada equipo juega en todas. La cuarta jornada reúne las finales de las tres copas."
+          }
+        ],
+        "brackets": [
+          {
+            "name": "Finales",
+            "description": "Los nombres se incorporarán al definirse las posiciones de cada zona.",
+            "pairs": [
+              [
+                "1.º A",
+                "1.º B"
+              ],
+              [
+                "2.º A",
+                "2.º B"
+              ],
+              [
+                "3.º A",
+                "3.º B"
+              ]
+            ],
+            "pairLabels": [
+              "Copa de Oro",
+              "Copa de Plata",
+              "Copa de Bronce"
+            ],
+            "destinations": []
+          }
+        ],
+        "cups": [
+          {
+            "id": "oro",
+            "name": "Copa de Oro",
+            "text": "1.º de Zona A vs. 1.º de Zona B."
+          },
+          {
+            "id": "plata",
+            "name": "Copa de Plata",
+            "text": "2.º de Zona A vs. 2.º de Zona B."
+          },
+          {
+            "id": "bronce",
+            "name": "Copa de Bronce",
+            "text": "3.º de Zona A vs. 3.º de Zona B."
+          }
+        ],
+        "schedule": [
+          {
+            "label": "Jornada 1",
+            "text": "Zona e interzonal"
+          },
+          {
+            "label": "Jornada 2",
+            "text": "Zona e interzonal"
+          },
+          {
+            "label": "Jornada 3",
+            "text": "Zona e interzonal"
+          },
+          {
+            "label": "Jornada 4",
+            "text": "Finales"
+          }
+        ]
+      }
     }
   ],
   "teams": [
@@ -486,6 +782,20 @@
       "name": "Grupo D",
       "categoryId": "femenino",
       "sourceUrl": "/assets/interno/grupos/2026/femenino.jpeg"
+    },
+    {
+      "id": "papi-a",
+      "name": "Zona A",
+      "categoryId": "mas38",
+      "expectedTeams": 3,
+      "sourceUrl": "/assets/interno/formatos/2026/papi.mp4"
+    },
+    {
+      "id": "papi-b",
+      "name": "Zona B",
+      "categoryId": "mas38",
+      "expectedTeams": 3,
+      "sourceUrl": "/assets/interno/formatos/2026/papi.mp4"
     }
   ],
   "matches": [],

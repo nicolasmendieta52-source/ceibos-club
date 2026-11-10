@@ -1,4 +1,4 @@
-import {validateInterno,publicInternoUrl,sortedMatches,internoStandings,internoScorers} from './interno-model.js?v=20261110grupos';
+import {validateInterno,publicInternoUrl,sortedMatches,internoStandings,internoScorers} from './interno-model.js?v=20261110formatos';
 
 const escape = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const sourceLink = (url,label) => publicInternoUrl(url) ? '<a class="interno-media-link" href="'+escape(publicInternoUrl(url))+'" target="_blank" rel="noopener noreferrer">'+escape(label)+' ↗</a>' : '';
@@ -18,19 +18,25 @@ function teamMarkMarkup(team){
 function groupsMarkup(data,categoryId){
   const groups=data.groups.filter(group=>group.categoryId===categoryId);
   if(!groups.length)return empty('Los grupos de 2026','Los grupos de esta categoría aparecerán acá cuando los confirme la organización.');
-  const count=data.teams.filter(team=>team.categoryId===categoryId).length;
+  const count=data.teams.filter(team=>team.categoryId===categoryId).length,category=data.categories.find(category=>category.id===categoryId);
   const cards=groups.map(group=>{
     const teams=data.teams.filter(team=>team.categoryId===categoryId&&team.groupId===group.id);
-    return '<article class="interno-group"><header><h4>'+escape(group.name)+'</h4><span>'+teams.length+' equipos</span></header><ul>'+teams.map(team=>'<li>'+teamMarkMarkup(team)+'<span>'+escape(team.name)+'</span></li>').join('')+'</ul></article>';
+    return '<article class="interno-group"><header><h4>'+escape(group.name)+'</h4><span>'+(teams.length||group.expectedTeams||0)+' equipos</span></header>'+(teams.length?'<ul>'+teams.map(team=>'<li>'+teamMarkMarkup(team)+'<span>'+escape(team.name)+'</span></li>').join('')+'</ul>':'<p class="interno-panel-note">Los equipos de esta zona se publicarán cuando se anuncie la nómina.</p>')+'</article>';
   }).join('');
   const sources=[...new Set(groups.map(group=>group.sourceUrl).filter(Boolean))];
-  return '<p class="interno-panel-note">'+count+' equipos · '+groups.length+' grupos confirmados</p><div class="interno-group-grid">'+cards+'</div><div class="interno-group-sources">'+sources.map((url,index)=>sourceLink(url,sources.length===1?'Ver placa oficial de grupos':'Ver placa de grupos '+(index+1))).join('')+'</div>';
+  return '<p class="interno-panel-note">'+(count||category?.format?.teamCount||0)+' equipos · '+groups.length+' '+(categoryId==='mas38'?'zonas confirmadas':'grupos confirmados')+(!count?' · Nómina por anunciar':'')+'</p><div class="interno-group-grid">'+cards+'</div><div class="interno-group-sources">'+sources.map((url,index)=>sourceLink(url,url.endsWith('.mp4')?'Ver explicación del formato':sources.length===1?'Ver placa oficial de grupos':'Ver placa de grupos '+(index+1))).join('')+'</div>';
+}
+
+function formatBracketMarkup(block,index){
+  const seed=value=>escape(typeof value==='number'?value+'.º':value);
+  return '<section class="interno-bracket interno-format-bracket" aria-labelledby="interno-formato-cruce-'+index+'"><h5 id="interno-formato-cruce-'+index+'">'+escape(block.name)+'</h5><p class="interno-panel-note">'+escape(block.description)+'</p><ol class="interno-bracket-grid" style="--interno-bracket-count:'+block.pairs.length+';--interno-bracket-mobile-count:'+Math.min(4,block.pairs.length)+'" aria-label="Cruces según posición">'+block.pairs.map(([first,second],pairIndex)=>'<li><span class="interno-seed">'+seed(first)+'</span><span class="interno-seed-vs">vs.</span><span class="interno-seed interno-seed-second">'+seed(second)+'</span>'+(block.pairLabels?'<strong class="interno-pair-cup">'+escape(block.pairLabels[pairIndex])+'</strong>':'')+'</li>').join('')+'</ol>'+(block.destinations.length?'<div class="interno-bracket-destinations">'+block.destinations.map(destination=>'<p><span>'+escape(destination.label)+' ↓</span><strong>'+escape(destination.text)+'</strong></p>').join('')+'</div>':'')+'</section>';
 }
 
 function playoffsMarkup(data,categoryId){
-  const format=data.categories.find(category=>category.id===categoryId)?.playoffs;
+  const category=data.categories.find(category=>category.id===categoryId),format=category?.format;
   if(!format)return empty('La definición de las copas','Los cruces de esta categoría se publicarán cuando la organización confirme su formato.');
-  return '<section class="interno-bracket" aria-labelledby="interno-octavos-titulo"><p class="interno-kicker">'+escape(data.categories.find(category=>category.id===categoryId).name)+' · Eliminatorias</p><h4 id="interno-octavos-titulo">'+escape(format.name)+'</h4><p class="interno-panel-note">Los 16 equipos se ordenan del 1.º al 16.º y se cruzan así. Los nombres se incorporarán cuando se defina ese orden.</p><ol class="interno-bracket-grid" aria-label="Cruces según posición">'+format.pairs.map(([first,second])=>'<li><span class="interno-seed">'+first+'.º</span><span class="interno-seed-vs">vs.</span><span class="interno-seed interno-seed-second">'+second+'.º</span></li>').join('')+'</ol><div class="interno-bracket-destinations"><p><span>Ganadores ↓</span><strong>'+escape(format.winners)+'</strong></p><p><span>Perdedores ↓</span><strong>'+escape(format.losers)+'</strong></p></div>'+sourceLink(format.sourceUrl,'Ver formato oficial')+'</section>';
+  const video=escape(publicInternoUrl(format.videoUrl)),poster=escape(publicInternoUrl(format.posterUrl));
+  return '<section class="interno-format" aria-labelledby="interno-formato-titulo"><div class="interno-format-head"><div><p class="interno-kicker">'+escape(category.name)+' · Formato 2026</p><h4 id="interno-formato-titulo">Así se juega</h4><p class="interno-panel-note">'+escape(format.summary)+'</p></div><p class="interno-format-guarantee">'+escape(format.matchesLabel)+'</p></div><details class="interno-format-video"><summary>Ver explicación en video · '+format.seconds+' s</summary><video controls playsinline preload="none" poster="'+poster+'" aria-label="Explicación del formato de '+escape(category.name)+'"><source src="'+video+'" type="video/mp4">'+sourceLink(format.videoUrl,'Abrir video')+'</video><p>El recorrido completo también está explicado en el texto de esta sección.</p></details><ol class="interno-format-stages">'+format.stages.map((stage,index)=>'<li><span aria-hidden="true">'+String(index+1).padStart(2,'0')+'</span><div><h5>'+escape(stage.title)+'</h5><p>'+escape(stage.text)+'</p></div></li>').join('')+'</ol><div class="interno-format-cups">'+format.cups.map(cup=>'<article class="interno-format-cup interno-cup-'+cup.id+'"><h5>'+escape(cup.name)+'</h5><p>'+escape(cup.text)+'</p></article>').join('')+'</div>'+format.brackets.map(formatBracketMarkup).join('')+(format.schedule.length?'<section class="interno-format-schedule" aria-label="Recorrido de jornadas"><h5>Jornada a jornada</h5><ol>'+format.schedule.map(day=>'<li><span>'+escape(day.label)+'</span><strong>'+escape(day.text)+'</strong></li>').join('')+'</ol></section>':'')+'<p class="interno-panel-note interno-format-final">'+escape(format.finalNote)+'</p></section>';
 }
 
 function matchMarkup(data,match){
@@ -62,7 +68,7 @@ export function internoPanelMarkup(data,categoryId,tab){
   }
   if(tab==='posiciones'){
     const groups=internoStandings(data,categoryId);
-    if(groups===null)return empty('La tabla de +38','Las posiciones se publicarán cuando la organización confirme el formato y los criterios de esta categoría.');
+    if(groups===null)return empty('La tabla de papi fútbol','Las posiciones se publicarán cuando estén los equipos y se confirme la puntuación de esta categoría.');
     if(!groups.length)return empty('La pelea por las copas','Las series y sus tablas de posiciones aparecerán acá cuando se anuncie el sorteo.');
     const tables=groups.map(group=>'<div class="interno-table-wrap" tabindex="0" role="region" aria-label="Posiciones: '+escape(group.name)+'"><table class="interno-table"><caption>'+escape(group.name)+'</caption><thead><tr><th scope="col"><abbr title="Posición">Pos.</abbr></th><th scope="col">Equipo</th>'+['PJ','PG','PE','PP','GF','GC','DG','Pts'].map((label,i)=>'<th scope="col"><abbr title="'+['Partidos jugados','Partidos ganados','Partidos empatados','Partidos perdidos','Goles a favor','Goles en contra','Diferencia de goles','Puntos'][i]+'">'+label+'</abbr></th>').join('')+'</tr></thead><tbody>'+group.rows.map(row=>'<tr><td>'+(row.position===null?'—':row.position+(row.tied?'*':''))+'</td><th scope="row">'+escape(row.name)+'</th>'+[row.played,row.won,row.drawn,row.lost,row.gf,row.ga,row.gd].map(n=>'<td>'+n+'</td>').join('')+'<td><strong>'+row.points+'</strong></td></tr>').join('')+'</tbody></table></div>'+group.rows.filter(r=>r.adjustment).map(r=>'<p class="interno-panel-note">'+escape(r.name)+': '+(r.adjustment>0?'+':'')+r.adjustment+' puntos. '+escape(r.adjustmentNote)+'</p>').join('')).join('');
     return tables+'<p class="interno-panel-note">Solo cuentan los partidos finalizados de la fase de grupos. Victoria: 3 puntos · Empate: 1. Desempates: diferencia de goles, goles a favor y enfrentamiento directo. * Igualdad pendiente de resolución por la organización.</p>';
@@ -87,6 +93,7 @@ function initInterno(){
   function render(){
     tabs.forEach(button=>{const active=button.dataset.internoTab===currentTab;button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1;});
     panel.setAttribute('aria-labelledby','interno-tab-'+currentTab);
+    panel.querySelectorAll('video').forEach(video=>video.pause());
     if(data)panel.innerHTML=internoPanelMarkup(data,select.value,currentTab);
   }
   tabs.forEach((button,index)=>{
@@ -98,6 +105,7 @@ function initInterno(){
   });
   select.addEventListener('change',render);
   panel.addEventListener('error',event=>{if(event.target.tagName==='IMG')event.target.remove();},true);
+  panel.addEventListener('toggle',event=>{if(event.target.matches('.interno-format-video')&&!event.target.open)event.target.querySelector('video')?.pause();},true);
   async function refresh(){
     if(loading||document.hidden)return;loading=true;
     const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),10000);

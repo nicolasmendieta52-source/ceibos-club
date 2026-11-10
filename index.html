@@ -276,7 +276,7 @@ nav.topbar.solid{
 </style>
 <link rel="stylesheet" href="/assets/analytics-consent.css?v=20260922">
 <script type="module" src="/assets/analytics.js?v=20261026"></script>
-<link rel="stylesheet" href="assets/interno.css?v=20261110grupos">
+<link rel="stylesheet" href="assets/interno.css?v=20261110formatos">
 <link rel="stylesheet" href="assets/navigation.css?v=20261028floating">
 <link rel="stylesheet" href="assets/news.css?v=20261020archivo">
 </head>
@@ -960,7 +960,7 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
   </div>
   <div class="interno-date"><div><span>La próxima cita</span><strong><time datetime="2026-11-16">16 de noviembre</time></strong></div><a href="https://www.instagram.com/internoceibosclub/p/DeH_uJathTB/" target="_blank" rel="noopener noreferrer">Ver anuncio oficial ↗</a><span class="interno-motto">#PlantandoLaGloria</span></div>
   <div class="interno-torneo" aria-labelledby="interno-edicion-titulo">
-    <div class="interno-torneo-head"><div><p class="interno-kicker">El torneo, fecha a fecha</p><h3 id="interno-edicion-titulo">La edición 2026</h3></div><label class="interno-category-label" for="interno-categoria">Categoría<select id="interno-categoria"><option value="masculino">Masculino</option><option value="femenino">Femenino</option><option value="mas38">Masculino +38</option></select></label></div>
+    <div class="interno-torneo-head"><div><p class="interno-kicker">El torneo, fecha a fecha</p><h3 id="interno-edicion-titulo">La edición 2026</h3></div><label class="interno-category-label" for="interno-categoria">Categoría<select id="interno-categoria"><option value="masculino">Masculino</option><option value="femenino">Femenino</option><option value="mas38">Papi fútbol (+38)</option></select></label></div>
     <div class="interno-tabs" role="tablist" aria-label="Seguir el Interno 2026">
       <button type="button" role="tab" id="interno-tab-grupos" aria-controls="interno-panel" aria-selected="true" data-interno-tab="grupos">Grupos</button>
       <button type="button" role="tab" id="interno-tab-equipos" aria-controls="interno-panel" aria-selected="false" tabindex="-1" data-interno-tab="equipos">Equipos</button>
@@ -968,7 +968,7 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
       <button type="button" role="tab" id="interno-tab-resultados" aria-controls="interno-panel" aria-selected="false" tabindex="-1" data-interno-tab="resultados">Resultados</button>
       <button type="button" role="tab" id="interno-tab-posiciones" aria-controls="interno-panel" aria-selected="false" tabindex="-1" data-interno-tab="posiciones">Posiciones</button>
       <button type="button" role="tab" id="interno-tab-goleadores" aria-controls="interno-panel" aria-selected="false" tabindex="-1" data-interno-tab="goleadores">Goleadores</button>
-      <button type="button" role="tab" id="interno-tab-cruces" aria-controls="interno-panel" aria-selected="false" tabindex="-1" data-interno-tab="cruces">Cruces</button>
+      <button type="button" role="tab" id="interno-tab-cruces" aria-controls="interno-panel" aria-selected="false" tabindex="-1" data-interno-tab="cruces">Formato y cruces</button>
     </div>
     <div id="interno-panel" role="tabpanel" aria-labelledby="interno-tab-grupos" tabindex="0"><div class="interno-empty"><h4>Grupos del Interno 2026</h4><p>Cargando los equipos y grupos confirmados de esta edición…</p></div></div>
     <p class="interno-feed-status" id="interno-feed-status" role="status" aria-live="polite"></p>
@@ -977,7 +977,7 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
   <div class="interno-guide" aria-label="Información del torneo 2026">
     <details><summary>Inscripción y fecha de inicio</summary><p>El Interno empieza el <strong>16 de noviembre</strong>. La inscripción de equipos cierra el <strong>9 de noviembre</strong>: cada equipo debe tener al menos ocho jugadores inscriptos y pagos. Consultá a Alfonso por el <a href="https://wa.me/59891393252" target="_blank" rel="noopener noreferrer">091 393 252 ↗</a>.</p></details>
     <details><summary>Días, lugar y categorías</summary><p>Se juega de noche, los lunes y miércoles, en el complejo Los Ceibos, en las canchas de ASPROE y Ceibos. Las categorías son <strong>Masculino, Femenino y Masculino +38</strong>. Si se suspende una fecha, puede reprogramarse para martes o jueves; seguí los avisos oficiales.</p></details>
-    <details><summary>Formato y reglamento</summary><p>Fútbol 8, sin offside y con cambios ilimitados. Masculino y +38 juegan dos tiempos de 25 minutos; Femenino, de 20. El reglamento detalla las condiciones de inscripción y de competencia. La categoría +38 tiene reglas propias que comunica la organización.</p><a class="interno-reglamento-link" href="assets/reglamento-interno-f8-ceibos-2026.pdf" target="_blank" rel="noopener noreferrer">Leer reglamento completo (PDF) ↗</a></details>
+    <details><summary>Formato y reglamento</summary><p>Fútbol 8, sin offside y con cambios ilimitados. Masculino y Papi fútbol (+38) juegan dos tiempos de 25 minutos; Femenino, de 20. En la pestaña <strong>Formato y cruces</strong> podés consultar el recorrido de cada categoría y ver los videos explicativos. El reglamento detalla las condiciones de inscripción y de competencia.</p><a class="interno-reglamento-link" href="assets/reglamento-interno-f8-ceibos-2026.pdf" target="_blank" rel="noopener noreferrer">Leer reglamento completo (PDF) ↗</a></details>
   </div>
   <div class="interno-recuerdos" id="interno-2025" aria-labelledby="interno-2025-titulo">
     <p class="interno-kicker">La edición que nos dejó con ganas de más</p>
@@ -3162,7 +3162,7 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
   .catch(() => {});
 </script>
 <script type="module" src="/notifications.js?v=20260814"></script>
-<script type="module" src="assets/interno.js?v=20261110grupos"></script>
+<script type="module" src="assets/interno.js?v=20261110formatos"></script>
 <script src="assets/navigation.js?v=20261028viewport" defer></script>
 </body>
 </html>

@@ -6,18 +6,27 @@ export function publicInternoUrl(value){
   try {const url=new URL(value,'https://ceibosclub.com');return url.protocol==='https:'?url.href:null;}catch{return null;}
 }
 function unique(rows,label){const ids=new Set();for(const row of rows){if(!id(row.id)||ids.has(row.id))throw Error(`${label}: identificador inválido o duplicado`);ids.add(row.id);}return ids;}
+function validateFormat(format){
+  if(!text(format.summary,200)||!text(format.matchesLabel,160)||!text(format.finalNote,300)||!/^2026-\d{2}-\d{2}$/.test(format.confirmedAt)||!integer(format.teamCount)||format.teamCount<1||!integer(format.seconds)||format.seconds<1||!publicInternoUrl(format.videoUrl)||!publicInternoUrl(format.posterUrl))throw Error('Resumen de formato inválido');
+  if(!Array.isArray(format.stages)||!format.stages.length||format.stages.some(stage=>!text(stage.title)||!text(stage.text,700)))throw Error('Etapas de formato inválidas');
+  if(!Array.isArray(format.cups)||!format.cups.length||format.cups.some(cup=>!['oro','plata','bronce','lata'].includes(cup.id)||!text(cup.name)||!text(cup.text,300))||new Set(format.cups.map(cup=>cup.id)).size!==format.cups.length)throw Error('Copas de formato inválidas');
+  if(!Array.isArray(format.schedule)||format.schedule.some(day=>!text(day.label)||!text(day.text)))throw Error('Calendario de formato inválido');
+  if(!Array.isArray(format.brackets)||!format.brackets.length)throw Error('Cruces de formato inválidos');
+  for(const block of format.brackets){
+    if(!text(block.name)||!text(block.description,500)||!Array.isArray(block.pairs)||!block.pairs.length||block.pairs.length>8||block.pairs.some(pair=>!Array.isArray(pair)||pair.length!==2||pair.some(seed=>typeof seed==='number'?(!integer(seed)||seed<1||seed>16):!text(seed,20)))||new Set(block.pairs.flat().map(String)).size!==block.pairs.length*2)throw Error('Cruces de formato inválidos');
+    if(block.pairLabels&&(!Array.isArray(block.pairLabels)||block.pairLabels.length!==block.pairs.length||block.pairLabels.some(label=>!text(label))))throw Error('Nombres de copas por cruce inválidos');
+    if(!Array.isArray(block.destinations)||block.destinations.some(destination=>!text(destination.label)||!text(destination.text)))throw Error('Destinos de cruces inválidos');
+  }
+}
 export function validateInterno(data){
   if(data?.version!==1||data.season!==2026||!Array.isArray(data.categories)||!data.categories.length||!Array.isArray(data.teams)||!Array.isArray(data.groups)||!Array.isArray(data.matches))throw Error('Datos del Interno no válidos');
   const categories=unique(data.categories,'Categorías'),teams=unique(data.teams,'Equipos'),groups=unique(data.groups,'Series');unique(data.matches,'Partidos');
   for(const category of data.categories){
     if(!text(category.name))throw Error('Nombre de categoría inválido');
     if(category.points!==null&&(!category.points||!['win','draw','loss'].every(k=>integer(category.points[k]))))throw Error('Puntuación de categoría inválida');
-    if(category.playoffs){
-      const format=category.playoffs,seeds=format.pairs?.flat();
-      if(!text(format.name)||!text(format.winners)||!text(format.losers)||!Array.isArray(format.pairs)||format.pairs.length!==8||format.pairs.some(pair=>!Array.isArray(pair)||pair.length!==2)||seeds.some(seed=>!integer(seed)||seed<1||seed>16)||new Set(seeds).size!==16||!publicInternoUrl(format.sourceUrl))throw Error('Formato de octavos inválido');
-    }
+    if(category.format)validateFormat(category.format);
   }
-  for(const group of data.groups)if(!categories.has(group.categoryId)||!text(group.name)||(group.sourceUrl&&!publicInternoUrl(group.sourceUrl)))throw Error('Serie inválida');
+  for(const group of data.groups)if(!categories.has(group.categoryId)||!text(group.name)||(group.sourceUrl&&!publicInternoUrl(group.sourceUrl))||(group.expectedTeams!==undefined&&(!integer(group.expectedTeams)||!group.expectedTeams)))throw Error('Serie inválida');
   for(const team of data.teams){
     if(!text(team.name)||!categories.has(team.categoryId)||(team.groupId&&!groups.has(team.groupId)))throw Error('Equipo inválido');
     if(team.groupId&&data.groups.find(g=>g.id===team.groupId).categoryId!==team.categoryId)throw Error('Equipo y serie de categorías distintas');

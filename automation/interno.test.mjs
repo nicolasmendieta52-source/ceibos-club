@@ -81,7 +81,7 @@ test('grupos publicados coinciden con las placas: 22 masculinos y 16 femeninos, 
     'fem-c':['levantate-fc','la-romineta','nerea-jrs','pata-de-palo'],
     'fem-d':['la-matanza','fuerte-al-medio','cangreburgers','ramillete']
   };
-  assert.equal(data.groups.length,10);assert.equal(data.teams.length,38);
+  assert.equal(data.groups.filter(group=>group.categoryId!=='mas38').length,10);assert.equal(data.teams.length,38);
   for(const [groupId,ids] of Object.entries(expected))assert.deepEqual(data.teams.filter(team=>team.groupId===groupId).map(team=>team.id),ids);
   assert.equal(data.teams.filter(team=>team.categoryId==='masculino').length,22);
   assert.equal(data.teams.filter(team=>team.categoryId==='femenino').length,16);
@@ -97,16 +97,44 @@ test('grupos y escudos se presentan por categoría y conservan el orden de la pl
   assert.match(male,/Orleans|La Vuelta/);assert.doesNotMatch(male,/Maradoñas|Pata de Palo/);
   assert.match(female,/Dep\. Resaca/);assert.match(female,/Ramillete/);assert.doesNotMatch(female,/Orleans|La Vuelta/);
   assert.match(female,/<svg viewBox=/);assert.match(female,/<image href="https:\/\/ceibosclub.com\/assets\/interno\/grupos\/2026\/femenino.jpeg"/);
-  assert.match(internoPanelMarkup(data,'mas38','grupos'),/cuando los confirme la organización/);
+  assert.match(internoPanelMarkup(data,'mas38','grupos'),/6 equipos · 2 zonas confirmadas/);
+  assert.match(internoPanelMarkup(data,'mas38','grupos'),/Nómina por anunciar/);
 });
 
-test('octavos masculinos respetan 1–16 a 8–9 y no asignan el formato al femenino ni inventan partidos',async()=>{
+test('octavos masculinos respetan 1–16 a 8–9 y cada categoría tiene sus cruces propios',async()=>{
   const data=validateInterno(JSON.parse(await readFile(new URL('../data/interno.json',import.meta.url),'utf8')));
-  assert.deepEqual(data.categories.find(category=>category.id==='masculino').playoffs.pairs,[[1,16],[2,15],[3,14],[4,13],[5,12],[6,11],[7,10],[8,9]]);
+  assert.deepEqual(data.categories.find(category=>category.id==='masculino').format.brackets[0].pairs,[[1,16],[2,15],[3,14],[4,13],[5,12],[6,11],[7,10],[8,9]]);
   const matchesBefore=structuredClone(data.matches),male=internoPanelMarkup(data,'masculino','cruces');assert.deepEqual(data.matches,matchesBefore);
   assert.match(male,/Cuartos de Oro\/Plata/);assert.match(male,/Cuartos de Bronce/);assert.match(male,/cuando se defina ese orden/);assert.doesNotMatch(male,/Rapiñeros|Orleans|Maradoñas/);
-  for(const categoryId of ['femenino','mas38'])assert.doesNotMatch(internoPanelMarkup(data,categoryId,'cruces'),/interno-seed|Oro\/Plata/);
-  const invalid=structuredClone(data);invalid.categories[0].playoffs.pairs[0]=[1,15];assert.throws(()=>validateInterno(invalid));
+  assert.match(internoPanelMarkup(data,'femenino','cruces'),/Cuartos · Oro\/Plata/);
+  assert.doesNotMatch(internoPanelMarkup(data,'femenino','cruces'),/Octavos de final/);
+  assert.match(internoPanelMarkup(data,'mas38','cruces'),/1\.º A|1\.º B/);
+  assert.doesNotMatch(internoPanelMarkup(data,'mas38','cruces'),/Octavos de final|Copa Lata/);
+  const invalid=structuredClone(data);invalid.categories[0].format.brackets[0].pairs[0]=[1,15];assert.throws(()=>validateInterno(invalid));
+});
+
+test('formatos confirmados reflejan los videos y no generan equipos ni fechas de fixture',async()=>{
+  const data=validateInterno(JSON.parse(await readFile(new URL('../data/interno.json',import.meta.url),'utf8')));
+  const [male,female,papi]=data.categories.map(category=>category.format);
+  assert.deepEqual([male.teamCount,female.teamCount,papi.teamCount],[22,16,6]);
+  assert.match(male.stages[1].text,/tres primeros.*dos primeros/);assert.match(male.stages[3].text,/1.º, 3.º y 5.º.*2.º, 4.º y 6.º/);
+  assert.deepEqual(female.brackets.map(block=>block.pairs),[[[1,8],[2,7],[3,6],[4,5]],[[9,16],[10,15],[11,14],[12,13]]]);
+  assert.match(female.stages[2].text,/evitar equipos del mismo grupo/);assert.equal(female.schedule.length,7);assert.equal(female.schedule[3].text,'Descanso');
+  assert.match(female.matchesLabel,/5 partidos/);assert.match(female.stages[3].text,/seis partidos/);
+  assert.deepEqual(papi.brackets[0].pairs,[['1.º A','1.º B'],['2.º A','2.º B'],['3.º A','3.º B']]);
+  assert.equal(papi.schedule.length,4);assert.match(papi.stages[1].text,/tres partidos.*cada zona/);
+  assert.equal(data.teams.filter(team=>team.categoryId==='mas38').length,0);assert.equal(data.categories[2].points,null);
+  for(const category of data.categories){
+    const before=structuredClone(data.matches),html=internoPanelMarkup(data,category.id,'cruces');
+    assert.deepEqual(data.matches,before);assert.match(html,/<video controls playsinline preload="none"/);assert.doesNotMatch(html,/autoplay|<iframe/);
+  }
+});
+
+test('rechaza formatos con videos inseguros, destinos inválidos y posiciones duplicadas',async()=>{
+  const data=JSON.parse(await readFile(new URL('../data/interno.json',import.meta.url),'utf8'));
+  for(const mutate of [format=>format.videoUrl='javascript:alert(1)',format=>format.brackets[0].destinations[0].text='',format=>format.brackets[0].pairs[0]=[1,1],format=>format.cups.push({...format.cups[0]})]){
+    const invalid=structuredClone(data);mutate(invalid.categories[0].format);assert.throws(()=>validateInterno(invalid));
+  }
 });
 
 test('rechaza encuadres de escudos fuera de la placa y fuentes de grupos inseguras',async()=>{
