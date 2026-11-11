@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-10T19:49:41.832Z",
+        "updatedAt": "2026-11-11T06:35:45.235Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-10T19:49:41.899Z",
+        "updatedAt": "2026-11-11T06:35:45.299Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-10T19:49:41.956Z",
+        "updatedAt": "2026-11-11T06:35:45.355Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-10T19:49:42.031Z",
+        "updatedAt": "2026-11-11T06:35:45.429Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-10T19:49:42.104Z",
+        "updatedAt": "2026-11-11T06:35:45.490Z",
         "tables": [
           {
             "id": 2239,
@@ -2586,6 +2586,16 @@
       "cancha": "Saint Brendan's"
     },
     {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "ELBIO FERNANDEZ",
+      "fecha": "2026-11-14",
+      "hora": "17:30",
+      "local": false,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/B221B5P.html",
+      "cancha": "G. TROUVILLE"
+    },
+    {
       "deporte": "futbol",
       "categoria": "PreSenior",
       "rival": "EL CHORRO FUTBOL CLUB",
@@ -2662,11 +2672,11 @@
       "categoria": "Sub 18",
       "rival": "PELOTA AL MEDIO UNIVERSITARIO",
       "fecha": "2026-11-15",
-      "hora": "A confirmar",
+      "hora": "15:30",
       "local": true,
       "fase": "Copa de Oro",
       "fuente": "https://ligauniversitaria.org.uy/partidos/F181818O.html",
-      "cancha": "CANCHA A FIJAR"
+      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "futbol",
@@ -2681,6 +2691,16 @@
       "equipoAdic": "Ceibos Club senior 40",
       "estado": "Confirmado",
       "cancha": "A confirmar"
+    },
+    {
+      "deporte": "basketball",
+      "categoria": "Basketball",
+      "rival": "ELBIO FERNANDEZ",
+      "fecha": "2026-11-21",
+      "hora": "A confirmar",
+      "local": true,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/B221B5P.html",
+      "cancha": "CANCHA A FIJAR"
     },
     {
       "deporte": "futbol",
@@ -7061,7 +7081,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-11-10T19:53:06.843Z",
+  "actualizadoEn": "2026-11-11T06:39:09.104Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -7139,7 +7159,7 @@
         "deporte": "basketball",
         "categoria": "Basketball",
         "url": "https://ligauniversitaria.org.uy/estadisticas-basquetbol-b/",
-        "registros": 27,
+        "registros": 29,
         "estado": "ok"
       },
       {
