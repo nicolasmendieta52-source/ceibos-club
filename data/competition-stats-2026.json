@@ -1,13 +1,13 @@
 {
   "season": 2026,
-  "checkedAt": "2026-11-11T11:18:04.950Z",
+  "checkedAt": "2026-11-11T16:56:32.073Z",
   "tables": [
     {
       "sport": "basketball",
       "category": "Basketball",
       "title": "Serie B3",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:16:36.426Z",
+      "updatedAt": "2026-11-11T16:55:08.794Z",
       "id": "https://ligauniversitaria.org.uy/posiciones/B221B3.html",
       "kind": "standings",
       "source": "https://ligauniversitaria.org.uy/posiciones/B221B3.html",
@@ -143,7 +143,7 @@
       "category": "Basketball",
       "title": "Serie B",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:16:37.311Z",
+      "updatedAt": "2026-11-11T16:55:09.642Z",
       "id": "https://ligauniversitaria.org.uy/posiciones/B221B.html",
       "kind": "standings",
       "source": "https://ligauniversitaria.org.uy/posiciones/B221B.html",
@@ -391,7 +391,7 @@
       "category": "Sub 18",
       "title": "Copa de Oro",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:16:39.043Z",
+      "updatedAt": "2026-11-11T16:55:11.044Z",
       "id": "https://ligauniversitaria.org.uy/posiciones/F181818O.html",
       "kind": "standings",
       "source": "https://ligauniversitaria.org.uy/posiciones/F181818O.html",
@@ -527,7 +527,7 @@
       "category": "Sub 18",
       "title": "Copa de Oro",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:16:39.043Z",
+      "updatedAt": "2026-11-11T16:55:11.044Z",
       "id": "https://ligauniversitaria.org.uy/goleadores/F181818O.html",
       "kind": "scorers",
       "source": "https://ligauniversitaria.org.uy/goleadores/F181818O.html",
@@ -834,7 +834,7 @@
       "category": "Sub 18",
       "title": "Segunda rueda · Serie 5",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:16:45.103Z",
+      "updatedAt": "2026-11-11T16:55:16.453Z",
       "id": "https://ligauniversitaria.org.uy/posiciones/F181818-52.html",
       "kind": "standings",
       "source": "https://ligauniversitaria.org.uy/posiciones/F181818-52.html",
@@ -970,7 +970,7 @@
       "category": "Sub 18",
       "title": "Segunda rueda · Serie 5",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:16:45.103Z",
+      "updatedAt": "2026-11-11T16:55:16.453Z",
       "id": "https://ligauniversitaria.org.uy/goleadores/F181818-52.html",
       "kind": "scorers",
       "source": "https://ligauniversitaria.org.uy/goleadores/F181818-52.html",
@@ -1115,7 +1115,7 @@
       "category": "Primera",
       "title": "Segunda rueda · Título y ascenso",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:16:47.613Z",
+      "updatedAt": "2026-11-11T16:55:18.679Z",
       "id": "https://ligauniversitaria.org.uy/posiciones/F21BTA.html",
       "kind": "standings",
       "source": "https://ligauniversitaria.org.uy/posiciones/F21BTA.html",
@@ -1251,7 +1251,7 @@
       "category": "Primera",
       "title": "Segunda rueda · Título y ascenso",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:16:47.613Z",
+      "updatedAt": "2026-11-11T16:55:18.679Z",
       "id": "https://ligauniversitaria.org.uy/goleadores/F21BTA.html",
       "kind": "scorers",
       "source": "https://ligauniversitaria.org.uy/goleadores/F21BTA.html",
@@ -1378,7 +1378,7 @@
       "category": "Primera",
       "title": "Serie B",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:16:50.236Z",
+      "updatedAt": "2026-11-11T16:55:21.084Z",
       "id": "https://ligauniversitaria.org.uy/posiciones/F21B.html",
       "kind": "standings",
       "source": "https://ligauniversitaria.org.uy/posiciones/F21B.html",
@@ -1626,7 +1626,7 @@
       "category": "Primera",
       "title": "Serie B",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:16:50.236Z",
+      "updatedAt": "2026-11-11T16:55:21.084Z",
       "id": "https://ligauniversitaria.org.uy/goleadores/F21B.html",
       "kind": "scorers",
       "source": "https://ligauniversitaria.org.uy/goleadores/F21B.html",
@@ -1735,7 +1735,7 @@
       "category": "Reserva A",
       "title": "Segunda rueda · Permanencia y descenso",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:16:53.729Z",
+      "updatedAt": "2026-11-11T16:55:24.127Z",
       "id": "https://ligauniversitaria.org.uy/posiciones/F2B2RSAPD.html",
       "kind": "standings",
       "source": "https://ligauniversitaria.org.uy/posiciones/F2B2RSAPD.html",
@@ -1871,7 +1871,7 @@
       "category": "Reserva A",
       "title": "Segunda rueda · Permanencia y descenso",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:16:53.729Z",
+      "updatedAt": "2026-11-11T16:55:24.127Z",
       "id": "https://ligauniversitaria.org.uy/goleadores/F2B2RSAPD.html",
       "kind": "scorers",
       "source": "https://ligauniversitaria.org.uy/goleadores/F2B2RSAPD.html",
@@ -1998,7 +1998,7 @@
       "category": "Reserva A",
       "title": "Serie RS1",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:16:55.454Z",
+      "updatedAt": "2026-11-11T16:55:25.707Z",
       "id": "https://ligauniversitaria.org.uy/posiciones/F2B2RS1.html",
       "kind": "standings",
       "source": "https://ligauniversitaria.org.uy/posiciones/F2B2RS1.html",
@@ -2246,7 +2246,7 @@
       "category": "Reserva A",
       "title": "Serie RS1",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:16:55.454Z",
+      "updatedAt": "2026-11-11T16:55:25.707Z",
       "id": "https://ligauniversitaria.org.uy/goleadores/F2B2RS1.html",
       "kind": "scorers",
       "source": "https://ligauniversitaria.org.uy/goleadores/F2B2RS1.html",
@@ -2490,7 +2490,7 @@
       "category": "Reserva Verde",
       "title": "Segunda rueda · Título y ascenso",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:16:58.060Z",
+      "updatedAt": "2026-11-11T16:55:27.971Z",
       "id": "https://ligauniversitaria.org.uy/posiciones/F2B2RSCTA.html",
       "kind": "standings",
       "source": "https://ligauniversitaria.org.uy/posiciones/F2B2RSCTA.html",
@@ -2626,7 +2626,7 @@
       "category": "Reserva Verde",
       "title": "Segunda rueda · Título y ascenso",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:16:58.060Z",
+      "updatedAt": "2026-11-11T16:55:27.971Z",
       "id": "https://ligauniversitaria.org.uy/goleadores/F2B2RSCTA.html",
       "kind": "scorers",
       "source": "https://ligauniversitaria.org.uy/goleadores/F2B2RSCTA.html",
@@ -2699,7 +2699,7 @@
       "category": "Reserva Verde",
       "title": "Serie RS31",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:17:00.665Z",
+      "updatedAt": "2026-11-11T16:55:30.319Z",
       "id": "https://ligauniversitaria.org.uy/posiciones/F2B2RS31.html",
       "kind": "standings",
       "source": "https://ligauniversitaria.org.uy/posiciones/F2B2RS31.html",
@@ -2947,7 +2947,7 @@
       "category": "Reserva Verde",
       "title": "Serie RS31",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:17:00.665Z",
+      "updatedAt": "2026-11-11T16:55:30.319Z",
       "id": "https://ligauniversitaria.org.uy/goleadores/F2B2RS31.html",
       "kind": "scorers",
       "source": "https://ligauniversitaria.org.uy/goleadores/F2B2RS31.html",
@@ -3029,7 +3029,7 @@
       "category": "PreSenior",
       "title": "Segunda rueda · Título y ascenso",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:17:03.974Z",
+      "updatedAt": "2026-11-11T16:55:32.597Z",
       "id": "https://ligauniversitaria.org.uy/posiciones/F3232PSCTA.html",
       "kind": "standings",
       "source": "https://ligauniversitaria.org.uy/posiciones/F3232PSCTA.html",
@@ -3165,7 +3165,7 @@
       "category": "PreSenior",
       "title": "Segunda rueda · Título y ascenso",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:17:03.974Z",
+      "updatedAt": "2026-11-11T16:55:32.597Z",
       "id": "https://ligauniversitaria.org.uy/goleadores/F3232PSCTA.html",
       "kind": "scorers",
       "source": "https://ligauniversitaria.org.uy/goleadores/F3232PSCTA.html",
@@ -3238,7 +3238,7 @@
       "category": "PreSenior",
       "title": "Serie PSC",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:17:06.579Z",
+      "updatedAt": "2026-11-11T16:55:34.957Z",
       "id": "https://ligauniversitaria.org.uy/posiciones/F3232PSC.html",
       "kind": "standings",
       "source": "https://ligauniversitaria.org.uy/posiciones/F3232PSC.html",
@@ -3486,7 +3486,7 @@
       "category": "PreSenior",
       "title": "Serie PSC",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:17:06.579Z",
+      "updatedAt": "2026-11-11T16:55:34.957Z",
       "id": "https://ligauniversitaria.org.uy/goleadores/F3232PSC.html",
       "kind": "scorers",
       "source": "https://ligauniversitaria.org.uy/goleadores/F3232PSC.html",
@@ -3604,7 +3604,7 @@
       "category": "Sub 20",
       "title": "Segunda rueda · Título y ascenso",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:17:09.197Z",
+      "updatedAt": "2026-11-11T16:55:37.231Z",
       "id": "https://ligauniversitaria.org.uy/posiciones/F202020AT.html",
       "kind": "standings",
       "source": "https://ligauniversitaria.org.uy/posiciones/F202020AT.html",
@@ -3740,7 +3740,7 @@
       "category": "Sub 20",
       "title": "Segunda rueda · Título y ascenso",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:17:09.197Z",
+      "updatedAt": "2026-11-11T16:55:37.231Z",
       "id": "https://ligauniversitaria.org.uy/goleadores/F202020AT.html",
       "kind": "scorers",
       "source": "https://ligauniversitaria.org.uy/goleadores/F202020AT.html",
@@ -3813,7 +3813,7 @@
       "category": "Sub 20",
       "title": "Serie 20A",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:17:11.779Z",
+      "updatedAt": "2026-11-11T16:55:39.572Z",
       "id": "https://ligauniversitaria.org.uy/posiciones/F202020A.html",
       "kind": "standings",
       "source": "https://ligauniversitaria.org.uy/posiciones/F202020A.html",
@@ -4061,7 +4061,7 @@
       "category": "Sub 20",
       "title": "Serie 20A",
       "season": 2026,
-      "updatedAt": "2026-11-11T11:17:11.779Z",
+      "updatedAt": "2026-11-11T16:55:39.572Z",
       "id": "https://ligauniversitaria.org.uy/goleadores/F202020A.html",
       "kind": "scorers",
       "source": "https://ligauniversitaria.org.uy/goleadores/F202020A.html",
@@ -4207,7 +4207,7 @@
       "title": "APERTURA 2026 (Intermedia A)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=3",
-      "updatedAt": "2026-11-11T11:17:19.342Z",
+      "updatedAt": "2026-11-11T16:55:46.911Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=3#table-2733",
       "kind": "standings",
       "columns": [
@@ -4385,7 +4385,7 @@
       "title": "APERTURA 2026 (Intermedia A)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=3",
-      "updatedAt": "2026-11-11T11:17:19.342Z",
+      "updatedAt": "2026-11-11T16:55:46.911Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=3#scorers-2733",
       "kind": "scorers",
       "columns": [
@@ -4435,51 +4435,6 @@
           "club": false,
           "values": [
             5,
-            "Agustina Correa",
-            "Lobos Rugby Club",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "Martina Bertolini",
-            "Club Náutico",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "Fiorella Caprani",
-            "Yacht Club Uruguayo",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "VIRGINIA CASABÓ",
-            "Lobos Rugby Club",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "Milagros Barcia",
-            "The British Schools / Old Girls Club",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            10,
             "Ana Ines Echeverria",
             "The British Schools / Old Girls Club",
             5
@@ -4488,7 +4443,7 @@
         {
           "club": false,
           "values": [
-            11,
+            6,
             "Sofía Peñalba",
             "Carrasco Polo Club",
             5
@@ -4497,7 +4452,61 @@
         {
           "club": false,
           "values": [
+            7,
+            "Martina Bertolini",
+            "Club Náutico",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "Agustina Correa",
+            "Lobos Rugby Club",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
+            "Fiorella Caprani",
+            "Yacht Club Uruguayo",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            10,
+            "Milagros Barcia",
+            "The British Schools / Old Girls Club",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            11,
+            "VIRGINIA CASABÓ",
+            "Lobos Rugby Club",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             12,
+            "Josefina Muñoz",
+            "The British Schools / Old Girls Club",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            13,
             "Mariana Pino Cortes",
             "Palo y Pico",
             4
@@ -4506,7 +4515,7 @@
         {
           "club": false,
           "values": [
-            13,
+            14,
             "Josefina Pereyra",
             "Carrasco Polo Club",
             4
@@ -4515,18 +4524,9 @@
         {
           "club": false,
           "values": [
-            14,
+            15,
             "Federica Maria Ibarra Candau",
             "Palo y Pico",
-            4
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            15,
-            "Pilar Etcheverry",
-            "Colegio Los Pilares / Club Los Ceibos",
             4
           ]
         }
@@ -4539,7 +4539,7 @@
       "title": "COPA DE PLATA (Intermedia A)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=3",
-      "updatedAt": "2026-11-11T11:17:19.838Z",
+      "updatedAt": "2026-11-11T16:55:47.431Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=3#table-2762",
       "kind": "standings",
       "columns": [
@@ -4633,7 +4633,7 @@
       "title": "COPA DE PLATA (Intermedia A)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=3",
-      "updatedAt": "2026-11-11T11:17:19.838Z",
+      "updatedAt": "2026-11-11T16:55:47.431Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=3#scorers-2762",
       "kind": "scorers",
       "columns": [
@@ -4656,33 +4656,6 @@
           "club": false,
           "values": [
             2,
-            "Agustina Lage",
-            "Old Christian's Club, Stella Maris",
-            3
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
-            "Eugenia Pedreira",
-            "Woodlands School - Old Woodlands Club",
-            3
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "Eugenia Curci",
-            "Old Christian's Club, Stella Maris",
-            3
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
             "Maria Valentina Rohr",
             "Old Christian's Club, Stella Maris",
             3
@@ -4691,7 +4664,7 @@
         {
           "club": false,
           "values": [
-            6,
+            3,
             "SIN JUGADOR",
             "Woodlands School - Old Woodlands Club",
             3
@@ -4700,61 +4673,34 @@
         {
           "club": false,
           "values": [
-            7,
-            "Carolina Capurro",
-            "St. Brendans School / Old Brendans Club",
-            2
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "Camila Guadalupe",
+            4,
+            "Eugenia Pedreira",
             "Woodlands School - Old Woodlands Club",
-            2
+            3
           ]
         },
         {
           "club": false,
           "values": [
-            9,
-            "Sofia Greco",
-            "Yacht Club Uruguayo",
-            2
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            10,
-            "Mariana Pignatta",
-            "St. Brendans School / Old Brendans Club",
-            2
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            11,
-            "Florencia Ham",
+            5,
+            "Agustina Lage",
             "Old Christian's Club, Stella Maris",
-            2
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            12,
-            "Pilar Etcheverry",
-            "Colegio Los Pilares / Club Los Ceibos",
-            2
+            3
           ]
         },
         {
           "club": false,
           "values": [
-            13,
+            6,
+            "Eugenia Curci",
+            "Old Christian's Club, Stella Maris",
+            3
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
             "Paula Brugnini",
             "St. Brendans School / Old Brendans Club",
             2
@@ -4763,7 +4709,7 @@
         {
           "club": false,
           "values": [
-            14,
+            8,
             "Francisca Etcheverry",
             "Old Christian's Club, Stella Maris",
             2
@@ -4772,9 +4718,63 @@
         {
           "club": false,
           "values": [
-            15,
-            "Fernanda Rey",
+            9,
+            "Florencia Ham",
+            "Old Christian's Club, Stella Maris",
+            2
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            10,
+            "Pilar Etcheverry",
+            "Colegio Los Pilares / Club Los Ceibos",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            11,
+            "Carolina Capurro",
+            "St. Brendans School / Old Brendans Club",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            12,
+            "Mariana Pignatta",
+            "St. Brendans School / Old Brendans Club",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            13,
+            "Camila Guadalupe",
             "Woodlands School - Old Woodlands Club",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
+            "Sofia Greco",
+            "Yacht Club Uruguayo",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            15,
+            "Maria Paz Alvarez",
+            "Yacht Club Uruguayo",
             1
           ]
         }
@@ -4787,7 +4787,7 @@
       "title": "APERTURA 2026 (Sub 18)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=4",
-      "updatedAt": "2026-11-11T11:17:29.192Z",
+      "updatedAt": "2026-11-11T16:55:56.580Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=4#table-2734",
       "kind": "standings",
       "columns": [
@@ -5007,7 +5007,7 @@
       "title": "APERTURA 2026 (Sub 18)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=4",
-      "updatedAt": "2026-11-11T11:17:29.192Z",
+      "updatedAt": "2026-11-11T16:55:56.580Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=4#scorers-2734",
       "kind": "scorers",
       "columns": [
@@ -5066,8 +5066,8 @@
           "club": false,
           "values": [
             6,
-            "Renata Migues",
-            "Old Sampa Club",
+            "Victoria Berasain",
+            "Yacht Club Uruguayo",
             9
           ]
         },
@@ -5075,8 +5075,8 @@
           "club": false,
           "values": [
             7,
-            "Victoria Berasain",
-            "Yacht Club Uruguayo",
+            "Renata Migues",
+            "Old Sampa Club",
             9
           ]
         },
@@ -5093,8 +5093,8 @@
           "club": false,
           "values": [
             9,
-            "Maria Clara Macek",
-            "Club Biguá de Villa Biarritz",
+            "Julia Sanguinetti",
+            "Old Sampa Club",
             8
           ]
         },
@@ -5102,8 +5102,8 @@
           "club": false,
           "values": [
             10,
-            "Julia Sanguinetti",
-            "Old Sampa Club",
+            "Maria Clara Macek",
+            "Club Biguá de Villa Biarritz",
             8
           ]
         },
@@ -5161,7 +5161,7 @@
       "title": "COPA DE PLATA (Sub 18)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=4",
-      "updatedAt": "2026-11-11T11:17:29.698Z",
+      "updatedAt": "2026-11-11T16:55:57.120Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=4#table-2764",
       "kind": "standings",
       "columns": [
@@ -5283,7 +5283,7 @@
       "title": "COPA DE PLATA (Sub 18)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=4",
-      "updatedAt": "2026-11-11T11:17:29.698Z",
+      "updatedAt": "2026-11-11T16:55:57.120Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=4#scorers-2764",
       "kind": "scorers",
       "columns": [
@@ -5297,24 +5297,6 @@
           "club": false,
           "values": [
             1,
-            "Renata Falco Amarelle",
-            "Ivy Thomas Memorial School / Old Ivy Club",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            2,
-            "JULIA GENINAZZI",
-            "Woodlands School - Old Woodlands Club",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            3,
             "Martina Nuñez",
             "Woodlands School - Old Woodlands Club",
             5
@@ -5323,61 +5305,25 @@
         {
           "club": false,
           "values": [
-            4,
-            "Sofia Zagarzazu",
-            "St. Brendans School / Old Brendans Club",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "Belén Muñiz",
-            "Carrasco Polo Club",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "Lara Mendez",
-            "St. Brendans School / Old Brendans Club",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
-            "Federica Emicuri",
-            "St. Brendans School / Old Brendans Club",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "Josefina Davies",
+            2,
+            "Renata Falco Amarelle",
             "Ivy Thomas Memorial School / Old Ivy Club",
-            4
+            5
           ]
         },
         {
           "club": false,
           "values": [
-            9,
-            "Agustina Mieres",
-            "CLUB NORTHFIELD",
-            4
+            3,
+            "JULIA GENINAZZI",
+            "Woodlands School - Old Woodlands Club",
+            5
           ]
         },
         {
           "club": false,
           "values": [
-            10,
+            4,
             "Margarita Soto Azzini",
             "Ivy Thomas Memorial School / Old Ivy Club",
             4
@@ -5386,18 +5332,72 @@
         {
           "club": false,
           "values": [
+            5,
+            "Josefina Davies",
+            "Ivy Thomas Memorial School / Old Ivy Club",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "Agustina Mieres",
+            "CLUB NORTHFIELD",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "Sofia Zagarzazu",
+            "St. Brendans School / Old Brendans Club",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "Lara Mendez",
+            "St. Brendans School / Old Brendans Club",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
+            "Federica Emicuri",
+            "St. Brendans School / Old Brendans Club",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            10,
+            "Belén Muñiz",
+            "Carrasco Polo Club",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             11,
-            "María Belén Galante",
+            "Belén Harán",
             "St. Brendans School / Old Brendans Club",
             3
           ]
         },
         {
-          "club": true,
+          "club": false,
           "values": [
             12,
-            "Paulina Mesa",
-            "Colegio Los Pilares / Club Los Ceibos",
+            "María Belén Galante",
+            "St. Brendans School / Old Brendans Club",
             3
           ]
         },
@@ -5411,11 +5411,11 @@
           ]
         },
         {
-          "club": false,
+          "club": true,
           "values": [
             14,
-            "Belen Vairo",
-            "Woodlands School - Old Woodlands Club",
+            "Paulina Mesa",
+            "Colegio Los Pilares / Club Los Ceibos",
             3
           ]
         },
@@ -5423,8 +5423,8 @@
           "club": false,
           "values": [
             15,
-            "Constanza Alves",
-            "St. Brendans School / Old Brendans Club",
+            "Inés María Bremermann",
+            "Ivy Thomas Memorial School / Old Ivy Club",
             3
           ]
         }
@@ -5437,7 +5437,7 @@
       "title": "TRIANGULAR PLATA (Sub 18)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=4",
-      "updatedAt": "2026-11-11T11:17:30.755Z",
+      "updatedAt": "2026-11-11T16:55:58.163Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=4#table-2790",
       "kind": "standings",
       "columns": [
@@ -5503,7 +5503,7 @@
       "title": "TRIANGULAR PLATA (Sub 18)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=4",
-      "updatedAt": "2026-11-11T11:17:30.755Z",
+      "updatedAt": "2026-11-11T16:55:58.163Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=4#scorers-2790",
       "kind": "scorers",
       "columns": [
@@ -5567,7 +5567,7 @@
       "title": "APERTURA 2026 (Intermedia B)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=31",
-      "updatedAt": "2026-11-11T11:17:38.072Z",
+      "updatedAt": "2026-11-11T16:56:05.493Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=31#table-2735",
       "kind": "standings",
       "columns": [
@@ -5745,7 +5745,7 @@
       "title": "APERTURA 2026 (Intermedia B)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=31",
-      "updatedAt": "2026-11-11T11:17:38.072Z",
+      "updatedAt": "2026-11-11T16:56:05.493Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=31#scorers-2735",
       "kind": "scorers",
       "columns": [
@@ -5801,18 +5801,9 @@
           ]
         },
         {
-          "club": true,
-          "values": [
-            6,
-            "Josefina Correa",
-            "Colegio Los Pilares / Club Los Ceibos",
-            6
-          ]
-        },
-        {
           "club": false,
           "values": [
-            7,
+            6,
             "Lucía Alvarez",
             "CGU – LOS CUERVOS",
             6
@@ -5821,9 +5812,18 @@
         {
           "club": false,
           "values": [
-            8,
+            7,
             "Carolina Fernandez",
             "Old Christian's Club, Stella Maris",
+            6
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            8,
+            "Josefina Correa",
+            "Colegio Los Pilares / Club Los Ceibos",
             6
           ]
         },
@@ -5831,51 +5831,6 @@
           "club": false,
           "values": [
             9,
-            "Josefina Justo",
-            "The British Schools / Old Girls Club",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            10,
-            "María Agustina Arcos",
-            "Old Sampa Club",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            11,
-            "Natalia Alvarez",
-            "Nautilus Yachting Club",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            12,
-            "Matilde Affonso",
-            "CGU – LOS CUERVOS",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            13,
-            "Francisca Baccino Perdomo",
-            "Pucaru Stade Galulois",
-            5
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            14,
             "María Magdalena Narbondo",
             "Palo y Pico",
             5
@@ -5884,9 +5839,54 @@
         {
           "club": false,
           "values": [
-            15,
-            "Maria Agustina Cytryn",
+            10,
+            "Josefina Justo",
+            "The British Schools / Old Girls Club",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            11,
+            "María Agustina Arcos",
+            "Old Sampa Club",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            12,
+            "Natalia Alvarez",
+            "Nautilus Yachting Club",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            13,
+            "Matilde Affonso",
+            "CGU – LOS CUERVOS",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
+            "Francisca Baccino Perdomo",
             "Pucaru Stade Galulois",
+            5
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            15,
+            "María Noel Montans",
+            "Scuola Italiana di Montevideo",
             4
           ]
         }
@@ -5899,7 +5899,7 @@
       "title": "COPA DE BRONCE (Intermedia B)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=31",
-      "updatedAt": "2026-11-11T11:17:39.194Z",
+      "updatedAt": "2026-11-11T16:56:06.285Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=31#table-2775",
       "kind": "standings",
       "columns": [
@@ -5965,7 +5965,7 @@
       "title": "COPA DE BRONCE (Intermedia B)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=31",
-      "updatedAt": "2026-11-11T11:17:39.194Z",
+      "updatedAt": "2026-11-11T16:56:06.285Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=31#scorers-2775",
       "kind": "scorers",
       "columns": [
@@ -6029,7 +6029,7 @@
       "title": "APERTURA 2026 (Intermedia C)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=79",
-      "updatedAt": "2026-11-11T11:17:49.941Z",
+      "updatedAt": "2026-11-11T16:56:16.507Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=79#table-2736",
       "kind": "standings",
       "columns": [
@@ -6277,7 +6277,7 @@
       "title": "APERTURA 2026 (Intermedia C)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=79",
-      "updatedAt": "2026-11-11T11:17:49.941Z",
+      "updatedAt": "2026-11-11T16:56:16.507Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=79#scorers-2736",
       "kind": "scorers",
       "columns": [
@@ -6324,9 +6324,18 @@
           ]
         },
         {
-          "club": true,
+          "club": false,
           "values": [
             5,
+            "Milagros Albanell",
+            "The British Schools / Old Girls Club",
+            9
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            6,
             "Emilia Berretta Lizasoain",
             "Colegio Los Pilares / Club Los Ceibos",
             9
@@ -6335,7 +6344,7 @@
         {
           "club": false,
           "values": [
-            6,
+            7,
             "Emma Cikato",
             "The British Schools / Old Girls Club",
             9
@@ -6344,34 +6353,7 @@
         {
           "club": false,
           "values": [
-            7,
-            "Milagros Albanell",
-            "The British Schools / Old Girls Club",
-            9
-          ]
-        },
-        {
-          "club": false,
-          "values": [
             8,
-            "Isabel Cardoso",
-            "The British Schools / Old Girls Club",
-            8
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "Vanessa Saporta",
-            "CLUB NACIONAL DE FOOTBALL",
-            8
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            10,
             "Matilde Pérez Vallejo",
             "Colegio Seminario / Club Seminario",
             8
@@ -6380,16 +6362,25 @@
         {
           "club": false,
           "values": [
-            11,
-            "Margarita Etchandy",
-            "Colegio Seminario / Club Seminario",
-            7
+            9,
+            "Isabel Cardoso",
+            "The British Schools / Old Girls Club",
+            8
           ]
         },
         {
           "club": false,
           "values": [
-            12,
+            10,
+            "Vanessa Saporta",
+            "CLUB NACIONAL DE FOOTBALL",
+            8
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            11,
             "Mia Franco",
             "Pucaru Stade Galulois",
             7
@@ -6398,16 +6389,7 @@
         {
           "club": false,
           "values": [
-            13,
-            "Inés Scremini",
-            "CGU – LOS CUERVOS",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            14,
+            12,
             "Trinidad Fares",
             "Lobos Rugby Club",
             7
@@ -6416,9 +6398,27 @@
         {
           "club": false,
           "values": [
+            13,
+            "Margarita Etchandy",
+            "Colegio Seminario / Club Seminario",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
+            "Inés Scremini",
+            "CGU – LOS CUERVOS",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             15,
-            "Sofia Delgue",
-            "Pucaru Stade Galulois",
+            "Joaquina Justo",
+            "The British Schools / Old Girls Club",
             6
           ]
         }
@@ -6431,7 +6431,7 @@
       "title": "COPA DE ORO (Intermedia C)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=79",
-      "updatedAt": "2026-11-11T11:17:50.444Z",
+      "updatedAt": "2026-11-11T16:56:17.014Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=79#table-2765",
       "kind": "standings",
       "columns": [
@@ -6567,7 +6567,7 @@
       "title": "COPA DE ORO (Intermedia C)",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=79",
-      "updatedAt": "2026-11-11T11:17:50.444Z",
+      "updatedAt": "2026-11-11T16:56:17.014Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=79#scorers-2765",
       "kind": "scorers",
       "columns": [
@@ -6605,11 +6605,11 @@
           ]
         },
         {
-          "club": false,
+          "club": true,
           "values": [
             4,
-            "Karin Bondorowsky",
-            "Círculo de Tenis de Montevideo",
+            "Emilia Berretta Lizasoain",
+            "Colegio Los Pilares / Club Los Ceibos",
             3
           ]
         },
@@ -6626,17 +6626,17 @@
           "club": false,
           "values": [
             6,
-            "Camila Filipeli",
-            "Pucaru Stade Galulois",
+            "Karin Bondorowsky",
+            "Círculo de Tenis de Montevideo",
             3
           ]
         },
         {
-          "club": true,
+          "club": false,
           "values": [
             7,
-            "Emilia Berretta Lizasoain",
-            "Colegio Los Pilares / Club Los Ceibos",
+            "Camila Filipeli",
+            "Pucaru Stade Galulois",
             3
           ]
         },
@@ -6644,60 +6644,6 @@
           "club": false,
           "values": [
             8,
-            "Valentina Ortas",
-            "Círculo de Tenis de Montevideo",
-            2
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "María Fernanda Presno",
-            "Círculo de Tenis de Montevideo",
-            2
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            10,
-            "Celina Curbelo",
-            "Círculo de Tenis de Montevideo",
-            2
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            11,
-            "María Pia Guzmán",
-            "Círculo de Tenis de Montevideo",
-            2
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            12,
-            "Emma Cikato",
-            "The British Schools / Old Girls Club",
-            2
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            13,
-            "Sol Suárez",
-            "Círculo de Tenis de Montevideo",
-            2
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            14,
             "Sofía Montaño",
             "The British Schools / Old Girls Club",
             2
@@ -6706,9 +6652,63 @@
         {
           "club": false,
           "values": [
-            15,
+            9,
             "Juana Tobías Cernada",
             "Lobos Rugby Club",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            10,
+            "Valentina Ortas",
+            "Círculo de Tenis de Montevideo",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            11,
+            "María Fernanda Presno",
+            "Círculo de Tenis de Montevideo",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            12,
+            "Celina Curbelo",
+            "Círculo de Tenis de Montevideo",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            13,
+            "María Pia Guzmán",
+            "Círculo de Tenis de Montevideo",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
+            "Emma Cikato",
+            "The British Schools / Old Girls Club",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            15,
+            "Sol Suárez",
+            "Círculo de Tenis de Montevideo",
             2
           ]
         }
@@ -6721,7 +6721,7 @@
       "title": "APERTURA (Reserva )",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=2",
-      "updatedAt": "2026-11-11T11:18:01.557Z",
+      "updatedAt": "2026-11-11T16:56:29.249Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=2#table-2737",
       "kind": "standings",
       "columns": [
@@ -6955,7 +6955,7 @@
       "title": "APERTURA (Reserva )",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=2",
-      "updatedAt": "2026-11-11T11:18:01.557Z",
+      "updatedAt": "2026-11-11T16:56:29.249Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=2#scorers-2737",
       "kind": "scorers",
       "columns": [
@@ -7059,7 +7059,7 @@
           "club": false,
           "values": [
             11,
-            "Manuela Vidal",
+            "Sofia Sansalone",
             "Club Náutico",
             7
           ]
@@ -7068,7 +7068,7 @@
           "club": false,
           "values": [
             12,
-            "Manuela Iglesias",
+            "Manuela Vidal",
             "Club Náutico",
             7
           ]
@@ -7077,7 +7077,7 @@
           "club": false,
           "values": [
             13,
-            "Sofia Sansalone",
+            "Manuela Iglesias",
             "Club Náutico",
             7
           ]
@@ -7109,7 +7109,7 @@
       "title": "COPA DE ORO (Reserva )",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=2",
-      "updatedAt": "2026-11-11T11:18:02.104Z",
+      "updatedAt": "2026-11-11T16:56:29.758Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=2#table-2759",
       "kind": "standings",
       "columns": [
@@ -7245,7 +7245,7 @@
       "title": "COPA DE ORO (Reserva )",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=2",
-      "updatedAt": "2026-11-11T11:18:02.104Z",
+      "updatedAt": "2026-11-11T16:56:29.758Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=2#scorers-2759",
       "kind": "scorers",
       "columns": [
@@ -7304,15 +7304,6 @@
           "club": false,
           "values": [
             6,
-            "Lara Barrenechea",
-            "Club Náutico",
-            4
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            7,
             "Paz Quartara",
             "Carrasco Polo Club",
             4
@@ -7321,8 +7312,17 @@
         {
           "club": false,
           "values": [
-            8,
+            7,
             "Manuela Vidal",
+            "Club Náutico",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "Lara Barrenechea",
             "Club Náutico",
             4
           ]
@@ -7367,16 +7367,7 @@
           "club": false,
           "values": [
             13,
-            "Rocio Piana",
-            "The British Schools / Old Girls Club",
-            2
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            14,
-            "Paulina Goldaracena",
+            "Sofia Sansalone",
             "Club Náutico",
             2
           ]
@@ -7384,9 +7375,18 @@
         {
           "club": false,
           "values": [
+            14,
+            "Avril Gutierrez",
+            "Carrasco Polo Club",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             15,
-            "Cecilia Valenzuela",
-            "St. Brendans School / Old Brendans Club",
+            "Rocio Piana",
+            "The British Schools / Old Girls Club",
             2
           ]
         }
@@ -7399,7 +7399,7 @@
       "title": "SEMIFINAL ORO 2 (Reserva )",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=2",
-      "updatedAt": "2026-11-11T11:18:03.088Z",
+      "updatedAt": "2026-11-11T16:56:30.757Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=2#table-2782",
       "kind": "standings",
       "columns": [
@@ -7479,7 +7479,7 @@
       "title": "SEMIFINAL ORO 2 (Reserva )",
       "season": 2026,
       "source": "https://admin.hockey.com.uy/posiciones?category_id=2",
-      "updatedAt": "2026-11-11T11:18:03.088Z",
+      "updatedAt": "2026-11-11T16:56:30.757Z",
       "id": "https://admin.hockey.com.uy/posiciones?category_id=2#scorers-2782",
       "kind": "scorers",
       "columns": [
@@ -7490,18 +7490,9 @@
       ],
       "rows": [
         {
-          "club": false,
-          "values": [
-            1,
-            "Sofía Mora",
-            "CLUB NORTHFIELD",
-            2
-          ]
-        },
-        {
           "club": true,
           "values": [
-            2,
+            1,
             "Manuela Lucas",
             "Colegio Los Pilares / Club Los Ceibos",
             2
@@ -7510,97 +7501,16 @@
         {
           "club": false,
           "values": [
+            2,
+            "Sofía Mora",
+            "CLUB NORTHFIELD",
+            2
+          ]
+        },
+        {
+          "club": false,
+          "values": [
             3,
-            "Justina Bono",
-            "Club Biguá de Villa Biarritz",
-            1
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            4,
-            "Lucila Marini",
-            "CLUB NORTHFIELD",
-            1
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "Jazmin Gramajo",
-            "CLUB NORTHFIELD",
-            1
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            6,
-            "Natalia Bazzino",
-            "Club Biguá de Villa Biarritz",
-            1
-          ]
-        },
-        {
-          "club": true,
-          "values": [
-            7,
-            "Catalina Bocking Bandeira",
-            "Colegio Los Pilares / Club Los Ceibos",
-            1
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            8,
-            "Agustina Loureiro",
-            "CLUB NORTHFIELD",
-            1
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            9,
-            "Emilia Aguerre Borri",
-            "St. Brendans School / Old Brendans Club",
-            1
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            10,
-            "Federica Schaffer",
-            "Club Biguá de Villa Biarritz",
-            1
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            11,
-            "Valentina Coggan",
-            "Club Biguá de Villa Biarritz",
-            1
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            12,
-            "Josefina Coggan",
-            "Club Biguá de Villa Biarritz",
-            1
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            13,
             "Mariel Eva Galli",
             "CLUB NORTHFIELD",
             1
@@ -7609,7 +7519,7 @@
         {
           "club": false,
           "values": [
-            14,
+            4,
             "Mercedes González",
             "Club Biguá de Villa Biarritz",
             1
@@ -7618,9 +7528,99 @@
         {
           "club": true,
           "values": [
-            15,
+            5,
             "María Clara Frontini",
             "Colegio Los Pilares / Club Los Ceibos",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            6,
+            "Justina Bono",
+            "Club Biguá de Villa Biarritz",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            7,
+            "Lucila Marini",
+            "CLUB NORTHFIELD",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "Jazmin Gramajo",
+            "CLUB NORTHFIELD",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            9,
+            "Natalia Bazzino",
+            "Club Biguá de Villa Biarritz",
+            1
+          ]
+        },
+        {
+          "club": true,
+          "values": [
+            10,
+            "Catalina Bocking Bandeira",
+            "Colegio Los Pilares / Club Los Ceibos",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            11,
+            "Agustina Loureiro",
+            "CLUB NORTHFIELD",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            12,
+            "Emilia Aguerre Borri",
+            "St. Brendans School / Old Brendans Club",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            13,
+            "Federica Schaffer",
+            "Club Biguá de Villa Biarritz",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
+            "Valentina Coggan",
+            "Club Biguá de Villa Biarritz",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            15,
+            "Josefina Coggan",
+            "Club Biguá de Villa Biarritz",
             1
           ]
         }
@@ -7694,7 +7694,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-11T11:18:04.945Z",
+      "updatedAt": "2026-11-11T16:56:32.066Z",
       "sourceKey": "rugby"
     },
     {
@@ -7899,7 +7899,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-11T11:18:04.945Z",
+      "updatedAt": "2026-11-11T16:56:32.066Z",
       "sourceKey": "rugby"
     },
     {
@@ -8104,7 +8104,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-11T11:18:04.945Z",
+      "updatedAt": "2026-11-11T16:56:32.067Z",
       "sourceKey": "rugby"
     },
     {
@@ -8249,7 +8249,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-11T11:18:04.945Z",
+      "updatedAt": "2026-11-11T16:56:32.067Z",
       "sourceKey": "rugby"
     },
     {
@@ -8469,7 +8469,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-11T11:18:04.945Z",
+      "updatedAt": "2026-11-11T16:56:32.067Z",
       "sourceKey": "rugby"
     },
     {
@@ -8674,7 +8674,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-11T11:18:04.945Z",
+      "updatedAt": "2026-11-11T16:56:32.067Z",
       "sourceKey": "rugby"
     },
     {
@@ -8879,7 +8879,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-11T11:18:04.946Z",
+      "updatedAt": "2026-11-11T16:56:32.067Z",
       "sourceKey": "rugby"
     },
     {
@@ -8989,7 +8989,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-11T11:18:04.950Z",
+      "updatedAt": "2026-11-11T16:56:32.072Z",
       "sourceKey": "rugby"
     },
     {
@@ -9099,7 +9099,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-11T11:18:04.950Z",
+      "updatedAt": "2026-11-11T16:56:32.072Z",
       "sourceKey": "rugby"
     },
     {
@@ -9209,7 +9209,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-11T11:18:04.950Z",
+      "updatedAt": "2026-11-11T16:56:32.072Z",
       "sourceKey": "rugby"
     },
     {
@@ -9319,7 +9319,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-11T11:18:04.950Z",
+      "updatedAt": "2026-11-11T16:56:32.072Z",
       "sourceKey": "rugby"
     },
     {
@@ -9429,7 +9429,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-11T11:18:04.950Z",
+      "updatedAt": "2026-11-11T16:56:32.072Z",
       "sourceKey": "rugby"
     },
     {
@@ -9539,7 +9539,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-11T11:18:04.950Z",
+      "updatedAt": "2026-11-11T16:56:32.072Z",
       "sourceKey": "rugby"
     }
   ],
