@@ -1,0 +1,70 @@
+name: Actualizar Interno 2026
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "automation/interno-source.mjs"
+      - "automation/interno-source.test.mjs"
+      - "automation/sync-interno.mjs"
+      - ".github/workflows/actualizar-interno.yml"
+  schedule:
+    - cron: "37 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Leer y validar sin publicar cambios
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: actualizar-interno
+  cancel-in-progress: false
+
+jobs:
+  sincronizar:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npx playwright install --with-deps chromium
+      - name: Verificar importación y relojes
+        run: node --test automation/interno-source.test.mjs automation/interno.test.mjs automation/interno-live.test.mjs automation/interno-notifications.test.mjs
+      - name: Leer la fuente pública del torneo
+        run: node automation/sync-interno.mjs
+        env:
+          INTERNO_SYNC_DRY_RUN: ${{ inputs.dry_run }}
+      - name: Publicar únicamente los datos validados del Interno
+        id: guardar
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/interno.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'chore: actualizar Interno 2026'
+          for intento in 1 2 3; do
+            git fetch origin main
+            git merge --no-edit origin/main
+            if git push origin HEAD:main; then
+              echo 'changed=true' >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          done
+          exit 1
+      - name: Actualizar la publicación de la web
+        if: steps.guardar.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST 'repos/${{ github.repository }}/pages/builds' --silent

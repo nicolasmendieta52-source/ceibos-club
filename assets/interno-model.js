@@ -25,6 +25,7 @@ export function validateInterno(data){
   const categories=unique(data.categories,'Categorías'),teams=unique(data.teams,'Equipos'),groups=unique(data.groups,'Series');unique(data.matches,'Partidos');
   for(const category of data.categories){
     if(!text(category.name))throw Error('Nombre de categoría inválido');
+    if(category.minutesPerHalf!==undefined&&(!Number.isInteger(category.minutesPerHalf)||category.minutesPerHalf<1||category.minutesPerHalf>90))throw Error('Duración de categoría inválida');
     if(category.points!==null&&(!category.points||!['win','draw','loss'].every(k=>integer(category.points[k]))))throw Error('Puntuación de categoría inválida');
     if(category.format)validateFormat(category.format);
   }
@@ -58,6 +59,19 @@ export function validateInterno(data){
     for(const scorer of match.scorers||[])if(!text(scorer.player,100)||![match.homeId,match.awayId].includes(scorer.teamId)||!integer(scorer.goals)||scorer.goals===0)throw Error('Goleador inválido');
     if(match.status==='finished')for(const [teamId,goals] of [[match.homeId,match.homeGoals],[match.awayId,match.awayGoals]])if((match.scorers||[]).filter(s=>s.teamId===teamId).reduce((sum,s)=>sum+s.goals,0)>goals)throw Error('Goleadores por encima del marcador');
   }
+  if(data.sourceInfo&&(!publicInternoUrl(data.sourceInfo.url)||data.sourceInfo.intervalMinutes!==60||!validClockStart(data.sourceInfo.importedAt)||!integer(data.sourceInfo.pendingPlayoffs)||!integer(data.sourceInfo.byes)))throw Error('Fuente del Interno inválida');
+  for(const[categoryId,tables]of Object.entries(data.sourceStandings||{})){
+    if(!categories.has(categoryId)||!Array.isArray(tables))throw Error('Tablas externas inválidas');const seen=new Set();
+    for(const table of tables){const group=data.groups.find(row=>row.id===table.id);if(!group||group.categoryId!==categoryId||seen.has(table.id)||!Array.isArray(table.rows))throw Error('Grupo de tabla externa inválido');seen.add(table.id);const members=new Set();
+      for(const row of table.rows){const team=data.teams.find(team=>team.id===row.teamId);if(!team||team.categoryId!==categoryId||team.groupId!==group.id||members.has(team.id)||!text(row.name)||!['played','won','drawn','lost','gf','ga'].every(key=>integer(row[key]))||row.played!==row.won+row.drawn+row.lost||row.gd!==row.gf-row.ga||!Number.isInteger(row.points)||!Number.isInteger(row.adjustment)||(row.adjustment&&!text(row.adjustmentNote,300))||(row.position!==null&&(!integer(row.position)||row.position<1||row.position>table.rows.length)))throw Error('Fila de posiciones externa inválida');members.add(team.id);}
+      if(data.teams.filter(team=>team.groupId===group.id).length!==members.size)throw Error('Tabla de posiciones incompleta');
+    }
+    if(data.groups.filter(group=>group.categoryId===categoryId).length!==seen.size)throw Error('Faltan tablas de grupos');
+  }
+  for(const[categoryId,rows]of Object.entries(data.sourceScorers||{})){
+    if(!categories.has(categoryId)||!Array.isArray(rows))throw Error('Goleadores externos inválidos');const seen=new Set();
+    for(const row of rows){const team=data.teams.find(team=>team.id===row.teamId),key=row.teamId+'|'+String(row.player).trim().normalize('NFKC').toLocaleLowerCase('es');if(!team||team.categoryId!==categoryId||!text(row.player,100)||!text(row.teamName)||!integer(row.goals)||!row.goals||!integer(row.position)||!row.position||seen.has(key))throw Error('Goleador externo inválido');seen.add(key);}
+  }
   return data;
 }
 export function sortedMatches(data,categoryId,finished=false){
@@ -74,6 +88,7 @@ function countGames(rows,games,rules){
 const scoreKey = row => `${row.points}|${row.gd}|${row.gf}`;
 const scoreOrder = (a,b) => b.points-a.points||b.gd-a.gd||b.gf-a.gf;
 export function internoStandings(data,categoryId){
+  if(Object.hasOwn(data.sourceStandings||{},categoryId))return data.sourceStandings[categoryId];
   const category=data.categories.find(c=>c.id===categoryId);
   if(!category?.points)return null; // +38 has its own rules; do not assume the other categories' rules.
   return data.groups.filter(g=>g.categoryId===categoryId).map(group=>{
@@ -94,6 +109,7 @@ export function internoStandings(data,categoryId){
   });
 }
 export function internoScorers(data,categoryId){
+  if(Object.hasOwn(data.sourceScorers||{},categoryId))return data.sourceScorers[categoryId];
   const rows=new Map();
   for(const match of data.matches.filter(m=>m.categoryId===categoryId&&m.status==='finished'))for(const scorer of match.scorers||[]){
     const key=scorer.teamId+'|'+scorer.player.trim().normalize('NFKC').toLocaleLowerCase('es');

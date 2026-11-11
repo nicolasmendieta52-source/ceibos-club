@@ -12,7 +12,7 @@ on:
     # temporizadores por partido; no esperan a la siguiente revisión de cron.
     - cron: "*/5 * * * *"
   workflow_run:
-    workflows: ["Actualizar datos del club"]
+    workflows: ["Actualizar datos del club", "Actualizar Interno 2026"]
     types: [completed]
   workflow_dispatch:
     inputs:

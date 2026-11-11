@@ -126,7 +126,7 @@
     {
       "id": "femenino",
       "name": "Femenino",
-      "minutesPerHalf": 25,
+      "minutesPerHalf": 20,
       "points": {
         "win": 3,
         "draw": 1,
@@ -382,7 +382,9 @@
       "categoryId": "masculino",
       "logoUrl": "/assets/interno/equipos/2026/la-desidia.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "mas-a"
+      "groupId": "mas-a",
+      "sourceTeamId": "M08",
+      "sourceName": "La Desidia"
     },
     {
       "id": "kiwis",
@@ -390,7 +392,9 @@
       "categoryId": "masculino",
       "logoUrl": "/assets/interno/equipos/2026/kiwis.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "mas-a"
+      "groupId": "mas-a",
+      "sourceTeamId": "M05",
+      "sourceName": "Kiwis"
     },
     {
       "id": "la-tropa",
@@ -398,7 +402,9 @@
       "categoryId": "masculino",
       "logoUrl": "/assets/interno/equipos/2026/la-tropa.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "mas-a"
+      "groupId": "mas-a",
+      "sourceTeamId": "M14",
+      "sourceName": "La Tropa"
     },
     {
       "id": "real-alta-gama",
@@ -406,7 +412,9 @@
       "categoryId": "masculino",
       "logoUrl": "/assets/interno/equipos/2026/real-alta-gama.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "mas-a"
+      "groupId": "mas-a",
+      "sourceTeamId": "M17",
+      "sourceName": "Real Alta Gama"
     },
     {
       "id": "paso-cuello",
@@ -414,7 +422,9 @@
       "categoryId": "masculino",
       "logoUrl": "/assets/interno/equipos/2026/paso-cuello.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "mas-b"
+      "groupId": "mas-b",
+      "sourceTeamId": "M11",
+      "sourceName": "Paso Cuello"
     },
     {
       "id": "la-favela",
@@ -422,7 +432,9 @@
       "categoryId": "masculino",
       "logoUrl": "/assets/interno/equipos/2026/la-favela.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "mas-b"
+      "groupId": "mas-b",
+      "sourceTeamId": "M09",
+      "sourceName": "La Favela"
     },
     {
       "id": "deportivo-panal",
@@ -430,7 +442,9 @@
       "categoryId": "masculino",
       "logoUrl": "/assets/interno/equipos/2026/deportivo-panal.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "mas-b"
+      "groupId": "mas-b",
+      "sourceTeamId": "M12",
+      "sourceName": "Deportivo Panal"
     },
     {
       "id": "la-bomb-squad",
@@ -438,7 +452,9 @@
       "categoryId": "masculino",
       "logoUrl": "/assets/interno/equipos/2026/la-bomb-squad.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "mas-b"
+      "groupId": "mas-b",
+      "sourceTeamId": "M16",
+      "sourceName": "La Bomb Squad"
     },
     {
       "id": "rapineros",
@@ -446,7 +462,9 @@
       "categoryId": "masculino",
       "logoUrl": "/assets/interno/equipos/2026/rapineros.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "mas-c"
+      "groupId": "mas-c",
+      "sourceTeamId": "M07",
+      "sourceName": "Rapiñeros"
     },
     {
       "id": "fishermans",
@@ -454,7 +472,9 @@
       "categoryId": "masculino",
       "logoUrl": "/assets/interno/equipos/2026/fishermans.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "mas-c"
+      "groupId": "mas-c",
+      "sourceTeamId": "M20",
+      "sourceName": "Fishermans"
     },
     {
       "id": "la-jeringa",
@@ -462,7 +482,9 @@
       "categoryId": "masculino",
       "logoUrl": "/assets/interno/equipos/2026/la-jeringa.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "mas-c"
+      "groupId": "mas-c",
+      "sourceTeamId": "M10",
+      "sourceName": "La Jeringa"
     },
     {
       "id": "la-vuelta",
@@ -479,7 +501,9 @@
         "shape": "ellipse"
       },
       "sourceUrl": "/assets/interno/grupos/2026/masculino-a-d.jpeg",
-      "groupId": "mas-c"
+      "groupId": "mas-c",
+      "sourceTeamId": "M21",
+      "sourceName": "La Vuelta FC"
     },
     {
       "id": "garrulos-fc",
@@ -487,7 +511,9 @@
       "categoryId": "masculino",
       "logoUrl": "/assets/interno/equipos/2026/garrulos-fc.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "mas-d"
+      "groupId": "mas-d",
+      "sourceTeamId": "M03",
+      "sourceName": "Garrulos FC"
     },
     {
       "id": "la-canuya",
@@ -495,7 +521,9 @@
       "categoryId": "masculino",
       "logoUrl": "/assets/interno/equipos/2026/la-canuya.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "mas-d"
+      "groupId": "mas-d",
+      "sourceTeamId": "M04",
+      "sourceName": "Canuya FC"
     },
     {
       "id": "alaska",
@@ -503,7 +531,9 @@
       "categoryId": "masculino",
       "logoUrl": "/assets/interno/equipos/2026/alaska.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "mas-d"
+      "groupId": "mas-d",
+      "sourceTeamId": "M18",
+      "sourceName": "Alaska"
     },
     {
       "id": "atletico-sin-gps",
@@ -511,7 +541,9 @@
       "categoryId": "masculino",
       "logoUrl": "/assets/interno/equipos/2026/atletico-sin-gps.webp?v=20261028completo",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "mas-d"
+      "groupId": "mas-d",
+      "sourceTeamId": "M06",
+      "sourceName": "Atlético sin GPS"
     },
     {
       "id": "la-fragancia",
@@ -519,7 +551,9 @@
       "categoryId": "masculino",
       "logoUrl": "/assets/interno/equipos/2026/la-fragancia.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "mas-e"
+      "groupId": "mas-e",
+      "sourceTeamId": "M02",
+      "sourceName": "La Fragancia"
     },
     {
       "id": "tuqui-fc",
@@ -527,7 +561,9 @@
       "categoryId": "masculino",
       "logoUrl": "/assets/interno/equipos/2026/tuqui-fc.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "mas-e"
+      "groupId": "mas-e",
+      "sourceTeamId": "M01",
+      "sourceName": "Tuqui"
     },
     {
       "id": "orleans",
@@ -544,7 +580,9 @@
         "shape": "ellipse"
       },
       "sourceUrl": "/assets/interno/grupos/2026/masculino-e-f.jpeg",
-      "groupId": "mas-e"
+      "groupId": "mas-e",
+      "sourceTeamId": "M22",
+      "sourceName": "Orleans FC"
     },
     {
       "id": "la-fecha",
@@ -552,7 +590,9 @@
       "categoryId": "masculino",
       "logoUrl": "/assets/interno/equipos/2026/la-fecha.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "mas-f"
+      "groupId": "mas-f",
+      "sourceTeamId": "M13",
+      "sourceName": "La Fecha"
     },
     {
       "id": "la-jirafa",
@@ -560,7 +600,9 @@
       "categoryId": "masculino",
       "logoUrl": "/assets/interno/equipos/2026/la-jirafa.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "mas-f"
+      "groupId": "mas-f",
+      "sourceTeamId": "M19",
+      "sourceName": "La Jirafa"
     },
     {
       "id": "la-raiz",
@@ -568,7 +610,9 @@
       "categoryId": "masculino",
       "logoUrl": "/assets/interno/equipos/2026/la-raiz.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "mas-f"
+      "groupId": "mas-f",
+      "sourceTeamId": "M15",
+      "sourceName": "La Raiz"
     },
     {
       "id": "maradonas",
@@ -576,7 +620,9 @@
       "categoryId": "femenino",
       "logoUrl": "/assets/interno/equipos/2026/maradonas.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "fem-a"
+      "groupId": "fem-a",
+      "sourceTeamId": "F05",
+      "sourceName": "Maradoñas"
     },
     {
       "id": "rejunte-fc",
@@ -584,7 +630,9 @@
       "categoryId": "femenino",
       "logoUrl": "/assets/interno/equipos/2026/rejunte-fc.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "fem-a"
+      "groupId": "fem-a",
+      "sourceTeamId": "F13",
+      "sourceName": "Rejunte FC"
     },
     {
       "id": "el-tanque-slay",
@@ -592,7 +640,9 @@
       "categoryId": "femenino",
       "logoUrl": "/assets/interno/equipos/2026/el-tanque-slay.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "fem-a"
+      "groupId": "fem-a",
+      "sourceTeamId": "F02",
+      "sourceName": "El Tanque Slay"
     },
     {
       "id": "deportivo-resaca",
@@ -609,7 +659,9 @@
         "shape": "ellipse"
       },
       "sourceUrl": "/assets/interno/grupos/2026/femenino.jpeg",
-      "groupId": "fem-a"
+      "groupId": "fem-a",
+      "sourceTeamId": "F15",
+      "sourceName": "Deportivo Resaca"
     },
     {
       "id": "al-tranque",
@@ -617,7 +669,9 @@
       "categoryId": "femenino",
       "logoUrl": "/assets/interno/equipos/2026/al-tranque.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "fem-b"
+      "groupId": "fem-b",
+      "sourceTeamId": "F12",
+      "sourceName": "Al Tranque"
     },
     {
       "id": "la-naranja-mecanica",
@@ -625,7 +679,9 @@
       "categoryId": "femenino",
       "logoUrl": "/assets/interno/equipos/2026/la-naranja-mecanica.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "fem-b"
+      "groupId": "fem-b",
+      "sourceTeamId": "F01",
+      "sourceName": "La Naranja Mecánica"
     },
     {
       "id": "pido-cambio",
@@ -633,7 +689,9 @@
       "categoryId": "femenino",
       "logoUrl": "/assets/interno/equipos/2026/pido-cambio.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "fem-b"
+      "groupId": "fem-b",
+      "sourceTeamId": "F04",
+      "sourceName": "Pido Cambio"
     },
     {
       "id": "purohumo-fc",
@@ -641,7 +699,9 @@
       "categoryId": "femenino",
       "logoUrl": "/assets/interno/equipos/2026/purohumo-fc.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "fem-b"
+      "groupId": "fem-b",
+      "sourceTeamId": "F14",
+      "sourceName": "Purohumo FC"
     },
     {
       "id": "levantate-fc",
@@ -649,7 +709,9 @@
       "categoryId": "femenino",
       "logoUrl": "/assets/interno/equipos/2026/levantate-fc.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "fem-c"
+      "groupId": "fem-c",
+      "sourceTeamId": "F10",
+      "sourceName": "Levantate FC"
     },
     {
       "id": "la-romineta",
@@ -657,7 +719,9 @@
       "categoryId": "femenino",
       "logoUrl": "/assets/interno/equipos/2026/la-romineta.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "fem-c"
+      "groupId": "fem-c",
+      "sourceTeamId": "F07",
+      "sourceName": "La Romineta"
     },
     {
       "id": "nerea-jrs",
@@ -665,7 +729,9 @@
       "categoryId": "femenino",
       "logoUrl": "/assets/interno/equipos/2026/nerea-jrs.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "fem-c"
+      "groupId": "fem-c",
+      "sourceTeamId": "F09",
+      "sourceName": "Nerea Jrs"
     },
     {
       "id": "pata-de-palo",
@@ -682,7 +748,9 @@
         "shape": "ellipse"
       },
       "sourceUrl": "/assets/interno/grupos/2026/femenino.jpeg",
-      "groupId": "fem-c"
+      "groupId": "fem-c",
+      "sourceTeamId": "F16",
+      "sourceName": "Pata de Palo"
     },
     {
       "id": "la-matanza",
@@ -690,7 +758,9 @@
       "categoryId": "femenino",
       "logoUrl": "/assets/interno/equipos/2026/la-matanza.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "fem-d"
+      "groupId": "fem-d",
+      "sourceTeamId": "F06",
+      "sourceName": "Matanza"
     },
     {
       "id": "fuerte-al-medio",
@@ -698,7 +768,9 @@
       "categoryId": "femenino",
       "logoUrl": "/assets/interno/equipos/2026/fuerte-al-medio.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "fem-d"
+      "groupId": "fem-d",
+      "sourceTeamId": "F08",
+      "sourceName": "Fuerte al Medio"
     },
     {
       "id": "cangreburgers",
@@ -706,7 +778,9 @@
       "categoryId": "femenino",
       "logoUrl": "/assets/interno/equipos/2026/cangreburgers.webp",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
-      "groupId": "fem-d"
+      "groupId": "fem-d",
+      "sourceTeamId": "F03",
+      "sourceName": "Cangreburgers"
     },
     {
       "id": "ramillete",
@@ -723,10 +797,26 @@
         "shape": "ellipse"
       },
       "sourceUrl": "/assets/interno/grupos/2026/femenino.jpeg",
-      "groupId": "fem-d"
+      "groupId": "fem-d",
+      "sourceTeamId": "F11",
+      "sourceName": "Ramillete FC"
     }
   ],
   "groups": [
+    {
+      "id": "papi-a",
+      "name": "Zona A",
+      "categoryId": "mas38",
+      "expectedTeams": 3,
+      "sourceUrl": "/assets/interno/formatos/2026/papi.mp4"
+    },
+    {
+      "id": "papi-b",
+      "name": "Zona B",
+      "categoryId": "mas38",
+      "expectedTeams": 3,
+      "sourceUrl": "/assets/interno/formatos/2026/papi.mp4"
+    },
     {
       "id": "mas-a",
       "name": "Grupo A",
@@ -786,22 +876,1529 @@
       "name": "Grupo D",
       "categoryId": "femenino",
       "sourceUrl": "/assets/interno/grupos/2026/femenino.jpeg"
-    },
-    {
-      "id": "papi-a",
-      "name": "Zona A",
-      "categoryId": "mas38",
-      "expectedTeams": 3,
-      "sourceUrl": "/assets/interno/formatos/2026/papi.mp4"
-    },
-    {
-      "id": "papi-b",
-      "name": "Zona B",
-      "categoryId": "mas38",
-      "expectedTeams": 3,
-      "sourceUrl": "/assets/interno/formatos/2026/papi.mp4"
     }
   ],
-  "matches": [],
-  "groupsVerifiedAt": "2026-11-10"
+  "matches": [
+    {
+      "id": "src-m-p20d4ca7c",
+      "categoryId": "masculino",
+      "homeId": "garrulos-fc",
+      "awayId": "atletico-sin-gps",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P20d4ca7c",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-d",
+      "round": "Fase de grupos · Fecha 1",
+      "date": "2026-11-16",
+      "time": "20:00",
+      "court": "Cancha 5"
+    },
+    {
+      "id": "src-m-p3fa53c74",
+      "categoryId": "masculino",
+      "homeId": "la-desidia",
+      "awayId": "real-alta-gama",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P3fa53c74",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-a",
+      "round": "Fase de grupos · Fecha 1",
+      "date": "2026-11-16",
+      "time": "20:00",
+      "court": "Cancha 6"
+    },
+    {
+      "id": "src-m-p740b0225",
+      "categoryId": "masculino",
+      "homeId": "la-fecha",
+      "awayId": "la-raiz",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P740b0225",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-f",
+      "round": "Fase de grupos · Fecha 1",
+      "date": "2026-11-16",
+      "time": "20:00",
+      "court": "Cancha 2"
+    },
+    {
+      "id": "src-m-pde1d1cac",
+      "categoryId": "masculino",
+      "homeId": "rapineros",
+      "awayId": "la-vuelta",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pde1d1cac",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-c",
+      "round": "Fase de grupos · Fecha 1",
+      "date": "2026-11-16",
+      "time": "20:00",
+      "court": "Cancha 1"
+    },
+    {
+      "id": "src-m-p0d948386",
+      "categoryId": "masculino",
+      "homeId": "la-canuya",
+      "awayId": "alaska",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P0d948386",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-d",
+      "round": "Fase de grupos · Fecha 1",
+      "date": "2026-11-16",
+      "time": "21:00",
+      "court": "Cancha 6"
+    },
+    {
+      "id": "src-m-p43ef3d95",
+      "categoryId": "masculino",
+      "homeId": "kiwis",
+      "awayId": "la-tropa",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P43ef3d95",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-a",
+      "round": "Fase de grupos · Fecha 1",
+      "date": "2026-11-16",
+      "time": "21:00",
+      "court": "Cancha 1"
+    },
+    {
+      "id": "src-m-p72199483",
+      "categoryId": "masculino",
+      "homeId": "paso-cuello",
+      "awayId": "la-bomb-squad",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P72199483",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-b",
+      "round": "Fase de grupos · Fecha 1",
+      "date": "2026-11-16",
+      "time": "21:00",
+      "court": "Cancha 5"
+    },
+    {
+      "id": "src-m-pa03f01e1",
+      "categoryId": "masculino",
+      "homeId": "la-fragancia",
+      "awayId": "orleans",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pa03f01e1",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-e",
+      "round": "Fase de grupos · Fecha 1",
+      "date": "2026-11-16",
+      "time": "21:00",
+      "court": "Cancha 2"
+    },
+    {
+      "id": "src-m-p0d80908f",
+      "categoryId": "masculino",
+      "homeId": "la-favela",
+      "awayId": "deportivo-panal",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P0d80908f",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-b",
+      "round": "Fase de grupos · Fecha 1",
+      "date": "2026-11-16",
+      "time": "22:00",
+      "court": "Cancha 3"
+    },
+    {
+      "id": "src-m-pc0bbc5c6",
+      "categoryId": "masculino",
+      "homeId": "fishermans",
+      "awayId": "la-jeringa",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pc0bbc5c6",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-c",
+      "round": "Fase de grupos · Fecha 1",
+      "date": "2026-11-16",
+      "time": "22:00",
+      "court": "Cancha 4"
+    },
+    {
+      "id": "src-m-pb80f207f",
+      "categoryId": "masculino",
+      "homeId": "rapineros",
+      "awayId": "la-jeringa",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pb80f207f",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-c",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-18",
+      "time": "20:00",
+      "court": "Cancha 5"
+    },
+    {
+      "id": "src-m-pd838080e",
+      "categoryId": "masculino",
+      "homeId": "la-canuya",
+      "awayId": "atletico-sin-gps",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pd838080e",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-d",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-18",
+      "time": "20:00",
+      "court": "Cancha 6"
+    },
+    {
+      "id": "src-m-p41510b24",
+      "categoryId": "masculino",
+      "homeId": "fishermans",
+      "awayId": "la-vuelta",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P41510b24",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-c",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-18",
+      "time": "21:00",
+      "court": "Cancha 5"
+    },
+    {
+      "id": "src-m-pc8e768f7",
+      "categoryId": "masculino",
+      "homeId": "paso-cuello",
+      "awayId": "deportivo-panal",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pc8e768f7",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-b",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-18",
+      "time": "21:00",
+      "court": "Cancha 6"
+    },
+    {
+      "id": "src-m-p2450417b",
+      "categoryId": "masculino",
+      "homeId": "garrulos-fc",
+      "awayId": "alaska",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P2450417b",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-d",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-18",
+      "time": "22:00",
+      "court": "Cancha 5"
+    },
+    {
+      "id": "src-m-p86847c7a",
+      "categoryId": "masculino",
+      "homeId": "la-desidia",
+      "awayId": "la-tropa",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P86847c7a",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-a",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-18",
+      "time": "22:00",
+      "court": "Cancha 1"
+    },
+    {
+      "id": "src-m-p8a8aca9c",
+      "categoryId": "masculino",
+      "homeId": "tuqui-fc",
+      "awayId": "orleans",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P8a8aca9c",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-e",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-18",
+      "time": "22:00",
+      "court": "Cancha 2"
+    },
+    {
+      "id": "src-m-pb1a20972",
+      "categoryId": "masculino",
+      "homeId": "la-jirafa",
+      "awayId": "la-raiz",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pb1a20972",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-f",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-18",
+      "time": "22:00",
+      "court": "Cancha 6"
+    },
+    {
+      "id": "src-m-pd4ca0715",
+      "categoryId": "masculino",
+      "homeId": "la-favela",
+      "awayId": "la-bomb-squad",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pd4ca0715",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-b",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-18",
+      "time": "22:00",
+      "court": "Cancha 3"
+    },
+    {
+      "id": "src-m-p00247e32",
+      "categoryId": "masculino",
+      "homeId": "kiwis",
+      "awayId": "real-alta-gama",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P00247e32",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-a",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-18",
+      "time": "22:15",
+      "court": "Cancha 4"
+    },
+    {
+      "id": "src-m-pe39ff8a3",
+      "categoryId": "masculino",
+      "homeId": "la-desidia",
+      "awayId": "kiwis",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pe39ff8a3",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-a",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-11-23",
+      "time": "20:00",
+      "court": "Cancha 1"
+    },
+    {
+      "id": "src-m-pe95cd66a",
+      "categoryId": "masculino",
+      "homeId": "alaska",
+      "awayId": "atletico-sin-gps",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pe95cd66a",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-d",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-11-23",
+      "time": "20:00",
+      "court": "Cancha 5"
+    },
+    {
+      "id": "src-m-p280358c9",
+      "categoryId": "masculino",
+      "homeId": "la-fragancia",
+      "awayId": "tuqui-fc",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P280358c9",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-e",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-11-23",
+      "time": "21:00",
+      "court": "Cancha 1"
+    },
+    {
+      "id": "src-m-pa77d5c67",
+      "categoryId": "masculino",
+      "homeId": "la-jeringa",
+      "awayId": "la-vuelta",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pa77d5c67",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-c",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-11-23",
+      "time": "21:00",
+      "court": "Cancha 5"
+    },
+    {
+      "id": "src-m-p62d1310b",
+      "categoryId": "masculino",
+      "homeId": "la-tropa",
+      "awayId": "real-alta-gama",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P62d1310b",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-a",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-11-23",
+      "time": "21:15",
+      "court": "Cancha 3"
+    },
+    {
+      "id": "src-m-p680024fa",
+      "categoryId": "masculino",
+      "homeId": "paso-cuello",
+      "awayId": "la-favela",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P680024fa",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-b",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-11-23",
+      "time": "22:00",
+      "court": "Cancha 2"
+    },
+    {
+      "id": "src-m-p8a93f7f7",
+      "categoryId": "masculino",
+      "homeId": "la-fecha",
+      "awayId": "la-jirafa",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P8a93f7f7",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-f",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-11-23",
+      "time": "22:00",
+      "court": "Cancha 4"
+    },
+    {
+      "id": "src-m-pc8b647eb",
+      "categoryId": "masculino",
+      "homeId": "deportivo-panal",
+      "awayId": "la-bomb-squad",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pc8b647eb",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-b",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-11-23",
+      "time": "22:00",
+      "court": "Cancha 5"
+    },
+    {
+      "id": "src-m-pc9ac7bd6",
+      "categoryId": "masculino",
+      "homeId": "rapineros",
+      "awayId": "fishermans",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pc9ac7bd6",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-c",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-11-23",
+      "time": "22:00",
+      "court": "Cancha 1"
+    },
+    {
+      "id": "src-m-p2b4518db",
+      "categoryId": "masculino",
+      "homeId": "garrulos-fc",
+      "awayId": "la-canuya",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P2b4518db",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-d",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-11-23",
+      "time": "22:15",
+      "court": "Cancha 3"
+    },
+    {
+      "id": "src-f-p56adc6b1",
+      "categoryId": "femenino",
+      "homeId": "levantate-fc",
+      "awayId": "pata-de-palo",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P56adc6b1",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-c",
+      "round": "Fase de grupos · Fecha 1",
+      "date": "2026-11-16",
+      "time": "19:45",
+      "court": "Cancha 4"
+    },
+    {
+      "id": "src-f-p6cd544cd",
+      "categoryId": "femenino",
+      "homeId": "rejunte-fc",
+      "awayId": "el-tanque-slay",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P6cd544cd",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-a",
+      "round": "Fase de grupos · Fecha 1",
+      "date": "2026-11-16",
+      "time": "19:45",
+      "court": "Cancha 3"
+    },
+    {
+      "id": "src-f-p45c28ae3",
+      "categoryId": "femenino",
+      "homeId": "la-romineta",
+      "awayId": "nerea-jrs",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P45c28ae3",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-c",
+      "round": "Fase de grupos · Fecha 1",
+      "date": "2026-11-16",
+      "time": "20:30",
+      "court": "Cancha 4"
+    },
+    {
+      "id": "src-f-pe206c79e",
+      "categoryId": "femenino",
+      "homeId": "maradonas",
+      "awayId": "deportivo-resaca",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pe206c79e",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-a",
+      "round": "Fase de grupos · Fecha 1",
+      "date": "2026-11-16",
+      "time": "20:30",
+      "court": "Cancha 3"
+    },
+    {
+      "id": "src-f-p03f1f074",
+      "categoryId": "femenino",
+      "homeId": "al-tranque",
+      "awayId": "purohumo-fc",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P03f1f074",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-b",
+      "round": "Fase de grupos · Fecha 1",
+      "date": "2026-11-16",
+      "time": "21:15",
+      "court": "Cancha 3"
+    },
+    {
+      "id": "src-f-p7925f25a",
+      "categoryId": "femenino",
+      "homeId": "la-matanza",
+      "awayId": "ramillete",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P7925f25a",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-d",
+      "round": "Fase de grupos · Fecha 1",
+      "date": "2026-11-16",
+      "time": "21:15",
+      "court": "Cancha 4"
+    },
+    {
+      "id": "src-f-p87796612",
+      "categoryId": "femenino",
+      "homeId": "la-naranja-mecanica",
+      "awayId": "pido-cambio",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P87796612",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-b",
+      "round": "Fase de grupos · Fecha 1",
+      "date": "2026-11-16",
+      "time": "22:00",
+      "court": "Cancha 1"
+    },
+    {
+      "id": "src-f-pbdc339d7",
+      "categoryId": "femenino",
+      "homeId": "fuerte-al-medio",
+      "awayId": "cangreburgers",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pbdc339d7",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-d",
+      "round": "Fase de grupos · Fecha 1",
+      "date": "2026-11-16",
+      "time": "22:00",
+      "court": "Cancha 2"
+    },
+    {
+      "id": "src-f-p59cc16e6",
+      "categoryId": "femenino",
+      "homeId": "al-tranque",
+      "awayId": "pido-cambio",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P59cc16e6",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-b",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-18",
+      "time": "19:45",
+      "court": "Cancha 3"
+    },
+    {
+      "id": "src-f-p5a4efa08",
+      "categoryId": "femenino",
+      "homeId": "rejunte-fc",
+      "awayId": "deportivo-resaca",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P5a4efa08",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-a",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-18",
+      "time": "19:45",
+      "court": "Cancha 1"
+    },
+    {
+      "id": "src-f-pb44d1113",
+      "categoryId": "femenino",
+      "homeId": "levantate-fc",
+      "awayId": "nerea-jrs",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pb44d1113",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-c",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-18",
+      "time": "19:45",
+      "court": "Cancha 4"
+    },
+    {
+      "id": "src-f-p33727fd6",
+      "categoryId": "femenino",
+      "homeId": "fuerte-al-medio",
+      "awayId": "ramillete",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P33727fd6",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-d",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-18",
+      "time": "20:30",
+      "court": "Cancha 1"
+    },
+    {
+      "id": "src-f-pa59eebe1",
+      "categoryId": "femenino",
+      "homeId": "la-romineta",
+      "awayId": "pata-de-palo",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pa59eebe1",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-c",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-18",
+      "time": "20:30",
+      "court": "Cancha 4"
+    },
+    {
+      "id": "src-f-pde18b1df",
+      "categoryId": "femenino",
+      "homeId": "la-naranja-mecanica",
+      "awayId": "purohumo-fc",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pde18b1df",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-b",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-18",
+      "time": "20:30",
+      "court": "Cancha 3"
+    },
+    {
+      "id": "src-f-pbc47e39c",
+      "categoryId": "femenino",
+      "homeId": "maradonas",
+      "awayId": "el-tanque-slay",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pbc47e39c",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-a",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-18",
+      "time": "21:15",
+      "court": "Cancha 1"
+    },
+    {
+      "id": "src-f-pbdba6482",
+      "categoryId": "femenino",
+      "homeId": "la-matanza",
+      "awayId": "cangreburgers",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pbdba6482",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-d",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-18",
+      "time": "21:15",
+      "court": "Cancha 3"
+    },
+    {
+      "id": "src-f-p23706809",
+      "categoryId": "femenino",
+      "homeId": "el-tanque-slay",
+      "awayId": "deportivo-resaca",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P23706809",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-a",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-11-23",
+      "time": "19:45",
+      "court": "Cancha 2"
+    },
+    {
+      "id": "src-f-pacd5ff9f",
+      "categoryId": "femenino",
+      "homeId": "la-matanza",
+      "awayId": "fuerte-al-medio",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pacd5ff9f",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-d",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-11-23",
+      "time": "19:45",
+      "court": "Cancha 4"
+    },
+    {
+      "id": "src-f-pf2122f23",
+      "categoryId": "femenino",
+      "homeId": "al-tranque",
+      "awayId": "la-naranja-mecanica",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pf2122f23",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-b",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-11-23",
+      "time": "19:45",
+      "court": "Cancha 3"
+    },
+    {
+      "id": "src-f-p1cbe1846",
+      "categoryId": "femenino",
+      "homeId": "pido-cambio",
+      "awayId": "purohumo-fc",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P1cbe1846",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-b",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-11-23",
+      "time": "20:30",
+      "court": "Cancha 4"
+    },
+    {
+      "id": "src-f-p8aece60d",
+      "categoryId": "femenino",
+      "homeId": "cangreburgers",
+      "awayId": "ramillete",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P8aece60d",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-d",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-11-23",
+      "time": "20:30",
+      "court": "Cancha 2"
+    },
+    {
+      "id": "src-f-p90825384",
+      "categoryId": "femenino",
+      "homeId": "maradonas",
+      "awayId": "rejunte-fc",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P90825384",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-a",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-11-23",
+      "time": "20:30",
+      "court": "Cancha 3"
+    },
+    {
+      "id": "src-f-p732b8d98",
+      "categoryId": "femenino",
+      "homeId": "levantate-fc",
+      "awayId": "la-romineta",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P732b8d98",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-c",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-11-23",
+      "time": "21:15",
+      "court": "Cancha 2"
+    },
+    {
+      "id": "src-f-pb42c14f9",
+      "categoryId": "femenino",
+      "homeId": "nerea-jrs",
+      "awayId": "pata-de-palo",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pb42c14f9",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "fem-c",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-11-23",
+      "time": "21:15",
+      "court": "Cancha 4"
+    }
+  ],
+  "groupsVerifiedAt": "2026-11-10",
+  "sourceStandings": {
+    "masculino": [
+      {
+        "id": "mas-a",
+        "name": "Grupo A",
+        "categoryId": "masculino",
+        "sourceUrl": "/assets/interno/grupos/2026/masculino-a-d.jpeg",
+        "rows": [
+          {
+            "teamId": "kiwis",
+            "name": "Kiwis",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "la-desidia",
+            "name": "La Desidia",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "la-tropa",
+            "name": "La Tropa",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "real-alta-gama",
+            "name": "Alta Gama",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          }
+        ]
+      },
+      {
+        "id": "mas-b",
+        "name": "Grupo B",
+        "categoryId": "masculino",
+        "sourceUrl": "/assets/interno/grupos/2026/masculino-a-d.jpeg",
+        "rows": [
+          {
+            "teamId": "deportivo-panal",
+            "name": "Deportivo Panal",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "la-bomb-squad",
+            "name": "Bomb Squad",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "la-favela",
+            "name": "La Favela",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "paso-cuello",
+            "name": "Paso Cuello",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          }
+        ]
+      },
+      {
+        "id": "mas-c",
+        "name": "Grupo C",
+        "categoryId": "masculino",
+        "sourceUrl": "/assets/interno/grupos/2026/masculino-a-d.jpeg",
+        "rows": [
+          {
+            "teamId": "fishermans",
+            "name": "Los Fishermans",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "la-jeringa",
+            "name": "La Jeringa",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "la-vuelta",
+            "name": "La Vuelta",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "rapineros",
+            "name": "Rapiñeros",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          }
+        ]
+      },
+      {
+        "id": "mas-d",
+        "name": "Grupo D",
+        "categoryId": "masculino",
+        "sourceUrl": "/assets/interno/grupos/2026/masculino-a-d.jpeg",
+        "rows": [
+          {
+            "teamId": "alaska",
+            "name": "Alaska",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "atletico-sin-gps",
+            "name": "Atlético Sin GPS",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "la-canuya",
+            "name": "La Canuya",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "garrulos-fc",
+            "name": "Garrulos",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          }
+        ]
+      },
+      {
+        "id": "mas-e",
+        "name": "Grupo E",
+        "categoryId": "masculino",
+        "sourceUrl": "/assets/interno/grupos/2026/masculino-e-f.jpeg",
+        "rows": [
+          {
+            "teamId": "la-fragancia",
+            "name": "La Fragancia",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "orleans",
+            "name": "Orleans",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "tuqui-fc",
+            "name": "Tuqui",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          }
+        ]
+      },
+      {
+        "id": "mas-f",
+        "name": "Grupo F",
+        "categoryId": "masculino",
+        "sourceUrl": "/assets/interno/grupos/2026/masculino-e-f.jpeg",
+        "rows": [
+          {
+            "teamId": "la-fecha",
+            "name": "La Fecha",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "la-jirafa",
+            "name": "La Jirafa",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "la-raiz",
+            "name": "La Raíz",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          }
+        ]
+      }
+    ],
+    "femenino": [
+      {
+        "id": "fem-a",
+        "name": "Grupo A",
+        "categoryId": "femenino",
+        "sourceUrl": "/assets/interno/grupos/2026/femenino.jpeg",
+        "rows": [
+          {
+            "teamId": "deportivo-resaca",
+            "name": "Dep. Resaca",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "el-tanque-slay",
+            "name": "El Tanque Slay",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "maradonas",
+            "name": "Maradoñas",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "rejunte-fc",
+            "name": "Rejunte FC",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          }
+        ]
+      },
+      {
+        "id": "fem-b",
+        "name": "Grupo B",
+        "categoryId": "femenino",
+        "sourceUrl": "/assets/interno/grupos/2026/femenino.jpeg",
+        "rows": [
+          {
+            "teamId": "al-tranque",
+            "name": "Al Tranque",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "la-naranja-mecanica",
+            "name": "Naranja Mecánica",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "pido-cambio",
+            "name": "Pido Cambio",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "purohumo-fc",
+            "name": "PuroHumo",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          }
+        ]
+      },
+      {
+        "id": "fem-c",
+        "name": "Grupo C",
+        "categoryId": "femenino",
+        "sourceUrl": "/assets/interno/grupos/2026/femenino.jpeg",
+        "rows": [
+          {
+            "teamId": "la-romineta",
+            "name": "La Romineta",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "levantate-fc",
+            "name": "Levantate",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "nerea-jrs",
+            "name": "Nerea Jrs",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "pata-de-palo",
+            "name": "Pata de Palo",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          }
+        ]
+      },
+      {
+        "id": "fem-d",
+        "name": "Grupo D",
+        "categoryId": "femenino",
+        "sourceUrl": "/assets/interno/grupos/2026/femenino.jpeg",
+        "rows": [
+          {
+            "teamId": "cangreburgers",
+            "name": "Cangreburgers",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "fuerte-al-medio",
+            "name": "Fuerte al Medio",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "la-matanza",
+            "name": "La Matanza",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "ramillete",
+            "name": "Ramillete",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          }
+        ]
+      }
+    ]
+  },
+  "sourceScorers": {
+    "masculino": [],
+    "femenino": []
+  },
+  "sourceInfo": {
+    "url": "https://interno2026.ceibosfutbol.workers.dev/",
+    "intervalMinutes": 60,
+    "importedAt": "2026-11-11T17:30:49.957Z",
+    "sourceUpdatedAt": "2026-11-11T11:51:21",
+    "categories": [
+      "masculino",
+      "femenino"
+    ],
+    "pendingPlayoffs": 0,
+    "byes": 0
+  }
 }

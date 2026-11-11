@@ -963,7 +963,7 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
   <div class="interno-date"><div><span>La próxima cita</span><strong><time datetime="2026-11-16">16 de noviembre</time></strong></div><a href="https://www.instagram.com/internoceibosclub/p/DeH_uJathTB/" target="_blank" rel="noopener noreferrer">Ver anuncio oficial ↗</a><span class="interno-motto">#PlantandoLaGloria</span></div>
   <div class="interno-live" id="interno-ahora" aria-labelledby="interno-ahora-titulo">
     <div class="interno-live-head"><div><p class="interno-kicker">Interno en cancha</p><h3 id="interno-ahora-titulo">Ahora en las canchas</h3><p class="interno-live-summary" data-live-summary role="status" aria-live="polite">Cargando los horarios del Interno…</p></div><label class="interno-live-filter">Cancha<select data-live-court aria-label="Filtrar tablero por cancha"><option value="">Todas las canchas</option></select></label></div>
-    <p class="interno-live-rules" data-live-rules>25 min + 5 min de descanso + 25 min</p>
+    <p class="interno-live-rules" data-live-rules>Masculino y Papi: 25 + 5 + 25 min · Femenino: 20 + 5 + 20 min</p>
     <div data-live-content><p class="interno-live-empty">Acá vas a ver los partidos simultáneos, la cancha y el tiempo de juego según el fixture.</p></div>
     <p class="interno-live-note">Reloj estimado según la hora de inicio cargada. Los atrasos y las pausas reales pueden cambiar el minuto de juego. El resultado se confirma por separado.</p>
   </div>
@@ -981,12 +981,13 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
     </div>
     <div id="interno-panel" role="tabpanel" aria-labelledby="interno-tab-grupos" tabindex="0"><div class="interno-empty"><h4>Grupos del Interno 2026</h4><p>Cargando los equipos y grupos confirmados de esta edición…</p></div></div>
     <p class="interno-feed-status" id="interno-feed-status" role="status" aria-live="polite"></p>
+    <p class="interno-panel-note" id="interno-source-info" hidden></p>
     <noscript><p class="interno-footer">Activá JavaScript para consultar los equipos y las tablas. También podés seguir los anuncios en <a href="https://www.instagram.com/internoceibosclub/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>.</p></noscript>
   </div>
   <div class="interno-guide" aria-label="Información del torneo 2026">
     <details><summary>Inscripción y fecha de inicio</summary><p>El Interno empieza el <strong>16 de noviembre</strong>. La inscripción de equipos cierra el <strong>9 de noviembre</strong>: cada equipo debe tener al menos ocho jugadores inscriptos y pagos. Consultá a Alfonso por el <a href="https://wa.me/59891393252" target="_blank" rel="noopener noreferrer">091 393 252 ↗</a>.</p></details>
     <details><summary>Días, lugar y categorías</summary><p>Se juega de noche, los lunes y miércoles, en el complejo Los Ceibos, en las canchas de ASPROE y Ceibos. Las categorías son <strong>Masculino, Femenino y Masculino +38</strong>. Si se suspende una fecha, puede reprogramarse para martes o jueves; seguí los avisos oficiales.</p></details>
-    <details><summary>Formato y reglamento</summary><p>Fútbol 8, sin offside y con cambios ilimitados. El tablero usa dos tiempos de 25 minutos y 5 minutos de entretiempo. En la pestaña <strong>Formato y cruces</strong> podés consultar el recorrido de cada categoría y ver los videos explicativos. El reglamento detalla las condiciones de inscripción y de competencia.</p><a class="interno-reglamento-link" href="assets/reglamento-interno-f8-ceibos-2026.pdf" target="_blank" rel="noopener noreferrer">Leer reglamento completo (PDF) ↗</a></details>
+    <details><summary>Formato y reglamento</summary><p>Fútbol 8, sin offside y con cambios ilimitados. Masculino y Papi fútbol juegan dos tiempos de 25 minutos; Femenino, de 20. El entretiempo es de 5 minutos. En la pestaña <strong>Formato y cruces</strong> podés consultar el recorrido de cada categoría y ver los videos explicativos. El reglamento detalla las condiciones de inscripción y de competencia.</p><a class="interno-reglamento-link" href="assets/reglamento-interno-f8-ceibos-2026.pdf" target="_blank" rel="noopener noreferrer">Leer reglamento completo (PDF) ↗</a></details>
   </div>
   <div class="interno-recuerdos" id="interno-2025" aria-labelledby="interno-2025-titulo">
     <p class="interno-kicker">La edición que nos dejó con ganas de más</p>
@@ -3225,7 +3226,7 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
   .catch(() => {});
 </script>
 <script type="module" src="/notifications.js?v=20261110interno"></script>
-<script type="module" src="assets/interno.js?v=20261111reloj"></script>
+<script type="module" src="assets/interno.js?v=20261111fuente"></script>
 <script type="module" src="assets/news-share.js?v=20261111"></script>
 <script src="assets/navigation.js?v=20261028viewport" defer></script>
 </body>

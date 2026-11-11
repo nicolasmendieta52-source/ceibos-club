@@ -85,7 +85,7 @@ test('grupos publicados coinciden con las placas: 22 masculinos y 16 femeninos, 
   for(const [groupId,ids] of Object.entries(expected))assert.deepEqual(data.teams.filter(team=>team.groupId===groupId).map(team=>team.id),ids);
   assert.equal(data.teams.filter(team=>team.categoryId==='masculino').length,22);
   assert.equal(data.teams.filter(team=>team.categoryId==='femenino').length,16);
-  const beforePlay=structuredClone(data);beforePlay.matches=[];
+  const beforePlay=structuredClone(data);beforePlay.matches=[];delete beforePlay.sourceStandings;
   for(const categoryId of ['masculino','femenino'])for(const group of internoStandings(beforePlay,categoryId))assert.ok(group.rows.every(row=>row.position===null&&row.played===0&&row.points===0));
 });
 

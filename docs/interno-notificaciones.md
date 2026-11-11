@@ -8,7 +8,7 @@ Las preferencias se guardan localmente y en la suscripción existente de Firebas
 
 ## De dónde salen los avisos
 
-La fuente es `data/interno.json`, con sus equipos y partidos validados por `assets/interno-model.js`. No se extraen automáticamente resultados de Instagram. Para publicar un resultado, cargar un partido real con ID estable, equipo local/visitante, categoría y `status: "finished"`, `homeGoals`, `awayGoals`; los penales se guardan aparte. El fixture requiere fecha para anunciarse y fecha/hora válidas para programar su inicio.
+La fuente es `data/interno.json`, con sus equipos y partidos validados por `assets/interno-model.js`. Desde el 11/11/2026, Masculino y Femenino se importan cada hora desde https://interno2026.ceibosfutbol.workers.dev/ (ver `docs/interno-datos.md`). Los resultados se cargan en esa aplicación; la web no extrae resultados de Instagram. Cada partido conserva un ID estable, equipo local/visitante, categoría y `status: "finished"`, `homeGoals`, `awayGoals` al confirmarse el resultado; los penales se guardan aparte. El fixture requiere fecha para anunciarse y fecha/hora válidas para programar su inicio.
 
 - **Nuevo:** partido programado que todavía no comenzó y tiene fecha. Si se publica el mismo día después de las 9 h, se utiliza un único aviso «Hoy se juega».
 - **Día:** una vez por partido y fecha, desde las 9 h de Montevideo, antes del comienzo. No se envía de madrugada ni después de un inicio conocido.

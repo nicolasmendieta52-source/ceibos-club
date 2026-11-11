@@ -1,5 +1,5 @@
 export const DEFAULT_CLOCK={halfMinutes:25,breakMinutes:5};
-export function clockSettings(data){return {...DEFAULT_CLOCK,...data?.clock};}
+export function clockSettings(data,match){const settings={...DEFAULT_CLOCK,...data?.clock},category=data?.categories?.find(category=>category.id===match?.categoryId);if(category?.minutesPerHalf)settings.halfMinutes=category.minutesPerHalf;return settings;}
 export function courtName(match){return match.court&&match.venue&&match.court!==match.venue?match.venue+' · '+match.court:String(match.court||match.venue||'');}
 
 export function validClockStart(value){
@@ -35,10 +35,10 @@ export function matchClock(match,config=DEFAULT_CLOCK,now=Date.now()){
 }
 
 export function liveBoard(data,now=Date.now(),court=''){
-  const settings=clockSettings(data),rows=data.matches.map(match=>({match,clock:matchClock(match,settings,now),court:courtName(match)})).filter(row=>row.clock.phase!=='unavailable'&&(!court||row.court===court));
+  const settings=clockSettings(data),rows=data.matches.map(match=>({match,clock:matchClock(match,clockSettings(data,match),now),court:courtName(match)})).filter(row=>row.clock.phase!=='unavailable'&&(!court||row.court===court));
   const compare=(a,b)=>(!a.court)-(!b.court)||a.court.localeCompare(b.court,'es',{numeric:true})||a.clock.start-b.clock.start||a.match.id.localeCompare(b.match.id);
   const active=rows.filter(row=>['first','halftime','second'].includes(row.clock.phase)).sort(compare);
-  const awaiting=rows.filter(row=>row.clock.phase==='awaiting'&&now-row.clock.start<(settings.halfMinutes*2+settings.breakMinutes+60)*60000).sort(compare);
+  const awaiting=rows.filter(row=>{const rule=clockSettings(data,row.match);return row.clock.phase==='awaiting'&&now-row.clock.start<(rule.halfMinutes*2+rule.breakMinutes+60)*60000;}).sort(compare);
   const upcoming=rows.filter(row=>row.clock.phase==='upcoming'&&row.clock.start-now<=86400000).sort((a,b)=>a.clock.start-b.clock.start||compare(a,b));
   const next=upcoming.length?upcoming.filter(row=>row.clock.start===upcoming[0].clock.start):[];
   return {active,awaiting,next,settings};

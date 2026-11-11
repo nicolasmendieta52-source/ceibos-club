@@ -1,4 +1,4 @@
-import {liveBoard,matchClock,clockSettings,courtName} from './interno-live-clock.js?v=20261111';
+import {liveBoard,matchClock,clockSettings,courtName} from './interno-live-clock.js?v=20261111fuente';
 const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const hour=value=>new Intl.DateTimeFormat('es-UY',{hour:'2-digit',minute:'2-digit',hourCycle:'h23',timeZone:'America/Montevideo'}).format(value);
 const day=value=>new Intl.DateTimeFormat('es-UY',{day:'numeric',month:'short',timeZone:'America/Montevideo'}).format(value);
@@ -26,7 +26,7 @@ export function initLiveBoard(root,teamMark){
     }
     for(const row of items){
       const card=[...content.querySelectorAll('[data-live-match]')].find(card=>card.dataset.liveMatch===row.match.id);if(!card)continue;
-      const clock=matchClock(row.match,clockSettings(data),now);
+      const clock=matchClock(row.match,clockSettings(data,row.match),now);
       card.querySelector('[data-live-clock]').textContent=clock.text;card.querySelector('[data-live-phase]').textContent=clock.label;card.querySelector('[data-live-progress]').style.width=(clock.progress*100)+'%';
     }
   }
@@ -37,7 +37,8 @@ export function initLiveBoard(root,teamMark){
     const courts=[...new Set(data.matches.filter(match=>match.status==='scheduled').map(courtName).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es',{numeric:true})),key=JSON.stringify(courts);
     if(key!==courtsSignature){const previous=filter.value;filter.replaceChildren(new Option('Todas las canchas',''),...courts.map(court=>new Option(court,court)));if(courts.includes(previous))filter.value=previous;courtsSignature=key;}
     filter.disabled=!courts.length;
-    root.querySelector('[data-live-rules]').textContent=next.clock?.halfMinutes?next.clock.halfMinutes+' min + '+next.clock.breakMinutes+' min de descanso + '+next.clock.halfMinutes+' min':'25 min + 5 min de descanso + 25 min';
+    const durations=new Map();for(const category of next.categories||[]){const half=clockSettings(next,{categoryId:category.id}).halfMinutes;durations.set(half,[...(durations.get(half)||[]),category.name]);}
+    root.querySelector('[data-live-rules]').textContent=[...durations].map(([half,names])=>names.join(' / ')+': '+half+' + '+clockSettings(next).breakMinutes+' + '+half+' min').join(' · ');
     update();
   },fresh(){stale=false;update();},failed(){stale=true;if(data)update();else{summary.textContent='Horarios no disponibles';content.innerHTML='<p class="interno-live-empty">No pudimos cargar los horarios. Volveremos a intentarlo automáticamente.</p>';}}};
 }
