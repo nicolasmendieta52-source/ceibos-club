@@ -42,6 +42,12 @@ test('horario, suspensión y cancelación generan cambios; nunca programan un in
   assert.match(crearMensajeInterno('change',[partidosInterno(data)[0]]).title,/cancelado/);
 });
 
+test('la cancha del tablero se incluye en los avisos y sus cambios se notifican',()=>{
+  const data=tournament({venue:'Ceibos',court:'Cancha 1'}),state=mark(detectarEventosInterno(data,{},now));
+  const match=partidosInterno(data)[0];assert.equal(match.cancha,'Ceibos · Cancha 1');assert.match(crearMensajeInterno('new',[match]).body,/Ceibos · Cancha 1/);
+  data.matches[0].court='Cancha 2';assert.deepEqual(detectarEventosInterno(data,state,now).events.map(event=>event.tipo),['change']);
+});
+
 test('resultados y correcciones incluyen penales, no se repiten ni notifican el historial inicial',()=>{
   const data=tournament(),state=mark(detectarEventosInterno(data,{},now));Object.assign(data.matches[0],{status:'finished',homeGoals:2,awayGoals:1});
   const at=new Date('2026-11-17T01:00:00Z'),first=detectarEventosInterno(data,state,at);assert.deepEqual(first.events.map(event=>event.tipo),['result']);

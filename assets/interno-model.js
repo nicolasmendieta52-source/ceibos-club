@@ -1,3 +1,4 @@
+import {validClockStart} from './interno-live-clock.js';
 const text = (value,max=120) => typeof value==='string' && value.trim().length>0 && value.trim().length<=max;
 const integer = n => Number.isInteger(n) && n>=0;
 const id = value => typeof value==='string' && /^[a-z0-9][a-z0-9-]{0,79}$/.test(value);
@@ -20,6 +21,7 @@ function validateFormat(format){
 }
 export function validateInterno(data){
   if(data?.version!==1||data.season!==2026||!Array.isArray(data.categories)||!data.categories.length||!Array.isArray(data.teams)||!Array.isArray(data.groups)||!Array.isArray(data.matches))throw Error('Datos del Interno no válidos');
+  if(data.clock&&(!Number.isInteger(data.clock.halfMinutes)||data.clock.halfMinutes<1||data.clock.halfMinutes>90||!Number.isInteger(data.clock.breakMinutes)||data.clock.breakMinutes<1||data.clock.breakMinutes>30))throw Error('Duración del reloj inválida');
   const categories=unique(data.categories,'Categorías'),teams=unique(data.teams,'Equipos'),groups=unique(data.groups,'Series');unique(data.matches,'Partidos');
   for(const category of data.categories){
     if(!text(category.name))throw Error('Nombre de categoría inválido');
@@ -40,6 +42,8 @@ export function validateInterno(data){
     if(team.sourceUrl&&!publicInternoUrl(team.sourceUrl))throw Error('Fuente de equipo no válida');
   }
   for(const match of data.matches){
+    if(match.court!==undefined&&!text(match.court,100))throw Error('Cancha inválida');
+    if(match.startedAt!==undefined&&!validClockStart(match.startedAt))throw Error('Inicio ajustado inválido');
     if(!categories.has(match.categoryId)||!teams.has(match.homeId)||!teams.has(match.awayId)||match.homeId===match.awayId)throw Error('Equipos de partido inválidos');
     const pair=[match.homeId,match.awayId].map(teamId=>data.teams.find(t=>t.id===teamId));
     if(pair.some(t=>t.categoryId!==match.categoryId))throw Error('Partido entre categorías distintas');

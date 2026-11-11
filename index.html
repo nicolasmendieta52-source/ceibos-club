@@ -277,6 +277,7 @@ nav.topbar.solid{
 <link rel="stylesheet" href="/assets/analytics-consent.css?v=20260922">
 <script type="module" src="/assets/analytics.js?v=20261026"></script>
 <link rel="stylesheet" href="assets/interno.css?v=20261110formatos">
+<link rel="stylesheet" href="assets/interno-live.css?v=20261111">
 <link rel="stylesheet" href="assets/interno-notifications.css?v=20261110">
 <link rel="stylesheet" href="assets/navigation.css?v=20261028floating">
 <link rel="stylesheet" href="assets/news.css?v=20261020archivo">
@@ -960,6 +961,12 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
     </div>
   </div>
   <div class="interno-date"><div><span>La próxima cita</span><strong><time datetime="2026-11-16">16 de noviembre</time></strong></div><a href="https://www.instagram.com/internoceibosclub/p/DeH_uJathTB/" target="_blank" rel="noopener noreferrer">Ver anuncio oficial ↗</a><span class="interno-motto">#PlantandoLaGloria</span></div>
+  <div class="interno-live" id="interno-ahora" aria-labelledby="interno-ahora-titulo">
+    <div class="interno-live-head"><div><p class="interno-kicker">Interno en cancha</p><h3 id="interno-ahora-titulo">Ahora en las canchas</h3><p class="interno-live-summary" data-live-summary role="status" aria-live="polite">Cargando los horarios del Interno…</p></div><label class="interno-live-filter">Cancha<select data-live-court aria-label="Filtrar tablero por cancha"><option value="">Todas las canchas</option></select></label></div>
+    <p class="interno-live-rules" data-live-rules>25 min + 5 min de descanso + 25 min</p>
+    <div data-live-content><p class="interno-live-empty">Acá vas a ver los partidos simultáneos, la cancha y el tiempo de juego según el fixture.</p></div>
+    <p class="interno-live-note">Reloj estimado según la hora de inicio cargada. Los atrasos y las pausas reales pueden cambiar el minuto de juego. El resultado se confirma por separado.</p>
+  </div>
   <div class="interno-alerts"><div><h3>Seguí a tu equipo</h3><p>Recibí el fixture, los cambios, los avisos de inicio y los resultados del Interno. Elegí una categoría o tu equipo.</p></div><button class="btn btn-oro" type="button" data-notificaciones-interno>Elegir mis avisos →</button></div>
   <div class="interno-torneo" aria-labelledby="interno-edicion-titulo">
     <div class="interno-torneo-head"><div><p class="interno-kicker">El torneo, fecha a fecha</p><h3 id="interno-edicion-titulo">La edición 2026</h3></div><label class="interno-category-label" for="interno-categoria">Categoría<select id="interno-categoria"><option value="masculino">Masculino</option><option value="femenino">Femenino</option><option value="mas38">Papi fútbol (+38)</option></select></label></div>
@@ -979,7 +986,7 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
   <div class="interno-guide" aria-label="Información del torneo 2026">
     <details><summary>Inscripción y fecha de inicio</summary><p>El Interno empieza el <strong>16 de noviembre</strong>. La inscripción de equipos cierra el <strong>9 de noviembre</strong>: cada equipo debe tener al menos ocho jugadores inscriptos y pagos. Consultá a Alfonso por el <a href="https://wa.me/59891393252" target="_blank" rel="noopener noreferrer">091 393 252 ↗</a>.</p></details>
     <details><summary>Días, lugar y categorías</summary><p>Se juega de noche, los lunes y miércoles, en el complejo Los Ceibos, en las canchas de ASPROE y Ceibos. Las categorías son <strong>Masculino, Femenino y Masculino +38</strong>. Si se suspende una fecha, puede reprogramarse para martes o jueves; seguí los avisos oficiales.</p></details>
-    <details><summary>Formato y reglamento</summary><p>Fútbol 8, sin offside y con cambios ilimitados. Masculino y Papi fútbol (+38) juegan dos tiempos de 25 minutos; Femenino, de 20. En la pestaña <strong>Formato y cruces</strong> podés consultar el recorrido de cada categoría y ver los videos explicativos. El reglamento detalla las condiciones de inscripción y de competencia.</p><a class="interno-reglamento-link" href="assets/reglamento-interno-f8-ceibos-2026.pdf" target="_blank" rel="noopener noreferrer">Leer reglamento completo (PDF) ↗</a></details>
+    <details><summary>Formato y reglamento</summary><p>Fútbol 8, sin offside y con cambios ilimitados. El tablero usa dos tiempos de 25 minutos y 5 minutos de entretiempo. En la pestaña <strong>Formato y cruces</strong> podés consultar el recorrido de cada categoría y ver los videos explicativos. El reglamento detalla las condiciones de inscripción y de competencia.</p><a class="interno-reglamento-link" href="assets/reglamento-interno-f8-ceibos-2026.pdf" target="_blank" rel="noopener noreferrer">Leer reglamento completo (PDF) ↗</a></details>
   </div>
   <div class="interno-recuerdos" id="interno-2025" aria-labelledby="interno-2025-titulo">
     <p class="interno-kicker">La edición que nos dejó con ganas de más</p>
@@ -3181,7 +3188,7 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
   .catch(() => {});
 </script>
 <script type="module" src="/notifications.js?v=20261110interno"></script>
-<script type="module" src="assets/interno.js?v=20261110avisos"></script>
+<script type="module" src="assets/interno.js?v=20261111reloj"></script>
 <script src="assets/navigation.js?v=20261028viewport" defer></script>
 </body>
 </html>

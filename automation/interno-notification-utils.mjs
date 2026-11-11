@@ -1,5 +1,6 @@
 import {createHash} from 'node:crypto';
 import {validateInterno} from '../assets/interno-model.js';
+import {courtName} from '../assets/interno-live-clock.js';
 import {fechaMontevideo,horaMontevideo,instanteInicio,minutosDesdeInicio} from './notification-utils.mjs';
 export {siguePartidoInterno} from '../assets/interno-notification-preferences.js';
 
@@ -10,7 +11,7 @@ export function partidosInterno(data){
   validateInterno(data);
   return data.matches.map(match=>{
     const home=data.teams.find(team=>team.id===match.homeId),away=data.teams.find(team=>team.id===match.awayId),category=data.categories.find(category=>category.id===match.categoryId),group=data.groups.find(group=>group.id===match.groupId);
-    return {deporte:'interno',categoria:category.name,rival:home.name+' vs. '+away.name,fecha:match.date||'',hora:match.time||'',cancha:match.venue||'',estado:statusNames[match.status],internoId:data.season+'|'+match.id,internoMatchId:match.id,internoCategoryId:match.categoryId,internoTeamIds:[home.id,away.id],homeName:home.name,awayName:away.name,internoStatus:match.status,homeGoals:match.homeGoals??null,awayGoals:match.awayGoals??null,penalties:match.penalties||null,doubleForfeit:match.doubleForfeit===true,fase:match.round||group?.name||(match.stage==='playoffs'?'Eliminatorias':'Fase de grupos')};
+    return {deporte:'interno',categoria:category.name,rival:home.name+' vs. '+away.name,fecha:match.date||'',hora:match.time||'',cancha:courtName(match),estado:statusNames[match.status],internoId:data.season+'|'+match.id,internoMatchId:match.id,internoCategoryId:match.categoryId,internoTeamIds:[home.id,away.id],homeName:home.name,awayName:away.name,internoStatus:match.status,homeGoals:match.homeGoals??null,awayGoals:match.awayGoals??null,penalties:match.penalties||null,doubleForfeit:match.doubleForfeit===true,fase:match.round||group?.name||(match.stage==='playoffs'?'Eliminatorias':'Fase de grupos')};
   });
 }
 

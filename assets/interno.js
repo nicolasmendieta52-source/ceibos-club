@@ -1,15 +1,17 @@
-import {validateInterno,publicInternoUrl,sortedMatches,internoStandings,internoScorers} from './interno-model.js?v=20261110formatos';
+import {validateInterno,publicInternoUrl,sortedMatches,internoStandings,internoScorers} from './interno-model.js?v=20261111reloj';
+import {initLiveBoard} from './interno-live.js?v=20261111';
+import {courtName} from './interno-live-clock.js?v=20261111';
 
 const escape = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const sourceLink = (url,label) => publicInternoUrl(url) ? '<a class="interno-media-link" href="'+escape(publicInternoUrl(url))+'" target="_blank" rel="noopener noreferrer">'+escape(label)+' ↗</a>' : '';
 const empty = (title,message,url) => '<div class="interno-empty"><span class="interno-soon">Próximamente</span><h4>'+escape(title)+'</h4><p>'+escape(message)+'</p>'+sourceLink(url,'Ver destacada 2026')+'</div>';
 const dateLabel = date => date ? new Intl.DateTimeFormat('es-UY',{day:'numeric',month:'long',timeZone:'UTC'}).format(new Date(date+'T12:00:00Z')) : 'Fecha a confirmar';
 
-function teamMarkMarkup(team){
+function teamMarkMarkup(team,scope=''){
   const initials=team.name.split(/\s+/).slice(0,2).map(word=>[...word][0]).join('');
   const logo=publicInternoUrl(team.logoUrl),crop=team.logoCrop;
   // Show the original poster pixels through an SVG viewport; the supplied artwork stays intact.
-  const clipId='interno-escudo-'+team.id;
+  const clipId='interno-escudo-'+(scope?scope+'-':'')+team.id;
   const mask=crop?.shape==='ellipse'?'<defs><clipPath id="'+clipId+'"><ellipse cx="'+(crop.x+crop.width/2)+'" cy="'+(crop.y+crop.height/2)+'" rx="'+crop.width/2+'" ry="'+crop.height/2+'"/></clipPath></defs>':'';
   const image=logo?(crop?'<svg viewBox="'+[crop.x,crop.y,crop.width,crop.height].join(' ')+'" aria-hidden="true" focusable="false">'+mask+'<image href="'+escape(logo)+'" width="'+crop.imageWidth+'" height="'+crop.imageHeight+'"'+(mask?' clip-path="url(#'+clipId+')"':'')+'/></svg>':'<img src="'+escape(logo)+'" alt="" loading="lazy" decoding="async">'):'';
   return '<div class="interno-team-mark'+(logo?' interno-team-mark-logo':'')+'" aria-hidden="true"><span>'+escape(initials)+'</span>'+image+'</div>';
@@ -46,7 +48,7 @@ function matchMarkup(data,match){
   const status={postponed:'Postergado',suspended:'Suspendido'}[match.status];
   const finished=match.status==='finished';
   const datetime=match.date?' datetime="'+escape(match.date+(match.time?'T'+match.time+':00-03:00':''))+'"':'';
-  return '<article class="interno-match" id="interno-partido-'+escape(match.id)+'"><div class="interno-match-meta"><span>'+escape(phase)+'</span>'+(status?'<strong>'+status+'</strong>':'')+'<time'+datetime+'>'+escape(dateLabel(match.date))+(match.time?' · '+escape(match.time)+' h':finished?'':' · Horario a confirmar')+'</time></div><div class="interno-match-pair"><span>'+escape(home.name)+'</span><strong class="interno-score">'+(finished?match.homeGoals+' <span>–</span> '+match.awayGoals:'<span>vs.</span>')+'</strong><span>'+escape(away.name)+'</span></div>'+(match.penalties?'<p class="interno-match-note">Penales: '+match.penalties.home+'–'+match.penalties.away+'</p>':'')+(match.doubleForfeit?'<p class="interno-match-note">Doble incomparecencia: sin puntos ni goles.</p>':'')+(match.venue?'<p class="interno-match-note">'+escape(match.venue)+'</p>':'')+(match.sourceUrl?sourceLink(match.sourceUrl,'Ver publicación'):'')+'</article>';
+  return '<article class="interno-match" id="interno-partido-'+escape(match.id)+'"><div class="interno-match-meta"><span>'+escape(phase)+'</span>'+(status?'<strong>'+status+'</strong>':'')+'<time'+datetime+'>'+escape(dateLabel(match.date))+(match.time?' · '+escape(match.time)+' h':finished?'':' · Horario a confirmar')+'</time></div><div class="interno-match-pair"><span>'+escape(home.name)+'</span><strong class="interno-score">'+(finished?match.homeGoals+' <span>–</span> '+match.awayGoals:'<span>vs.</span>')+'</strong><span>'+escape(away.name)+'</span></div>'+(match.penalties?'<p class="interno-match-note">Penales: '+match.penalties.home+'–'+match.penalties.away+'</p>':'')+(match.doubleForfeit?'<p class="interno-match-note">Doble incomparecencia: sin puntos ni goles.</p>':'')+(courtName(match)?'<p class="interno-match-note">'+escape(courtName(match))+'</p>':'')+(match.sourceUrl?sourceLink(match.sourceUrl,'Ver publicación'):'')+'</article>';
 }
 
 export function internoPanelMarkup(data,categoryId,tab){
@@ -84,6 +86,7 @@ export function internoPanelMarkup(data,categoryId,tab){
 function initInterno(){
   const panel=document.getElementById('interno-panel'),select=document.getElementById('interno-categoria'),status=document.getElementById('interno-feed-status');
   if(!panel||!select||!status)return;
+  const live=initLiveBoard(document.getElementById('interno-ahora'),teamMarkMarkup);
   const tabs=[...document.querySelectorAll('[data-interno-tab]')];
   const notificationParams=new URLSearchParams(location.search),requestedCategory=notificationParams.get('internoCategoria'),requestedTab=notificationParams.get('internoTab'),requestedMatch=notificationParams.get('internoPartido');
   if(['masculino','femenino','mas38'].includes(requestedCategory))select.value=requestedCategory;
@@ -123,14 +126,16 @@ function initInterno(){
         const previous=select.value;data=next;lastJson=json;
         select.replaceChildren(...data.categories.map(category=>{const option=document.createElement('option');option.value=category.id;option.textContent=category.name;return option;}));
         if(data.categories.some(c=>c.id===previous))select.value=previous;
-        render();
+        render();live.setData(data);
         const form=data.registrationOpen&&publicInternoUrl(data.registrationUrl);
         if(contact&&originalContact){contact.href=form||originalContact.href;contact.textContent=form?'Inscribirme al Interno ↗':originalContact.text;}
         document.getElementById('interno-inscripcion-estado').textContent=form?'Inscripciones abiertas':originalState;
         document.getElementById('interno-inscripcion-texto').textContent=form?'Completá el formulario oficial para anotarte al Interno.':originalText;
       }
       status.textContent='';
+      live.fresh();
     }catch{
+      live.failed();
       status.textContent=data?'No pudimos actualizar el torneo. Seguís viendo los últimos datos cargados.':'No pudimos cargar el torneo. Consultá los anuncios del Interno en Instagram; volveremos a intentar en un minuto.';
     }finally{clearTimeout(timer);loading=false;}
   }
