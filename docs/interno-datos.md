@@ -8,6 +8,7 @@ El workflow **Actualizar Interno 2026** lee una vez por hora, al minuto 37, adem
 
 - Equipos y grupos de Masculino (`M`) y Femenino (`F`), conservando IDs, escudos y encuadres existentes mediante correspondencias de nombre y posteriormente el ID de origen.
 - Fixture con ID estable, local/visitante, fase, fecha, hora y cancha. Los números de cancha se muestran como «Cancha 1», etc.; no se inventan sedes.
+- Fixture y resultados agrupados por día, con encabezado de fecha y cantidad de partidos. El fixture mantiene las fechas próximas primero y los horarios ascendentes; los resultados muestran primero los días más recientes. Las fechas pendientes quedan al final. Los enlaces directos a partidos y la sincronización horaria se conservan.
 - Resultados completos confirmados, incluidos 0–0 reales y penales de eliminatorias. Un marcador vacío no se convierte en cero.
 - Tablas oficiales por grupo: se respeta el orden y el puntaje publicados, incluidos ajustes. Sin partidos jugados no se presentan posiciones competitivas.
 - Goleadores publicados y autores de goles confirmados de cada partido. Los goles en contra no se adjudican al ranking personal.

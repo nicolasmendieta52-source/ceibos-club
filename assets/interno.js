@@ -52,6 +52,15 @@ function matchMarkup(data,match){
   return '<article class="interno-match" id="interno-partido-'+escape(match.id)+'"><div class="interno-match-meta"><span>'+escape(phase)+'</span>'+(status?'<strong>'+status+'</strong>':'')+'<time'+datetime+'>'+escape(dateLabel(match.date))+(match.time?' · '+escape(match.time)+' h':finished?'':' · Horario a confirmar')+'</time></div><div class="interno-match-pair"><span>'+escape(home.name)+'</span><strong class="interno-score">'+(finished?match.homeGoals+' <span>–</span> '+match.awayGoals:'<span>vs.</span>')+'</strong><span>'+escape(away.name)+'</span></div>'+(match.penalties?'<p class="interno-match-note">Penales: '+match.penalties.home+'–'+match.penalties.away+'</p>':'')+(match.doubleForfeit?'<p class="interno-match-note">Doble incomparecencia: sin puntos ni goles.</p>':'')+(courtName(match)?'<p class="interno-match-note">'+escape(courtName(match))+'</p>':'')+(match.sourceUrl?sourceLink(match.sourceUrl,match.sourceId?'Ver fuente del partido':'Ver publicación'):'')+'</article>';
 }
 
+function matchesByDayMarkup(data,matches,categoryId,tab){
+  const days=new Map();for(const match of matches){const date=match.date||'';if(!days.has(date))days.set(date,[]);days.get(date).push(match);}
+  return '<div class="interno-match-days">'+[...days].map(([date,games])=>{
+    const heading='interno-'+categoryId+'-'+tab+'-dia-'+(date||'pendiente');
+    const label=date?new Intl.DateTimeFormat('es-UY',{weekday:'long',day:'numeric',month:'long',timeZone:'UTC'}).format(new Date(date+'T12:00:00Z')):'Fecha a confirmar';
+    return '<div class="interno-match-day" role="group" aria-labelledby="'+heading+'" data-interno-day="'+escape(date)+'"><div class="interno-match-day-head"><h4 id="'+heading+'">'+(date?'<time datetime="'+escape(date)+'">'+escape(label)+'</time>':label)+'</h4><span>'+games.length+' '+(games.length===1?'partido':'partidos')+'</span></div><div class="interno-match-list">'+games.map(match=>matchMarkup(data,match)).join('')+'</div></div>';
+  }).join('')+'</div>';
+}
+
 export function internoPanelMarkup(data,categoryId,tab){
   const teams=data.teams.filter(t=>t.categoryId===categoryId);
   if(tab==='grupos')return groupsMarkup(data,categoryId);
@@ -67,7 +76,7 @@ export function internoPanelMarkup(data,categoryId,tab){
   if(tab==='fixture'||tab==='resultados'){
     const matches=sortedMatches(data,categoryId,tab==='resultados');
     if(!matches.length)return empty(tab==='fixture'?'El camino al título':'Cada partido cuenta',tab==='fixture'?'Acá vas a encontrar los cruces de esta categoría, ordenados del más próximo al más lejano.':'Los resultados de esta categoría aparecerán acá cuando se jueguen los partidos.');
-    return '<div class="interno-match-list">'+matches.map(match=>matchMarkup(data,match)).join('')+'</div>';
+    return matchesByDayMarkup(data,matches,categoryId,tab);
   }
   if(tab==='posiciones'){
     const groups=internoStandings(data,categoryId);
