@@ -275,12 +275,12 @@ nav.topbar.solid{
 .ticker-item .gano{color:var(--verde)}
 </style>
 <link rel="stylesheet" href="/assets/analytics-consent.css?v=20260922">
-<script type="module" src="/assets/analytics.js?v=20261111"></script>
+<script type="module" src="/assets/analytics.js?v=20261111noticias"></script>
 <link rel="stylesheet" href="assets/interno.css?v=20261110formatos">
 <link rel="stylesheet" href="assets/interno-live.css?v=20261111">
 <link rel="stylesheet" href="assets/interno-notifications.css?v=20261110">
 <link rel="stylesheet" href="assets/navigation.css?v=20261028floating">
-<link rel="stylesheet" href="assets/news.css?v=20261020archivo">
+<link rel="stylesheet" href="assets/news.css?v=20261111ascenso">
 </head>
 <body>
 <!-- Árbol decorativo (watermark) — el escudo oficial va como imagen PNG del manual -->
@@ -1032,6 +1032,22 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
     <div><div class="tag-sec">Comunidad</div><h2 class="titulo" id="noticias-titulo">Noticias del <em>club</em></h2></div>
     <p>Los logros y las novedades que compartimos como comunidad.</p>
   </div>
+  <article class="club-news-feature" id="noticia-ceibos-ascenso-a-2026" aria-labelledby="noticia-ceibos-ascenso-a-titulo">
+    <figure class="club-news-photo club-news-photo--team">
+      <img src="assets/noticia-ceibos-ascenso-a-2026.jpg" alt="Jugadores y allegados de Ceibos Fútbol celebrando juntos el ascenso a la A" width="2048" height="1152" loading="lazy" decoding="async">
+      <figcaption>Ceibos Fútbol · Ascenso a la A · Foto: @ceibosfutbol</figcaption>
+    </figure>
+    <div class="club-news-copy">
+      <p class="club-news-category">Fútbol · Ascenso 2026<time class="club-news-date" datetime="2026-11-09">9 de noviembre de 2026</time></p>
+      <h3 id="noticia-ceibos-ascenso-a-titulo">Ceibos<br><em>es de la A.</em></h3>
+      <p class="club-news-award">Un logro de todo el club</p>
+      <p class="club-news-body">Ceibos Fútbol celebra su ascenso a la A. Un logro construido durante años, con el esfuerzo de jugadores, cuerpos técnicos, familias e hinchas. ¡Felicitaciones a todos los que fueron y son parte de este camino!</p>
+      <a class="club-news-link" href="https://www.instagram.com/p/Dfhb-Tdt9lV/" target="_blank" rel="noopener noreferrer">Ver publicación en Instagram <span aria-hidden="true">↗</span></a>
+      <button class="club-news-share" type="button" data-news-share="noticia-ceibos-ascenso-a-2026" hidden>Compartir en Instagram ↗</button>
+      <p class="club-news-share-status" data-news-status role="status" aria-live="polite"></p>
+      <p class="club-news-source">@ceibosfutbol</p>
+    </div>
+  </article>
   <article class="club-news-feature" aria-labelledby="noticia-m19-copa-uruguay">
     <figure class="club-news-photo club-news-photo--team">
       <img src="assets/noticia-m19-copa-uruguay-2026.jpg" alt="El plantel M19 de Ceibos Rugby junto a la copa de campeón de la Copa Uruguay" width="1600" height="1200" loading="lazy" decoding="async">
@@ -1075,6 +1091,27 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
     </div>
   </article>
 </section>
+
+<dialog class="club-news-dialog" id="noticiaPostalDialog" aria-labelledby="noticiaPostalTitulo" aria-describedby="noticiaPostalAyuda">
+  <div class="club-news-dialog-inner">
+    <button class="club-news-dialog-close" type="button" data-news-close aria-label="Cerrar vista previa">×</button>
+    <div class="club-news-story-grid">
+      <img id="noticiaPostalImagen" class="club-news-story-preview" alt="" width="1080" height="1920">
+      <div class="club-news-story-copy">
+        <p class="club-news-category">Noticias Ceibos · Historia de Instagram</p>
+        <h2 id="noticiaPostalTitulo">Compartí la alegría.</h2>
+        <p id="noticiaPostalAyuda">Elegí Instagram en el menú de compartir de tu celular. Si no aparece, descargá la postal y agregala a tu historia.</p>
+        <p>Formato vertical 9:16 · 1080 × 1920. Podés copiar el enlace de la noticia para sumarlo a tu historia.</p>
+        <div class="club-news-story-actions">
+          <button class="club-news-share" type="button" data-news-send>Compartir postal</button>
+          <button class="club-news-story-secondary" type="button" data-news-download>Descargar PNG</button>
+          <button class="club-news-story-secondary" type="button" data-news-link>Copiar enlace</button>
+        </div>
+        <p class="club-news-story-status" id="noticiaPostalEstado" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+</dialog>
 
 <!-- ======================= VIDA CEIBOS ======================= -->
 <section id="vida">
@@ -3189,6 +3226,7 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
 </script>
 <script type="module" src="/notifications.js?v=20261110interno"></script>
 <script type="module" src="assets/interno.js?v=20261111reloj"></script>
+<script type="module" src="assets/news-share.js?v=20261111"></script>
 <script src="assets/navigation.js?v=20261028viewport" defer></script>
 </body>
 </html>

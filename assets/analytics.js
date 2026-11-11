@@ -46,7 +46,7 @@ async function start(){
     if(el.hasAttribute('data-categoria'))return action('category');
     if(el.closest('#shop'))return action('shop');
     if(el.matches('[data-modo-partido]'))return action('match');
-    if(el.matches('[data-postal-partido],[data-postal-partido-indice]'))return action('share');
+    if(el.matches('[data-postal-partido],[data-postal-partido-indice],[data-news-share],[data-news-send],[data-news-download],[data-news-link]'))return action('share');
     if(el.tagName==='A'){try{const u=new URL(el.href);if(u.protocol==='mailto:')action('email');else if(u.protocol==='tel:')action('phone');else if(/(^|\.)(wa.me|whatsapp.com)$/.test(u.hostname))action('whatsapp');else if(/(^|\.)instagram.com$/.test(u.hostname))action('instagram');else if(u.origin!==location.origin)action('external');else action('navigation');}catch{}}
   }
   // Tall sections can exceed ten mobile viewports. Observe entry, then measure
