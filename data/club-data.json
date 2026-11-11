@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-11T17:41:14.705Z",
+        "updatedAt": "2026-11-11T19:41:20.485Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-11T17:41:14.832Z",
+        "updatedAt": "2026-11-11T19:41:20.662Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-11T17:41:14.920Z",
+        "updatedAt": "2026-11-11T19:41:20.744Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-11T17:41:15.025Z",
+        "updatedAt": "2026-11-11T19:41:20.850Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-11T17:41:15.147Z",
+        "updatedAt": "2026-11-11T19:41:20.946Z",
         "tables": [
           {
             "id": 2239,
@@ -7078,10 +7078,18 @@
       "goleadores": [
         "CAMILO VERA (55')"
       ]
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Reserva A",
+      "rival": "NACIONAL UNIVERSITARIO",
+      "gf": 0,
+      "gc": 2,
+      "fecha": "2026-12-30"
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-11-11T17:44:33.094Z",
+  "actualizadoEn": "2026-11-11T19:44:39.342Z",
   "diagnostico": {
     "fuentes": [
       {
