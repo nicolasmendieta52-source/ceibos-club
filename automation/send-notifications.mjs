@@ -5,6 +5,7 @@ import {pathToFileURL} from "node:url";
 import {randomUUID} from 'node:crypto';
 import {reserveStarts, completeStarts, releaseStarts} from './notification-start-store.mjs';
 import { agruparPorDeporte, detectarEventos, fechaMontevideo, marcarEnviados, minutosDesdeInicio, podarEstado } from "./notification-utils.mjs";
+import {crearMensajeInterno,siguePartidoInterno} from './interno-notification-utils.mjs';
 
 const raiz = path.resolve(import.meta.dirname, "..");
 const datosPath = path.join(raiz, "data", "club-data.json");
@@ -16,7 +17,7 @@ const modoPrueba = process.argv.includes("--test");
 const soloInicios = process.argv.includes("--start-only");
 const omitirInicios = process.argv.includes("--skip-starts");
 
-const NOMBRES = { futbol: "Fútbol", rugby: "Rugby", hockey: "Hockey", basketball: "Basketball" };
+const NOMBRES = { futbol: "Fútbol", rugby: "Rugby", hockey: "Hockey", basketball: "Basketball", interno: "Interno" };
 let webpush;
 
 async function leerJson(ruta, fallback = {}) {
@@ -55,6 +56,7 @@ function demoraHumana(minutos) {
 }
 
 export function crearMensaje(tipo, deporte, partidos, ahora = new Date()) {
+  if(deporte==='interno')return crearMensajeInterno(tipo,partidos,ahora);
   const ordenados = [...partidos].sort((a, b) => String(a.fecha).localeCompare(String(b.fecha)) || String(a.hora || "").localeCompare(String(b.hora || "")));
   const primero = ordenados[0];
   if (tipo === "start") {
@@ -93,7 +95,7 @@ export function crearMensaje(tipo, deporte, partidos, ahora = new Date()) {
   };
 }
 
-export async function enviarGrupo(snapshot, deporte, mensaje, send = (...args) => webpush.sendNotification(...args)) {
+export async function enviarGrupo(snapshot, deporte, mensaje, send = (...args) => webpush.sendNotification(...args), contexto = {}) {
   let enviados = 0;
   let eliminados = 0;
   let fallidos = 0;
@@ -101,11 +103,17 @@ export async function enviarGrupo(snapshot, deporte, mensaje, send = (...args) =
   const enviarUno = async documento => {
     const suscriptor = documento.data();
     if (!suscriptor.enabled || suscriptor.deportes?.[deporte] !== true || !suscriptor.endpoint || !suscriptor.keys?.p256dh || !suscriptor.keys?.auth) return;
+    let personalizado=mensaje;
+    if(deporte==='interno'){
+      const matches=(contexto.partidos||[]).filter(partido=>siguePartidoInterno(suscriptor.deportes,partido,contexto.tipo));
+      if(!matches.length)return;
+      personalizado=crearMensajeInterno(contexto.tipo,matches);
+    }
     try {
-      const { ttl, ...contenido } = mensaje;
+      const { ttl, ...contenido } = personalizado;
       await send({ endpoint: suscriptor.endpoint, keys: suscriptor.keys }, JSON.stringify(contenido), {
         TTL: ttl || 24 * 60 * 60,
-        urgency: mensaje.renotify ? "high" : "normal",
+        urgency: personalizado.renotify ? "high" : "normal",
         timeout: 20_000
       });
       enviados += 1;
@@ -146,7 +154,8 @@ export async function enviarInicioProgramado(db, snapshot, deporte, partidos, ow
   const completed = [...alreadySent];
   if (entries.length) {
     try {
-      const result = await enviarGrupo(snapshot, deporte, crearMensaje('start', deporte, entries.map(entry => entry.partido)));
+      const matches=entries.map(entry=>entry.partido);
+      const result = await enviarGrupo(snapshot, deporte, crearMensaje('start', deporte, matches),undefined,{tipo:'start',partidos:matches});
       if (!result.enviados && result.fallidos) throw new Error('Falló el transporte de todos los avisos; se reintentará.');
       await completeStarts(db, entries, owner, result);
       completed.push(...entries.map(entry => entry.partido));

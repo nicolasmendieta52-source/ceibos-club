@@ -1,4 +1,4 @@
-const DEPORTES = new Set(["futbol", "rugby", "hockey", "basketball"]);
+const DEPORTES = new Set(["futbol", "rugby", "hockey", "basketball", "interno"]);
 export const VENTANA_INICIO_MINUTOS = 4 * 60;
 export const PREPARACION_INICIO_MINUTOS = 5;
 
@@ -17,6 +17,7 @@ export function deporteValido(valor) {
 }
 
 export function clavePartido(partido) {
+  if(partido?.deporte==='interno'&&partido.internoId)return ['interno',partido.internoId,partido.fecha||'',partido.hora||''].join('|');
   return [
     deporteValido(partido?.deporte),
     normalizar(partido?.categoria),
@@ -84,7 +85,8 @@ export function planificarInicios(datos, estado = {}, ahora = Date.now(), hasta 
     const deporte = deporteValido(partido.deporte);
     const inicio = instanteInicio(partido);
     const clave = clavePartido(partido);
-    if (!deporte || inicio === null || inicio > hasta || ahora - inicio >= VENTANA_INICIO_MINUTOS * 60_000 || estado.sentStart?.[clave]) continue;
+    if (!deporte || inicio === null || inicio > hasta || ahora - inicio >= (deporte==='interno'?15:VENTANA_INICIO_MINUTOS) * 60_000 || estado.sentStart?.[clave]) continue;
+    if(deporte==='interno'&&partido.internoStatus!=='scheduled')continue;
     if (/cancelad|suspendid|postergad|aplazad/.test(normalizar(partido.estado))) continue;
     const id = `${deporte}|${inicio}`;
     if (!groups.has(id)) groups.set(id, {id, deporte, inicio, preparar:inicio - PREPARACION_INICIO_MINUTOS * 60_000, partidos:[]});

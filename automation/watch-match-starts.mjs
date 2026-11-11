@@ -7,6 +7,7 @@ import {MatchStartTimer} from './match-start-timer.mjs';
 import {planificarInicios, marcarEnviados, podarEstado} from './notification-utils.mjs';
 import {inicializarNotificaciones, enviarInicioProgramado} from './send-notifications.mjs';
 import {reserveWatcher, releaseWatcher} from './notification-start-store.mjs';
+import {partidosInterno} from './interno-notification-utils.mjs';
 
 const root = path.resolve(import.meta.dirname, '..');
 const statePath = path.join(root, 'data/notification-state.json');
@@ -25,25 +26,34 @@ export async function solicitarRelevo({dryRun = false, fetchImpl = fetch} = {}) 
   console.log(`Relevo solicitado${dryRun ? ' · SIMULACIÓN SIN ENVÍOS' : ''}.`);
 }
 
-export async function leerFixtureVigente() {
+export async function leerFixtureVigente({fetchImpl=fetch,fallbackPartidosInterno=[]}={}) {
   const repository = process.env.GITHUB_REPOSITORY || 'nicolasmendieta52-source/ceibos-club';
   const headers = {Accept:'application/vnd.github+json'};
   if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
-  const response = await fetch(`https://api.github.com/repos/${repository}/contents/data/club-data.json?ref=main`, {
+  const read=async filename=>{
+  const response = await fetchImpl(`https://api.github.com/repos/${repository}/contents/data/${filename}?ref=main`, {
     headers, cache:'no-store', signal:AbortSignal.timeout(15_000)
   });
   if (!response.ok) throw new Error(`Lectura del fixture vigente: HTTP ${response.status}`);
   const file = await response.json();
   const data = JSON.parse(Buffer.from(file.content, 'base64').toString('utf8'));
-  if (!Array.isArray(data.partidos)) throw new Error('El fixture vigente no contiene una lista de partidos.');
   return data;
+  };
+  const [club,interno]=await Promise.allSettled([read('club-data.json'),read('interno.json')]);
+  if(club.status==='rejected')throw club.reason;
+  const data=club.value;
+  if (!Array.isArray(data.partidos)) throw new Error('El fixture vigente no contiene una lista de partidos.');
+  let internos=fallbackPartidosInterno;
+  try{if(interno.status==='rejected')throw interno.reason;internos=partidosInterno(interno.value);}catch{console.warn('Interno: no se pudo renovar su fixture; se conserva la última copia sin afectar los deportes del club.');}
+  return {...data,partidos:[...data.partidos,...internos]};
 }
 
 export async function main() {
   const dryRun = process.argv.includes('--dry-run') || process.env.NOTIFICATIONS_DRY_RUN === 'true';
   const state = podarEstado(JSON.parse(await fs.readFile(statePath, 'utf8')));
   let fixture = JSON.parse(await fs.readFile(fixturePath, 'utf8'));
-  try { fixture = await leerFixtureVigente(); }
+  try{fixture={...fixture,partidos:[...fixture.partidos,...partidosInterno(JSON.parse(await fs.readFile(path.join(root,'data/interno.json'),'utf8')))]};}catch{console.warn('Interno: la copia local no es válida; siguen disponibles los partidos del club.');}
+  try { fixture = await leerFixtureVigente({fallbackPartidosInterno:fixture.partidos.filter(partido=>partido.deporte==='interno')}); }
   catch(error) { console.warn(error.message + '; se conserva la última copia del fixture.'); }
   const started = Date.now();
   const until = started + WATCH_MINUTES * 60_000;
@@ -85,7 +95,7 @@ export async function main() {
   const refresh = async () => {
     const version = ++refreshVersion;
     try {
-      const latest = await leerFixtureVigente();
+      const latest = await leerFixtureVigente({fallbackPartidosInterno:fixture.partidos.filter(partido=>partido.deporte==='interno')});
       if (version === refreshVersion) fixture = latest;
     }
     catch(error) { console.warn(error.message + '; siguen activos los horarios ya conocidos.'); }

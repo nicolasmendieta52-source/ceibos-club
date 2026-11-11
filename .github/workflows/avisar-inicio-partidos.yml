@@ -1,6 +1,12 @@
 name: Avisar inicio de partidos
 
 on:
+  push:
+    paths:
+      - "data/interno.json"
+      - "automation/watch-match-starts.mjs"
+      - "automation/interno-notification-utils.mjs"
+      - "assets/interno-notification-preferences.js"
   schedule:
     # Despierta el vigilante con anticipación. Una vez activo, los envíos usan
     # temporizadores por partido; no esperan a la siguiente revisión de cron.

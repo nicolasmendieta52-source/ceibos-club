@@ -26,7 +26,8 @@ self.addEventListener("push", event => {
 
 self.addEventListener("notificationclick", event => {
   event.notification.close();
-  const destino = new URL(event.notification.data?.url || "/#fixture", self.location.origin).href;
+  let destino=self.location.origin+'/#fixture';
+  try{const url=new URL(event.notification.data?.url||'/#fixture',self.location.origin);if(url.origin===self.location.origin)destino=url.href;}catch{}
   event.waitUntil((async () => {
     const ventanas = await self.clients.matchAll({ type: "window", includeUncontrolled: true });
     const abierta = ventanas.find(ventana => new URL(ventana.url).origin === self.location.origin);

@@ -1,0 +1,20 @@
+.interno-alerts{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:28px;padding:24px 0;border-bottom:1px solid rgba(229,187,82,.3)}
+.interno-alerts h3{font:400 clamp(1.7rem,3vw,2.3rem)/1.15 var(--display);text-transform:uppercase;color:var(--dorado);margin:0 0 8px}
+.interno-alerts p{font-size:.85rem;line-height:1.6;color:rgba(246,241,228,.75);max-width:620px;margin:0}
+.interno-alerts .btn{flex-shrink:0;white-space:normal;text-align:center;justify-content:center}
+.notif-opcion-interno{grid-column:1/-1;border-color:rgba(229,187,82,.45)}
+.notif-dialog .notif-cerrar{position:sticky;float:right;top:0;right:0;margin:-12px -12px 0 8px;z-index:3;background:#19392d}
+.notif-interno-options[hidden]{display:none}
+.notif-interno-options{min-width:0;margin:0 0 24px;padding:20px;border:1px solid rgba(229,187,82,.4);border-radius:0}
+.notif-interno-options>legend{padding:0 8px;color:var(--dorado);font-weight:800;font-size:.85rem}
+.notif-interno-options fieldset{min-width:0;margin:0 0 20px;padding:0;border:0}
+.notif-interno-options fieldset legend,.notif-interno-team-label{display:block;font-size:.8rem;font-weight:700;margin-bottom:12px;color:var(--crema)}
+.notif-interno-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 12px}
+.notif-interno-choice{display:flex;align-items:center;gap:10px;min-height:44px;font-size:.8rem;line-height:1.4;cursor:pointer}
+.notif-interno-choice input{width:19px;height:19px;flex-shrink:0;accent-color:var(--dorado)}
+.notif-interno-team{margin-bottom:20px}
+.notif-interno-team select{display:block;width:100%;max-width:100%;min-width:0;min-height:46px;border:1px solid rgba(246,241,228,.3);border-radius:0;background:var(--verde-night);color:var(--crema);color-scheme:dark;font:inherit;font-size:.84rem;padding:10px}
+.notif-interno-team p{font-size:.75rem;line-height:1.6;color:rgba(246,241,228,.65);margin:9px 0 0}
+.notif-interno-options input:focus-visible,.notif-interno-options select:focus-visible{outline:2px solid var(--dorado);outline-offset:3px}
+.interno-match-selected{border-color:var(--dorado);box-shadow:inset 3px 0 var(--dorado);scroll-margin-top:calc(var(--nav-height,56px) + 20px)}
+@media(max-width:600px){.interno-alerts{align-items:stretch;flex-direction:column;gap:18px}.notif-interno-options{padding:14px}.notif-interno-choices{grid-template-columns:1fr}}

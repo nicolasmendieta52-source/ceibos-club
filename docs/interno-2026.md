@@ -2,6 +2,8 @@
 
 La sección `/#interno` conserva inscripción por WhatsApp (091 393 252), reglamento PDF, anuncio del 16 de noviembre y recuerdos de 2025. Los datos de esta edición están en `data/interno.json`. El navegador vuelve a leer ese archivo cada minuto mientras la página está visible; después de editarlo hay que publicar el cambio. No se extraen automáticamente historias de Instagram.
 
+Las notificaciones del Interno se activan desde **Elegir mis avisos** o desde la campana, con preferencias de categoría, equipo y tipo de aviso. Consumen los partidos de este mismo JSON; su funcionamiento, filtros y revisión automática están documentados en `docs/interno-notificaciones.md`.
+
 ## Fuente y categorías
 
 Los nombres de 2026 deben comprobarse en la destacada oficial: https://www.instagram.com/stories/highlights/18091351253226215/. Cada equipo lleva `sourceUrl`; `teamsVerifiedAt` indica la fecha real de comprobación. No trasladar campeones de 2025 a 2026 por suposición. Si todavía no se pueden verificar, la lista permanece vacía.

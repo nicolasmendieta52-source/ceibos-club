@@ -46,7 +46,7 @@ function matchMarkup(data,match){
   const status={postponed:'Postergado',suspended:'Suspendido'}[match.status];
   const finished=match.status==='finished';
   const datetime=match.date?' datetime="'+escape(match.date+(match.time?'T'+match.time+':00-03:00':''))+'"':'';
-  return '<article class="interno-match"><div class="interno-match-meta"><span>'+escape(phase)+'</span>'+(status?'<strong>'+status+'</strong>':'')+'<time'+datetime+'>'+escape(dateLabel(match.date))+(match.time?' · '+escape(match.time)+' h':finished?'':' · Horario a confirmar')+'</time></div><div class="interno-match-pair"><span>'+escape(home.name)+'</span><strong class="interno-score">'+(finished?match.homeGoals+' <span>–</span> '+match.awayGoals:'<span>vs.</span>')+'</strong><span>'+escape(away.name)+'</span></div>'+(match.penalties?'<p class="interno-match-note">Penales: '+match.penalties.home+'–'+match.penalties.away+'</p>':'')+(match.doubleForfeit?'<p class="interno-match-note">Doble incomparecencia: sin puntos ni goles.</p>':'')+(match.venue?'<p class="interno-match-note">'+escape(match.venue)+'</p>':'')+(match.sourceUrl?sourceLink(match.sourceUrl,'Ver publicación'):'')+'</article>';
+  return '<article class="interno-match" id="interno-partido-'+escape(match.id)+'"><div class="interno-match-meta"><span>'+escape(phase)+'</span>'+(status?'<strong>'+status+'</strong>':'')+'<time'+datetime+'>'+escape(dateLabel(match.date))+(match.time?' · '+escape(match.time)+' h':finished?'':' · Horario a confirmar')+'</time></div><div class="interno-match-pair"><span>'+escape(home.name)+'</span><strong class="interno-score">'+(finished?match.homeGoals+' <span>–</span> '+match.awayGoals:'<span>vs.</span>')+'</strong><span>'+escape(away.name)+'</span></div>'+(match.penalties?'<p class="interno-match-note">Penales: '+match.penalties.home+'–'+match.penalties.away+'</p>':'')+(match.doubleForfeit?'<p class="interno-match-note">Doble incomparecencia: sin puntos ni goles.</p>':'')+(match.venue?'<p class="interno-match-note">'+escape(match.venue)+'</p>':'')+(match.sourceUrl?sourceLink(match.sourceUrl,'Ver publicación'):'')+'</article>';
 }
 
 export function internoPanelMarkup(data,categoryId,tab){
@@ -85,7 +85,9 @@ function initInterno(){
   const panel=document.getElementById('interno-panel'),select=document.getElementById('interno-categoria'),status=document.getElementById('interno-feed-status');
   if(!panel||!select||!status)return;
   const tabs=[...document.querySelectorAll('[data-interno-tab]')];
-  let currentTab='grupos',data=null,lastJson='',loading=false;
+  const notificationParams=new URLSearchParams(location.search),requestedCategory=notificationParams.get('internoCategoria'),requestedTab=notificationParams.get('internoTab'),requestedMatch=notificationParams.get('internoPartido');
+  if(['masculino','femenino','mas38'].includes(requestedCategory))select.value=requestedCategory;
+  let currentTab=['fixture','resultados','grupos'].includes(requestedTab)?requestedTab:'grupos',data=null,lastJson='',loading=false,notificationTargetPending=true;
   const contact=document.getElementById('interno-inscripcion');
   const originalContact=contact?{href:contact.href,text:contact.textContent}:null;
   const originalState=document.getElementById('interno-inscripcion-estado').textContent;
@@ -95,6 +97,10 @@ function initInterno(){
     panel.setAttribute('aria-labelledby','interno-tab-'+currentTab);
     panel.querySelectorAll('video').forEach(video=>video.pause());
     if(data)panel.innerHTML=internoPanelMarkup(data,select.value,currentTab);
+    if(requestedMatch&&/^[a-z0-9][a-z0-9-]{0,79}$/.test(requestedMatch)){
+      const target=document.getElementById('interno-partido-'+requestedMatch);
+      if(target){target.classList.add('interno-match-selected');if(notificationTargetPending){notificationTargetPending=false;requestAnimationFrame(()=>target.scrollIntoView({block:'center'}));}}
+    }
   }
   tabs.forEach((button,index)=>{
     button.addEventListener('click',()=>{currentTab=button.dataset.internoTab;render();});

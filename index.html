@@ -277,6 +277,7 @@ nav.topbar.solid{
 <link rel="stylesheet" href="/assets/analytics-consent.css?v=20260922">
 <script type="module" src="/assets/analytics.js?v=20261026"></script>
 <link rel="stylesheet" href="assets/interno.css?v=20261110formatos">
+<link rel="stylesheet" href="assets/interno-notifications.css?v=20261110">
 <link rel="stylesheet" href="assets/navigation.css?v=20261028floating">
 <link rel="stylesheet" href="assets/news.css?v=20261020archivo">
 </head>
@@ -959,6 +960,7 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
     </div>
   </div>
   <div class="interno-date"><div><span>La próxima cita</span><strong><time datetime="2026-11-16">16 de noviembre</time></strong></div><a href="https://www.instagram.com/internoceibosclub/p/DeH_uJathTB/" target="_blank" rel="noopener noreferrer">Ver anuncio oficial ↗</a><span class="interno-motto">#PlantandoLaGloria</span></div>
+  <div class="interno-alerts"><div><h3>Seguí a tu equipo</h3><p>Recibí el fixture, los cambios, los avisos de inicio y los resultados del Interno. Elegí una categoría o tu equipo.</p></div><button class="btn btn-oro" type="button" data-notificaciones-interno>Elegir mis avisos →</button></div>
   <div class="interno-torneo" aria-labelledby="interno-edicion-titulo">
     <div class="interno-torneo-head"><div><p class="interno-kicker">El torneo, fecha a fecha</p><h3 id="interno-edicion-titulo">La edición 2026</h3></div><label class="interno-category-label" for="interno-categoria">Categoría<select id="interno-categoria"><option value="masculino">Masculino</option><option value="femenino">Femenino</option><option value="mas38">Papi fútbol (+38)</option></select></label></div>
     <div class="interno-tabs" role="tablist" aria-label="Seguir el Interno 2026">
@@ -1694,13 +1696,30 @@ img,video,svg{max-width:100%}
     <button class="notif-cerrar" id="notifCerrar" type="button" aria-label="Cerrar">&times;</button>
     <p class="notif-etiqueta">Tu club, al instante</p>
     <h2 id="notifTitulo">Notificaciones Ceibos</h2>
-    <p class="notif-intro">Elegí qué deportes querés seguir. Te avisaremos cuando se publique un partido, el día que se juega y cuando esté comenzando.</p>
+    <p class="notif-intro">Elegí los deportes que querés seguir. Para el Interno también podés elegir categoría, equipo y tipo de aviso.</p>
     <div class="notif-deportes" aria-label="Deportes para recibir notificaciones">
       <label class="notif-opcion"><input type="checkbox" value="futbol" checked><span>⚽ Fútbol</span></label>
       <label class="notif-opcion"><input type="checkbox" value="rugby" checked><span>🏉 Rugby</span></label>
       <label class="notif-opcion"><input type="checkbox" value="hockey" checked><span>🏑 Hockey</span></label>
       <label class="notif-opcion"><input type="checkbox" value="basketball" checked><span>🏀 Basketball</span></label>
+      <label class="notif-opcion notif-opcion-interno"><input id="notifInterno" type="checkbox" value="interno" aria-controls="notifInternoOpciones" aria-expanded="false"><span>Interno Ceibos 2026</span></label>
     </div>
+    <fieldset id="notifInternoOpciones" class="notif-interno-options" hidden disabled>
+      <legend>Tus avisos del Interno</legend>
+      <fieldset><legend>Categorías</legend><div class="notif-interno-choices">
+        <label class="notif-interno-choice"><input type="checkbox" value="masculino" data-notif-interno-category checked><span>Masculino</span></label>
+        <label class="notif-interno-choice"><input type="checkbox" value="femenino" data-notif-interno-category checked><span>Femenino</span></label>
+        <label class="notif-interno-choice"><input type="checkbox" value="mas38" data-notif-interno-category checked><span>Papi fútbol (+38)</span></label>
+      </div></fieldset>
+      <div class="notif-interno-team"><label class="notif-interno-team-label" for="notifInternoEquipo">Equipo (opcional)</label><select id="notifInternoEquipo" aria-describedby="notifInternoEquipoAyuda"><option value="">Todos los equipos de mi selección</option></select><p id="notifInternoEquipoAyuda">Elegí un equipo o seguí todos los de las categorías marcadas.</p></div>
+      <fieldset><legend>Qué querés recibir</legend><div class="notif-interno-choices">
+        <label class="notif-interno-choice"><input type="checkbox" value="new" data-notif-interno-event checked><span>Partidos nuevos</span></label>
+        <label class="notif-interno-choice"><input type="checkbox" value="change" data-notif-interno-event checked><span>Cambios y suspensiones</span></label>
+        <label class="notif-interno-choice"><input type="checkbox" value="today" data-notif-interno-event checked><span>Día de partido (desde las 9 h)</span></label>
+        <label class="notif-interno-choice"><input type="checkbox" value="start" data-notif-interno-event checked><span>Inicio del partido</span></label>
+        <label class="notif-interno-choice"><input type="checkbox" value="result" data-notif-interno-event checked><span>Resultados y correcciones</span></label>
+      </div></fieldset>
+    </fieldset>
     <div class="notif-acciones">
       <button id="notifActivar" type="button">Activar notificaciones</button>
       <button id="notifDesactivar" type="button" hidden>Desactivar</button>
@@ -3161,8 +3180,8 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
   })
   .catch(() => {});
 </script>
-<script type="module" src="/notifications.js?v=20260814"></script>
-<script type="module" src="assets/interno.js?v=20261110formatos"></script>
+<script type="module" src="/notifications.js?v=20261110interno"></script>
+<script type="module" src="assets/interno.js?v=20261110avisos"></script>
 <script src="assets/navigation.js?v=20261028viewport" defer></script>
 </body>
 </html>

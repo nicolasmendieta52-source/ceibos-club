@@ -1,0 +1,46 @@
+name: Notificaciones del Interno
+
+on:
+  push:
+    paths:
+      - "data/interno.json"
+      - "automation/send-interno-notifications.mjs"
+      - "automation/interno-notification-utils.mjs"
+      - "assets/interno-notification-preferences.js"
+      - ".github/workflows/notificaciones-interno.yml"
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Comprobar conexión y avisos sin enviar notificaciones"
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: notificaciones-interno
+  cancel-in-progress: false
+
+jobs:
+  avisar:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Avisos de fixture, cambios, día de partido y resultados
+        run: node automation/send-interno-notifications.mjs
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+          VAPID_SUBJECT: ${{ secrets.VAPID_SUBJECT }}
+          NOTIFICATIONS_DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
