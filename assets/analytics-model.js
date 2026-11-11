@@ -2,6 +2,11 @@ export const SECTIONS = ['inicio','gym-campaign','proyecto-gimnasio','interno','
 export const ACTIONS = ['gym_form','whatsapp','email','phone','instagram','external','navigation','sport_futbol','sport_rugby','sport_hockey','sport_basketball','category','notifications_open','notifications_enable','notifications_disable','match','share','shop'];
 export const LABELS = {interno:'Interno','proyecto-gimnasio':'Proyecto del gimnasio',inicio:'Inicio','gym-campaign':'Gimnasio','partido-destacado':'Partido destacado',noticias:'Noticias',deportes:'Deportes',archivo:'Archivo deportivo',resultados:'Resultados',fixture:'Próximos partidos',vida:'Vida del club',shop:'Tienda',solidario:'Solidario',club:'El club',predio:'Predio',socios:'Socios',contacto:'Contacto',gym_form:'Formulario del Gym',whatsapp:'WhatsApp',email:'Correo',phone:'Teléfono',instagram:'Instagram',external:'Otros enlaces externos',navigation:'Navegación',sport_futbol:'Fútbol',sport_rugby:'Rugby',sport_hockey:'Hockey',sport_basketball:'Basketball',category:'Categorías deportivas',notifications_open:'Abrir notificaciones',notifications_enable:'Solicitar notificaciones',notifications_disable:'Desactivar notificaciones',match:'Detalle del partido',share:'Compartir',shop:'Tienda'};
 export const emptyCounts = keys => Object.fromEntries(keys.map(key=>[key,0]));
+export function sectionIsVisible(rect,viewportHeight){
+  if(rect.height<=0||viewportHeight<=0)return false;
+  const visible=Math.max(0,Math.min(rect.bottom,viewportHeight)-Math.max(rect.top,0));
+  return visible>=Math.min(120,rect.height*.1);
+}
 export function deviceInfo(ua, width) {
   return {device:/iPad|Tablet/i.test(ua)?'Tablet':/Mobile|Android|iPhone/i.test(ua)?'Móvil':width<700?'Pantalla pequeña':'Desktop',
     browser:/Edg\//.test(ua)?'Edge':/Firefox|FxiOS/.test(ua)?'Firefox':/Chrome|CriOS/.test(ua)?'Chrome':/Safari/.test(ua)?'Safari':'Otro',

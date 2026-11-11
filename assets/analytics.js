@@ -1,4 +1,4 @@
-import {SECTIONS,ACTIONS,emptyCounts,deviceInfo,referrerHost} from './analytics-model.js?v=20261026';
+import {SECTIONS,ACTIONS,emptyCounts,deviceInfo,referrerHost,sectionIsVisible} from './analytics-model.js?v=20261111';
 const CHOICE='ceibos_metrics_consent_v1';
 let consent=null, stop=null, starting=false;
 try{consent=localStorage.getItem(CHOICE);}catch{}
@@ -35,9 +35,12 @@ async function start(){
   }catch{dirty=true;}finally{busy=false;}}
   function action(key){if(!ACTIONS.includes(key)||data.interactions>=500)return;data.actions[key]=Math.min(500,data.actions[key]+1);data.interactions++;dirty=true;save();}
   function activity(){lastActivity=Date.now();}
-  function scroll(){activity();const height=document.documentElement.scrollHeight-innerHeight;data.scrollDepth=Math.max(data.scrollDepth,height>0?Math.min(100,Math.round(scrollY/height*100)):100);dirty=true;}
+  function sectionViews(){for(const key of SECTIONS){if(data.sections[key])continue;const el=document.getElementById(key);if(el&&sectionIsVisible(el.getBoundingClientRect(),innerHeight)){data.sections[key]=1;dirty=true;}}}
+  function scroll(){activity();const height=document.documentElement.scrollHeight-innerHeight;data.scrollDepth=Math.max(data.scrollDepth,height>0?Math.min(100,Math.round(scrollY/height*100)):100);dirty=true;sectionViews();}
   function click(e){activity();const el=e.target.closest('a,button');if(!el)return;
     if(el.matches('[data-gym-cta]'))return action('gym_form');
+    if(el.matches('[data-notificaciones-interno]'))return action('notifications_open');
+    if(el.matches('[data-interno-tab]'))return action('navigation');
     const ids={notifFab:'notifications_open',notifActivar:'notifications_enable',notifDesactivar:'notifications_disable'};if(ids[el.id])return action(ids[el.id]);
     if(el.matches('.dep-tab')){const sport=el.id.replace('tab-','');return action('sport_'+sport);}
     if(el.hasAttribute('data-categoria'))return action('category');
@@ -46,12 +49,15 @@ async function start(){
     if(el.matches('[data-postal-partido],[data-postal-partido-indice]'))return action('share');
     if(el.tagName==='A'){try{const u=new URL(el.href);if(u.protocol==='mailto:')action('email');else if(u.protocol==='tel:')action('phone');else if(/(^|\.)(wa.me|whatsapp.com)$/.test(u.hostname))action('whatsapp');else if(/(^|\.)instagram.com$/.test(u.hostname))action('instagram');else if(u.origin!==location.origin)action('external');else action('navigation');}catch{}}
   }
-  const observer=new IntersectionObserver(entries=>{for(const e of entries){const key=e.target.id;if(e.isIntersecting&&data.sections[key]===0){data.sections[key]=1;dirty=true;}}},{threshold:0.1});
+  // Tall sections can exceed ten mobile viewports. Observe entry, then measure
+  // visible pixels on scrolling/resizing instead of requiring 10% of their height.
+  const observer=new IntersectionObserver(sectionViews,{threshold:0});
   SECTIONS.forEach(key=>{const el=document.getElementById(key);if(el)observer.observe(el);});
   const onVisibility=()=>{tick();if(!document.hidden)lastActivity=Date.now();save(true);};
-  document.addEventListener('click',click);document.addEventListener('keydown',activity);window.addEventListener('scroll',scroll,{passive:true});document.addEventListener('visibilitychange',onVisibility);
+  const change=e=>{if(e.target.matches('#interno-categoria')){activity();action('category');}else if(e.target.matches('[data-live-court]')){activity();action('navigation');}};
+  document.addEventListener('click',click);document.addEventListener('change',change);document.addEventListener('keydown',activity);window.addEventListener('scroll',scroll,{passive:true});window.addEventListener('resize',sectionViews);document.addEventListener('visibilitychange',onVisibility);
   const clock=setInterval(tick,10000), timer=setInterval(save,60000);scroll();
-  stop=()=>{enabled=false;clearInterval(clock);clearInterval(timer);observer.disconnect();document.removeEventListener('click',click);document.removeEventListener('keydown',activity);window.removeEventListener('scroll',scroll);document.removeEventListener('visibilitychange',onVisibility);stop=null;};
+  stop=()=>{enabled=false;clearInterval(clock);clearInterval(timer);observer.disconnect();document.removeEventListener('click',click);document.removeEventListener('change',change);document.removeEventListener('keydown',activity);window.removeEventListener('scroll',scroll);window.removeEventListener('resize',sectionViews);document.removeEventListener('visibilitychange',onVisibility);stop=null;};
   await save();
  }catch{/* La medición nunca bloquea el sitio. */}finally{starting=false;}
 }

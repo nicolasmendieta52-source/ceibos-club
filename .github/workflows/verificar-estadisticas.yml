@@ -1,0 +1,41 @@
+name: Verificar estadísticas privadas
+
+on:
+  push:
+    paths:
+      - "firebase/firestore.rules"
+      - "assets/analytics-model.js"
+      - "automation/analytics-rules.test.mjs"
+      - "automation/test-analytics-rules.mjs"
+      - ".github/workflows/verificar-estadisticas.yml"
+  pull_request:
+    paths:
+      - "firebase/firestore.rules"
+      - "assets/analytics-model.js"
+      - "automation/analytics-rules.test.mjs"
+      - "automation/test-analytics-rules.mjs"
+      - ".github/workflows/verificar-estadisticas.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rules:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/ceibos-firestore-emulator
+          key: ceibos-firestore-emulator-1.22.0
+      - name: Validar grabación y acceso privado con reglas reales
+        run: node automation/test-analytics-rules.mjs
