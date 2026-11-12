@@ -4446,7 +4446,7 @@
             6,
             "Sofía Peñalba",
             "Carrasco Polo Club",
-            5
+            6
           ]
         },
         {
@@ -5129,8 +5129,8 @@
           "club": false,
           "values": [
             13,
-            "Federica Vidiella",
-            "The British Schools / Old Girls Club",
+            "Agustina Mieres",
+            "CLUB NORTHFIELD",
             7
           ]
         },
@@ -5526,7 +5526,7 @@
           "club": false,
           "values": [
             2,
-            "Julia Ercoli Chiarino",
+            "CATALINA VIERA ALEGRESA",
             "Lobos Rugby Club",
             1
           ]
@@ -5535,6 +5535,15 @@
           "club": false,
           "values": [
             3,
+            "Julia Ercoli Chiarino",
+            "Lobos Rugby Club",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            4,
             "Tatiana Kononovas",
             "CLUB NORTHFIELD",
             1
@@ -5543,18 +5552,9 @@
         {
           "club": false,
           "values": [
-            4,
+            5,
             "Agustina Mieres",
             "CLUB NORTHFIELD",
-            1
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            5,
-            "CATALINA VIERA ALEGRESA",
-            "Lobos Rugby Club",
             1
           ]
         }
@@ -7059,15 +7059,6 @@
           "club": false,
           "values": [
             11,
-            "Sofia Sansalone",
-            "Club Náutico",
-            7
-          ]
-        },
-        {
-          "club": false,
-          "values": [
-            12,
             "Manuela Vidal",
             "Club Náutico",
             7
@@ -7076,8 +7067,17 @@
         {
           "club": false,
           "values": [
-            13,
+            12,
             "Manuela Iglesias",
+            "Club Náutico",
+            7
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            13,
+            "Sofia Sansalone",
             "Club Náutico",
             7
           ]
@@ -7324,6 +7324,15 @@
             8,
             "Manuela Vidal",
             "Club Náutico",
+            4
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            8,
+            "Paz Quartara",
+            "Carrasco Polo Club",
             4
           ]
         },
@@ -7621,6 +7630,42 @@
             15,
             "Jazmin Gramajo",
             "CLUB NORTHFIELD",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            12,
+            "Justina Bono",
+            "Club Biguá de Villa Biarritz",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            13,
+            "Lucila Marini",
+            "CLUB NORTHFIELD",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            14,
+            "Jazmin Gramajo",
+            "CLUB NORTHFIELD",
+            1
+          ]
+        },
+        {
+          "club": false,
+          "values": [
+            15,
+            "Natalia Bazzino",
+            "Club Biguá de Villa Biarritz",
             1
           ]
         }
