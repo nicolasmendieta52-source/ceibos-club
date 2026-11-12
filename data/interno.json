@@ -1180,6 +1180,21 @@
       "court": "Cancha 4"
     },
     {
+      "id": "src-m-p2b4518db",
+      "categoryId": "masculino",
+      "homeId": "garrulos-fc",
+      "awayId": "la-canuya",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P2b4518db",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-d",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-11-23",
+      "time": "20:00",
+      "court": "Cancha 5"
+    },
+    {
       "id": "src-m-pe39ff8a3",
       "categoryId": "masculino",
       "homeId": "la-desidia",
@@ -1193,21 +1208,6 @@
       "date": "2026-11-23",
       "time": "20:00",
       "court": "Cancha 1"
-    },
-    {
-      "id": "src-m-pe95cd66a",
-      "categoryId": "masculino",
-      "homeId": "alaska",
-      "awayId": "atletico-sin-gps",
-      "stage": "groups",
-      "status": "scheduled",
-      "sourceId": "Pe95cd66a",
-      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
-      "groupId": "mas-d",
-      "round": "Fase de grupos · Fecha 3",
-      "date": "2026-11-23",
-      "time": "20:00",
-      "court": "Cancha 5"
     },
     {
       "id": "src-m-p280358c9",
@@ -1315,13 +1315,13 @@
       "court": "Cancha 1"
     },
     {
-      "id": "src-m-p2b4518db",
+      "id": "src-m-pe95cd66a",
       "categoryId": "masculino",
-      "homeId": "garrulos-fc",
-      "awayId": "la-canuya",
+      "homeId": "alaska",
+      "awayId": "atletico-sin-gps",
       "stage": "groups",
       "status": "scheduled",
-      "sourceId": "P2b4518db",
+      "sourceId": "Pe95cd66a",
       "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
       "groupId": "mas-d",
       "round": "Fase de grupos · Fecha 3",
@@ -2392,8 +2392,8 @@
   "sourceInfo": {
     "url": "https://interno2026.ceibosfutbol.workers.dev/",
     "intervalMinutes": 60,
-    "importedAt": "2026-11-11T17:30:49.957Z",
-    "sourceUpdatedAt": "2026-11-11T11:51:21",
+    "importedAt": "2026-11-12T08:48:49.914Z",
+    "sourceUpdatedAt": "2026-11-12T05:48:49",
     "categories": [
       "masculino",
       "femenino"
