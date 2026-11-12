@@ -13,14 +13,35 @@ function publicTime(value){if(absent(value))return null;const match=/^(\d{1,2}):
 function court(value){if(absent(value))return null;const name=label(String(value),100);return /^\d+$/.test(name)?'Cancha '+name:name;}
 const roundNames={grupos:'Fase de grupos','16avos':'16avos de final',octavos:'Octavos de final',cuartos:'Cuartos de final',semifinal:'Semifinal',final:'Final'};
 
+function activeTeamIds(remote){
+  const ids=new Set();
+  for(const group of remote.grupos){
+    if(!Array.isArray(group.tabla)||!group.tabla.length)throw Error('Tabla de grupo vacía');
+    for(const row of group.tabla)ids.add(row.equipo_id);
+  }
+  for(const match of remote.partidos)for(const id of [match.local_id,match.visitante_id])if(!absent(id))ids.add(id);
+  for(const row of remote.goleadores)ids.add(row.equipo_id);
+  return ids;
+}
+
+function emptyPapiCategory(source){
+  const papi=source.categorias.P;
+  return papi&&['grupos','partidos','goleadores'].every(key=>Array.isArray(papi[key])&&!papi[key].length)
+    &&!Object.values(source.equipos).some(team=>team.categoria==='P');
+}
+
 export function mergeInternoSource(previous,source,{now=new Date().toISOString()}={}){
   validateInterno(previous);
   if(!source||typeof source.torneo!=='string'||!/\b2026\b/.test(source.torneo)||!source.equipos||Array.isArray(source.equipos)||!source.categorias||!Object.keys(source.equipos).length)throw Error('La fuente no contiene el Interno 2026 completo');
-  if(Object.keys(source.categorias).some(code=>!Object.hasOwn(categoryIds,code)))throw Error('La fuente agregó una categoría; revisar su correspondencia antes de importar');
+  if(Object.keys(source.categorias).some(code=>!Object.hasOwn(categoryIds,code)&&!(code==='P'&&emptyPapiCategory(source))))throw Error('La fuente agregó una categoría con datos; revisar su correspondencia antes de importar');
   const output=structuredClone(previous),covered=new Set(Object.values(categoryIds)),teamMap=new Map(),incomingTeams=[],incomingGroups=[],sourceStandings={},sourceScorers={},matches=[];let pending=0,byes=0;
   for(const[code,categoryId]of Object.entries(categoryIds)){
-    const category=output.categories.find(row=>row.id===categoryId),remote=source.categorias[code],entries=Object.entries(source.equipos).filter(([,team])=>team.categoria===code);
-    if(!category||!remote||!Array.isArray(remote.grupos)||!Array.isArray(remote.partidos)||!Array.isArray(remote.goleadores)||!entries.length||entries.length>200||remote.partidos.length>2000)throw Error('Categoría de la fuente incompleta: '+code);
+    const category=output.categories.find(row=>row.id===categoryId),remote=source.categorias[code];
+    if(!category||!remote||!Array.isArray(remote.grupos)||!Array.isArray(remote.partidos)||!Array.isArray(remote.goleadores)||remote.partidos.length>2000)throw Error('Categoría de la fuente incompleta: '+code);
+    // The public registry retains withdrawn teams. The standings and fixtures
+    // identify the current participants, including a replacement with a new ID.
+    const active=activeTeamIds(remote),entries=Object.entries(source.equipos).filter(([id,team])=>team.categoria===code&&active.has(id));
+    if(!entries.length||entries.length>200)throw Error('Categoría de la fuente incompleta: '+code);
     if(category.format?.teamCount&&category.format.teamCount!==entries.length)throw Error('Cambió la cantidad de equipos; revisar el formato confirmado de '+category.name);
     if(category.format&&remote.grupos.length!==previous.groups.filter(group=>group.categoryId===categoryId).length)throw Error('Cambió la cantidad de grupos; revisar el formato confirmado de '+category.name);
     const used=new Set();
@@ -82,8 +103,8 @@ export function mergeInternoSource(previous,source,{now=new Date().toISOString()
     }
   }
   output.matches=[...previous.matches.filter(match=>!covered.has(match.categoryId)),...matches];output.sourceStandings={...previous.sourceStandings,...sourceStandings};output.sourceScorers={...previous.sourceScorers,...sourceScorers};
-  output.sourceInfo={url:INTERNO_SOURCE,intervalMinutes:60,importedAt:now,sourceUpdatedAt:label(source.actualizado,80),categories:[...covered],pendingPlayoffs:pending,byes};
+  output.sourceInfo={url:INTERNO_SOURCE,intervalMinutes:60,importedAt:now,checkedAt:now,sourceUpdatedAt:label(source.actualizado,80),categories:[...covered],pendingPlayoffs:pending,byes};
   validateInterno(output);return output;
 }
 
-export function sameInternoSnapshot(left,right){const withoutTime=value=>{const data=structuredClone(value);if(data.sourceInfo)delete data.sourceInfo.importedAt;return data;};return JSON.stringify(withoutTime(left))===JSON.stringify(withoutTime(right));}
+export function sameInternoSnapshot(left,right){const withoutTime=value=>{const data=structuredClone(value);if(data.sourceInfo)for(const key of ['importedAt','checkedAt','sourceUpdatedAt'])delete data.sourceInfo[key];return data;};return JSON.stringify(withoutTime(left))===JSON.stringify(withoutTime(right));}

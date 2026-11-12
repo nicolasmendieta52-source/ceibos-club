@@ -734,25 +734,6 @@
       "sourceName": "Nerea Jrs"
     },
     {
-      "id": "pata-de-palo",
-      "name": "Pata de Palo",
-      "categoryId": "femenino",
-      "logoUrl": "/assets/interno/grupos/2026/femenino.jpeg",
-      "logoCrop": {
-        "x": 193,
-        "y": 1037,
-        "width": 63,
-        "height": 63,
-        "imageWidth": 1080,
-        "imageHeight": 1350,
-        "shape": "ellipse"
-      },
-      "sourceUrl": "/assets/interno/grupos/2026/femenino.jpeg",
-      "groupId": "fem-c",
-      "sourceTeamId": "F16",
-      "sourceName": "Pata de Palo"
-    },
-    {
       "id": "la-matanza",
       "name": "La Matanza",
       "categoryId": "femenino",
@@ -800,6 +781,15 @@
       "groupId": "fem-d",
       "sourceTeamId": "F11",
       "sourceName": "Ramillete FC"
+    },
+    {
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "id": "femenino-manchester-birraited",
+      "name": "Manchester Birraited",
+      "categoryId": "femenino",
+      "sourceTeamId": "F17",
+      "sourceName": "Manchester Birraited",
+      "groupId": "fem-c"
     }
   ],
   "groups": [
@@ -1333,7 +1323,7 @@
       "id": "src-f-p56adc6b1",
       "categoryId": "femenino",
       "homeId": "levantate-fc",
-      "awayId": "pata-de-palo",
+      "awayId": "femenino-manchester-birraited",
       "stage": "groups",
       "status": "scheduled",
       "sourceId": "P56adc6b1",
@@ -1513,7 +1503,7 @@
       "id": "src-f-pa59eebe1",
       "categoryId": "femenino",
       "homeId": "la-romineta",
-      "awayId": "pata-de-palo",
+      "awayId": "femenino-manchester-birraited",
       "stage": "groups",
       "status": "scheduled",
       "sourceId": "Pa59eebe1",
@@ -1678,7 +1668,7 @@
       "id": "src-f-pb42c14f9",
       "categoryId": "femenino",
       "homeId": "nerea-jrs",
-      "awayId": "pata-de-palo",
+      "awayId": "femenino-manchester-birraited",
       "stage": "groups",
       "status": "scheduled",
       "sourceId": "Pb42c14f9",
@@ -2278,8 +2268,8 @@
             "tied": false
           },
           {
-            "teamId": "nerea-jrs",
-            "name": "Nerea Jrs",
+            "teamId": "femenino-manchester-birraited",
+            "name": "Manchester Birraited",
             "position": null,
             "played": 0,
             "won": 0,
@@ -2294,8 +2284,8 @@
             "tied": false
           },
           {
-            "teamId": "pata-de-palo",
-            "name": "Pata de Palo",
+            "teamId": "nerea-jrs",
+            "name": "Nerea Jrs",
             "position": null,
             "played": 0,
             "won": 0,
@@ -2392,8 +2382,9 @@
   "sourceInfo": {
     "url": "https://interno2026.ceibosfutbol.workers.dev/",
     "intervalMinutes": 60,
-    "importedAt": "2026-11-12T08:48:49.914Z",
-    "sourceUpdatedAt": "2026-11-12T05:48:49",
+    "importedAt": "2026-11-12T20:11:02.784Z",
+    "checkedAt": "2026-11-12T20:12:03.838Z",
+    "sourceUpdatedAt": "2026-11-12T17:04:15",
     "categories": [
       "masculino",
       "femenino"

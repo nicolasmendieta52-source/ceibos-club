@@ -59,7 +59,7 @@ export function validateInterno(data){
     for(const scorer of match.scorers||[])if(!text(scorer.player,100)||![match.homeId,match.awayId].includes(scorer.teamId)||!integer(scorer.goals)||scorer.goals===0)throw Error('Goleador inválido');
     if(match.status==='finished')for(const [teamId,goals] of [[match.homeId,match.homeGoals],[match.awayId,match.awayGoals]])if((match.scorers||[]).filter(s=>s.teamId===teamId).reduce((sum,s)=>sum+s.goals,0)>goals)throw Error('Goleadores por encima del marcador');
   }
-  if(data.sourceInfo&&(!publicInternoUrl(data.sourceInfo.url)||data.sourceInfo.intervalMinutes!==60||!validClockStart(data.sourceInfo.importedAt)||!integer(data.sourceInfo.pendingPlayoffs)||!integer(data.sourceInfo.byes)))throw Error('Fuente del Interno inválida');
+  if(data.sourceInfo&&(!publicInternoUrl(data.sourceInfo.url)||data.sourceInfo.intervalMinutes!==60||!validClockStart(data.sourceInfo.importedAt)||(data.sourceInfo.checkedAt!==undefined&&!validClockStart(data.sourceInfo.checkedAt))||!integer(data.sourceInfo.pendingPlayoffs)||!integer(data.sourceInfo.byes)))throw Error('Fuente del Interno inválida');
   for(const[categoryId,tables]of Object.entries(data.sourceStandings||{})){
     if(!categories.has(categoryId)||!Array.isArray(tables))throw Error('Tablas externas inválidas');const seen=new Set();
     for(const table of tables){const group=data.groups.find(row=>row.id===table.id);if(!group||group.categoryId!==categoryId||seen.has(table.id)||!Array.isArray(table.rows))throw Error('Grupo de tabla externa inválido');seen.add(table.id);const members=new Set();

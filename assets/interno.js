@@ -1,4 +1,4 @@
-import {validateInterno,publicInternoUrl,sortedMatches,internoStandings,internoScorers} from './interno-model.js?v=20261111fuente';
+import {validateInterno,publicInternoUrl,sortedMatches,internoStandings,internoScorers} from './interno-model.js?v=20261112sync';
 import {initLiveBoard} from './interno-live.js?v=20261111fuente';
 import {courtName} from './interno-live-clock.js?v=20261111fuente';
 
@@ -143,7 +143,7 @@ function initInterno(){
         document.getElementById('interno-inscripcion-texto').textContent=form?'Completá el formulario oficial para anotarte al Interno.':originalText;
       }
       status.textContent='';
-      const sourceInfo=document.getElementById('interno-source-info');if(sourceInfo){sourceInfo.hidden=!data.sourceInfo;if(data.sourceInfo){const date=new Intl.DateTimeFormat('es-UY',{dateStyle:'short',timeStyle:'short',timeZone:'America/Montevideo'}).format(new Date(data.sourceInfo.importedAt));sourceInfo.innerHTML=sourceLink(data.sourceInfo.url,'Fuente del Interno')+' · Lectura cada una hora · Datos incorporados: '+escape(date)+(data.sourceInfo.pendingPlayoffs?' · '+escape(data.sourceInfo.pendingPlayoffs)+' cruces esperan rivales confirmados.':'');}}
+      const sourceInfo=document.getElementById('interno-source-info');if(sourceInfo){sourceInfo.hidden=!data.sourceInfo;if(data.sourceInfo){const date=new Intl.DateTimeFormat('es-UY',{dateStyle:'short',timeStyle:'short',timeZone:'America/Montevideo'}).format(new Date(data.sourceInfo.checkedAt||data.sourceInfo.importedAt));sourceInfo.innerHTML=sourceLink(data.sourceInfo.url,'Fuente del Interno')+' · Lectura cada una hora · Última lectura verificada: '+escape(date)+(data.sourceInfo.pendingPlayoffs?' · '+escape(data.sourceInfo.pendingPlayoffs)+' cruces esperan rivales confirmados.':'');}}
       live.fresh();
     }catch{
       live.failed();

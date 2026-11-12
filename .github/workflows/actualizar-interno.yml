@@ -7,9 +7,13 @@ on:
       - "automation/interno-source.mjs"
       - "automation/interno-source.test.mjs"
       - "automation/sync-interno.mjs"
+      - "automation/interno-sync-due.mjs"
+      - "automation/interno-sync-due.test.mjs"
       - ".github/workflows/actualizar-interno.yml"
   schedule:
-    - cron: "37 * * * *"
+    # A short retry interval catches delayed/dropped GitHub schedules. The gate
+    # below reads Google only if the current hour has no successful read yet.
+    - cron: "7,27,47 * * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -33,21 +37,29 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+      - name: Comprobar si corresponde la lectura horaria
+        id: lectura
+        run: node automation/interno-sync-due.mjs
       - uses: actions/setup-node@v4
+        if: steps.lectura.outputs.due == 'true'
         with:
           node-version: 22
           cache: npm
       - run: npm ci --ignore-scripts
+        if: steps.lectura.outputs.due == 'true'
       - run: npx playwright install --with-deps chromium
+        if: steps.lectura.outputs.due == 'true'
       - name: Verificar importación y relojes
-        run: node --test automation/interno-source.test.mjs automation/interno.test.mjs automation/interno-live.test.mjs automation/interno-notifications.test.mjs
+        if: steps.lectura.outputs.due == 'true'
+        run: node --test automation/interno-source.test.mjs automation/interno-sync-due.test.mjs automation/interno.test.mjs automation/interno-live.test.mjs automation/interno-notifications.test.mjs
       - name: Leer la fuente pública del torneo
+        if: steps.lectura.outputs.due == 'true'
         run: node automation/sync-interno.mjs
         env:
           INTERNO_SYNC_DRY_RUN: ${{ inputs.dry_run }}
       - name: Publicar únicamente los datos validados del Interno
         id: guardar
-        if: ${{ !inputs.dry_run }}
+        if: ${{ steps.lectura.outputs.due == 'true' && !inputs.dry_run }}
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'

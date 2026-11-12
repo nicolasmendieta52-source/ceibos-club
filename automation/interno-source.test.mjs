@@ -16,6 +16,31 @@ test('respeta las tablas oficiales, sus ajustes y los goleadores publicados',()=
 test('admite un 0–0 confirmado y goles identificados, excluye los goles en contra del ranking personal',()=>{const {base,source}=fixture(),game=source.categorias.M.partidos[0];Object.assign(game,{estado:'finalizado',gl:0,gv:0});let data=mergeInternoSource(base,source);assert.equal(data.matches[0].status,'finished');assert.equal(data.matches[0].homeGoals,0);Object.assign(game,{gl:2,gv:0,eventos:[{t:'gol',eq:'M08',j:'Jugador confirmado'},{t:'gol_en_contra',eq:'M05',j:'Rival'}]});data=mergeInternoSource(base,source);assert.deepEqual(data.matches[0].scorers,[{player:'Jugador confirmado',teamId:'la-desidia',goals:1}]);});
 test('penales, suspensiones, pases directos y cruces sin rival no se convierten en resultados falsos',()=>{const {base,source}=fixture(),game=source.categorias.M.partidos[0];Object.assign(game,{fase:'final',copa:'Oro',estado:'finalizado',gl:2,gv:2,pl:3,pv:1});source.categorias.M.partidos.push({...game,id:'Pending',local_id:'',visitante_id:'',gl:null,gv:null,pl:null,pv:null,estado:'programado'},{...game,id:'Bye',estado:'bye',visitante_id:''});const data=mergeInternoSource(base,source);assert.deepEqual(data.matches[0].penalties,{home:3,away:1});assert.equal(data.sourceInfo.pendingPlayoffs,1);assert.equal(data.sourceInfo.byes,1);game.estado='suspendido';assert.equal(mergeInternoSource(base,source).matches[0].status,'suspended');});
 test('repetir la lectura no genera cambios ni IDs nuevos; un horario modificado sí',()=>{const {base,source}=fixture(),first=mergeInternoSource(base,source,{now:'2026-11-11T15:00:00Z'}),second=mergeInternoSource(first,source,{now:'2026-11-11T16:00:00Z'});assert.equal(sameInternoSnapshot(first,second),true);source.categorias.M.partidos[0].hora='21:00';const changed=mergeInternoSource(first,source);assert.equal(changed.matches[0].id,first.matches[0].id);assert.equal(sameInternoSnapshot(first,changed),false);source.equipos.M08.nombre='La Desidia FC';const renamed=mergeInternoSource(first,source);assert.equal(renamed.teams[0].id,'la-desidia');assert.equal(renamed.teams[0].name,'La Desidia FC');assert.equal(renamed.teams[0].logoUrl,base.teams[0].logoUrl);});
+test('un reemplazo toma el equipo activo de tablas/fixture sin reutilizar el escudo del retirado',()=>{
+ const {base,source}=fixture(),first=mergeInternoSource(base,source);
+ source.equipos.F17={nombre:'Manchester Birraited',categoria:'F',grupo:'A'};
+ source.categorias.F.grupos[0].tabla[1].equipo_id='F17';
+ source.categorias.F.partidos[0].visitante_id='F17';
+ const next=mergeInternoSource(first,source),team=next.teams.find(t=>t.sourceTeamId==='F17');
+ assert.equal(next.teams.length,first.teams.length);assert.ok(!next.teams.some(t=>t.sourceTeamId==='F13'));
+ assert.equal(team.name,'Manchester Birraited');assert.equal(team.logoUrl,undefined);
+ assert.equal(next.matches[1].id,first.matches[1].id);assert.equal(next.matches[1].awayId,team.id);
+ assert.ok(internoStandings(next,'femenino')[0].rows.some(row=>row.teamId===team.id));
+ const updated=mergeInternoSource(next,source);assert.equal(updated.teams.find(t=>t.sourceTeamId==='F17').id,team.id);
+});
+test('Papi vacío en origen conserva su sección local; una categoría desconocida no se ignora',()=>{
+ const {base,source}=fixture();source.categorias.P={grupos:[],partidos:[],goleadores:[]};
+ const next=mergeInternoSource(base,source);assert.deepEqual(next.categories[2],base.categories[2]);assert.ok(next.groups.some(g=>g.id==='papi-a'));
+ source.categorias.X={grupos:[],partidos:[],goleadores:[]};assert.throws(()=>mergeInternoSource(base,source),/categoría/);
+ delete source.categorias.X;source.equipos.P01={nombre:'Papi confirmado',categoria:'P',grupo:'A'};assert.throws(()=>mergeInternoSource(base,source),/categoría/);
+});
+test('una lectura sin novedades actualiza su verificación sin fingir cambios deportivos',()=>{
+ const {base,source}=fixture(),first=mergeInternoSource(base,source,{now:'2026-11-12T19:00:00Z'});
+ source.actualizado='2026-11-12T17:00:00';
+ const next=mergeInternoSource(first,source,{now:'2026-11-12T20:00:00Z'});
+ assert.equal(sameInternoSnapshot(first,next),true);assert.equal(next.sourceInfo.checkedAt,'2026-11-12T20:00:00Z');
+ next.sourceInfo.checkedAt='inválida';assert.throws(()=>validateInterno(next),/Fuente/);
+});
 test('falla cerrada ante fuente vacía, marcadores parciales, fecha imposible o tabla incompleta',()=>{for(const mutate of [s=>s.equipos={},s=>s.torneo='Interno 2027',s=>s.categorias.M.partidos[0].gl=1,s=>s.categorias.M.partidos[0].fecha='2026-02-30',s=>s.categorias.M.partidos[0].hora='24:00',s=>s.categorias.M.partidos[0].estado='desconocido',s=>s.categorias.M.grupos[0].tabla.pop()]){const {base,source}=fixture();mutate(source);assert.throws(()=>mergeInternoSource(base,source));}const {base,source}=fixture(),imported=mergeInternoSource(base,source);source.categorias.M.partidos=[];assert.throws(()=>mergeInternoSource(imported,source));});
 test('tablas y goleadores externos se validan antes de publicarse',()=>{const {base,source}=fixture(),valid=mergeInternoSource(base,source);for(const mutate of [d=>d.sourceStandings.masculino[0].rows[0].played=-1,d=>d.sourceStandings.masculino[0].rows[0].teamId='maradonas',d=>d.sourceScorers.masculino=[{player:'Incorrecto',teamId:'maradonas',teamName:'Maradoñas',goals:1,position:1}],d=>d.sourceInfo.pendingPlayoffs='<img src=x>']){const d=structuredClone(valid);mutate(d);assert.throws(()=>validateInterno(d));}});
 test('Femenino dura 20 + 5 + 20 y Masculino 25 + 5 + 25, incluyendo el cierre pendiente',()=>{const {base,source}=fixture(),data=mergeInternoSource(base,source),female=data.matches.find(m=>m.categoryId==='femenino'),male=data.matches.find(m=>m.categoryId==='masculino'),start=Date.parse('2026-11-16T23:00:00Z');for(const[minutes,phase,time]of [[20,'halftime','05:00'],[25,'second','20:00'],[45,'awaiting','40:00']]){const value=matchClock(female,clockSettings(data,female),start+minutes*60000);assert.equal(value.phase,phase);assert.equal(value.text,time);}assert.equal(matchClock(male,clockSettings(data,male),start+25*60000).phase,'halftime');assert.equal(liveBoard(data,start+105*60000).awaiting.some(row=>row.match.categoryId==='femenino'),false);assert.equal(liveBoard(data,start+105*60000).awaiting.some(row=>row.match.categoryId==='masculino'),true);});

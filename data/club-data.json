@@ -2575,6 +2575,16 @@
       "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "J.M.L.M",
+      "fecha": "2026-11-12",
+      "hora": "21:00",
+      "local": false,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F21BCC.html",
+      "cancha": "COMPLEJO LAS CASUARINAS"
+    },
+    {
       "deporte": "hockey",
       "categoria": "Reserva",
       "rival": "Old Brendans Club",
@@ -7089,7 +7099,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-11-12T07:23:08.298Z",
+  "actualizadoEn": "2026-11-12T20:14:49.581Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -7302,6 +7312,20 @@
         "url": "https://ligauniversitaria.org.uy/estadisticas-futbol-sub-20-a/",
         "registros": 22,
         "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Primera",
+        "url": "https://ligauniversitaria.org.uy/partidos/F21BCC.html",
+        "registros": 1,
+        "estado": "ok"
+      },
+      {
+        "deporte": "futbol",
+        "categoria": "Primera",
+        "url": "https://ligauniversitaria.org.uy/resultados/F21BCC.html",
+        "registros": 0,
+        "estado": "sin-coincidencias"
       }
     ],
     "instagram": {

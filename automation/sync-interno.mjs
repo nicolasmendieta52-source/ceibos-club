@@ -22,8 +22,10 @@ export async function main(){
   else for(let attempt=0;attempt<3;attempt++){try{source=await readInternoPublic();break;}catch(error){lastError=error;if(attempt<2)await new Promise(resolve=>setTimeout(resolve,2000));}}
   if(!source)throw lastError||Error('No se pudo leer la fuente pública');
   const output=mergeInternoSource(previous,source),dry=process.argv.includes('--dry-run')||process.env.INTERNO_SYNC_DRY_RUN==='true';
-  if(sameInternoSnapshot(previous,output)){console.log('Interno: fuente leída, sin cambios.');return;}
-  console.log('Interno: '+output.matches.length+' partidos · '+output.teams.length+' equipos · '+output.matches.filter(match=>match.status==='finished').length+' resultados confirmados'+(dry?' · simulación, sin guardar.':'.'));
+  if(sameInternoSnapshot(previous,output)){
+    output.sourceInfo.importedAt=previous.sourceInfo.importedAt;
+    console.log('Interno: fuente leída, sin cambios; lectura verificada '+output.sourceInfo.checkedAt+(dry?' · simulación, sin guardar.':'.'));
+  }else console.log('Interno: '+output.matches.length+' partidos · '+output.teams.length+' equipos · '+output.matches.filter(match=>match.status==='finished').length+' resultados confirmados'+(dry?' · simulación, sin guardar.':'.'));
   if(dry)return;const temp=path.join(path.dirname(fileURLToPath(file)),'.interno-'+process.pid+'.tmp');
   // The output was fully validated before any write; a failed read keeps the previous snapshot.
   await fs.writeFile(temp,JSON.stringify(output,null,2)+'\n');try{await fs.rename(temp,file);}finally{await fs.rm(temp,{force:true});}
