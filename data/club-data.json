@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-12T07:19:42.196Z",
+        "updatedAt": "2026-11-12T20:08:14.745Z",
         "tables": [
           {
             "id": 2291,
@@ -109,6 +109,18 @@
               },
               {
                 "position": 7,
+                "teamId": 388,
+                "name": "San Juan Sushi",
+                "pj": 12,
+                "pg": 3,
+                "pe": 6,
+                "pp": 3,
+                "gf": 16,
+                "gc": 14,
+                "points": 15
+              },
+              {
+                "position": 8,
                 "teamId": 525,
                 "name": "Old Sampa",
                 "pj": 11,
@@ -120,7 +132,7 @@
                 "points": 15
               },
               {
-                "position": 8,
+                "position": 9,
                 "teamId": 73,
                 "name": "La Mennais Celeste",
                 "pj": 11,
@@ -132,7 +144,7 @@
                 "points": 15
               },
               {
-                "position": 9,
+                "position": 10,
                 "teamId": 653,
                 "name": "Ceibos Club senior 40",
                 "pj": 10,
@@ -144,7 +156,7 @@
                 "points": 14
               },
               {
-                "position": 10,
+                "position": 11,
                 "teamId": 655,
                 "name": "Sta Elena Lagomar 40",
                 "pj": 11,
@@ -156,7 +168,7 @@
                 "points": 14
               },
               {
-                "position": 11,
+                "position": 12,
                 "teamId": 17,
                 "name": "San Juan Amarillo",
                 "pj": 10,
@@ -168,39 +180,27 @@
                 "points": 10
               },
               {
-                "position": 12,
-                "teamId": 388,
-                "name": "San Juan Sushi",
-                "pj": 10,
-                "pg": 1,
-                "pe": 6,
-                "pp": 3,
-                "gf": 10,
-                "gc": 12,
-                "points": 9
-              },
-              {
                 "position": 13,
                 "teamId": 55,
                 "name": "San Pablo",
-                "pj": 11,
+                "pj": 12,
                 "pg": 3,
                 "pe": 0,
-                "pp": 8,
-                "gf": 15,
-                "gc": 21,
+                "pp": 9,
+                "gf": 17,
+                "gc": 24,
                 "points": 9
               },
               {
                 "position": 14,
                 "teamId": 510,
                 "name": "Old Woodlands master",
-                "pj": 10,
+                "pj": 11,
                 "pg": 1,
                 "pe": 1,
-                "pp": 8,
+                "pp": 9,
                 "gf": 16,
-                "gc": 26,
+                "gc": 29,
                 "points": 4
               }
             ]
@@ -720,8 +720,8 @@
           {
             "id": 134939,
             "matchday": 2,
-            "status": "pending",
-            "scheduled_at": "2026-11-15T12:00:00",
+            "status": "confirmed",
+            "scheduled_at": "2026-11-22T12:00:00",
             "home_goals": null,
             "away_goals": null,
             "home_team": {
@@ -736,8 +736,8 @@
           {
             "id": 134758,
             "matchday": 2,
-            "status": "pending",
-            "scheduled_at": "2026-11-15T12:00:00",
+            "status": "confirmed",
+            "scheduled_at": "2026-11-22T12:00:00",
             "home_goals": null,
             "away_goals": null,
             "home_team": {
@@ -768,8 +768,8 @@
           {
             "id": 134835,
             "matchday": 13,
-            "status": "pending",
-            "scheduled_at": "2027-02-07T12:00:00",
+            "status": "confirmed",
+            "scheduled_at": "2026-11-15T12:00:00",
             "home_goals": null,
             "away_goals": null,
             "home_team": {
@@ -784,8 +784,8 @@
           {
             "id": 135018,
             "matchday": 13,
-            "status": "pending",
-            "scheduled_at": "2027-02-07T12:00:00",
+            "status": "confirmed",
+            "scheduled_at": "2026-11-15T12:00:00",
             "home_goals": null,
             "away_goals": null,
             "home_team": {
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-12T07:19:42.439Z",
+        "updatedAt": "2026-11-12T20:08:14.985Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-12T07:19:42.565Z",
+        "updatedAt": "2026-11-12T20:08:15.121Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-12T07:19:42.996Z",
+        "updatedAt": "2026-11-12T20:08:15.255Z",
         "tables": [
           {
             "id": 2296,
@@ -2111,8 +2111,8 @@
           {
             "id": 135030,
             "matchday": 2,
-            "status": "pending",
-            "scheduled_at": "2026-11-15T12:00:00",
+            "status": "confirmed",
+            "scheduled_at": "2026-11-22T12:00:00",
             "home_goals": null,
             "away_goals": null,
             "home_team": {
@@ -2127,8 +2127,8 @@
           {
             "id": 135106,
             "matchday": 13,
-            "status": "pending",
-            "scheduled_at": "2027-02-28T12:00:00",
+            "status": "confirmed",
+            "scheduled_at": "2026-11-15T13:45:00",
             "home_goals": null,
             "away_goals": null,
             "home_team": {
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-12T07:19:43.131Z",
+        "updatedAt": "2026-11-12T20:08:15.387Z",
         "tables": [
           {
             "id": 2239,
@@ -2617,44 +2617,54 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "CENTRO CRISTOBAL COLON",
+      "fecha": "2026-11-14",
+      "hora": "11:15",
+      "local": false,
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSCTA.html",
+      "cancha": "COLEGIO PIO"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Papi Fútbol +35",
-      "rival": "Erik Erikson",
+      "rival": "Espacio Ludico",
       "fecha": "2026-11-15",
       "hora": "09:00",
       "local": true,
       "fase": "ADIC · Clausura Copas",
-      "adicId": 134939,
+      "adicId": 135018,
       "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
       "equipoAdic": "Ceibos Club amarillo",
-      "estado": "Programado",
+      "estado": "Confirmado",
       "cancha": "A confirmar"
     },
     {
       "deporte": "futbol",
       "categoria": "Papi Fútbol +40",
-      "rival": "Aleman Schwarz",
+      "rival": "San Juan Sushi",
       "fecha": "2026-11-15",
       "hora": "09:00",
-      "local": true,
+      "local": false,
       "fase": "ADIC · Clausura Copas",
-      "adicId": 134758,
+      "adicId": 134835,
       "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
       "equipoAdic": "Ceibos Club senior 40",
-      "estado": "Programado",
+      "estado": "Confirmado",
       "cancha": "A confirmar"
     },
     {
       "deporte": "futbol",
       "categoria": "Papi Fútbol +45",
-      "rival": "Colegio Ingles",
+      "rival": "Harwood",
       "fecha": "2026-11-15",
-      "hora": "09:00",
-      "local": false,
+      "hora": "10:45",
+      "local": true,
       "fase": "ADIC · Clasura Copas Master 45",
-      "adicId": 135030,
+      "adicId": 135106,
       "fuente": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
       "equipoAdic": "Ceibos 45 Master",
-      "estado": "Programado",
+      "estado": "Confirmado",
       "cancha": "A confirmar"
     },
     {
@@ -2694,13 +2704,45 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "CENTRO CRISTOBAL COLON",
-      "fecha": "2026-11-21",
-      "hora": "11:15",
+      "categoria": "Papi Fútbol +35",
+      "rival": "Erik Erikson",
+      "fecha": "2026-11-22",
+      "hora": "09:00",
+      "local": true,
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134939,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "estado": "Confirmado",
+      "cancha": "A confirmar"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "Aleman Schwarz",
+      "fecha": "2026-11-22",
+      "hora": "09:00",
+      "local": true,
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134758,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "estado": "Confirmado",
+      "cancha": "A confirmar"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "Colegio Ingles",
+      "fecha": "2026-11-22",
+      "hora": "09:00",
       "local": false,
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSCTA.html",
-      "cancha": "COLEGIO PIO"
+      "fase": "ADIC · Clasura Copas Master 45",
+      "adicId": 135030,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "estado": "Confirmado",
+      "cancha": "A confirmar"
     },
     {
       "deporte": "futbol",
@@ -7089,7 +7131,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-11-12T07:23:08.298Z",
+  "actualizadoEn": "2026-11-12T20:12:09.749Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -7310,8 +7352,8 @@
       "imagenes": 2,
       "publicacionesApify": 2,
       "historiasMencionadas": 0,
-      "cache": 1,
-      "nuevas": 1
+      "cache": 2,
+      "nuevas": 0
     }
   }
 }
