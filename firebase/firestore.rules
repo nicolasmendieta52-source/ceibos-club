@@ -5,7 +5,7 @@ service cloud.firestore {
  allow read, delete: if request.auth != null && request.auth.uid == userId;
  allow create, update: if request.auth != null && request.auth.uid == userId && request.resource.data.keys().hasOnly(['enabled','endpoint','keys','deportes','userAgent','updatedAt']) && request.resource.data.enabled == true && request.resource.data.endpoint is string && request.resource.data.keys is map && request.resource.data.deportes is map;
  }
- function panelAuthorized() { return request.auth != null && request.auth.token.email.lower() in ["nicolasmendieta52@gmail.com","ceibosfutbol@gmail.com","jdtorresn@gmail.com"] && request.auth.token.email_verified == true && request.auth.token.firebase.sign_in_provider == 'google.com'; }
+ function panelAuthorized() { return request.auth != null && request.auth.token.email.lower() in ["nicolasmendieta52@gmail.com","ceibosfutbol@gmail.com","jdtorresn@gmail.com","alfonsogimenezkahn@gmail.com"] && request.auth.token.email_verified == true && request.auth.token.firebase.sign_in_provider == 'google.com'; }
  function bounded(n, max) { return n is int && n >= 0 && n <= max; }
  // Validate the shared 0/1 range once. Repeating bounded() for every section
  // exhausts Firestore's 1,000-expression budget and rejects otherwise valid visits.
