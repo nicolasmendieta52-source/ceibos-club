@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-13T06:53:23.874Z",
+        "updatedAt": "2026-11-13T19:48:22.542Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-13T06:53:24.093Z",
+        "updatedAt": "2026-11-13T19:48:22.749Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-13T06:53:24.207Z",
+        "updatedAt": "2026-11-13T19:48:22.851Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-13T06:53:24.335Z",
+        "updatedAt": "2026-11-13T19:48:22.974Z",
         "tables": [
           {
             "id": 2296,
@@ -1812,13 +1812,13 @@
                 "position": 5,
                 "teamId": 81,
                 "name": "La Mennais Blanco",
-                "pj": 10,
-                "pg": 4,
+                "pj": 11,
+                "pg": 5,
                 "pe": 5,
                 "pp": 1,
-                "gf": 22,
-                "gc": 14,
-                "points": 17
+                "gf": 26,
+                "gc": 17,
+                "points": 20
               },
               {
                 "position": 6,
@@ -1834,18 +1834,6 @@
               },
               {
                 "position": 7,
-                "teamId": 507,
-                "name": "Old Woodlands strong",
-                "pj": 9,
-                "pg": 4,
-                "pe": 1,
-                "pp": 4,
-                "gf": 18,
-                "gc": 16,
-                "points": 13
-              },
-              {
-                "position": 8,
                 "teamId": 418,
                 "name": "Aleman master",
                 "pj": 10,
@@ -1854,6 +1842,18 @@
                 "pp": 3,
                 "gf": 15,
                 "gc": 13,
+                "points": 13
+              },
+              {
+                "position": 8,
+                "teamId": 507,
+                "name": "Old Woodlands strong",
+                "pj": 10,
+                "pg": 4,
+                "pe": 1,
+                "pp": 5,
+                "gf": 21,
+                "gc": 20,
                 "points": 13
               },
               {
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-13T06:53:24.460Z",
+        "updatedAt": "2026-11-13T19:48:23.094Z",
         "tables": [
           {
             "id": 2239,
@@ -2573,16 +2573,6 @@
       "local": true,
       "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSCTA.html",
       "cancha": "MONTE VI \"LOS CEIBOS\""
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Primera",
-      "rival": "J.M.L.M",
-      "fecha": "2026-11-12",
-      "hora": "21:00",
-      "local": false,
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F21BCC.html",
-      "cancha": "COMPLEJO LAS CASUARINAS"
     },
     {
       "deporte": "basketball",
@@ -7121,6 +7111,18 @@
       ]
     },
     {
+      "deporte": "futbol",
+      "categoria": "Primera",
+      "rival": "J.M.L.M",
+      "gf": 2,
+      "gc": 0,
+      "fecha": "2026-11-12",
+      "goleadores": [
+        "RAFAEL MARIANO BERAMENDI (77')",
+        "JOAQUIN MARIA BARTOL (95')"
+      ]
+    },
+    {
       "deporte": "hockey",
       "categoria": "Reserva",
       "rival": "Old Brendans Club",
@@ -7139,7 +7141,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-11-13T06:56:46.052Z",
+  "actualizadoEn": "2026-11-13T19:51:36.051Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -7266,15 +7268,15 @@
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/partidos/F21BCC.html",
-        "registros": 1,
-        "estado": "ok"
+        "registros": 0,
+        "estado": "sin-coincidencias"
       },
       {
         "deporte": "futbol",
         "categoria": "Primera",
         "url": "https://ligauniversitaria.org.uy/resultados/F21BCC.html",
-        "registros": 0,
-        "estado": "sin-coincidencias"
+        "registros": 1,
+        "estado": "ok"
       },
       {
         "deporte": "futbol",
