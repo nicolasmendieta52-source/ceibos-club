@@ -1,8 +1,8 @@
 # Interno Ceibos
 
-## Estado actual al 11 de noviembre de 2026
+## Estado actual al 13 de noviembre de 2026
 
-Equipos, escudos, grupos, formatos y videos ya están publicados. El fixture, resultados, posiciones y goleadores de Masculino/Femenino se sincronizan cada hora desde la fuente pública indicada por el usuario. La primera importación tiene 54 partidos y 38 equipos; Papi conserva su formato mientras su nómina no esté en la fuente. Ver `docs/interno-datos.md`, `docs/interno-reloj.md` y `docs/interno-notificaciones.md`. Las notas siguientes conservan el estado histórico de la investigación inicial.
+Equipos, escudos, grupos, formatos y videos ya están publicados. El fixture, resultados, posiciones y goleadores de Masculino/Femenino/Papi se sincronizan cada hora desde la fuente pública indicada por el usuario. La importación del 13/11 tiene 63 partidos y 44 equipos, incluidos los interzonales de Papi. Un vigilante con relevo directo recupera lecturas horarias sin depender únicamente del cron de GitHub. Ver `docs/interno-datos.md`, `docs/interno-reloj.md` y `docs/interno-notificaciones.md`. Las notas siguientes conservan el estado histórico de la investigación inicial.
 
 ## Estado al 14 de octubre de 2026
 

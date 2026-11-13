@@ -1,4 +1,4 @@
-import {validateInterno,publicInternoUrl,sortedMatches,internoStandings,internoScorers} from './interno-model.js?v=20261112sync';
+import {validateInterno,publicInternoUrl,sortedMatches,internoStandings,internoScorers} from './interno-model.js?v=20261113papi';
 import {initLiveBoard} from './interno-live.js?v=20261111fuente';
 import {courtName} from './interno-live-clock.js?v=20261111fuente';
 

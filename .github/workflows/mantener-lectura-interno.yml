@@ -1,0 +1,46 @@
+name: Mantener lectura horaria del Interno
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "automation/watch-interno-sync.mjs"
+      - "automation/interno-watch.test.mjs"
+      - ".github/workflows/mantener-lectura-interno.yml"
+  schedule:
+    # Recovery only: the active watcher hands off directly without waiting for cron.
+    - cron: "19 * * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Vigilancia continua o comprobación del relevo
+        type: choice
+        options: [watch, verify, probe]
+        default: watch
+
+permissions:
+  contents: read
+  actions: write
+
+concurrency:
+  group: interno-reader-${{ (inputs.mode == 'verify' || inputs.mode == 'probe') && 'verificar' || 'continuo' }}
+  cancel-in-progress: false
+
+jobs:
+  vigilar:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 185
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verificar control horario y relevo
+        run: node --test automation/interno-watch.test.mjs automation/interno-sync-due.test.mjs
+      - name: Mantener y recuperar las lecturas horarias
+        run: node automation/watch-interno-sync.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          INTERNO_WATCH_MODE: ${{ inputs.mode || 'watch' }}

@@ -48,8 +48,9 @@ export function validateInterno(data){
     if(!categories.has(match.categoryId)||!teams.has(match.homeId)||!teams.has(match.awayId)||match.homeId===match.awayId)throw Error('Equipos de partido inválidos');
     const pair=[match.homeId,match.awayId].map(teamId=>data.teams.find(t=>t.id===teamId));
     if(pair.some(t=>t.categoryId!==match.categoryId))throw Error('Partido entre categorías distintas');
-    if(!['groups','playoffs'].includes(match.stage)||!['scheduled','postponed','suspended','finished','cancelled'].includes(match.status))throw Error('Fase o estado de partido inválido');
+    if(!['groups','playoffs','interzonal'].includes(match.stage)||!['scheduled','postponed','suspended','finished','cancelled'].includes(match.status))throw Error('Fase o estado de partido inválido');
     if(match.stage==='groups'&&(!groups.has(match.groupId)||pair.some(t=>t.groupId!==match.groupId)))throw Error('Partido de serie mal asignado');
+    if(match.stage==='interzonal'&&(match.categoryId!=='mas38'||match.groupId!==undefined||pair.some(t=>!t.groupId)||pair[0].groupId===pair[1].groupId))throw Error('Interzonal de Papi mal asignado');
     if(match.date){const d=new Date(match.date+'T12:00:00Z');if(!/^2026-\d{2}-\d{2}$/.test(match.date)||!Number.isFinite(d.getTime())||d.toISOString().slice(0,10)!==match.date)throw Error('Fecha inválida');}
     if(match.time&&!/^(?:[01]\d|2[0-3]):[0-5]\d$/.test(match.time))throw Error('Horario inválido');
     if(match.status==='finished'&&(!integer(match.homeGoals)||!integer(match.awayGoals)))throw Error('Un resultado requiere los dos marcadores');

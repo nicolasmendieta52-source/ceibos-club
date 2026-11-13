@@ -790,23 +790,63 @@
       "sourceTeamId": "F17",
       "sourceName": "Manchester Birraited",
       "groupId": "fem-c"
+    },
+    {
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "id": "mas38-everton",
+      "name": "Everton",
+      "categoryId": "mas38",
+      "sourceTeamId": "P01",
+      "sourceName": "Everton",
+      "groupId": "papi-a"
+    },
+    {
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "id": "mas38-liverpool",
+      "name": "Liverpool",
+      "categoryId": "mas38",
+      "sourceTeamId": "P02",
+      "sourceName": "Liverpool",
+      "groupId": "papi-a"
+    },
+    {
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "id": "mas38-manchester-city",
+      "name": "Manchester City",
+      "categoryId": "mas38",
+      "sourceTeamId": "P04",
+      "sourceName": "Manchester City",
+      "groupId": "papi-a"
+    },
+    {
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "id": "mas38-manchester-united",
+      "name": "Manchester United",
+      "categoryId": "mas38",
+      "sourceTeamId": "P03",
+      "sourceName": "Manchester United",
+      "groupId": "papi-b"
+    },
+    {
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "id": "mas38-nottingham-forest",
+      "name": "Nottingham Forest",
+      "categoryId": "mas38",
+      "sourceTeamId": "P05",
+      "sourceName": "Nottingham Forest",
+      "groupId": "papi-b"
+    },
+    {
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "id": "mas38-wolverhampton",
+      "name": "Wolverhampton",
+      "categoryId": "mas38",
+      "sourceTeamId": "P06",
+      "sourceName": "Wolverhampton",
+      "groupId": "papi-b"
     }
   ],
   "groups": [
-    {
-      "id": "papi-a",
-      "name": "Zona A",
-      "categoryId": "mas38",
-      "expectedTeams": 3,
-      "sourceUrl": "/assets/interno/formatos/2026/papi.mp4"
-    },
-    {
-      "id": "papi-b",
-      "name": "Zona B",
-      "categoryId": "mas38",
-      "expectedTeams": 3,
-      "sourceUrl": "/assets/interno/formatos/2026/papi.mp4"
-    },
     {
       "id": "mas-a",
       "name": "Grupo A",
@@ -866,6 +906,20 @@
       "name": "Grupo D",
       "categoryId": "femenino",
       "sourceUrl": "/assets/interno/grupos/2026/femenino.jpeg"
+    },
+    {
+      "id": "papi-a",
+      "name": "Zona A",
+      "categoryId": "mas38",
+      "expectedTeams": 3,
+      "sourceUrl": "/assets/interno/formatos/2026/papi.mp4"
+    },
+    {
+      "id": "papi-b",
+      "name": "Zona B",
+      "categoryId": "mas38",
+      "expectedTeams": 3,
+      "sourceUrl": "/assets/interno/formatos/2026/papi.mp4"
     }
   ],
   "matches": [
@@ -1678,6 +1732,126 @@
       "date": "2026-11-23",
       "time": "21:15",
       "court": "Cancha 4"
+    },
+    {
+      "id": "src-p-p4c634762",
+      "categoryId": "mas38",
+      "homeId": "mas38-liverpool",
+      "awayId": "mas38-everton",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P4c634762",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "papi-a",
+      "round": "Fase de grupos · Fecha 1",
+      "date": "2026-11-18",
+      "time": "20:00",
+      "court": "Cancha 2"
+    },
+    {
+      "id": "src-p-pfa1fc532",
+      "categoryId": "mas38",
+      "homeId": "mas38-manchester-united",
+      "awayId": "mas38-nottingham-forest",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pfa1fc532",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "papi-b",
+      "round": "Fase de grupos · Fecha 1",
+      "date": "2026-11-18",
+      "time": "21:00",
+      "court": "Cancha 2"
+    },
+    {
+      "id": "src-p-pfce2a6b3",
+      "categoryId": "mas38",
+      "homeId": "mas38-manchester-city",
+      "awayId": "mas38-wolverhampton",
+      "stage": "interzonal",
+      "status": "scheduled",
+      "sourceId": "Pfce2a6b3",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "round": "Interzonal · Fecha 1",
+      "date": "2026-11-18",
+      "time": "21:15",
+      "court": "Cancha 4"
+    },
+    {
+      "id": "src-p-p1af12c70",
+      "categoryId": "mas38",
+      "homeId": "mas38-everton",
+      "awayId": "mas38-nottingham-forest",
+      "stage": "interzonal",
+      "status": "scheduled",
+      "sourceId": "P1af12c70",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "round": "Interzonal · Fecha 2",
+      "date": "2026-11-25"
+    },
+    {
+      "id": "src-p-p80d73754",
+      "categoryId": "mas38",
+      "homeId": "mas38-manchester-united",
+      "awayId": "mas38-wolverhampton",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P80d73754",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "papi-b",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-25"
+    },
+    {
+      "id": "src-p-pbab98ffb",
+      "categoryId": "mas38",
+      "homeId": "mas38-liverpool",
+      "awayId": "mas38-manchester-city",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pbab98ffb",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "papi-a",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-25"
+    },
+    {
+      "id": "src-p-p6df0eeb8",
+      "categoryId": "mas38",
+      "homeId": "mas38-everton",
+      "awayId": "mas38-manchester-city",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P6df0eeb8",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "papi-a",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-12-02"
+    },
+    {
+      "id": "src-p-p77cb5ee1",
+      "categoryId": "mas38",
+      "homeId": "mas38-liverpool",
+      "awayId": "mas38-manchester-united",
+      "stage": "interzonal",
+      "status": "scheduled",
+      "sourceId": "P77cb5ee1",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "round": "Interzonal · Fecha 3",
+      "date": "2026-12-02"
+    },
+    {
+      "id": "src-p-p8ce43306",
+      "categoryId": "mas38",
+      "homeId": "mas38-nottingham-forest",
+      "awayId": "mas38-wolverhampton",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P8ce43306",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "papi-b",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-12-02"
     }
   ],
   "groupsVerifiedAt": "2026-11-10",
@@ -2373,21 +2547,139 @@
           }
         ]
       }
+    ],
+    "mas38": [
+      {
+        "id": "papi-a",
+        "name": "Zona A",
+        "categoryId": "mas38",
+        "expectedTeams": 3,
+        "sourceUrl": "/assets/interno/formatos/2026/papi.mp4",
+        "rows": [
+          {
+            "teamId": "mas38-everton",
+            "name": "Everton",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "mas38-liverpool",
+            "name": "Liverpool",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "mas38-manchester-city",
+            "name": "Manchester City",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          }
+        ]
+      },
+      {
+        "id": "papi-b",
+        "name": "Zona B",
+        "categoryId": "mas38",
+        "expectedTeams": 3,
+        "sourceUrl": "/assets/interno/formatos/2026/papi.mp4",
+        "rows": [
+          {
+            "teamId": "mas38-manchester-united",
+            "name": "Manchester United",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "mas38-nottingham-forest",
+            "name": "Nottingham Forest",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "mas38-wolverhampton",
+            "name": "Wolverhampton",
+            "position": null,
+            "played": 0,
+            "won": 0,
+            "drawn": 0,
+            "lost": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          }
+        ]
+      }
     ]
   },
   "sourceScorers": {
     "masculino": [],
-    "femenino": []
+    "femenino": [],
+    "mas38": []
   },
   "sourceInfo": {
     "url": "https://interno2026.ceibosfutbol.workers.dev/",
     "intervalMinutes": 60,
-    "importedAt": "2026-11-12T20:11:02.784Z",
-    "checkedAt": "2026-11-13T01:22:00.226Z",
-    "sourceUpdatedAt": "2026-11-12T17:04:15",
+    "importedAt": "2026-11-13T21:48:32.615Z",
+    "checkedAt": "2026-11-13T21:52:45.136Z",
+    "sourceUpdatedAt": "2026-11-13T16:51:33",
     "categories": [
       "masculino",
-      "femenino"
+      "femenino",
+      "mas38"
     ],
     "pendingPlayoffs": 0,
     "byes": 0

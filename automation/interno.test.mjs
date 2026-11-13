@@ -72,7 +72,7 @@ test('grupos publicados conservan el sorteo y los reemplazos oficiales: 22 mascu
   // Names can legitimately change in the official source. Keep the confirmed
   // group sizes under test without freezing a withdrawn participant forever.
   const expected={'mas-a':4,'mas-b':4,'mas-c':4,'mas-d':4,'mas-e':3,'mas-f':3,'fem-a':4,'fem-b':4,'fem-c':4,'fem-d':4};
-  assert.equal(data.groups.filter(group=>group.categoryId!=='mas38').length,10);assert.equal(data.teams.length,38);
+  assert.equal(data.groups.filter(group=>group.categoryId!=='mas38').length,10);assert.equal(data.teams.filter(team=>team.categoryId!=='mas38').length,38);
   for(const [groupId,count] of Object.entries(expected))assert.equal(data.teams.filter(team=>team.groupId===groupId).length,count);
   assert.equal(data.teams.filter(team=>team.categoryId==='masculino').length,22);
   assert.equal(data.teams.filter(team=>team.categoryId==='femenino').length,16);
@@ -89,7 +89,8 @@ test('grupos y escudos se presentan por categoría y conservan el orden de la pl
   assert.match(female,/Dep\. Resaca/);assert.match(female,/Ramillete/);assert.doesNotMatch(female,/Orleans|La Vuelta/);
   assert.match(female,/<svg viewBox=/);assert.match(female,/<image href="https:\/\/ceibosclub.com\/assets\/interno\/grupos\/2026\/femenino.jpeg"/);
   assert.match(internoPanelMarkup(data,'mas38','grupos'),/6 equipos · 2 zonas confirmadas/);
-  assert.match(internoPanelMarkup(data,'mas38','grupos'),/Nómina por anunciar/);
+  assert.doesNotMatch(internoPanelMarkup(data,'mas38','grupos'),/Nómina por anunciar/);
+  assert.equal(data.teams.filter(team=>team.categoryId==='mas38').length,6);
 });
 
 test('octavos masculinos respetan 1–16 a 8–9 y cada categoría tiene sus cruces propios',async()=>{
@@ -114,7 +115,7 @@ test('formatos confirmados reflejan los videos y no generan equipos ni fechas de
   assert.match(female.matchesLabel,/5 partidos/);assert.match(female.stages[3].text,/seis partidos/);
   assert.deepEqual(papi.brackets[0].pairs,[['1.º A','1.º B'],['2.º A','2.º B'],['3.º A','3.º B']]);
   assert.equal(papi.schedule.length,4);assert.match(papi.stages[1].text,/tres partidos.*cada zona/);
-  assert.equal(data.teams.filter(team=>team.categoryId==='mas38').length,0);assert.equal(data.categories[2].points,null);
+  assert.equal(data.teams.filter(team=>team.categoryId==='mas38').length,6);assert.equal(data.categories[2].points,null);
   for(const category of data.categories){
     const before=structuredClone(data.matches),html=internoPanelMarkup(data,category.id,'cruces');
     assert.deepEqual(data.matches,before);assert.match(html,/<video controls playsinline preload="none"/);assert.doesNotMatch(html,/autoplay|<iframe/);

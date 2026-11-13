@@ -1,7 +1,7 @@
 import {validateInterno} from '../assets/interno-model.js';
 export const INTERNO_SOURCE='https://interno2026.ceibosfutbol.workers.dev/';
 export const PUBLIC_SCRIPT='https://script.google.com/macros/s/AKfycby6uKKfOzV8tgNxWSwbVgeiV9IGohws3Uq9IIBw6QAZi4AwvNwwdclDRmFEKk-JWxrtcQ/exec';
-const categoryIds={M:'masculino',F:'femenino'},prefixes={M:'mas',F:'fem'};
+const categoryIds={M:'masculino',F:'femenino',P:'mas38'},prefixes={M:'mas',F:'fem',P:'papi'};
 const aliases={'real alta gama':'real-alta-gama','la bomb squad':'la-bomb-squad','fishermans':'fishermans','la vuelta fc':'la-vuelta','garrulos fc':'garrulos-fc','canuya fc':'la-canuya','orleans fc':'orleans','la naranja mecanica':'la-naranja-mecanica','matanza':'la-matanza','levantate fc':'levantate-fc','ramillete fc':'ramillete','purohumo fc':'purohumo-fc','deportivo resaca':'deportivo-resaca'};
 const fold=value=>String(value).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const label=(value,max=120)=>{if(typeof value!=='string'||!value.trim()||value.trim().length>max)throw Error('Texto público del Interno inválido');return value.trim();};
@@ -33,9 +33,11 @@ function emptyPapiCategory(source){
 export function mergeInternoSource(previous,source,{now=new Date().toISOString()}={}){
   validateInterno(previous);
   if(!source||typeof source.torneo!=='string'||!/\b2026\b/.test(source.torneo)||!source.equipos||Array.isArray(source.equipos)||!source.categorias||!Object.keys(source.equipos).length)throw Error('La fuente no contiene el Interno 2026 completo');
-  if(Object.keys(source.categorias).some(code=>!Object.hasOwn(categoryIds,code)&&!(code==='P'&&emptyPapiCategory(source))))throw Error('La fuente agregó una categoría con datos; revisar su correspondencia antes de importar');
-  const output=structuredClone(previous),covered=new Set(Object.values(categoryIds)),teamMap=new Map(),incomingTeams=[],incomingGroups=[],sourceStandings={},sourceScorers={},matches=[];let pending=0,byes=0;
-  for(const[code,categoryId]of Object.entries(categoryIds)){
+  if(Object.keys(source.categorias).some(code=>!Object.hasOwn(categoryIds,code)))throw Error('La fuente agregó una categoría con datos; revisar su correspondencia antes de importar');
+  const selected=Object.entries(categoryIds).filter(([code])=>code!=='P'||(source.categorias.P&&!emptyPapiCategory(source)));
+  const output=structuredClone(previous),covered=new Set(selected.map(([,id])=>id)),teamMap=new Map(),incomingTeams=[],incomingGroups=[],sourceStandings={},sourceScorers={},matches=[];let pending=0,byes=0;
+  if(!covered.has('mas38')&&previous.teams.some(team=>team.categoryId==='mas38'&&team.sourceTeamId))throw Error('Papi fútbol desapareció de la fuente; se conserva la última versión');
+  for(const[code,categoryId]of selected){
     const category=output.categories.find(row=>row.id===categoryId),remote=source.categorias[code];
     if(!category||!remote||!Array.isArray(remote.grupos)||!Array.isArray(remote.partidos)||!Array.isArray(remote.goleadores)||remote.partidos.length>2000)throw Error('Categoría de la fuente incompleta: '+code);
     // The public registry retains withdrawn teams. The standings and fixtures
@@ -62,14 +64,16 @@ export function mergeInternoSource(previous,source,{now=new Date().toISOString()
   const teamOrder=new Map(previous.teams.map((team,index)=>[team.id,index]));incomingTeams.sort((a,b)=>(teamOrder.get(a.id)??10000)-(teamOrder.get(b.id)??10000)||a.id.localeCompare(b.id));
   output.teams=[...incomingTeams,...previous.teams.filter(team=>!covered.has(team.categoryId))];
   output.groups=[...previous.groups.filter(group=>!covered.has(group.categoryId)),...incomingGroups];
-  for(const[code,categoryId]of Object.entries(categoryIds)){
+  for(const[code,categoryId]of selected){
     const remote=source.categorias[code],category=output.categories.find(row=>row.id===categoryId);
     sourceStandings[categoryId]=remote.grupos.map(group=>{
       const id=groupId(code,group.grupo),metadata=output.groups.find(row=>row.id===id);
       const rows=group.tabla.map(row=>{const team=teamMap.get(row.equipo_id);if(!team||team.categoryId!==categoryId||team.groupId!==id)throw Error('Equipo de tabla mal asignado');
         const played=number(row.pj),won=number(row.pg),drawn=number(row.pe),lost=number(row.pp),gf=number(row.gf),ga=number(row.gc),points=row.pts;
         if(won+drawn+lost!==played||!Number.isInteger(points)||row.dg!==gf-ga)throw Error('Tabla de posiciones inconsistente');
-        const adjustment=points-won*category.points.win-drawn*category.points.draw-lost*category.points.loss;
+        // Papi's official table is authoritative; do not infer a scoring rule
+        // from empty tables or reuse the other categories' points configuration.
+        const adjustment=category.points?points-won*category.points.win-drawn*category.points.draw-lost*category.points.loss:0;
         return {teamId:team.id,name:team.name,position:number(row.pos),played,won,drawn,lost,gf,ga,gd:gf-ga,points,adjustment,adjustmentNote:adjustment?'Puntaje publicado en la fuente del Interno.':'',tied:false};
       });
       if(rows.every(row=>row.played===0))for(const row of rows)row.position=null;
@@ -87,9 +91,10 @@ export function mergeInternoSource(previous,source,{now=new Date().toISOString()
       const gl=score(item.gl),gv=score(item.gv);if((gl===null)!==(gv===null))throw Error('Marcador incompleto');
       const statusMap={programado:'scheduled',pendiente:'scheduled',confirmado:'scheduled',en_juego:'scheduled',jugado:'finished',finalizado:'finished',terminado:'finished',suspendido:'suspended',postergado:'postponed',cancelado:'cancelled'};
       let status=statusMap[item.estado];if(!status)throw Error('Estado del partido no reconocido');if(gl!==null&&status==='scheduled')status='finished';if(status==='finished'&&gl===null)throw Error('Resultado final sin marcador');
-      const isGroup=item.fase==='grupos'&&!item.copa,old=previous.matches.find(match=>match.categoryId===categoryId&&match.sourceId===item.id);
-      const row={id:old?.id||'src-'+code.toLowerCase()+'-'+item.id.toLowerCase(),categoryId,homeId:home.id,awayId:away.id,stage:isGroup?'groups':'playoffs',status,sourceId:item.id,sourceUrl:INTERNO_SOURCE};
-      if(isGroup)row.groupId=groupId(code,item.grupo);row.round=[roundNames[item.fase],isGroup&&item.jornada?'Fecha '+number(item.jornada):'',!isGroup&&item.copa?'Copa '+label(item.copa,30):''].filter(Boolean).join(' · ');
+      const interzonal=code==='P'&&item.fase==='grupos'&&item.grupo==='IZ'&&!item.copa;
+      const isGroup=item.fase==='grupos'&&!item.copa&&!interzonal,old=previous.matches.find(match=>match.categoryId===categoryId&&match.sourceId===item.id);
+      const row={id:old?.id||'src-'+code.toLowerCase()+'-'+item.id.toLowerCase(),categoryId,homeId:home.id,awayId:away.id,stage:interzonal?'interzonal':isGroup?'groups':'playoffs',status,sourceId:item.id,sourceUrl:INTERNO_SOURCE};
+      if(isGroup)row.groupId=groupId(code,item.grupo);row.round=[interzonal?'Interzonal':roundNames[item.fase],(isGroup||interzonal)&&item.jornada?'Fecha '+number(item.jornada):'',!isGroup&&item.copa?'Copa '+label(item.copa,30):''].filter(Boolean).join(' · ');
       if(!absent(item.fecha))row.date=label(item.fecha,10);const time=publicTime(item.hora),name=court(item.cancha);if(time)row.time=time;if(name)row.court=name;
       if(status==='finished'){
         row.homeGoals=gl;row.awayGoals=gv;const pl=score(item.pl),pv=score(item.pv);if((pl===null)!==(pv===null))throw Error('Penales incompletos');if(pl!==null)row.penalties={home:pl,away:pv};

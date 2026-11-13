@@ -32,7 +32,19 @@ test('Papi vacío en origen conserva su sección local; una categoría desconoci
  const {base,source}=fixture();source.categorias.P={grupos:[],partidos:[],goleadores:[]};
  const next=mergeInternoSource(base,source);assert.deepEqual(next.categories[2],base.categories[2]);assert.ok(next.groups.some(g=>g.id==='papi-a'));
  source.categorias.X={grupos:[],partidos:[],goleadores:[]};assert.throws(()=>mergeInternoSource(base,source),/categoría/);
- delete source.categorias.X;source.equipos.P01={nombre:'Papi confirmado',categoria:'P',grupo:'A'};assert.throws(()=>mergeInternoSource(base,source),/categoría/);
+ delete source.categorias.X;source.equipos.P01={nombre:'Papi confirmado',categoria:'P',grupo:'A'};assert.throws(()=>mergeInternoSource(base,source),/incompleta/i);
+});
+test('Papi importa seis equipos, sus tablas oficiales y el interzonal sin convertirlo en una final',()=>{
+ const {base,source}=fixture(),table=id=>({equipo_id:id,pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,dg:0,pts:0,pos:1});
+ for(let i=1;i<=6;i++)source.equipos['P0'+i]={nombre:'Papi '+i,categoria:'P',grupo:i<=3?'A':'B'};
+ source.categorias.P={grupos:['A','B'].map((grupo,i)=>({grupo,tabla:[1,2,3].map(n=>({...table('P0'+(n+i*3)),pos:n}))})),partidos:[{id:'papi-zone',fase:'grupos',grupo:'A',jornada:1,local_id:'P01',visitante_id:'P02',fecha:'2026-11-18',hora:'20:00',cancha:'2',gl:null,gv:null,pl:null,pv:null,estado:'programado',eventos:[]},{id:'papi-iz',fase:'grupos',grupo:'IZ',jornada:1,local_id:'P03',visitante_id:'P06',fecha:'2026-11-18',hora:'21:15',cancha:'4',gl:null,gv:null,pl:null,pv:null,estado:'programado',eventos:[]}],goleadores:[]};
+ const data=mergeInternoSource(base,source),games=data.matches.filter(m=>m.categoryId==='mas38');
+ assert.equal(data.teams.filter(t=>t.categoryId==='mas38').length,6);assert.equal(data.categories[2].points,null);assert.equal(games[0].groupId,'papi-a');assert.equal(games[1].stage,'interzonal');assert.equal(games[1].groupId,undefined);assert.match(games[1].round,/Interzonal/);
+ assert.equal(internoStandings(data,'mas38').length,2);assert.deepEqual(data.sourceInfo.categories,['masculino','femenino','mas38']);
+ const changed=structuredClone(data);changed.matches.at(-1).awayId=changed.teams.find(t=>t.sourceTeamId==='P02').id;assert.throws(()=>validateInterno(changed),/Interzonal/);
+ source.categorias.P.partidos[1].gl=2;source.categorias.P.partidos[1].gv=1;source.categorias.P.partidos[1].estado='finalizado';
+ const scored=mergeInternoSource(data,source);assert.equal(scored.matches.at(-1).homeGoals,2);assert.equal(scored.matches.at(-1).stage,'interzonal');
+ source.categorias.P={grupos:[],partidos:[],goleadores:[]};for(let i=1;i<=6;i++)delete source.equipos['P0'+i];assert.throws(()=>mergeInternoSource(data,source),/desapareció/);
 });
 test('una lectura sin novedades actualiza su verificación sin fingir cambios deportivos',()=>{
  const {base,source}=fixture(),first=mergeInternoSource(base,source,{now:'2026-11-12T19:00:00Z'});
