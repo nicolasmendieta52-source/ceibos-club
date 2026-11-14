@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-14T06:34:58.656Z",
+        "updatedAt": "2026-11-14T18:13:06.565Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-14T06:34:58.726Z",
+        "updatedAt": "2026-11-14T18:13:06.630Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-14T06:34:58.777Z",
+        "updatedAt": "2026-11-14T18:13:06.685Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-14T06:34:58.852Z",
+        "updatedAt": "2026-11-14T18:13:06.757Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-14T06:34:58.920Z",
+        "updatedAt": "2026-11-14T18:13:06.825Z",
         "tables": [
           {
             "id": 2239,
@@ -2583,16 +2583,6 @@
       "local": false,
       "fuente": "https://ligauniversitaria.org.uy/partidos/B221B5P.html",
       "cancha": "G. TROUVILLE"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "PreSenior",
-      "rival": "EL CHORRO FUTBOL CLUB",
-      "fecha": "2026-11-14",
-      "hora": "09:00",
-      "local": true,
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F3232PSCTA.html",
-      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "futbol",
@@ -7133,6 +7123,14 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "PreSenior",
+      "rival": "EL CHORRO FUTBOL CLUB",
+      "gf": 3,
+      "gc": 0,
+      "fecha": "2026-11-14"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "NACIONAL UNIVERSITARIO",
       "gf": 0,
@@ -7141,7 +7139,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-11-14T06:38:24.696Z",
+  "actualizadoEn": "2026-11-14T18:16:27.833Z",
   "diagnostico": {
     "fuentes": [
       {
