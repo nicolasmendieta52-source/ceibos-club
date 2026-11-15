@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-15T06:42:55.280Z",
+        "updatedAt": "2026-11-15T18:56:19.763Z",
         "tables": [
           {
             "id": 2291,
@@ -39,88 +39,100 @@
                 "position": 1,
                 "teamId": 730,
                 "name": "Club J.Maria",
-                "pj": 11,
-                "pg": 8,
+                "pj": 12,
+                "pg": 9,
                 "pe": 1,
                 "pp": 2,
-                "gf": 19,
+                "gf": 20,
                 "gc": 9,
-                "points": 25
+                "points": 28
               },
               {
                 "position": 2,
                 "teamId": 107,
                 "name": "Santa Rita Rojo",
-                "pj": 11,
-                "pg": 7,
+                "pj": 12,
+                "pg": 8,
                 "pe": 2,
                 "pp": 2,
-                "gf": 23,
+                "gf": 28,
                 "gc": 10,
-                "points": 23
+                "points": 26
               },
               {
                 "position": 3,
                 "teamId": 483,
                 "name": "Scuola Italiana 1886",
-                "pj": 11,
+                "pj": 12,
                 "pg": 7,
-                "pe": 1,
+                "pe": 2,
                 "pp": 3,
-                "gf": 20,
-                "gc": 10,
-                "points": 22
+                "gf": 21,
+                "gc": 11,
+                "points": 23
               },
               {
                 "position": 4,
                 "teamId": 544,
                 "name": "Ivy Thomas 40",
-                "pj": 11,
+                "pj": 12,
                 "pg": 6,
-                "pe": 1,
+                "pe": 2,
                 "pp": 4,
-                "gf": 20,
-                "gc": 16,
-                "points": 19
+                "gf": 21,
+                "gc": 17,
+                "points": 20
               },
               {
                 "position": 5,
-                "teamId": 697,
-                "name": "Areteia blanco",
-                "pj": 11,
-                "pg": 5,
-                "pe": 2,
-                "pp": 4,
-                "gf": 15,
-                "gc": 19,
-                "points": 17
+                "teamId": 388,
+                "name": "San Juan Sushi",
+                "pj": 13,
+                "pg": 4,
+                "pe": 6,
+                "pp": 3,
+                "gf": 18,
+                "gc": 15,
+                "points": 18
               },
               {
                 "position": 6,
-                "teamId": 658,
-                "name": "Aleman Schwarz",
-                "pj": 11,
+                "teamId": 655,
+                "name": "Sta Elena Lagomar 40",
+                "pj": 12,
                 "pg": 5,
-                "pe": 1,
+                "pe": 2,
                 "pp": 5,
-                "gf": 15,
-                "gc": 14,
-                "points": 16
+                "gf": 21,
+                "gc": 20,
+                "points": 17
               },
               {
                 "position": 7,
-                "teamId": 388,
-                "name": "San Juan Sushi",
+                "teamId": 697,
+                "name": "Areteia blanco",
                 "pj": 12,
-                "pg": 3,
-                "pe": 6,
-                "pp": 3,
-                "gf": 16,
-                "gc": 14,
-                "points": 15
+                "pg": 5,
+                "pe": 2,
+                "pp": 5,
+                "gf": 15,
+                "gc": 20,
+                "points": 17
               },
               {
                 "position": 8,
+                "teamId": 658,
+                "name": "Aleman Schwarz",
+                "pj": 12,
+                "pg": 5,
+                "pe": 1,
+                "pp": 6,
+                "gf": 15,
+                "gc": 18,
+                "points": 16
+              },
+              {
+                "position": 9,
                 "teamId": 525,
                 "name": "Old Sampa",
                 "pj": 11,
@@ -132,7 +144,7 @@
                 "points": 15
               },
               {
-                "position": 9,
+                "position": 10,
                 "teamId": 73,
                 "name": "La Mennais Celeste",
                 "pj": 11,
@@ -144,21 +156,9 @@
                 "points": 15
               },
               {
-                "position": 10,
+                "position": 11,
                 "teamId": 653,
                 "name": "Ceibos Club senior 40",
-                "pj": 10,
-                "pg": 4,
-                "pe": 2,
-                "pp": 4,
-                "gf": 17,
-                "gc": 18,
-                "points": 14
-              },
-              {
-                "position": 11,
-                "teamId": 655,
-                "name": "Sta Elena Lagomar 40",
                 "pj": 11,
                 "pg": 4,
                 "pe": 2,
@@ -171,37 +171,37 @@
                 "position": 12,
                 "teamId": 17,
                 "name": "San Juan Amarillo",
-                "pj": 10,
+                "pj": 11,
                 "pg": 3,
                 "pe": 1,
-                "pp": 6,
+                "pp": 7,
                 "gf": 11,
-                "gc": 23,
+                "gc": 26,
                 "points": 10
               },
               {
                 "position": 13,
                 "teamId": 55,
                 "name": "San Pablo",
-                "pj": 12,
+                "pj": 13,
                 "pg": 3,
                 "pe": 0,
-                "pp": 9,
+                "pp": 10,
                 "gf": 17,
-                "gc": 24,
+                "gc": 29,
                 "points": 9
               },
               {
                 "position": 14,
                 "teamId": 510,
                 "name": "Old Woodlands master",
-                "pj": 11,
-                "pg": 1,
+                "pj": 12,
+                "pg": 2,
                 "pe": 1,
                 "pp": 9,
-                "gf": 16,
+                "gf": 20,
                 "gc": 29,
-                "points": 4
+                "points": 7
               }
             ]
           },
@@ -213,168 +213,168 @@
                 "position": 1,
                 "teamId": 729,
                 "name": "Espacio Ludico",
-                "pj": 11,
-                "pg": 9,
+                "pj": 12,
+                "pg": 10,
                 "pe": 1,
                 "pp": 1,
-                "gf": 39,
-                "gc": 12,
-                "points": 28
+                "gf": 44,
+                "gc": 13,
+                "points": 31
               },
               {
                 "position": 2,
                 "teamId": 584,
                 "name": "Frances ELF",
-                "pj": 11,
+                "pj": 12,
                 "pg": 9,
-                "pe": 1,
+                "pe": 2,
                 "pp": 1,
-                "gf": 33,
-                "gc": 12,
-                "points": 28
+                "gf": 36,
+                "gc": 15,
+                "points": 29
               },
               {
                 "position": 3,
                 "teamId": 474,
                 "name": "Crandogs",
-                "pj": 11,
-                "pg": 8,
+                "pj": 12,
+                "pg": 9,
                 "pe": 1,
                 "pp": 2,
-                "gf": 28,
+                "gf": 31,
                 "gc": 14,
-                "points": 25
+                "points": 28
               },
               {
                 "position": 4,
                 "teamId": 746,
                 "name": "Orange Trouville",
-                "pj": 11,
-                "pg": 6,
+                "pj": 12,
+                "pg": 7,
                 "pe": 4,
                 "pp": 1,
-                "gf": 37,
-                "gc": 18,
-                "points": 22
+                "gf": 43,
+                "gc": 19,
+                "points": 25
               },
               {
                 "position": 5,
                 "teamId": 647,
                 "name": "Erik Erikson",
-                "pj": 11,
-                "pg": 7,
+                "pj": 12,
+                "pg": 8,
                 "pe": 1,
                 "pp": 3,
-                "gf": 34,
+                "gf": 42,
                 "gc": 21,
-                "points": 22
+                "points": 25
               },
               {
                 "position": 6,
-                "teamId": 719,
-                "name": "Ceibos Club amarillo",
-                "pj": 11,
-                "pg": 5,
-                "pe": 3,
-                "pp": 3,
-                "gf": 18,
-                "gc": 18,
-                "points": 18
+                "teamId": 447,
+                "name": "Saint George rojo",
+                "pj": 12,
+                "pg": 6,
+                "pe": 2,
+                "pp": 4,
+                "gf": 33,
+                "gc": 25,
+                "points": 20
               },
               {
                 "position": 7,
-                "teamId": 447,
-                "name": "Saint George rojo",
-                "pj": 11,
+                "teamId": 719,
+                "name": "Ceibos Club amarillo",
+                "pj": 12,
                 "pg": 5,
-                "pe": 2,
+                "pe": 3,
                 "pp": 4,
-                "gf": 29,
-                "gc": 24,
-                "points": 17
+                "gf": 19,
+                "gc": 23,
+                "points": 18
               },
               {
                 "position": 8,
                 "teamId": 732,
                 "name": "HCA +40",
-                "pj": 11,
+                "pj": 12,
                 "pg": 4,
                 "pe": 3,
-                "pp": 4,
+                "pp": 5,
                 "gf": 20,
-                "gc": 20,
+                "gc": 23,
                 "points": 15
               },
               {
                 "position": 9,
                 "teamId": 194,
                 "name": "Old Clifton",
-                "pj": 11,
+                "pj": 12,
                 "pg": 3,
                 "pe": 5,
-                "pp": 3,
-                "gf": 16,
-                "gc": 18,
+                "pp": 4,
+                "gf": 17,
+                "gc": 22,
                 "points": 14
               },
               {
                 "position": 10,
                 "teamId": 20,
                 "name": "Pallotti",
-                "pj": 11,
-                "pg": 3,
+                "pj": 12,
+                "pg": 4,
                 "pe": 1,
                 "pp": 7,
-                "gf": 17,
-                "gc": 35,
-                "points": 10
+                "gf": 21,
+                "gc": 36,
+                "points": 13
               },
               {
                 "position": 11,
                 "teamId": 704,
                 "name": "Pio 40",
-                "pj": 11,
+                "pj": 12,
                 "pg": 3,
-                "pe": 0,
+                "pe": 1,
                 "pp": 8,
-                "gf": 13,
-                "gc": 20,
-                "points": 9
+                "gf": 16,
+                "gc": 23,
+                "points": 10
               },
               {
                 "position": 12,
                 "teamId": 431,
                 "name": "Tacuru Salesianos",
-                "pj": 11,
+                "pj": 12,
                 "pg": 2,
                 "pe": 0,
-                "pp": 9,
+                "pp": 10,
                 "gf": 16,
-                "gc": 39,
+                "gc": 47,
                 "points": 6
               },
               {
                 "position": 13,
                 "teamId": 703,
                 "name": "North School 40",
-                "pj": 11,
+                "pj": 12,
                 "pg": 1,
                 "pe": 0,
-                "pp": 10,
-                "gf": 8,
-                "gc": 33,
+                "pp": 11,
+                "gf": 9,
+                "gc": 37,
                 "points": 3
               },
               {
                 "position": 14,
                 "teamId": 731,
                 "name": "Valdocco FC (Salesianos)",
-                "pj": 11,
+                "pj": 12,
                 "pg": 0,
                 "pe": 2,
-                "pp": 9,
-                "gf": 13,
-                "gc": 37,
+                "pp": 10,
+                "gf": 14,
+                "gc": 43,
                 "points": 2
               }
             ]
@@ -718,6 +718,38 @@
             }
           },
           {
+            "id": 134835,
+            "matchday": 13,
+            "status": "finished",
+            "scheduled_at": "2026-11-15T12:00:00",
+            "home_goals": 2,
+            "away_goals": 1,
+            "home_team": {
+              "id": 388,
+              "name": "San Juan Sushi"
+            },
+            "away_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            }
+          },
+          {
+            "id": 135018,
+            "matchday": 13,
+            "status": "finished",
+            "scheduled_at": "2026-11-15T12:00:00",
+            "home_goals": 1,
+            "away_goals": 5,
+            "home_team": {
+              "id": 719,
+              "name": "Ceibos Club amarillo"
+            },
+            "away_team": {
+              "id": 729,
+              "name": "Espacio Ludico"
+            }
+          },
+          {
             "id": 134939,
             "matchday": 2,
             "status": "confirmed",
@@ -764,38 +796,6 @@
               "id": 653,
               "name": "Ceibos Club senior 40"
             }
-          },
-          {
-            "id": 134835,
-            "matchday": 13,
-            "status": "confirmed",
-            "scheduled_at": "2026-11-15T12:00:00",
-            "home_goals": null,
-            "away_goals": null,
-            "home_team": {
-              "id": 388,
-              "name": "San Juan Sushi"
-            },
-            "away_team": {
-              "id": 653,
-              "name": "Ceibos Club senior 40"
-            }
-          },
-          {
-            "id": 135018,
-            "matchday": 13,
-            "status": "confirmed",
-            "scheduled_at": "2026-11-15T12:00:00",
-            "home_goals": null,
-            "away_goals": null,
-            "home_team": {
-              "id": 719,
-              "name": "Ceibos Club amarillo"
-            },
-            "away_team": {
-              "id": 729,
-              "name": "Espacio Ludico"
-            }
           }
         ]
       },
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-15T06:42:55.349Z",
+        "updatedAt": "2026-11-15T18:56:19.970Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-15T06:42:55.401Z",
+        "updatedAt": "2026-11-15T18:56:20.081Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-15T06:42:55.472Z",
+        "updatedAt": "2026-11-15T18:56:20.204Z",
         "tables": [
           {
             "id": 2296,
@@ -1764,168 +1764,168 @@
                 "position": 1,
                 "teamId": 709,
                 "name": "Ceibos 45 Master",
-                "pj": 11,
+                "pj": 12,
                 "pg": 10,
-                "pe": 0,
+                "pe": 1,
                 "pp": 1,
-                "gf": 26,
-                "gc": 9,
-                "points": 30
+                "gf": 27,
+                "gc": 10,
+                "points": 31
               },
               {
                 "position": 2,
                 "teamId": 489,
                 "name": "Harwood",
-                "pj": 11,
+                "pj": 12,
                 "pg": 9,
-                "pe": 1,
+                "pe": 2,
                 "pp": 1,
-                "gf": 38,
-                "gc": 11,
-                "points": 28
+                "gf": 39,
+                "gc": 12,
+                "points": 29
               },
               {
                 "position": 3,
-                "teamId": 736,
-                "name": "Col San Miguel",
-                "pj": 10,
-                "pg": 7,
-                "pe": 0,
-                "pp": 3,
-                "gf": 29,
-                "gc": 15,
-                "points": 21
+                "teamId": 81,
+                "name": "La Mennais Blanco",
+                "pj": 12,
+                "pg": 6,
+                "pe": 5,
+                "pp": 1,
+                "gf": 28,
+                "gc": 18,
+                "points": 23
               },
               {
                 "position": 4,
-                "teamId": 375,
-                "name": "Frances PSG",
-                "pj": 10,
-                "pg": 6,
-                "pe": 3,
-                "pp": 1,
-                "gf": 21,
-                "gc": 11,
+                "teamId": 736,
+                "name": "Col San Miguel",
+                "pj": 11,
+                "pg": 7,
+                "pe": 0,
+                "pp": 4,
+                "gf": 29,
+                "gc": 20,
                 "points": 21
               },
               {
                 "position": 5,
-                "teamId": 81,
-                "name": "La Mennais Blanco",
+                "teamId": 375,
+                "name": "Frances PSG",
                 "pj": 11,
-                "pg": 5,
-                "pe": 5,
-                "pp": 1,
-                "gf": 26,
-                "gc": 17,
-                "points": 20
+                "pg": 6,
+                "pe": 3,
+                "pp": 2,
+                "gf": 22,
+                "gc": 13,
+                "points": 21
               },
               {
                 "position": 6,
-                "teamId": 514,
-                "name": "Colegio Ingles",
+                "teamId": 545,
+                "name": "Jesus Maria 2019",
                 "pj": 11,
                 "pg": 5,
-                "pe": 0,
-                "pp": 6,
-                "gf": 19,
-                "gc": 33,
-                "points": 15
+                "pe": 1,
+                "pp": 5,
+                "gf": 22,
+                "gc": 17,
+                "points": 16
               },
               {
                 "position": 7,
                 "teamId": 418,
                 "name": "Aleman master",
-                "pj": 10,
-                "pg": 3,
+                "pj": 11,
+                "pg": 4,
                 "pe": 4,
                 "pp": 3,
-                "gf": 15,
-                "gc": 13,
-                "points": 13
+                "gf": 17,
+                "gc": 14,
+                "points": 16
               },
               {
                 "position": 8,
-                "teamId": 507,
-                "name": "Old Woodlands strong",
-                "pj": 10,
-                "pg": 4,
-                "pe": 1,
-                "pp": 5,
-                "gf": 21,
-                "gc": 20,
-                "points": 13
+                "teamId": 514,
+                "name": "Colegio Ingles",
+                "pj": 12,
+                "pg": 5,
+                "pe": 0,
+                "pp": 7,
+                "gf": 20,
+                "gc": 35,
+                "points": 15
               },
               {
                 "position": 9,
-                "teamId": 545,
-                "name": "Jesus Maria 2019",
-                "pj": 10,
+                "teamId": 507,
+                "name": "Old Woodlands strong",
+                "pj": 11,
                 "pg": 4,
                 "pe": 1,
-                "pp": 5,
-                "gf": 18,
-                "gc": 17,
+                "pp": 6,
+                "gf": 21,
+                "gc": 24,
                 "points": 13
               },
               {
                 "position": 10,
                 "teamId": 735,
                 "name": "Stella Maris 45",
-                "pj": 11,
-                "pg": 2,
+                "pj": 12,
+                "pg": 3,
                 "pe": 3,
                 "pp": 6,
-                "gf": 9,
-                "gc": 20,
-                "points": 9
+                "gf": 13,
+                "gc": 22,
+                "points": 12
               },
               {
                 "position": 11,
                 "teamId": 547,
                 "name": "Clara Master 2019",
-                "pj": 11,
-                "pg": 3,
+                "pj": 12,
+                "pg": 4,
                 "pe": 0,
                 "pp": 8,
-                "gf": 18,
-                "gc": 30,
-                "points": 9
+                "gf": 22,
+                "gc": 32,
+                "points": 12
               },
               {
                 "position": 12,
                 "teamId": 706,
                 "name": "Old Brendans 45",
-                "pj": 10,
-                "pg": 1,
+                "pj": 11,
+                "pg": 2,
                 "pe": 5,
                 "pp": 4,
-                "gf": 16,
+                "gf": 21,
                 "gc": 18,
-                "points": 8
+                "points": 11
               },
               {
                 "position": 13,
                 "teamId": 733,
                 "name": "St. Andrews",
-                "pj": 11,
+                "pj": 12,
                 "pg": 1,
                 "pe": 3,
-                "pp": 7,
-                "gf": 7,
-                "gc": 26,
+                "pp": 8,
+                "gf": 9,
+                "gc": 30,
                 "points": 6
               },
               {
                 "position": 14,
                 "teamId": 403,
                 "name": "Punta Carretas",
-                "pj": 11,
+                "pj": 12,
                 "pg": 0,
                 "pe": 2,
-                "pp": 9,
-                "gf": 9,
-                "gc": 32,
+                "pp": 10,
+                "gf": 11,
+                "gc": 36,
                 "points": 2
               }
             ]
@@ -2109,6 +2109,22 @@
             }
           },
           {
+            "id": 135106,
+            "matchday": 13,
+            "status": "finished",
+            "scheduled_at": "2026-11-15T13:45:00",
+            "home_goals": 1,
+            "away_goals": 1,
+            "home_team": {
+              "id": 709,
+              "name": "Ceibos 45 Master"
+            },
+            "away_team": {
+              "id": 489,
+              "name": "Harwood"
+            }
+          },
+          {
             "id": 135030,
             "matchday": 2,
             "status": "confirmed",
@@ -2123,22 +2139,6 @@
               "id": 709,
               "name": "Ceibos 45 Master"
             }
-          },
-          {
-            "id": 135106,
-            "matchday": 13,
-            "status": "confirmed",
-            "scheduled_at": "2026-11-15T13:45:00",
-            "home_goals": null,
-            "away_goals": null,
-            "home_team": {
-              "id": 709,
-              "name": "Ceibos 45 Master"
-            },
-            "away_team": {
-              "id": 489,
-              "name": "Harwood"
-            }
           }
         ]
       },
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-15T06:42:55.539Z",
+        "updatedAt": "2026-11-15T18:56:20.321Z",
         "tables": [
           {
             "id": 2239,
@@ -2603,48 +2603,6 @@
       "local": false,
       "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSCTA.html",
       "cancha": "COLEGIO PIO"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +35",
-      "rival": "Espacio Ludico",
-      "fecha": "2026-11-15",
-      "hora": "09:00",
-      "local": true,
-      "fase": "ADIC · Clausura Copas",
-      "adicId": 135018,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club amarillo",
-      "estado": "Confirmado",
-      "cancha": "A confirmar"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +40",
-      "rival": "San Juan Sushi",
-      "fecha": "2026-11-15",
-      "hora": "09:00",
-      "local": false,
-      "fase": "ADIC · Clausura Copas",
-      "adicId": 134835,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club senior 40",
-      "estado": "Confirmado",
-      "cancha": "A confirmar"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +45",
-      "rival": "Harwood",
-      "fecha": "2026-11-15",
-      "hora": "10:45",
-      "local": true,
-      "fase": "ADIC · Clasura Copas Master 45",
-      "adicId": 135106,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos 45 Master",
-      "estado": "Confirmado",
-      "cancha": "A confirmar"
     },
     {
       "deporte": "futbol",
@@ -7131,6 +7089,45 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +35",
+      "rival": "Espacio Ludico",
+      "gf": 1,
+      "gc": 5,
+      "fecha": "2026-11-15",
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 135018,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club amarillo",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "San Juan Sushi",
+      "gf": 1,
+      "gc": 2,
+      "fecha": "2026-11-15",
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134835,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Papi Fútbol +45",
+      "rival": "Harwood",
+      "gf": 1,
+      "gc": 1,
+      "fecha": "2026-11-15",
+      "fase": "ADIC · Clasura Copas Master 45",
+      "adicId": 135106,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos 45 Master",
+      "local": true
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "NACIONAL UNIVERSITARIO",
       "gf": 0,
@@ -7139,7 +7136,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-11-15T06:46:17.876Z",
+  "actualizadoEn": "2026-11-15T18:59:41.933Z",
   "diagnostico": {
     "fuentes": [
       {
