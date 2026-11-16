@@ -2,6 +2,8 @@
 
 Tablero público en `/#interno-ahora`. Reúne los partidos de todas las categorías del Interno, independientemente de la categoría seleccionada en las pestañas del torneo. Se puede filtrar por cancha.
 
+Se presenta como una lista compacta: escudo y nombre de ambos equipos, reloj y etapa del partido. La cancha y la categoría aparecen en una línea pequeña; al tocar los equipos se abre el partido en el fixture. En celular los dos equipos se apilan a la izquierda y el minuto queda a la derecha, sin recortar nombres ni escudos. La explicación de la duración y el reloj se puede desplegar al pie.
+
 El reloj es **estimado según la hora de inicio cargada**. No recibe señales del árbitro, no conoce pausas reales ni modifica resultados. Usa la fecha y hora de Montevideo, aunque el visitante esté en otro huso horario. Se recalcula cada segundo y al regresar a la pestaña; la fuente `data/interno.json` mantiene su actualización automática cada 60 segundos. Si falla la red, conserva el último fixture e indica el problema.
 
 La **próxima tanda** muestra la espera en horas y minutos, por ejemplo `2 h 15 min`, redondeando el minuto hacia arriba mientras el inicio siga pendiente. Al comenzar el partido, cambia al reloj de juego en minutos y segundos; el entretiempo también conserva su cuenta en minutos y segundos.

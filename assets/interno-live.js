@@ -7,7 +7,7 @@ export function liveCardMarkup(data,row,teamMark=()=> ''){
   const {match,clock:rawClock}=row,clock=rawClock.phase==='upcoming'?{...rawClock,text:upcomingText(rawClock.seconds)}:rawClock;
   const home=data.teams.find(team=>team.id===match.homeId),away=data.teams.find(team=>team.id===match.awayId),category=data.categories.find(category=>category.id===match.categoryId);
   const target='/?internoCategoria='+encodeURIComponent(match.categoryId)+'&internoTab=fixture&internoPartido='+encodeURIComponent(match.id)+'#interno';
-  return '<article class="interno-live-card interno-live-'+clock.phase+'" data-live-match="'+escape(match.id)+'"><header><h4>'+escape(row.court||'Cancha a confirmar')+'</h4><span>'+escape(category.name)+'</span></header><div class="interno-live-teams"><div>'+teamMark(home,'reloj-'+match.id+'-local')+'<strong>'+escape(home.name)+'</strong></div><span class="interno-live-vs">vs.</span><div>'+teamMark(away,'reloj-'+match.id+'-visitante')+'<strong>'+escape(away.name)+'</strong></div></div><div class="interno-live-timer"><span class="interno-live-phase" data-live-phase>'+escape(clock.label)+'</span><strong class="interno-live-clock" data-live-clock aria-live="off">'+escape(clock.text)+'</strong></div><div class="interno-live-progress" aria-hidden="true"><span data-live-progress style="width:'+(clock.progress*100)+'%"></span></div><footer><span>'+escape(day(clock.start))+' · '+(match.startedAt?'Inicio ajustado ':'Inicio ')+escape(hour(clock.start))+' h'+(clock.phase==='awaiting'?' · Resultado a confirmar':'')+'</span><a href="'+escape(target)+'">Ver partido ↗</a></footer></article>';
+  return '<article class="interno-live-card interno-live-'+clock.phase+'" data-live-match="'+escape(match.id)+'" role="listitem"><header><h4>'+escape(row.court||'Cancha a confirmar')+'</h4><span>'+escape(category.name)+'</span></header><a class="interno-live-match-link" href="'+escape(target)+'" title="Ver partido: '+escape(home.name)+' vs. '+escape(away.name)+'"><div class="interno-live-teams"><div>'+teamMark(home,'reloj-'+match.id+'-local')+'<strong>'+escape(home.name)+'</strong></div><div>'+teamMark(away,'reloj-'+match.id+'-visitante')+'<strong>'+escape(away.name)+'</strong></div></div><div class="interno-live-timer"><strong class="interno-live-clock" data-live-clock aria-live="off">'+escape(clock.text)+'</strong><span class="interno-live-phase" data-live-phase>'+escape(clock.label)+'</span></div><span class="interno-live-start">'+escape(day(clock.start))+' · '+(match.startedAt?'Inicio ajustado ':'Inicio ')+escape(hour(clock.start))+' h'+(clock.phase==='awaiting'?' · Resultado a confirmar':'')+'</span></a></article>';
 }
 
 export function initLiveBoard(root,teamMark){
@@ -22,13 +22,13 @@ export function initLiveBoard(root,teamMark){
     if(summary.textContent!==text)summary.textContent=text;
     if(key!==signature){
       signature=key;
-      const cards=rows=>'<div class="interno-live-grid">'+rows.map(row=>liveCardMarkup(data,row,teamMark)).join('')+'</div>';
+      const cards=rows=>'<div class="interno-live-list" role="list">'+rows.map(row=>liveCardMarkup(data,row,teamMark)).join('')+'</div>';
       content.innerHTML=(board.active.length?cards(board.active):'<p class="interno-live-empty">'+(data.matches.length?'No hay partidos en horario de juego para esta selección.':'El tablero se activará cuando se carguen los partidos del Interno con fecha y hora.')+'</p>')+(board.awaiting.length?'<div class="interno-live-batch"><h4>Tiempo cumplido · cierre pendiente</h4>'+cards(board.awaiting)+'</div>':'')+(board.next.length?'<div class="interno-live-batch"><h4>Próxima tanda · '+escape(day(board.next[0].clock.start))+' · '+escape(hour(board.next[0].clock.start))+' h</h4>'+cards(board.next)+'</div>':'');
     }
     for(const row of items){
       const card=[...content.querySelectorAll('[data-live-match]')].find(card=>card.dataset.liveMatch===row.match.id);if(!card)continue;
       const clock=matchClock(row.match,clockSettings(data,row.match),now);
-      card.querySelector('[data-live-clock]').textContent=clock.phase==='upcoming'?upcomingText(clock.seconds):clock.text;card.querySelector('[data-live-phase]').textContent=clock.label;card.querySelector('[data-live-progress]').style.width=(clock.progress*100)+'%';
+      card.querySelector('[data-live-clock]').textContent=clock.phase==='upcoming'?upcomingText(clock.seconds):clock.text;card.querySelector('[data-live-phase]').textContent=clock.label;
     }
   }
   filter.addEventListener('change',()=>{signature='';update();});
