@@ -32,6 +32,26 @@ test('fixture nuevo se anuncia una vez, y el recordatorio del día comienza a la
   assert.equal(detectarEventosInterno(data,state,new Date('2026-11-16T23:01:00Z')).events.length,0);
 });
 
+test('selección combinada suma categorías, grupos y equipos sin ampliar suscripciones anteriores',()=>{
+  const male=partidosInterno(tournament())[0],female={...male,internoCategoryId:'femenino',internoTeamIds:['maradonas','rejunte-fc'],internoGroupIds:['fem-a']},papi={...male,internoCategoryId:'mas38',internoTeamIds:['mas38-everton','mas38-liverpool'],internoGroupIds:['papi-a']};
+  assert.deepEqual(male.internoGroupIds,['mas-a']);
+  const prefs={interno:true,internoOpciones:{version:2,categories:['femenino'],groupIds:['mas-a'],teamIds:['mas38-everton']}};
+  for(const game of [male,female,papi])assert.equal(siguePartidoInterno(prefs,game,'start'),true);
+  assert.equal(siguePartidoInterno(prefs,{...male,internoGroupIds:['mas-c'],internoTeamIds:['rapineros','fishermans']},'start'),false);
+  prefs.internoOpciones.events={start:false};assert.equal(siguePartidoInterno(prefs,male,'start'),false);assert.equal(siguePartidoInterno(prefs,male,'result'),true);
+  assert.equal(siguePartidoInterno({interno:true,internoOpciones:{version:2,teamIds:['la-desidia']}},female,'start'),false);
+  assert.equal(siguePartidoInterno({interno:true,internoOpciones:{version:2,categories:[],groupIds:[],teamIds:[]}},male,'start'),false);
+  const settings=opcionesInterno({version:2,groupIds:['mas-a','mas-a','<script>'],teamIds:['la-desidia','la-desidia',null]});assert.deepEqual(settings.groupIds,['mas-a']);assert.deepEqual(settings.teamIds,['la-desidia']);
+});
+
+test('seguir un grupo incluye sus equipos en cruces e interzonales y no duplica entregas',async()=>{
+  const playoff=partidosInterno(tournament({stage:'playoffs',groupId:null,homeId:'la-desidia',awayId:'rapineros'}))[0];assert.deepEqual(playoff.internoGroupIds,['mas-a','mas-c']);
+  const papi=partidosInterno(source).find(game=>game.internoCategoryId==='mas38'&&game.fase.includes('Interzonal'));assert.ok(papi);assert.deepEqual(papi.internoGroupIds.slice().sort(),['papi-a','papi-b']);
+  assert.equal(siguePartidoInterno({interno:true,internoOpciones:{version:2,groupIds:['papi-b']}},papi,'start'),true);
+  const match=partidosInterno(tournament())[0],docs=[{data:()=>({enabled:true,endpoint:'combined',keys:{p256dh:'test',auth:'test'},deportes:{interno:true,internoOpciones:{version:2,categories:['masculino'],groupIds:['mas-a'],teamIds:['la-desidia','kiwis']}}})}],sent=[];
+  const result=await enviarGrupo({docs},'interno',{},async(subscription,payload)=>sent.push(JSON.parse(payload)),{tipo:'start',partidos:[match]});assert.equal(result.enviados,1);assert.equal(sent.length,1);assert.doesNotMatch(sent[0].body,/partidos de tu selección/);
+});
+
 test('horario, suspensión y cancelación generan cambios; nunca programan un inicio cancelado',()=>{
   let data=tournament(),state=mark(detectarEventosInterno(data,{},now));data.matches[0].time='21:00';
   let next=detectarEventosInterno(data,state,now);assert.deepEqual(next.events.map(event=>event.tipo),['change']);state=mark(next);

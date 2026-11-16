@@ -1,5 +1,5 @@
-import {opcionesInterno} from './assets/interno-notification-preferences.js?v=20261110';
-import {validateInterno} from './assets/interno-model.js?v=20261110formatos';
+import {opcionesInterno} from './assets/interno-notification-preferences.js?v=20261116seleccion';
+import {validateInterno} from './assets/interno-model.js?v=20261113papi';
 const CONFIG_URL = "/notification-config.json";
 const PREFS_KEY = "ceibos_notification_preferences_v1";
 const ACTIVE_KEY = "ceibos_notifications_active_v1";
@@ -16,8 +16,9 @@ const interno=document.getElementById('notifInterno');
 const internoOpciones=document.getElementById('notifInternoOpciones');
 const categorias=[...document.querySelectorAll('[data-notif-interno-category]')];
 const tipos=[...document.querySelectorAll('[data-notif-interno-event]')];
-const equipo=document.getElementById('notifInternoEquipo');
-const equipoAyuda=document.getElementById('notifInternoEquipoAyuda');
+const grupos=document.getElementById('notifInternoGrupos'),equipos=document.getElementById('notifInternoEquipos');
+const seleccionAyuda=document.getElementById('notifInternoSeleccionAyuda'),resumen=document.getElementById('notifInternoResumen');
+let gruposElegidos=new Set(),equiposElegidos=new Set(),legacy=null;
 let torneo=null,torneoLoading=null,torneoLoadedAt=0,overflowAnterior='';
 
 let config = null;
@@ -25,24 +26,47 @@ let firebase = null;
 let ultimaFocalizada = null;
 
 function deportesElegidos() {
-  return {...Object.fromEntries(opciones.map(opcion => [opcion.value, opcion.checked])),internoOpciones:{categories:categorias.filter(input=>input.checked).map(input=>input.value),teamId:equipo.value||equipo.dataset.selectedTeam||'',events:Object.fromEntries(tipos.map(input=>[input.value,input.checked]))}};
+  return {...Object.fromEntries(opciones.map(opcion => [opcion.value, opcion.checked])),internoOpciones:{version:2,categories:categorias.filter(input=>input.checked).map(input=>input.value),groupIds:[...gruposElegidos],teamIds:[...equiposElegidos],events:Object.fromEntries(tipos.map(input=>[input.value,input.checked]))}};
+}
+
+function actualizarResumen(){
+  const all=categorias.filter(input=>input.checked).map(input=>input.value),names=all.map(id=>torneo?.categories.find(c=>c.id===id)?.name||({masculino:'Masculino',femenino:'Femenino',mas38:'Papi fútbol (+38)'})[id]);
+  for(const id of gruposElegidos){const group=torneo?.groups.find(g=>g.id===id);if(!all.includes(group?.categoryId))names.push(group?group.name+' · '+torneo.categories.find(c=>c.id===group.categoryId).name:'Grupo anterior: '+id);}
+  for(const id of equiposElegidos){const team=torneo?.teams.find(t=>t.id===id);if(!all.includes(team?.categoryId)&&!gruposElegidos.has(team?.groupId))names.push(team?.name||'Equipo anterior: '+id);}
+  resumen.textContent=names.length?'Vas a seguir: '+names.join(' · ')+'.':'Elegí al menos una categoría completa, un grupo o un equipo.';
+}
+
+function actualizarControles(){
+  const all=categorias.filter(input=>input.checked).map(input=>input.value);
+  for(const input of document.querySelectorAll('[data-notif-interno-group],[data-notif-interno-team]'))input.disabled=all.includes(input.dataset.selectionCategory);
+  for(const note of document.querySelectorAll('[data-notif-interno-covered]'))note.hidden=!all.includes(note.dataset.notifInternoCovered);
+  actualizarResumen();
+}
+
+function listaSelecciones(host,rows,selected,kind){
+  const opened=new Set([...host.querySelectorAll('details[open]')].map(node=>node.dataset.selectionCategory));host.replaceChildren();
+  function choice(row,categoryId=''){
+    const label=document.createElement('label'),input=document.createElement('input'),span=document.createElement('span');
+    label.className='notif-interno-choice';input.type='checkbox';input.value=row.id;input.dataset[kind==='group'?'notifInternoGroup':'notifInternoTeam']='';input.dataset.selectionCategory=categoryId;input.checked=selected.has(row.id);span.textContent=row.name;label.append(input,span);return label;
+  }
+  for(const category of torneo.categories){
+    const items=rows.filter(row=>row.categoryId===category.id).slice().sort((a,b)=>a.name.localeCompare(b.name,'es'));
+    if(!items.length)continue;
+    const details=document.createElement('details'),summary=document.createElement('summary'),list=document.createElement('div'),note=document.createElement('p');
+    details.className='notif-interno-category-list';details.dataset.selectionCategory=category.id;details.open=opened.has(category.id)||items.some(row=>selected.has(row.id));summary.textContent=category.name;
+    list.className='notif-interno-choices';for(const row of items)list.append(choice(row,category.id));
+    note.className='notif-interno-help';note.dataset.notifInternoCovered=category.id;note.textContent='Ya seguís todos. Desmarcá la categoría completa para elegir solo algunos.';
+    details.append(summary,note,list);host.append(details);
+  }
+  for(const id of selected)if(!rows.some(row=>row.id===id))host.append(choice({id,name:(kind==='group'?'Grupo':'Equipo')+' anterior (no disponible): '+id}));
+  if(!host.children.length){const note=document.createElement('p');note.className='notif-interno-help';note.textContent='Todavía no hay opciones publicadas.';host.append(note);}
 }
 
 function actualizarEquipos(){
   if(!torneo)return;
-  const selected=equipo.value||equipo.dataset.selectedTeam||'',allowed=categorias.filter(input=>input.checked).map(input=>input.value);
-  equipo.replaceChildren(new Option('Todos los equipos de mi selección',''));
-  for(const category of torneo.categories.filter(category=>allowed.includes(category.id))){
-    const teams=torneo.teams.filter(team=>team.categoryId===category.id).sort((a,b)=>a.name.localeCompare(b.name,'es'));
-    if(!teams.length)continue;
-    const group=document.createElement('optgroup');group.label=category.name;
-    for(const team of teams)group.append(new Option(team.name,team.id));equipo.append(group);
-  }
-  const unavailable=selected&&!torneo.teams.some(team=>team.id===selected);
-  if(unavailable)equipo.append(new Option('Mi equipo (no disponible en la lista actual)',selected));
-  equipo.value=[...equipo.options].some(option=>option.value===selected)?selected:'';equipo.dataset.selectedTeam=equipo.value;
-  if(unavailable){equipoAyuda.textContent='Conservamos tu equipo anterior. Elegí otra opción si querés cambiar a quién seguís.';return;}
-  equipoAyuda.textContent=allowed.length===1&&allowed[0]==='mas38'&&!torneo.teams.some(team=>team.categoryId==='mas38')?'Podés seguir Papi fútbol. Sus equipos aparecerán cuando se anuncien.':'Elegí un equipo o seguí todos los de las categorías marcadas.';
+  if(legacy){const team=torneo.teams.find(team=>team.id===legacy.teamId);if(team&&!legacy.categories.includes(team.categoryId))equiposElegidos.delete(team.id);legacy=null;}
+  listaSelecciones(grupos,torneo.groups,gruposElegidos,'group');listaSelecciones(equipos,torneo.teams,equiposElegidos,'team');
+  seleccionAyuda.textContent='Cada partido se avisa una sola vez, aunque coincida con varias selecciones.';actualizarControles();
 }
 
 async function cargarEquipos(){
@@ -51,7 +75,7 @@ async function cargarEquipos(){
   torneoLoading=(async()=>{try{
     const response=await fetch('/data/interno.json?notificaciones='+Date.now(),{cache:'no-store'});if(!response.ok)throw Error();
     const data=validateInterno(await response.json());torneo=data;torneoLoadedAt=Date.now();actualizarEquipos();
-  }catch{equipoAyuda.textContent='No pudimos cargar los equipos. Podés seguir las categorías y volver a intentar al abrir este panel.';}finally{torneoLoading=null;}})();
+  }catch{seleccionAyuda.textContent='No pudimos cargar los grupos y equipos. Conservamos tu selección anterior. Podés seguir categorías o volver a intentar al abrir este panel.';}finally{torneoLoading=null;}})();
   return torneoLoading;
 }
 
@@ -70,7 +94,8 @@ function cargarPreferenciasLocal() {
     if (!guardadas) return;
     opciones.forEach(opcion => { if (typeof guardadas[opcion.value] === "boolean") opcion.checked = guardadas[opcion.value]; });
     const settings=opcionesInterno(guardadas.internoOpciones);
-    categorias.forEach(input=>input.checked=settings.categories.includes(input.value));tipos.forEach(input=>input.checked=settings.events[input.value]);equipo.dataset.selectedTeam=settings.teamId;
+    categorias.forEach(input=>input.checked=settings.categories.includes(input.value)&&(settings.version===2||!settings.teamId));tipos.forEach(input=>input.checked=settings.events[input.value]);
+    gruposElegidos=new Set(settings.groupIds||[]);equiposElegidos=new Set(settings.version===2?settings.teamIds:settings.teamId?[settings.teamId]:[]);if(settings.version===1&&settings.teamId)legacy=settings;
   } catch {}
 }
 
@@ -144,7 +169,7 @@ async function activarNotificaciones() {
   try {
     const preferencias = deportesElegidos();
     if (!opciones.some(input=>input.checked)) throw new Error("Elegí por lo menos un deporte o el Interno.");
-    if(interno.checked&&!preferencias.internoOpciones.categories.length)throw Error('Elegí al menos una categoría del Interno.');
+    if(interno.checked&&!['categories','groupIds','teamIds'].some(key=>preferencias.internoOpciones[key].length))throw Error('Elegí al menos una categoría completa, un grupo o un equipo del Interno.');
     if(interno.checked&&!Object.values(preferencias.internoOpciones.events).some(Boolean))throw Error('Elegí al menos un tipo de aviso del Interno.');
     if (!configuracionCompleta(config)) {
       mostrarEstado("El sistema está preparado, pero falta conectar Firebase antes de habilitarlo al público.", "aviso");
@@ -239,12 +264,14 @@ actualizarInterfaz(localStorage.getItem(ACTIVE_KEY) === "1" && permisoConcedido)
 fab.addEventListener("click", ()=>abrirModal());
 document.querySelectorAll('[data-notificaciones-interno]').forEach(button=>button.addEventListener('click',()=>abrirModal({seguirInterno:true})));
 interno.addEventListener('change',actualizarOpcionesInterno);
-categorias.forEach(input=>input.addEventListener('change',actualizarEquipos));
-equipo.addEventListener('change',()=>equipo.dataset.selectedTeam=equipo.value);
-[...opciones,...categorias,...tipos,equipo].forEach(input=>input.addEventListener('change',()=>{
+modal.addEventListener('change',event=>{
+  const input=event.target;
+  if(input.matches('[data-notif-interno-group]'))input.checked?gruposElegidos.add(input.value):gruposElegidos.delete(input.value);
+  if(input.matches('[data-notif-interno-team]'))input.checked?equiposElegidos.add(input.value):equiposElegidos.delete(input.value);
+  actualizarControles();
   if(localStorage.getItem(ACTIVE_KEY)==='1')mostrarEstado('Tenés cambios sin guardar. Tocá «Guardar preferencias».','aviso');
   else if(estado.classList.contains('error'))mostrarEstado('');
-}));
+});
 cerrar.addEventListener("click", cerrarModal);
 modal.addEventListener("click", event => { if (event.target === modal) cerrarModal(); });
 activar.addEventListener("click", activarNotificaciones);

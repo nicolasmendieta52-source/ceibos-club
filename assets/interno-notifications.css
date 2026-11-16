@@ -16,5 +16,14 @@
 .notif-interno-team select{display:block;width:100%;max-width:100%;min-width:0;min-height:46px;border:1px solid rgba(246,241,228,.3);border-radius:0;background:var(--verde-night);color:var(--crema);color-scheme:dark;font:inherit;font-size:.84rem;padding:10px}
 .notif-interno-team p{font-size:.75rem;line-height:1.6;color:rgba(246,241,228,.65);margin:9px 0 0}
 .notif-interno-options input:focus-visible,.notif-interno-options select:focus-visible{outline:2px solid var(--dorado);outline-offset:3px}
+.notif-interno-help{font-size:.75rem;line-height:1.6;color:rgba(246,241,228,.7);margin:0 0 12px}
+.notif-interno-summary{font-size:.8rem;line-height:1.6;color:var(--crema);border-left:2px solid var(--dorado);padding-left:12px;margin:0 0 24px;overflow-wrap:anywhere}
+.notif-interno-lists{display:grid;gap:8px}
+.notif-interno-category-list{min-width:0;border:1px solid rgba(229,187,82,.25);padding:0 12px}
+.notif-interno-category-list summary{min-height:44px;align-content:center;cursor:pointer;font-size:.82rem;font-weight:700;color:var(--crema);padding:10px 0}
+.notif-interno-category-list summary:focus-visible{outline:2px solid var(--dorado);outline-offset:3px}
+.notif-interno-category-list .notif-interno-choices{padding-bottom:10px}
+.notif-interno-choice span{min-width:0;overflow-wrap:anywhere}
+.notif-interno-choice:has(input:disabled){opacity:.55;cursor:default}
 .interno-match-selected{border-color:var(--dorado);box-shadow:inset 3px 0 var(--dorado);scroll-margin-top:calc(var(--nav-height,56px) + 20px)}
 @media(max-width:600px){.interno-alerts{align-items:stretch;flex-direction:column;gap:18px}.notif-interno-options{padding:14px}.notif-interno-choices{grid-template-columns:1fr}}

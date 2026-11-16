@@ -278,7 +278,7 @@ nav.topbar.solid{
 <script type="module" src="/assets/analytics.js?v=20261111noticias"></script>
 <link rel="stylesheet" href="assets/interno.css?v=20261111dias">
 <link rel="stylesheet" href="assets/interno-live.css?v=20261111">
-<link rel="stylesheet" href="assets/interno-notifications.css?v=20261110">
+<link rel="stylesheet" href="assets/interno-notifications.css?v=20261116seleccion">
 <link rel="stylesheet" href="assets/navigation.css?v=20261028floating">
 <link rel="stylesheet" href="assets/news.css?v=20261111ascenso">
 </head>
@@ -967,7 +967,7 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
     <div data-live-content><p class="interno-live-empty">Acá vas a ver los partidos simultáneos, la cancha y el tiempo de juego según el fixture.</p></div>
     <p class="interno-live-note">Reloj estimado según la hora de inicio cargada. Los atrasos y las pausas reales pueden cambiar el minuto de juego. El resultado se confirma por separado.</p>
   </div>
-  <div class="interno-alerts"><div><h3>Seguí a tu equipo</h3><p>Recibí el fixture, los cambios, los avisos de inicio y los resultados del Interno. Elegí una categoría o tu equipo.</p></div><button class="btn btn-oro" type="button" data-notificaciones-interno>Elegir mis avisos →</button></div>
+  <div class="interno-alerts"><div><h3>Seguí a tu equipo</h3><p>Recibí el fixture, los cambios, los avisos de inicio y los resultados del Interno. Combiná categorías completas, grupos y equipos.</p></div><button class="btn btn-oro" type="button" data-notificaciones-interno>Elegir mis avisos →</button></div>
   <div class="interno-torneo" aria-labelledby="interno-edicion-titulo">
     <div class="interno-torneo-head"><div><p class="interno-kicker">El torneo, fecha a fecha</p><h3 id="interno-edicion-titulo">La edición 2026</h3></div><label class="interno-category-label" for="interno-categoria">Categoría<select id="interno-categoria"><option value="masculino">Masculino</option><option value="femenino">Femenino</option><option value="mas38">Papi fútbol (+38)</option></select></label></div>
     <div class="interno-tabs" role="tablist" aria-label="Seguir el Interno 2026">
@@ -1741,7 +1741,7 @@ img,video,svg{max-width:100%}
     <button class="notif-cerrar" id="notifCerrar" type="button" aria-label="Cerrar">&times;</button>
     <p class="notif-etiqueta">Tu club, al instante</p>
     <h2 id="notifTitulo">Notificaciones Ceibos</h2>
-    <p class="notif-intro">Elegí los deportes que querés seguir. Para el Interno también podés elegir categoría, equipo y tipo de aviso.</p>
+    <p class="notif-intro">Elegí los deportes que querés seguir. Para el Interno podés combinar categorías completas, grupos, equipos y tipos de aviso.</p>
     <div class="notif-deportes" aria-label="Deportes para recibir notificaciones">
       <label class="notif-opcion"><input type="checkbox" value="futbol" checked><span>⚽ Fútbol</span></label>
       <label class="notif-opcion"><input type="checkbox" value="rugby" checked><span>🏉 Rugby</span></label>
@@ -1751,12 +1751,16 @@ img,video,svg{max-width:100%}
     </div>
     <fieldset id="notifInternoOpciones" class="notif-interno-options" hidden disabled>
       <legend>Tus avisos del Interno</legend>
-      <fieldset><legend>Categorías</legend><div class="notif-interno-choices">
-        <label class="notif-interno-choice"><input type="checkbox" value="masculino" data-notif-interno-category checked><span>Masculino</span></label>
-        <label class="notif-interno-choice"><input type="checkbox" value="femenino" data-notif-interno-category checked><span>Femenino</span></label>
-        <label class="notif-interno-choice"><input type="checkbox" value="mas38" data-notif-interno-category checked><span>Papi fútbol (+38)</span></label>
+      <fieldset><legend>Categorías completas</legend><div class="notif-interno-choices">
+        <label class="notif-interno-choice"><input type="checkbox" value="masculino" data-notif-interno-category checked><span>Todos los de Masculino</span></label>
+        <label class="notif-interno-choice"><input type="checkbox" value="femenino" data-notif-interno-category checked><span>Todos los de Femenino</span></label>
+        <label class="notif-interno-choice"><input type="checkbox" value="mas38" data-notif-interno-category checked><span>Todos los de Papi (+38)</span></label>
       </div></fieldset>
-      <div class="notif-interno-team"><label class="notif-interno-team-label" for="notifInternoEquipo">Equipo (opcional)</label><select id="notifInternoEquipo" aria-describedby="notifInternoEquipoAyuda"><option value="">Todos los equipos de mi selección</option></select><p id="notifInternoEquipoAyuda">Elegí un equipo o seguí todos los de las categorías marcadas.</p></div>
+      <p class="notif-interno-help">Las selecciones se suman. Por ejemplo: todo Femenino, un grupo de Masculino y un equipo de Papi.</p>
+      <fieldset><legend>Por grupos</legend><p class="notif-interno-help">Seguí a los equipos de un grupo, también en interzonales y cruces.</p><div id="notifInternoGrupos" class="notif-interno-lists"><p class="notif-interno-help">Cargando grupos…</p></div></fieldset>
+      <fieldset><legend>Equipos puntuales</legend><div id="notifInternoEquipos" class="notif-interno-lists"><p class="notif-interno-help">Cargando equipos…</p></div></fieldset>
+      <p id="notifInternoSeleccionAyuda" class="notif-interno-help" role="status"></p>
+      <p id="notifInternoResumen" class="notif-interno-summary" aria-live="polite"></p>
       <fieldset><legend>Qué querés recibir</legend><div class="notif-interno-choices">
         <label class="notif-interno-choice"><input type="checkbox" value="new" data-notif-interno-event checked><span>Partidos nuevos</span></label>
         <label class="notif-interno-choice"><input type="checkbox" value="change" data-notif-interno-event checked><span>Cambios y suspensiones</span></label>
@@ -3225,7 +3229,7 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
   })
   .catch(() => {});
 </script>
-<script type="module" src="/notifications.js?v=20261110interno"></script>
+<script type="module" src="/notifications.js?v=20261116seleccion"></script>
 <script type="module" src="assets/interno.js?v=20261113papi"></script>
 <script type="module" src="assets/news-share.js?v=20261111"></script>
 <script src="assets/navigation.js?v=20261028viewport" defer></script>
