@@ -410,7 +410,7 @@
       "id": "real-alta-gama",
       "name": "Alta Gama",
       "categoryId": "masculino",
-      "logoUrl": "/assets/interno/equipos/2026/real-alta-gama.webp",
+      "logoUrl": "/assets/interno/equipos/2026/originales-20261116/real-alta-gama.png",
       "sourceUrl": "https://www.instagram.com/stories/highlights/18091351253226215/",
       "groupId": "mas-a",
       "sourceTeamId": "M17",
@@ -490,16 +490,7 @@
       "id": "la-vuelta",
       "name": "La Vuelta",
       "categoryId": "masculino",
-      "logoUrl": "/assets/interno/grupos/2026/masculino-a-d.jpeg",
-      "logoCrop": {
-        "x": 197,
-        "y": 1039,
-        "width": 61,
-        "height": 61,
-        "imageWidth": 1080,
-        "imageHeight": 1350,
-        "shape": "ellipse"
-      },
+      "logoUrl": "/assets/interno/equipos/2026/originales-20261116/la-vuelta.png",
       "sourceUrl": "/assets/interno/grupos/2026/masculino-a-d.jpeg",
       "groupId": "mas-c",
       "sourceTeamId": "M21",
@@ -569,16 +560,7 @@
       "id": "orleans",
       "name": "Orleans",
       "categoryId": "masculino",
-      "logoUrl": "/assets/interno/grupos/2026/masculino-e-f.jpeg",
-      "logoCrop": {
-        "x": 197,
-        "y": 771,
-        "width": 60,
-        "height": 62,
-        "imageWidth": 1080,
-        "imageHeight": 1350,
-        "shape": "ellipse"
-      },
+      "logoUrl": "/assets/interno/equipos/2026/originales-20261116/orleans.png",
       "sourceUrl": "/assets/interno/grupos/2026/masculino-e-f.jpeg",
       "groupId": "mas-e",
       "sourceTeamId": "M22",
@@ -648,16 +630,7 @@
       "id": "deportivo-resaca",
       "name": "Dep. Resaca",
       "categoryId": "femenino",
-      "logoUrl": "/assets/interno/grupos/2026/femenino.jpeg",
-      "logoCrop": {
-        "x": 195,
-        "y": 633,
-        "width": 60,
-        "height": 62,
-        "imageWidth": 1080,
-        "imageHeight": 1350,
-        "shape": "ellipse"
-      },
+      "logoUrl": "/assets/interno/equipos/2026/originales-20261116/deportivo-resaca.png",
       "sourceUrl": "/assets/interno/grupos/2026/femenino.jpeg",
       "groupId": "fem-a",
       "sourceTeamId": "F15",
@@ -767,16 +740,7 @@
       "id": "ramillete",
       "name": "Ramillete",
       "categoryId": "femenino",
-      "logoUrl": "/assets/interno/grupos/2026/femenino.jpeg",
-      "logoCrop": {
-        "x": 599,
-        "y": 1037,
-        "width": 58,
-        "height": 65,
-        "imageWidth": 1080,
-        "imageHeight": 1350,
-        "shape": "ellipse"
-      },
+      "logoUrl": "/assets/interno/equipos/2026/originales-20261116/ramillete.png",
       "sourceUrl": "/assets/interno/grupos/2026/femenino.jpeg",
       "groupId": "fem-d",
       "sourceTeamId": "F11",
@@ -789,7 +753,8 @@
       "categoryId": "femenino",
       "sourceTeamId": "F17",
       "sourceName": "Manchester Birraited",
-      "groupId": "fem-c"
+      "groupId": "fem-c",
+      "logoUrl": "/assets/interno/equipos/2026/originales-20261116/femenino-manchester-birraited.png"
     },
     {
       "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
@@ -798,7 +763,8 @@
       "categoryId": "mas38",
       "sourceTeamId": "P01",
       "sourceName": "Everton",
-      "groupId": "papi-a"
+      "groupId": "papi-a",
+      "logoUrl": "/assets/interno/equipos/2026/originales-20261116/mas38-everton.png"
     },
     {
       "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
@@ -807,7 +773,8 @@
       "categoryId": "mas38",
       "sourceTeamId": "P02",
       "sourceName": "Liverpool",
-      "groupId": "papi-a"
+      "groupId": "papi-a",
+      "logoUrl": "/assets/interno/equipos/2026/originales-20261116/mas38-liverpool.png"
     },
     {
       "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
@@ -816,7 +783,8 @@
       "categoryId": "mas38",
       "sourceTeamId": "P04",
       "sourceName": "Manchester City",
-      "groupId": "papi-a"
+      "groupId": "papi-a",
+      "logoUrl": "/assets/interno/equipos/2026/originales-20261116/mas38-manchester-city.png"
     },
     {
       "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
@@ -825,7 +793,8 @@
       "categoryId": "mas38",
       "sourceTeamId": "P03",
       "sourceName": "Manchester United",
-      "groupId": "papi-b"
+      "groupId": "papi-b",
+      "logoUrl": "/assets/interno/equipos/2026/originales-20261116/mas38-manchester-united.png"
     },
     {
       "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
@@ -834,7 +803,8 @@
       "categoryId": "mas38",
       "sourceTeamId": "P05",
       "sourceName": "Nottingham Forest",
-      "groupId": "papi-b"
+      "groupId": "papi-b",
+      "logoUrl": "/assets/interno/equipos/2026/originales-20261116/mas38-nottingham-forest.png"
     },
     {
       "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
@@ -843,7 +813,8 @@
       "categoryId": "mas38",
       "sourceTeamId": "P06",
       "sourceName": "Wolverhampton",
-      "groupId": "papi-b"
+      "groupId": "papi-b",
+      "logoUrl": "/assets/interno/equipos/2026/originales-20261116/mas38-wolverhampton.png"
     }
   ],
   "groups": [

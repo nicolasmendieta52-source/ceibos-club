@@ -87,7 +87,7 @@ test('grupos y escudos se presentan por categoría y conservan el orden de la pl
   assert.ok(male.indexOf('La Desidia')<male.indexOf('Kiwis'));assert.ok(male.indexOf('Kiwis')<male.indexOf('La Tropa'));
   assert.match(male,/Orleans|La Vuelta/);assert.doesNotMatch(male,/Maradoñas|Pata de Palo/);
   assert.match(female,/Dep\. Resaca/);assert.match(female,/Ramillete/);assert.doesNotMatch(female,/Orleans|La Vuelta/);
-  assert.match(female,/<svg viewBox=/);assert.match(female,/<image href="https:\/\/ceibosclub.com\/assets\/interno\/grupos\/2026\/femenino.jpeg"/);
+  assert.match(female,/<img src="https:\/\/ceibosclub.com\/assets\/interno\/equipos\/2026\/originales-20261116\/deportivo-resaca.png"/);
   assert.match(internoPanelMarkup(data,'mas38','grupos'),/6 equipos · 2 zonas confirmadas/);
   assert.doesNotMatch(internoPanelMarkup(data,'mas38','grupos'),/Nómina por anunciar/);
   assert.equal(data.teams.filter(team=>team.categoryId==='mas38').length,6);
@@ -132,7 +132,7 @@ test('rechaza formatos con videos inseguros, destinos inválidos y posiciones du
 test('rechaza encuadres de escudos fuera de la placa y fuentes de grupos inseguras',async()=>{
   const data=JSON.parse(await readFile(new URL('../data/interno.json',import.meta.url),'utf8'));
   for(const crop of [{x:-1},{width:0},{x:1079,width:2},{y:1349,height:2},{imageWidth:'1080'}]){
-    const invalid=structuredClone(data),team=invalid.teams.find(team=>team.logoCrop);Object.assign(team.logoCrop,crop);assert.throws(()=>validateInterno(invalid));
+    const invalid=structuredClone(data),team=invalid.teams[0];team.logoCrop={x:0,y:0,width:60,height:60,imageWidth:1080,imageHeight:1350,...crop};assert.throws(()=>validateInterno(invalid));
   }
   data.groups[0].sourceUrl='javascript:alert(1)';assert.throws(()=>validateInterno(data));
 });
