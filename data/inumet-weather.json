@@ -5,15 +5,15 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-11-16 12:00",
-  "actualizado": "2026-11-16T18:40:54.113Z",
+  "publicado": "2026-11-16 18:00",
+  "actualizado": "2026-11-16T22:14:04.889Z",
   "pronosticos": [
     {
       "fecha": "2026-11-16",
       "diaMasN": 0,
       "etiqueta": "Lunes 16",
       "temperaturaMin": 17,
-      "temperaturaMax": 26,
+      "temperaturaMax": 28,
       "probabilidadLluvia": "",
       "periodos": [
         {
@@ -30,7 +30,7 @@
           "descripcion": "Nuboso y cubierto.",
           "evolucion": "Probables precipitaciones escasas.",
           "detalle": "",
-          "viento": "Sector E 10-30 km/h."
+          "viento": "NE 10-30 km/h."
         }
       ]
     },
@@ -46,9 +46,9 @@
           "orden": 1,
           "nombre": "Mañana",
           "descripcion": "Nuboso y cubierto.",
-          "evolucion": "Precipitaciones y probables tormentas.",
+          "evolucion": "Precipitaciones y tormentas aisladas.",
           "detalle": "",
-          "viento": "NE 10-40 km/h al NW 10-20 km/h."
+          "viento": "Sectro N 10-30 km/h."
         },
         {
           "orden": 2,
@@ -56,7 +56,7 @@
           "descripcion": "Cubierto a nuboso, períodos de algo nuboso.",
           "evolucion": "Precipitaciones y tormentas aisladas.",
           "detalle": "Neblinas y bancos de niebla.",
-          "viento": "Sector W al sector S 10-20 km/h, periodo de variables 0-10 km/h."
+          "viento": "Sector W 10-30 km/h, rachas de hasta 40 km/h. Periodo de variables 0-10 km/h."
         }
       ]
     },
@@ -72,9 +72,9 @@
           "orden": 1,
           "nombre": "Mañana",
           "descripcion": "Algo nuboso y nuboso.",
-          "evolucion": "Neblinas.",
+          "evolucion": "Neblinas y bancos de niebla.",
           "detalle": "",
-          "viento": "Variables 0-10 km/h al sector W 10-20 km/h."
+          "viento": "Sector W 10-20 km/h."
         },
         {
           "orden": 2,
@@ -82,7 +82,7 @@
           "descripcion": "Algo nuboso y nuboso, períodos de cubierto.",
           "evolucion": "Baja probabilidad de precipitaciones.",
           "detalle": "",
-          "viento": "Sector W 10-30 km/h, rachas de 40-50 km/h."
+          "viento": "Sector W 10-30 km/h, rachas de 40 km/h."
         }
       ]
     },
