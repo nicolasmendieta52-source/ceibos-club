@@ -1,10 +1,11 @@
-import {liveBoard,matchClock,clockSettings,courtName} from './interno-live-clock.js?v=20261111fuente';
+import {liveBoard,matchClock,clockSettings,courtName,upcomingText} from './interno-live-clock.js?v=20261116acciones';
 const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const hour=value=>new Intl.DateTimeFormat('es-UY',{hour:'2-digit',minute:'2-digit',hourCycle:'h23',timeZone:'America/Montevideo'}).format(value);
 const day=value=>new Intl.DateTimeFormat('es-UY',{day:'numeric',month:'short',timeZone:'America/Montevideo'}).format(value);
 
 export function liveCardMarkup(data,row,teamMark=()=> ''){
-  const {match,clock}=row,home=data.teams.find(team=>team.id===match.homeId),away=data.teams.find(team=>team.id===match.awayId),category=data.categories.find(category=>category.id===match.categoryId);
+  const {match,clock:rawClock}=row,clock=rawClock.phase==='upcoming'?{...rawClock,text:upcomingText(rawClock.seconds)}:rawClock;
+  const home=data.teams.find(team=>team.id===match.homeId),away=data.teams.find(team=>team.id===match.awayId),category=data.categories.find(category=>category.id===match.categoryId);
   const target='/?internoCategoria='+encodeURIComponent(match.categoryId)+'&internoTab=fixture&internoPartido='+encodeURIComponent(match.id)+'#interno';
   return '<article class="interno-live-card interno-live-'+clock.phase+'" data-live-match="'+escape(match.id)+'"><header><h4>'+escape(row.court||'Cancha a confirmar')+'</h4><span>'+escape(category.name)+'</span></header><div class="interno-live-teams"><div>'+teamMark(home,'reloj-'+match.id+'-local')+'<strong>'+escape(home.name)+'</strong></div><span class="interno-live-vs">vs.</span><div>'+teamMark(away,'reloj-'+match.id+'-visitante')+'<strong>'+escape(away.name)+'</strong></div></div><div class="interno-live-timer"><span class="interno-live-phase" data-live-phase>'+escape(clock.label)+'</span><strong class="interno-live-clock" data-live-clock aria-live="off">'+escape(clock.text)+'</strong></div><div class="interno-live-progress" aria-hidden="true"><span data-live-progress style="width:'+(clock.progress*100)+'%"></span></div><footer><span>'+escape(day(clock.start))+' · '+(match.startedAt?'Inicio ajustado ':'Inicio ')+escape(hour(clock.start))+' h'+(clock.phase==='awaiting'?' · Resultado a confirmar':'')+'</span><a href="'+escape(target)+'">Ver partido ↗</a></footer></article>';
 }
@@ -27,7 +28,7 @@ export function initLiveBoard(root,teamMark){
     for(const row of items){
       const card=[...content.querySelectorAll('[data-live-match]')].find(card=>card.dataset.liveMatch===row.match.id);if(!card)continue;
       const clock=matchClock(row.match,clockSettings(data,row.match),now);
-      card.querySelector('[data-live-clock]').textContent=clock.text;card.querySelector('[data-live-phase]').textContent=clock.label;card.querySelector('[data-live-progress]').style.width=(clock.progress*100)+'%';
+      card.querySelector('[data-live-clock]').textContent=clock.phase==='upcoming'?upcomingText(clock.seconds):clock.text;card.querySelector('[data-live-phase]').textContent=clock.label;card.querySelector('[data-live-progress]').style.width=(clock.progress*100)+'%';
     }
   }
   filter.addEventListener('change',()=>{signature='';update();});

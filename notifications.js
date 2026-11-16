@@ -1,4 +1,4 @@
-import {opcionesInterno} from './assets/interno-notification-preferences.js?v=20261116seleccion';
+import {opcionesInterno} from './assets/interno-notification-preferences.js?v=20261116estrellas';
 import {validateInterno} from './assets/interno-model.js?v=20261113papi';
 const CONFIG_URL = "/notification-config.json";
 const PREFS_KEY = "ceibos_notification_preferences_v1";
@@ -234,9 +234,12 @@ function actualizarInterfaz(activa) {
   fab.classList.toggle("activa", activa);
   activar.textContent = activa ? "Guardar preferencias" : "Activar notificaciones";
   desactivar.hidden = !activa;
+  window.dispatchEvent(new Event('ceibos-notification-preferences-changed'));
 }
 
-function abrirModal({seguirInterno=false}={}) {
+function abrirModal({seguirInterno=false,objetivo=null}={}) {
+  if(objetivo)cargarPreferenciasLocal();
+  const activa=localStorage.getItem(ACTIVE_KEY)==='1',seguiaInterno=interno.checked;
   ultimaFocalizada = document.activeElement;
   modal.hidden = false;
   overflowAnterior=document.body.style.overflow;document.body.style.overflow = "hidden";
@@ -244,11 +247,20 @@ function abrirModal({seguirInterno=false}={}) {
     if(localStorage.getItem(ACTIVE_KEY)!=='1')opciones.forEach(input=>input.checked=input===interno);
     interno.checked=true;
   }
+  if(objetivo){
+    if(!activa||!seguiaInterno){categorias.forEach(input=>input.checked=false);gruposElegidos.clear();equiposElegidos.clear();legacy=null;}
+    if(!objetivo.following)(objetivo.kind==='group'?gruposElegidos:equiposElegidos).add(objetivo.id);
+  }
   actualizarOpcionesInterno();mostrarEstado('');activar.disabled=true;
   cerrar.focus();
   cargarConfig().then(valor => {
     if (!configuracionCompleta(valor)) mostrarEstado("Sistema preparado: falta completar la conexión con Firebase.", "aviso");
   }).catch(() => mostrarEstado("No se pudo leer la configuración.", "error")).finally(()=>activar.disabled=false);
+  if(objetivo)cargarEquipos().then(()=>{
+    const input=[...modal.querySelectorAll('[data-notif-interno-'+objetivo.kind+']')].find(input=>input.value===objetivo.id);
+    if(input){const details=input.closest('details');if(details)details.open=true;const focus=input.disabled?categorias.find(category=>category.value===input.dataset.selectionCategory):input;focus?.focus();focus?.scrollIntoView({block:'nearest'});}
+    mostrarEstado('Avisos de '+objetivo.name+': '+(activa?'revisá y guardá tus preferencias.':'confirmá con «Activar notificaciones».'),'aviso');
+  });
 }
 
 function cerrarModal() {
@@ -263,6 +275,11 @@ const permisoConcedido = "Notification" in window && Notification.permission ===
 actualizarInterfaz(localStorage.getItem(ACTIVE_KEY) === "1" && permisoConcedido);
 fab.addEventListener("click", ()=>abrirModal());
 document.querySelectorAll('[data-notificaciones-interno]').forEach(button=>button.addEventListener('click',()=>abrirModal({seguirInterno:true})));
+document.addEventListener('click',event=>{
+  const button=event.target.closest('[data-interno-follow-group],[data-interno-follow-team]');if(!button)return;
+  const kind=button.hasAttribute('data-interno-follow-group')?'group':'team';
+  abrirModal({seguirInterno:true,objetivo:{kind,id:button.getAttribute('data-interno-follow-'+kind),name:button.dataset.followName,following:button.getAttribute('aria-pressed')==='true'}});
+});
 interno.addEventListener('change',actualizarOpcionesInterno);
 modal.addEventListener('change',event=>{
   const input=event.target;

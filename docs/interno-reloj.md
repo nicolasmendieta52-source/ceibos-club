@@ -4,6 +4,8 @@ Tablero público en `/#interno-ahora`. Reúne los partidos de todas las categor�
 
 El reloj es **estimado según la hora de inicio cargada**. No recibe señales del árbitro, no conoce pausas reales ni modifica resultados. Usa la fecha y hora de Montevideo, aunque el visitante esté en otro huso horario. Se recalcula cada segundo y al regresar a la pestaña; la fuente `data/interno.json` mantiene su actualización automática cada 60 segundos. Si falla la red, conserva el último fixture e indica el problema.
 
+La **próxima tanda** muestra la espera en horas y minutos, por ejemplo `2 h 15 min`, redondeando el minuto hacia arriba mientras el inicio siga pendiente. Al comenzar el partido, cambia al reloj de juego en minutos y segundos; el entretiempo también conserva su cuenta en minutos y segundos.
+
 ## Duración
 
 El usuario confirmó el 11/11/2026, al conectar el fixture oficial: Masculino y Papi juegan dos tiempos de 25 minutos; Femenino, dos de 20; todos tienen 5 minutos de entretiempo. `minutesPerHalf` de cada categoría controla su reloj; `clock.halfMinutes` es el valor de respaldo. El PDF original no se modificó.

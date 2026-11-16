@@ -21,3 +21,11 @@ export function siguePartidoInterno(deportes,partido,tipo){
   // Existing subscriptions retain their original category AND single-team filter.
   return options.categories.includes(partido.internoCategoryId)&&(!options.teamId||partido.internoTeamIds?.includes(options.teamId));
 }
+
+export function sigueObjetivoInterno(deportes,kind,id,data){
+  if(deportes?.interno!==true)return false;
+  const row=(kind==='group'?data.groups:kind==='team'?data.teams:[]).find(row=>row.id===id),options=opcionesInterno(deportes.internoOpciones);
+  if(!row||!Object.values(options.events).some(Boolean))return false;
+  if(options.version===1)return options.categories.includes(row.categoryId)&&(kind==='group'?!options.teamId:!options.teamId||options.teamId===id);
+  return options.categories.includes(row.categoryId)||(kind==='group'?options.groupIds.includes(id):options.teamIds.includes(id)||options.groupIds.includes(row.groupId));
+}

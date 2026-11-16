@@ -57,6 +57,22 @@
 .interno-group li>span{overflow-wrap:anywhere}
 .interno-group .interno-team-mark{flex:0 0 58px;height:68px;font-size:1.1rem}
 .interno-group-sources{display:flex;flex-wrap:wrap;gap:12px 24px}
+.interno-follow{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;padding:10px;border:0;background:transparent;color:var(--dorado);cursor:pointer}
+.interno-follow svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round}
+.interno-follow[aria-pressed="true"] svg{fill:var(--dorado)}
+.interno-follow:hover{background:rgba(229,187,82,.08)}
+.interno-follow:focus-visible,.interno-cruces-link:focus-visible{outline:2px solid var(--dorado);outline-offset:3px}
+.interno-group header>h4{flex:1;min-width:0}
+.interno-group li>span{flex:1;min-width:0}
+.interno-group .interno-follow{margin-left:auto}
+.interno-team>div:last-child{flex:1}
+.interno-team-title{display:flex;align-items:start;gap:8px;min-width:0}
+.interno-team-title h4{flex:1;min-width:0}
+.interno-group-actions{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;margin-bottom:14px}
+.interno-group-actions .interno-panel-note{margin:0}
+.interno-cruces-link{display:inline-flex;gap:18px;align-items:center;min-height:44px;color:var(--dorado);font-size:.83rem;font-weight:700;text-underline-offset:5px}
+.interno-follow-help{font-size:.76rem}
+#interno-panel{scroll-margin-top:calc(var(--nav-height,56px) + 20px)}
 .interno-bracket h4{font:400 clamp(2rem,5vw,3.5rem)/1.1 var(--display);text-transform:uppercase;color:var(--dorado);margin:0 0 20px}
 .interno-bracket .interno-kicker{margin-bottom:12px}
 .interno-bracket-grid{display:grid;grid-template-columns:repeat(var(--interno-bracket-count,8),minmax(0,1fr));gap:12px;list-style:none;margin:30px 0 0;padding:0 0 26px;border-bottom:1px solid rgba(229,187,82,.4)}

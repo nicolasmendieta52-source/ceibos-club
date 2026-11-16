@@ -4,12 +4,20 @@ import {reservarEventoInterno,terminarEventoInterno} from './send-interno-notifi
 import {planificarInicios,clavePartido} from './notification-utils.mjs';
 import {enviarGrupo} from './send-notifications.mjs';
 import {leerFixtureVigente} from './watch-match-starts.mjs';
-import {opcionesInterno} from '../assets/interno-notification-preferences.js';
+import {opcionesInterno,sigueObjetivoInterno} from '../assets/interno-notification-preferences.js';
 import vm from 'node:vm';
 const source=JSON.parse(await readFile(new URL('../data/interno.json',import.meta.url),'utf8'));
 const tournament=(extra={})=>{const data=structuredClone(source);data.matches=[{id:'prueba-mas',categoryId:'masculino',groupId:'mas-a',stage:'groups',homeId:'la-desidia',awayId:'kiwis',date:'2026-11-16',time:'20:00',status:'scheduled',...extra}];return data;};
 const now=new Date('2026-11-15T15:00:00Z');
 const mark=(detection,at=now)=>{for(const event of detection.events)detection.state.sent[event.key]=at.toISOString();return detection.state;};
+
+test('estrellas reflejan equipos y grupos seguidos por selección propia o categoría completa',()=>{
+ const prefs={interno:true,internoOpciones:{version:2,categories:['femenino'],groupIds:['mas-a'],teamIds:['mas38-everton']}};
+ for(const [kind,id]of [['group','fem-c'],['team','ramillete'],['group','mas-a'],['team','kiwis'],['team','mas38-everton']])assert.equal(sigueObjetivoInterno(prefs,kind,id,source),true);
+ for(const [kind,id]of [['group','mas-c'],['team','rapineros'],['team','mas38-liverpool'],['team','no-existe']])assert.equal(sigueObjetivoInterno(prefs,kind,id,source),false);
+ const legacy={interno:true,internoOpciones:{categories:['masculino'],teamId:'la-desidia'}};assert.equal(sigueObjetivoInterno(legacy,'team','la-desidia',source),true);assert.equal(sigueObjetivoInterno(legacy,'group','mas-a',source),false);
+ prefs.interno=false;assert.equal(sigueObjetivoInterno(prefs,'team','ramillete',source),false);
+});
 
 test('Interno requiere opt-in propio; categorías, equipos y tipos se intersectan',()=>{
   const match=partidosInterno(tournament())[0];

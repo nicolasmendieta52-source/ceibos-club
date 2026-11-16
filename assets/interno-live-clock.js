@@ -23,6 +23,11 @@ export function clockText(seconds){
   return String(Math.floor(value/60)).padStart(2,'0')+':'+String(value%60).padStart(2,'0');
 }
 
+export function upcomingText(seconds){
+  const minutes=Math.max(0,Math.ceil(seconds/60));
+  return Math.floor(minutes/60)+' h '+String(minutes%60).padStart(2,'0')+' min';
+}
+
 export function matchClock(match,config=DEFAULT_CLOCK,now=Date.now()){
   const start=liveKickoff(match),half=config.halfMinutes*60,rest=config.breakMinutes*60;
   if(match.status!=='scheduled'||start===null)return {phase:'unavailable',start};

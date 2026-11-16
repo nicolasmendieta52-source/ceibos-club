@@ -1,11 +1,16 @@
 import {validateInterno,publicInternoUrl,sortedMatches,internoStandings,internoScorers} from './interno-model.js?v=20261113papi';
-import {initLiveBoard} from './interno-live.js?v=20261111fuente';
+import {initLiveBoard} from './interno-live.js?v=20261116acciones';
 import {courtName} from './interno-live-clock.js?v=20261111fuente';
+import {sigueObjetivoInterno} from './interno-notification-preferences.js?v=20261116estrellas';
 
 const escape = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const sourceLink = (url,label) => publicInternoUrl(url) ? '<a class="interno-media-link" href="'+escape(publicInternoUrl(url))+'" target="_blank" rel="noopener noreferrer">'+escape(label)+' ↗</a>' : '';
 const empty = (title,message,url) => '<div class="interno-empty"><span class="interno-soon">Próximamente</span><h4>'+escape(title)+'</h4><p>'+escape(message)+'</p>'+sourceLink(url,'Ver destacada 2026')+'</div>';
 const dateLabel = date => date ? new Intl.DateTimeFormat('es-UY',{day:'numeric',month:'long',timeZone:'UTC'}).format(new Date(date+'T12:00:00Z')) : 'Fecha a confirmar';
+
+function followButton(kind,row){
+  return '<button type="button" class="interno-follow" data-interno-follow-'+kind+'="'+escape(row.id)+'" data-follow-name="'+escape(row.name)+'" aria-pressed="false" aria-label="Activar avisos de '+escape(row.name)+'" title="Activar avisos de '+escape(row.name)+'"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.9Z"/></svg></button>';
+}
 
 function teamMarkMarkup(team,scope=''){
   const initials=team.name.split(/\s+/).slice(0,2).map(word=>[...word][0]).join('');
@@ -23,10 +28,10 @@ function groupsMarkup(data,categoryId){
   const count=data.teams.filter(team=>team.categoryId===categoryId).length,category=data.categories.find(category=>category.id===categoryId);
   const cards=groups.map(group=>{
     const teams=data.teams.filter(team=>team.categoryId===categoryId&&team.groupId===group.id);
-    return '<article class="interno-group"><header><h4>'+escape(group.name)+'</h4><span>'+(teams.length||group.expectedTeams||0)+' equipos</span></header>'+(teams.length?'<ul>'+teams.map(team=>'<li>'+teamMarkMarkup(team)+'<span>'+escape(team.name)+'</span></li>').join('')+'</ul>':'<p class="interno-panel-note">Los equipos de esta zona se publicarán cuando se anuncie la nómina.</p>')+'</article>';
+    return '<article class="interno-group"><header><h4>'+escape(group.name)+'</h4><span>'+(teams.length||group.expectedTeams||0)+' equipos</span>'+followButton('group',group)+'</header>'+(teams.length?'<ul>'+teams.map(team=>'<li>'+teamMarkMarkup(team)+'<span>'+escape(team.name)+'</span>'+followButton('team',team)+'</li>').join('')+'</ul>':'<p class="interno-panel-note">Los equipos de esta zona se publicarán cuando se anuncie la nómina.</p>')+'</article>';
   }).join('');
   const sources=[...new Set(groups.map(group=>group.sourceUrl).filter(Boolean))];
-  return '<p class="interno-panel-note">'+(count||category?.format?.teamCount||0)+' equipos · '+groups.length+' '+(categoryId==='mas38'?'zonas confirmadas':'grupos confirmados')+(!count?' · Nómina por anunciar':'')+'</p><div class="interno-group-grid">'+cards+'</div><div class="interno-group-sources">'+sources.map((url,index)=>sourceLink(url,url.endsWith('.mp4')?'Ver explicación del formato':sources.length===1?'Ver placa oficial de grupos':'Ver placa de grupos '+(index+1))).join('')+'</div>';
+  return '<div class="interno-group-actions"><p class="interno-panel-note">'+(count||category?.format?.teamCount||0)+' equipos · '+groups.length+' '+(categoryId==='mas38'?'zonas confirmadas':'grupos confirmados')+(!count?' · Nómina por anunciar':'')+'</p><a class="interno-cruces-link" href="?internoCategoria='+encodeURIComponent(categoryId)+'&amp;internoTab=cruces#interno" data-interno-go-tab="cruces">Ver formato y cruces <span aria-hidden="true">→</span></a></div><p class="interno-panel-note interno-follow-help">Tocá la estrella de un grupo o equipo para elegir sus avisos.</p><div class="interno-group-grid">'+cards+'</div><div class="interno-group-sources">'+sources.map((url,index)=>sourceLink(url,url.endsWith('.mp4')?'Ver explicación del formato':sources.length===1?'Ver placa oficial de grupos':'Ver placa de grupos '+(index+1))).join('')+'</div>';
 }
 
 function formatBracketMarkup(block,index){
@@ -69,7 +74,7 @@ export function internoPanelMarkup(data,categoryId,tab){
     if(!teams.length)return empty('Los protagonistas de 2026','La lista de equipos de esta categoría se publicará acá, con sus presentaciones oficiales.',data.teamsSourceUrl);
     const cards=teams.slice().sort((a,b)=>a.name.localeCompare(b.name,'es')).map(team=>{
       const group=data.groups.find(g=>g.id===team.groupId);
-      return '<article class="interno-team">'+teamMarkMarkup(team)+'<div><h4>'+escape(team.name)+'</h4>'+(group?'<p>'+escape(group.name)+'</p>':'')+(team.sourceUrl?sourceLink(team.sourceUrl,'Presentación'):'')+'</div></article>';
+      return '<article class="interno-team">'+teamMarkMarkup(team)+'<div><div class="interno-team-title"><h4>'+escape(team.name)+'</h4>'+followButton('team',team)+'</div>'+(group?'<p>'+escape(group.name)+'</p>':'')+(team.sourceUrl?sourceLink(team.sourceUrl,'Presentación'):'')+'</div></article>';
     }).join('');
     return '<p class="interno-panel-note">'+teams.length+' '+(teams.length===1?'equipo confirmado':'equipos confirmados')+'</p><div class="interno-team-grid">'+cards+'</div>'+sourceLink(data.teamsSourceUrl,'Ver destacada 2026');
   }
@@ -100,16 +105,25 @@ function initInterno(){
   const tabs=[...document.querySelectorAll('[data-interno-tab]')];
   const notificationParams=new URLSearchParams(location.search),requestedCategory=notificationParams.get('internoCategoria'),requestedTab=notificationParams.get('internoTab'),requestedMatch=notificationParams.get('internoPartido');
   if(['masculino','femenino','mas38'].includes(requestedCategory))select.value=requestedCategory;
-  let currentTab=['fixture','resultados','grupos'].includes(requestedTab)?requestedTab:'grupos',data=null,lastJson='',loading=false,notificationTargetPending=true;
+  let currentTab=tabs.some(tab=>tab.dataset.internoTab===requestedTab)?requestedTab:'grupos',data=null,lastJson='',loading=false,notificationTargetPending=true;
   const contact=document.getElementById('interno-inscripcion');
   const originalContact=contact?{href:contact.href,text:contact.textContent}:null;
   const originalState=document.getElementById('interno-inscripcion-estado').textContent;
   const originalText=document.getElementById('interno-inscripcion-texto').textContent;
+  function updateStars(){
+    if(!data)return;let preferences={},active=false;
+    try{preferences=JSON.parse(localStorage.getItem('ceibos_notification_preferences_v1')||'{}');active=localStorage.getItem('ceibos_notifications_active_v1')==='1'&&typeof Notification!=='undefined'&&Notification.permission==='granted';}catch{}
+    for(const button of panel.querySelectorAll('.interno-follow')){
+      const kind=button.hasAttribute('data-interno-follow-group')?'group':'team',id=button.getAttribute('data-interno-follow-'+kind),following=active&&sigueObjetivoInterno(preferences,kind,id,data);
+      const label=(following?'Editar avisos de ':'Activar avisos de ')+button.dataset.followName;button.setAttribute('aria-pressed',String(following));button.setAttribute('aria-label',label);button.title=label;
+    }
+  }
   function render(){
     tabs.forEach(button=>{const active=button.dataset.internoTab===currentTab;button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1;});
     panel.setAttribute('aria-labelledby','interno-tab-'+currentTab);
     panel.querySelectorAll('video').forEach(video=>video.pause());
     if(data)panel.innerHTML=internoPanelMarkup(data,select.value,currentTab);
+    updateStars();
     if(requestedMatch&&/^[a-z0-9][a-z0-9-]{0,79}$/.test(requestedMatch)){
       const target=document.getElementById('interno-partido-'+requestedMatch);
       if(target){target.classList.add('interno-match-selected');if(notificationTargetPending){notificationTargetPending=false;requestAnimationFrame(()=>target.scrollIntoView({block:'center'}));}}
@@ -123,6 +137,12 @@ function initInterno(){
     });
   });
   select.addEventListener('change',render);
+  panel.addEventListener('click',event=>{
+    const link=event.target.closest('[data-interno-go-tab]');if(!link)return;
+    if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+    event.preventDefault();currentTab=link.dataset.internoGoTab;history.replaceState(null,'',link.href);render();panel.focus({preventScroll:true});panel.scrollIntoView({block:'start'});
+  });
+  window.addEventListener('ceibos-notification-preferences-changed',updateStars);window.addEventListener('storage',updateStars);
   panel.addEventListener('error',event=>{if(event.target.tagName==='IMG')event.target.remove();},true);
   panel.addEventListener('toggle',event=>{if(event.target.matches('.interno-format-video')&&!event.target.open)event.target.querySelector('video')?.pause();},true);
   async function refresh(){

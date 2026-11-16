@@ -1,7 +1,12 @@
 import test from 'node:test';import assert from 'node:assert/strict';import {readFile} from 'node:fs/promises';
-import {liveKickoff,matchClock,liveBoard,validClockStart,DEFAULT_CLOCK} from '../assets/interno-live-clock.js';
+import {liveKickoff,matchClock,liveBoard,validClockStart,DEFAULT_CLOCK,upcomingText} from '../assets/interno-live-clock.js';
 import {liveCardMarkup} from '../assets/interno-live.js';import {validateInterno} from '../assets/interno-model.js';
 const match={id:'clock-test',status:'scheduled',date:'2026-11-16',time:'20:00',court:'Cancha 2'},start=Date.parse('2026-11-16T23:00:00Z');
+
+test('próxima tanda muestra horas y minutos sin adelantar el inicio; el reloj de juego conserva segundos',()=>{
+  for(const [seconds,text]of [[0,'0 h 00 min'],[1,'0 h 01 min'],[59,'0 h 01 min'],[60,'0 h 01 min'],[3599,'1 h 00 min'],[3600,'1 h 00 min'],[8100,'2 h 15 min'],[86399,'24 h 00 min']])assert.equal(upcomingText(seconds),text);
+  assert.equal(matchClock(match,DEFAULT_CLOCK,start+123000).text,'02:03');
+});
 test('límites exactos 25 + 5 + 25, sin convertir la hora estimada en resultado final',()=>{
   for(const [seconds,phase,text] of [[-1,'upcoming','00:01'],[0,'first','00:00'],[1499,'first','24:59'],[1500,'halftime','05:00'],[1799,'halftime','00:01'],[1800,'second','25:00'],[3299,'second','49:59'],[3300,'awaiting','50:00'],[9000,'awaiting','50:00']]){const clock=matchClock(match,DEFAULT_CLOCK,start+seconds*1000);assert.equal(clock.phase,phase);assert.equal(clock.text,text);}
   assert.equal(match.status,'scheduled');assert.equal(match.homeGoals,undefined);
