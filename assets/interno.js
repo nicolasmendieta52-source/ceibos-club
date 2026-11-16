@@ -7,6 +7,7 @@ const escape = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;',
 const sourceLink = (url,label) => publicInternoUrl(url) ? '<a class="interno-media-link" href="'+escape(publicInternoUrl(url))+'" target="_blank" rel="noopener noreferrer">'+escape(label)+' ↗</a>' : '';
 const empty = (title,message,url) => '<div class="interno-empty"><span class="interno-soon">Próximamente</span><h4>'+escape(title)+'</h4><p>'+escape(message)+'</p>'+sourceLink(url,'Ver destacada 2026')+'</div>';
 const dateLabel = date => date ? new Intl.DateTimeFormat('es-UY',{day:'numeric',month:'long',timeZone:'UTC'}).format(new Date(date+'T12:00:00Z')) : 'Fecha a confirmar';
+const teamUrl = (categoryId,teamId='') => '?internoCategoria='+encodeURIComponent(categoryId)+'&internoTab=equipos'+(teamId?'&internoEquipo='+encodeURIComponent(teamId):'')+'#interno';
 
 function followButton(kind,row){
   return '<button type="button" class="interno-follow" data-interno-follow-'+kind+'="'+escape(row.id)+'" data-follow-name="'+escape(row.name)+'" aria-pressed="false" aria-label="Activar avisos de '+escape(row.name)+'" title="Activar avisos de '+escape(row.name)+'"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.9Z"/></svg></button>';
@@ -66,17 +67,25 @@ function matchesByDayMarkup(data,matches,categoryId,tab){
   }).join('')+'</div>';
 }
 
-export function internoPanelMarkup(data,categoryId,tab){
+function teamMatchesMarkup(data,team){
+  const group=data.groups.find(row=>row.id===team.groupId),category=data.categories.find(row=>row.id===team.categoryId);
+  const involvesTeam=match=>match.homeId===team.id||match.awayId===team.id;
+  const upcoming=sortedMatches(data,team.categoryId).filter(involvesTeam),results=sortedMatches(data,team.categoryId,true).filter(involvesTeam);
+  return '<div class="interno-team-detail" data-interno-team-detail="'+escape(team.id)+'"><a class="interno-team-back" href="'+escape(teamUrl(team.categoryId))+'" data-interno-all-teams>← Todos los equipos</a><div class="interno-team-detail-head">'+teamMarkMarkup(team,'equipo')+'<div><h4>'+escape(team.name)+'</h4><p>'+escape(category.name)+(group?' · '+escape(group.name):'')+'</p>'+(team.sourceUrl?sourceLink(team.sourceUrl,'Presentación del equipo'):'')+'</div>'+followButton('team',team)+'</div>'+(upcoming.length?'<section class="interno-team-matches" aria-label="Próximos partidos"><h4>Próximos partidos</h4>'+matchesByDayMarkup(data,upcoming,team.categoryId,'equipo-'+team.id+'-fixture')+'</section>':'<p class="interno-panel-note">Todavía no hay próximos partidos cargados para este equipo.</p>')+(results.length?'<section class="interno-team-matches" aria-label="Resultados"><h4>Resultados</h4>'+matchesByDayMarkup(data,results,team.categoryId,'equipo-'+team.id+'-resultados')+'</section>':'')+'</div>';
+}
+
+export function internoPanelMarkup(data,categoryId,tab,teamId=''){
   const teams=data.teams.filter(t=>t.categoryId===categoryId);
   if(tab==='grupos')return groupsMarkup(data,categoryId);
   if(tab==='cruces')return playoffsMarkup(data,categoryId);
   if(tab==='equipos'){
+    const selected=teams.find(team=>team.id===teamId);if(selected)return teamMatchesMarkup(data,selected);
     if(!teams.length)return empty('Los protagonistas de 2026','La lista de equipos de esta categoría se publicará acá, con sus presentaciones oficiales.',data.teamsSourceUrl);
     const cards=teams.slice().sort((a,b)=>a.name.localeCompare(b.name,'es')).map(team=>{
       const group=data.groups.find(g=>g.id===team.groupId);
-      return '<article class="interno-team">'+teamMarkMarkup(team)+'<div><div class="interno-team-title"><h4>'+escape(team.name)+'</h4>'+followButton('team',team)+'</div>'+(group?'<p>'+escape(group.name)+'</p>':'')+(team.sourceUrl?sourceLink(team.sourceUrl,'Presentación'):'')+'</div></article>';
+      return '<article class="interno-team"><a class="interno-team-link" href="'+escape(teamUrl(categoryId,team.id))+'" data-interno-team="'+escape(team.id)+'">'+teamMarkMarkup(team)+'<div><h4>'+escape(team.name)+'</h4>'+(group?'<p>'+escape(group.name)+'</p>':'')+'<span>Ver partidos →</span></div></a>'+followButton('team',team)+'</article>';
     }).join('');
-    return '<p class="interno-panel-note">'+teams.length+' '+(teams.length===1?'equipo confirmado':'equipos confirmados')+'</p><div class="interno-team-grid">'+cards+'</div>'+sourceLink(data.teamsSourceUrl,'Ver destacada 2026');
+    return '<p class="interno-panel-note">'+teams.length+' '+(teams.length===1?'equipo confirmado':'equipos confirmados')+' · Tocá un equipo para ver sus partidos.</p><div class="interno-team-grid">'+cards+'</div>'+sourceLink(data.teamsSourceUrl,'Ver destacada 2026');
   }
   if(tab==='fixture'||tab==='resultados'){
     const matches=sortedMatches(data,categoryId,tab==='resultados');
@@ -103,9 +112,16 @@ function initInterno(){
   if(!panel||!select||!status)return;
   const live=initLiveBoard(document.getElementById('interno-ahora'),teamMarkMarkup);
   const tabs=[...document.querySelectorAll('[data-interno-tab]')];
-  const notificationParams=new URLSearchParams(location.search),requestedCategory=notificationParams.get('internoCategoria'),requestedTab=notificationParams.get('internoTab'),requestedMatch=notificationParams.get('internoPartido');
+  const notificationParams=new URLSearchParams(location.search),requestedCategory=notificationParams.get('internoCategoria'),requestedTab=notificationParams.get('internoTab');
+  let requestedMatch=notificationParams.get('internoPartido'),currentTeamId=notificationParams.get('internoEquipo')||'';
   if(['masculino','femenino','mas38'].includes(requestedCategory))select.value=requestedCategory;
-  let currentTab=tabs.some(tab=>tab.dataset.internoTab===requestedTab)?requestedTab:'grupos',data=null,lastJson='',loading=false,notificationTargetPending=true;
+  let currentTab=tabs.some(tab=>tab.dataset.internoTab===requestedTab)?requestedTab:currentTeamId?'equipos':'grupos',data=null,lastJson='',loading=false,notificationTargetPending=true;
+  function rememberView(){
+    const url=new URL(location.href);url.searchParams.set('internoCategoria',select.value);url.searchParams.set('internoTab',currentTab);
+    if(currentTab==='equipos'&&currentTeamId)url.searchParams.set('internoEquipo',currentTeamId);else url.searchParams.delete('internoEquipo');
+    url.searchParams.delete('internoPartido');url.hash='interno';requestedMatch=null;notificationTargetPending=false;
+    if(url.href!==location.href)history.pushState(null,'',url);
+  }
   function updateStars(){
     if(!data)return;let preferences={},active=false;
     try{preferences=JSON.parse(localStorage.getItem('ceibos_notification_preferences_v1')||'{}');active=localStorage.getItem('ceibos_notifications_active_v1')==='1'&&typeof Notification!=='undefined'&&Notification.permission==='granted';}catch{}
@@ -118,7 +134,7 @@ function initInterno(){
     tabs.forEach(button=>{const active=button.dataset.internoTab===currentTab;button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1;});
     panel.setAttribute('aria-labelledby','interno-tab-'+currentTab);
     panel.querySelectorAll('video').forEach(video=>video.pause());
-    if(data)panel.innerHTML=internoPanelMarkup(data,select.value,currentTab);
+    if(data)panel.innerHTML=internoPanelMarkup(data,select.value,currentTab,currentTeamId);
     updateStars();
     if(requestedMatch&&/^[a-z0-9][a-z0-9-]{0,79}$/.test(requestedMatch)){
       const target=document.getElementById('interno-partido-'+requestedMatch);
@@ -126,17 +142,22 @@ function initInterno(){
     }
   }
   tabs.forEach((button,index)=>{
-    button.addEventListener('click',()=>{currentTab=button.dataset.internoTab;render();});
+    button.addEventListener('click',()=>{currentTab=button.dataset.internoTab;currentTeamId='';rememberView();render();});
     button.addEventListener('keydown',event=>{
       const next={ArrowRight:(index+1)%tabs.length,ArrowLeft:(index+tabs.length-1)%tabs.length,Home:0,End:tabs.length-1}[event.key];
       if(next===undefined)return;event.preventDefault();tabs[next].click();tabs[next].focus();
     });
   });
-  select.addEventListener('change',render);
+  select.addEventListener('change',()=>{currentTeamId='';rememberView();render();});
   panel.addEventListener('click',event=>{
-    const link=event.target.closest('[data-interno-go-tab]');if(!link)return;
+    const link=event.target.closest('[data-interno-go-tab],[data-interno-team],[data-interno-all-teams]');if(!link)return;
     if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
-    event.preventDefault();currentTab=link.dataset.internoGoTab;history.replaceState(null,'',link.href);render();panel.focus({preventScroll:true});panel.scrollIntoView({block:'start'});
+    event.preventDefault();currentTeamId=link.dataset.internoTeam||'';currentTab=link.dataset.internoGoTab||'equipos';rememberView();render();panel.focus({preventScroll:true});panel.scrollIntoView({block:'start'});
+  });
+  window.addEventListener('popstate',()=>{
+    const params=new URLSearchParams(location.search),category=params.get('internoCategoria')||'masculino',tab=params.get('internoTab');
+    if([...select.options].some(option=>option.value===category))select.value=category;
+    currentTeamId=params.get('internoEquipo')||'';currentTab=tabs.some(button=>button.dataset.internoTab===tab)?tab:currentTeamId?'equipos':'grupos';requestedMatch=params.get('internoPartido');notificationTargetPending=true;render();
   });
   window.addEventListener('ceibos-notification-preferences-changed',updateStars);window.addEventListener('storage',updateStars);
   panel.addEventListener('error',event=>{if(event.target.tagName==='IMG')event.target.remove();},true);

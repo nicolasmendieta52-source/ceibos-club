@@ -22,6 +22,16 @@ test('fixture ordena fechas y horas, deja desconocidas al final y separa resulta
   assert.deepEqual(sortedMatches(d,'masculino').map(m=>m.id),['early','soon','later','unknown']);
   assert.deepEqual(sortedMatches(d,'masculino',true).map(m=>m.id),['played']);
 });
+
+test('vista de equipo reúne sus partidos como local y visitante, copas y resultados sin mezclar rivales',()=>{
+  const d=tournament();d.matches=[game('local','a','b',0,0,{status:'scheduled',time:'20:00'}),game('visitante','c','a',0,0,{status:'postponed',date:null}),game('copa','b','a',0,0,{status:'scheduled',stage:'playoffs',groupId:null,date:'2026-11-18'}),game('jugado','a','c',2,1),game('ajeno','b','c',4,0),game('cancelado','a','b',0,0,{status:'cancelled'})];
+  const before=structuredClone(d),html=internoPanelMarkup(d,'masculino','equipos','a');
+  for(const id of ['local','visitante','copa','jugado'])assert.ok(html.includes('id="interno-partido-'+id+'"'));
+  assert.doesNotMatch(html,/interno-partido-ajeno|interno-partido-cancelado/);assert.match(html,/Próximos partidos|Resultados/);assert.match(html,/Fecha a confirmar/);assert.match(html,/20:00 h/);assert.match(html,/2 <span>–<\/span> 1/);assert.match(html,/data-interno-all-teams/);assert.deepEqual(d,before);
+  assert.doesNotMatch(internoPanelMarkup(d,'femenino','equipos','a'),/interno-team-detail|interno-partido-local/);
+  assert.match(internoPanelMarkup(d,'masculino','equipos','desconocido'),/interno-team-grid/);
+  const empty=tournament();assert.match(internoPanelMarkup(empty,'masculino','equipos','a'),/Todavía no hay próximos partidos/);assert.doesNotMatch(internoPanelMarkup(empty,'masculino','equipos','a'),/0 <span>–/);
+});
 test('tablas cuentan solo partidos de grupo finalizados, respetan GF/GC y ajustes justificados',()=>{
   const d=tournament();d.teams[0].pointsAdjustment=-1;d.teams[0].adjustmentNote='Resolución oficial';
   d.matches=[game('one','a','b',2,0),game('two','a','c',1,1),game('future','b','c',4,0,{status:'scheduled'}),game('cup','a','b',8,0,{stage:'playoffs',groupId:null})];

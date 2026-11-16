@@ -4,6 +4,8 @@ La sección `/#interno` conserva reglamento PDF, anuncio del 16 de noviembre y r
 
 Las notificaciones del Interno se activan desde **Elegir mis avisos** o desde la campana, con preferencias de categoría, equipo y tipo de aviso. Consumen los partidos de este mismo JSON; su funcionamiento, filtros y revisión automática están documentados en `docs/interno-notificaciones.md`.
 
+En **Equipos**, tocar el escudo, el nombre o «Ver partidos» abre una vista del equipo con su fixture y sus resultados, agrupados por fecha. Incluye local/visitante, horarios y cancha publicados, partidos interzonales y eliminatorias confirmadas; no muestra encuentros ajenos ni inventa horarios o marcadores. «Todos los equipos» vuelve a la lista y la estrella sigue abriendo las preferencias de avisos. El enlace admite `?internoCategoria=masculino&internoTab=equipos&internoEquipo=rapineros#interno`, funciona al recargar y respeta Atrás/Adelante del navegador. La actualización de datos conserva el equipo seleccionado.
+
 ## Fuente y categorías
 
 Los nombres de 2026 deben comprobarse en la destacada oficial: https://www.instagram.com/stories/highlights/18091351253226215/. Cada equipo lleva `sourceUrl`; `teamsVerifiedAt` indica la fecha real de comprobación. No trasladar campeones de 2025 a 2026 por suposición. Si todavía no se pueden verificar, la lista permanece vacía.
