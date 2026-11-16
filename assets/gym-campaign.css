@@ -4,7 +4,7 @@
 .gym-poster{position:relative;container-type:inline-size;aspect-ratio:1448/1086;background:url('/assets/gym-campaign-scene-20260912.png') center top/100% auto no-repeat}
 .gym-campaign-header{position:absolute;left:3.9%;right:2.8%;top:3.7%;display:grid;grid-template-columns:29.5% 42.5% 28%;align-items:start}
 .gym-brand{display:flex;align-items:center;gap:1.9cqw;min-width:0;padding-left:1.3cqw}
-.gym-crest{display:block;width:5.7cqw;height:7.45cqw;flex:none;overflow:hidden;clip-path:polygon(50% 2%,98% 12%,98% 64%,88% 80%,50% 99%,14% 82%,2% 64%,2% 12%)}
+.gym-crest{display:block;width:5.7cqw;height:7.45cqw;flex:none;object-fit:contain}
 .gym-brand-name{font:500 2.3cqw/1.25 var(--body);letter-spacing:.11em;text-transform:uppercase;white-space:nowrap}
 .gym-brand-name span{display:block;text-align:center;margin-top:.35em;font-size:1.35cqw;letter-spacing:.43em}
 .gym-heading{text-align:center;padding:.5cqw 1.2cqw 0 0}
