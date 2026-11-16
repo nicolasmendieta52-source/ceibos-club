@@ -1105,6 +1105,21 @@
       "court": "Cancha 6"
     },
     {
+      "id": "src-m-p00247e32",
+      "categoryId": "masculino",
+      "homeId": "kiwis",
+      "awayId": "real-alta-gama",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "P00247e32",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-a",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-18",
+      "time": "21:15",
+      "court": "Cancha 4"
+    },
+    {
       "id": "src-m-p2450417b",
       "categoryId": "masculino",
       "homeId": "garrulos-fc",
@@ -1180,21 +1195,6 @@
       "court": "Cancha 3"
     },
     {
-      "id": "src-m-p00247e32",
-      "categoryId": "masculino",
-      "homeId": "kiwis",
-      "awayId": "real-alta-gama",
-      "stage": "groups",
-      "status": "scheduled",
-      "sourceId": "P00247e32",
-      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
-      "groupId": "mas-a",
-      "round": "Fase de grupos · Fecha 2",
-      "date": "2026-11-18",
-      "time": "22:15",
-      "court": "Cancha 4"
-    },
-    {
       "id": "src-m-p2b4518db",
       "categoryId": "masculino",
       "homeId": "garrulos-fc",
@@ -1255,6 +1255,21 @@
       "court": "Cancha 5"
     },
     {
+      "id": "src-m-pc8b647eb",
+      "categoryId": "masculino",
+      "homeId": "deportivo-panal",
+      "awayId": "la-bomb-squad",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pc8b647eb",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-b",
+      "round": "Fase de grupos · Fecha 3",
+      "date": "2026-11-23",
+      "time": "21:00",
+      "court": "Cancha 6"
+    },
+    {
       "id": "src-m-p62d1310b",
       "categoryId": "masculino",
       "homeId": "la-tropa",
@@ -1298,21 +1313,6 @@
       "date": "2026-11-23",
       "time": "22:00",
       "court": "Cancha 4"
-    },
-    {
-      "id": "src-m-pc8b647eb",
-      "categoryId": "masculino",
-      "homeId": "deportivo-panal",
-      "awayId": "la-bomb-squad",
-      "stage": "groups",
-      "status": "scheduled",
-      "sourceId": "Pc8b647eb",
-      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
-      "groupId": "mas-b",
-      "round": "Fase de grupos · Fecha 3",
-      "date": "2026-11-23",
-      "time": "22:00",
-      "court": "Cancha 5"
     },
     {
       "id": "src-m-pc9ac7bd6",
@@ -1744,9 +1744,9 @@
       "sourceId": "Pfce2a6b3",
       "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
       "round": "Interzonal · Fecha 1",
-      "date": "2026-11-18",
-      "time": "21:15",
-      "court": "Cancha 4"
+      "date": "2026-11-23",
+      "time": "20:00",
+      "court": "Cancha 6"
     },
     {
       "id": "src-p-p80d73754",
@@ -2650,9 +2650,9 @@
   "sourceInfo": {
     "url": "https://interno2026.ceibosfutbol.workers.dev/",
     "intervalMinutes": 60,
-    "importedAt": "2026-11-16T13:02:03.697Z",
-    "checkedAt": "2026-11-16T19:01:10.945Z",
-    "sourceUpdatedAt": "2026-11-16T13:27:28",
+    "importedAt": "2026-11-16T20:02:28.772Z",
+    "checkedAt": "2026-11-16T22:02:06.959Z",
+    "sourceUpdatedAt": "2026-11-16T17:01:35",
     "categories": [
       "masculino",
       "femenino",
