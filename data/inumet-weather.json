@@ -5,38 +5,12 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-11-15 12:00",
-  "actualizado": "2026-11-15T18:56:18.804Z",
+  "publicado": "2026-11-16 0:0",
+  "actualizado": "2026-11-16T06:40:47.509Z",
   "pronosticos": [
     {
-      "fecha": "2026-11-15",
-      "diaMasN": 0,
-      "etiqueta": "Domingo 15",
-      "temperaturaMin": 17,
-      "temperaturaMax": 25,
-      "probabilidadLluvia": "",
-      "periodos": [
-        {
-          "orden": 1,
-          "nombre": "Mañana",
-          "descripcion": "Nuboso y cubierto.",
-          "evolucion": "Nieblas y neblinas.",
-          "detalle": "",
-          "viento": "SE y E 10-30 km/h."
-        },
-        {
-          "orden": 2,
-          "nombre": "Tarde/Noche",
-          "descripcion": "Algo nuboso y nuboso, períodos de cubierto.",
-          "evolucion": "",
-          "detalle": "",
-          "viento": "Sector E 20-30 km/h, rachas de hasta 50 km/h."
-        }
-      ]
-    },
-    {
       "fecha": "2026-11-16",
-      "diaMasN": 1,
+      "diaMasN": 0,
       "etiqueta": "Lunes 16",
       "temperaturaMin": 17,
       "temperaturaMax": 26,
@@ -45,10 +19,10 @@
         {
           "orden": 1,
           "nombre": "Mañana",
-          "descripcion": "Nuboso y cubierto.",
+          "descripcion": "Nuboso y cubierto, períodos de algo nuboso.",
           "evolucion": "",
           "detalle": "",
-          "viento": "NE y E 20-30 km/h, rachas de 40 km/h."
+          "viento": "NE y E 20-30 km/h."
         },
         {
           "orden": 2,
@@ -56,13 +30,13 @@
           "descripcion": "Nuboso y cubierto.",
           "evolucion": "Probables precipitaciones escasas.",
           "detalle": "",
-          "viento": "Sector E 10-30 km/h, rachas de hasta 40 km/h."
+          "viento": "Sector E 10-30 km/h."
         }
       ]
     },
     {
       "fecha": "2026-11-17",
-      "diaMasN": 2,
+      "diaMasN": 1,
       "etiqueta": "Martes 17",
       "temperaturaMin": 18,
       "temperaturaMax": 25,
@@ -79,34 +53,51 @@
         {
           "orden": 2,
           "nombre": "Tarde/Noche",
-          "descripcion": "Cubierto a nuboso.",
+          "descripcion": "Cubierto a nuboso, períodos de algo nuboso.",
           "evolucion": "Probables precipitaciones y tormentas.",
-          "detalle": "",
-          "viento": "Sector W al sector S 10-20 km/h."
+          "detalle": "Neblinas y bancos de niebla.",
+          "viento": "Sector W al sector S 10-20 km/h, periodo de variables 0-10 km/h."
         }
       ]
     },
     {
       "fecha": "2026-11-18",
-      "diaMasN": 3,
+      "diaMasN": 2,
       "etiqueta": "Miércoles 18",
       "temperaturaMin": 17,
       "temperaturaMax": 25,
-      "probabilidadLluvia": "Baja",
-      "periodos": []
+      "probabilidadLluvia": "",
+      "periodos": [
+        {
+          "orden": 1,
+          "nombre": "Mañana",
+          "descripcion": "Algo nuboso y nuboso.",
+          "evolucion": "Neblinas.",
+          "detalle": "",
+          "viento": "Variables 0-10 km/h al sector W 10-20 km/h."
+        },
+        {
+          "orden": 2,
+          "nombre": "Tarde/Noche",
+          "descripcion": "Algo nuboso y nuboso, períodos de cubierto.",
+          "evolucion": "Baja probabilidad de precipitaciones.",
+          "detalle": "",
+          "viento": "Sector W 10-30 km/h, rachas de 40-50 km/h."
+        }
+      ]
     },
     {
       "fecha": "2026-11-19",
-      "diaMasN": 4,
+      "diaMasN": 3,
       "etiqueta": "Jueves 19",
-      "temperaturaMin": 16,
-      "temperaturaMax": 25,
+      "temperaturaMin": 17,
+      "temperaturaMax": 24,
       "probabilidadLluvia": "Baja",
       "periodos": []
     },
     {
       "fecha": "2026-11-20",
-      "diaMasN": 5,
+      "diaMasN": 4,
       "etiqueta": "Viernes 20",
       "temperaturaMin": 17,
       "temperaturaMax": 22,
@@ -115,8 +106,17 @@
     },
     {
       "fecha": "2026-11-21",
-      "diaMasN": 6,
+      "diaMasN": 5,
       "etiqueta": "Sábado 21",
+      "temperaturaMin": 15,
+      "temperaturaMax": 24,
+      "probabilidadLluvia": "Nula",
+      "periodos": []
+    },
+    {
+      "fecha": "2026-11-22",
+      "diaMasN": 6,
+      "etiqueta": "Domingo 22",
       "temperaturaMin": 15,
       "temperaturaMax": 24,
       "probabilidadLluvia": "Nula",

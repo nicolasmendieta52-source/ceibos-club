@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-15T18:56:19.763Z",
+        "updatedAt": "2026-11-16T06:40:48.416Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-15T18:56:19.970Z",
+        "updatedAt": "2026-11-16T06:40:48.648Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-15T18:56:20.081Z",
+        "updatedAt": "2026-11-16T06:40:48.762Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-15T18:56:20.204Z",
+        "updatedAt": "2026-11-16T06:40:48.894Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-15T18:56:20.321Z",
+        "updatedAt": "2026-11-16T06:40:49.016Z",
         "tables": [
           {
             "id": 2239,
@@ -2603,17 +2603,6 @@
       "local": false,
       "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSCTA.html",
       "cancha": "COLEGIO PIO"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 18",
-      "rival": "PELOTA AL MEDIO UNIVERSITARIO",
-      "fecha": "2026-11-15",
-      "hora": "15:30",
-      "local": true,
-      "fase": "Copa de Oro",
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F181818O.html",
-      "cancha": "MONTE VI \"LOS CEIBOS\""
     },
     {
       "deporte": "futbol",
@@ -7128,6 +7117,15 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "PELOTA AL MEDIO UNIVERSITARIO",
+      "gf": 4,
+      "gc": 1,
+      "fecha": "2026-11-15",
+      "fase": "Copa de Oro"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "NACIONAL UNIVERSITARIO",
       "gf": 0,
@@ -7136,7 +7134,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-11-15T18:59:41.933Z",
+  "actualizadoEn": "2026-11-16T06:44:12.782Z",
   "diagnostico": {
     "fuentes": [
       {
