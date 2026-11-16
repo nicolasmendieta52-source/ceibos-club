@@ -106,10 +106,6 @@ function initInterno(){
   const notificationParams=new URLSearchParams(location.search),requestedCategory=notificationParams.get('internoCategoria'),requestedTab=notificationParams.get('internoTab'),requestedMatch=notificationParams.get('internoPartido');
   if(['masculino','femenino','mas38'].includes(requestedCategory))select.value=requestedCategory;
   let currentTab=tabs.some(tab=>tab.dataset.internoTab===requestedTab)?requestedTab:'grupos',data=null,lastJson='',loading=false,notificationTargetPending=true;
-  const contact=document.getElementById('interno-inscripcion');
-  const originalContact=contact?{href:contact.href,text:contact.textContent}:null;
-  const originalState=document.getElementById('interno-inscripcion-estado').textContent;
-  const originalText=document.getElementById('interno-inscripcion-texto').textContent;
   function updateStars(){
     if(!data)return;let preferences={},active=false;
     try{preferences=JSON.parse(localStorage.getItem('ceibos_notification_preferences_v1')||'{}');active=localStorage.getItem('ceibos_notifications_active_v1')==='1'&&typeof Notification!=='undefined'&&Notification.permission==='granted';}catch{}
@@ -157,10 +153,6 @@ function initInterno(){
         select.replaceChildren(...data.categories.map(category=>{const option=document.createElement('option');option.value=category.id;option.textContent=category.name;return option;}));
         if(data.categories.some(c=>c.id===previous))select.value=previous;
         render();live.setData(data);
-        const form=data.registrationOpen&&publicInternoUrl(data.registrationUrl);
-        if(contact&&originalContact){contact.href=form||originalContact.href;contact.textContent=form?'Inscribirme al Interno ↗':originalContact.text;}
-        document.getElementById('interno-inscripcion-estado').textContent=form?'Inscripciones abiertas':originalState;
-        document.getElementById('interno-inscripcion-texto').textContent=form?'Completá el formulario oficial para anotarte al Interno.':originalText;
       }
       status.textContent='';
       const sourceInfo=document.getElementById('interno-source-info');if(sourceInfo){sourceInfo.hidden=!data.sourceInfo;if(data.sourceInfo){const date=new Intl.DateTimeFormat('es-UY',{dateStyle:'short',timeStyle:'short',timeZone:'America/Montevideo'}).format(new Date(data.sourceInfo.checkedAt||data.sourceInfo.importedAt));sourceInfo.innerHTML=sourceLink(data.sourceInfo.url,'Fuente del Interno')+' · Lectura cada una hora · Última lectura verificada: '+escape(date)+(data.sourceInfo.pendingPlayoffs?' · '+escape(data.sourceInfo.pendingPlayoffs)+' cruces esperan rivales confirmados.':'');}}

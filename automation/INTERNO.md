@@ -21,7 +21,7 @@ No se encontró un formulario de inscripción en las publicaciones ni en la bio 
 
 El contacto confirmado por el usuario es **091 393 252**. El botón abre WhatsApp en `https://wa.me/59891393252`; el teléfono también tiene enlace de llamada. La web no afirma que haya un formulario disponible.
 
-Si se aporta un formulario oficial, editar `data/interno.json`: poner su enlace HTTPS en `registrationUrl` y `registrationOpen: true`. Mientras no esté configurado, se conserva el contacto por WhatsApp. No usar el formulario del gimnasio.
+La inscripción y su contacto se retiraron de la web el 16/11/2026 por pedido del usuario. Los campos `registrationUrl` y `registrationOpen` se conservan por compatibilidad, pero no habilitan un formulario ni un botón en la sección. El reglamento PDF permanece disponible.
 
 ## Reglamento 2026
 

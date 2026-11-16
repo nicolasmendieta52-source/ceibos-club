@@ -276,7 +276,7 @@ nav.topbar.solid{
 </style>
 <link rel="stylesheet" href="/assets/analytics-consent.css?v=20260922">
 <script type="module" src="/assets/analytics.js?v=20261111noticias"></script>
-<link rel="stylesheet" href="assets/interno.css?v=20261116acciones">
+<link rel="stylesheet" href="assets/interno.css?v=20261116agenda">
 <link rel="stylesheet" href="assets/interno-live.css?v=20261116lista">
 <link rel="stylesheet" href="assets/interno-notifications.css?v=20261116seleccion">
 <link rel="stylesheet" href="assets/navigation.css?v=20261028floating">
@@ -948,13 +948,6 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
       <p class="interno-kicker">Fútbol 8 · Edición 2026</p>
       <h2 id="interno-titulo">El Interno<span>de Ceibos.</span></h2>
       <p class="interno-intro">Vuelve el clásico de fin de año. Fútbol 8, amigos y los colores de siempre. Toda la actividad del Interno, en un solo lugar.</p>
-    </div>
-    <div class="interno-signup">
-      <span class="interno-soon" id="interno-inscripcion-estado">Contacto de inscripción</span>
-      <h3>Tu lugar en el Interno</h3>
-      <p id="interno-inscripcion-texto">Para inscribir a tu equipo o consultar por el torneo, escribinos por WhatsApp.</p>
-      <a class="btn btn-oro" id="interno-inscripcion" href="https://wa.me/59891393252?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20inscribir%20a%20mi%20equipo%20al%20Interno%20Ceibos%202026." target="_blank" rel="noopener noreferrer">Inscripción por WhatsApp ↗</a>
-      <p class="interno-contact">Contacto: <a href="tel:+59891393252">091 393 252</a></p>
       <a class="interno-reglamento-link" href="assets/reglamento-interno-f8-ceibos-2026.pdf" target="_blank" rel="noopener noreferrer">Ver reglamento 2026 (PDF) ↗</a>
     </div>
   </div>
@@ -982,9 +975,9 @@ h2.titulo em{font-style:normal;color:var(--dorado)}
     <noscript><p class="interno-footer">Activá JavaScript para consultar los equipos y las tablas. También podés seguir los anuncios en <a href="https://www.instagram.com/internoceibosclub/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>.</p></noscript>
   </div>
   <div class="interno-guide" aria-label="Información del torneo 2026">
-    <details><summary>Inscripción y fecha de inicio</summary><p>El Interno empieza el <strong>16 de noviembre</strong>. La inscripción de equipos cierra el <strong>9 de noviembre</strong>: cada equipo debe tener al menos ocho jugadores inscriptos y pagos. Consultá a Alfonso por el <a href="https://wa.me/59891393252" target="_blank" rel="noopener noreferrer">091 393 252 ↗</a>.</p></details>
+    <details><summary>Fecha de inicio</summary><p>El Interno empieza el <strong>16 de noviembre</strong>.</p></details>
     <details><summary>Días, lugar y categorías</summary><p>Se juega de noche, los lunes y miércoles, en el complejo Los Ceibos, en las canchas de ASPROE y Ceibos. Las categorías son <strong>Masculino, Femenino y Masculino +38</strong>. Si se suspende una fecha, puede reprogramarse para martes o jueves; seguí los avisos oficiales.</p></details>
-    <details><summary>Formato y reglamento</summary><p>Fútbol 8, sin offside y con cambios ilimitados. Masculino y Papi fútbol juegan dos tiempos de 25 minutos; Femenino, de 20. El entretiempo es de 5 minutos. En la pestaña <strong>Formato y cruces</strong> podés consultar el recorrido de cada categoría y ver los videos explicativos. El reglamento detalla las condiciones de inscripción y de competencia.</p><a class="interno-reglamento-link" href="assets/reglamento-interno-f8-ceibos-2026.pdf" target="_blank" rel="noopener noreferrer">Leer reglamento completo (PDF) ↗</a></details>
+    <details><summary>Formato y reglamento</summary><p>Fútbol 8, sin offside y con cambios ilimitados. Masculino y Papi fútbol juegan dos tiempos de 25 minutos; Femenino, de 20. El entretiempo es de 5 minutos. En la pestaña <strong>Formato y cruces</strong> podés consultar el recorrido de cada categoría y ver los videos explicativos. El reglamento detalla las condiciones y reglas de competencia.</p><a class="interno-reglamento-link" href="assets/reglamento-interno-f8-ceibos-2026.pdf" target="_blank" rel="noopener noreferrer">Leer reglamento completo (PDF) ↗</a></details>
   </div>
   <div class="interno-recuerdos" id="interno-2025" aria-labelledby="interno-2025-titulo">
     <p class="interno-kicker">La edición que nos dejó con ganas de más</p>
@@ -1841,6 +1834,7 @@ let EVENTOS = [
   { fecha:"2026-11-23", titulo:"Canastas navideñas", tipo:"solidario", desc:"Armado y entrega de canastas para las fiestas." },
   { fecha:"2026-11-26", titulo:"CMC", tipo:"social",    desc:"Última cena mensual del año." },
   { fecha:"2026-12-18", titulo:"Adoración", tipo:"social", desc:"El cierre espiritual del año Ceibos." },
+  { fecha:"2026-12-19", titulo:"Fiesta Ceibos", tipo:"social", desc:"Agendá el 19 de diciembre." },
 ];
 
 const SOLIDARIO = [
@@ -3227,7 +3221,7 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
   .catch(() => {});
 </script>
 <script type="module" src="/notifications.js?v=20261116estrellas"></script>
-<script type="module" src="assets/interno.js?v=20261116lista"></script>
+<script type="module" src="assets/interno.js?v=20261116agenda"></script>
 <script type="module" src="assets/news-share.js?v=20261111"></script>
 <script src="assets/navigation.js?v=20261028viewport" defer></script>
 </body>

@@ -22,7 +22,7 @@ La lectura inicial del 11/11/2026 contiene **38 equipos y 54 partidos**: 22 equi
 
 El 12/11/2026 se confirmó en las tablas y los tres partidos del grupo C femenino el reemplazo de **Pata de Palo por Manchester Birraited**. Pata de Palo permanece en el registro de origen, pero ya no participa en el fixture. También apareció la categoría `P` vacía. El 13/11 la fuente agregó sus seis equipos y nueve partidos, lo que bloqueó la lectura anterior. Ahora se incorpora Papi completo: **44 equipos y 63 partidos** entre las tres categorías. Los partidos con `grupo: IZ` se muestran como **Interzonal**, separados de las finales y sin inventar una tercera zona. La tabla oficial de Papi conserva el puntaje publicado sin asumir la regla de puntos de Masculino/Femenino; su configuración local `points` sigue siendo `null`.
 
-Los formatos y videos confirmados, el PDF y el contacto de inscripción se conservan. El usuario confirmó el 11/11/2026 **25 + 5 + 25 minutos para Masculino y Papi**, y **20 + 5 + 20 para Femenino**, coherente con el fixture y el PDF.
+Los formatos y videos confirmados y el PDF se conservan. La inscripción y su contacto se retiraron de la web el 16/11/2026 por pedido del usuario. El usuario confirmó el 11/11/2026 **25 + 5 + 25 minutos para Masculino y Papi**, y **20 + 5 + 20 para Femenino**, coherente con el fixture y el PDF.
 
 ## Fallos y publicación
 

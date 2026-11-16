@@ -1,6 +1,6 @@
 # Interno 2026
 
-La sección `/#interno` conserva inscripción por WhatsApp (091 393 252), reglamento PDF, anuncio del 16 de noviembre y recuerdos de 2025. Los datos de esta edición están en `data/interno.json`. El navegador vuelve a leer ese archivo cada minuto mientras la página está visible; después de editarlo hay que publicar el cambio. No se extraen automáticamente historias de Instagram.
+La sección `/#interno` conserva reglamento PDF, anuncio del 16 de noviembre y recuerdos de 2025. La inscripción y su contacto se retiraron de la web el 16/11/2026 por pedido del usuario. Los datos de esta edición están en `data/interno.json`. El navegador vuelve a leer ese archivo cada minuto mientras la página está visible; después de editarlo hay que publicar el cambio. No se extraen automáticamente historias de Instagram.
 
 Las notificaciones del Interno se activan desde **Elegir mis avisos** o desde la campana, con preferencias de categoría, equipo y tipo de aviso. Consumen los partidos de este mismo JSON; su funcionamiento, filtros y revisión automática están documentados en `docs/interno-notificaciones.md`.
 
@@ -61,6 +61,6 @@ Masculino/Femenino: victoria 3, empate 1, derrota 0. Solo cuentan resultados de 
 
 Una quita oficial puede cargarse en el equipo con `pointsAdjustment: -3` y `adjustmentNote` obligatorio. WO simple: registrar el 2–0 reglamentario (o marcador que corresponda según resolución). Doble incomparecencia: resultado 0–0 y `doubleForfeit: true`; ambos suman partido perdido sin puntos ni goles.
 
-El enlace de formulario es opcional: solo reemplaza WhatsApp si `registrationOpen` es `true` y `registrationUrl` contiene un enlace HTTPS válido. Si falla la actualización, la página conserva los últimos datos correctos y avisa que no pudo refrescar.
+Los campos `registrationOpen` y `registrationUrl` se conservan por compatibilidad del JSON, pero la web ya no muestra inscripción ni vuelve a habilitarla al refrescar los datos. Si falla la actualización, la página conserva los últimos datos correctos y avisa que no pudo refrescar.
 
 Validación: `node --test automation/interno.test.mjs`; regresión del sitio: `npm test`.
