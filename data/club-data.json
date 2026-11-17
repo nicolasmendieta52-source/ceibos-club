@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-16T22:14:05.187Z",
+        "updatedAt": "2026-11-17T08:01:41.631Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-16T22:14:05.259Z",
+        "updatedAt": "2026-11-17T08:01:41.702Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-16T22:14:05.313Z",
+        "updatedAt": "2026-11-17T08:01:41.762Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-16T22:14:05.385Z",
+        "updatedAt": "2026-11-17T08:01:41.832Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-16T22:14:05.456Z",
+        "updatedAt": "2026-11-17T08:01:41.918Z",
         "tables": [
           {
             "id": 2239,
@@ -2583,16 +2583,6 @@
       "local": false,
       "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSAPD.html",
       "cancha": "COM. DEP. CLUB TROUVILLE"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "CENTRO CRISTOBAL COLON",
-      "fecha": "2026-11-14",
-      "hora": "11:15",
-      "local": false,
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSCTA.html",
-      "cancha": "COLEGIO PIO"
     },
     {
       "deporte": "futbol",
@@ -7081,6 +7071,14 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "CENTRO CRISTOBAL COLON",
+      "gf": 0,
+      "gc": 2,
+      "fecha": "2026-11-14"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Papi Fútbol +35",
       "rival": "Espacio Ludico",
       "gf": 1,
@@ -7143,7 +7141,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-11-16T22:18:12.713Z",
+  "actualizadoEn": "2026-11-17T08:05:07.949Z",
   "diagnostico": {
     "fuentes": [
       {
