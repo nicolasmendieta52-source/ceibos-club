@@ -944,7 +944,18 @@
       "court": "Cancha 6",
       "homeGoals": 1,
       "awayGoals": 1,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "M. Fiol",
+          "teamId": "la-desidia",
+          "goals": 1
+        },
+        {
+          "player": "T. Perrier",
+          "teamId": "real-alta-gama",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-m-p740b0225",
@@ -1556,7 +1567,28 @@
       "court": "Cancha 3",
       "homeGoals": 3,
       "awayGoals": 2,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "M. Kliche",
+          "teamId": "maradonas",
+          "goals": 2
+        },
+        {
+          "player": "P. Formento",
+          "teamId": "maradonas",
+          "goals": 1
+        },
+        {
+          "player": "D. Boutmy",
+          "teamId": "deportivo-resaca",
+          "goals": 1
+        },
+        {
+          "player": "L. Delfino",
+          "teamId": "deportivo-resaca",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-f-p03f1f074",
@@ -1650,7 +1682,18 @@
       "court": "Cancha 2",
       "homeGoals": 1,
       "awayGoals": 1,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "E. Lombardi",
+          "teamId": "cangreburgers",
+          "goals": 1
+        },
+        {
+          "player": "J. Bartol",
+          "teamId": "fuerte-al-medio",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-f-p59cc16e6",
@@ -2896,6 +2939,13 @@
         "position": 4
       },
       {
+        "player": "M. Fiol",
+        "teamId": "la-desidia",
+        "teamName": "La Desidia",
+        "goals": 1,
+        "position": 4
+      },
+      {
         "player": "M. Inciarte",
         "teamId": "orleans",
         "teamName": "Orleans",
@@ -2913,6 +2963,13 @@
         "player": "R. Beramendi",
         "teamId": "la-fragancia",
         "teamName": "La Fragancia",
+        "goals": 1,
+        "position": 4
+      },
+      {
+        "player": "T. Perrier",
+        "teamId": "real-alta-gama",
+        "teamName": "Alta Gama",
         "goals": 1,
         "position": 4
       }
@@ -2933,81 +2990,123 @@
         "position": 1
       },
       {
+        "player": "M. Kliche",
+        "teamId": "maradonas",
+        "teamName": "Maradoñas",
+        "goals": 2,
+        "position": 1
+      },
+      {
         "player": "C. Frontini",
         "teamId": "la-naranja-mecanica",
         "teamName": "Naranja Mecánica",
         "goals": 1,
-        "position": 3
+        "position": 4
       },
       {
         "player": "C. Guichon",
         "teamId": "nerea-jrs",
         "teamName": "Nerea Jrs",
         "goals": 1,
-        "position": 3
+        "position": 4
       },
       {
         "player": "C. Sosa",
         "teamId": "nerea-jrs",
         "teamName": "Nerea Jrs",
         "goals": 1,
-        "position": 3
+        "position": 4
+      },
+      {
+        "player": "D. Boutmy",
+        "teamId": "deportivo-resaca",
+        "teamName": "Dep. Resaca",
+        "goals": 1,
+        "position": 4
       },
       {
         "player": "D. Frontini",
         "teamId": "nerea-jrs",
         "teamName": "Nerea Jrs",
         "goals": 1,
-        "position": 3
+        "position": 4
+      },
+      {
+        "player": "E. Lombardi",
+        "teamId": "cangreburgers",
+        "teamName": "Cangreburgers",
+        "goals": 1,
+        "position": 4
       },
       {
         "player": "I. Gallino",
         "teamId": "levantate-fc",
         "teamName": "Levantate",
         "goals": 1,
-        "position": 3
+        "position": 4
       },
       {
         "player": "I. Varela",
         "teamId": "levantate-fc",
         "teamName": "Levantate",
         "goals": 1,
-        "position": 3
+        "position": 4
       },
       {
         "player": "I. Álvarez",
         "teamId": "levantate-fc",
         "teamName": "Levantate",
         "goals": 1,
-        "position": 3
+        "position": 4
+      },
+      {
+        "player": "J. Bartol",
+        "teamId": "fuerte-al-medio",
+        "teamName": "Fuerte al Medio",
+        "goals": 1,
+        "position": 4
+      },
+      {
+        "player": "L. Delfino",
+        "teamId": "deportivo-resaca",
+        "teamName": "Dep. Resaca",
+        "goals": 1,
+        "position": 4
       },
       {
         "player": "M. Moreira",
         "teamId": "levantate-fc",
         "teamName": "Levantate",
         "goals": 1,
-        "position": 3
+        "position": 4
       },
       {
         "player": "P. Alvez",
         "teamId": "purohumo-fc",
         "teamName": "PuroHumo",
         "goals": 1,
-        "position": 3
+        "position": 4
       },
       {
         "player": "P. Echenagusía",
         "teamId": "levantate-fc",
         "teamName": "Levantate",
         "goals": 1,
-        "position": 3
+        "position": 4
+      },
+      {
+        "player": "P. Formento",
+        "teamId": "maradonas",
+        "teamName": "Maradoñas",
+        "goals": 1,
+        "position": 4
       },
       {
         "player": "P. Ortiz",
         "teamId": "al-tranque",
         "teamName": "Al Tranque",
         "goals": 1,
-        "position": 3
+        "position": 4
       }
     ],
     "mas38": []
@@ -3015,9 +3114,9 @@
   "sourceInfo": {
     "url": "https://interno2026.ceibosfutbol.workers.dev/",
     "intervalMinutes": 60,
-    "importedAt": "2026-11-17T14:01:41.293Z",
-    "checkedAt": "2026-11-17T15:01:52.715Z",
-    "sourceUpdatedAt": "2026-11-17T10:45:40",
+    "importedAt": "2026-11-17T16:02:04.689Z",
+    "checkedAt": "2026-11-17T16:02:04.689Z",
+    "sourceUpdatedAt": "2026-11-17T12:08:36",
     "categories": [
       "masculino",
       "femenino",
