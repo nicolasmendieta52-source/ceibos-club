@@ -1,9 +1,10 @@
 import {searchText,buildSearchIndex,searchIndex} from './search-model.js?v=20261117';
 import {liveKickoff,matchClock,clockSettings,liveBoard} from './interno-live-clock.js?v=20261116acciones';
 import {internoStandings,internoScorers} from './interno-model.js?v=20261113papi';
-import {retrieveClubFacts,answerChampionQuestion} from './club-assistant-facts.js?v=20261117directa';
+import {retrieveClubFacts,answerChampionQuestion} from './club-assistant-facts.js?v=20261117conversacion';
 import {REGULATION_FACTS} from './club-assistant-regulation.js?v=20261117';
-import {answerClubMatchQuery} from './club-assistant-matches.js?v=20261117interpretacion';
+import {answerClubMatchQuery} from './club-assistant-matches.js?v=20261117conversacion';
+import {teamCandidates} from './club-assistant-language.js?v=20261117conversacion';
 
 const zone='America/Montevideo';
 const weekdays=['domingo','lunes','martes','miercoles','jueves','viernes','sabado'];
@@ -34,19 +35,12 @@ export function questionDate(question,now=Date.now()){
  if(/\bmanana\b/.test(q))return {date:addDays(today,1)};
  if(/\bhoy\b/.test(q))return {date:today};if(/\bayer\b/.test(q))return {date:addDays(today,-1)};
  const day=weekdays.findIndex(name=>q.split(' ').includes(name));
- if(day>=0){const current=new Date(today+'T12:00:00Z').getUTCDay();let delta=(day-current+7)%7;if(/\bpasad[oa]\b/.test(q))delta=delta?delta-7:-7;else if(/\bproxim[oa]\b/.test(q)&&!delta)delta=7;return {date:addDays(today,delta)};}
+ if(day>=0){const current=new Date(today+'T12:00:00Z').getUTCDay();let delta=(day-current+7)%7;if(/\b(pasad[oa]|anterior)\b/.test(q))delta=delta?delta-7:-7;else if(/\b(proxim[oa]|que viene|siguiente)\b/.test(q)&&!delta)delta=7;return {date:addDays(today,delta)};}
  return {};
 }
 
 function findTeams(question,data){
- const q=' '+searchText(question)+' ',teams=data?.teams||[];
- const exact=teams.filter(team=>q.includes(' '+searchText(team.name)+' '));if(exact.length)return {teams:exact,approximate:false};
- const ignored=new Set(['deportivo','atletico','club','equipo','partido','partidos','contra','quien','cuando','juega','juegan','resultado','resultados','miercoles','proximo','manana','cancha','horario','grupo','futbol','interno']);
- const tokens=searchText(question).split(' ').filter(word=>word.length>=4&&!ignored.has(word));
- const entries=teams.map(team=>({id:team.id,title:team.name,titleText:searchText(team.name),tokens:searchText(team.name).split(' '),boost:0}));
- const direct=teams.filter(team=>tokens.some(token=>searchText(team.name).split(' ').some(word=>word.startsWith(token))));if(direct.length)return {teams:direct,approximate:direct.length!==1};
- const candidates=new Set();for(const token of tokens){const found=searchIndex(entries,token,6);if(found.approximate)for(const row of found.results)candidates.add(row.id);}
- return {teams:teams.filter(team=>candidates.has(team.id)),approximate:true};
+ return teamCandidates(question,data);
 }
 
 function gymAnswer(q,gym){
@@ -55,7 +49,9 @@ function gymAnswer(q,gym){
  if(!gym||!Number.isFinite(gym.raised)||!Number.isFinite(gym.goal)||gym.goal<=0)return reply('Todavía no pude cargar la recaudación del gimnasio. Podés ver el estado en la campaña y volver a preguntarme en unos segundos.',{items:[item('Ver campaña del Gym','#gym-campaign')],intent:'gym',waiting:'gym'});
  const percentage=new Intl.NumberFormat('es-UY',{maximumFractionDigits:2}).format(Math.min(gym.raised/gym.goal,1)*100),remaining=Math.max(0,gym.goal-gym.raised),verified=gym.status==='live';
  if(/\bladrillos?\b/.test(q)&&/\b(cuantos|cantidad|ocupados|faltan|total)\b/.test(q)&&Number.isInteger(gym.brickCount))return reply('El muro tiene '+gym.brickCount+' ladrillos'+(Number.isInteger(gym.occupied)?': '+gym.occupied+' ocupados y '+Math.max(0,gym.brickCount-gym.occupied)+' disponibles':'.')+(verified?'.':' (último dato disponible; no pude verificar una lectura nueva).'),{items:[item('Ver muro de ladrillos','#gym-campaign')],source:gym.checkedAt?'Última lectura verificada: '+stamp(gym.checkedAt):'',intent:'gym'});
- const text=(verified?'El Gym lleva recaudados ':'El último dato disponible del Gym es ')+money(gym.raised)+', sobre una meta de '+money(gym.goal)+'. Va un '+percentage+'%'+(remaining?'; faltan '+money(remaining)+'.':'. ¡La meta está alcanzada!')+(verified?'':' No pude verificar una lectura nueva de la planilla; este importe es el último disponible.');
+ const summary=(verified?'El Gym lleva recaudados ':'El último dato disponible del Gym es ')+money(gym.raised)+', sobre una meta de '+money(gym.goal)+'. Va un '+percentage+'%'+(remaining?'; faltan '+money(remaining)+'.':'. ¡La meta está alcanzada!');
+ const focused=/\b(falta|faltan|resta|restan|queda|quedan)\b/.test(q)?remaining?'Faltan '+money(remaining)+' para alcanzar la meta de '+money(gym.goal)+'.':'La meta de '+money(gym.goal)+' ya está alcanzada.':/\b(porcentaje|avance)\b/.test(q)?'El Gym alcanzó el '+percentage+'% de la meta: '+money(gym.raised)+' de '+money(gym.goal)+'.':/\b(cual es la meta|objetivo|meta total)\b/.test(q)?'La meta del Gym es '+money(gym.goal)+'. Se recaudaron '+money(gym.raised)+'.':summary;
+ const text=focused+(verified?'':' No pude verificar una lectura nueva de la planilla; este importe es el último disponible.');
  return reply(text,{items:[item('Ver recaudación y ladrillos','#gym-campaign')],source:(gym.checkedAt?'Última lectura verificada: '+stamp(gym.checkedAt):gym.updatedAt?'Fecha del dato disponible: '+stamp(gym.updatedAt):'Se muestra el último dato disponible en la web.'),intent:'gym',waiting:gym.status==='loading'?'gym':undefined});
 }
 
@@ -79,7 +75,7 @@ export function answerClubQuestion(question,state={},context={},now=Date.now()){
  const raw=String(question||'').trim().slice(0,300),q=searchText(raw),today=clubToday(now),dateQuestion=questionDate(raw,now),allFacts=[...(state.facts||[]),...REGULATION_FACTS,...internoFacts(state.interno)];
  if(!q)return reply('Escribí qué querés saber del club. Por ejemplo: “¿Contra quién juega Rapiñeros el miércoles?” o “¿Cuánto recaudó el Gym?”.');
  if(/\b(gym|gimnasio|ladrillos?|recaud\w*|meta)\b/.test(q)||/\b(cuanta plata|cuanto dinero)\b/.test(q)){
-  if(!/\b(recaud\w*|plata|dinero|meta|avance|porcentaje|ladrillos?|colaborar|colaboro|aportar|aporto|precio|cuesta|vale|sale|costo|cuota)\b|cuanto (va|lleva)|como va/.test(q)&&q.split(' ').length>2){const facts=retrieveClubFacts(raw,allFacts);if(facts.length)return factReply(raw,facts);return reply('No encontré ese dato confirmado sobre el gimnasio. Podés ver la información del proyecto o consultar al club.',{items:[item('Proyecto del Gym','#proyecto-gimnasio'),item('Contactar al club','#contacto')]});}
+  if(!/\b(recaud\w*|plata|dinero|meta|avance|porcentaje|falta|faltan|resta|restan|queda|quedan|ladrillos?|colaborar|colaboro|aportar|aporto|precio|cuesta|vale|sale|costo|cuota)\b|cuanto (va|lleva)|como va/.test(q)&&q.split(' ').length>2){const facts=retrieveClubFacts(raw,allFacts);if(facts.length)return factReply(raw,facts);return reply('No encontré ese dato confirmado sobre el gimnasio. Podés ver la información del proyecto o consultar al club.',{items:[item('Proyecto del Gym','#proyecto-gimnasio'),item('Contactar al club','#contacto')]});}
   return gymAnswer(q,state.gym);
  }
  if(dateQuestion.invalid)return reply('Esa fecha no es válida. Probá con un día como “mañana”, “el miércoles” o una fecha en formato día/mes.');
@@ -128,7 +124,7 @@ export function answerClubQuestion(question,state={},context={},now=Date.now()){
   return reply(rows.length?'Goleadores publicados'+(team?' de '+team.name:' de '+data.categories.find(c=>c.id===id).name)+':':'No hay goleadores identificados publicados para esa consulta.',{items:rows.slice(0,8).map(r=>item('Ver goleadores',internalUrl(id,'goleadores'),r.player+' · '+r.teamName+' · '+r.goals+' goles.')).concat(rows.length?[]:[item('Ver goleadores',internalUrl(id,'goleadores'))]),source});
  }
  const fixtureIntent=Boolean(team||/\b(partido|partidos|juega|juegan|fixture|resultado|resultados|cancha|horario|horarios)\b/.test(q)||(dateQuestion.date&&(category||/\binterno\b/.test(q))));
- if(data&&/\b(ahora|simultaneo|simultaneos|vivo)\b/.test(q)&&!team){const board=liveBoard(data,now);return reply(board.active.length?'Hay '+board.active.length+' partidos en horario de juego según el fixture. El reloj es estimado.':'Ahora no hay partidos en horario de juego según el fixture.',{items:board.active.slice(0,8).map(row=>item('Ver partido',internalUrl(row.match.categoryId,'fixture','',row.match.id),describeInterno(data,row.match)+' '+row.clock.label+': '+row.clock.text)),source});}
+ if(data&&/\b(ahora|simultaneo|simultaneos|vivo)\b/.test(q)&&!team){const board=liveBoard(data,now);return reply(board.active.length?'Hay '+board.active.length+' '+(board.active.length===1?'partido':'partidos')+' en horario de juego según el fixture. El reloj es estimado.':'Ahora no hay partidos en horario de juego según el fixture.',{items:board.active.slice(0,8).map(row=>item('Ver partido',internalUrl(row.match.categoryId,'fixture','',row.match.id),describeInterno(data,row.match)+' '+row.clock.label+': '+row.clock.text)),source});}
  if(fixtureIntent&&(team||category||/\binterno\b/.test(q))){
   if(!data)return reply('Todavía estoy cargando los partidos del Interno. Probá de nuevo en unos segundos.',{items:[item('Ver Interno','#interno')],waiting:'interno'});
   let matches=data.matches.filter(m=>m.status!=='cancelled'&&(!team||member(m,team.id))&&(!category||m.categoryId===category));

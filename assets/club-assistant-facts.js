@@ -23,7 +23,7 @@ export function answerChampionQuestion(question,facts=[],now=Date.now()){
 export function retrieveClubFacts(question,facts=[],limit=3){
  let query=[...new Set(tokens(question))];if(query.includes('tienda'))query=query.filter(t=>t!=='ubicacion');if(!query.length)return [];
  const ranked=facts.flatMap(fact=>{
-  if(!fact.text||!fact.href||!/^#|^\/(?!\/)|^\?/.test(fact.href))return [];
+  if(!fact.text||!fact.href||!/^#|^\/(?!\/)|^\?/.test(fact.href)||fact.table)return [];
   if(query.includes('papi')&&fact.scope==='mf')return [];
   if(query.includes('tienda')&&!/^#(?:shop|socios)(?:$|\/)/.test(fact.href)&&!(/\b(tienda|bulk|indumentaria|comprar|shop)\b/.test(searchText(fact.text))))return [];
   const title=tokens(fact.title||''),body=tokens(fact.text),all=[...title,...body,...tokens(fact.keywords||'')];

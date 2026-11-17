@@ -281,7 +281,7 @@ nav.topbar.solid{
 <link rel="stylesheet" href="assets/interno-notifications.css?v=20261116seleccion">
 <link rel="stylesheet" href="assets/navigation.css?v=20261028floating">
 <link rel="stylesheet" href="assets/site-search.css?v=20261117">
-<link rel="stylesheet" href="assets/club-assistant.css?v=20261117directa">
+<link rel="stylesheet" href="assets/club-assistant.css?v=20261117conversacion">
 <link rel="stylesheet" href="assets/news.css?v=20261111ascenso">
 </head>
 <body>
@@ -399,12 +399,12 @@ nav.topbar.solid{
 
 <button class="club-assistant-fab" id="clubAssistantFab" type="button" data-assistant-open aria-label="Preguntale a Ceibos" aria-haspopup="dialog" aria-controls="clubAssistantDialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H9l-5 4Z"/><path d="M8 8h8M8 12h5"/></svg><span>Preguntá</span></button>
 <dialog class="club-assistant-dialog" id="clubAssistantDialog" aria-labelledby="clubAssistantTitle" aria-describedby="clubAssistantHelp">
-  <div class="club-assistant-head"><div><p>Consultas del club</p><h2 id="clubAssistantTitle">Preguntale a Ceibos</h2></div><button type="button" data-assistant-close aria-label="Cerrar asistente">×</button></div>
-  <p class="club-assistant-help" id="clubAssistantHelp">Consultá la información publicada: partidos, equipos, Gym, eventos y más.</p>
+  <div class="club-assistant-head"><div class="club-assistant-brand"><img src="assets/escudo-ceibos-gym.svg" alt="" width="34" height="44"><div><p>Ceibos Club · Consultas</p><h2 id="clubAssistantTitle">Preguntale a Ceibos</h2></div></div><button type="button" data-assistant-close aria-label="Cerrar asistente">×</button></div>
+  <p class="club-assistant-help" id="clubAssistantHelp">Una pregunta, el dato que buscás. Con la información publicada del club.</p>
   <div class="club-assistant-log" data-assistant-log role="log" aria-label="Conversación con Ceibos" aria-live="polite" aria-relevant="additions"></div>
-  <div class="club-assistant-examples" aria-label="Preguntas de ejemplo"><button type="button" data-assistant-question="¿Contra quién juega Rapiñeros el miércoles?">Rapiñeros el miércoles</button><button type="button" data-assistant-question="¿Cuánta plata lleva recaudada el Gym?">Recaudación del Gym</button><button type="button" data-assistant-question="¿Cuándo se fundó Ceibos?">Historia del club</button></div>
-  <p class="club-assistant-status" data-assistant-status role="status" aria-live="polite"></p>
-  <form class="club-assistant-form"><label for="clubAssistantInput" class="assistant-sr">Tu pregunta para Ceibos</label><textarea id="clubAssistantInput" rows="2" maxlength="300" placeholder="Escribí tu pregunta…" enterkeyhint="send"></textarea><button type="submit" aria-label="Enviar pregunta">Enviar</button></form>
+  <div class="club-assistant-examples" aria-label="Ideas para empezar"><button type="button" data-assistant-question="¿Contra quién juega Rapiñeros el miércoles?"><span>Próximo partido</span><small>Rival, horario y cancha</small></button><button type="button" data-assistant-question="¿Cuánto recaudó el Gym?"><span>El Gym, hoy</span><small>Recaudación y avance</small></button><button type="button" data-assistant-question="¿Qué partidos hay en el Interno esta semana?"><span>Seguí el Interno</span><small>Equipos y fechas</small></button><button type="button" data-assistant-question="¿Qué puedo consultar?"><span>Todo Ceibos</span><small>Conocé qué podés preguntar</small></button></div>
+  <div class="club-assistant-status-row"><p class="club-assistant-status" data-assistant-status role="status" aria-live="polite"></p><button type="button" data-assistant-stop hidden>Detener</button></div>
+  <form class="club-assistant-form"><label for="clubAssistantInput" class="assistant-sr">Tu pregunta para Ceibos</label><textarea id="clubAssistantInput" rows="2" maxlength="300" placeholder="Por ejemplo: ¿cuántos ganó Reserva Verde?" enterkeyhint="send"></textarea><button type="submit" aria-label="Enviar pregunta">Enviar <span aria-hidden="true">↗</span></button></form>
   <div class="club-assistant-footer"><span>Datos publicados · Horarios de Uruguay</span><button type="button" data-assistant-reset>Nueva conversación</button></div>
 </dialog>
 
@@ -3042,14 +3042,18 @@ function publicarDatosBusqueda(){
 }
 function categoriasPublicasBusqueda(deporte){return [...new Set([...deporte.categorias,...PARTIDOS.filter(p=>slugDeporte(p.deporte)===deporte.slug).map(p=>p.categoria),...RESULTADOS.filter(r=>slugDeporte(r.deporte)===deporte.slug).map(r=>r.categoria)])];}
 function publicarDatosAsistente(){
-  const facts=[];
+  const facts=[],tables=[];
   for(const d of DEPORTES){
     facts.push({title:d.nombre,text:d.desc+' Categorías: '+categoriasPublicasBusqueda(d).join(', ')+'.',href:'#'+d.slug});
     for(const c of categoriasPublicasBusqueda(d)){
       const template=document.createElement('template');template.innerHTML=estadisticasCompetenciaHTML(d.slug,c);
       for(const table of template.content.querySelectorAll('table')){
-        const columns=[...table.querySelectorAll('thead th')].map(th=>th.textContent.trim()),title=d.nombre+' '+c+' · '+(table.closest('details')?.querySelector('summary')?.textContent||table.querySelector('caption')?.textContent||'Estadísticas 2026');
-        for(const row of table.querySelectorAll('tbody tr'))facts.push({title,text:[...row.querySelectorAll('th,td')].map((td,i)=>(columns[i]||'Dato')+': '+td.textContent.trim()).join(' · '),href:'?deporte='+d.slug+'&categoria='+encodeURIComponent(c)+'#'+d.slug});
+        const columns=[...table.querySelectorAll('thead th')].map(th=>th.textContent.trim()),phase=table.closest('details')?.querySelector('summary')?.textContent||table.querySelector('caption')?.textContent||'Estadísticas 2026',title=d.nombre+' '+c+' · '+phase,href='?deporte='+d.slug+'&categoria='+encodeURIComponent(c)+'#'+d.slug;
+        const rows=[...table.querySelectorAll('tbody tr')].map(row=>({club:row.classList.contains('adic-equipo'),values:[...row.querySelectorAll('th,td')].map(td=>td.textContent.trim())}));
+        const metadata=(ESTADISTICAS_2026?.tables||[]).find(t=>t.sport===d.slug&&t.category===c&&t.title===phase),adic=ADIC_TEMPORADA?.tournaments?.find(t=>phase.includes(t.name)),adicTeam=ADIC_TEMPORADA?.teams?.find(t=>t.category===c);
+        const mixedDates=adicTeam&&adic?.matches?.some(m=>(m.home_team.id===adicTeam.id||m.away_team.id===adicTeam.id)&&m.scheduled_at&&!m.scheduled_at.startsWith('2026-'));
+        tables.push({sport:d.slug,category:c,title:phase,season:2026,kind:columns.some(col=>/jugador|anotador/i.test(col))?'scorers':'standings',columns,rows,href,updatedAt:metadata?.updatedAt||adic?.updatedAt||ESTADISTICAS_2026?.checkedAt||'',stale:Boolean(metadata?.stale),note:mixedDates?'ADIC también registra partidos de otros años en este torneo. Los puntos se muestran por torneo, tal como los publica la fuente.':''});
+        for(const row of rows)facts.push({title,text:row.values.map((v,i)=>(columns[i]||'Dato')+': '+v).join(' · '),href,table:true});
       }
     }
   }
@@ -3063,7 +3067,7 @@ function publicarDatosAsistente(){
     }
   }
   const hoy=new Date();hoy.setHours(0,0,0,0);
-  window.dispatchEvent(new CustomEvent('ceibos:assistant-content',{detail:{sports:DEPORTES.map(d=>({slug:d.slug,name:d.nombre,categories:categoriasPublicasBusqueda(d)})),events:EVENTOS.filter(e=>fechaValida(e.fecha)&&new Date(e.fecha+'T00:00:00')>=hoy),clubMatches:PARTIDOS,clubResults:resultadosAsistente,clubResultsReady:resultadosAsistenteListos,facts}}));
+  window.dispatchEvent(new CustomEvent('ceibos:assistant-content',{detail:{sports:DEPORTES.map(d=>({slug:d.slug,name:d.nombre,categories:categoriasPublicasBusqueda(d)})),events:EVENTOS.filter(e=>fechaValida(e.fecha)&&new Date(e.fecha+'T00:00:00')>=hoy),clubMatches:PARTIDOS,clubResults:resultadosAsistente,clubResultsReady:resultadosAsistenteListos,tables,tablesReady:Boolean(ESTADISTICAS_2026)&&Boolean(ADIC_TEMPORADA),facts}}));
 }
 let resultadosAsistente=[],resultadosAsistenteListos=false;
 window.addEventListener('ceibos:assistant-request',publicarDatosAsistente);
@@ -3288,7 +3292,7 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
 <script type="module" src="/notifications.js?v=20261116estrellas"></script>
 <script type="module" src="assets/interno.js?v=20261117search"></script>
 <script type="module" src="assets/site-search.js?v=20261117assistant"></script>
-<script type="module" src="assets/club-assistant.js?v=20261117directa"></script>
+<script type="module" src="assets/club-assistant.js?v=20261117conversacion"></script>
 <script type="module" src="assets/news-share.js?v=20261111"></script>
 <script src="assets/navigation.js?v=20261117search" defer></script>
 </body>
