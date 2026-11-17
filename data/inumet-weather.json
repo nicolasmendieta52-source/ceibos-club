@@ -5,8 +5,8 @@
   "zona": "Área Metropolitana",
   "ubicacion": "Zona del predio Los Ceibos",
   "estacionReferencia": "Melilla - Aeropuerto Internacional Ángel S. Adami",
-  "publicado": "2026-11-17 12:00",
-  "actualizado": "2026-11-17T17:37:14.248Z",
+  "publicado": "2026-11-17 18:00",
+  "actualizado": "2026-11-17T21:01:22.426Z",
   "pronosticos": [
     {
       "fecha": "2026-11-17",
@@ -28,9 +28,9 @@
           "orden": 2,
           "nombre": "Tarde/Noche",
           "descripcion": "Cubierto a nuboso, períodos de algo nuboso.",
-          "evolucion": "Precipitaciones aisladas.",
+          "evolucion": "Precipitaciones y tormentas aisladas.",
           "detalle": "Mejorando. Neblinas.",
-          "viento": "Sector W 10-30 km/h, rachas de hasta 50 km/h. Periodo de variables 0-10 km/h."
+          "viento": "W al NW 10-30 km/h. Periodos de variables 0-10 km/h."
         }
       ]
     },
@@ -45,10 +45,10 @@
         {
           "orden": 1,
           "nombre": "Mañana",
-          "descripcion": "Algo nuboso y nuboso.",
+          "descripcion": "Claro y algo nuboso a nuboso.",
           "evolucion": "Neblinas y bancos de niebla.",
           "detalle": "",
-          "viento": "Sector W 10-20 km/h."
+          "viento": "Sector W 10-30 km/h, rachas de hasta 40 km/h."
         },
         {
           "orden": 2,
@@ -56,7 +56,7 @@
           "descripcion": "Algo nuboso y nuboso, períodos de cubierto.",
           "evolucion": "Baja probabilidad de tormentas aisladas.",
           "detalle": "",
-          "viento": "Sector W 10-30 km/h, rachas de 40 km/h."
+          "viento": "Sector W 10-30 km/h, rachas de hasta 40 km/h."
         }
       ]
     },
@@ -74,7 +74,7 @@
           "descripcion": "Claro y algo nuboso.",
           "evolucion": "",
           "detalle": "Neblinas y bancos de niebla.",
-          "viento": "SW 10-30 km/h, rachas de hasta 40 km/h. Periodo de variables 0-10 km/h."
+          "viento": "SW 10-30 km/h, rachas de hasta 40 km/h."
         },
         {
           "orden": 2,
@@ -82,7 +82,7 @@
           "descripcion": "Claro y algo nuboso.",
           "evolucion": "",
           "detalle": "",
-          "viento": "SW al SE y E 10-30 km/h, rachas de hasta 40 km/h."
+          "viento": "SW al sector E 10-30 km/h, rachas de hasta 40 km/h."
         }
       ]
     },
@@ -91,8 +91,8 @@
       "diaMasN": 3,
       "etiqueta": "Viernes 20",
       "temperaturaMin": 17,
-      "temperaturaMax": 22,
-      "probabilidadLluvia": "Baja",
+      "temperaturaMax": 26,
+      "probabilidadLluvia": "Media",
       "periodos": []
     },
     {
@@ -117,9 +117,9 @@
       "fecha": "2026-11-23",
       "diaMasN": 6,
       "etiqueta": "Lunes 23",
-      "temperaturaMin": 14,
-      "temperaturaMax": 28,
-      "probabilidadLluvia": "Baja",
+      "temperaturaMin": 15,
+      "temperaturaMax": 25,
+      "probabilidadLluvia": "Nula",
       "periodos": []
     }
   ]
