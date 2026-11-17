@@ -56,3 +56,9 @@ test('reglas generales y de Masculino/Femenino conservan el alcance del PDF, sin
  const papi=ask('¿Cuántos penales se patean en Papi?');assert.ok(!papi.items.some(row=>row.text.includes('tres penales')));
  assert.ok(!JSON.stringify(players).includes('091 393 252'));assert.ok(players.items.some(row=>row.href.includes('.pdf#page=')));
 });
+
+test('preguntas de duración no se confunden con cantidad de partidos',()=>{
+ const female=ask('cuánto dura un partido femenino del Interno');assert.equal(female.items.length,1);assert.match(female.items[0].text,/dos tiempos de 20 minutos y 5 de entretiempo.*45 minutos/);
+ const male=ask('cuantos minutos se juegan en masculino');assert.equal(male.items.length,1);assert.match(male.items[0].text,/dos tiempos de 25 minutos y 5 de entretiempo.*55 minutos/);
+ assert.match(ask('cuanto dura un partido').text,/De qué deporte o categoría/);
+});

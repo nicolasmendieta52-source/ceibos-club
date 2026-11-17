@@ -1,4 +1,4 @@
-import {answerClubQuestion} from './club-assistant-model.js?v=20261117';
+import {answerClubQuestion} from './club-assistant-model.js?v=20261117interpretacion';
 
 function initAssistant(){
  const dialog=document.getElementById('clubAssistantDialog');if(!dialog||typeof dialog.showModal!=='function')return;
@@ -28,17 +28,17 @@ function initAssistant(){
   const message=document.createElement('div'),label=document.createElement('strong'),p=document.createElement('p');message.className='club-assistant-message is-ceibos';label.textContent='Ceibos';p.textContent=answer.text;message.append(label,p);
   if(answer.items?.length){const list=document.createElement('ul');for(const row of answer.items){const li=document.createElement('li');if(row.text){const paragraph=document.createElement('p');paragraph.textContent=row.text;li.append(paragraph);}if(/^(?:#|\/(?!\/)|\?)/.test(row.href||'')){const a=document.createElement('a');a.href=row.href;a.textContent=row.label+' →';a.addEventListener('click',event=>{if(!event.metaKey&&!event.ctrlKey&&!event.shiftKey)dialog.close();});li.append(a);}list.append(li);}message.append(list);}
   if(answer.source){const source=document.createElement('small');source.className='club-assistant-source';source.textContent=answer.source;message.append(source);}
-  if(answer.choices?.length){const choices=document.createElement('div');choices.className='club-assistant-choices';for(const choice of answer.choices){const button=document.createElement('button');button.type='button';button.textContent=choice.label;button.addEventListener('click',()=>ask(choice.question));choices.append(button);}message.append(choices);}
+  if(answer.choices?.length){const choices=document.createElement('div');choices.className='club-assistant-choices';for(const choice of answer.choices){const button=document.createElement('button');button.type='button';button.textContent=choice.label;button.addEventListener('click',()=>ask(choice.question,choice.resolution));choices.append(button);}message.append(choices);}
   log.append(message);scroll();return message;
  }
- function ready(kind){return kind==='interno'?Boolean(state.interno):Boolean(state.gym&&state.gym.status!=='loading');}
+ function ready(kind){return kind==='interno'?Boolean(state.interno):kind==='club'?state.clubResultsReady===true:Boolean(state.gym&&state.gym.status!=='loading');}
  function waitData(kind){if(ready(kind))return Promise.resolve();return new Promise(resolve=>{const timer=setTimeout(done,6500);function done(){clearTimeout(timer);waiters.delete(check);resolve();}function check(){if(ready(kind))done();}waiters.add(check);});}
  function changed(){for(const notify of [...waiters])notify();}
- async function ask(value){
-  const question=String(value||'').trim().slice(0,300);if(!question||busy)return;busy=true;send.disabled=true;const turn=sequence;input.value='';examples.hidden=true;appendUser(question);status.textContent='Consultando datos del club…';
+ async function ask(value,resolution=null){
+  const question=String(value||'').trim().slice(0,300);if(!question||busy)return;busy=true;send.disabled=true;const turn=sequence,queryContext=resolution?{...context,resolution}:context;input.value='';examples.hidden=true;appendUser(resolution?.label||question);status.textContent='Consultando datos del club…';
   try{
-   requestData();let answer=answerClubQuestion(question,{...state,facts:[...state.facts,...collectFacts()]},context);
-   if(answer.waiting){await waitData(answer.waiting);answer=answerClubQuestion(question,{...state,facts:[...state.facts,...collectFacts()]},context);}
+   requestData();let answer=answerClubQuestion(question,{...state,facts:[...state.facts,...collectFacts()]},queryContext);
+   if(answer.waiting){await waitData(answer.waiting);answer=answerClubQuestion(question,{...state,facts:[...state.facts,...collectFacts()]},queryContext);}
    if(turn===sequence){context=answer.context||{};appendAnswer(answer);}
   }catch{if(turn===sequence)appendAnswer({text:'No pude completar esa consulta. Probá de nuevo o usá el buscador para encontrar la sección.',items:[{label:'Ver Interno',href:'#interno'},{label:'Ver Gym',href:'#gym-campaign'}]});}
   finally{if(turn===sequence){busy=false;send.disabled=false;status.textContent='';if(dialog.open)input.focus({preventScroll:true});}}

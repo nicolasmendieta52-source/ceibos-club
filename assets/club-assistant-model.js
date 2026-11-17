@@ -3,9 +3,11 @@ import {liveKickoff,matchClock,clockSettings,liveBoard} from './interno-live-clo
 import {internoStandings,internoScorers} from './interno-model.js?v=20261113papi';
 import {retrieveClubFacts} from './club-assistant-facts.js?v=20261117';
 import {REGULATION_FACTS} from './club-assistant-regulation.js?v=20261117';
+import {answerClubMatchQuery} from './club-assistant-matches.js?v=20261117interpretacion';
 
 const zone='America/Montevideo';
 const weekdays=['domingo','lunes','martes','miercoles','jueves','viernes','sabado'];
+const months=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
 const money=n=>'USD '+new Intl.NumberFormat('es-UY',{maximumFractionDigits:2}).format(n);
 export function clubToday(now=Date.now()){
  const p=Object.fromEntries(new Intl.DateTimeFormat('en',{timeZone:zone,year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(now).map(row=>[row.type,row.value]));return p.year+'-'+p.month+'-'+p.day;
@@ -22,6 +24,8 @@ const dateSuffix=date=>date?' el '+date.slice(8)+'/'+date.slice(5,7)+'/'+date.sl
 export function questionDate(question,now=Date.now()){
  const q=searchText(question),today=clubToday(now),explicit=String(question).match(/\b(\d{1,2})[\/-](\d{1,2})(?:[\/-](\d{4}))?\b/);
  if(explicit){const date=(explicit[3]||today.slice(0,4))+'-'+explicit[2].padStart(2,'0')+'-'+explicit[1].padStart(2,'0');const parsed=new Date(date+'T12:00:00Z');return Number.isFinite(parsed.getTime())&&parsed.toISOString().slice(0,10)===date?{date}:{invalid:true};}
+ const named=q.replace(/\bsetiembre\b/g,'septiembre').match(new RegExp('\\b(\\d{1,2})(?: de)? ('+months.join('|')+')(?: (?:de )?(\\d{4}))?\\b'));
+ if(named){const date=(named[3]||today.slice(0,4))+'-'+String(months.indexOf(named[2])+1).padStart(2,'0')+'-'+named[1].padStart(2,'0'),parsed=new Date(date+'T12:00:00Z');return Number.isFinite(parsed.getTime())&&parsed.toISOString().slice(0,10)===date?{date}:{invalid:true};}
  if(/\bpasado manana\b/.test(q))return {date:addDays(today,2)};
  if(/\bmanana\b/.test(q))return {date:addDays(today,1)};
  if(/\bhoy\b/.test(q))return {date:today};if(/\bayer\b/.test(q))return {date:addDays(today,-1)};
@@ -94,6 +98,15 @@ export function answerClubQuestion(question,state={},context={},now=Date.now()){
   const facts=retrieveClubFacts(raw,allFacts);if(facts.length)return reply('Según la información publicada en Ceibos:',{items:facts.map(fact=>item('Ver '+(fact.title||'información'),fact.href,fact.text)),intent:'information'});
   if(/\b(entrena|entrenan|entrenamientos|entrenador|entrenadores|talle|talles|precio|cuota)\b/.test(q))return reply('No encontré ese dato confirmado entre la información publicada en la web. Podés consultar al club para obtenerlo.',{items:[item('Contactar al club','#contacto')]});
  }
+ const durationQuestion=/\b(dura|duran|duracion)\b/.test(q)||/\b(cuantos minutos|cuanto tiempo)\b/.test(q)&&!/\b(falta|faltan|quedan)\b/.test(q);
+ if(durationQuestion&&/\b(interno|partido|partidos|masculino|femenino|papi)\b/.test(q)){
+  const subject=state.interno?.teams.find(t=>t.id===context.teamId),categoryId=/\bpapi\b|\b38\b/.test(q)?'mas38':/\bfemenin[oa]s?\b/.test(q)?'femenino':/\bmasculin[oa]s?\b/.test(q)?'masculino':subject?.categoryId;
+  if(!categoryId&&!/\binterno\b/.test(q))return reply('¿De qué deporte o categoría querés saber la duración? Para el Interno puedo consultar los tiempos publicados.',{choices:[{label:'Duración del Interno',question:'¿Cuánto duran los partidos del Interno?'}]});
+  if(!state.interno)return reply('Estoy cargando los tiempos publicados del Interno.',{waiting:'interno'});
+  const categories=state.interno.categories.filter(c=>!categoryId||c.id===categoryId);
+  return reply('Duración publicada para el Interno:',{items:categories.map(c=>{const settings=clockSettings(state.interno,{categoryId:c.id});return item('Ver formato de '+c.name,internalUrl(c.id,'cruces'),c.name+': dos tiempos de '+settings.halfMinutes+' minutos y '+settings.breakMinutes+' de entretiempo ('+(settings.halfMinutes*2+settings.breakMinutes)+' minutos en total, sin contar demoras).');}),intent:'information'});
+ }
+ const matchQuery=answerClubMatchQuery(raw,state,context,now,dateQuestion);if(matchQuery)return matchQuery;
  const data=state.interno,found=findTeams(raw,data),follow=/^(y\b|a que hora\b|donde\b|en que cancha\b|cuando\b|el (lunes|martes|miercoles|jueves|viernes|sabado|domingo)\b)/.test(q),savedTeam=data?.teams.find(t=>t.id===context.teamId);
  if((found.approximate&&found.teams.length)||found.teams.length>1)return reply(found.approximate?'¿Te referís a alguno de estos equipos?':'¿Qué equipo querés consultar?',{choices:found.teams.slice(0,6).map(team=>({label:team.name,question:'Ver partidos de '+team.name+dateSuffix(dateQuestion.date)}))});
  const team=found.teams[0]||(follow?savedTeam:null),date=dateQuestion.date||(follow?context.date:null),source=data?.sourceInfo?'Última lectura del Interno: '+stamp(data.sourceInfo.checkedAt||data.sourceInfo.importedAt):'';
@@ -122,21 +135,6 @@ export function answerClubQuestion(question,state={},context={},now=Date.now()){
   if(!matches.length)return reply('No tengo '+(wantsResult?'un resultado confirmado':'un partido confirmado')+' de '+label+(date?' para el '+dateLabel(date):'')+'.',{items:[item('Ver '+(team?'partidos del equipo':'fixture'),internalUrl(team?.categoryId||category||'masculino',team?'equipos':wantsResult?'resultados':'fixture',team?.id||''))],context:team?{teamId:team.id,date}: {},source});
   if(matches.length===1){const match=matches[0];return reply(describeInterno(data,match,team),{items:[item('Ver partido',internalUrl(match.categoryId,match.status==='finished'?'resultados':'fixture','',match.id))],context:team?{teamId:team.id,date:match.date,matchId:match.id}: {},source,intent:'fixture'});}
   return reply('Estos son los partidos publicados de '+label+(date?' para el '+dateLabel(date):'')+(matches.length>8?' (muestro 8 de '+matches.length+')':'')+':',{items:matches.slice(0,8).map(m=>item('Ver partido',internalUrl(m.categoryId,m.status==='finished'?'resultados':'fixture','',m.id),describeInterno(data,m,team))),context:team?{teamId:team.id,date}: {},source});
- }
- const sportAliases={futbol:['futbol','football'],basketball:['basketball','basket','basquet','basquetbol','baske'],rugby:['rugby'],hockey:['hockey']};
- const sport=(state.sports||[]).find(s=>sportAliases[s.slug]?.some(word=>q.split(' ').includes(word)));
- let categories=(sport? [sport]:state.sports||[]).flatMap(s=>(s.categories||[]).filter(c=>(' '+q+' ').includes(' '+searchText(c)+' ')).map(c=>({sport:s,category:c})));
- if(!categories.length&&sport&&(sport.categories.length===1||sport.slug==='basketball'))categories=[{sport,category:sport.categories.includes('Basketball')?'Basketball':sport.categories[0]}];
- if((sport||categories.length)&&fixtureIntent){
-  if(categories.length!==1)return reply('¿Qué categoría querés consultar?',{choices:(categories.length?categories:(sport?[sport]:state.sports||[]).flatMap(s=>s.categories.map(c=>({sport:s,category:c})))).slice(0,6).map(row=>({label:row.sport.name+' · '+row.category,question:'¿'+(wantsResult?'Cuál fue el resultado':'Contra quién juega')+' '+row.sport.name+' '+row.category+dateSuffix(dateQuestion.date)+'?'}))});
-  const row=categories[0],rows=(wantsResult?state.clubResults:state.clubMatches)||[];
-  let games=rows.filter(m=>searchText(m.deporte)===searchText(row.sport.slug==='basketball'?'Basketball':row.sport.name)&&searchText(m.categoria)===searchText(row.category)&&(!dateQuestion.date||m.fecha===dateQuestion.date));
-  if(!wantsResult&&!dateQuestion.date)games=games.filter(m=>m.fecha>=today);
-  games.sort((a,b)=>(wantsResult?-1:1)*(a.fecha||'9999').localeCompare(b.fecha||'9999'));
-  const url='?deporte='+row.sport.slug+'&categoria='+encodeURIComponent(row.category)+'#'+row.sport.slug,game=games[0];
-  if(!game)return reply('No tengo '+(wantsResult?'un resultado confirmado':'un partido publicado')+' de '+row.sport.name+' '+row.category+(dateQuestion.date?' para el '+dateLabel(dateQuestion.date):'')+'.',{items:[item('Ver categoría',url)]});
-  const details=[dateLabel(game.fecha),game.hora?game.hora+' h':'',game.cancha].filter(Boolean).join(' · ');
-  return reply('Ceibos '+row.sport.name+' '+row.category+' '+(wantsResult?'jugó':'juega')+' contra '+game.rival+'. '+details+(wantsResult&&Number.isFinite(game.gf)&&Number.isFinite(game.gc)?' · Resultado: '+game.gf+'–'+game.gc:'')+'.',{items:[item('Ver categoría',url)],intent:'fixture'});
  }
  const facts=retrieveClubFacts(raw,allFacts);
  if(facts.length)return reply('Según la información publicada en Ceibos:',{items:facts.map(fact=>item('Ver '+(fact.title||'información'),fact.href,fact.text)),intent:'information'});

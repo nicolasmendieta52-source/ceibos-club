@@ -3063,8 +3063,9 @@ function publicarDatosAsistente(){
     }
   }
   const hoy=new Date();hoy.setHours(0,0,0,0);
-  window.dispatchEvent(new CustomEvent('ceibos:assistant-content',{detail:{sports:DEPORTES.map(d=>({slug:d.slug,name:d.nombre,categories:categoriasPublicasBusqueda(d)})),events:EVENTOS.filter(e=>fechaValida(e.fecha)&&new Date(e.fecha+'T00:00:00')>=hoy),clubMatches:PARTIDOS,clubResults:RESULTADOS,facts}}));
+  window.dispatchEvent(new CustomEvent('ceibos:assistant-content',{detail:{sports:DEPORTES.map(d=>({slug:d.slug,name:d.nombre,categories:categoriasPublicasBusqueda(d)})),events:EVENTOS.filter(e=>fechaValida(e.fecha)&&new Date(e.fecha+'T00:00:00')>=hoy),clubMatches:PARTIDOS,clubResults:resultadosAsistente,clubResultsReady:resultadosAsistenteListos,facts}}));
 }
+let resultadosAsistente=[],resultadosAsistenteListos=false;
 window.addEventListener('ceibos:assistant-request',publicarDatosAsistente);
 let categoriaBusquedaAplicada='';
 function aplicarCategoriaBusqueda(){
@@ -3276,6 +3277,7 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
           .map(textoPlano)
           .filter(Boolean)
       }));
+    if (Array.isArray(d.resultados)) { resultadosAsistente=d.resultados; resultadosAsistenteListos=true; }
     if (Array.isArray(d.eventos) && d.eventos.length) EVENTOS = d.eventos
       .filter(e => fechaValida(e.fecha))
       .map(e => ({ fecha:e.fecha, titulo:textoPlano(e.titulo), tipo:e.tipo === "solidario" ? "solidario" : "social", desc:textoPlano(e.desc) }));
@@ -3286,7 +3288,7 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
 <script type="module" src="/notifications.js?v=20261116estrellas"></script>
 <script type="module" src="assets/interno.js?v=20261117search"></script>
 <script type="module" src="assets/site-search.js?v=20261117assistant"></script>
-<script type="module" src="assets/club-assistant.js?v=20261117"></script>
+<script type="module" src="assets/club-assistant.js?v=20261117interpretacion"></script>
 <script type="module" src="assets/news-share.js?v=20261111"></script>
 <script src="assets/navigation.js?v=20261117search" defer></script>
 </body>
