@@ -149,6 +149,11 @@ export function initCampaign(root) {
   const status = select('status');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let current = null;
+  let sourceStatus = 'loading', checkedAt = '';
+  function publishCampaign() {
+    window.dispatchEvent(new CustomEvent('ceibos:gym-data', {detail:current ? {raised:current.raised,goal:current.goal,updatedAt:current.updatedAt,checkedAt,status:sourceStatus,brickCount:BRICK_COUNT,occupied:current.fills.filter((fill,i)=>fill>0||current.brickLabels?.[i]?.trim()).length} : null}));
+  }
+  const onAssistantRequest = () => { publishCampaign(); if (!pending && (!checkedAt || Date.now()-Date.parse(checkedAt)>60000)) refresh(); };
   let remembered = null;
   try { remembered = readCampaignSnapshot(window.localStorage.getItem(SEEN_BRICKS_KEY)); } catch { /* Storage can be disabled. */ }
   const returningVisit = Boolean(remembered);
@@ -290,6 +295,7 @@ export function initCampaign(root) {
     if (next.progress === 1) announcement = '¡Meta alcanzada! Gracias por construir el gimnasio entre todos.';
     if (status.textContent !== announcement) status.textContent = announcement;
     current = next;
+    publishCampaign();
     if (remember) {
       remembered = campaignSnapshot(next);
       try { window.localStorage.setItem(SEEN_BRICKS_KEY, JSON.stringify(remembered)); } catch { /* Animation still works for this visit. */ }
@@ -342,9 +348,12 @@ export function initCampaign(root) {
       }
       if (disposed) return;
       // An old fallback must not replace the remembered state of a newer live read.
+      sourceStatus = sourceFailed ? 'fallback' : 'live';
+      if (!sourceFailed) checkedAt = new Date().toISOString();
       render(data, {remember:!sourceFailed});
       if (sourceFailed) status.textContent = 'No pudimos actualizar ahora. Mostramos el último dato disponible.';
     } catch {
+      sourceStatus = 'fallback';
       if (!disposed) {
         status.textContent = current
           ? 'No pudimos actualizar ahora. Mostramos el último dato disponible.'
@@ -354,6 +363,7 @@ export function initCampaign(root) {
           select('progress').removeAttribute('value');
         }
       }
+      publishCampaign();
     } finally { pending = false; }
   }
 
@@ -369,6 +379,7 @@ export function initCampaign(root) {
   document.addEventListener('visibilitychange', onVisibility);
   reducedMotion.addEventListener?.('change', onMotionChange);
   window.addEventListener('ceibos:gym-update', onUpdate);
+  window.addEventListener('ceibos:gym-request', onAssistantRequest);
   const timer = window.setInterval(refresh, 60000);
   refresh();
   return () => {
@@ -378,6 +389,7 @@ export function initCampaign(root) {
     reducedMotion.removeEventListener?.('change', onMotionChange);
     document.removeEventListener('visibilitychange', onVisibility);
     window.removeEventListener('ceibos:gym-update', onUpdate);
+    window.removeEventListener('ceibos:gym-request', onAssistantRequest);
   };
 }
 

@@ -1,0 +1,46 @@
+.club-assistant-fab{position:fixed;z-index:910;right:18px;bottom:82px;display:flex;align-items:center;gap:8px;min-height:46px;padding:10px 15px;border:1px solid var(--dorado);border-radius:24px;background:var(--verde-night);color:var(--dorado);box-shadow:0 8px 26px rgba(0,0,0,.22);font:700 .78rem var(--body);cursor:pointer}
+.club-assistant-fab svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linejoin:round;stroke-linecap:round}
+.club-assistant-fab:hover{background:var(--verde)}
+.nav-mobile-assistant{display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;min-height:44px;padding:0 4px 18px;margin-bottom:18px;border:0;border-bottom:1px solid rgba(246,241,228,.2);background:none;color:var(--dorado);font:700 .9rem var(--body);cursor:pointer}
+.search-ask-ceibos{display:block;min-height:44px;padding:0;margin:0 0 8px;background:none;border:0;color:var(--dorado);font:700 .8rem var(--body);text-align:left;cursor:pointer}
+.club-assistant-dialog{box-sizing:border-box;position:fixed;inset:auto 20px 20px auto;margin:0;padding:0;width:min(480px,calc(100% - 40px));max-width:none;height:min(760px,calc(var(--assistant-height,100dvh) - 40px));max-height:calc(var(--assistant-height,100dvh) - 40px);border:1px solid rgba(229,187,82,.45);border-top:3px solid var(--dorado);border-radius:0;background:var(--verde-night);color:var(--crema);box-shadow:0 22px 80px rgba(0,0,0,.4);font-family:var(--body)}
+.club-assistant-dialog[open]{display:flex;flex-direction:column}
+.club-assistant-dialog::backdrop{background:rgba(4,18,13,.76);backdrop-filter:blur(4px)}
+body.club-assistant-open{overflow:hidden}
+.club-assistant-head{display:flex;align-items:center;gap:12px;justify-content:space-between;padding:18px 20px 12px;flex-shrink:0}
+.club-assistant-head p{color:var(--dorado);font-size:.64rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin:0 0 7px}
+.club-assistant-head h2{font:400 1.85rem/1.1 var(--display);color:var(--crema);text-transform:uppercase;margin:0}
+.club-assistant-head>button{width:44px;height:44px;flex:0 0 44px;background:none;border:0;color:var(--crema);font:400 1.7rem var(--body);cursor:pointer}
+.club-assistant-help{font-size:.75rem;line-height:1.5;color:rgba(246,241,228,.65);margin:0;padding:0 20px 16px;border-bottom:1px solid rgba(246,241,228,.15);flex-shrink:0}
+.club-assistant-log{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:20px;scroll-behavior:smooth}
+.club-assistant-message{max-width:100%;font-size:.85rem;line-height:1.65;margin:0 0 20px;overflow-wrap:anywhere}
+.club-assistant-message>strong{display:block;font-size:.62rem;font-weight:750;letter-spacing:.12em;color:var(--dorado);text-transform:uppercase;margin-bottom:6px}
+.club-assistant-message p{margin:0 0 10px;white-space:pre-wrap}
+.club-assistant-message.is-user{margin-left:30px;padding:12px 14px;border-left:2px solid var(--dorado);background:rgba(229,187,82,.06)}
+.club-assistant-message.is-user>strong{color:rgba(246,241,228,.6)}
+.club-assistant-message ul{list-style:none;padding:0;margin:8px 0 0}
+.club-assistant-message li{border-top:1px solid rgba(246,241,228,.12);padding:11px 0}
+.club-assistant-message a{display:inline-flex;align-items:center;min-height:36px;color:var(--dorado);font-weight:650;font-size:.78rem;text-underline-offset:4px}
+.club-assistant-source{display:block;margin-top:9px;color:rgba(246,241,228,.5);font-size:.65rem;line-height:1.5}
+.club-assistant-choices,.club-assistant-examples{display:flex;flex-wrap:wrap;gap:7px}
+.club-assistant-choices button,.club-assistant-examples button{min-height:44px;border:1px solid rgba(229,187,82,.35);background:none;color:var(--dorado);font:600 .72rem/1.4 var(--body);padding:8px 10px;cursor:pointer;text-align:left;max-width:100%}
+.club-assistant-examples{padding:0 20px 8px;flex-shrink:0}
+.club-assistant-examples[hidden]{display:none}
+.club-assistant-status{font-size:.7rem;line-height:1.4;color:rgba(246,241,228,.65);min-height:18px;margin:0;padding:0 20px 4px;flex-shrink:0}
+.club-assistant-form{display:flex;align-items:end;gap:10px;padding:0 20px 14px;flex-shrink:0}
+.club-assistant-form textarea{box-sizing:border-box;resize:none;flex:1;min-width:0;max-height:100px;min-height:54px;border:1px solid rgba(246,241,228,.4);border-radius:0;background:rgba(246,241,228,.035);color:var(--crema);font:400 16px/1.4 var(--body);padding:12px}
+.club-assistant-form textarea::placeholder{color:rgba(246,241,228,.5)}
+.club-assistant-form>button{min-width:65px;min-height:54px;border:1px solid var(--dorado);background:var(--dorado);color:var(--verde-night);font:750 .8rem var(--body);padding:12px;cursor:pointer}
+.club-assistant-form>button:disabled{opacity:.6;cursor:wait}
+.club-assistant-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 20px;border-top:1px solid rgba(246,241,228,.12);font-size:.6rem;line-height:1.4;color:rgba(246,241,228,.5);flex-shrink:0}
+.club-assistant-footer button{min-height:44px;max-width:105px;border:0;background:none;color:var(--dorado);font:600 .65rem/1.4 var(--body);cursor:pointer;text-align:right}
+.club-assistant-dialog button:focus-visible,.club-assistant-dialog a:focus-visible,.club-assistant-dialog textarea:focus-visible,.club-assistant-fab:focus-visible,.nav-mobile-assistant:focus-visible{outline:2px solid var(--dorado);outline-offset:3px}
+.assistant-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.club-assistant-dialog.is-compact .club-assistant-examples,.club-assistant-dialog.is-compact .club-assistant-help{display:none}
+.club-assistant-dialog.is-compact .club-assistant-head{padding-block:8px}
+@media(max-width:900px){.club-assistant-fab{top:calc(var(--nav-viewport-bottom) - var(--nav-dock-height) - 80px - env(safe-area-inset-bottom,0px));bottom:auto;translate:0 -100%;right:14px}.nav-menu-open .club-assistant-fab{visibility:hidden;pointer-events:none}}
+@media(max-width:600px){
+ .club-assistant-dialog{inset:var(--assistant-top,0px) 0 auto;margin:0;width:100%;height:var(--assistant-height,100dvh);max-height:var(--assistant-height,100dvh);border:0;border-top:3px solid var(--dorado);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+ .club-assistant-head{padding:14px 18px 10px}.club-assistant-head h2{font-size:1.7rem}.club-assistant-help{padding:0 18px 12px}.club-assistant-log{padding:16px 18px}.club-assistant-form{padding-inline:18px}.club-assistant-examples{padding-inline:18px}.club-assistant-footer{padding:5px 18px}.club-assistant-message{font-size:.82rem}
+}
+@media(prefers-reduced-motion:reduce){.club-assistant-log{scroll-behavior:auto}}

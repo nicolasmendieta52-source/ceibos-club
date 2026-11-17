@@ -55,7 +55,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="/assets/gym-campaign.css?v=20261116escudo">
-<script type="module" src="/assets/gym-campaign.js?v=20261026anim"></script>
+<script type="module" src="/assets/gym-campaign.js?v=20261117assistant"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,300..900;1,9..40,300..900&display=swap" rel="stylesheet">
 <style>
@@ -281,6 +281,7 @@ nav.topbar.solid{
 <link rel="stylesheet" href="assets/interno-notifications.css?v=20261116seleccion">
 <link rel="stylesheet" href="assets/navigation.css?v=20261028floating">
 <link rel="stylesheet" href="assets/site-search.css?v=20261117">
+<link rel="stylesheet" href="assets/club-assistant.css?v=20261117">
 <link rel="stylesheet" href="assets/news.css?v=20261111ascenso">
 </head>
 <body>
@@ -363,6 +364,7 @@ nav.topbar.solid{
 </header>
 <nav class="nav-mobile" id="navMobile" aria-label="Menú completo" aria-hidden="true" hidden inert>
   <button class="nav-mobile-search" type="button" data-site-search-open aria-haspopup="dialog" aria-controls="siteSearchDialog"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>Buscar en Ceibos</button>
+  <button class="nav-mobile-assistant" type="button" data-assistant-open aria-haspopup="dialog" aria-controls="clubAssistantDialog">Preguntale a Ceibos <span aria-hidden="true">↗</span></button>
   <div class="nav-mobile-group"><h2>En la cancha</h2><div class="nav-mobile-grid"><a href="#rugby" data-nav-section="rugby" data-deporte-link="rugby">Rugby</a>
 <a href="#hockey" data-nav-section="hockey" data-deporte-link="hockey">Hockey</a>
 <a href="#futbol" data-nav-section="futbol" data-deporte-link="futbol">Fútbol</a>
@@ -392,7 +394,18 @@ nav.topbar.solid{
   <div class="site-search-head"><h2 id="siteSearchTitle">Encontrá en Ceibos</h2><button class="site-search-close" type="button" data-search-close aria-label="Cerrar buscador">×</button></div>
   <form class="site-search-form" role="search" aria-label="Buscar en la web de Ceibos"><div class="site-search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="siteSearchInput" type="text" inputmode="search" role="combobox" aria-label="Qué querés encontrar" placeholder="Equipo, categoría, noticia…" maxlength="100" autocomplete="off" autocapitalize="none" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-controls="siteSearchResults" aria-describedby="siteSearchHelp" autofocus><button class="site-search-clear" type="button" data-search-clear aria-label="Borrar búsqueda" hidden>×</button></div><p class="site-search-help" id="siteSearchHelp">Probá con “Rapiñeros”, “Sub 18” o “Cena Ceibos”.</p></form>
   <div class="site-search-scroll"><div class="site-search-suggestions" aria-label="Ideas para buscar"><button type="button" data-search-query="Interno">Interno</button><button type="button" data-search-query="Próximos partidos">Próximos partidos</button><button type="button" data-search-query="Gimnasio">Gimnasio</button><button type="button" data-search-query="Cena Ceibos">Cena Ceibos</button></div><p class="site-search-status" data-search-status role="status" aria-live="polite">Accesos frecuentes</p><ul class="site-search-results" id="siteSearchResults" data-search-results role="listbox" aria-label="Sugerencias de búsqueda"></ul><p class="site-search-empty" data-search-empty hidden></p></div>
-  <div class="site-search-footer">↑ ↓ Elegir · Enter Abrir · Esc Cerrar · Ctrl/⌘ K Buscar</div>
+  <div class="site-search-footer"><button class="search-ask-ceibos" type="button" data-assistant-open>¿Tenés una pregunta? Preguntale a Ceibos →</button><span>↑ ↓ Elegir · Enter Abrir · Esc Cerrar · Ctrl/⌘ K Buscar</span></div>
+</dialog>
+
+<button class="club-assistant-fab" id="clubAssistantFab" type="button" data-assistant-open aria-label="Preguntale a Ceibos" aria-haspopup="dialog" aria-controls="clubAssistantDialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H9l-5 4Z"/><path d="M8 8h8M8 12h5"/></svg><span>Preguntá</span></button>
+<dialog class="club-assistant-dialog" id="clubAssistantDialog" aria-labelledby="clubAssistantTitle" aria-describedby="clubAssistantHelp">
+  <div class="club-assistant-head"><div><p>Consultas del club</p><h2 id="clubAssistantTitle">Preguntale a Ceibos</h2></div><button type="button" data-assistant-close aria-label="Cerrar asistente">×</button></div>
+  <p class="club-assistant-help" id="clubAssistantHelp">Consultá la información publicada: partidos, equipos, Gym, eventos y más.</p>
+  <div class="club-assistant-log" data-assistant-log role="log" aria-label="Conversación con Ceibos" aria-live="polite" aria-relevant="additions"></div>
+  <div class="club-assistant-examples" aria-label="Preguntas de ejemplo"><button type="button" data-assistant-question="¿Contra quién juega Rapiñeros el miércoles?">Rapiñeros el miércoles</button><button type="button" data-assistant-question="¿Cuánta plata lleva recaudada el Gym?">Recaudación del Gym</button><button type="button" data-assistant-question="¿Cuándo se fundó Ceibos?">Historia del club</button></div>
+  <p class="club-assistant-status" data-assistant-status role="status" aria-live="polite"></p>
+  <form class="club-assistant-form"><label for="clubAssistantInput" class="assistant-sr">Tu pregunta para Ceibos</label><textarea id="clubAssistantInput" rows="2" maxlength="300" placeholder="Escribí tu pregunta…" enterkeyhint="send"></textarea><button type="submit" aria-label="Enviar pregunta">Enviar</button></form>
+  <div class="club-assistant-footer"><span>Datos publicados · Horarios de Uruguay</span><button type="button" data-assistant-reset>Nueva conversación</button></div>
 </dialog>
 
 <!-- ======================= HERO ======================= -->
@@ -3024,12 +3037,39 @@ function renderDinamico(){
 
 function publicarDatosBusqueda(){
   const hoy=new Date();hoy.setHours(0,0,0,0);
-  window.dispatchEvent(new CustomEvent('ceibos:search-content',{detail:{sports:DEPORTES.map(d=>({slug:d.slug,name:d.nombre,categories:d.categorias})),events:EVENTOS.filter(e=>fechaValida(e.fecha)&&new Date(e.fecha+'T00:00:00')>=hoy)}}));
+  window.dispatchEvent(new CustomEvent('ceibos:search-content',{detail:{sports:DEPORTES.map(d=>({slug:d.slug,name:d.nombre,categories:categoriasPublicasBusqueda(d)})),events:EVENTOS.filter(e=>fechaValida(e.fecha)&&new Date(e.fecha+'T00:00:00')>=hoy)}}));
+  if(document.getElementById('clubAssistantDialog')?.open)publicarDatosAsistente();
 }
+function categoriasPublicasBusqueda(deporte){return [...new Set([...deporte.categorias,...PARTIDOS.filter(p=>slugDeporte(p.deporte)===deporte.slug).map(p=>p.categoria),...RESULTADOS.filter(r=>slugDeporte(r.deporte)===deporte.slug).map(r=>r.categoria)])];}
+function publicarDatosAsistente(){
+  const facts=[];
+  for(const d of DEPORTES){
+    facts.push({title:d.nombre,text:d.desc+' Categorías: '+categoriasPublicasBusqueda(d).join(', ')+'.',href:'#'+d.slug});
+    for(const c of categoriasPublicasBusqueda(d)){
+      const template=document.createElement('template');template.innerHTML=estadisticasCompetenciaHTML(d.slug,c);
+      for(const table of template.content.querySelectorAll('table')){
+        const columns=[...table.querySelectorAll('thead th')].map(th=>th.textContent.trim()),title=d.nombre+' '+c+' · '+(table.closest('details')?.querySelector('summary')?.textContent||table.querySelector('caption')?.textContent||'Estadísticas 2026');
+        for(const row of table.querySelectorAll('tbody tr'))facts.push({title,text:[...row.querySelectorAll('th,td')].map((td,i)=>(columns[i]||'Dato')+': '+td.textContent.trim()).join(' · '),href:'?deporte='+d.slug+'&categoria='+encodeURIComponent(c)+'#'+d.slug});
+      }
+    }
+  }
+  for(const d of ARCHIVO_HISTORICO?.sports||[]){
+    facts.push({title:d.name+' · Historia',text:[d.description,d.startLabel,d.startDetail,d.league].filter(Boolean).join(' '),href:'#archivo/'+d.slug});
+    for(const m of d.milestones||[])facts.push({title:d.name+' · '+(m.title||'Historia'),text:[m.year,m.title,m.detail].filter(Boolean).join(' · '),href:'#archivo/'+d.slug});
+    for(const c of d.categories||[]){
+      const href='#archivo/'+d.slug+'/'+c.slug;facts.push({title:d.name+' '+c.name,text:[c.description,c.competition].filter(Boolean).join(' · '),href});
+      for(const a of c.achievements||[])facts.push({title:d.name+' '+c.name+' · '+a.title,text:[a.year,a.title,a.detail].filter(Boolean).join(' · '),href});
+      for(const m of c.notableMatches||[])facts.push({title:d.name+' '+c.name+' · '+m.label,text:[m.date,m.label,m.opponent,m.score].filter(Boolean).join(' · '),href});
+    }
+  }
+  const hoy=new Date();hoy.setHours(0,0,0,0);
+  window.dispatchEvent(new CustomEvent('ceibos:assistant-content',{detail:{sports:DEPORTES.map(d=>({slug:d.slug,name:d.nombre,categories:categoriasPublicasBusqueda(d)})),events:EVENTOS.filter(e=>fechaValida(e.fecha)&&new Date(e.fecha+'T00:00:00')>=hoy),clubMatches:PARTIDOS,clubResults:RESULTADOS,facts}}));
+}
+window.addEventListener('ceibos:assistant-request',publicarDatosAsistente);
 let categoriaBusquedaAplicada='';
 function aplicarCategoriaBusqueda(){
   const params=new URLSearchParams(location.search),deporte=params.get('deporte'),categoria=params.get('categoria');
-  const key=deporte+'|'+categoria,item=DEPORTES.find(d=>d.slug===deporte);if(key!==categoriaBusquedaAplicada&&item&&location.hash==='#'+deporte&&item.categorias.includes(categoria)){categoriaBusquedaAplicada=key;activarCategoria(deporte,categoria);}
+  const key=deporte+'|'+categoria,item=DEPORTES.find(d=>d.slug===deporte);if(key!==categoriaBusquedaAplicada&&item&&location.hash==='#'+deporte&&categoriasPublicasBusqueda(item).includes(categoria)){categoriaBusquedaAplicada=key;activarCategoria(deporte,categoria);}
 }
 window.addEventListener('ceibos:search-request',publicarDatosBusqueda);
 
@@ -3245,7 +3285,8 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
 </script>
 <script type="module" src="/notifications.js?v=20261116estrellas"></script>
 <script type="module" src="assets/interno.js?v=20261117search"></script>
-<script type="module" src="assets/site-search.js?v=20261117"></script>
+<script type="module" src="assets/site-search.js?v=20261117assistant"></script>
+<script type="module" src="assets/club-assistant.js?v=20261117"></script>
 <script type="module" src="assets/news-share.js?v=20261111"></script>
 <script src="assets/navigation.js?v=20261117search" defer></script>
 </body>

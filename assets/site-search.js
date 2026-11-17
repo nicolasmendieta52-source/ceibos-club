@@ -31,6 +31,7 @@ function initSearch(){
  }
  function viewport(){if(!dialog.open)return;const view=window.visualViewport;dialog.style.setProperty('--search-height',(view?.height||innerHeight)+'px');dialog.style.setProperty('--search-top',(view?.offsetTop||0)+'px');}
  function open(button){
+  document.getElementById('clubAssistantDialog')?.close();
   if(document.querySelector('dialog[open]')&&!dialog.open)return;
   opener=button||document.activeElement;window.dispatchEvent(new Event('ceibos:search-open'));
   window.dispatchEvent(new Event('ceibos:search-request'));window.dispatchEvent(new Event('ceibos:interno-search-request'));rebuild();
