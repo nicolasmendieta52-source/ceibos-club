@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-17T08:01:41.631Z",
+        "updatedAt": "2026-11-17T12:58:58.253Z",
         "tables": [
           {
             "id": 2291,
@@ -97,6 +97,18 @@
               },
               {
                 "position": 6,
+                "teamId": 73,
+                "name": "La Mennais Celeste",
+                "pj": 12,
+                "pg": 5,
+                "pe": 3,
+                "pp": 4,
+                "gf": 17,
+                "gc": 17,
+                "points": 18
+              },
+              {
+                "position": 7,
                 "teamId": 655,
                 "name": "Sta Elena Lagomar 40",
                 "pj": 12,
@@ -108,7 +120,7 @@
                 "points": 17
               },
               {
-                "position": 7,
+                "position": 8,
                 "teamId": 697,
                 "name": "Areteia blanco",
                 "pj": 12,
@@ -120,7 +132,7 @@
                 "points": 17
               },
               {
-                "position": 8,
+                "position": 9,
                 "teamId": 658,
                 "name": "Aleman Schwarz",
                 "pj": 12,
@@ -132,27 +144,15 @@
                 "points": 16
               },
               {
-                "position": 9,
+                "position": 10,
                 "teamId": 525,
                 "name": "Old Sampa",
-                "pj": 11,
+                "pj": 12,
                 "pg": 4,
                 "pe": 3,
-                "pp": 4,
-                "gf": 17,
-                "gc": 17,
-                "points": 15
-              },
-              {
-                "position": 10,
-                "teamId": 73,
-                "name": "La Mennais Celeste",
-                "pj": 11,
-                "pg": 4,
-                "pe": 3,
-                "pp": 4,
-                "gf": 14,
-                "gc": 15,
+                "pp": 5,
+                "gf": 19,
+                "gc": 20,
                 "points": 15
               },
               {
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-17T08:01:41.702Z",
+        "updatedAt": "2026-11-17T12:58:58.350Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-17T08:01:41.762Z",
+        "updatedAt": "2026-11-17T12:58:58.417Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-17T08:01:41.832Z",
+        "updatedAt": "2026-11-17T12:58:58.502Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-17T08:01:41.918Z",
+        "updatedAt": "2026-11-17T12:58:58.588Z",
         "tables": [
           {
             "id": 2239,
@@ -7141,7 +7141,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-11-17T08:05:07.949Z",
+  "actualizadoEn": "2026-11-17T13:02:23.507Z",
   "diagnostico": {
     "fuentes": [
       {
