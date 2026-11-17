@@ -910,7 +910,23 @@
       "court": "Cancha 5",
       "homeGoals": 5,
       "awayGoals": 0,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "J.A. Torres Negreira",
+          "teamId": "garrulos-fc",
+          "goals": 3
+        },
+        {
+          "player": "F. Bolla",
+          "teamId": "garrulos-fc",
+          "goals": 1
+        },
+        {
+          "player": "I. Perez",
+          "teamId": "garrulos-fc",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-m-p3fa53c74",
@@ -964,7 +980,13 @@
       "court": "Cancha 1",
       "homeGoals": 1,
       "awayGoals": 0,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "F. Rouco",
+          "teamId": "rapineros",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-m-p0d948386",
@@ -1018,7 +1040,18 @@
       "court": "Cancha 5",
       "homeGoals": 3,
       "awayGoals": 0,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "M. Lijtenstein",
+          "teamId": "paso-cuello",
+          "goals": 1
+        },
+        {
+          "player": "F. Garcia",
+          "teamId": "paso-cuello",
+          "goals": 2
+        }
+      ]
     },
     {
       "id": "src-m-pa03f01e1",
@@ -1036,7 +1069,28 @@
       "court": "Cancha 2",
       "homeGoals": 1,
       "awayGoals": 3,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "R. Beramendi",
+          "teamId": "la-fragancia",
+          "goals": 1
+        },
+        {
+          "player": "F. Etcheverry",
+          "teamId": "orleans",
+          "goals": 1
+        },
+        {
+          "player": "J. Serrato",
+          "teamId": "orleans",
+          "goals": 1
+        },
+        {
+          "player": "M. Inciarte",
+          "teamId": "orleans",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-m-p0d80908f",
@@ -1072,7 +1126,18 @@
       "court": "Cancha 4",
       "homeGoals": 3,
       "awayGoals": 0,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "T. Du Pre",
+          "teamId": "fishermans",
+          "goals": 2
+        },
+        {
+          "player": "M. Echevarria",
+          "teamId": "fishermans",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-m-pb80f207f",
@@ -1390,7 +1455,38 @@
       "court": "Cancha 4",
       "homeGoals": 7,
       "awayGoals": 0,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "I. Gallino",
+          "teamId": "levantate-fc",
+          "goals": 1
+        },
+        {
+          "player": "G. Casanova",
+          "teamId": "levantate-fc",
+          "goals": 2
+        },
+        {
+          "player": "M. Moreira",
+          "teamId": "levantate-fc",
+          "goals": 1
+        },
+        {
+          "player": "I. Álvarez",
+          "teamId": "levantate-fc",
+          "goals": 1
+        },
+        {
+          "player": "I. Varela",
+          "teamId": "levantate-fc",
+          "goals": 1
+        },
+        {
+          "player": "P. Echenagusía",
+          "teamId": "levantate-fc",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-f-p6cd544cd",
@@ -1426,7 +1522,23 @@
       "court": "Cancha 4",
       "homeGoals": 0,
       "awayGoals": 3,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "C. Guichon",
+          "teamId": "nerea-jrs",
+          "goals": 1
+        },
+        {
+          "player": "D. Frontini",
+          "teamId": "nerea-jrs",
+          "goals": 1
+        },
+        {
+          "player": "C. Sosa",
+          "teamId": "nerea-jrs",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-f-pe206c79e",
@@ -1462,7 +1574,23 @@
       "court": "Cancha 3",
       "homeGoals": 3,
       "awayGoals": 2,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "C. Alvarez",
+          "teamId": "al-tranque",
+          "goals": 2
+        },
+        {
+          "player": "P. Ortiz",
+          "teamId": "al-tranque",
+          "goals": 1
+        },
+        {
+          "player": "P. Alvez",
+          "teamId": "purohumo-fc",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-f-p7925f25a",
@@ -1498,7 +1626,13 @@
       "court": "Cancha 1",
       "homeGoals": 1,
       "awayGoals": 0,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "C. Frontini",
+          "teamId": "la-naranja-mecanica",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-f-pbdc339d7",
@@ -2697,16 +2831,193 @@
     ]
   },
   "sourceScorers": {
-    "masculino": [],
-    "femenino": [],
+    "masculino": [
+      {
+        "player": "J.A. Torres Negreira",
+        "teamId": "garrulos-fc",
+        "teamName": "Garrulos",
+        "goals": 3,
+        "position": 1
+      },
+      {
+        "player": "F. Garcia",
+        "teamId": "paso-cuello",
+        "teamName": "Paso Cuello",
+        "goals": 2,
+        "position": 2
+      },
+      {
+        "player": "T. Du Pre",
+        "teamId": "fishermans",
+        "teamName": "Los Fishermans",
+        "goals": 2,
+        "position": 2
+      },
+      {
+        "player": "F. Bolla",
+        "teamId": "garrulos-fc",
+        "teamName": "Garrulos",
+        "goals": 1,
+        "position": 4
+      },
+      {
+        "player": "F. Etcheverry",
+        "teamId": "orleans",
+        "teamName": "Orleans",
+        "goals": 1,
+        "position": 4
+      },
+      {
+        "player": "F. Rouco",
+        "teamId": "rapineros",
+        "teamName": "Rapiñeros",
+        "goals": 1,
+        "position": 4
+      },
+      {
+        "player": "I. Perez",
+        "teamId": "garrulos-fc",
+        "teamName": "Garrulos",
+        "goals": 1,
+        "position": 4
+      },
+      {
+        "player": "J. Serrato",
+        "teamId": "orleans",
+        "teamName": "Orleans",
+        "goals": 1,
+        "position": 4
+      },
+      {
+        "player": "M. Echevarria",
+        "teamId": "fishermans",
+        "teamName": "Los Fishermans",
+        "goals": 1,
+        "position": 4
+      },
+      {
+        "player": "M. Inciarte",
+        "teamId": "orleans",
+        "teamName": "Orleans",
+        "goals": 1,
+        "position": 4
+      },
+      {
+        "player": "M. Lijtenstein",
+        "teamId": "paso-cuello",
+        "teamName": "Paso Cuello",
+        "goals": 1,
+        "position": 4
+      },
+      {
+        "player": "R. Beramendi",
+        "teamId": "la-fragancia",
+        "teamName": "La Fragancia",
+        "goals": 1,
+        "position": 4
+      }
+    ],
+    "femenino": [
+      {
+        "player": "C. Alvarez",
+        "teamId": "al-tranque",
+        "teamName": "Al Tranque",
+        "goals": 2,
+        "position": 1
+      },
+      {
+        "player": "G. Casanova",
+        "teamId": "levantate-fc",
+        "teamName": "Levantate",
+        "goals": 2,
+        "position": 1
+      },
+      {
+        "player": "C. Frontini",
+        "teamId": "la-naranja-mecanica",
+        "teamName": "Naranja Mecánica",
+        "goals": 1,
+        "position": 3
+      },
+      {
+        "player": "C. Guichon",
+        "teamId": "nerea-jrs",
+        "teamName": "Nerea Jrs",
+        "goals": 1,
+        "position": 3
+      },
+      {
+        "player": "C. Sosa",
+        "teamId": "nerea-jrs",
+        "teamName": "Nerea Jrs",
+        "goals": 1,
+        "position": 3
+      },
+      {
+        "player": "D. Frontini",
+        "teamId": "nerea-jrs",
+        "teamName": "Nerea Jrs",
+        "goals": 1,
+        "position": 3
+      },
+      {
+        "player": "I. Gallino",
+        "teamId": "levantate-fc",
+        "teamName": "Levantate",
+        "goals": 1,
+        "position": 3
+      },
+      {
+        "player": "I. Varela",
+        "teamId": "levantate-fc",
+        "teamName": "Levantate",
+        "goals": 1,
+        "position": 3
+      },
+      {
+        "player": "I. Álvarez",
+        "teamId": "levantate-fc",
+        "teamName": "Levantate",
+        "goals": 1,
+        "position": 3
+      },
+      {
+        "player": "M. Moreira",
+        "teamId": "levantate-fc",
+        "teamName": "Levantate",
+        "goals": 1,
+        "position": 3
+      },
+      {
+        "player": "P. Alvez",
+        "teamId": "purohumo-fc",
+        "teamName": "PuroHumo",
+        "goals": 1,
+        "position": 3
+      },
+      {
+        "player": "P. Echenagusía",
+        "teamId": "levantate-fc",
+        "teamName": "Levantate",
+        "goals": 1,
+        "position": 3
+      },
+      {
+        "player": "P. Ortiz",
+        "teamId": "al-tranque",
+        "teamName": "Al Tranque",
+        "goals": 1,
+        "position": 3
+      }
+    ],
     "mas38": []
   },
   "sourceInfo": {
     "url": "https://interno2026.ceibosfutbol.workers.dev/",
     "intervalMinutes": 60,
-    "importedAt": "2026-11-17T13:01:14.935Z",
-    "checkedAt": "2026-11-17T13:01:14.935Z",
-    "sourceUpdatedAt": "2026-11-17T09:35:06",
+    "importedAt": "2026-11-17T14:01:41.293Z",
+    "checkedAt": "2026-11-17T14:01:41.293Z",
+    "sourceUpdatedAt": "2026-11-17T10:45:40",
     "categories": [
       "masculino",
       "femenino",
