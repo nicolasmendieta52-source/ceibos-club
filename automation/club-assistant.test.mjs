@@ -37,10 +37,10 @@ test('eventos concretos y cenas ambiguas se responden desde la agenda',()=>{
  assert.equal(ask('¿Cuándo es la cena?').choices.length,2);assert.match(ask('¿Cuál es el próximo evento?').text,/CMC/);
 });
 test('contenido general recupera texto publicado y no confunde ropa con el equipo La Tropa',()=>{
- const birth=ask('¿Cuándo se fundó Ceibos?');assert.ok(birth.items.some(row=>row.text.includes('25 de enero de 2014')));
- const shop=ask('¿Dónde comprar ropa de Ceibos?');assert.ok(shop.items.some(row=>row.text.includes('Bulk')));assert.equal(shop.choices.length,0);
+ const birth=ask('¿Cuándo se fundó Ceibos?');assert.match(birth.text,/25 de enero de 2014/);assert.doesNotMatch(birth.text,/Según la información/);
+ const shop=ask('¿Dónde comprar ropa de Ceibos?');assert.match(shop.text,/Bulk/);assert.equal(shop.choices.length,0);
  const noisy=retrieveClubFacts('Dónde comprar ropa de Ceibos',[...facts,{title:'¿Te ponés la camiseta?',text:'Correo de contacto: info@ceibosclub.com',href:'#contacto'},{title:'Dirección del club',text:'Camino de los Gigantes, Montevideo.',href:'#predio',keywords:'ubicacion'}]);assert.ok(noisy[0].text.includes('Bulk'));assert.ok(noisy.every(row=>row.href!=='#contacto'));
- const motto=ask('¿Qué significa Totus Tuus?');assert.ok(motto.items.some(row=>row.text.includes('todo tuyo')));
+ const motto=ask('¿Qué significa Totus Tuus?');assert.match(motto.text,/todo tuyo/);
  assert.match(ask('¿A qué hora entrena Sub18?').text,/No encontré ese dato confirmado/);
  assert.equal(retrieveClubFacts('precio de la remera',facts).length,0);assert.equal(retrieveClubFacts('puesto Sub 20',[{title:'Sub 18',text:'Puesto 2, tres puntos.',href:'#futbol'}]).length,0);
 });
@@ -51,8 +51,8 @@ test('deportes del club y fuentes ausentes conservan límites claros',()=>{
  const empty=ask('');assert.ok(empty.text);assert.ok(!JSON.stringify(ask('hola')).includes('/panel'));
 });
 test('reglas generales y de Masculino/Femenino conservan el alcance del PDF, sin reabrir inscripción',()=>{
- const players=ask('¿Cuántos jugadores en cancha permite el Interno?');assert.ok(players.items.some(row=>row.text.includes('máximo de ocho jugadores')));
- const changes=ask('¿Los cambios del Interno son ilimitados?');assert.ok(changes.items.some(row=>row.text.includes('cambios son ilimitados')));
+ const players=ask('¿Cuántos jugadores en cancha permite el Interno?');assert.match(players.text,/máximo de ocho jugadores/);
+ const changes=ask('¿Los cambios del Interno son ilimitados?');assert.match(changes.text,/cambios son ilimitados/);
  const papi=ask('¿Cuántos penales se patean en Papi?');assert.ok(!papi.items.some(row=>row.text.includes('tres penales')));
  assert.ok(!JSON.stringify(players).includes('091 393 252'));assert.ok(players.items.some(row=>row.href.includes('.pdf#page=')));
 });

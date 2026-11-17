@@ -22,6 +22,8 @@ body.club-assistant-open{overflow:hidden}
 .club-assistant-message li{border-top:1px solid rgba(246,241,228,.12);padding:11px 0}
 .club-assistant-message a{display:inline-flex;align-items:center;min-height:36px;color:var(--dorado);font-weight:650;font-size:.78rem;text-underline-offset:4px}
 .club-assistant-source{display:block;margin-top:9px;color:rgba(246,241,228,.5);font-size:.65rem;line-height:1.5}
+.club-assistant-links{display:flex;flex-wrap:wrap;gap:2px 16px;margin-top:12px;padding-top:7px;border-top:1px solid rgba(246,241,228,.12)}
+.club-assistant-links a{min-height:44px}
 .club-assistant-choices,.club-assistant-examples{display:flex;flex-wrap:wrap;gap:7px}
 .club-assistant-choices button,.club-assistant-examples button{min-height:44px;border:1px solid rgba(229,187,82,.35);background:none;color:var(--dorado);font:600 .72rem/1.4 var(--body);padding:8px 10px;cursor:pointer;text-align:left;max-width:100%}
 .club-assistant-examples{padding:0 20px 8px;flex-shrink:0}

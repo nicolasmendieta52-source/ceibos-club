@@ -1,4 +1,4 @@
-import {answerClubQuestion} from './club-assistant-model.js?v=20261117interpretacion';
+import {answerClubQuestion} from './club-assistant-model.js?v=20261117directa';
 
 function initAssistant(){
  const dialog=document.getElementById('clubAssistantDialog');if(!dialog||typeof dialog.showModal!=='function')return;
@@ -10,12 +10,18 @@ function initAssistant(){
    const root=document.getElementById(id);if(!root)continue;
    const heading=root.querySelector('h2')?.textContent.replace(/\s+/g,' ').trim()||id;
    for(const p of root.querySelectorAll('p, .club-news-award, .noticia-dato, .predio-dato')){
-    if(p.closest('.interno-live,.interno-torneo,.interno-alerts,form,dialog,[aria-hidden=true]'))continue;
+    if(p.closest('.interno-live,.interno-torneo,.interno-alerts,.interno-media-post,form,dialog,[aria-hidden=true]')||p.matches('.interno-kicker'))continue;
     const text=p.textContent.replace(/\s+/g,' ').trim();if(text.length<22||text.length>1800)continue;
     const card=p.closest('article,.prod,.soli-card,.socio-card'),title=[heading,card?.querySelector('h3,h4')?.textContent].filter(Boolean).join(' · '),anchor=card?.id||card?.querySelector('h3[id]')?.id||id;
     facts.push({title,text,href:'#'+encodeURIComponent(anchor),keywords:id==='club'?'historia club':id==='shop'?'tienda indumentaria':id});
    }
-   for(const a of root.querySelectorAll('a[href^="mailto:"],a[href^="tel:"],a[href*="instagram.com/"]'))facts.push({title:heading,text:a.getAttribute('href').startsWith('mailto:')?'Correo de contacto: '+a.getAttribute('href').slice(7).split('?')[0]:a.textContent.replace(/\s+/g,' ').trim()+' · '+a.href,href:'#'+id,keywords:'contacto correo email telefono redes instagram '+id});
+   for(const a of root.querySelectorAll('a[href^="mailto:"],a[href^="tel:"],a[href*="instagram.com/"]')){if(id==='interno'&&a.closest('.interno-recuerdos,.interno-history'))continue;facts.push({title:heading,text:a.getAttribute('href').startsWith('mailto:')?'Correo de contacto: '+a.getAttribute('href').slice(7).split('?')[0]:a.textContent.replace(/\s+/g,' ').trim()+' · '+a.href,href:'#'+id,keywords:'contacto correo email telefono redes instagram '+id});}
+  }
+  for(const edition of document.querySelectorAll('.interno-recuerdos[id]')){
+   const year=Number(edition.querySelector('.interno-recuerdos-titulo')?.textContent.match(/\b(?:19|20)\d{2}\b/)?.[0]);if(!year)continue;
+   for(const group of edition.querySelectorAll('.interno-copas>div')){const category=group.querySelector('h4')?.textContent.trim();if(!category)continue;const categoryId=/femenino/i.test(category)?'femenino':/masculino/i.test(category)?'masculino':'papi';
+    for(const row of group.querySelectorAll('dl>div')){const cup=row.querySelector('dt')?.textContent.trim(),team=row.querySelector('dd')?.textContent.trim();if(!cup||!team)continue;facts.push({title:'Campeones del Interno '+year,text:team+' ganó la Copa de '+cup+' del Interno '+year+' ('+category+').',href:'#'+edition.id,champion:{year,category,categoryId,cup,team}});}
+   }
   }
   for(const script of document.querySelectorAll('script[type="application/ld+json"]')){try{const data=JSON.parse(script.textContent),address=data.address;if(address?.streetAddress)facts.push({title:'Dirección de Ceibos',text:[address.streetAddress,address.addressLocality,address.addressCountry].filter(Boolean).join(', ')+'.',href:'#predio',keywords:'ubicacion direccion donde queda llegar'});}catch{}}
   return facts;
@@ -26,9 +32,10 @@ function initAssistant(){
  function appendUser(text){const message=document.createElement('div'),label=document.createElement('strong'),p=document.createElement('p');message.className='club-assistant-message is-user';label.textContent='Vos';p.textContent=text;message.append(label,p);log.append(message);scroll();}
  function appendAnswer(answer){
   const message=document.createElement('div'),label=document.createElement('strong'),p=document.createElement('p');message.className='club-assistant-message is-ceibos';label.textContent='Ceibos';p.textContent=answer.text;message.append(label,p);
-  if(answer.items?.length){const list=document.createElement('ul');for(const row of answer.items){const li=document.createElement('li');if(row.text){const paragraph=document.createElement('p');paragraph.textContent=row.text;li.append(paragraph);}if(/^(?:#|\/(?!\/)|\?)/.test(row.href||'')){const a=document.createElement('a');a.href=row.href;a.textContent=row.label+' →';a.addEventListener('click',event=>{if(!event.metaKey&&!event.ctrlKey&&!event.shiftKey)dialog.close();});li.append(a);}list.append(li);}message.append(list);}
+  const links=new Map(),details=new Set();if(answer.items?.length){const list=document.createElement('ul');for(const row of answer.items){if(row.text&&row.text!==answer.text&&!details.has(row.text)){details.add(row.text);const li=document.createElement('li'),paragraph=document.createElement('p');paragraph.textContent=row.text;li.append(paragraph);list.append(li);}if(/^(?:#|\/(?!\/)|\?)/.test(row.href||'')&&!links.has(row.href))links.set(row.href,row.label);}if(list.children.length)message.append(list);}
   if(answer.source){const source=document.createElement('small');source.className='club-assistant-source';source.textContent=answer.source;message.append(source);}
   if(answer.choices?.length){const choices=document.createElement('div');choices.className='club-assistant-choices';for(const choice of answer.choices){const button=document.createElement('button');button.type='button';button.textContent=choice.label;button.addEventListener('click',()=>ask(choice.question,choice.resolution));choices.append(button);}message.append(choices);}
+  if(links.size){const footer=document.createElement('div');footer.className='club-assistant-links';for(const [href,title]of links){const a=document.createElement('a');a.href=href;a.textContent=title+' →';a.addEventListener('click',event=>{if(!event.metaKey&&!event.ctrlKey&&!event.shiftKey)dialog.close();});footer.append(a);}message.append(footer);}
   log.append(message);scroll();return message;
  }
  function ready(kind){return kind==='interno'?Boolean(state.interno):kind==='club'?state.clubResultsReady===true:Boolean(state.gym&&state.gym.status!=='loading');}

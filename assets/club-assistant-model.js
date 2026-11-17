@@ -1,7 +1,7 @@
 import {searchText,buildSearchIndex,searchIndex} from './search-model.js?v=20261117';
 import {liveKickoff,matchClock,clockSettings,liveBoard} from './interno-live-clock.js?v=20261116acciones';
 import {internoStandings,internoScorers} from './interno-model.js?v=20261113papi';
-import {retrieveClubFacts} from './club-assistant-facts.js?v=20261117';
+import {retrieveClubFacts,answerChampionQuestion} from './club-assistant-facts.js?v=20261117directa';
 import {REGULATION_FACTS} from './club-assistant-regulation.js?v=20261117';
 import {answerClubMatchQuery} from './club-assistant-matches.js?v=20261117interpretacion';
 
@@ -18,6 +18,10 @@ const stamp=value=>value&&Number.isFinite(Date.parse(value))?new Intl.DateTimeFo
 const internalUrl=(category,tab='fixture',team='',match='')=>'?internoCategoria='+encodeURIComponent(category)+'&internoTab='+tab+(team?'&internoEquipo='+encodeURIComponent(team):'')+(match?'&internoPartido='+encodeURIComponent(match):'')+'#interno';
 const reply=(text,extra={})=>({text,items:[],choices:[],context:{},...extra});
 const item=(label,href,text='')=>({label,href,text});
+function factReply(question,facts){
+ const selected=/\b(todos|todas|cuales|informacion|reglas|formato)\b/.test(searchText(question))?facts:facts.slice(0,1);
+ return reply(selected[0].text,{items:selected.map((fact,i)=>item('Ver '+(fact.title||'información'),fact.href,i?fact.text:'')),intent:'information'});
+}
 const member=(m,id)=>m.homeId===id||m.awayId===id;
 const dateSuffix=date=>date?' el '+date.slice(8)+'/'+date.slice(5,7)+'/'+date.slice(0,4):'';
 
@@ -75,7 +79,7 @@ export function answerClubQuestion(question,state={},context={},now=Date.now()){
  const raw=String(question||'').trim().slice(0,300),q=searchText(raw),today=clubToday(now),dateQuestion=questionDate(raw,now),allFacts=[...(state.facts||[]),...REGULATION_FACTS,...internoFacts(state.interno)];
  if(!q)return reply('Escribí qué querés saber del club. Por ejemplo: “¿Contra quién juega Rapiñeros el miércoles?” o “¿Cuánto recaudó el Gym?”.');
  if(/\b(gym|gimnasio|ladrillos?|recaud\w*|meta)\b/.test(q)||/\b(cuanta plata|cuanto dinero)\b/.test(q)){
-  if(!/\b(recaud\w*|plata|dinero|meta|avance|porcentaje|ladrillos?|colaborar|colaboro|aportar|aporto|precio|cuesta|vale|sale|costo|cuota)\b|cuanto (va|lleva)|como va/.test(q)&&q.split(' ').length>2){const facts=retrieveClubFacts(raw,allFacts);if(facts.length)return reply('Según la información publicada sobre el gimnasio:',{items:facts.map(f=>item('Ver '+f.title,f.href,f.text)),intent:'information'});return reply('No encontré ese dato confirmado sobre el gimnasio. Podés ver la información del proyecto o consultar al club.',{items:[item('Proyecto del Gym','#proyecto-gimnasio'),item('Contactar al club','#contacto')]});}
+  if(!/\b(recaud\w*|plata|dinero|meta|avance|porcentaje|ladrillos?|colaborar|colaboro|aportar|aporto|precio|cuesta|vale|sale|costo|cuota)\b|cuanto (va|lleva)|como va/.test(q)&&q.split(' ').length>2){const facts=retrieveClubFacts(raw,allFacts);if(facts.length)return factReply(raw,facts);return reply('No encontré ese dato confirmado sobre el gimnasio. Podés ver la información del proyecto o consultar al club.',{items:[item('Proyecto del Gym','#proyecto-gimnasio'),item('Contactar al club','#contacto')]});}
   return gymAnswer(q,state.gym);
  }
  if(dateQuestion.invalid)return reply('Esa fecha no es válida. Probá con un día como “mañana”, “el miércoles” o una fecha en formato día/mes.');
@@ -89,13 +93,14 @@ export function answerClubQuestion(question,state={},context={},now=Date.now()){
   if(!exact.length&&events.length>1&&!/\b(proximo|eventos?)\b/.test(q))return reply('¿A cuál de estos eventos te referís?',{choices:events.slice(0,5).map(e=>({label:e.titulo+' · '+dateLabel(e.fecha),question:'¿Cuándo es '+e.titulo+dateSuffix(e.fecha)+'?'}))});
   const event=events[0];return reply(event.titulo+' es el '+dateLabel(event.fecha)+'. '+(event.desc||''),{items:[item('Ver evento','#evento-'+event.fecha+'-'+searchText(event.titulo).replace(/ /g,'-'))],intent:'event'});
  }
- if(/\b(reglamento|reglas|formato)\b/.test(q)&&(/\binterno\b/.test(q)||!/(rugby|hockey|basket|futbol)/.test(q))){const facts=q.split(' ').length>3?retrieveClubFacts(raw,allFacts):[];return facts.length?reply('Esto indica la información publicada:',{items:facts.map(f=>item('Ver '+f.title,f.href,f.text))}):reply('El Interno es fútbol 8. Masculino y Papi juegan 25 + 5 + 25 minutos; Femenino, 20 + 5 + 20. Podés consultar el reglamento y el formato confirmado de cada categoría.',{items:[item('Abrir reglamento PDF','/assets/reglamento-interno-f8-ceibos-2026.pdf'),item('Ver formato y cruces',internalUrl('masculino','cruces'))]});}
+ const champion=answerChampionQuestion(raw,allFacts,now);if(champion)return champion;
+ if(/\b(reglamento|reglas|formato)\b/.test(q)&&(/\binterno\b/.test(q)||!/(rugby|hockey|basket|futbol)/.test(q))){const facts=q.split(' ').length>3?retrieveClubFacts(raw,allFacts):[];return facts.length?factReply(raw,facts):reply('El Interno es fútbol 8. Masculino y Papi juegan 25 + 5 + 25 minutos; Femenino, 20 + 5 + 20. Podés consultar el reglamento y el formato confirmado de cada categoría.',{items:[item('Abrir reglamento PDF','/assets/reglamento-interno-f8-ceibos-2026.pdf'),item('Ver formato y cruces',internalUrl('masculino','cruces'))]});}
  if(/\b(jugadores|plantel|planteles|cambios|offside|penales|amarilla|amarillas|roja|rojas|sancion|sanciones|tolerancia|desempate|desempates|pelota|pelotas|walkover)\b/.test(q)&&(/\b(interno|papi|masculino|femenino)\b/.test(q)||context.teamId)){
   const team=state.interno?.teams.find(t=>t.id===context.teamId),category=state.interno?.categories.find(c=>c.id===team?.categoryId),facts=retrieveClubFacts(raw+(!/\binterno\b/.test(q)&&category?' Interno '+category.name:''),allFacts);
-  return facts.length?reply('Esto indica la información publicada para esa consulta:',{items:facts.map(f=>item('Ver '+f.title,f.href,f.text)),intent:'information'}):reply('No encontré esa regla específica publicada para la categoría consultada. Podés revisar el PDF y el formato del torneo.',{items:[item('Ver reglamento del Interno','/assets/reglamento-interno-f8-ceibos-2026.pdf')],intent:'information'});
+  return facts.length?factReply(raw,facts):reply('No encontré esa regla específica publicada para la categoría consultada. Podés revisar el PDF y el formato del torneo.',{items:[item('Ver reglamento del Interno','/assets/reglamento-interno-f8-ceibos-2026.pdf')],intent:'information'});
  }
  if(/\b(tienda|shop|comprar|ropa|indumentaria|fundo|fundacion|nacio|historia|lema|significa|predio|direccion|ubicacion|contacto|correo|email|entrena|entrenan|entrenamientos|entrenador|entrenadores|talle|talles|precio|cuota)\b/.test(q)){
-  const facts=retrieveClubFacts(raw,allFacts);if(facts.length)return reply('Según la información publicada en Ceibos:',{items:facts.map(fact=>item('Ver '+(fact.title||'información'),fact.href,fact.text)),intent:'information'});
+  const facts=retrieveClubFacts(raw,allFacts);if(facts.length)return factReply(raw,facts);
   if(/\b(entrena|entrenan|entrenamientos|entrenador|entrenadores|talle|talles|precio|cuota)\b/.test(q))return reply('No encontré ese dato confirmado entre la información publicada en la web. Podés consultar al club para obtenerlo.',{items:[item('Contactar al club','#contacto')]});
  }
  const durationQuestion=/\b(dura|duran|duracion)\b/.test(q)||/\b(cuantos minutos|cuanto tiempo)\b/.test(q)&&!/\b(falta|faltan|quedan)\b/.test(q);
@@ -137,7 +142,7 @@ export function answerClubQuestion(question,state={},context={},now=Date.now()){
   return reply('Estos son los partidos publicados de '+label+(date?' para el '+dateLabel(date):'')+(matches.length>8?' (muestro 8 de '+matches.length+')':'')+':',{items:matches.slice(0,8).map(m=>item('Ver partido',internalUrl(m.categoryId,m.status==='finished'?'resultados':'fixture','',m.id),describeInterno(data,m,team))),context:team?{teamId:team.id,date}: {},source});
  }
  const facts=retrieveClubFacts(raw,allFacts);
- if(facts.length)return reply('Según la información publicada en Ceibos:',{items:facts.map(fact=>item('Ver '+(fact.title||'información'),fact.href,fact.text)),intent:'information'});
+ if(facts.length)return factReply(raw,facts);
  if(fixtureIntent&&!data)return reply('Todavía se están cargando los datos del Interno. También podés indicar el deporte y la categoría que querés consultar.',{items:[item('Ver fixture','#fixture'),item('Ver Interno','#interno')],waiting:'interno'});
  const foundPages=searchIndex(buildSearchIndex({sports:state.sports,events:state.events,interno:data,content:state.content}),raw,4).results;
  return foundPages.length?reply('Encontré estas opciones relacionadas con tu consulta:',{items:foundPages.map(row=>item(row.title,row.href,row.description))}):reply('No encontré ese dato entre la información publicada. Puedo ayudarte con los partidos, resultados, equipos, Gym, eventos y el resto del contenido público de Ceibos.',{choices:[{label:'Partidos de Rapiñeros',question:'¿Contra quién juega Rapiñeros próximamente?'},{label:'Recaudación del Gym',question:'¿Cuánto recaudó el Gym?'},{label:'Próximo evento',question:'¿Cuál es el próximo evento?'}]});
