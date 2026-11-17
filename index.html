@@ -280,6 +280,7 @@ nav.topbar.solid{
 <link rel="stylesheet" href="assets/interno-live.css?v=20261116lista">
 <link rel="stylesheet" href="assets/interno-notifications.css?v=20261116seleccion">
 <link rel="stylesheet" href="assets/navigation.css?v=20261028floating">
+<link rel="stylesheet" href="assets/site-search.css?v=20261117">
 <link rel="stylesheet" href="assets/news.css?v=20261111ascenso">
 </head>
 <body>
@@ -356,10 +357,12 @@ nav.topbar.solid{
       <a href="#shop" data-nav-section="shop">Tienda</a>
     </nav>
     <a class="nav-socios" href="https://socios.ceibosclub.com" target="_blank" rel="noopener noreferrer">Socios <span aria-hidden="true">↗</span></a>
+    <button class="nav-search" type="button" data-site-search-open aria-label="Buscar en Ceibos Club" aria-haspopup="dialog" aria-controls="siteSearchDialog"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>Buscar</span></button>
     <button id="hamb" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMobile"><span class="nav-menu-label">Menú</span><svg class="nav-icon-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg><svg class="nav-icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M5 19 19 5"/></svg></button>
   </div>
 </header>
 <nav class="nav-mobile" id="navMobile" aria-label="Menú completo" aria-hidden="true" hidden inert>
+  <button class="nav-mobile-search" type="button" data-site-search-open aria-haspopup="dialog" aria-controls="siteSearchDialog"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>Buscar en Ceibos</button>
   <div class="nav-mobile-group"><h2>En la cancha</h2><div class="nav-mobile-grid"><a href="#rugby" data-nav-section="rugby" data-deporte-link="rugby">Rugby</a>
 <a href="#hockey" data-nav-section="hockey" data-deporte-link="hockey">Hockey</a>
 <a href="#futbol" data-nav-section="futbol" data-deporte-link="futbol">Fútbol</a>
@@ -384,6 +387,13 @@ nav.topbar.solid{
   <a href="#interno" class="dock-interno"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V3c5-3 9 3 14 0v11c-5 3-9-3-14 0"/></svg><span>Interno</span></a>
   <button id="mobileMore" type="button" aria-controls="navMobile" aria-expanded="false" aria-label="Abrir menú completo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>Más</span></button>
 </nav>
+
+<dialog class="site-search-dialog" id="siteSearchDialog" aria-labelledby="siteSearchTitle" aria-describedby="siteSearchHelp">
+  <div class="site-search-head"><h2 id="siteSearchTitle">Encontrá en Ceibos</h2><button class="site-search-close" type="button" data-search-close aria-label="Cerrar buscador">×</button></div>
+  <form class="site-search-form" role="search" aria-label="Buscar en la web de Ceibos"><div class="site-search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="siteSearchInput" type="text" inputmode="search" role="combobox" aria-label="Qué querés encontrar" placeholder="Equipo, categoría, noticia…" maxlength="100" autocomplete="off" autocapitalize="none" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-controls="siteSearchResults" aria-describedby="siteSearchHelp" autofocus><button class="site-search-clear" type="button" data-search-clear aria-label="Borrar búsqueda" hidden>×</button></div><p class="site-search-help" id="siteSearchHelp">Probá con “Rapiñeros”, “Sub 18” o “Cena Ceibos”.</p></form>
+  <div class="site-search-scroll"><div class="site-search-suggestions" aria-label="Ideas para buscar"><button type="button" data-search-query="Interno">Interno</button><button type="button" data-search-query="Próximos partidos">Próximos partidos</button><button type="button" data-search-query="Gimnasio">Gimnasio</button><button type="button" data-search-query="Cena Ceibos">Cena Ceibos</button></div><p class="site-search-status" data-search-status role="status" aria-live="polite">Accesos frecuentes</p><ul class="site-search-results" id="siteSearchResults" data-search-results role="listbox" aria-label="Sugerencias de búsqueda"></ul><p class="site-search-empty" data-search-empty hidden></p></div>
+  <div class="site-search-footer">↑ ↓ Elegir · Enter Abrir · Esc Cerrar · Ctrl/⌘ K Buscar</div>
+</dialog>
 
 <!-- ======================= HERO ======================= -->
 <header class="hero" id="inicio">
@@ -3007,8 +3017,21 @@ function realinearDestinoHash(){
 }
 function renderDinamico(){
   renderTicker(); renderHomeDeportiva(); renderDatoCeibos(); renderDeportes(); renderScore(); renderFixture(); renderPredioVivo(); renderEventos(); renderArchivoHistorico(); revObserve();
+  aplicarCategoriaBusqueda();
   realinearDestinoHash();
+  publicarDatosBusqueda();
 }
+
+function publicarDatosBusqueda(){
+  const hoy=new Date();hoy.setHours(0,0,0,0);
+  window.dispatchEvent(new CustomEvent('ceibos:search-content',{detail:{sports:DEPORTES.map(d=>({slug:d.slug,name:d.nombre,categories:d.categorias})),events:EVENTOS.filter(e=>fechaValida(e.fecha)&&new Date(e.fecha+'T00:00:00')>=hoy)}}));
+}
+let categoriaBusquedaAplicada='';
+function aplicarCategoriaBusqueda(){
+  const params=new URLSearchParams(location.search),deporte=params.get('deporte'),categoria=params.get('categoria');
+  const key=deporte+'|'+categoria,item=DEPORTES.find(d=>d.slug===deporte);if(key!==categoriaBusquedaAplicada&&item&&location.hash==='#'+deporte&&item.categorias.includes(categoria)){categoriaBusquedaAplicada=key;activarCategoria(deporte,categoria);}
+}
+window.addEventListener('ceibos:search-request',publicarDatosBusqueda);
 
 /* timeline de eventos */
 function renderEventos(){
@@ -3017,7 +3040,7 @@ function renderEventos(){
   const proximos = EVENTOS.filter(e => fechaValida(e.fecha) && new Date(e.fecha+"T00:00:00") >= hoy);
   t.innerHTML = proximos.length ? proximos.map(e=>{
     const f = fmtFecha(e.fecha);
-    return `<div class="ev">
+    return `<div class="ev" id="evento-${e.fecha}-${slugArchivo(e.titulo)}">
       <div class="ev-fecha">${f.semana} ${f.dia} ${f.mes} ${f.anio}</div>
       <h3>${e.titulo}</h3>
       <p>${e.desc}</p>
@@ -3221,8 +3244,9 @@ fetch(`data/club-data.json?actualizado=${Date.now()}`, { cache: "no-store" })
   .catch(() => {});
 </script>
 <script type="module" src="/notifications.js?v=20261116estrellas"></script>
-<script type="module" src="assets/interno.js?v=20261116equipos"></script>
+<script type="module" src="assets/interno.js?v=20261117search"></script>
+<script type="module" src="assets/site-search.js?v=20261117"></script>
 <script type="module" src="assets/news-share.js?v=20261111"></script>
-<script src="assets/navigation.js?v=20261028viewport" defer></script>
+<script src="assets/navigation.js?v=20261117search" defer></script>
 </body>
 </html>

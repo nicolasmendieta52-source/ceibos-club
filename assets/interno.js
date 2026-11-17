@@ -116,6 +116,7 @@ function initInterno(){
   let requestedMatch=notificationParams.get('internoPartido'),currentTeamId=notificationParams.get('internoEquipo')||'';
   if(['masculino','femenino','mas38'].includes(requestedCategory))select.value=requestedCategory;
   let currentTab=tabs.some(tab=>tab.dataset.internoTab===requestedTab)?requestedTab:currentTeamId?'equipos':'grupos',data=null,lastJson='',loading=false,notificationTargetPending=true;
+  window.addEventListener('ceibos:interno-search-request',()=>{if(data)window.dispatchEvent(new CustomEvent('ceibos:interno-search-data',{detail:data}));});
   function rememberView(){
     const url=new URL(location.href);url.searchParams.set('internoCategoria',select.value);url.searchParams.set('internoTab',currentTab);
     if(currentTab==='equipos'&&currentTeamId)url.searchParams.set('internoEquipo',currentTeamId);else url.searchParams.delete('internoEquipo');
@@ -174,6 +175,7 @@ function initInterno(){
         select.replaceChildren(...data.categories.map(category=>{const option=document.createElement('option');option.value=category.id;option.textContent=category.name;return option;}));
         if(data.categories.some(c=>c.id===previous))select.value=previous;
         render();live.setData(data);
+        window.dispatchEvent(new CustomEvent('ceibos:interno-search-data',{detail:data}));
       }
       status.textContent='';
       const sourceInfo=document.getElementById('interno-source-info');if(sourceInfo){sourceInfo.hidden=!data.sourceInfo;if(data.sourceInfo){const date=new Intl.DateTimeFormat('es-UY',{dateStyle:'short',timeStyle:'short',timeZone:'America/Montevideo'}).format(new Date(data.sourceInfo.checkedAt||data.sourceInfo.importedAt));sourceInfo.innerHTML=sourceLink(data.sourceInfo.url,'Fuente del Interno')+' · Lectura cada una hora · Última lectura verificada: '+escape(date)+(data.sourceInfo.pendingPlayoffs?' · '+escape(data.sourceInfo.pendingPlayoffs)+' cruces esperan rivales confirmados.':'');}}

@@ -52,7 +52,7 @@
     more.setAttribute('aria-label', open ? 'Cerrar menú completo' : 'Abrir menú completo');
     more.querySelector('span').textContent = open ? 'Cerrar' : 'Más';
     document.body.classList.toggle('nav-menu-open', open);
-    if (open) menu.querySelector('a')?.focus();
+    if (open) menu.querySelector('a,button')?.focus();
     else if (returnFocus) opener.focus();
   }
 
@@ -79,6 +79,7 @@
     if (!desktopGroups.some(group => group.contains(event.target))) closeDesktopGroups();
   });
   addEventListener('hashchange', () => { setMenu(false); closeDesktopGroups(); });
+  addEventListener('ceibos:search-open', () => { setMenu(false); closeDesktopGroups(); });
   mobile.addEventListener('change', () => { setMenu(false); closeDesktopGroups(); });
 
   addEventListener('keydown', event => {
@@ -93,7 +94,7 @@
       event.preventDefault();
       setMenu(false, true);
     } else if (event.key === 'Tab') {
-      const controls = [header.querySelector('.brand'), toggle, ...menu.querySelectorAll('a'), ...dock.querySelectorAll('a,button')];
+      const controls = [header.querySelector('.brand'), header.querySelector('[data-site-search-open]'), toggle, ...menu.querySelectorAll('a,button'), ...dock.querySelectorAll('a,button')];
       const first = controls[0], last = controls.at(-1);
       if (event.shiftKey && document.activeElement === first) {
         event.preventDefault();last.focus();
