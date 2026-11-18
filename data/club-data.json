@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-18T07:40:47.009Z",
+        "updatedAt": "2026-11-18T20:42:03.782Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-18T07:40:47.226Z",
+        "updatedAt": "2026-11-18T20:42:04.046Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-18T07:40:47.341Z",
+        "updatedAt": "2026-11-18T20:42:04.188Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-18T07:40:47.471Z",
+        "updatedAt": "2026-11-18T20:42:04.326Z",
         "tables": [
           {
             "id": 2296,
@@ -1786,6 +1786,18 @@
               },
               {
                 "position": 3,
+                "teamId": 375,
+                "name": "Frances PSG",
+                "pj": 12,
+                "pg": 7,
+                "pe": 3,
+                "pp": 2,
+                "gf": 24,
+                "gc": 14,
+                "points": 24
+              },
+              {
+                "position": 4,
                 "teamId": 81,
                 "name": "La Mennais Blanco",
                 "pj": 12,
@@ -1797,27 +1809,15 @@
                 "points": 23
               },
               {
-                "position": 4,
+                "position": 5,
                 "teamId": 736,
                 "name": "Col San Miguel",
-                "pj": 11,
+                "pj": 12,
                 "pg": 7,
                 "pe": 0,
-                "pp": 4,
-                "gf": 29,
-                "gc": 20,
-                "points": 21
-              },
-              {
-                "position": 5,
-                "teamId": 375,
-                "name": "Frances PSG",
-                "pj": 11,
-                "pg": 6,
-                "pe": 3,
-                "pp": 2,
-                "gf": 22,
-                "gc": 13,
+                "pp": 5,
+                "gf": 30,
+                "gc": 22,
                 "points": 21
               },
               {
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-18T07:40:47.598Z",
+        "updatedAt": "2026-11-18T20:42:04.456Z",
         "tables": [
           {
             "id": 2239,
@@ -2566,16 +2566,6 @@
     },
     {
       "deporte": "futbol",
-      "categoria": "Reserva Verde",
-      "rival": "SAN PABLO UNIVERSITARIO",
-      "fecha": "2026-11-07",
-      "hora": "09:00",
-      "local": true,
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F2B2RSCTA.html",
-      "cancha": "MONTE VI \"LOS CEIBOS\""
-    },
-    {
-      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "NACIONAL UNIVERSITARIO",
       "fecha": "2026-11-14",
@@ -2603,10 +2593,10 @@
       "categoria": "Basketball",
       "rival": "ELBIO FERNANDEZ",
       "fecha": "2026-11-21",
-      "hora": "A confirmar",
+      "hora": "18:30",
       "local": true,
       "fuente": "https://ligauniversitaria.org.uy/partidos/B221B5P.html",
-      "cancha": "CANCHA A FIJAR"
+      "cancha": "G. CAPITOL"
     },
     {
       "deporte": "futbol",
@@ -7004,6 +6994,14 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Reserva Verde",
+      "rival": "SAN PABLO UNIVERSITARIO",
+      "gf": 2,
+      "gc": 0,
+      "fecha": "2026-11-07"
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Papi Fútbol +45",
       "rival": "St. Andrews",
       "gf": 3,
@@ -7141,7 +7139,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-11-18T07:44:13.294Z",
+  "actualizadoEn": "2026-11-18T20:45:33.322Z",
   "diagnostico": {
     "fuentes": [
       {
