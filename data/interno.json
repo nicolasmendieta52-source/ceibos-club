@@ -1210,6 +1210,21 @@
       ]
     },
     {
+      "id": "src-m-pb1a20972",
+      "categoryId": "masculino",
+      "homeId": "la-jirafa",
+      "awayId": "la-raiz",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pb1a20972",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-f",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-18",
+      "time": "20:00",
+      "court": "Cancha 6"
+    },
+    {
       "id": "src-m-pb80f207f",
       "categoryId": "masculino",
       "homeId": "rapineros",
@@ -1223,21 +1238,6 @@
       "date": "2026-11-18",
       "time": "20:00",
       "court": "Cancha 5"
-    },
-    {
-      "id": "src-m-pd838080e",
-      "categoryId": "masculino",
-      "homeId": "la-canuya",
-      "awayId": "atletico-sin-gps",
-      "stage": "groups",
-      "status": "scheduled",
-      "sourceId": "Pd838080e",
-      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
-      "groupId": "mas-d",
-      "round": "Fase de grupos · Fecha 2",
-      "date": "2026-11-18",
-      "time": "20:00",
-      "court": "Cancha 6"
     },
     {
       "id": "src-m-p41510b24",
@@ -1330,21 +1330,6 @@
       "court": "Cancha 2"
     },
     {
-      "id": "src-m-pb1a20972",
-      "categoryId": "masculino",
-      "homeId": "la-jirafa",
-      "awayId": "la-raiz",
-      "stage": "groups",
-      "status": "scheduled",
-      "sourceId": "Pb1a20972",
-      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
-      "groupId": "mas-f",
-      "round": "Fase de grupos · Fecha 2",
-      "date": "2026-11-18",
-      "time": "22:00",
-      "court": "Cancha 6"
-    },
-    {
       "id": "src-m-pd4ca0715",
       "categoryId": "masculino",
       "homeId": "la-favela",
@@ -1358,6 +1343,21 @@
       "date": "2026-11-18",
       "time": "22:00",
       "court": "Cancha 3"
+    },
+    {
+      "id": "src-m-pd838080e",
+      "categoryId": "masculino",
+      "homeId": "la-canuya",
+      "awayId": "atletico-sin-gps",
+      "stage": "groups",
+      "status": "scheduled",
+      "sourceId": "Pd838080e",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "groupId": "mas-d",
+      "round": "Fase de grupos · Fecha 2",
+      "date": "2026-11-18",
+      "time": "22:00",
+      "court": "Cancha 6"
     },
     {
       "id": "src-m-p2b4518db",
@@ -3312,9 +3312,9 @@
   "sourceInfo": {
     "url": "https://interno2026.ceibosfutbol.workers.dev/",
     "intervalMinutes": 60,
-    "importedAt": "2026-11-17T17:00:56.686Z",
-    "checkedAt": "2026-11-18T12:05:44.628Z",
-    "sourceUpdatedAt": "2026-11-18T08:06:32",
+    "importedAt": "2026-11-18T13:14:29.260Z",
+    "checkedAt": "2026-11-18T13:14:29.260Z",
+    "sourceUpdatedAt": "2026-11-18T10:11:37",
     "categories": [
       "masculino",
       "femenino",
