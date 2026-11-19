@@ -1411,7 +1411,23 @@
       "court": "Cancha 2",
       "homeGoals": 2,
       "awayGoals": 2,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "I. Maeso",
+          "teamId": "tuqui-fc",
+          "goals": 1
+        },
+        {
+          "player": "M. Díaz",
+          "teamId": "tuqui-fc",
+          "goals": 1
+        },
+        {
+          "player": "M. Inciarte",
+          "teamId": "orleans",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-m-pd4ca0715",
@@ -1429,7 +1445,18 @@
       "court": "Cancha 3",
       "homeGoals": 4,
       "awayGoals": 0,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "F. Echegoyen",
+          "teamId": "la-favela",
+          "goals": 3
+        },
+        {
+          "player": "S. Carrasco",
+          "teamId": "la-favela",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-m-pd838080e",
@@ -1447,7 +1474,38 @@
       "court": "Cancha 6",
       "homeGoals": 8,
       "awayGoals": 1,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "S. Iglesias",
+          "teamId": "atletico-sin-gps",
+          "goals": 1
+        },
+        {
+          "player": "A. Risso",
+          "teamId": "la-canuya",
+          "goals": 3
+        },
+        {
+          "player": "A. Otegui",
+          "teamId": "la-canuya",
+          "goals": 2
+        },
+        {
+          "player": "S. Rouco",
+          "teamId": "la-canuya",
+          "goals": 1
+        },
+        {
+          "player": "P. Johnson",
+          "teamId": "la-canuya",
+          "goals": 1
+        },
+        {
+          "player": "I. O'Brien",
+          "teamId": "la-canuya",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-m-p2b4518db",
@@ -2018,7 +2076,23 @@
       "court": "Cancha 4",
       "homeGoals": 3,
       "awayGoals": 0,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "T. Marsico",
+          "teamId": "la-romineta",
+          "goals": 1
+        },
+        {
+          "player": "D. Carrera",
+          "teamId": "la-romineta",
+          "goals": 1
+        },
+        {
+          "player": "M. Albanell",
+          "teamId": "la-romineta",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-f-pde18b1df",
@@ -3158,6 +3232,20 @@
   "sourceScorers": {
     "masculino": [
       {
+        "player": "A. Risso",
+        "teamId": "la-canuya",
+        "teamName": "La Canuya",
+        "goals": 4,
+        "position": 1
+      },
+      {
+        "player": "F. Echegoyen",
+        "teamId": "la-favela",
+        "teamName": "La Favela",
+        "goals": 4,
+        "position": 1
+      },
+      {
         "player": "S. Herrera",
         "teamId": "la-raiz",
         "teamName": "La Raíz",
@@ -3169,224 +3257,266 @@
         "teamId": "la-fecha",
         "teamName": "La Fecha",
         "goals": 3,
-        "position": 2
+        "position": 4
       },
       {
         "player": "J.A. Torres Negreira",
         "teamId": "garrulos-fc",
         "teamName": "Garrulos",
         "goals": 3,
-        "position": 2
+        "position": 4
+      },
+      {
+        "player": "A. Otegui",
+        "teamId": "la-canuya",
+        "teamName": "La Canuya",
+        "goals": 2,
+        "position": 6
       },
       {
         "player": "D. Aguilera",
         "teamId": "la-tropa",
         "teamName": "La Tropa",
         "goals": 2,
-        "position": 4
+        "position": 6
       },
       {
         "player": "F. Dolivo",
         "teamId": "alaska",
         "teamName": "Alaska",
         "goals": 2,
-        "position": 4
+        "position": 6
       },
       {
         "player": "F. Garcia",
         "teamId": "paso-cuello",
         "teamName": "Paso Cuello",
         "goals": 2,
-        "position": 4
+        "position": 6
       },
       {
         "player": "G. Rodrigo",
         "teamId": "deportivo-panal",
         "teamName": "Deportivo Panal",
         "goals": 2,
-        "position": 4
+        "position": 6
       },
       {
         "player": "I. Perez",
         "teamId": "garrulos-fc",
         "teamName": "Garrulos",
         "goals": 2,
-        "position": 4
+        "position": 6
       },
       {
         "player": "J. Zorrilla",
         "teamId": "la-raiz",
         "teamName": "La Raíz",
         "goals": 2,
-        "position": 4
+        "position": 6
+      },
+      {
+        "player": "M. Inciarte",
+        "teamId": "orleans",
+        "teamName": "Orleans",
+        "goals": 2,
+        "position": 6
       },
       {
         "player": "T. Du Pre",
         "teamId": "fishermans",
         "teamName": "Los Fishermans",
         "goals": 2,
-        "position": 4
+        "position": 6
       },
       {
         "player": "A. Ferber",
         "teamId": "deportivo-panal",
         "teamName": "Deportivo Panal",
         "goals": 1,
-        "position": 11
-      },
-      {
-        "player": "A. Risso",
-        "teamId": "la-canuya",
-        "teamName": "La Canuya",
-        "goals": 1,
-        "position": 11
+        "position": 15
       },
       {
         "player": "A. Rodríguez",
         "teamId": "real-alta-gama",
         "teamName": "Alta Gama",
         "goals": 1,
-        "position": 11
+        "position": 15
       },
       {
         "player": "A. Vilarrubi",
         "teamId": "garrulos-fc",
         "teamName": "Garrulos",
         "goals": 1,
-        "position": 11
+        "position": 15
       },
       {
         "player": "B. Rodriguez",
         "teamId": "deportivo-panal",
         "teamName": "Deportivo Panal",
         "goals": 1,
-        "position": 11
+        "position": 15
       },
       {
         "player": "F. Bolla",
         "teamId": "garrulos-fc",
         "teamName": "Garrulos",
         "goals": 1,
-        "position": 11
-      },
-      {
-        "player": "F. Echegoyen",
-        "teamId": "la-favela",
-        "teamName": "La Favela",
-        "goals": 1,
-        "position": 11
+        "position": 15
       },
       {
         "player": "F. Etcheverry",
         "teamId": "orleans",
         "teamName": "Orleans",
         "goals": 1,
-        "position": 11
+        "position": 15
       },
       {
         "player": "F. Inthamoussu",
         "teamId": "kiwis",
         "teamName": "Kiwis",
         "goals": 1,
-        "position": 11
+        "position": 15
       },
       {
         "player": "F. Mengot",
         "teamId": "la-vuelta",
         "teamName": "La Vuelta",
         "goals": 1,
-        "position": 11
+        "position": 15
       },
       {
         "player": "F. Rouco",
         "teamId": "rapineros",
         "teamName": "Rapiñeros",
         "goals": 1,
-        "position": 11
+        "position": 15
       },
       {
         "player": "G. Vega",
         "teamId": "la-tropa",
         "teamName": "La Tropa",
         "goals": 1,
-        "position": 11
+        "position": 15
+      },
+      {
+        "player": "I. Maeso",
+        "teamId": "tuqui-fc",
+        "teamName": "Tuqui",
+        "goals": 1,
+        "position": 15
+      },
+      {
+        "player": "I. O'Brien",
+        "teamId": "la-canuya",
+        "teamName": "La Canuya",
+        "goals": 1,
+        "position": 15
       },
       {
         "player": "I. Sere",
         "teamId": "alaska",
         "teamName": "Alaska",
         "goals": 1,
-        "position": 11
+        "position": 15
       },
       {
         "player": "J. Martirena",
         "teamId": "la-jirafa",
         "teamName": "La Jirafa",
         "goals": 1,
-        "position": 11
+        "position": 15
       },
       {
         "player": "J. Piloni",
         "teamId": "deportivo-panal",
         "teamName": "Deportivo Panal",
         "goals": 1,
-        "position": 11
+        "position": 15
       },
       {
         "player": "J. Restuccia",
         "teamId": "alaska",
         "teamName": "Alaska",
         "goals": 1,
-        "position": 11
+        "position": 15
       },
       {
         "player": "J. Serrato",
         "teamId": "orleans",
         "teamName": "Orleans",
         "goals": 1,
-        "position": 11
+        "position": 15
+      },
+      {
+        "player": "M. Díaz",
+        "teamId": "tuqui-fc",
+        "teamName": "Tuqui",
+        "goals": 1,
+        "position": 15
       },
       {
         "player": "M. Echevarria",
         "teamId": "fishermans",
         "teamName": "Los Fishermans",
         "goals": 1,
-        "position": 11
+        "position": 15
       },
       {
         "player": "M. Fiol",
         "teamId": "la-desidia",
         "teamName": "La Desidia",
         "goals": 1,
-        "position": 11
-      },
-      {
-        "player": "M. Inciarte",
-        "teamId": "orleans",
-        "teamName": "Orleans",
-        "goals": 1,
-        "position": 11
+        "position": 15
       },
       {
         "player": "M. Lijtenstein",
         "teamId": "paso-cuello",
         "teamName": "Paso Cuello",
         "goals": 1,
-        "position": 11
+        "position": 15
+      },
+      {
+        "player": "P. Johnson",
+        "teamId": "la-canuya",
+        "teamName": "La Canuya",
+        "goals": 1,
+        "position": 15
       },
       {
         "player": "R. Beramendi",
         "teamId": "la-fragancia",
         "teamName": "La Fragancia",
         "goals": 1,
-        "position": 11
+        "position": 15
+      },
+      {
+        "player": "S. Carrasco",
+        "teamId": "la-favela",
+        "teamName": "La Favela",
+        "goals": 1,
+        "position": 15
+      },
+      {
+        "player": "S. Iglesias",
+        "teamId": "atletico-sin-gps",
+        "teamName": "Atlético Sin GPS",
+        "goals": 1,
+        "position": 15
+      },
+      {
+        "player": "S. Rouco",
+        "teamId": "la-canuya",
+        "teamName": "La Canuya",
+        "goals": 1,
+        "position": 15
       },
       {
         "player": "T. Perrier",
         "teamId": "real-alta-gama",
         "teamName": "Alta Gama",
         "goals": 1,
-        "position": 11
+        "position": 15
       }
     ],
     "femenino": [
@@ -3524,6 +3654,13 @@
         "position": 12
       },
       {
+        "player": "D. Carrera",
+        "teamId": "la-romineta",
+        "teamName": "La Romineta",
+        "goals": 1,
+        "position": 12
+      },
+      {
         "player": "D. Frontini",
         "teamId": "nerea-jrs",
         "teamName": "Nerea Jrs",
@@ -3555,6 +3692,13 @@
         "player": "J. Bartol",
         "teamId": "fuerte-al-medio",
         "teamName": "Fuerte al Medio",
+        "goals": 1,
+        "position": 12
+      },
+      {
+        "player": "M. Albanell",
+        "teamId": "la-romineta",
+        "teamName": "La Romineta",
         "goals": 1,
         "position": 12
       },
@@ -3622,6 +3766,13 @@
         "position": 12
       },
       {
+        "player": "T. Marsico",
+        "teamId": "la-romineta",
+        "teamName": "La Romineta",
+        "goals": 1,
+        "position": 12
+      },
+      {
         "player": "V. Suaya",
         "teamId": "fuerte-al-medio",
         "teamName": "Fuerte al Medio",
@@ -3634,9 +3785,9 @@
   "sourceInfo": {
     "url": "https://interno2026.ceibosfutbol.workers.dev/",
     "intervalMinutes": 60,
-    "importedAt": "2026-11-19T16:03:40.531Z",
-    "checkedAt": "2026-11-19T17:01:29.003Z",
-    "sourceUpdatedAt": "2026-11-19T12:08:38",
+    "importedAt": "2026-11-19T18:00:55.136Z",
+    "checkedAt": "2026-11-19T18:00:55.136Z",
+    "sourceUpdatedAt": "2026-11-19T14:11:27",
     "categories": [
       "masculino",
       "femenino",
