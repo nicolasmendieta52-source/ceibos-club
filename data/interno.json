@@ -1259,7 +1259,18 @@
       "court": "Cancha 5",
       "homeGoals": 2,
       "awayGoals": 1,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "A. Hobbins",
+          "teamId": "rapineros",
+          "goals": 1
+        },
+        {
+          "player": "B. Borrazas",
+          "teamId": "rapineros",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-m-p41510b24",
@@ -1393,7 +1404,18 @@
       "court": "Cancha 1",
       "homeGoals": 2,
       "awayGoals": 0,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "J. Szelagowski",
+          "teamId": "la-desidia",
+          "goals": 1
+        },
+        {
+          "player": "S. Lebrato",
+          "teamId": "la-desidia",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-m-p8a8aca9c",
@@ -3337,6 +3359,13 @@
         "position": 15
       },
       {
+        "player": "A. Hobbins",
+        "teamId": "rapineros",
+        "teamName": "Rapiñeros",
+        "goals": 1,
+        "position": 15
+      },
+      {
         "player": "A. Rodríguez",
         "teamId": "real-alta-gama",
         "teamName": "Alta Gama",
@@ -3347,6 +3376,13 @@
         "player": "A. Vilarrubi",
         "teamId": "garrulos-fc",
         "teamName": "Garrulos",
+        "goals": 1,
+        "position": 15
+      },
+      {
+        "player": "B. Borrazas",
+        "teamId": "rapineros",
+        "teamName": "Rapiñeros",
         "goals": 1,
         "position": 15
       },
@@ -3449,6 +3485,13 @@
         "position": 15
       },
       {
+        "player": "J. Szelagowski",
+        "teamId": "la-desidia",
+        "teamName": "La Desidia",
+        "goals": 1,
+        "position": 15
+      },
+      {
         "player": "M. Díaz",
         "teamId": "tuqui-fc",
         "teamName": "Tuqui",
@@ -3501,6 +3544,13 @@
         "player": "S. Iglesias",
         "teamId": "atletico-sin-gps",
         "teamName": "Atlético Sin GPS",
+        "goals": 1,
+        "position": 15
+      },
+      {
+        "player": "S. Lebrato",
+        "teamId": "la-desidia",
+        "teamName": "La Desidia",
         "goals": 1,
         "position": 15
       },
@@ -3785,9 +3835,9 @@
   "sourceInfo": {
     "url": "https://interno2026.ceibosfutbol.workers.dev/",
     "intervalMinutes": 60,
-    "importedAt": "2026-11-19T18:00:55.136Z",
-    "checkedAt": "2026-11-19T18:00:55.136Z",
-    "sourceUpdatedAt": "2026-11-19T14:11:27",
+    "importedAt": "2026-11-19T19:01:08.886Z",
+    "checkedAt": "2026-11-19T19:01:08.886Z",
+    "sourceUpdatedAt": "2026-11-19T15:24:59",
     "categories": [
       "masculino",
       "femenino",
