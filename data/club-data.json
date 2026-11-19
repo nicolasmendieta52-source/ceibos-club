@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-19T07:33:15.186Z",
+        "updatedAt": "2026-11-19T20:44:53.201Z",
         "tables": [
           {
             "id": 2291,
@@ -63,13 +63,13 @@
                 "position": 3,
                 "teamId": 483,
                 "name": "Scuola Italiana 1886",
-                "pj": 12,
-                "pg": 7,
+                "pj": 13,
+                "pg": 8,
                 "pe": 2,
                 "pp": 3,
-                "gf": 21,
+                "gf": 24,
                 "gc": 11,
-                "points": 23
+                "points": 26
               },
               {
                 "position": 4,
@@ -159,25 +159,25 @@
                 "position": 11,
                 "teamId": 653,
                 "name": "Ceibos Club senior 40",
-                "pj": 11,
+                "pj": 12,
                 "pg": 4,
-                "pe": 2,
+                "pe": 3,
                 "pp": 5,
-                "gf": 18,
-                "gc": 20,
-                "points": 14
+                "gf": 22,
+                "gc": 24,
+                "points": 15
               },
               {
                 "position": 12,
                 "teamId": 17,
                 "name": "San Juan Amarillo",
-                "pj": 11,
+                "pj": 13,
                 "pg": 3,
-                "pe": 1,
-                "pp": 7,
-                "gf": 11,
-                "gc": 26,
-                "points": 10
+                "pe": 2,
+                "pp": 8,
+                "gf": 15,
+                "gc": 33,
+                "points": 11
               },
               {
                 "position": 13,
@@ -702,6 +702,22 @@
             }
           },
           {
+            "id": 134827,
+            "matchday": 12,
+            "status": "finished",
+            "scheduled_at": "2026-11-19T00:00:00",
+            "home_goals": 4,
+            "away_goals": 4,
+            "home_team": {
+              "id": 17,
+              "name": "San Juan Amarillo"
+            },
+            "away_team": {
+              "id": 653,
+              "name": "Ceibos Club senior 40"
+            }
+          },
+          {
             "id": 135010,
             "matchday": 12,
             "status": "finished",
@@ -780,22 +796,6 @@
               "id": 658,
               "name": "Aleman Schwarz"
             }
-          },
-          {
-            "id": 134827,
-            "matchday": 12,
-            "status": "confirmed",
-            "scheduled_at": "2026-11-19T00:00:00",
-            "home_goals": null,
-            "away_goals": null,
-            "home_team": {
-              "id": 17,
-              "name": "San Juan Amarillo"
-            },
-            "away_team": {
-              "id": 653,
-              "name": "Ceibos Club senior 40"
-            }
           }
         ]
       },
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-19T07:33:15.341Z",
+        "updatedAt": "2026-11-19T20:44:53.418Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-19T07:33:15.427Z",
+        "updatedAt": "2026-11-19T20:44:53.533Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-19T07:33:15.534Z",
+        "updatedAt": "2026-11-19T20:44:53.661Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-19T07:33:15.633Z",
+        "updatedAt": "2026-11-19T20:44:53.780Z",
         "tables": [
           {
             "id": 2239,
@@ -2575,20 +2575,6 @@
       "cancha": "COM. DEP. CLUB TROUVILLE"
     },
     {
-      "deporte": "futbol",
-      "categoria": "Papi Fútbol +40",
-      "rival": "San Juan Amarillo",
-      "fecha": "2026-11-18",
-      "hora": "21:00",
-      "local": false,
-      "fase": "ADIC · Clausura Copas",
-      "adicId": 134827,
-      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-      "equipoAdic": "Ceibos Club senior 40",
-      "estado": "Confirmado",
-      "cancha": "A confirmar"
-    },
-    {
       "deporte": "basketball",
       "categoria": "Basketball",
       "rival": "ELBIO FERNANDEZ",
@@ -2643,17 +2629,6 @@
     {
       "deporte": "futbol",
       "categoria": "Sub 18",
-      "rival": "SAN JUAN BAUTISTA",
-      "fecha": "2026-11-22",
-      "hora": "15:30",
-      "local": false,
-      "fase": "Copa de Oro",
-      "fuente": "https://ligauniversitaria.org.uy/partidos/F181818O.html",
-      "cancha": "CAMPO DEP. SAN JUAN BAUTISTA"
-    },
-    {
-      "deporte": "futbol",
-      "categoria": "Sub 18",
       "rival": "OLD BRENDANS CLUB",
       "fecha": "2026-11-29",
       "hora": "A confirmar",
@@ -2661,6 +2636,17 @@
       "fase": "Copa de Oro",
       "fuente": "https://ligauniversitaria.org.uy/partidos/F181818O.html",
       "cancha": "CANCHA A FIJAR"
+    },
+    {
+      "deporte": "futbol",
+      "categoria": "Sub 18",
+      "rival": "SAN JUAN BAUTISTA",
+      "fecha": "2026-12-06",
+      "hora": "15:30",
+      "local": false,
+      "fase": "Copa de Oro",
+      "fuente": "https://ligauniversitaria.org.uy/partidos/F181818O.html",
+      "cancha": "CAMPO DEP. SAN JUAN BAUTISTA"
     },
     {
       "deporte": "futbol",
@@ -7131,6 +7117,19 @@
     },
     {
       "deporte": "futbol",
+      "categoria": "Papi Fútbol +40",
+      "rival": "San Juan Amarillo",
+      "gf": 4,
+      "gc": 4,
+      "fecha": "2026-11-18",
+      "fase": "ADIC · Clausura Copas",
+      "adicId": 134827,
+      "fuente": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
+      "equipoAdic": "Ceibos Club senior 40",
+      "local": false
+    },
+    {
+      "deporte": "futbol",
       "categoria": "Reserva A",
       "rival": "NACIONAL UNIVERSITARIO",
       "gf": 0,
@@ -7139,7 +7138,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-11-19T07:36:42.168Z",
+  "actualizadoEn": "2026-11-19T20:48:24.126Z",
   "diagnostico": {
     "fuentes": [
       {
