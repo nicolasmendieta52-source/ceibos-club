@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-18T20:42:03.782Z",
+        "updatedAt": "2026-11-19T07:33:15.186Z",
         "tables": [
           {
             "id": 2291,
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-18T20:42:04.046Z",
+        "updatedAt": "2026-11-19T07:33:15.341Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-18T20:42:04.188Z",
+        "updatedAt": "2026-11-19T07:33:15.427Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-18T20:42:04.326Z",
+        "updatedAt": "2026-11-19T07:33:15.534Z",
         "tables": [
           {
             "id": 2296,
@@ -1858,18 +1858,30 @@
               },
               {
                 "position": 9,
-                "teamId": 507,
-                "name": "Old Woodlands strong",
-                "pj": 11,
-                "pg": 4,
-                "pe": 1,
-                "pp": 6,
-                "gf": 21,
-                "gc": 24,
-                "points": 13
+                "teamId": 706,
+                "name": "Old Brendans 45",
+                "pj": 12,
+                "pg": 3,
+                "pe": 5,
+                "pp": 4,
+                "gf": 26,
+                "gc": 20,
+                "points": 14
               },
               {
                 "position": 10,
+                "teamId": 507,
+                "name": "Old Woodlands strong",
+                "pj": 12,
+                "pg": 4,
+                "pe": 1,
+                "pp": 7,
+                "gf": 23,
+                "gc": 29,
+                "points": 13
+              },
+              {
+                "position": 11,
                 "teamId": 735,
                 "name": "Stella Maris 45",
                 "pj": 12,
@@ -1881,7 +1893,7 @@
                 "points": 12
               },
               {
-                "position": 11,
+                "position": 12,
                 "teamId": 547,
                 "name": "Clara Master 2019",
                 "pj": 12,
@@ -1891,18 +1903,6 @@
                 "gf": 22,
                 "gc": 32,
                 "points": 12
-              },
-              {
-                "position": 12,
-                "teamId": 706,
-                "name": "Old Brendans 45",
-                "pj": 11,
-                "pg": 2,
-                "pe": 5,
-                "pp": 4,
-                "gf": 21,
-                "gc": 18,
-                "points": 11
               },
               {
                 "position": 13,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-18T20:42:04.456Z",
+        "updatedAt": "2026-11-19T07:33:15.633Z",
         "tables": [
           {
             "id": 2239,
@@ -7139,7 +7139,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-11-18T20:45:33.322Z",
+  "actualizadoEn": "2026-11-19T07:36:42.168Z",
   "diagnostico": {
     "fuentes": [
       {
