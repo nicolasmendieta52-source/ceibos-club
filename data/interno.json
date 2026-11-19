@@ -1225,7 +1225,23 @@
       "court": "Cancha 6",
       "homeGoals": 1,
       "awayGoals": 4,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "J. Zorrilla",
+          "teamId": "la-raiz",
+          "goals": 2
+        },
+        {
+          "player": "S. Herrera",
+          "teamId": "la-raiz",
+          "goals": 2
+        },
+        {
+          "player": "J. Martirena",
+          "teamId": "la-jirafa",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-m-pb80f207f",
@@ -1261,7 +1277,13 @@
       "court": "Cancha 5",
       "homeGoals": 0,
       "awayGoals": 1,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "F. Mengot",
+          "teamId": "la-vuelta",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-m-pc8e768f7",
@@ -1297,7 +1319,13 @@
       "court": "Cancha 4",
       "homeGoals": 0,
       "awayGoals": 1,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "A. Rodríguez",
+          "teamId": "real-alta-gama",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-m-p2450417b",
@@ -1313,9 +1341,20 @@
       "date": "2026-11-18",
       "time": "22:00",
       "court": "Cancha 5",
-      "homeGoals": 4,
-      "awayGoals": 1,
-      "scorers": []
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "scorers": [
+        {
+          "player": "A. Vilarrubi",
+          "teamId": "garrulos-fc",
+          "goals": 1
+        },
+        {
+          "player": "I. Perez",
+          "teamId": "garrulos-fc",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-m-p86847c7a",
@@ -1367,7 +1406,7 @@
       "date": "2026-11-18",
       "time": "22:00",
       "court": "Cancha 3",
-      "homeGoals": 3,
+      "homeGoals": 4,
       "awayGoals": 0,
       "scorers": []
     },
@@ -1817,14 +1856,17 @@
       "homeId": "al-tranque",
       "awayId": "pido-cambio",
       "stage": "groups",
-      "status": "scheduled",
+      "status": "finished",
       "sourceId": "P59cc16e6",
       "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
       "groupId": "fem-b",
       "round": "Fase de grupos · Fecha 2",
       "date": "2026-11-18",
       "time": "19:45",
-      "court": "Cancha 3"
+      "court": "Cancha 3",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "scorers": []
     },
     {
       "id": "src-f-p5a4efa08",
@@ -1832,14 +1874,17 @@
       "homeId": "rejunte-fc",
       "awayId": "deportivo-resaca",
       "stage": "groups",
-      "status": "scheduled",
+      "status": "finished",
       "sourceId": "P5a4efa08",
       "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
       "groupId": "fem-a",
       "round": "Fase de grupos · Fecha 2",
       "date": "2026-11-18",
       "time": "19:45",
-      "court": "Cancha 1"
+      "court": "Cancha 1",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "scorers": []
     },
     {
       "id": "src-f-pb44d1113",
@@ -1847,14 +1892,17 @@
       "homeId": "levantate-fc",
       "awayId": "nerea-jrs",
       "stage": "groups",
-      "status": "scheduled",
+      "status": "finished",
       "sourceId": "Pb44d1113",
       "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
       "groupId": "fem-c",
       "round": "Fase de grupos · Fecha 2",
       "date": "2026-11-18",
       "time": "19:45",
-      "court": "Cancha 4"
+      "court": "Cancha 4",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "scorers": []
     },
     {
       "id": "src-f-p33727fd6",
@@ -1862,14 +1910,17 @@
       "homeId": "fuerte-al-medio",
       "awayId": "ramillete",
       "stage": "groups",
-      "status": "scheduled",
+      "status": "finished",
       "sourceId": "P33727fd6",
       "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
       "groupId": "fem-d",
       "round": "Fase de grupos · Fecha 2",
       "date": "2026-11-18",
       "time": "20:30",
-      "court": "Cancha 1"
+      "court": "Cancha 1",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "scorers": []
     },
     {
       "id": "src-f-pa59eebe1",
@@ -1877,14 +1928,17 @@
       "homeId": "la-romineta",
       "awayId": "femenino-manchester-birraited",
       "stage": "groups",
-      "status": "scheduled",
+      "status": "finished",
       "sourceId": "Pa59eebe1",
       "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
       "groupId": "fem-c",
       "round": "Fase de grupos · Fecha 2",
       "date": "2026-11-18",
       "time": "20:30",
-      "court": "Cancha 4"
+      "court": "Cancha 4",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "scorers": []
     },
     {
       "id": "src-f-pde18b1df",
@@ -1892,14 +1946,17 @@
       "homeId": "la-naranja-mecanica",
       "awayId": "purohumo-fc",
       "stage": "groups",
-      "status": "scheduled",
+      "status": "finished",
       "sourceId": "Pde18b1df",
       "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
       "groupId": "fem-b",
       "round": "Fase de grupos · Fecha 2",
       "date": "2026-11-18",
       "time": "20:30",
-      "court": "Cancha 3"
+      "court": "Cancha 3",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "scorers": []
     },
     {
       "id": "src-f-pbc47e39c",
@@ -1907,14 +1964,17 @@
       "homeId": "maradonas",
       "awayId": "el-tanque-slay",
       "stage": "groups",
-      "status": "scheduled",
+      "status": "finished",
       "sourceId": "Pbc47e39c",
       "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
       "groupId": "fem-a",
       "round": "Fase de grupos · Fecha 2",
       "date": "2026-11-18",
       "time": "21:15",
-      "court": "Cancha 1"
+      "court": "Cancha 1",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "scorers": []
     },
     {
       "id": "src-f-pbdba6482",
@@ -1922,14 +1982,17 @@
       "homeId": "la-matanza",
       "awayId": "cangreburgers",
       "stage": "groups",
-      "status": "scheduled",
+      "status": "finished",
       "sourceId": "Pbdba6482",
       "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
       "groupId": "fem-d",
       "round": "Fase de grupos · Fecha 2",
       "date": "2026-11-18",
       "time": "21:15",
-      "court": "Cancha 3"
+      "court": "Cancha 3",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "scorers": []
     },
     {
       "id": "src-f-p23706809",
@@ -2057,14 +2120,17 @@
       "homeId": "mas38-liverpool",
       "awayId": "mas38-everton",
       "stage": "groups",
-      "status": "scheduled",
+      "status": "finished",
       "sourceId": "P4c634762",
       "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
       "groupId": "papi-a",
       "round": "Fase de grupos · Fecha 1",
       "date": "2026-11-18",
       "time": "20:00",
-      "court": "Cancha 2"
+      "court": "Cancha 2",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "scorers": []
     },
     {
       "id": "src-p-pfa1fc532",
@@ -2072,14 +2138,17 @@
       "homeId": "mas38-manchester-united",
       "awayId": "mas38-nottingham-forest",
       "stage": "groups",
-      "status": "scheduled",
+      "status": "finished",
       "sourceId": "Pfa1fc532",
       "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
       "groupId": "papi-b",
       "round": "Fase de grupos · Fecha 1",
       "date": "2026-11-18",
       "time": "21:00",
-      "court": "Cancha 2"
+      "court": "Cancha 2",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "scorers": []
     },
     {
       "id": "src-p-pfce2a6b3",
@@ -2283,9 +2352,9 @@
             "won": 1,
             "drawn": 1,
             "lost": 0,
-            "gf": 4,
+            "gf": 5,
             "ga": 1,
-            "gd": 3,
+            "gd": 4,
             "points": 4,
             "adjustment": 0,
             "adjustmentNote": "",
@@ -2316,8 +2385,8 @@
             "drawn": 0,
             "lost": 2,
             "gf": 0,
-            "ga": 6,
-            "gd": -6,
+            "ga": 7,
+            "gd": -7,
             "points": 0,
             "adjustment": 0,
             "adjustmentNote": "",
@@ -2411,8 +2480,8 @@
             "won": 2,
             "drawn": 0,
             "lost": 0,
-            "gf": 9,
-            "ga": 1,
+            "gf": 8,
+            "ga": 0,
             "gd": 8,
             "points": 6,
             "adjustment": 0,
@@ -2443,8 +2512,8 @@
             "won": 1,
             "drawn": 0,
             "lost": 1,
-            "gf": 5,
-            "ga": 5,
+            "gf": 4,
+            "ga": 4,
             "gd": 0,
             "points": 3,
             "adjustment": 0,
@@ -2593,13 +2662,29 @@
             "teamId": "maradonas",
             "name": "Maradoñas",
             "position": 1,
-            "played": 1,
-            "won": 1,
+            "played": 2,
+            "won": 2,
             "drawn": 0,
             "lost": 0,
-            "gf": 3,
+            "gf": 4,
             "ga": 2,
-            "gd": 1,
+            "gd": 2,
+            "points": 6,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "deportivo-resaca",
+            "name": "Dep. Resaca",
+            "position": 2,
+            "played": 2,
+            "won": 1,
+            "drawn": 0,
+            "lost": 1,
+            "gf": 5,
+            "ga": 3,
+            "gd": 2,
             "points": 3,
             "adjustment": 0,
             "adjustmentNote": "",
@@ -2608,31 +2693,15 @@
           {
             "teamId": "el-tanque-slay",
             "name": "El Tanque Slay",
-            "position": 2,
-            "played": 1,
+            "position": 3,
+            "played": 2,
             "won": 1,
             "drawn": 0,
-            "lost": 0,
-            "gf": 1,
-            "ga": 0,
-            "gd": 1,
-            "points": 3,
-            "adjustment": 0,
-            "adjustmentNote": "",
-            "tied": false
-          },
-          {
-            "teamId": "deportivo-resaca",
-            "name": "Dep. Resaca",
-            "position": 3,
-            "played": 1,
-            "won": 0,
-            "drawn": 0,
             "lost": 1,
-            "gf": 2,
-            "ga": 3,
-            "gd": -1,
-            "points": 0,
+            "gf": 1,
+            "ga": 1,
+            "gd": 0,
+            "points": 3,
             "adjustment": 0,
             "adjustmentNote": "",
             "tied": false
@@ -2641,13 +2710,13 @@
             "teamId": "rejunte-fc",
             "name": "Rejunte FC",
             "position": 4,
-            "played": 1,
+            "played": 2,
             "won": 0,
             "drawn": 0,
-            "lost": 1,
+            "lost": 2,
             "gf": 0,
-            "ga": 1,
-            "gd": -1,
+            "ga": 4,
+            "gd": -4,
             "points": 0,
             "adjustment": 0,
             "adjustmentNote": "",
@@ -2665,14 +2734,14 @@
             "teamId": "al-tranque",
             "name": "Al Tranque",
             "position": 1,
-            "played": 1,
-            "won": 1,
+            "played": 2,
+            "won": 2,
             "drawn": 0,
             "lost": 0,
-            "gf": 3,
+            "gf": 6,
             "ga": 2,
-            "gd": 1,
-            "points": 3,
+            "gd": 4,
+            "points": 6,
             "adjustment": 0,
             "adjustmentNote": "",
             "tied": false
@@ -2681,14 +2750,14 @@
             "teamId": "la-naranja-mecanica",
             "name": "Naranja Mecánica",
             "position": 2,
-            "played": 1,
-            "won": 1,
+            "played": 2,
+            "won": 2,
             "drawn": 0,
             "lost": 0,
-            "gf": 1,
+            "gf": 4,
             "ga": 0,
-            "gd": 1,
-            "points": 3,
+            "gd": 4,
+            "points": 6,
             "adjustment": 0,
             "adjustmentNote": "",
             "tied": false
@@ -2697,13 +2766,13 @@
             "teamId": "purohumo-fc",
             "name": "PuroHumo",
             "position": 3,
-            "played": 1,
+            "played": 2,
             "won": 0,
             "drawn": 0,
-            "lost": 1,
+            "lost": 2,
             "gf": 2,
-            "ga": 3,
-            "gd": -1,
+            "ga": 6,
+            "gd": -4,
             "points": 0,
             "adjustment": 0,
             "adjustmentNote": "",
@@ -2713,13 +2782,13 @@
             "teamId": "pido-cambio",
             "name": "Pido Cambio",
             "position": 4,
-            "played": 1,
+            "played": 2,
             "won": 0,
             "drawn": 0,
-            "lost": 1,
+            "lost": 2,
             "gf": 0,
-            "ga": 1,
-            "gd": -1,
+            "ga": 4,
+            "gd": -4,
             "points": 0,
             "adjustment": 0,
             "adjustmentNote": "",
@@ -2737,13 +2806,29 @@
             "teamId": "levantate-fc",
             "name": "Levantate",
             "position": 1,
-            "played": 1,
-            "won": 1,
+            "played": 2,
+            "won": 2,
             "drawn": 0,
             "lost": 0,
-            "gf": 7,
+            "gf": 11,
             "ga": 0,
-            "gd": 7,
+            "gd": 11,
+            "points": 6,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "la-romineta",
+            "name": "La Romineta",
+            "position": 2,
+            "played": 2,
+            "won": 1,
+            "drawn": 0,
+            "lost": 1,
+            "gf": 3,
+            "ga": 3,
+            "gd": 0,
             "points": 3,
             "adjustment": 0,
             "adjustmentNote": "",
@@ -2752,31 +2837,15 @@
           {
             "teamId": "nerea-jrs",
             "name": "Nerea Jrs",
-            "position": 2,
-            "played": 1,
+            "position": 3,
+            "played": 2,
             "won": 1,
             "drawn": 0,
-            "lost": 0,
-            "gf": 3,
-            "ga": 0,
-            "gd": 3,
-            "points": 3,
-            "adjustment": 0,
-            "adjustmentNote": "",
-            "tied": false
-          },
-          {
-            "teamId": "la-romineta",
-            "name": "La Romineta",
-            "position": 3,
-            "played": 1,
-            "won": 0,
-            "drawn": 0,
             "lost": 1,
-            "gf": 0,
-            "ga": 3,
-            "gd": -3,
-            "points": 0,
+            "gf": 3,
+            "ga": 4,
+            "gd": -1,
+            "points": 3,
             "adjustment": 0,
             "adjustmentNote": "",
             "tied": false
@@ -2785,13 +2854,13 @@
             "teamId": "femenino-manchester-birraited",
             "name": "Manchester Birraited",
             "position": 4,
-            "played": 1,
+            "played": 2,
             "won": 0,
             "drawn": 0,
-            "lost": 1,
+            "lost": 2,
             "gf": 0,
-            "ga": 7,
-            "gd": -7,
+            "ga": 10,
+            "gd": -10,
             "points": 0,
             "adjustment": 0,
             "adjustmentNote": "",
@@ -2806,17 +2875,17 @@
         "sourceUrl": "/assets/interno/grupos/2026/femenino.jpeg",
         "rows": [
           {
-            "teamId": "la-matanza",
-            "name": "La Matanza",
+            "teamId": "fuerte-al-medio",
+            "name": "Fuerte al Medio",
             "position": 1,
-            "played": 1,
+            "played": 2,
             "won": 1,
-            "drawn": 0,
+            "drawn": 1,
             "lost": 0,
-            "gf": 7,
-            "ga": 2,
-            "gd": 5,
-            "points": 3,
+            "gf": 3,
+            "ga": 1,
+            "gd": 2,
+            "points": 4,
             "adjustment": 0,
             "adjustmentNote": "",
             "tied": false
@@ -2825,30 +2894,30 @@
             "teamId": "cangreburgers",
             "name": "Cangreburgers",
             "position": 2,
-            "played": 1,
-            "won": 0,
+            "played": 2,
+            "won": 1,
             "drawn": 1,
             "lost": 0,
-            "gf": 1,
+            "gf": 2,
             "ga": 1,
-            "gd": 0,
-            "points": 1,
+            "gd": 1,
+            "points": 4,
             "adjustment": 0,
             "adjustmentNote": "",
             "tied": false
           },
           {
-            "teamId": "fuerte-al-medio",
-            "name": "Fuerte al Medio",
+            "teamId": "la-matanza",
+            "name": "La Matanza",
             "position": 3,
-            "played": 1,
-            "won": 0,
-            "drawn": 1,
-            "lost": 0,
-            "gf": 1,
-            "ga": 1,
-            "gd": 0,
-            "points": 1,
+            "played": 2,
+            "won": 1,
+            "drawn": 0,
+            "lost": 1,
+            "gf": 7,
+            "ga": 3,
+            "gd": 4,
+            "points": 3,
             "adjustment": 0,
             "adjustmentNote": "",
             "tied": false
@@ -2857,13 +2926,13 @@
             "teamId": "ramillete",
             "name": "Ramillete",
             "position": 4,
-            "played": 1,
+            "played": 2,
             "won": 0,
             "drawn": 0,
-            "lost": 1,
+            "lost": 2,
             "gf": 2,
-            "ga": 7,
-            "gd": -5,
+            "ga": 9,
+            "gd": -7,
             "points": 0,
             "adjustment": 0,
             "adjustmentNote": "",
@@ -2881,33 +2950,17 @@
         "sourceUrl": "/assets/interno/formatos/2026/papi.mp4",
         "rows": [
           {
-            "teamId": "mas38-everton",
-            "name": "Everton",
-            "position": null,
-            "played": 0,
-            "won": 0,
-            "drawn": 0,
-            "lost": 0,
-            "gf": 0,
-            "ga": 0,
-            "gd": 0,
-            "points": 0,
-            "adjustment": 0,
-            "adjustmentNote": "",
-            "tied": false
-          },
-          {
             "teamId": "mas38-liverpool",
             "name": "Liverpool",
-            "position": null,
-            "played": 0,
-            "won": 0,
+            "position": 1,
+            "played": 1,
+            "won": 1,
             "drawn": 0,
             "lost": 0,
-            "gf": 0,
-            "ga": 0,
-            "gd": 0,
-            "points": 0,
+            "gf": 3,
+            "ga": 1,
+            "gd": 2,
+            "points": 3,
             "adjustment": 0,
             "adjustmentNote": "",
             "tied": false
@@ -2915,7 +2968,7 @@
           {
             "teamId": "mas38-manchester-city",
             "name": "Manchester City",
-            "position": null,
+            "position": 2,
             "played": 0,
             "won": 0,
             "drawn": 0,
@@ -2923,6 +2976,22 @@
             "gf": 0,
             "ga": 0,
             "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "mas38-everton",
+            "name": "Everton",
+            "position": 3,
+            "played": 1,
+            "won": 0,
+            "drawn": 0,
+            "lost": 1,
+            "gf": 1,
+            "ga": 3,
+            "gd": -2,
             "points": 0,
             "adjustment": 0,
             "adjustmentNote": "",
@@ -2938,33 +3007,17 @@
         "sourceUrl": "/assets/interno/formatos/2026/papi.mp4",
         "rows": [
           {
-            "teamId": "mas38-manchester-united",
-            "name": "Manchester United",
-            "position": null,
-            "played": 0,
-            "won": 0,
-            "drawn": 0,
-            "lost": 0,
-            "gf": 0,
-            "ga": 0,
-            "gd": 0,
-            "points": 0,
-            "adjustment": 0,
-            "adjustmentNote": "",
-            "tied": false
-          },
-          {
             "teamId": "mas38-nottingham-forest",
             "name": "Nottingham Forest",
-            "position": null,
-            "played": 0,
-            "won": 0,
+            "position": 1,
+            "played": 1,
+            "won": 1,
             "drawn": 0,
             "lost": 0,
-            "gf": 0,
-            "ga": 0,
-            "gd": 0,
-            "points": 0,
+            "gf": 3,
+            "ga": 1,
+            "gd": 2,
+            "points": 3,
             "adjustment": 0,
             "adjustmentNote": "",
             "tied": false
@@ -2972,7 +3025,7 @@
           {
             "teamId": "mas38-wolverhampton",
             "name": "Wolverhampton",
-            "position": null,
+            "position": 2,
             "played": 0,
             "won": 0,
             "drawn": 0,
@@ -2980,6 +3033,22 @@
             "gf": 0,
             "ga": 0,
             "gd": 0,
+            "points": 0,
+            "adjustment": 0,
+            "adjustmentNote": "",
+            "tied": false
+          },
+          {
+            "teamId": "mas38-manchester-united",
+            "name": "Manchester United",
+            "position": 3,
+            "played": 1,
+            "won": 0,
+            "drawn": 0,
+            "lost": 1,
+            "gf": 1,
+            "ga": 3,
+            "gd": -2,
             "points": 0,
             "adjustment": 0,
             "adjustmentNote": "",
@@ -2992,179 +3061,214 @@
   "sourceScorers": {
     "masculino": [
       {
+        "player": "S. Herrera",
+        "teamId": "la-raiz",
+        "teamName": "La Raíz",
+        "goals": 4,
+        "position": 1
+      },
+      {
         "player": "J. Etchegoimberry",
         "teamId": "la-fecha",
         "teamName": "La Fecha",
         "goals": 3,
-        "position": 1
+        "position": 2
       },
       {
         "player": "J.A. Torres Negreira",
         "teamId": "garrulos-fc",
         "teamName": "Garrulos",
         "goals": 3,
-        "position": 1
+        "position": 2
       },
       {
         "player": "D. Aguilera",
         "teamId": "la-tropa",
         "teamName": "La Tropa",
         "goals": 2,
-        "position": 3
+        "position": 4
       },
       {
         "player": "F. Dolivo",
         "teamId": "alaska",
         "teamName": "Alaska",
         "goals": 2,
-        "position": 3
+        "position": 4
       },
       {
         "player": "F. Garcia",
         "teamId": "paso-cuello",
         "teamName": "Paso Cuello",
         "goals": 2,
-        "position": 3
+        "position": 4
       },
       {
-        "player": "S. Herrera",
+        "player": "I. Perez",
+        "teamId": "garrulos-fc",
+        "teamName": "Garrulos",
+        "goals": 2,
+        "position": 4
+      },
+      {
+        "player": "J. Zorrilla",
         "teamId": "la-raiz",
         "teamName": "La Raíz",
         "goals": 2,
-        "position": 3
+        "position": 4
       },
       {
         "player": "T. Du Pre",
         "teamId": "fishermans",
         "teamName": "Los Fishermans",
         "goals": 2,
-        "position": 3
+        "position": 4
       },
       {
         "player": "A. Risso",
         "teamId": "la-canuya",
         "teamName": "La Canuya",
         "goals": 1,
-        "position": 8
+        "position": 10
+      },
+      {
+        "player": "A. Rodríguez",
+        "teamId": "real-alta-gama",
+        "teamName": "Alta Gama",
+        "goals": 1,
+        "position": 10
+      },
+      {
+        "player": "A. Vilarrubi",
+        "teamId": "garrulos-fc",
+        "teamName": "Garrulos",
+        "goals": 1,
+        "position": 10
       },
       {
         "player": "F. Bolla",
         "teamId": "garrulos-fc",
         "teamName": "Garrulos",
         "goals": 1,
-        "position": 8
+        "position": 10
       },
       {
         "player": "F. Echegoyen",
         "teamId": "la-favela",
         "teamName": "La Favela",
         "goals": 1,
-        "position": 8
+        "position": 10
       },
       {
         "player": "F. Etcheverry",
         "teamId": "orleans",
         "teamName": "Orleans",
         "goals": 1,
-        "position": 8
+        "position": 10
       },
       {
         "player": "F. Inthamoussu",
         "teamId": "kiwis",
         "teamName": "Kiwis",
         "goals": 1,
-        "position": 8
+        "position": 10
+      },
+      {
+        "player": "F. Mengot",
+        "teamId": "la-vuelta",
+        "teamName": "La Vuelta",
+        "goals": 1,
+        "position": 10
       },
       {
         "player": "F. Rouco",
         "teamId": "rapineros",
         "teamName": "Rapiñeros",
         "goals": 1,
-        "position": 8
+        "position": 10
       },
       {
         "player": "G. Rodrigo",
         "teamId": "deportivo-panal",
         "teamName": "Deportivo Panal",
         "goals": 1,
-        "position": 8
+        "position": 10
       },
       {
         "player": "G. Vega",
         "teamId": "la-tropa",
         "teamName": "La Tropa",
         "goals": 1,
-        "position": 8
-      },
-      {
-        "player": "I. Perez",
-        "teamId": "garrulos-fc",
-        "teamName": "Garrulos",
-        "goals": 1,
-        "position": 8
+        "position": 10
       },
       {
         "player": "I. Sere",
         "teamId": "alaska",
         "teamName": "Alaska",
         "goals": 1,
-        "position": 8
+        "position": 10
+      },
+      {
+        "player": "J. Martirena",
+        "teamId": "la-jirafa",
+        "teamName": "La Jirafa",
+        "goals": 1,
+        "position": 10
       },
       {
         "player": "J. Restuccia",
         "teamId": "alaska",
         "teamName": "Alaska",
         "goals": 1,
-        "position": 8
+        "position": 10
       },
       {
         "player": "J. Serrato",
         "teamId": "orleans",
         "teamName": "Orleans",
         "goals": 1,
-        "position": 8
+        "position": 10
       },
       {
         "player": "M. Echevarria",
         "teamId": "fishermans",
         "teamName": "Los Fishermans",
         "goals": 1,
-        "position": 8
+        "position": 10
       },
       {
         "player": "M. Fiol",
         "teamId": "la-desidia",
         "teamName": "La Desidia",
         "goals": 1,
-        "position": 8
+        "position": 10
       },
       {
         "player": "M. Inciarte",
         "teamId": "orleans",
         "teamName": "Orleans",
         "goals": 1,
-        "position": 8
+        "position": 10
       },
       {
         "player": "M. Lijtenstein",
         "teamId": "paso-cuello",
         "teamName": "Paso Cuello",
         "goals": 1,
-        "position": 8
+        "position": 10
       },
       {
         "player": "R. Beramendi",
         "teamId": "la-fragancia",
         "teamName": "La Fragancia",
         "goals": 1,
-        "position": 8
+        "position": 10
       },
       {
         "player": "T. Perrier",
         "teamId": "real-alta-gama",
         "teamName": "Alta Gama",
         "goals": 1,
-        "position": 8
+        "position": 10
       }
     ],
     "femenino": [
@@ -3342,9 +3446,9 @@
   "sourceInfo": {
     "url": "https://interno2026.ceibosfutbol.workers.dev/",
     "intervalMinutes": 60,
-    "importedAt": "2026-11-19T11:05:02.703Z",
-    "checkedAt": "2026-11-19T13:01:14.685Z",
-    "sourceUpdatedAt": "2026-11-19T07:57:34",
+    "importedAt": "2026-11-19T14:01:35.744Z",
+    "checkedAt": "2026-11-19T14:01:35.744Z",
+    "sourceUpdatedAt": "2026-11-19T10:50:39",
     "categories": [
       "masculino",
       "femenino",
