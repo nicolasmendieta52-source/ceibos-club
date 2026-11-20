@@ -2161,7 +2161,13 @@
       "court": "Cancha 1",
       "homeGoals": 1,
       "awayGoals": 0,
-      "scorers": []
+      "scorers": [
+        {
+          "player": "P. Etcheverry",
+          "teamId": "maradonas",
+          "goals": 1
+        }
+      ]
     },
     {
       "id": "src-f-pbdba6482",
@@ -3795,6 +3801,13 @@
         "position": 12
       },
       {
+        "player": "P. Etcheverry",
+        "teamId": "maradonas",
+        "teamName": "Maradoñas",
+        "goals": 1,
+        "position": 12
+      },
+      {
         "player": "P. Formento",
         "teamId": "maradonas",
         "teamName": "Maradoñas",
@@ -3835,9 +3848,9 @@
   "sourceInfo": {
     "url": "https://interno2026.ceibosfutbol.workers.dev/",
     "intervalMinutes": 60,
-    "importedAt": "2026-11-20T15:11:13.872Z",
-    "checkedAt": "2026-11-20T22:01:28.727Z",
-    "sourceUpdatedAt": "2026-11-20T18:01:30",
+    "importedAt": "2026-11-20T23:01:41.310Z",
+    "checkedAt": "2026-11-20T23:01:41.310Z",
+    "sourceUpdatedAt": "2026-11-20T19:03:36",
     "categories": [
       "masculino",
       "femenino",
