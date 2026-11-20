@@ -2358,6 +2358,20 @@
       "court": "Cancha 6"
     },
     {
+      "id": "src-p-p1af12c70",
+      "categoryId": "mas38",
+      "homeId": "mas38-everton",
+      "awayId": "mas38-nottingham-forest",
+      "stage": "interzonal",
+      "status": "scheduled",
+      "sourceId": "P1af12c70",
+      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
+      "round": "Interzonal · Fecha 2",
+      "date": "2026-11-26",
+      "time": "20:00",
+      "court": "Cancha 3"
+    },
+    {
       "id": "src-p-p80d73754",
       "categoryId": "mas38",
       "homeId": "mas38-manchester-united",
@@ -2368,7 +2382,7 @@
       "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
       "groupId": "papi-b",
       "round": "Fase de grupos · Fecha 2",
-      "date": "2026-11-25",
+      "date": "2026-11-26",
       "time": "20:00",
       "court": "Cancha 1"
     },
@@ -2383,22 +2397,8 @@
       "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
       "groupId": "papi-a",
       "round": "Fase de grupos · Fecha 2",
-      "date": "2026-11-25",
+      "date": "2026-11-26",
       "time": "20:00",
-      "court": "Cancha 2"
-    },
-    {
-      "id": "src-p-p1af12c70",
-      "categoryId": "mas38",
-      "homeId": "mas38-everton",
-      "awayId": "mas38-nottingham-forest",
-      "stage": "interzonal",
-      "status": "scheduled",
-      "sourceId": "P1af12c70",
-      "sourceUrl": "https://interno2026.ceibosfutbol.workers.dev/",
-      "round": "Interzonal · Fecha 2",
-      "date": "2026-11-25",
-      "time": "21:00",
       "court": "Cancha 2"
     },
     {
@@ -3835,9 +3835,9 @@
   "sourceInfo": {
     "url": "https://interno2026.ceibosfutbol.workers.dev/",
     "intervalMinutes": 60,
-    "importedAt": "2026-11-19T19:01:08.886Z",
-    "checkedAt": "2026-11-20T14:01:06.602Z",
-    "sourceUpdatedAt": "2026-11-20T10:01:37",
+    "importedAt": "2026-11-20T15:11:13.872Z",
+    "checkedAt": "2026-11-20T15:11:13.872Z",
+    "sourceUpdatedAt": "2026-11-20T11:38:07",
     "categories": [
       "masculino",
       "femenino",
