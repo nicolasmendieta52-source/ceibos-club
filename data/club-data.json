@@ -29,7 +29,7 @@
         "name": "Clausura Copas",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1501?name=Clausura+Copas&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-20T07:25:38.282Z",
+        "updatedAt": "2026-11-20T20:29:10.535Z",
         "tables": [
           {
             "id": 2291,
@@ -295,6 +295,18 @@
               },
               {
                 "position": 8,
+                "teamId": 20,
+                "name": "Pallotti",
+                "pj": 13,
+                "pg": 5,
+                "pe": 1,
+                "pp": 7,
+                "gf": 25,
+                "gc": 38,
+                "points": 16
+              },
+              {
+                "position": 9,
                 "teamId": 732,
                 "name": "HCA +40",
                 "pj": 12,
@@ -306,7 +318,7 @@
                 "points": 15
               },
               {
-                "position": 9,
+                "position": 10,
                 "teamId": 194,
                 "name": "Old Clifton",
                 "pj": 12,
@@ -316,18 +328,6 @@
                 "gf": 17,
                 "gc": 22,
                 "points": 14
-              },
-              {
-                "position": 10,
-                "teamId": 20,
-                "name": "Pallotti",
-                "pj": 12,
-                "pg": 4,
-                "pe": 1,
-                "pp": 7,
-                "gf": 21,
-                "gc": 36,
-                "points": 13
               },
               {
                 "position": 11,
@@ -357,12 +357,12 @@
                 "position": 13,
                 "teamId": 703,
                 "name": "North School 40",
-                "pj": 12,
+                "pj": 13,
                 "pg": 1,
                 "pe": 0,
-                "pp": 11,
-                "gf": 9,
-                "gc": 37,
+                "pp": 12,
+                "gf": 11,
+                "gc": 41,
                 "points": 3
               },
               {
@@ -804,7 +804,7 @@
         "name": "T. Clasificatorio Master 40",
         "category": "Padres Master 40",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1467?name=T.+Clasificatorio+Master+40&category=Padres+Master+40&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-20T07:25:38.527Z",
+        "updatedAt": "2026-11-20T20:29:10.747Z",
         "tables": [
           {
             "id": 2233,
@@ -1389,7 +1389,7 @@
         "name": "T. Clasificatorio Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1468?name=T.+Clasificatorio+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-20T07:25:38.640Z",
+        "updatedAt": "2026-11-20T20:29:10.865Z",
         "tables": [
           {
             "id": 2235,
@@ -1754,7 +1754,7 @@
         "name": "Clasura Copas Master 45",
         "category": "Padres Master 45",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1502?name=Clasura+Copas+Master+45&category=Padres+Master+45&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-20T07:25:38.781Z",
+        "updatedAt": "2026-11-20T20:29:10.996Z",
         "tables": [
           {
             "id": 2296,
@@ -2147,7 +2147,7 @@
         "name": "T. Clasificatorio Master 50",
         "category": "Padres Master 50",
         "url": "https://portal.adic.org.uy/calendar/tournaments/1470?name=T.+Clasificatorio+Master+50&category=Padres+Master+50&sport=Futbol&year=2026",
-        "updatedAt": "2026-11-20T07:25:38.910Z",
+        "updatedAt": "2026-11-20T20:29:11.133Z",
         "tables": [
           {
             "id": 2239,
@@ -7116,6 +7116,14 @@
       ]
     },
     {
+      "deporte": "rugby",
+      "categoria": "Primera",
+      "rival": "Club Seminario",
+      "gf": 34,
+      "gc": 39,
+      "fecha": "2026-11-15"
+    },
+    {
       "deporte": "futbol",
       "categoria": "Papi Fútbol +40",
       "rival": "San Juan Amarillo",
@@ -7138,7 +7146,7 @@
     }
   ],
   "eventos": [],
-  "actualizadoEn": "2026-11-20T07:29:26.547Z",
+  "actualizadoEn": "2026-11-20T20:32:49.043Z",
   "diagnostico": {
     "fuentes": [
       {
@@ -7174,7 +7182,7 @@
       {
         "deporte": "rugby",
         "url": "https://50-22.base44.app/functions/getPublicContent",
-        "registros": 72,
+        "registros": 73,
         "estado": "ok"
       },
       {
@@ -7373,8 +7381,8 @@
       "imagenes": 3,
       "publicacionesApify": 3,
       "historiasMencionadas": 0,
-      "cache": 2,
-      "nuevas": 1
+      "cache": 3,
+      "nuevas": 0
     }
   }
 }
